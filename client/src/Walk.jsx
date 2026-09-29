@@ -501,7 +501,7 @@ export default function Walk({
       const tint = classTint(next?.classId);
       cloak.material.color.set(tint);
       heroCritter.head.material.color.set(tint);
-      heroCritter.tail.material.color.set(tint);
+      heroCritter.tail?.material.color.set(tint);
       combatKey = "";
       if (session) publishCombat(session.hud());
       else onCombatRef.current(null);
