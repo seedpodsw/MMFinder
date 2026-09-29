@@ -30,7 +30,7 @@ export const CLASSES = [
   { id: "wizard", name: "Wizard", role: "caster", passive: "Evocation", blurb: "Heavy bolts, a thin robe.", mods: { dmg: 1.4, hp: 0.82 } },
 ];
 
-export const REACH = 16;
+export const REACH = 9;
 const AGGRO = 6;
 const LEASH = 42;
 const SHOW = 220;
@@ -137,7 +137,7 @@ export function layoutPack(poi) {
   if (level == null) return [];
   const named = poi.kind === "named";
   const names = monsterNames(poi.monsters);
-  const count = named ? 1 : Math.min(3, Math.max(2, names.length > 2 ? 3 : 2));
+  const count = named ? 1 : Math.min(4, Math.max(1, names.length || 1));
   const pack = [];
   for (let i = 0; i < count; i++) {
     const raw = named ? poi.name : names[i % Math.max(1, names.length)] || poi.name || "creature";
@@ -623,15 +623,15 @@ export function createSession(hero, storage) {
         continue;
       }
       if (mob.aggro && now >= (mob.stunUntil || 0)) {
-        if (dist > 7.5) {
-          const step = Math.min(dist - 6, 28 * dt);
+        if (dist > 5.2) {
+          const step = Math.min(dist - 4.2, 11 * dt);
           if (step > 0) {
             mob.x += ((px - mob.x) / dist) * step;
             mob.z += ((pz - mob.z) / dist) * step;
           }
         }
         const reach = Math.hypot(mob.x - px, mob.z - pz);
-        if (reach < 13 && now >= mob.nextSwing) {
+        if (reach < 8 && now >= mob.nextSwing) {
           const gap = mob.level - hero.level;
           const mobHit = Math.min(0.94, Math.max(0.4, 0.7 + gap * 0.04));
           mob.nextSwing = now + 1500 * (mob.slow || 1);

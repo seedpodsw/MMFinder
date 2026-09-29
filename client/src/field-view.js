@@ -9,25 +9,31 @@ function colorOf(name) {
   return PALETTE[h];
 }
 
+const PLATE_W = 256;
+const PLATE_H = 48;
+
 function labelTexture(name, level) {
   const c = document.createElement("canvas");
+  c.width = PLATE_W;
+  c.height = PLATE_H;
   const g = c.getContext("2d");
   const text = `${name}  ${level}`;
-  g.font = "600 28px sans-serif";
-  const width = Math.max(64, Math.ceil(g.measureText(text).width + 8));
-  c.width = width;
-  c.height = 36;
-  g.font = "600 28px sans-serif";
+  let size = 28;
+  g.font = `600 ${size}px sans-serif`;
+  while (size > 15 && g.measureText(text).width > PLATE_W - 20) {
+    size -= 1;
+    g.font = `600 ${size}px sans-serif`;
+  }
   g.textAlign = "center";
   g.textBaseline = "middle";
   g.lineWidth = 5;
-  g.strokeStyle = "#9a9084";
-  g.strokeText(text, width / 2, 18);
+  g.strokeStyle = "#000000";
+  g.strokeText(text, PLATE_W / 2, PLATE_H / 2);
   g.fillStyle = "#ffffff";
-  g.fillText(text, width / 2, 18);
+  g.fillText(text, PLATE_W / 2, PLATE_H / 2);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
-  return { tex, width };
+  return tex;
 }
 
 export function createFieldView(scene) {
@@ -50,48 +56,51 @@ export function createFieldView(scene) {
 
   function make(mob) {
     const group = new THREE.Group();
-    const scale = mob.named ? 1.28 : 1;
+    const scale = mob.named ? 1.18 : 1;
+    const color = colorOf(mob.name);
     const figure = new THREE.Group();
     const body = new THREE.Mesh(
-      new THREE.CylinderGeometry(1.35 * scale, 1.85 * scale, 2.2 * scale, 8),
-      new THREE.MeshBasicMaterial({ color: colorOf(mob.name) })
+      new THREE.CylinderGeometry(1.05 * scale, 1.05 * scale, 0.55, 12),
+      new THREE.MeshBasicMaterial({ color })
     );
-    body.position.y = 1.25 * scale;
+    body.position.y = 0.4;
     body.userData.mobId = mob.id;
-    const head = new THREE.Mesh(
-      new THREE.SphereGeometry(0.85 * scale, 10, 8),
-      new THREE.MeshBasicMaterial({ color: colorOf(mob.name) })
-    );
-    head.position.y = 2.55 * scale;
-    const nose = new THREE.Mesh(
-      new THREE.BoxGeometry(0.4 * scale, 0.3 * scale, 1.1 * scale),
+    const pip = new THREE.Mesh(
+      new THREE.ConeGeometry(0.32 * scale, 0.75 * scale, 3),
       new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
     );
-    nose.position.set(0, 2.55 * scale, -1.15 * scale);
-    figure.add(body, head, nose);
+    pip.rotation.x = Math.PI / 2;
+    pip.position.set(0, 0.62, -1.05 * scale);
+    figure.add(body, pip);
+    const pad = new THREE.Mesh(
+      new THREE.CircleGeometry(2.1 * scale, 16),
+      new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })
+    );
+    pad.rotation.x = -Math.PI / 2;
+    pad.position.y = 0.16;
+    pad.userData.mobId = mob.id;
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(2.5 * scale, 3.15 * scale, 18),
-      new THREE.MeshBasicMaterial({ color: 0xf3e6c8, side: THREE.DoubleSide })
+      new THREE.RingGeometry(1.45 * scale, 1.78 * scale, 20),
+      new THREE.MeshBasicMaterial({ color: 0xf3e6c8, side: THREE.DoubleSide, transparent: true, opacity: 0.9 })
     );
     ring.rotation.x = -Math.PI / 2;
-    ring.position.y = 0.35;
+    ring.position.y = 0.12;
     const bar = new THREE.Mesh(
-      new THREE.PlaneGeometry(4.2, 0.38),
+      new THREE.PlaneGeometry(2.4, 0.22),
       new THREE.MeshBasicMaterial({ color: 0x6dbf6a })
     );
     bar.rotation.x = -Math.PI / 2;
-    bar.position.set(0, 0.4, 2.3 * scale);
-    const { tex, width } = labelTexture(mob.name, mob.level);
+    bar.position.set(0, 0.22, 1.55 * scale);
     const sprite = new THREE.Sprite(
-      new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false })
+      new THREE.SpriteMaterial({ map: labelTexture(mob.name, mob.level), transparent: true, depthWrite: false })
     );
-    const worldW = Math.min(26, Math.max(16, width * 0.08));
-    sprite.scale.set(worldW, worldW * (36 / width), 1);
-    sprite.position.y = 5.6 * scale;
-    group.add(figure, ring, bar, sprite);
+    sprite.scale.set(8, 8 * (PLATE_H / PLATE_W), 1);
+    sprite.center.set(0.5, 0);
+    sprite.position.y = 1.35;
+    group.add(figure, pad, ring, bar, sprite);
     scene.add(group);
-    bodies.push(body);
-    const entry = { group, figure, body, ring, bar, sprite };
+    bodies.push(body, pad);
+    const entry = { group, figure, body, ring, bar, sprite, color, lastHp: mob.maxHp, flash: 0 };
     groups.set(mob.id, entry);
     return entry;
   }
@@ -110,15 +119,18 @@ export function createFieldView(scene) {
       }
       const ratio = Math.max(0.05, mob.hp / mob.maxHp);
       const marked = mob.id === targetId;
+      if (mob.hp < entry.lastHp) entry.flash = performance.now() + 140;
+      entry.lastHp = mob.hp;
+      entry.body.material.color.set(entry.flash > performance.now() ? 0xfff6e4 : entry.color);
       entry.bar.scale.x = ratio;
-      entry.bar.position.x = 0;
+      entry.bar.position.x = (ratio - 1) * 1.2;
       entry.bar.material.color.set(ratio < 0.35 ? 0xd4544a : 0x6dbf6a);
-      entry.bar.visible = marked || mob.hp < mob.maxHp;
+      entry.bar.visible = marked && mob.hp < mob.maxHp;
       const con = conOf(mob.level, playerLevel);
       entry.ring.material.color.set(con);
       entry.sprite.material.color.set(con);
-      entry.ring.scale.setScalar(marked ? 1.25 : 1);
-      entry.figure.position.y = Math.sin(performance.now() / 280 + mob.phase) * 0.12;
+      entry.ring.scale.setScalar(marked ? 1.35 : 1);
+      entry.figure.position.y = 0;
     }
     for (const [id, entry] of groups) {
       if (!live.has(id)) {

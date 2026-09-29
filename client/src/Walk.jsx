@@ -274,28 +274,23 @@ export default function Walk({
     const player = new THREE.Group();
     const visuals = new THREE.Group();
     const cloak = new THREE.Mesh(
-      new THREE.CylinderGeometry(1.5, 2.05, 3.1, 8),
+      new THREE.CylinderGeometry(1.05, 1.05, 0.55, 14),
       new THREE.MeshBasicMaterial({ color: classTint(heroRef.current?.classId) })
     );
-    cloak.position.y = 1.8;
-    const head = new THREE.Mesh(
-      new THREE.SphereGeometry(1.15, 12, 10),
-      new THREE.MeshBasicMaterial({ color: 0xf0d7a2 })
-    );
-    head.position.y = 3.7;
+    cloak.position.y = 0.4;
     const nose = new THREE.Mesh(
-      new THREE.BoxGeometry(0.7, 0.45, 1.5),
+      new THREE.ConeGeometry(0.34, 0.85, 3),
       new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
     );
-    nose.position.set(0, 3.7, -1.7);
-    visuals.add(cloak, head, nose);
-    visuals.scale.setScalar(0.55);
+    nose.rotation.x = Math.PI / 2;
+    nose.position.set(0, 0.62, -1.05);
+    visuals.add(cloak, nose);
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(1.45, 1.95, 28),
+      new THREE.RingGeometry(1.35, 1.7, 24),
       new THREE.MeshBasicMaterial({ color: 0xf0c14b, side: THREE.DoubleSide, transparent: true, opacity: 0.92 })
     );
     ring.rotation.x = -Math.PI / 2;
-    ring.position.y = 0.7;
+    ring.position.y = 0.12;
     player.add(visuals, ring);
     scene.add(player);
 
@@ -924,7 +919,7 @@ export default function Walk({
       const fx = -Math.sin(cam.yaw);
       const fz = -Math.cos(cam.yaw);
       const sprint = keys.has("shift");
-      const speed = (16 + cam.dist * 0.05) * (sprint ? 1.65 : 1) * (session?.speed() || 1);
+      const speed = 9 * (sprint ? 1.55 : 1) * (session?.speed() || 1);
       if (!heroRef.current) keys.clear();
       const keyMove =
         keys.has("w") ||
@@ -999,8 +994,8 @@ export default function Walk({
         while (diff > Math.PI) diff -= Math.PI * 2;
         while (diff < -Math.PI) diff += Math.PI * 2;
         player.rotation.y += diff * Math.min(1, dt * 12);
-        bob += dt * (sprint ? 16 : 11);
-        visuals.position.y = Math.abs(Math.sin(bob)) * 0.55;
+        bob += dt * (sprint ? 10 : 7);
+        visuals.position.y = Math.abs(Math.sin(bob)) * 0.08;
       } else {
         visuals.position.y += (0 - visuals.position.y) * Math.min(1, dt * 8);
       }
@@ -1032,9 +1027,7 @@ export default function Walk({
         }
       }
 
-      for (const label of labels) {
-        label.visible = label.userData.layer === layerNow && cam.dist > 168;
-      }
+      for (const label of labels) label.visible = false;
 
       if (session && heroRef.current) {
         const step = session.update(
