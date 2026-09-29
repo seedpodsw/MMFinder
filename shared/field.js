@@ -357,6 +357,7 @@ export function createSession(hero, storage) {
       xpNext: xpToNext(hero.level),
       hp: Math.max(0, Math.round(hero.hp)),
       maxHp,
+      attack: damageFor(hero.level, k),
       kills: hero.kills,
       line,
       log: log.slice(),

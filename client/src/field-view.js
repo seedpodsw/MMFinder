@@ -72,9 +72,10 @@ export function createFieldView(scene) {
     const sprite = new THREE.Sprite(
       new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false })
     );
-    const worldW = Math.min(70, width * 0.28);
+    const worldW = Math.min(12, Math.max(7.5, width * 0.042));
     sprite.scale.set(worldW, worldW * (52 / width), 1);
-    sprite.position.y = 9 * scale;
+    sprite.position.y = 7.4 * scale;
+    sprite.visible = false;
     group.add(body, ring, bar, sprite);
     scene.add(group);
     bodies.push(body);
@@ -100,6 +101,7 @@ export function createFieldView(scene) {
       entry.bar.material.color.set(ratio < 0.35 ? 0xd4544a : 0x6dbf6a);
       entry.ring.material.color.set(conOf(mob.level, playerLevel));
       const marked = mob.id === targetId;
+      entry.sprite.visible = marked;
       entry.ring.scale.setScalar(marked ? 1.2 : 1);
       entry.body.position.y = 3.3 * (mob.named ? 1.28 : 1) + Math.sin(performance.now() / 280 + mob.phase) * 0.25;
     }

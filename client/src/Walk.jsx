@@ -1329,9 +1329,18 @@ export default function Walk({
           <div className="field-bar hp">
             <i style={{ width: `${Math.max(0, Math.min(100, (combat.hp / combat.maxHp) * 100))}%` }} />
           </div>
-          <p className="field-nums">
-            {combat.hp} / {combat.maxHp}
-          </p>
+          <dl className="field-stats">
+            <div>
+              <dt>Health</dt>
+              <dd>
+                {combat.hp} / {combat.maxHp}
+              </dd>
+            </div>
+            <div>
+              <dt>Attack</dt>
+              <dd>{combat.attack}</dd>
+            </div>
+          </dl>
           <div className="field-bar xp">
             <i style={{ width: `${Math.max(0, Math.min(100, (combat.xp / combat.xpNext) * 100))}%` }} />
           </div>
@@ -1345,7 +1354,7 @@ export default function Walk({
               <strong style={{ color: combat.target.con }}>{combat.target.name}</strong>
               <span>
                 Level {combat.target.level}
-                {combat.target.named ? " · named" : ""}
+                {combat.target.named ? " · named" : ""} · {combat.target.hp} / {combat.target.maxHp}
               </span>
               <div className="field-bar mob">
                 <i
