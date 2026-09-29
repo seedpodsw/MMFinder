@@ -1,0 +1,4271 @@
+{
+  "className": "Spellblade",
+  "slug": "Spellblade",
+  "type": "ability",
+  "sectionTitle": "Spellblade Spells & Abilities",
+  "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spellblade",
+  "entryCount": 61,
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    25,
+    26,
+    28,
+    30,
+    32,
+    34,
+    35,
+    36,
+    38,
+    40,
+    42,
+    44,
+    45,
+    46,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "entriesByLevel": {
+    "1": [
+      {
+        "name": "Arcane Infusion",
+        "slug": "Arcane_Infusion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Infusion",
+        "description": "Infuse your weapon with arcane energy, granting a chance to deal 5 (L1) to 30 (L60) Magic Damage on melee attacks and a lesser chance to apply Arcane Frailty. Arcane Frailty reduces the target's Magic Resistance by 1 (L1) to 15 (L60) for 15s. While active, reduces the Mana cost of Arcane Spear by 25%.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage",
+          "buff",
+          "debuff",
+          "self"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 5,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Magic on melee attacks",
+            "display": "5–30 Magic on melee attacks dmg (L1–L60)",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "5–30 Magic on melee attacks dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Arcane Spear I",
+        "slug": "Arcane_Spear_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_I",
+        "description": "Hurl a spear of arcane energy at your target, dealing 3 (L1) to 10 (L11) Magic Damage. Mana cost reduced by 25% while Arcane Infusion is active.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 3,
+            "max": 10,
+            "minLevel": 1,
+            "maxLevel": 11,
+            "damageType": "Magic",
+            "display": "3–10 Magic dmg (L1–L11)",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "3–10 Magic dmg (L1–L11)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Infused Slash I",
+        "slug": "Infused_Slash_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_I",
+        "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 2 (L1) to 5 (L10) additional damage based on your current infusion. Shares cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "damage",
+            "min": 2,
+            "max": 5,
+            "minLevel": 1,
+            "maxLevel": 10,
+            "damageType": "additional based on your current infusion",
+            "display": "2–5 additional based on your current infusion dmg (L1–L10)",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "100% weapon dmg · 2–5 additional based on your current infusion dmg (L1–L10)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Polar Align: North",
+        "slug": "Polar_Align:_North",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
+        "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "utility",
+          "self"
+        ],
+        "primaryTag": "utility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Shoot",
+        "slug": "Shoot",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shoot",
+        "description": "Shoots your target with a bow. (Requires bow & arrows)",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Throw",
+        "slug": "Throw",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
+        "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "2": [
+      {
+        "name": "Minor Spellshield",
+        "slug": "Minor_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
+        "description": "A magical shield encircles you, increasing your HP by 10, AC by 5, and Magic Resistance by 5.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 2,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "HP",
+            "amount": 10,
+            "display": "+10 HP",
+            "sortKey": 10,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "AC",
+            "amount": 5,
+            "display": "+5 AC",
+            "sortKey": 5,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 5,
+            "display": "+5 Magic Resistance",
+            "sortKey": 5,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+10 HP · +5 AC · +5 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "3": [
+      {
+        "name": "Aura of the Arcane",
+        "slug": "Aura_of_the_Arcane",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_the_Arcane",
+        "description": "Envelop your group in an arcane aura, increasing their Intelligence by 1 (L1) to 15 (L60) and Spell Damage dealt by 10%. This ability persists until canceled.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "buff",
+          "INT",
+          "damage"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "and Spell dealt by 10%",
+            "display": "1–15% and Spell dealt by 10% dmg (L1–L60)",
+            "sortKey": 15
+          },
+          {
+            "kind": "buff",
+            "stat": "Intelligence",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–15 Intelligence (L1–L60)",
+            "sortKey": 15,
+            "statTag": "INT"
+          }
+        ],
+        "valuesSummary": "+1–15 Intelligence (L1–L60) · 1–15% and Spell dealt by 10% dmg (L1–L60)",
+        "statTags": [
+          "INT"
+        ],
+        "type": "ability"
+      }
+    ],
+    "4": [
+      {
+        "name": "Telekinetic Infusion",
+        "slug": "Telekinetic_Infusion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Telekinetic_Infusion",
+        "description": "Infuse your weapon with telekinetic energy, granting a chance to deal 5 (L1) to 30 (L60) Physical Damage on melee attacks and a lesser chance to activate Kinetic Siphon. Kinetic Siphon decreases the target's Movement Speed by 8% (L8) to 16% (L60) and Agility by 5 (L8) to 15 (L60) while increasing yours by the same amount for 1 minute. While this infusion is active, the Mana cost of Kinetic Ward is reduced by 25%.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "damage",
+          "buff",
+          "movement",
+          "self",
+          "AGI"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 5,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Physical on melee attacks",
+            "display": "5–30 Physical on melee attacks dmg (L1–L60)",
+            "sortKey": 30
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "min": 5,
+            "max": 15,
+            "minLevel": 8,
+            "maxLevel": 60,
+            "display": "+5–15 Agility (L8–L60)",
+            "sortKey": 15,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "5–30 Physical on melee attacks dmg (L1–L60) · +5–15 Agility (L8–L60)",
+        "statTags": [
+          "AGI"
+        ],
+        "type": "ability"
+      }
+    ],
+    "5": [
+      {
+        "name": "Kinetic Ward I",
+        "slug": "Kinetic_Ward_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_I",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 25 damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 5,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 25,
+            "display": "25 absorb",
+            "sortKey": 25
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "25 absorb · +10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "6": [
+      {
+        "name": "Magic Protection",
+        "slug": "Magic_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
+        "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 6,
+        "tags": [
+          "buff",
+          "MR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 5,
+            "display": "+5 Magic Resistance",
+            "sortKey": 5,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+5 Magic Resistance",
+        "statTags": [
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "7": [
+      {
+        "name": "Phase Strike",
+        "slug": "Phase_Strike",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Phase_Strike",
+        "description": "Instantly teleport behind your target, dealing 80% Weapon Ratio Damage, activating your current infusion effect, and removing all stun and immobilize effects. This ability can be used while stunned or immobilized.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 7,
+        "tags": [
+          "damage",
+          "crowd-control",
+          "teleport"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "80% weapon dmg",
+            "sortKey": 80
+          }
+        ],
+        "valuesSummary": "80% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "8": [
+      {
+        "name": "Conduit",
+        "slug": "Conduit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conduit",
+        "description": "Conduct your current infusion, channeling it into a unique spell of the same type. Arcane Detonation: Deal 10 (L8) to 300 (L60) Magic Damage. Electric Arc: Deal 5 (L1) to 150 (L60) Electric Damage, stunning the target for 1.5 seconds before arcing to another target. Telekinetic Push: Blast your target with telekinetic force, knocking them back and immobilizing them for 5 seconds. Activating this ability places your current infusion on a long cooldown and all other infusions on a short one.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "damage",
+          "crowd-control",
+          "stun",
+          "root"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 10,
+            "max": 300,
+            "minLevel": 8,
+            "maxLevel": 60,
+            "damageType": "Magic",
+            "display": "10–300 Magic dmg (L8–L60)",
+            "sortKey": 300
+          },
+          {
+            "kind": "damage",
+            "min": 5,
+            "max": 150,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Electric",
+            "display": "5–150 Electric dmg (L1–L60)",
+            "sortKey": 150
+          },
+          {
+            "kind": "crowd-control",
+            "duration": 5,
+            "display": "5s duration",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "10–300 Magic dmg (L8–L60) · 5–150 Electric dmg (L1–L60) · 5s duration",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Dispel Magic",
+        "slug": "Dispel_Magic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
+        "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "9": [
+      {
+        "name": "Electricity Protection",
+        "slug": "Electricity_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electricity_Protection",
+        "description": "Wards your target from shock, increasing their Electricity Resistance by 5.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 9,
+        "tags": [
+          "buff",
+          "ER"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Electricity Resistance",
+            "amount": 5,
+            "display": "+5 Electricity Resistance",
+            "sortKey": 5,
+            "statTag": "ER"
+          }
+        ],
+        "valuesSummary": "+5 Electricity Resistance",
+        "statTags": [
+          "ER"
+        ],
+        "type": "ability"
+      }
+    ],
+    "10": [
+      {
+        "name": "Electric Infusion",
+        "slug": "Electric_Infusion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Infusion",
+        "description": "Infuse your weapon with electric energy, granting you a chance to deal 5(L1) to 30 (L60) Electric Damage on melee attacks and a lesser chance to stun foes for 0.1 seconds. While this infusion is active, the Mana cost of Discharge is reduced by 25%.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage",
+          "buff",
+          "crowd-control",
+          "stun",
+          "self"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 5,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Electric on melee attacks",
+            "display": "5–30 Electric on melee attacks dmg (L1–L60)",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "5–30 Electric on melee attacks dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Discharge",
+        "slug": "Discharge",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge",
+        "description": "Electrocute your target with a powerful discharge, dealing 8 (L10) to 24 (L21) Electric Damage. While Electric infusion is active, the mana cost of this spell is redced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 12,
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 8,
+            "max": 24,
+            "minLevel": 10,
+            "maxLevel": 21,
+            "damageType": "Electric",
+            "display": "8–24 Electric dmg (L10–L21)",
+            "sortKey": 24
+          }
+        ],
+        "valuesSummary": "8–24 Electric dmg (L10–L21)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Infused Slash II",
+        "slug": "Infused_Slash_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_II",
+        "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 5 (L10) to 10 (L20) additional damage based on your current infusion. This ability shares a cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "damage",
+            "min": 5,
+            "max": 10,
+            "minLevel": 10,
+            "maxLevel": 20,
+            "damageType": "additional based on your current infusion",
+            "display": "5–10 additional based on your current infusion dmg (L10–L20)",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "100% weapon dmg · 5–10 additional based on your current infusion dmg (L10–L20)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "11": [
+      {
+        "name": "Lesser Spellshield",
+        "slug": "Lesser_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 25, Armor Class by 10, and Magic Resistance by 10 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 11,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 25,
+            "display": "+25 Health",
+            "sortKey": 25,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 10,
+            "display": "+10 Magic Resistance",
+            "sortKey": 10,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+25 Health · +10 Armor Class · +10 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "12": [
+      {
+        "name": "Arcane Spear II",
+        "slug": "Arcane_Spear_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_II",
+        "description": "Hurl a spear of arcane energy at your target, dealing 30 to 112 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Kinetic Ward II",
+        "slug": "Kinetic_Ward_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_II",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 75 melee damage for 5 seconds. While Tactician’s Instinct is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "damage"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 75,
+            "damageType": "melee",
+            "display": "75 melee dmg",
+            "sortKey": 75
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "75 melee dmg · +10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "14": [
+      {
+        "name": "Seclusion",
+        "slug": "Seclusion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seclusion",
+        "description": "Secludes your target, reducing your Threat against them by 100 (L1) to 100 (L40), immobilizing them, and teleporting yourself a short distance away. This spell has a chance to be removed by damage.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 14,
+        "tags": [
+          "crowd-control",
+          "root",
+          "teleport"
+        ],
+        "primaryTag": "root",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Threat against them",
+            "min": 100,
+            "max": 100,
+            "minLevel": 1,
+            "maxLevel": 40,
+            "display": "−100 Threat against them (L1–L40)",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "−100 Threat against them (L1–L40)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "16": [
+      {
+        "name": "Sense Magic",
+        "slug": "Sense_Magic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sense_Magic",
+        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see magical effects when considering targets for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "buff",
+          "utility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Spellshield",
+        "slug": "Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 50, Armor Class by 15, and Magic Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 50,
+            "display": "+50 Health",
+            "sortKey": 50,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 15,
+            "display": "+15 Armor Class",
+            "sortKey": 15,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 15,
+            "display": "+15 Magic Resistance",
+            "sortKey": 15,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+50 Health · +15 Armor Class · +15 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "18": [
+      {
+        "name": "Fire Protection",
+        "slug": "Fire_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
+        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 18,
+        "tags": [
+          "buff",
+          "FR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Fire Resistance",
+            "amount": 5,
+            "display": "+5 Fire Resistance",
+            "sortKey": 5,
+            "statTag": "FR"
+          }
+        ],
+        "valuesSummary": "+5 Fire Resistance",
+        "statTags": [
+          "FR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Implosion I",
+        "slug": "Implosion_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_I",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 18,
+        "tags": [
+          "damage",
+          "debuff",
+          "aoe",
+          "BLOCK"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 50,
+            "damageType": "Physical",
+            "display": "50 Physical dmg",
+            "sortKey": 50
+          },
+          {
+            "kind": "debuff",
+            "stat": "Block",
+            "amount": 5,
+            "display": "−5 Block",
+            "sortKey": 5,
+            "statTag": "BLOCK"
+          },
+          {
+            "kind": "debuff",
+            "stat": "Dodge",
+            "amount": 5,
+            "display": "−5 Dodge",
+            "sortKey": 5
+          },
+          {
+            "kind": "debuff",
+            "stat": "Parry",
+            "amount": 5,
+            "display": "−5 Parry",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "−5 BLOCK/Dodge/Parry · 50 Physical dmg",
+        "statTags": [
+          "BLOCK"
+        ],
+        "type": "ability"
+      }
+    ],
+    "20": [
+      {
+        "name": "Infused Slash III",
+        "slug": "Infused_Slash_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_III",
+        "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 to 20, or up to 15,000 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "100% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "22": [
+      {
+        "name": "Discharge II",
+        "slug": "Discharge_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_II",
+        "description": "Electrocutes your target with a powerful discharge, dealing 40 to 64 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 120,
+        "castTime": null,
+        "level": 22,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "24": [
+      {
+        "name": "Arcane Spear III",
+        "slug": "Arcane_Spear_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_III",
+        "description": "Hurl a spear of arcane energy at your target, dealing 74.24 to 100.15 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Greater Spellshield",
+        "slug": "Greater_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 75,
+            "display": "+75 Health",
+            "sortKey": 75,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 20,
+            "display": "+20 Armor Class",
+            "sortKey": 20,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 20,
+            "display": "+20 Magic Resistance",
+            "sortKey": 20,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Kinetic Ward III",
+        "slug": "Kinetic_Ward_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_III",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 136 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 136,
+            "display": "136 absorb",
+            "sortKey": 136
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "136 absorb · +10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "25": [
+      {
+        "name": "Flurry I",
+        "slug": "Flurry_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_I",
+        "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage per equipped weapon. Each attack has a chance to activate your current infusion effect.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 25,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "100% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "26": [
+      {
+        "name": "Static Field I",
+        "slug": "Static_Field_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_I",
+        "description": "Place a static field at your feet, dealing 3 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 26,
+        "tags": [
+          "dot",
+          "aoe"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 3,
+            "max": 3,
+            "interval": 3,
+            "duration": 9,
+            "damageType": "Electric",
+            "display": "3 Electric/3s (9s)",
+            "sortKey": 9
+          }
+        ],
+        "valuesSummary": "3 Electric/3s (9s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "28": [
+      {
+        "name": "Implosion II",
+        "slug": "Implosion_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_II",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "damage",
+          "debuff",
+          "aoe",
+          "BLOCK"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 100,
+            "damageType": "Physical",
+            "display": "100 Physical dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "debuff",
+            "stat": "Block",
+            "amount": 5,
+            "display": "−5 Block",
+            "sortKey": 5,
+            "statTag": "BLOCK"
+          },
+          {
+            "kind": "debuff",
+            "stat": "Dodge",
+            "amount": 5,
+            "display": "−5 Dodge",
+            "sortKey": 5
+          },
+          {
+            "kind": "debuff",
+            "stat": "Parry",
+            "amount": 5,
+            "display": "−5 Parry",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "−5 BLOCK/Dodge/Parry · 100 Physical dmg",
+        "statTags": [
+          "BLOCK"
+        ],
+        "type": "ability"
+      }
+    ],
+    "30": [
+      {
+        "name": "Deflection",
+        "slug": "Deflection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deflection",
+        "description": "Take a defensive stance, increasing your Parry by 30% for 15 seconds. While Deflection is active, each parried attack will activate your current Infusion effect.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 30,
+        "tags": [
+          "buff",
+          "stance",
+          "self"
+        ],
+        "primaryTag": "stance",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Parry",
+            "min": 30,
+            "max": 30,
+            "unit": "%",
+            "display": "+30%",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "+30%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Infused Slash IV",
+        "slug": "Infused_Slash_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_IV",
+        "description": "Slash your target with an infused blade, dealing 50% Weapon Ratio Damage plus 15.0 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 30,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "50% weapon dmg",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "50% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "32": [
+      {
+        "name": "Exceptional Spellshield",
+        "slug": "Exceptional_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 100,
+            "display": "+100 Health",
+            "sortKey": 100,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 25,
+            "display": "+25 Armor Class",
+            "sortKey": 25,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 25,
+            "display": "+25 Magic Resistance",
+            "sortKey": 25,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "34": [
+      {
+        "name": "Discharge III",
+        "slug": "Discharge_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_III",
+        "description": "Electrocute your target with a powerful discharge, dealing 120 to 425 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 34,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "35": [
+      {
+        "name": "Bend Gravity",
+        "slug": "Bend_Gravity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bend_Gravity",
+        "description": "Bend gravity around yourself, slowing your descent for 3 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 35,
+        "tags": [
+          "self"
+        ],
+        "primaryTag": "self",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "36": [
+      {
+        "name": "Arcane Spear IV",
+        "slug": "Arcane_Spear_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_IV",
+        "description": "Hurl a spear of arcane energy at your target, dealing 130 to 200 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 36,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "38": [
+      {
+        "name": "Static Field II",
+        "slug": "Static_Field_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_II",
+        "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 38,
+        "tags": [
+          "dot",
+          "aoe"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 3,
+            "duration": 9,
+            "damageType": "Electric",
+            "display": "10 Electric/3s (9s)",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "10 Electric/3s (9s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "40": [
+      {
+        "name": "Arch Spellshield",
+        "slug": "Arch_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 35,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 150,
+            "display": "+150 Health",
+            "sortKey": 150,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 30,
+            "display": "+30 Armor Class",
+            "sortKey": 30,
+            "statTag": "AC"
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 30,
+            "display": "+30 Magic Resistance",
+            "sortKey": 30,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+        "statTags": [
+          "AC",
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Infused Slash V",
+        "slug": "Infused_Slash_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_V",
+        "description": "Slash your target with an infused blade, dealing 300% Weapon Ratio Damage plus 20 to 40 (or up to 6,500) additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "300% weapon dmg",
+            "sortKey": 300
+          }
+        ],
+        "valuesSummary": "300% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Kinetic Ward IV",
+        "slug": "Kinetic_Ward_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_IV",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 25% of damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "42": [
+      {
+        "name": "Implosion III",
+        "slug": "Implosion_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_III",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry for 6 seconds. When this spell expires, the vacuum implodes, dealing 150 Physical Damage to your target and those around it.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 42,
+        "tags": [
+          "damage",
+          "debuff",
+          "aoe"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 150,
+            "damageType": "Physical",
+            "display": "150 Physical dmg",
+            "sortKey": 150
+          }
+        ],
+        "valuesSummary": "150 Physical dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "44": [
+      {
+        "name": "Magic Resistance",
+        "slug": "Magic_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
+        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "MR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 15,
+            "display": "+15 Magic Resistance",
+            "sortKey": 15,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+15 Magic Resistance",
+        "statTags": [
+          "MR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "45": [
+      {
+        "name": "Flurry II",
+        "slug": "Flurry_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_II",
+        "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage three times per equipped weapon. Each attack has a chance to activate your current Infusion effect.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 45,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "100% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "46": [
+      {
+        "name": "Discharge IV",
+        "slug": "Discharge_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_IV",
+        "description": "Electrocute your target with a powerful discharge, dealing 140 to 200 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 46,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "48": [
+      {
+        "name": "Electric Resistance",
+        "slug": "Electric_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Resistance",
+        "description": "Greatly ward your target against shock, increasing their Electric Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Electric Resistance",
+            "amount": 15,
+            "display": "+15 Electric Resistance",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "+15 Electric Resistance",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "50": [
+      {
+        "name": "Infused Slash VI",
+        "slug": "Infused_Slash_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_VI",
+        "description": "Slash your target with an infused blade, dealing 300% Weapon Ratio Damage plus 25 to 50 (or up to 7,500) additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "300% weapon dmg",
+            "sortKey": 300
+          }
+        ],
+        "valuesSummary": "300% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "51": [
+      {
+        "name": "Gate",
+        "slug": "Gate",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
+        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 51,
+        "tags": [
+          "summon",
+          "teleport"
+        ],
+        "primaryTag": "summon",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "52": [
+      {
+        "name": "Arcane Spear V",
+        "slug": "Arcane_Spear_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_V",
+        "description": "Hurl a spear of arcane energy at your target, dealing 215 (+15) to 375 (+15) Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Static Field III",
+        "slug": "Static_Field_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_III",
+        "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 2 seconds for 6 seconds.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "dot",
+          "aoe"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 2,
+            "duration": 6,
+            "damageType": "Electric",
+            "display": "10 Electric/2s (6s)",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "10 Electric/2s (6s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "53": [
+      {
+        "name": "Fire Resistance",
+        "slug": "Fire_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
+        "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 53,
+        "tags": [
+          "buff",
+          "FR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Fire Resistance",
+            "amount": 15,
+            "display": "+15 Fire Resistance",
+            "sortKey": 15,
+            "statTag": "FR"
+          }
+        ],
+        "valuesSummary": "+15 Fire Resistance",
+        "statTags": [
+          "FR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "54": [
+      {
+        "name": "Discharge V",
+        "slug": "Discharge_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_V",
+        "description": "Electrocute your target with a powerful discharge, dealing 240 (154) to 330 (212) Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 54,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Implosion IV",
+        "slug": "Implosion_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_IV",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 6 seconds. When this spell expires, the vacuum implodes, dealing 250 Physical Damage to your target and those around it.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 54,
+        "tags": [
+          "damage",
+          "debuff",
+          "aoe",
+          "BLOCK"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 250,
+            "damageType": "Physical",
+            "display": "250 Physical dmg",
+            "sortKey": 250
+          },
+          {
+            "kind": "debuff",
+            "stat": "Block",
+            "amount": 5,
+            "display": "−5 Block",
+            "sortKey": 5,
+            "statTag": "BLOCK"
+          },
+          {
+            "kind": "debuff",
+            "stat": "Dodge",
+            "amount": 5,
+            "display": "−5 Dodge",
+            "sortKey": 5
+          },
+          {
+            "kind": "debuff",
+            "stat": "Parry",
+            "amount": 5,
+            "display": "−5 Parry",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "−5 BLOCK/Dodge/Parry · 250 Physical dmg",
+        "statTags": [
+          "BLOCK"
+        ],
+        "type": "ability"
+      }
+    ],
+    "56": [
+      {
+        "name": "Arcane Spear VI",
+        "slug": "Arcane_Spear_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_VI",
+        "description": "Hurl a spear of arcane energy at your target, dealing 425 (+15) to 475 (+15) Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 20%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "57": [
+      {
+        "name": "Maelstrom",
+        "slug": "Maelstrom",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maelstrom",
+        "description": "Become a maelstrom of magical energy, increasing your Attack Speed by 15% and chance to activate infusion effects for 15 seconds. This ability is considered a Tertiary Blade.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 57,
+        "tags": [
+          "buff",
+          "haste",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 15,
+            "max": 15,
+            "unit": "%",
+            "display": "+15%",
+            "sortKey": 15,
+            "statTag": "ATK"
+          }
+        ],
+        "valuesSummary": "+15%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "58": [
+      {
+        "name": "Discharge VI",
+        "slug": "Discharge_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_VI",
+        "description": "Electrocute your target with a powerful discharge, dealing 200 (+1.5) to 340 (+1.5) Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 58,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "59": [
+      {
+        "name": "Static Field IV",
+        "slug": "Static_Field_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_IV",
+        "description": "Place a static field at your feet, dealing 30 Electric Damage to targets within the affected area every 2 seconds for 6 seconds.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 59,
+        "tags": [
+          "dot",
+          "aoe"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 30,
+            "max": 30,
+            "interval": 2,
+            "duration": 6,
+            "damageType": "Electric",
+            "display": "30 Electric/2s (6s)",
+            "sortKey": 90
+          }
+        ],
+        "valuesSummary": "30 Electric/2s (6s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "60": [
+      {
+        "name": "Kinetic Ward V",
+        "slug": "Kinetic_Ward_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_V",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 400 damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 60,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 400,
+            "display": "400 absorb",
+            "sortKey": 400
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "400 absorb · +10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "name": "Arcane Infusion",
+      "slug": "Arcane_Infusion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Infusion",
+      "description": "Infuse your weapon with arcane energy, granting a chance to deal 5 (L1) to 30 (L60) Magic Damage on melee attacks and a lesser chance to apply Arcane Frailty. Arcane Frailty reduces the target's Magic Resistance by 1 (L1) to 15 (L60) for 15s. While active, reduces the Mana cost of Arcane Spear by 25%.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage",
+        "buff",
+        "debuff",
+        "self"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 5,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Magic on melee attacks",
+          "display": "5–30 Magic on melee attacks dmg (L1–L60)",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "5–30 Magic on melee attacks dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear I",
+      "slug": "Arcane_Spear_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_I",
+      "description": "Hurl a spear of arcane energy at your target, dealing 3 (L1) to 10 (L11) Magic Damage. Mana cost reduced by 25% while Arcane Infusion is active.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 3,
+          "max": 10,
+          "minLevel": 1,
+          "maxLevel": 11,
+          "damageType": "Magic",
+          "display": "3–10 Magic dmg (L1–L11)",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "3–10 Magic dmg (L1–L11)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash I",
+      "slug": "Infused_Slash_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_I",
+      "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 2 (L1) to 5 (L10) additional damage based on your current infusion. Shares cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "damage",
+          "min": 2,
+          "max": 5,
+          "minLevel": 1,
+          "maxLevel": 10,
+          "damageType": "additional based on your current infusion",
+          "display": "2–5 additional based on your current infusion dmg (L1–L10)",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "100% weapon dmg · 2–5 additional based on your current infusion dmg (L1–L10)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Polar Align: North",
+      "slug": "Polar_Align:_North",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
+      "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "utility",
+        "self"
+      ],
+      "primaryTag": "utility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shoot",
+      "slug": "Shoot",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shoot",
+      "description": "Shoots your target with a bow. (Requires bow & arrows)",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Throw",
+      "slug": "Throw",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
+      "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Minor Spellshield",
+      "slug": "Minor_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
+      "description": "A magical shield encircles you, increasing your HP by 10, AC by 5, and Magic Resistance by 5.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 2,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "HP",
+          "amount": 10,
+          "display": "+10 HP",
+          "sortKey": 10,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "AC",
+          "amount": 5,
+          "display": "+5 AC",
+          "sortKey": 5,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 5,
+          "display": "+5 Magic Resistance",
+          "sortKey": 5,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+10 HP · +5 AC · +5 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Aura of the Arcane",
+      "slug": "Aura_of_the_Arcane",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_the_Arcane",
+      "description": "Envelop your group in an arcane aura, increasing their Intelligence by 1 (L1) to 15 (L60) and Spell Damage dealt by 10%. This ability persists until canceled.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "buff",
+        "INT",
+        "damage"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "and Spell dealt by 10%",
+          "display": "1–15% and Spell dealt by 10% dmg (L1–L60)",
+          "sortKey": 15
+        },
+        {
+          "kind": "buff",
+          "stat": "Intelligence",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–15 Intelligence (L1–L60)",
+          "sortKey": 15,
+          "statTag": "INT"
+        }
+      ],
+      "valuesSummary": "+1–15 Intelligence (L1–L60) · 1–15% and Spell dealt by 10% dmg (L1–L60)",
+      "statTags": [
+        "INT"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Telekinetic Infusion",
+      "slug": "Telekinetic_Infusion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Telekinetic_Infusion",
+      "description": "Infuse your weapon with telekinetic energy, granting a chance to deal 5 (L1) to 30 (L60) Physical Damage on melee attacks and a lesser chance to activate Kinetic Siphon. Kinetic Siphon decreases the target's Movement Speed by 8% (L8) to 16% (L60) and Agility by 5 (L8) to 15 (L60) while increasing yours by the same amount for 1 minute. While this infusion is active, the Mana cost of Kinetic Ward is reduced by 25%.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "damage",
+        "buff",
+        "movement",
+        "self",
+        "AGI"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 5,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Physical on melee attacks",
+          "display": "5–30 Physical on melee attacks dmg (L1–L60)",
+          "sortKey": 30
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "min": 5,
+          "max": 15,
+          "minLevel": 8,
+          "maxLevel": 60,
+          "display": "+5–15 Agility (L8–L60)",
+          "sortKey": 15,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "5–30 Physical on melee attacks dmg (L1–L60) · +5–15 Agility (L8–L60)",
+      "statTags": [
+        "AGI"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Kinetic Ward I",
+      "slug": "Kinetic_Ward_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_I",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 25 damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 5,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 25,
+          "display": "25 absorb",
+          "sortKey": 25
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "25 absorb · +10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Magic Protection",
+      "slug": "Magic_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
+      "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 6,
+      "tags": [
+        "buff",
+        "MR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 5,
+          "display": "+5 Magic Resistance",
+          "sortKey": 5,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+5 Magic Resistance",
+      "statTags": [
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Phase Strike",
+      "slug": "Phase_Strike",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Phase_Strike",
+      "description": "Instantly teleport behind your target, dealing 80% Weapon Ratio Damage, activating your current infusion effect, and removing all stun and immobilize effects. This ability can be used while stunned or immobilized.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 7,
+      "tags": [
+        "damage",
+        "crowd-control",
+        "teleport"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "80% weapon dmg",
+          "sortKey": 80
+        }
+      ],
+      "valuesSummary": "80% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Conduit",
+      "slug": "Conduit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conduit",
+      "description": "Conduct your current infusion, channeling it into a unique spell of the same type. Arcane Detonation: Deal 10 (L8) to 300 (L60) Magic Damage. Electric Arc: Deal 5 (L1) to 150 (L60) Electric Damage, stunning the target for 1.5 seconds before arcing to another target. Telekinetic Push: Blast your target with telekinetic force, knocking them back and immobilizing them for 5 seconds. Activating this ability places your current infusion on a long cooldown and all other infusions on a short one.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "damage",
+        "crowd-control",
+        "stun",
+        "root"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 10,
+          "max": 300,
+          "minLevel": 8,
+          "maxLevel": 60,
+          "damageType": "Magic",
+          "display": "10–300 Magic dmg (L8–L60)",
+          "sortKey": 300
+        },
+        {
+          "kind": "damage",
+          "min": 5,
+          "max": 150,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Electric",
+          "display": "5–150 Electric dmg (L1–L60)",
+          "sortKey": 150
+        },
+        {
+          "kind": "crowd-control",
+          "duration": 5,
+          "display": "5s duration",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "10–300 Magic dmg (L8–L60) · 5–150 Electric dmg (L1–L60) · 5s duration",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Dispel Magic",
+      "slug": "Dispel_Magic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
+      "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Electricity Protection",
+      "slug": "Electricity_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electricity_Protection",
+      "description": "Wards your target from shock, increasing their Electricity Resistance by 5.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 9,
+      "tags": [
+        "buff",
+        "ER"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Electricity Resistance",
+          "amount": 5,
+          "display": "+5 Electricity Resistance",
+          "sortKey": 5,
+          "statTag": "ER"
+        }
+      ],
+      "valuesSummary": "+5 Electricity Resistance",
+      "statTags": [
+        "ER"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Electric Infusion",
+      "slug": "Electric_Infusion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Infusion",
+      "description": "Infuse your weapon with electric energy, granting you a chance to deal 5(L1) to 30 (L60) Electric Damage on melee attacks and a lesser chance to stun foes for 0.1 seconds. While this infusion is active, the Mana cost of Discharge is reduced by 25%.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage",
+        "buff",
+        "crowd-control",
+        "stun",
+        "self"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 5,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Electric on melee attacks",
+          "display": "5–30 Electric on melee attacks dmg (L1–L60)",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "5–30 Electric on melee attacks dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge",
+      "slug": "Discharge",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge",
+      "description": "Electrocute your target with a powerful discharge, dealing 8 (L10) to 24 (L21) Electric Damage. While Electric infusion is active, the mana cost of this spell is redced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 12,
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 8,
+          "max": 24,
+          "minLevel": 10,
+          "maxLevel": 21,
+          "damageType": "Electric",
+          "display": "8–24 Electric dmg (L10–L21)",
+          "sortKey": 24
+        }
+      ],
+      "valuesSummary": "8–24 Electric dmg (L10–L21)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash II",
+      "slug": "Infused_Slash_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_II",
+      "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 5 (L10) to 10 (L20) additional damage based on your current infusion. This ability shares a cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "damage",
+          "min": 5,
+          "max": 10,
+          "minLevel": 10,
+          "maxLevel": 20,
+          "damageType": "additional based on your current infusion",
+          "display": "5–10 additional based on your current infusion dmg (L10–L20)",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "100% weapon dmg · 5–10 additional based on your current infusion dmg (L10–L20)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lesser Spellshield",
+      "slug": "Lesser_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 25, Armor Class by 10, and Magic Resistance by 10 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 11,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 25,
+          "display": "+25 Health",
+          "sortKey": 25,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 10,
+          "display": "+10 Magic Resistance",
+          "sortKey": 10,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+25 Health · +10 Armor Class · +10 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear II",
+      "slug": "Arcane_Spear_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_II",
+      "description": "Hurl a spear of arcane energy at your target, dealing 30 to 112 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Kinetic Ward II",
+      "slug": "Kinetic_Ward_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_II",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 75 melee damage for 5 seconds. While Tactician’s Instinct is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "damage"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 75,
+          "damageType": "melee",
+          "display": "75 melee dmg",
+          "sortKey": 75
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "75 melee dmg · +10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Seclusion",
+      "slug": "Seclusion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seclusion",
+      "description": "Secludes your target, reducing your Threat against them by 100 (L1) to 100 (L40), immobilizing them, and teleporting yourself a short distance away. This spell has a chance to be removed by damage.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 14,
+      "tags": [
+        "crowd-control",
+        "root",
+        "teleport"
+      ],
+      "primaryTag": "root",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Threat against them",
+          "min": 100,
+          "max": 100,
+          "minLevel": 1,
+          "maxLevel": 40,
+          "display": "−100 Threat against them (L1–L40)",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "−100 Threat against them (L1–L40)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sense Magic",
+      "slug": "Sense_Magic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sense_Magic",
+      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see magical effects when considering targets for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "buff",
+        "utility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Spellshield",
+      "slug": "Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 50, Armor Class by 15, and Magic Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 50,
+          "display": "+50 Health",
+          "sortKey": 50,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 15,
+          "display": "+15 Armor Class",
+          "sortKey": 15,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 15,
+          "display": "+15 Magic Resistance",
+          "sortKey": 15,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+50 Health · +15 Armor Class · +15 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Fire Protection",
+      "slug": "Fire_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
+      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 18,
+      "tags": [
+        "buff",
+        "FR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Fire Resistance",
+          "amount": 5,
+          "display": "+5 Fire Resistance",
+          "sortKey": 5,
+          "statTag": "FR"
+        }
+      ],
+      "valuesSummary": "+5 Fire Resistance",
+      "statTags": [
+        "FR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Implosion I",
+      "slug": "Implosion_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_I",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 18,
+      "tags": [
+        "damage",
+        "debuff",
+        "aoe",
+        "BLOCK"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 50,
+          "damageType": "Physical",
+          "display": "50 Physical dmg",
+          "sortKey": 50
+        },
+        {
+          "kind": "debuff",
+          "stat": "Block",
+          "amount": 5,
+          "display": "−5 Block",
+          "sortKey": 5,
+          "statTag": "BLOCK"
+        },
+        {
+          "kind": "debuff",
+          "stat": "Dodge",
+          "amount": 5,
+          "display": "−5 Dodge",
+          "sortKey": 5
+        },
+        {
+          "kind": "debuff",
+          "stat": "Parry",
+          "amount": 5,
+          "display": "−5 Parry",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "−5 BLOCK/Dodge/Parry · 50 Physical dmg",
+      "statTags": [
+        "BLOCK"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash III",
+      "slug": "Infused_Slash_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_III",
+      "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 to 20, or up to 15,000 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "100% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge II",
+      "slug": "Discharge_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_II",
+      "description": "Electrocutes your target with a powerful discharge, dealing 40 to 64 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 120,
+      "castTime": null,
+      "level": 22,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear III",
+      "slug": "Arcane_Spear_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_III",
+      "description": "Hurl a spear of arcane energy at your target, dealing 74.24 to 100.15 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Spellshield",
+      "slug": "Greater_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 75,
+          "display": "+75 Health",
+          "sortKey": 75,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 20,
+          "display": "+20 Armor Class",
+          "sortKey": 20,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 20,
+          "display": "+20 Magic Resistance",
+          "sortKey": 20,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Kinetic Ward III",
+      "slug": "Kinetic_Ward_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_III",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 136 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 136,
+          "display": "136 absorb",
+          "sortKey": 136
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "136 absorb · +10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Flurry I",
+      "slug": "Flurry_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_I",
+      "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage per equipped weapon. Each attack has a chance to activate your current infusion effect.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 25,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "100% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Static Field I",
+      "slug": "Static_Field_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_I",
+      "description": "Place a static field at your feet, dealing 3 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 26,
+      "tags": [
+        "dot",
+        "aoe"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 3,
+          "max": 3,
+          "interval": 3,
+          "duration": 9,
+          "damageType": "Electric",
+          "display": "3 Electric/3s (9s)",
+          "sortKey": 9
+        }
+      ],
+      "valuesSummary": "3 Electric/3s (9s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Implosion II",
+      "slug": "Implosion_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_II",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "damage",
+        "debuff",
+        "aoe",
+        "BLOCK"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 100,
+          "damageType": "Physical",
+          "display": "100 Physical dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "debuff",
+          "stat": "Block",
+          "amount": 5,
+          "display": "−5 Block",
+          "sortKey": 5,
+          "statTag": "BLOCK"
+        },
+        {
+          "kind": "debuff",
+          "stat": "Dodge",
+          "amount": 5,
+          "display": "−5 Dodge",
+          "sortKey": 5
+        },
+        {
+          "kind": "debuff",
+          "stat": "Parry",
+          "amount": 5,
+          "display": "−5 Parry",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "−5 BLOCK/Dodge/Parry · 100 Physical dmg",
+      "statTags": [
+        "BLOCK"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Deflection",
+      "slug": "Deflection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deflection",
+      "description": "Take a defensive stance, increasing your Parry by 30% for 15 seconds. While Deflection is active, each parried attack will activate your current Infusion effect.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 30,
+      "tags": [
+        "buff",
+        "stance",
+        "self"
+      ],
+      "primaryTag": "stance",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Parry",
+          "min": 30,
+          "max": 30,
+          "unit": "%",
+          "display": "+30%",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "+30%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash IV",
+      "slug": "Infused_Slash_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_IV",
+      "description": "Slash your target with an infused blade, dealing 50% Weapon Ratio Damage plus 15.0 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 30,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "50% weapon dmg",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "50% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Exceptional Spellshield",
+      "slug": "Exceptional_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 100,
+          "display": "+100 Health",
+          "sortKey": 100,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 25,
+          "display": "+25 Armor Class",
+          "sortKey": 25,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 25,
+          "display": "+25 Magic Resistance",
+          "sortKey": 25,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge III",
+      "slug": "Discharge_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_III",
+      "description": "Electrocute your target with a powerful discharge, dealing 120 to 425 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 34,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Bend Gravity",
+      "slug": "Bend_Gravity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bend_Gravity",
+      "description": "Bend gravity around yourself, slowing your descent for 3 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 35,
+      "tags": [
+        "self"
+      ],
+      "primaryTag": "self",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear IV",
+      "slug": "Arcane_Spear_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_IV",
+      "description": "Hurl a spear of arcane energy at your target, dealing 130 to 200 Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 36,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Static Field II",
+      "slug": "Static_Field_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_II",
+      "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 38,
+      "tags": [
+        "dot",
+        "aoe"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 3,
+          "duration": 9,
+          "damageType": "Electric",
+          "display": "10 Electric/3s (9s)",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "10 Electric/3s (9s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Arch Spellshield",
+      "slug": "Arch_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 35,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 150,
+          "display": "+150 Health",
+          "sortKey": 150,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 30,
+          "display": "+30 Armor Class",
+          "sortKey": 30,
+          "statTag": "AC"
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 30,
+          "display": "+30 Magic Resistance",
+          "sortKey": 30,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+      "statTags": [
+        "AC",
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash V",
+      "slug": "Infused_Slash_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_V",
+      "description": "Slash your target with an infused blade, dealing 300% Weapon Ratio Damage plus 20 to 40 (or up to 6,500) additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "300% weapon dmg",
+          "sortKey": 300
+        }
+      ],
+      "valuesSummary": "300% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Kinetic Ward IV",
+      "slug": "Kinetic_Ward_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_IV",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 25% of damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Implosion III",
+      "slug": "Implosion_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_III",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry for 6 seconds. When this spell expires, the vacuum implodes, dealing 150 Physical Damage to your target and those around it.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 42,
+      "tags": [
+        "damage",
+        "debuff",
+        "aoe"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 150,
+          "damageType": "Physical",
+          "display": "150 Physical dmg",
+          "sortKey": 150
+        }
+      ],
+      "valuesSummary": "150 Physical dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Magic Resistance",
+      "slug": "Magic_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
+      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "MR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 15,
+          "display": "+15 Magic Resistance",
+          "sortKey": 15,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+15 Magic Resistance",
+      "statTags": [
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Flurry II",
+      "slug": "Flurry_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_II",
+      "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage three times per equipped weapon. Each attack has a chance to activate your current Infusion effect.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 45,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "100% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge IV",
+      "slug": "Discharge_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_IV",
+      "description": "Electrocute your target with a powerful discharge, dealing 140 to 200 Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 46,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Electric Resistance",
+      "slug": "Electric_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Resistance",
+      "description": "Greatly ward your target against shock, increasing their Electric Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Electric Resistance",
+          "amount": 15,
+          "display": "+15 Electric Resistance",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "+15 Electric Resistance",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Infused Slash VI",
+      "slug": "Infused_Slash_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_VI",
+      "description": "Slash your target with an infused blade, dealing 300% Weapon Ratio Damage plus 25 to 50 (or up to 7,500) additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "300% weapon dmg",
+          "sortKey": 300
+        }
+      ],
+      "valuesSummary": "300% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Gate",
+      "slug": "Gate",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
+      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 51,
+      "tags": [
+        "summon",
+        "teleport"
+      ],
+      "primaryTag": "summon",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear V",
+      "slug": "Arcane_Spear_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_V",
+      "description": "Hurl a spear of arcane energy at your target, dealing 215 (+15) to 375 (+15) Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 25%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Static Field III",
+      "slug": "Static_Field_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_III",
+      "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 2 seconds for 6 seconds.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "dot",
+        "aoe"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 2,
+          "duration": 6,
+          "damageType": "Electric",
+          "display": "10 Electric/2s (6s)",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "10 Electric/2s (6s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Fire Resistance",
+      "slug": "Fire_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
+      "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 53,
+      "tags": [
+        "buff",
+        "FR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Fire Resistance",
+          "amount": 15,
+          "display": "+15 Fire Resistance",
+          "sortKey": 15,
+          "statTag": "FR"
+        }
+      ],
+      "valuesSummary": "+15 Fire Resistance",
+      "statTags": [
+        "FR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge V",
+      "slug": "Discharge_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_V",
+      "description": "Electrocute your target with a powerful discharge, dealing 240 (154) to 330 (212) Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 54,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Implosion IV",
+      "slug": "Implosion_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_IV",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 6 seconds. When this spell expires, the vacuum implodes, dealing 250 Physical Damage to your target and those around it.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 54,
+      "tags": [
+        "damage",
+        "debuff",
+        "aoe",
+        "BLOCK"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 250,
+          "damageType": "Physical",
+          "display": "250 Physical dmg",
+          "sortKey": 250
+        },
+        {
+          "kind": "debuff",
+          "stat": "Block",
+          "amount": 5,
+          "display": "−5 Block",
+          "sortKey": 5,
+          "statTag": "BLOCK"
+        },
+        {
+          "kind": "debuff",
+          "stat": "Dodge",
+          "amount": 5,
+          "display": "−5 Dodge",
+          "sortKey": 5
+        },
+        {
+          "kind": "debuff",
+          "stat": "Parry",
+          "amount": 5,
+          "display": "−5 Parry",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "−5 BLOCK/Dodge/Parry · 250 Physical dmg",
+      "statTags": [
+        "BLOCK"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Arcane Spear VI",
+      "slug": "Arcane_Spear_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Spear_VI",
+      "description": "Hurl a spear of arcane energy at your target, dealing 425 (+15) to 475 (+15) Magic Damage. While Arcane Infusion is active, the Mana cost of this spell is reduced by 20%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maelstrom",
+      "slug": "Maelstrom",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maelstrom",
+      "description": "Become a maelstrom of magical energy, increasing your Attack Speed by 15% and chance to activate infusion effects for 15 seconds. This ability is considered a Tertiary Blade.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 57,
+      "tags": [
+        "buff",
+        "haste",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 15,
+          "max": 15,
+          "unit": "%",
+          "display": "+15%",
+          "sortKey": 15,
+          "statTag": "ATK"
+        }
+      ],
+      "valuesSummary": "+15%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Discharge VI",
+      "slug": "Discharge_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discharge_VI",
+      "description": "Electrocute your target with a powerful discharge, dealing 200 (+1.5) to 340 (+1.5) Electric Damage. While Electric Infusion is active, the Mana cost of this spell is reduced by 35%.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 58,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Static Field IV",
+      "slug": "Static_Field_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_IV",
+      "description": "Place a static field at your feet, dealing 30 Electric Damage to targets within the affected area every 2 seconds for 6 seconds.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 59,
+      "tags": [
+        "dot",
+        "aoe"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 30,
+          "max": 30,
+          "interval": 2,
+          "duration": 6,
+          "damageType": "Electric",
+          "display": "30 Electric/2s (6s)",
+          "sortKey": 90
+        }
+      ],
+      "valuesSummary": "30 Electric/2s (6s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Kinetic Ward V",
+      "slug": "Kinetic_Ward_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_V",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 400 damage received for 15 seconds. While Telekinetic Infusion is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 60,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 400,
+          "display": "400 absorb",
+          "sortKey": 400
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "400 absorb · +10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    }
+  ]
+}

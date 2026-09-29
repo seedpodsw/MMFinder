@@ -2,6 +2,8 @@
 
 Personal atlas for **Monsters & Memories**. Maps come from the [wiki](https://monstersandmemories.miraheze.org/wiki/Zone_Connection_Map) (Maggot and other community cartographers), stitched into one pan-and-zoom atlas.
 
+The **Spells** tab uses the class spell and ability lists, tags, and parsed values from [FuStv1337](https://github.com/FuStv1337)’s [Monsters & Memories — Spells](https://fustv1337.github.io/MnMWebsite) ([FuStv1337/MnMWebsite](https://github.com/FuStv1337/MnMWebsite)). Those lists were compiled from the [wiki Spells by Class](https://monstersandmemories.miraheze.org/wiki/Spells_By_Class) pages.
+
 ## Run
 
 ```bash

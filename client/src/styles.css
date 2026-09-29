@@ -244,6 +244,7 @@ h1 {
 }
 
 .stage {
+  position: relative;
   min-width: 0;
   padding: 0;
   background: #0b1014;
@@ -2113,4 +2114,324 @@ button.linkish.npc-go {
 .gear-equip:hover {
   border-color: var(--calafrey);
   color: var(--calafrey);
+}
+
+.walk-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0d1c24;
+  user-select: none;
+}
+
+.walk-stage.layer-deep {
+  background: #140c16;
+}
+
+.walk-gl,
+.walk-stage canvas.walk-view {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.walk-boot {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  color: var(--gold);
+  font-family: "Source Serif 4", serif;
+}
+
+.walk-chip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  width: min(280px, calc(100% - 28px));
+  padding: 12px 14px;
+  background: rgba(18, 12, 8, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.walk-chip .region {
+  margin: 0;
+}
+
+.walk-chip strong {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.walk-chip span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.walk-near {
+  margin-top: 4px;
+  color: var(--gold) !important;
+}
+
+.walk-minimap {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 5;
+  width: min(320px, 38%);
+  padding: 8px 8px 7px;
+  background: rgba(18, 12, 8, 0.94);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.walk-minimap header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 2px 6px;
+  font-family: "Cinzel", serif;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  font-size: 13px;
+}
+
+.walk-mini-layer {
+  color: var(--muted);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  letter-spacing: 0;
+  font-size: 11px;
+}
+
+.walk-minimap .compass-n {
+  margin-left: auto;
+}
+
+.walk-minimap canvas {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  cursor: crosshair;
+  background: #0d1c24;
+}
+
+.walk-go,
+.walk-keys {
+  margin: 6px 2px 0;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.walk-go {
+  color: var(--text);
+}
+
+.walk-keys {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 1100px) {
+  .walk-minimap {
+    width: min(220px, 46%);
+  }
+}
+
+.spells-view {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 22px 18px;
+}
+
+.spells-credit,
+.spells-foot,
+.spell-count,
+.spell-empty {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.spells-credit a,
+.spells-foot a,
+.spell-count a,
+.spell-wiki {
+  color: var(--gold);
+}
+
+.spells-view .items-search select,
+.spells-view .items-search input[type="number"] {
+  background: #1a120c;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font: inherit;
+}
+
+.spell-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+.spell-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spell-quick,
+.spell-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.spell-quick > span {
+  color: var(--ember);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-right: 4px;
+}
+
+.spell-quick button,
+.spell-chip {
+  border: 1px solid color-mix(in srgb, var(--tag) 55%, transparent);
+  background: color-mix(in srgb, var(--tag) 16%, #1a120c);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.spell-quick button.on,
+.spell-chip.on {
+  background: color-mix(in srgb, var(--tag) 42%, #1a120c);
+  color: #fff8ea;
+}
+
+.spell-chip em {
+  margin-left: 6px;
+  font-style: normal;
+  color: var(--muted);
+}
+
+.spell-table-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #1a120c;
+}
+
+.spell-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.spell-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: left;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  background: #24180f;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.spell-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(212, 180, 131, 0.12);
+  vertical-align: top;
+}
+
+.spell-table tbody tr:not(.spell-detail):not(.spell-group) {
+  cursor: pointer;
+}
+
+.spell-table tbody tr:not(.spell-detail):not(.spell-group):hover td {
+  background: rgba(196, 92, 38, 0.12);
+}
+
+.spell-table .lvl {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  width: 48px;
+}
+
+.spell-name {
+  font-weight: 600;
+}
+
+.spell-wiki {
+  margin-left: 8px;
+  font-size: 11px;
+}
+
+.spell-values {
+  color: #efe2c4;
+  max-width: 280px;
+}
+
+.spell-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.spell-tag {
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 11px;
+  background: color-mix(in srgb, var(--tag) 28%, #1a120c);
+  color: #fff8ea;
+}
+
+.spell-group td {
+  background: #120c08;
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.spell-detail td {
+  color: var(--text);
+  background: #24180f;
+  line-height: 1.45;
+}
+
+.spells-foot {
+  margin: 0;
 }

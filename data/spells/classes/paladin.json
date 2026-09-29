@@ -1,0 +1,3864 @@
+{
+  "className": "Paladin",
+  "slug": "Paladin",
+  "type": "ability",
+  "sectionTitle": "Paladin Spells & Abilities",
+  "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Paladin",
+  "entryCount": 63,
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    24,
+    28,
+    29,
+    30,
+    32,
+    36,
+    40,
+    44,
+    48,
+    50,
+    51,
+    52,
+    55,
+    56,
+    60
+  ],
+  "entriesByLevel": {
+    "1": [
+      {
+        "name": "Aura of the Pious",
+        "slug": "Aura_of_the_Pious",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_the_Pious",
+        "description": "Surrounds you and your group in an aura of piousness, increasing AC by 1 (L1) to 30 (L60)",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "AC",
+          "buff"
+        ],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "AC",
+            "min": 1,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–30 AC (L1–L60)",
+            "sortKey": 30,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+1–30 AC (L1–L60)",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Poison Protection",
+        "slug": "Poison_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
+        "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "buff",
+          "PR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Poison Resistance",
+            "amount": 5,
+            "display": "+5 Poison Resistance",
+            "sortKey": 5,
+            "statTag": "PR"
+          }
+        ],
+        "valuesSummary": "+5 Poison Resistance",
+        "statTags": [
+          "PR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Taunt",
+        "slug": "Taunt",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
+        "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "taunt"
+        ],
+        "primaryTag": "taunt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Shoot",
+        "slug": "Shoot",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shoot",
+        "description": "Shoots your target with a bow. (Requires bow & arrows)",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Slam",
+        "slug": "Slam",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slam",
+        "description": "Forcefully slam your target, dealing 100% Weapon Damage plus 1 (L1) to 20 (L60) Physical Damage, and increasing your Threat by 20 (L1) to 200 (L60). Has a chance to stun from behind the target.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage",
+          "buff",
+          "crowd-control",
+          "stun",
+          "THREAT"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 20,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Physical",
+            "display": "1–20 Physical dmg (L1–L60)",
+            "sortKey": 20
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat",
+            "min": 20,
+            "max": 200,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+20–200 Threat (L1–L60)",
+            "sortKey": 200,
+            "statTag": "THREAT"
+          },
+          {
+            "kind": "buff",
+            "stat": "increasing your Threat",
+            "min": 20,
+            "max": 200,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+20–200 increasing your Threat (L1–L60)",
+            "sortKey": 200
+          }
+        ],
+        "valuesSummary": "100% weapon dmg · 1–20 Physical dmg (L1–L60) · +20–200 Threat (L1–L60)",
+        "statTags": [
+          "THREAT"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Weak Heal",
+        "slug": "Weak_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Weak_Heal",
+        "description": "Weakly heals the wounds of a friendly target, healing them for 6 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 7,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 6,
+            "display": "6 heal",
+            "sortKey": 6
+          }
+        ],
+        "valuesSummary": "6 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "2": [
+      {
+        "name": "Aura of courage",
+        "slug": "Aura_of_courage",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_courage",
+        "description": "Surrounds you and your group in an aura of piousness, increasing AC by 1 (L1) to 30 (L60) and resistance to Fear effects by 20%. Additionally your Block skill is increased by 5 and Threat generated by 10%",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 2,
+        "tags": [
+          "damage",
+          "AC",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "1–30% weapon dmg (L1–L60)",
+            "sortKey": 30
+          },
+          {
+            "kind": "buff",
+            "stat": "AC",
+            "min": 1,
+            "max": 30,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–30 AC (L1–L60)",
+            "sortKey": 30,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "1–30% weapon dmg (L1–L60) · +1–30 AC (L1–L60)",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Conviction",
+        "slug": "Conviction",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conviction?action=edit&redlink=1",
+        "description": "Increase your Strength, Wisdom, and Stamina by 1 (L1) to 15 (L20) and Mana Regeneration by 1 (L1) to 4 (L60) for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 3,
+        "castTime": null,
+        "level": 2,
+        "tags": [
+          "buff",
+          "MANA",
+          "STA"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Stamina",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 20,
+            "display": "+1–15 Stamina (L1–L20)",
+            "sortKey": 15,
+            "statTag": "STA"
+          },
+          {
+            "kind": "buff",
+            "stat": "Mana Regeneration",
+            "min": 1,
+            "max": 4,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–4 Mana Regeneration (L1–L60)",
+            "sortKey": 4,
+            "statTag": "MANA"
+          }
+        ],
+        "valuesSummary": "+1–15 Stamina (L1–L20) · +1–4 Mana Regeneration (L1–L60)",
+        "statTags": [
+          "MANA",
+          "STA"
+        ],
+        "type": "ability"
+      }
+    ],
+    "3": [
+      {
+        "name": "Cure Disease",
+        "slug": "Cure_Disease",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+        "description": "Remove disease effect - Cures target of disease effects",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 3,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Shield Slam",
+        "slug": "Shield_Slam",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Slam?action=edit&redlink=1",
+        "description": "Interrupting target cast, locking them out of that school of magic for 4 seconds.",
+        "category": "Acr",
+        "categorySlug": "Skill_Acrobatics",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "interrupt"
+        ],
+        "primaryTag": "interrupt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "4": [
+      {
+        "name": "Minor Heal",
+        "slug": "Minor_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
+        "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 8,
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 10,
+            "display": "10 heal",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "10 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "5": [
+      {
+        "name": "Placate",
+        "slug": "Placate",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Placate",
+        "description": "Placates an aggressive target, greatly reducing the range of their social and proximity aggro for 2 minutes. Has no effect on an already aggroed target. This ability has a slight chance to fail and cause primary and social aggro. It also has the slight chance of ending early. Limit one target.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 5,
+        "tags": [
+          "debuff",
+          "crowd-control"
+        ],
+        "primaryTag": "crowd-control",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "6": [
+      {
+        "name": "Invisibility versus Undead",
+        "slug": "Invisibility_versus_Undead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
+        "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 6,
+        "tags": [
+          "buff",
+          "invisibility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "7": [
+      {
+        "name": "Shield Toss",
+        "slug": "Shield_Toss",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Toss",
+        "description": "Tosses a holy shield at an enemy, interrupting their spellcasting and 2 other nearby targets as the shield ricochets within 8 meters. Requires a Shield in your inventory or equipped.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 7,
+        "tags": [
+          "interrupt",
+          "aoe"
+        ],
+        "primaryTag": "interrupt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "8": [
+      {
+        "name": "Fear the Dead",
+        "slug": "Fear_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_the_Dead",
+        "description": "Fears an undead target, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "crowd-control",
+          "fear"
+        ],
+        "primaryTag": "fear",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Holy Fortitude",
+        "slug": "Holy_Fortitude",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Fortitude",
+        "description": "Increases the Max Hitpoints of a friendly target by 10 (L1) to 20 (L8).",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Hitpoints",
+            "amount": 10,
+            "display": "+10 Hitpoints",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "+10 Hitpoints",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lesser Heal",
+        "slug": "Lesser_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
+        "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 25,
+            "display": "25 heal",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "25 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lay on Hands",
+        "slug": "Lay_on_Hands",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lay_on_Hands",
+        "description": "Heal your target with a holy touch, restoring 99 (L1) to 3840 (L60) Health",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "9": [
+      {
+        "name": "Blind",
+        "slug": "Blind",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
+        "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 9,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "10": [
+      {
+        "name": "Cure Poison",
+        "slug": "Cure_Poison",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
+        "description": "Remove Poison Effect - Cures target of poison effects.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 10,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Restorative Smite",
+        "slug": "Restorative_Smite",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restorative_Smite",
+        "description": "Smite your target with holy energy, dealing 150% Weapon Ratio Damage plus 1 (L1) to 20 (L60) Holy Damage, 1 (L1) to 20 (L60) Physical Damage, and increasing your Threat against them by 30 (L1) to 300 (L60). Additionally, this ability consumes one charge of Fulfillment to restore 1 (L1) to 40 (L60) Health to your group. This ability has a chance to strike your target a second time (L50).",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 20,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Holy",
+            "display": "1–20 Holy dmg (L1–L60)",
+            "sortKey": 20
+          },
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 20,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Physical",
+            "display": "1–20 Physical dmg (L1–L60)",
+            "sortKey": 20
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat against them",
+            "min": 30,
+            "max": 300,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+30–300 Threat against them (L1–L60)",
+            "sortKey": 300
+          },
+          {
+            "kind": "buff",
+            "stat": "increasing your Threat against them",
+            "min": 30,
+            "max": 300,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+30–300 increasing your Threat against them (L1–L60)",
+            "sortKey": 300
+          }
+        ],
+        "valuesSummary": "150% weapon dmg · 1–20 Holy dmg (L1–L60) · 1–20 Physical dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "11": [
+      {
+        "name": "Disease Protection",
+        "slug": "Disease_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
+        "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 11,
+        "tags": [
+          "buff",
+          "DR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Disease Resistance",
+            "amount": 5,
+            "display": "+5 Disease Resistance",
+            "sortKey": 5,
+            "statTag": "DR"
+          }
+        ],
+        "valuesSummary": "+5 Disease Resistance",
+        "statTags": [
+          "DR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "12": [
+      {
+        "name": "Ancient Guardian",
+        "slug": "Ancient_Guardian",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancient_Guardian",
+        "description": "Summons a holy, ancient guardian to assist you in battle. The ancient guardian heals you and other friendly targets. Persists for 30 seconds, or until death of pet or master.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "summon",
+          "pet"
+        ],
+        "primaryTag": "summon",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Repel The Dead",
+        "slug": "Repel_The_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Repel_The_Dead?action=edit&redlink=1",
+        "description": "Repel a target undead with a blast of energy, dealing 30 points of Holy Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 30,
+            "damageType": "Holy",
+            "display": "30 Holy dmg",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "30 Holy dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "13": [
+      {
+        "name": "Corruption Protection",
+        "slug": "Corruption_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
+        "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 13,
+        "tags": [
+          "buff",
+          "COR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Corruption Resistance",
+            "amount": 5,
+            "display": "+5 Corruption Resistance",
+            "sortKey": 5,
+            "statTag": "COR"
+          }
+        ],
+        "valuesSummary": "+5 Corruption Resistance",
+        "statTags": [
+          "COR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "14": [
+      {
+        "name": "Snare the Dead",
+        "slug": "Snare_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Snare_the_Dead",
+        "description": "Holy energy erupts from the ground and cling to your target's feet, decreasing their Movement Speed by 35% for 30 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 14,
+        "tags": [
+          "debuff",
+          "slow"
+        ],
+        "primaryTag": "slow",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Movement Speed",
+            "min": 35,
+            "max": 35,
+            "unit": "%",
+            "display": "−35%",
+            "sortKey": 35
+          }
+        ],
+        "valuesSummary": "−35%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "15": [
+      {
+        "name": "Unleash the Light",
+        "slug": "Unleash_the_Light",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unleash_the_Light",
+        "description": "Unleash blinding holy light, mesmerizing up to 10 targets in ta frontal cone for 6 seconds.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 15,
+        "tags": [
+          "crowd-control",
+          "mez"
+        ],
+        "primaryTag": "mez",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "16": [
+      {
+        "name": "Greater Healing Touch",
+        "slug": "Greater_Healing_Touch",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Healing_Touch?action=edit&redlink=1",
+        "description": "Heal your target, restoring 124 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 124,
+            "display": "124 heal",
+            "sortKey": 124
+          }
+        ],
+        "valuesSummary": "124 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Gavel of Light",
+        "slug": "Gavel_of_Light",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gavel_of_Light?action=edit&redlink=1",
+        "description": "Strike your target with divine energy, dealing 70 Holy Damage.",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 70,
+            "damageType": "Holy",
+            "display": "70 Holy dmg",
+            "sortKey": 70
+          }
+        ],
+        "valuesSummary": "70 Holy dmg",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Reanimation",
+        "slug": "Reanimation",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reanimation",
+        "description": "Reanimate a target corpse, restoring 15% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 125,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [
+          {
+            "kind": "utility",
+            "amount": 15,
+            "display": "15% XP",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "15% XP",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Mark of the Crusader",
+        "slug": "Mark_of_the_Crusader",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mark_of_the_Crusader",
+        "description": "Apply a Mark of the Crusader on an enemy target, which has a high chance of healing friendly targets who attack the marked target for 1 (L1) to 6 (L60) Health, and removing the enemy target's Damage Shield. Lasts 30 seconds. Only Primary Hand and Ranged Attacks can proc the Mark of the Crusader healing.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "17": [
+      {
+        "name": "Deflect",
+        "slug": "Deflect",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deflect",
+        "description": "Deflect magical attacks, reducing incoming Magic Damage dealt to you by 40% for 30 seconds.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 17,
+        "tags": [
+          "self"
+        ],
+        "primaryTag": "self",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "incoming Magic Damage dealt to you",
+            "min": 40,
+            "max": 40,
+            "unit": "%",
+            "display": "−40%",
+            "sortKey": 40
+          }
+        ],
+        "valuesSummary": "−40%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "18": [
+      {
+        "name": "Root",
+        "slug": "Root",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Root",
+        "description": "Root your target to the ground, immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 18,
+        "tags": [
+          "crowd-control",
+          "root"
+        ],
+        "primaryTag": "root",
+        "effects": [
+          {
+            "kind": "crowd-control",
+            "duration": 30,
+            "display": "30s duration",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "30s duration",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "19": [
+      {
+        "name": "Appease",
+        "slug": "Appease",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Appease",
+        "description": "Appease your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 19,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "20": [
+      {
+        "name": "Cleanse Diseases",
+        "slug": "Cleanse_Diseases",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Diseases",
+        "description": "Cures target of two disease effects",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 20,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Cleanse Poisons",
+        "slug": "Cleanse_Poisons",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poisons",
+        "description": "Cleanse your target, removing two Poison effects.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Divine Aegis",
+        "slug": "Divine_Aegis",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
+        "description": "Surrounds the caster with an impenetrable divine aegis, making them invulnerable to all attacks for 15 seconds. Also grants Exhausted Soul, preventing you from receiving another immunity buff for 1 minute. Can by used while Stunned, Mesmerized, and Feared.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 60,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "crowd-control",
+          "mez"
+        ],
+        "primaryTag": "mez",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Holy Focus",
+        "slug": "Holy_Focus",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Focus",
+        "description": "Increases the maximum Health of a friendly target by 50 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "MAX HP"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 50,
+            "display": "+50 Health",
+            "sortKey": 50,
+            "statTag": "MAX HP"
+          }
+        ],
+        "valuesSummary": "+50 Health",
+        "statTags": [
+          "MAX HP"
+        ],
+        "type": "ability"
+      }
+    ],
+    "21": [
+      {
+        "name": "Blessing of Sanctuary",
+        "slug": "Blessing_of_Sanctuary",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Sanctuary",
+        "description": "Bless your group with sanctuary, reducing all damage received by 20% for 20 seconds. This spell inflicts Recently Exhausted upon expiration, preventing reapplication of this effect for 20 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 21,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "all damage received",
+            "min": 20,
+            "max": 20,
+            "unit": "%",
+            "display": "−20%",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "−20%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "24": [
+      {
+        "name": "Beset the Dead",
+        "slug": "Beset_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beset_the_Dead",
+        "description": "Wards off an undead target with holy energy for 90 points of Holy Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "shield"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 90,
+            "damageType": "Holy",
+            "display": "90 Holy absorb",
+            "sortKey": 90
+          }
+        ],
+        "valuesSummary": "90 Holy absorb",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Stun",
+        "slug": "Stun",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
+        "description": "Shocks your target, applying a Stun for 4 seconds.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "crowd-control",
+          "stun"
+        ],
+        "primaryTag": "stun",
+        "effects": [
+          {
+            "kind": "crowd-control",
+            "duration": 4,
+            "display": "4s duration",
+            "sortKey": 4
+          }
+        ],
+        "valuesSummary": "4s duration",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "28": [
+      {
+        "name": "Holy Valor",
+        "slug": "Holy_Valor",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Valor",
+        "description": "Increases the maximum health of a friendly target by 125 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 75,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "buff",
+          "MAX HP"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "health",
+            "amount": 125,
+            "display": "+125 health",
+            "sortKey": 125,
+            "statTag": "MAX HP"
+          }
+        ],
+        "valuesSummary": "+125 health",
+        "statTags": [
+          "MAX HP"
+        ],
+        "type": "ability"
+      }
+    ],
+    "29": [
+      {
+        "name": "Greater Heal",
+        "slug": "Greater_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
+        "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 150,
+        "castTime": null,
+        "level": 29,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 325,
+            "display": "325 heal",
+            "sortKey": 325
+          }
+        ],
+        "valuesSummary": "325 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "30": [
+      {
+        "name": "Supplication II",
+        "slug": "Supplication_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_II",
+        "description": "Cry out in prayer, increasing your Strength by 15 (L20) to 25 (L40) and Mana Regeneration by 2 for 1 minute.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 6,
+        "castTime": null,
+        "level": 30,
+        "tags": [
+          "buff",
+          "self",
+          "MANA",
+          "STR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "and Mana Regeneration by 2",
+            "min": 15,
+            "max": 25,
+            "minLevel": 20,
+            "maxLevel": 40,
+            "display": "+15–25 and Mana Regeneration by 2 (L20–L40)",
+            "sortKey": 25
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "min": 15,
+            "max": 25,
+            "minLevel": 20,
+            "maxLevel": 40,
+            "display": "+15–25 Strength (L20–L40)",
+            "sortKey": 25,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Mana Regeneration",
+            "amount": 2,
+            "display": "+2 Mana Regeneration",
+            "sortKey": 2,
+            "statTag": "MANA"
+          }
+        ],
+        "valuesSummary": "+15–25 and Mana Regeneration by 2 (L20–L40) · +15–25 Strength (L20–L40) · +2 Mana Regeneration",
+        "statTags": [
+          "MANA",
+          "STR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "32": [
+      {
+        "name": "Conciliate",
+        "slug": "Conciliate",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conciliate",
+        "description": "Conciliate your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "36": [
+      {
+        "name": "Conciliate the Masses",
+        "slug": "Conciliate_the_Masses",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conciliate_the_Masses",
+        "description": "Conciliate your target, reducing their Body Aggro Radius for 4 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 36,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Rebuff the Dead",
+        "slug": "Rebuff_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rebuff_the_Dead",
+        "description": "Wards an Undead target with holy energy for 150 points of Holy Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 36,
+        "tags": [
+          "shield"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 150,
+            "damageType": "Holy",
+            "display": "150 Holy absorb",
+            "sortKey": 150
+          }
+        ],
+        "valuesSummary": "150 Holy absorb",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "40": [
+      {
+        "name": "Holy Resilience",
+        "slug": "Holy_Resilience",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resilience",
+        "description": "Increases the maximum Health of a friendly target by 175 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 100,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "MAX HP"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 175,
+            "display": "+175 Health",
+            "sortKey": 175,
+            "statTag": "MAX HP"
+          }
+        ],
+        "valuesSummary": "+175 Health",
+        "statTags": [
+          "MAX HP"
+        ],
+        "type": "ability"
+      }
+    ],
+    "44": [
+      {
+        "name": "Resuscitation",
+        "slug": "Resuscitation",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resuscitation",
+        "description": "Resuscitate a target corpse, restoring 35% experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [
+          {
+            "kind": "utility",
+            "amount": 35,
+            "display": "35% XP",
+            "sortKey": 35
+          }
+        ],
+        "valuesSummary": "35% XP",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Corruption Resistance",
+        "slug": "Corruption_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
+        "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "COR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Corruption Resistance",
+            "amount": 15,
+            "display": "+15 Corruption Resistance",
+            "sortKey": 15,
+            "statTag": "COR"
+          }
+        ],
+        "valuesSummary": "+15 Corruption Resistance",
+        "statTags": [
+          "COR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Disease Resistance",
+        "slug": "Disease_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
+        "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "DR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Disease Resistance",
+            "amount": 15,
+            "display": "+15 Disease Resistance",
+            "sortKey": 15,
+            "statTag": "DR"
+          }
+        ],
+        "valuesSummary": "+15 Disease Resistance",
+        "statTags": [
+          "DR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Poison Resistance",
+        "slug": "Poison_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
+        "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "PR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Poison Resistance",
+            "amount": 15,
+            "display": "+15 Poison Resistance",
+            "sortKey": 15,
+            "statTag": "PR"
+          }
+        ],
+        "valuesSummary": "+15 Poison Resistance",
+        "statTags": [
+          "PR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "48": [
+      {
+        "name": "Beleaguer the Dead",
+        "slug": "Beleaguer_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beleaguer_the_Dead",
+        "description": "Wards off an undead target with holy energy for 245 points of Holy Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "shield"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 245,
+            "damageType": "Holy",
+            "display": "245 Holy absorb",
+            "sortKey": 245
+          }
+        ],
+        "valuesSummary": "245 Holy absorb",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "50": [
+      {
+        "name": "Exceptional Heal",
+        "slug": "Exceptional_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
+        "description": "Exceptionally heals the wounds of a friendly target, healing them for 600 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 230,
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 600,
+            "display": "600 heal",
+            "sortKey": 600
+          }
+        ],
+        "valuesSummary": "600 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Supplication III",
+        "slug": "Supplication_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_III",
+        "description": "Cry out in prayer, increasing your Strength by 30 (L40) to 40 (L60) and Mana Regeneration by 3 for 1 minute.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "buff",
+          "self",
+          "MANA",
+          "STR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "and Mana Regeneration by 3",
+            "min": 30,
+            "max": 40,
+            "minLevel": 40,
+            "maxLevel": 60,
+            "display": "+30–40 and Mana Regeneration by 3 (L40–L60)",
+            "sortKey": 40
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "min": 30,
+            "max": 40,
+            "minLevel": 40,
+            "maxLevel": 60,
+            "display": "+30–40 Strength (L40–L60)",
+            "sortKey": 40,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Mana Regeneration",
+            "amount": 3,
+            "display": "+3 Mana Regeneration",
+            "sortKey": 3,
+            "statTag": "MANA"
+          }
+        ],
+        "valuesSummary": "+30–40 and Mana Regeneration by 3 (L40–L60) · +30–40 Strength (L40–L60) · +3 Mana Regeneration",
+        "statTags": [
+          "MANA",
+          "STR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "51": [
+      {
+        "name": "Propitiate",
+        "slug": "Propitiate",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Propitiate",
+        "description": "Propitiate your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 51,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "52": [
+      {
+        "name": "Holy Resolve",
+        "slug": "Holy_Resolve",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resolve",
+        "description": "Increases the maximum Health of a friendly target by 250 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 150,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "buff",
+          "MAX HP"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 250,
+            "display": "+250 Health",
+            "sortKey": 250,
+            "statTag": "MAX HP"
+          }
+        ],
+        "valuesSummary": "+250 Health",
+        "statTags": [
+          "MAX HP"
+        ],
+        "type": "ability"
+      }
+    ],
+    "55": [
+      {
+        "name": "Abolish Magic",
+        "slug": "Abolish_Magic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Abolish_Magic",
+        "description": "Abolish magic from your target, removing two harmful effects.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 100,
+        "castTime": null,
+        "level": 55,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "56": [
+      {
+        "name": "Propitiate the Masses",
+        "slug": "Propitiate_the_Masses",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Propitiate_the_Masses",
+        "description": "Propitiate your target, reducing their Body Aggro Radius for 5 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Revival",
+        "slug": "Revival",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revival",
+        "description": "Reawaken a target corpse, restoring 75% experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [
+          {
+            "kind": "utility",
+            "amount": 75,
+            "display": "75% XP",
+            "sortKey": 75
+          }
+        ],
+        "valuesSummary": "75% XP",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "60": [
+      {
+        "name": "Assail the Dead",
+        "slug": "Assail_the_Dead",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Assail_the_Dead",
+        "description": "Wards an undead target with holy energy for 525 points of Holy Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 60,
+        "tags": [
+          "shield"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 525,
+            "damageType": "Holy",
+            "display": "525 Holy absorb",
+            "sortKey": 525
+          }
+        ],
+        "valuesSummary": "525 Holy absorb",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Divine Spark",
+        "slug": "Divine_Spark",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Spark",
+        "description": "Grants Divine Spark to your target, increasing their maximum Health by 250 for 35 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 60,
+        "tags": [
+          "buff",
+          "MAX HP"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 250,
+            "display": "+250 Health",
+            "sortKey": 250,
+            "statTag": "MAX HP"
+          }
+        ],
+        "valuesSummary": "+250 Health",
+        "statTags": [
+          "MAX HP"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Supplication IV",
+        "slug": "Supplication_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_IV",
+        "description": "Cry out in prayer, increasing your Strength by 50 and Mana Regeneration by 4 for 1 minute.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 60,
+        "tags": [
+          "buff",
+          "self",
+          "MANA",
+          "STR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 50,
+            "display": "+50 Strength",
+            "sortKey": 50,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Mana Regeneration",
+            "amount": 4,
+            "display": "+4 Mana Regeneration",
+            "sortKey": 4,
+            "statTag": "MANA"
+          }
+        ],
+        "valuesSummary": "+50 Strength · +4 Mana Regeneration",
+        "statTags": [
+          "MANA",
+          "STR"
+        ],
+        "type": "ability"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "name": "Aura of the Pious",
+      "slug": "Aura_of_the_Pious",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_the_Pious",
+      "description": "Surrounds you and your group in an aura of piousness, increasing AC by 1 (L1) to 30 (L60)",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "AC",
+        "buff"
+      ],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "AC",
+          "min": 1,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–30 AC (L1–L60)",
+          "sortKey": 30,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+1–30 AC (L1–L60)",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Poison Protection",
+      "slug": "Poison_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
+      "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "buff",
+        "PR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Poison Resistance",
+          "amount": 5,
+          "display": "+5 Poison Resistance",
+          "sortKey": 5,
+          "statTag": "PR"
+        }
+      ],
+      "valuesSummary": "+5 Poison Resistance",
+      "statTags": [
+        "PR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Taunt",
+      "slug": "Taunt",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
+      "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "taunt"
+      ],
+      "primaryTag": "taunt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shoot",
+      "slug": "Shoot",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shoot",
+      "description": "Shoots your target with a bow. (Requires bow & arrows)",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Slam",
+      "slug": "Slam",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slam",
+      "description": "Forcefully slam your target, dealing 100% Weapon Damage plus 1 (L1) to 20 (L60) Physical Damage, and increasing your Threat by 20 (L1) to 200 (L60). Has a chance to stun from behind the target.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage",
+        "buff",
+        "crowd-control",
+        "stun",
+        "THREAT"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 20,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Physical",
+          "display": "1–20 Physical dmg (L1–L60)",
+          "sortKey": 20
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat",
+          "min": 20,
+          "max": 200,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+20–200 Threat (L1–L60)",
+          "sortKey": 200,
+          "statTag": "THREAT"
+        },
+        {
+          "kind": "buff",
+          "stat": "increasing your Threat",
+          "min": 20,
+          "max": 200,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+20–200 increasing your Threat (L1–L60)",
+          "sortKey": 200
+        }
+      ],
+      "valuesSummary": "100% weapon dmg · 1–20 Physical dmg (L1–L60) · +20–200 Threat (L1–L60)",
+      "statTags": [
+        "THREAT"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Weak Heal",
+      "slug": "Weak_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Weak_Heal",
+      "description": "Weakly heals the wounds of a friendly target, healing them for 6 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 7,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 6,
+          "display": "6 heal",
+          "sortKey": 6
+        }
+      ],
+      "valuesSummary": "6 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Aura of courage",
+      "slug": "Aura_of_courage",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_courage",
+      "description": "Surrounds you and your group in an aura of piousness, increasing AC by 1 (L1) to 30 (L60) and resistance to Fear effects by 20%. Additionally your Block skill is increased by 5 and Threat generated by 10%",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 2,
+      "tags": [
+        "damage",
+        "AC",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "1–30% weapon dmg (L1–L60)",
+          "sortKey": 30
+        },
+        {
+          "kind": "buff",
+          "stat": "AC",
+          "min": 1,
+          "max": 30,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–30 AC (L1–L60)",
+          "sortKey": 30,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "1–30% weapon dmg (L1–L60) · +1–30 AC (L1–L60)",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Conviction",
+      "slug": "Conviction",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conviction?action=edit&redlink=1",
+      "description": "Increase your Strength, Wisdom, and Stamina by 1 (L1) to 15 (L20) and Mana Regeneration by 1 (L1) to 4 (L60) for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 3,
+      "castTime": null,
+      "level": 2,
+      "tags": [
+        "buff",
+        "MANA",
+        "STA"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Stamina",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 20,
+          "display": "+1–15 Stamina (L1–L20)",
+          "sortKey": 15,
+          "statTag": "STA"
+        },
+        {
+          "kind": "buff",
+          "stat": "Mana Regeneration",
+          "min": 1,
+          "max": 4,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–4 Mana Regeneration (L1–L60)",
+          "sortKey": 4,
+          "statTag": "MANA"
+        }
+      ],
+      "valuesSummary": "+1–15 Stamina (L1–L20) · +1–4 Mana Regeneration (L1–L60)",
+      "statTags": [
+        "MANA",
+        "STA"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Cure Disease",
+      "slug": "Cure_Disease",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+      "description": "Remove disease effect - Cures target of disease effects",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 3,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shield Slam",
+      "slug": "Shield_Slam",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Slam?action=edit&redlink=1",
+      "description": "Interrupting target cast, locking them out of that school of magic for 4 seconds.",
+      "category": "Acr",
+      "categorySlug": "Skill_Acrobatics",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "interrupt"
+      ],
+      "primaryTag": "interrupt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Minor Heal",
+      "slug": "Minor_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
+      "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 8,
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 10,
+          "display": "10 heal",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "10 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Placate",
+      "slug": "Placate",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Placate",
+      "description": "Placates an aggressive target, greatly reducing the range of their social and proximity aggro for 2 minutes. Has no effect on an already aggroed target. This ability has a slight chance to fail and cause primary and social aggro. It also has the slight chance of ending early. Limit one target.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 5,
+      "tags": [
+        "debuff",
+        "crowd-control"
+      ],
+      "primaryTag": "crowd-control",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Invisibility versus Undead",
+      "slug": "Invisibility_versus_Undead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
+      "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 6,
+      "tags": [
+        "buff",
+        "invisibility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shield Toss",
+      "slug": "Shield_Toss",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Toss",
+      "description": "Tosses a holy shield at an enemy, interrupting their spellcasting and 2 other nearby targets as the shield ricochets within 8 meters. Requires a Shield in your inventory or equipped.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 7,
+      "tags": [
+        "interrupt",
+        "aoe"
+      ],
+      "primaryTag": "interrupt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Fear the Dead",
+      "slug": "Fear_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_the_Dead",
+      "description": "Fears an undead target, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "crowd-control",
+        "fear"
+      ],
+      "primaryTag": "fear",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Holy Fortitude",
+      "slug": "Holy_Fortitude",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Fortitude",
+      "description": "Increases the Max Hitpoints of a friendly target by 10 (L1) to 20 (L8).",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Hitpoints",
+          "amount": 10,
+          "display": "+10 Hitpoints",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "+10 Hitpoints",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lesser Heal",
+      "slug": "Lesser_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
+      "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 25,
+          "display": "25 heal",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "25 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lay on Hands",
+      "slug": "Lay_on_Hands",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lay_on_Hands",
+      "description": "Heal your target with a holy touch, restoring 99 (L1) to 3840 (L60) Health",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Blind",
+      "slug": "Blind",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
+      "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 9,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cure Poison",
+      "slug": "Cure_Poison",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
+      "description": "Remove Poison Effect - Cures target of poison effects.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 10,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Restorative Smite",
+      "slug": "Restorative_Smite",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restorative_Smite",
+      "description": "Smite your target with holy energy, dealing 150% Weapon Ratio Damage plus 1 (L1) to 20 (L60) Holy Damage, 1 (L1) to 20 (L60) Physical Damage, and increasing your Threat against them by 30 (L1) to 300 (L60). Additionally, this ability consumes one charge of Fulfillment to restore 1 (L1) to 40 (L60) Health to your group. This ability has a chance to strike your target a second time (L50).",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 20,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Holy",
+          "display": "1–20 Holy dmg (L1–L60)",
+          "sortKey": 20
+        },
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 20,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Physical",
+          "display": "1–20 Physical dmg (L1–L60)",
+          "sortKey": 20
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat against them",
+          "min": 30,
+          "max": 300,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+30–300 Threat against them (L1–L60)",
+          "sortKey": 300
+        },
+        {
+          "kind": "buff",
+          "stat": "increasing your Threat against them",
+          "min": 30,
+          "max": 300,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+30–300 increasing your Threat against them (L1–L60)",
+          "sortKey": 300
+        }
+      ],
+      "valuesSummary": "150% weapon dmg · 1–20 Holy dmg (L1–L60) · 1–20 Physical dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Disease Protection",
+      "slug": "Disease_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
+      "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 11,
+      "tags": [
+        "buff",
+        "DR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Disease Resistance",
+          "amount": 5,
+          "display": "+5 Disease Resistance",
+          "sortKey": 5,
+          "statTag": "DR"
+        }
+      ],
+      "valuesSummary": "+5 Disease Resistance",
+      "statTags": [
+        "DR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Ancient Guardian",
+      "slug": "Ancient_Guardian",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancient_Guardian",
+      "description": "Summons a holy, ancient guardian to assist you in battle. The ancient guardian heals you and other friendly targets. Persists for 30 seconds, or until death of pet or master.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "summon",
+        "pet"
+      ],
+      "primaryTag": "summon",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Repel The Dead",
+      "slug": "Repel_The_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Repel_The_Dead?action=edit&redlink=1",
+      "description": "Repel a target undead with a blast of energy, dealing 30 points of Holy Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 30,
+          "damageType": "Holy",
+          "display": "30 Holy dmg",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "30 Holy dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Corruption Protection",
+      "slug": "Corruption_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
+      "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 13,
+      "tags": [
+        "buff",
+        "COR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Corruption Resistance",
+          "amount": 5,
+          "display": "+5 Corruption Resistance",
+          "sortKey": 5,
+          "statTag": "COR"
+        }
+      ],
+      "valuesSummary": "+5 Corruption Resistance",
+      "statTags": [
+        "COR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Snare the Dead",
+      "slug": "Snare_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Snare_the_Dead",
+      "description": "Holy energy erupts from the ground and cling to your target's feet, decreasing their Movement Speed by 35% for 30 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 14,
+      "tags": [
+        "debuff",
+        "slow"
+      ],
+      "primaryTag": "slow",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Movement Speed",
+          "min": 35,
+          "max": 35,
+          "unit": "%",
+          "display": "−35%",
+          "sortKey": 35
+        }
+      ],
+      "valuesSummary": "−35%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Unleash the Light",
+      "slug": "Unleash_the_Light",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unleash_the_Light",
+      "description": "Unleash blinding holy light, mesmerizing up to 10 targets in ta frontal cone for 6 seconds.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 15,
+      "tags": [
+        "crowd-control",
+        "mez"
+      ],
+      "primaryTag": "mez",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Healing Touch",
+      "slug": "Greater_Healing_Touch",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Healing_Touch?action=edit&redlink=1",
+      "description": "Heal your target, restoring 124 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 124,
+          "display": "124 heal",
+          "sortKey": 124
+        }
+      ],
+      "valuesSummary": "124 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Gavel of Light",
+      "slug": "Gavel_of_Light",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gavel_of_Light?action=edit&redlink=1",
+      "description": "Strike your target with divine energy, dealing 70 Holy Damage.",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 70,
+          "damageType": "Holy",
+          "display": "70 Holy dmg",
+          "sortKey": 70
+        }
+      ],
+      "valuesSummary": "70 Holy dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Reanimation",
+      "slug": "Reanimation",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reanimation",
+      "description": "Reanimate a target corpse, restoring 15% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 125,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [
+        {
+          "kind": "utility",
+          "amount": 15,
+          "display": "15% XP",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "15% XP",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mark of the Crusader",
+      "slug": "Mark_of_the_Crusader",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mark_of_the_Crusader",
+      "description": "Apply a Mark of the Crusader on an enemy target, which has a high chance of healing friendly targets who attack the marked target for 1 (L1) to 6 (L60) Health, and removing the enemy target's Damage Shield. Lasts 30 seconds. Only Primary Hand and Ranged Attacks can proc the Mark of the Crusader healing.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Deflect",
+      "slug": "Deflect",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deflect",
+      "description": "Deflect magical attacks, reducing incoming Magic Damage dealt to you by 40% for 30 seconds.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 17,
+      "tags": [
+        "self"
+      ],
+      "primaryTag": "self",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "incoming Magic Damage dealt to you",
+          "min": 40,
+          "max": 40,
+          "unit": "%",
+          "display": "−40%",
+          "sortKey": 40
+        }
+      ],
+      "valuesSummary": "−40%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Root",
+      "slug": "Root",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Root",
+      "description": "Root your target to the ground, immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 18,
+      "tags": [
+        "crowd-control",
+        "root"
+      ],
+      "primaryTag": "root",
+      "effects": [
+        {
+          "kind": "crowd-control",
+          "duration": 30,
+          "display": "30s duration",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "30s duration",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Appease",
+      "slug": "Appease",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Appease",
+      "description": "Appease your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 19,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cleanse Diseases",
+      "slug": "Cleanse_Diseases",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Diseases",
+      "description": "Cures target of two disease effects",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 20,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cleanse Poisons",
+      "slug": "Cleanse_Poisons",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poisons",
+      "description": "Cleanse your target, removing two Poison effects.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Divine Aegis",
+      "slug": "Divine_Aegis",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
+      "description": "Surrounds the caster with an impenetrable divine aegis, making them invulnerable to all attacks for 15 seconds. Also grants Exhausted Soul, preventing you from receiving another immunity buff for 1 minute. Can by used while Stunned, Mesmerized, and Feared.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 60,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "crowd-control",
+        "mez"
+      ],
+      "primaryTag": "mez",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Holy Focus",
+      "slug": "Holy_Focus",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Focus",
+      "description": "Increases the maximum Health of a friendly target by 50 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "MAX HP"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 50,
+          "display": "+50 Health",
+          "sortKey": 50,
+          "statTag": "MAX HP"
+        }
+      ],
+      "valuesSummary": "+50 Health",
+      "statTags": [
+        "MAX HP"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Blessing of Sanctuary",
+      "slug": "Blessing_of_Sanctuary",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Sanctuary",
+      "description": "Bless your group with sanctuary, reducing all damage received by 20% for 20 seconds. This spell inflicts Recently Exhausted upon expiration, preventing reapplication of this effect for 20 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 21,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "all damage received",
+          "min": 20,
+          "max": 20,
+          "unit": "%",
+          "display": "−20%",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "−20%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Beset the Dead",
+      "slug": "Beset_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beset_the_Dead",
+      "description": "Wards off an undead target with holy energy for 90 points of Holy Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "shield"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 90,
+          "damageType": "Holy",
+          "display": "90 Holy absorb",
+          "sortKey": 90
+        }
+      ],
+      "valuesSummary": "90 Holy absorb",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Stun",
+      "slug": "Stun",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
+      "description": "Shocks your target, applying a Stun for 4 seconds.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "crowd-control",
+        "stun"
+      ],
+      "primaryTag": "stun",
+      "effects": [
+        {
+          "kind": "crowd-control",
+          "duration": 4,
+          "display": "4s duration",
+          "sortKey": 4
+        }
+      ],
+      "valuesSummary": "4s duration",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Holy Valor",
+      "slug": "Holy_Valor",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Valor",
+      "description": "Increases the maximum health of a friendly target by 125 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 75,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "buff",
+        "MAX HP"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "health",
+          "amount": 125,
+          "display": "+125 health",
+          "sortKey": 125,
+          "statTag": "MAX HP"
+        }
+      ],
+      "valuesSummary": "+125 health",
+      "statTags": [
+        "MAX HP"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Heal",
+      "slug": "Greater_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
+      "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 150,
+      "castTime": null,
+      "level": 29,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 325,
+          "display": "325 heal",
+          "sortKey": 325
+        }
+      ],
+      "valuesSummary": "325 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Supplication II",
+      "slug": "Supplication_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_II",
+      "description": "Cry out in prayer, increasing your Strength by 15 (L20) to 25 (L40) and Mana Regeneration by 2 for 1 minute.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 6,
+      "castTime": null,
+      "level": 30,
+      "tags": [
+        "buff",
+        "self",
+        "MANA",
+        "STR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "and Mana Regeneration by 2",
+          "min": 15,
+          "max": 25,
+          "minLevel": 20,
+          "maxLevel": 40,
+          "display": "+15–25 and Mana Regeneration by 2 (L20–L40)",
+          "sortKey": 25
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "min": 15,
+          "max": 25,
+          "minLevel": 20,
+          "maxLevel": 40,
+          "display": "+15–25 Strength (L20–L40)",
+          "sortKey": 25,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Mana Regeneration",
+          "amount": 2,
+          "display": "+2 Mana Regeneration",
+          "sortKey": 2,
+          "statTag": "MANA"
+        }
+      ],
+      "valuesSummary": "+15–25 and Mana Regeneration by 2 (L20–L40) · +15–25 Strength (L20–L40) · +2 Mana Regeneration",
+      "statTags": [
+        "MANA",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Conciliate",
+      "slug": "Conciliate",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conciliate",
+      "description": "Conciliate your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Conciliate the Masses",
+      "slug": "Conciliate_the_Masses",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Conciliate_the_Masses",
+      "description": "Conciliate your target, reducing their Body Aggro Radius for 4 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 36,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Rebuff the Dead",
+      "slug": "Rebuff_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rebuff_the_Dead",
+      "description": "Wards an Undead target with holy energy for 150 points of Holy Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 36,
+      "tags": [
+        "shield"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 150,
+          "damageType": "Holy",
+          "display": "150 Holy absorb",
+          "sortKey": 150
+        }
+      ],
+      "valuesSummary": "150 Holy absorb",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Holy Resilience",
+      "slug": "Holy_Resilience",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resilience",
+      "description": "Increases the maximum Health of a friendly target by 175 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 100,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "MAX HP"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 175,
+          "display": "+175 Health",
+          "sortKey": 175,
+          "statTag": "MAX HP"
+        }
+      ],
+      "valuesSummary": "+175 Health",
+      "statTags": [
+        "MAX HP"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Resuscitation",
+      "slug": "Resuscitation",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resuscitation",
+      "description": "Resuscitate a target corpse, restoring 35% experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [
+        {
+          "kind": "utility",
+          "amount": 35,
+          "display": "35% XP",
+          "sortKey": 35
+        }
+      ],
+      "valuesSummary": "35% XP",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Corruption Resistance",
+      "slug": "Corruption_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
+      "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "COR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Corruption Resistance",
+          "amount": 15,
+          "display": "+15 Corruption Resistance",
+          "sortKey": 15,
+          "statTag": "COR"
+        }
+      ],
+      "valuesSummary": "+15 Corruption Resistance",
+      "statTags": [
+        "COR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Disease Resistance",
+      "slug": "Disease_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
+      "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "DR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Disease Resistance",
+          "amount": 15,
+          "display": "+15 Disease Resistance",
+          "sortKey": 15,
+          "statTag": "DR"
+        }
+      ],
+      "valuesSummary": "+15 Disease Resistance",
+      "statTags": [
+        "DR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Poison Resistance",
+      "slug": "Poison_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
+      "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "PR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Poison Resistance",
+          "amount": 15,
+          "display": "+15 Poison Resistance",
+          "sortKey": 15,
+          "statTag": "PR"
+        }
+      ],
+      "valuesSummary": "+15 Poison Resistance",
+      "statTags": [
+        "PR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Beleaguer the Dead",
+      "slug": "Beleaguer_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beleaguer_the_Dead",
+      "description": "Wards off an undead target with holy energy for 245 points of Holy Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "shield"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 245,
+          "damageType": "Holy",
+          "display": "245 Holy absorb",
+          "sortKey": 245
+        }
+      ],
+      "valuesSummary": "245 Holy absorb",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Exceptional Heal",
+      "slug": "Exceptional_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
+      "description": "Exceptionally heals the wounds of a friendly target, healing them for 600 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 230,
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 600,
+          "display": "600 heal",
+          "sortKey": 600
+        }
+      ],
+      "valuesSummary": "600 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Supplication III",
+      "slug": "Supplication_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_III",
+      "description": "Cry out in prayer, increasing your Strength by 30 (L40) to 40 (L60) and Mana Regeneration by 3 for 1 minute.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "buff",
+        "self",
+        "MANA",
+        "STR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "and Mana Regeneration by 3",
+          "min": 30,
+          "max": 40,
+          "minLevel": 40,
+          "maxLevel": 60,
+          "display": "+30–40 and Mana Regeneration by 3 (L40–L60)",
+          "sortKey": 40
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "min": 30,
+          "max": 40,
+          "minLevel": 40,
+          "maxLevel": 60,
+          "display": "+30–40 Strength (L40–L60)",
+          "sortKey": 40,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Mana Regeneration",
+          "amount": 3,
+          "display": "+3 Mana Regeneration",
+          "sortKey": 3,
+          "statTag": "MANA"
+        }
+      ],
+      "valuesSummary": "+30–40 and Mana Regeneration by 3 (L40–L60) · +30–40 Strength (L40–L60) · +3 Mana Regeneration",
+      "statTags": [
+        "MANA",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Propitiate",
+      "slug": "Propitiate",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Propitiate",
+      "description": "Propitiate your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 51,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Holy Resolve",
+      "slug": "Holy_Resolve",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resolve",
+      "description": "Increases the maximum Health of a friendly target by 250 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 150,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "buff",
+        "MAX HP"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 250,
+          "display": "+250 Health",
+          "sortKey": 250,
+          "statTag": "MAX HP"
+        }
+      ],
+      "valuesSummary": "+250 Health",
+      "statTags": [
+        "MAX HP"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Abolish Magic",
+      "slug": "Abolish_Magic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Abolish_Magic",
+      "description": "Abolish magic from your target, removing two harmful effects.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 100,
+      "castTime": null,
+      "level": 55,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Propitiate the Masses",
+      "slug": "Propitiate_the_Masses",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Propitiate_the_Masses",
+      "description": "Propitiate your target, reducing their Body Aggro Radius for 5 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Revival",
+      "slug": "Revival",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revival",
+      "description": "Reawaken a target corpse, restoring 75% experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [
+        {
+          "kind": "utility",
+          "amount": 75,
+          "display": "75% XP",
+          "sortKey": 75
+        }
+      ],
+      "valuesSummary": "75% XP",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Assail the Dead",
+      "slug": "Assail_the_Dead",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Assail_the_Dead",
+      "description": "Wards an undead target with holy energy for 525 points of Holy Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 60,
+      "tags": [
+        "shield"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 525,
+          "damageType": "Holy",
+          "display": "525 Holy absorb",
+          "sortKey": 525
+        }
+      ],
+      "valuesSummary": "525 Holy absorb",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Divine Spark",
+      "slug": "Divine_Spark",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Spark",
+      "description": "Grants Divine Spark to your target, increasing their maximum Health by 250 for 35 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 60,
+      "tags": [
+        "buff",
+        "MAX HP"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 250,
+          "display": "+250 Health",
+          "sortKey": 250,
+          "statTag": "MAX HP"
+        }
+      ],
+      "valuesSummary": "+250 Health",
+      "statTags": [
+        "MAX HP"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Supplication IV",
+      "slug": "Supplication_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supplication_IV",
+      "description": "Cry out in prayer, increasing your Strength by 50 and Mana Regeneration by 4 for 1 minute.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 60,
+      "tags": [
+        "buff",
+        "self",
+        "MANA",
+        "STR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 50,
+          "display": "+50 Strength",
+          "sortKey": 50,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Mana Regeneration",
+          "amount": 4,
+          "display": "+4 Mana Regeneration",
+          "sortKey": 4,
+          "statTag": "MANA"
+        }
+      ],
+      "valuesSummary": "+50 Strength · +4 Mana Regeneration",
+      "statTags": [
+        "MANA",
+        "STR"
+      ],
+      "type": "ability"
+    }
+  ]
+}

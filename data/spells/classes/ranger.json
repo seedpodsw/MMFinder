@@ -1,0 +1,5683 @@
+{
+  "className": "Ranger",
+  "slug": "Ranger",
+  "type": "ability",
+  "sectionTitle": "Ranger Spells & Abilities",
+  "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger",
+  "entryCount": 87,
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26,
+    28,
+    30,
+    31,
+    32,
+    35,
+    36,
+    38,
+    40,
+    41,
+    44,
+    46,
+    47,
+    48,
+    49,
+    50,
+    52,
+    54,
+    55,
+    56,
+    59
+  ],
+  "entriesByLevel": {
+    "1": [
+      {
+        "name": "Corruption Protection",
+        "slug": "Corruption_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
+        "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "buff",
+          "COR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Corruption Resistance",
+            "amount": 5,
+            "display": "+5 Corruption Resistance",
+            "sortKey": 5,
+            "statTag": "COR"
+          }
+        ],
+        "valuesSummary": "+5 Corruption Resistance",
+        "statTags": [
+          "COR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Invisibility versus Animals",
+        "slug": "Invisibility_versus_Animals",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Animals",
+        "description": "Shrouds your target with invisibility versus beasts.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "buff",
+          "invisibility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Polar Align: North",
+        "slug": "Polar_Align:_North",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
+        "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "utility",
+          "self"
+        ],
+        "primaryTag": "utility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Taunt",
+        "slug": "Taunt",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
+        "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "taunt"
+        ],
+        "primaryTag": "taunt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Strike",
+        "slug": "Strike",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Strike",
+        "description": "Strikes your target for 1 (L1) to 50 (L60) Melee Damage, with 150% (L1) to 350% (L60) Damage Variance. Triggers cooldown of Might abilities.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 50,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Melee",
+            "display": "1–50 Melee dmg (L1–L60)",
+            "sortKey": 50
+          },
+          {
+            "kind": "damage",
+            "min": 150,
+            "max": 350,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "dmg",
+            "display": "150–350% dmg (L1–L60)",
+            "sortKey": 350
+          }
+        ],
+        "valuesSummary": "150–350% dmg (L1–L60) · 1–50 Melee dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Throw",
+        "slug": "Throw",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
+        "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Weak Heal",
+        "slug": "Weak_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Weak_Heal",
+        "description": "Weakly heals the wounds of a friendly target, healing them for 6 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 6,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 6,
+            "display": "6 heal",
+            "sortKey": 6
+          }
+        ],
+        "valuesSummary": "6 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "2": [
+      {
+        "name": "Truestrike Aura",
+        "slug": "Truestrike_Aura",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Truestrike_Aura",
+        "description": "Heighten the senses of your group, increasing their Archery, Bludgeoning, Piercing, Throwing, and Slashing by 5 and Dexterity by 1 (L1) to 15 (L60).",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 2,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Slashing by 5 and Dexterity",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–15 Slashing by 5 and Dexterity (L1–L60)",
+            "sortKey": 15
+          },
+          {
+            "kind": "buff",
+            "stat": "Archery",
+            "amount": 5,
+            "display": "+5 Archery",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Bludgeoning",
+            "amount": 5,
+            "display": "+5 Bludgeoning",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Piercing",
+            "amount": 5,
+            "display": "+5 Piercing",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Throwing",
+            "amount": 5,
+            "display": "+5 Throwing",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Slashing",
+            "amount": 5,
+            "display": "+5 Slashing",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "+5 Archery/Bludgeoning/Piercing/Throwing/Slashing · +1–15 Slashing by 5 and Dexterity (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "3": [
+      {
+        "name": "Kick",
+        "slug": "Kick",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "category": "Acr",
+        "categorySlug": "Skill_Acrobatics",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "interrupt"
+        ],
+        "primaryTag": "interrupt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "4": [
+      {
+        "name": "Burning Embers",
+        "slug": "Burning_Embers",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burning_Embers",
+        "description": "Burns your target for 60 seconds, dealing 1 Fire Damage every 6 seconds and decreasing AC by 1. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 5,
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "dot",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 1,
+            "max": 1,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Fire",
+            "display": "1 Fire/6s (60s)",
+            "sortKey": 10
+          },
+          {
+            "kind": "debuff",
+            "stat": "AC",
+            "amount": 1,
+            "display": "−1 AC",
+            "sortKey": 1,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "1 Fire/6s (60s) · −1 AC",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "5": [
+      {
+        "name": "Snare",
+        "slug": "Snare",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Snare",
+        "description": "Several small roots emerge from the ground and cling to your target's feet, decreasing their Movement Speed by 35% for 30 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 5,
+        "tags": [
+          "debuff",
+          "slow"
+        ],
+        "primaryTag": "slow",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Movement Speed",
+            "min": 35,
+            "max": 35,
+            "unit": "%",
+            "display": "−35%",
+            "sortKey": 35
+          }
+        ],
+        "valuesSummary": "−35%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "6": [
+      {
+        "name": "Woodskin",
+        "slug": "Woodskin",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Woodskin",
+        "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 5 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 6,
+        "tags": [
+          "buff",
+          "utility",
+          "AC"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 5,
+            "display": "+5 Armor Class",
+            "sortKey": 5,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+5 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "7": [
+      {
+        "name": "Fire Protection",
+        "slug": "Fire_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
+        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 7,
+        "tags": [
+          "buff",
+          "FR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Fire Resistance",
+            "amount": 5,
+            "display": "+5 Fire Resistance",
+            "sortKey": 5,
+            "statTag": "FR"
+          }
+        ],
+        "valuesSummary": "+5 Fire Resistance",
+        "statTags": [
+          "FR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "8": [
+      {
+        "name": "Cure Disease",
+        "slug": "Cure_Disease",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+        "description": "Remove disease effect - Cures target of disease effects",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 8,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Minor Heal",
+        "slug": "Minor_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
+        "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 8,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 10,
+            "display": "10 heal",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "10 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Shroud",
+        "slug": "Shroud",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud",
+        "description": "Camouflage yourself in nature's shroud, rendering you unseen by the living for 10 minutes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "invisibility",
+          "self"
+        ],
+        "primaryTag": "invisibility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "9": [
+      {
+        "name": "Twisting Roots",
+        "slug": "Twisting_Roots",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Roots",
+        "description": "Root your target with twisting tendrils, immobilizing them for 30 seconds. This spell has a chance to be removed by damage.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 9,
+        "tags": [
+          "crowd-control",
+          "root"
+        ],
+        "primaryTag": "root",
+        "effects": [
+          {
+            "kind": "crowd-control",
+            "duration": 30,
+            "display": "30s duration",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "30s duration",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "10": [
+      {
+        "name": "Whistling Shot",
+        "slug": "Whistling_Shot",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Shot",
+        "description": "Fire a whistling shot at your target, dealing 90% Weapon Damage plus 1 (L1) to 20 (L60) Physical Damage, and increasing Threat by 25 (L1) to 250 (L60).",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage",
+          "THREAT",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "90% weapon dmg",
+            "sortKey": 90
+          },
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 20,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Physical",
+            "display": "1–20 Physical dmg (L1–L60)",
+            "sortKey": 20
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat",
+            "min": 25,
+            "max": 250,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+25–250 Threat (L1–L60)",
+            "sortKey": 250,
+            "statTag": "THREAT"
+          },
+          {
+            "kind": "buff",
+            "stat": "increasing Threat",
+            "min": 25,
+            "max": 250,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+25–250 increasing Threat (L1–L60)",
+            "sortKey": 250
+          }
+        ],
+        "valuesSummary": "90% weapon dmg · 1–20 Physical dmg (L1–L60) · +25–250 Threat (L1–L60)",
+        "statTags": [
+          "THREAT"
+        ],
+        "type": "ability"
+      }
+    ],
+    "11": [
+      {
+        "name": "Fire Arrows",
+        "slug": "Fire_Arrows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Arrows",
+        "description": "Imbue your arrows with fire, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Fire Damage. Additionally, each ranged attack grants you a chance to activate Fire Arrow Advantage reducing cast time of your next Flameburst or Burning Embers line by 100% for 10 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 11,
+        "tags": [
+          "buff",
+          "self",
+          "damage"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Fire",
+            "display": "1–7 Fire dmg (L1–L60)",
+            "sortKey": 7
+          },
+          {
+            "kind": "debuff",
+            "stat": "cast time of your next Flameburst or Burning Embers line",
+            "min": 100,
+            "max": 100,
+            "unit": "%",
+            "display": "−100%",
+            "sortKey": 100
+          },
+          {
+            "kind": "buff",
+            "stat": "Ranged Damage dealt",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–7 Ranged Damage dealt (L1–L60)",
+            "sortKey": 7
+          }
+        ],
+        "valuesSummary": "+1–7 Ranged Damage dealt (L1–L60) · 1–7 Fire dmg (L1–L60) · −100%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Imbue Weapon: Fire",
+        "slug": "Imbue_Weapon:_Fire",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Fire",
+        "description": "Imbued your weapon with fire, granting you a chance to activate Fire Attack on melee attacks for 15 minutes. Fire Attack: Unleash a fire attack, dealing 7 (L1) to 75 (L60) Fire Damage.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 11,
+        "tags": [
+          "damage",
+          "buff",
+          "self"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 7,
+            "max": 75,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Fire",
+            "display": "7–75 Fire dmg (L1–L60)",
+            "sortKey": 75
+          }
+        ],
+        "valuesSummary": "7–75 Fire dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Poison Protection",
+        "slug": "Poison_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
+        "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 11,
+        "tags": [
+          "buff",
+          "PR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Poison Resistance",
+            "amount": 5,
+            "display": "+5 Poison Resistance",
+            "sortKey": 5,
+            "statTag": "PR"
+          }
+        ],
+        "valuesSummary": "+5 Poison Resistance",
+        "statTags": [
+          "PR"
+        ],
+        "type": "ability"
+      }
+    ],
+    "12": [
+      {
+        "name": "Cold Protection",
+        "slug": "Cold_Protection",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Protection",
+        "description": "Ward your target against frost, increasing their Cold Resistance by 4 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "buff",
+          "CR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Cold Resistance",
+            "amount": 4,
+            "display": "+4 Cold Resistance",
+            "sortKey": 4,
+            "statTag": "CR"
+          }
+        ],
+        "valuesSummary": "+4 Cold Resistance",
+        "statTags": [
+          "CR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Lesser Heal",
+        "slug": "Lesser_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
+        "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 25,
+            "display": "25 heal",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "25 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lull Exceptional Beasts",
+        "slug": "Lull_Exceptional_Beasts",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Exceptional_Beasts?action=edit&redlink=1",
+        "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "debuff",
+          "crowd-control"
+        ],
+        "primaryTag": "crowd-control",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "13": [
+      {
+        "name": "Sneak",
+        "slug": "Sneak",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
+        "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+        "category": "Sub",
+        "categorySlug": "Skill_Subterfuge",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 13,
+        "tags": [
+          "invisibility"
+        ],
+        "primaryTag": "invisibility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "14": [
+      {
+        "name": "Truestrike",
+        "slug": "Truestrike",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Truestrike",
+        "description": "Make your attacks strike true, increasing your Archery and Offense by 10 and Physical Damage dealt by 100% for 30 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 14,
+        "tags": [
+          "buff",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Archery and Offense by 10 and Physical Damage dealt",
+            "min": 100,
+            "max": 100,
+            "unit": "%",
+            "display": "+100%",
+            "sortKey": 100
+          },
+          {
+            "kind": "buff",
+            "stat": "Archery and Offense",
+            "amount": 10,
+            "display": "+10 Archery and Offense",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "+100% · +10 Archery and Offense",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "15": [
+      {
+        "name": "Camouflage",
+        "slug": "Camouflage",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
+        "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 15,
+        "tags": [
+          "invisibility"
+        ],
+        "primaryTag": "invisibility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Salvage Arrows",
+        "slug": "Salvage_Arrows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Salvage_Arrows",
+        "description": "Search the corpses around you, looking for arrows",
+        "category": "Mar",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 15,
+        "tags": [
+          "utility"
+        ],
+        "primaryTag": "utility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "16": [
+      {
+        "name": "Fireburst",
+        "slug": "Fireburst",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fireburst",
+        "description": "Bursts your target with fire for 12 (L4) to 15 (L7) points of Fire Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 12,
+            "max": 15,
+            "minLevel": 4,
+            "maxLevel": 7,
+            "damageType": "Fire",
+            "display": "12–15 Fire dmg (L4–L7)",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "12–15 Fire dmg (L4–L7)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Sense Magic",
+        "slug": "Sense_Magic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sense_Magic",
+        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see magical effects when considering targets for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "buff",
+          "utility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "17": [
+      {
+        "name": "Fear Beast",
+        "slug": "Fear_Beast",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_Beast",
+        "description": "Fears an enemy beast, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 17,
+        "tags": [
+          "crowd-control",
+          "fear"
+        ],
+        "primaryTag": "fear",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "18": [
+      {
+        "name": "Enduring Breath",
+        "slug": "Enduring_Breath",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
+        "description": "Breathe underwater - Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 18,
+        "tags": [
+          "buff",
+          "utility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "19": [
+      {
+        "name": "Prickly Barrier",
+        "slug": "Prickly_Barrier",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prickly_Barrier",
+        "description": "Surround your target with a prickly barrier, granting them a Damage Shield that deals 5 damage when hit for 10 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 19,
+        "tags": [
+          "buff",
+          "thorns"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 5,
+            "max": 5,
+            "display": "5 thorns/hit",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "5 thorns/hit",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Prickly Tunic",
+        "slug": "Prickly_Tunic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prickly_Tunic",
+        "description": "Wrap yourself in a prickly tunic, increasing your Armor Class by 10 and granting you a damage shield that deals 1 damage when hit for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 19,
+        "tags": [
+          "buff",
+          "thorns",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 1,
+            "max": 1,
+            "display": "1 thorns/hit",
+            "sortKey": 1
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "1 thorns/hit · +10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "20": [
+      {
+        "name": "Minor Regeneration",
+        "slug": "Minor_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Regeneration",
+        "description": "2hp Regen - Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 2,
+            "display": "+2 Health Regeneration",
+            "sortKey": 2,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+2 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "See Invisibility",
+        "slug": "See_Invisibility",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
+        "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "invisibility",
+          "utility"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Stoneskin",
+        "slug": "Stoneskin",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stoneskin",
+        "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 10 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "utility",
+          "AC"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 10,
+            "display": "+10 Armor Class",
+            "sortKey": 10,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+10 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Speed of the Wild",
+        "slug": "Speed_of_the_Wild",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
+        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "movement"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 40,
+            "max": 58,
+            "unit": "%",
+            "display": "+40–58%",
+            "sortKey": 58,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+40–58%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Unity",
+        "slug": "Unity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unity",
+        "description": "Placates a target and any 3 nearby entities, reducing the range of their social and proximity aggro for 2 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "21": [
+      {
+        "name": "Bind Vision",
+        "slug": "Bind_Vision",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bind_Vision",
+        "description": "Bind your vision to that of your target, granting you the ability to see through their eyes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 21,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Ice Arrows",
+        "slug": "Ice_Arrows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Arrows",
+        "description": "Imbue your arrows with ice, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Cold Damage. Additionally, each ranged attack reduces the Attack Speed of your target by 1% for 30 seconds. Stacks up to 25 times.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 21,
+        "tags": [
+          "buff",
+          "debuff",
+          "exhaust",
+          "damage"
+        ],
+        "primaryTag": "debuff",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Cold",
+            "display": "1–7 Cold dmg (L1–L60)",
+            "sortKey": 7
+          },
+          {
+            "kind": "buff",
+            "stat": "Ranged Damage dealt",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–7 Ranged Damage dealt (L1–L60)",
+            "sortKey": 7
+          }
+        ],
+        "valuesSummary": "1–7 Cold dmg (L1–L60) · +1–7 Ranged Damage dealt (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Imbue Weapon: Ice",
+        "slug": "Imbue_Weapon:_Ice",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Ice",
+        "description": "Imbue your weapon with ice, granting you a chance to activate Ice Attack on melee attacks for 15 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 21,
+        "tags": [
+          "buff",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "22": [
+      {
+        "name": "Insect Swarm",
+        "slug": "Insect_Swarm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insect_Swarm",
+        "description": "Engulf your target with an insect swarm, dealing 10 Poison Damage every 6 seconds for 60 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 22,
+        "tags": [
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Poison",
+            "display": "10 Poison/6s (60s)",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "10 Poison/6s (60s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "23": [
+      {
+        "name": "Scorching Embers",
+        "slug": "Scorching_Embers",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scorching_Embers",
+        "description": "Burns your target for 60 seconds, dealing 3 Fire Damage every 6 seconds and decreasing AC by 6. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 23,
+        "tags": [
+          "dot",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 3,
+            "max": 3,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Fire",
+            "display": "3 Fire/6s (60s)",
+            "sortKey": 30
+          },
+          {
+            "kind": "debuff",
+            "stat": "AC",
+            "amount": 6,
+            "display": "−6 AC",
+            "sortKey": 6,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "3 Fire/6s (60s) · −6 AC",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "24": [
+      {
+        "name": "Corruption Resistance",
+        "slug": "Corruption_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
+        "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "buff",
+          "COR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Corruption Resistance",
+            "amount": 15,
+            "display": "+15 Corruption Resistance",
+            "sortKey": 15,
+            "statTag": "COR"
+          }
+        ],
+        "valuesSummary": "+15 Corruption Resistance",
+        "statTags": [
+          "COR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Jackal Form",
+        "slug": "Jackal_Form",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jackal_Form",
+        "description": "Shapeshift into a jackal, increasing your Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "buff",
+          "movement",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 40,
+            "max": 60,
+            "unit": "%",
+            "display": "+40–60%",
+            "sortKey": 60,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+40–60%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Magmaburst",
+        "slug": "Magmaburst",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magmaburst",
+        "description": "Unleash aburst of magma upon your target, dealing 40 Fire Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 40,
+            "damageType": "Fire",
+            "display": "40 Fire dmg",
+            "sortKey": 40
+          }
+        ],
+        "valuesSummary": "40 Fire dmg",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Wolf Form",
+        "slug": "Wolf_Form",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wolf_Form",
+        "description": "Shapeshift into a wolf, increasing your Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "buff",
+          "movement",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 40,
+            "max": 60,
+            "unit": "%",
+            "display": "+40–60%",
+            "sortKey": 60,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+40–60%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "26": [
+      {
+        "name": "Hearth of the Ranger",
+        "slug": "Hearth_of_the_Ranger",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hearth_of_the_Ranger",
+        "description": "Place a Hearth of the Ranger at your feet, providing warmth, comfort, and a place to cook. This ability lasts 50% longer than a normal campfire, and each log adds 50% more burn time. This ability requires 8 Wood.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 26,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "28": [
+      {
+        "name": "Unification",
+        "slug": "Unification",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unification",
+        "description": "Placate your target, reducing their Proximity Aggro for 2 minutes. This spell can only be used outdoors. This spell cannot be resisted. This spell has a very slight chance to end early. This spell has no effect on Social Aggro. This spell is limited to one target.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "30": [
+      {
+        "name": "Stinging Swarm",
+        "slug": "Stinging_Swarm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stinging_Swarm",
+        "description": "Engulf your target with a stinging swarm, dealing 20 Poison Damage every 6 seconds for 60 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 90,
+        "castTime": null,
+        "level": 30,
+        "tags": [
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 20,
+            "max": 20,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Poison",
+            "display": "20 Poison/6s (60s)",
+            "sortKey": 200
+          }
+        ],
+        "valuesSummary": "20 Poison/6s (60s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "31": [
+      {
+        "name": "Imbue Weapon: Nature",
+        "slug": "Imbue_Weapon:_Nature",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Nature?action=edit&redlink=1",
+        "description": "Imbue your weapon with nature, granting you a chance to activate Nature Attack on melee attacks for 15 minutes. Nature Attack: Unleash a nature attack, dealing 7 (L1) to 75 (L60) Magic Damage.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 31,
+        "tags": [
+          "damage",
+          "buff",
+          "self"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 7,
+            "max": 75,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Magic",
+            "display": "7–75 Magic dmg (L1–L60)",
+            "sortKey": 75
+          }
+        ],
+        "valuesSummary": "7–75 Magic dmg (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Nature Arrows",
+        "slug": "Nature_Arrows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature_Arrows",
+        "description": "Imbue your arrows with nature, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Magic Damage. Additionally, each ranged attack grants you a chance to activate Nature Arrow Advantage reducing cast time of your next spell in the Root or Snare line by 100%.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 31,
+        "tags": [
+          "buff",
+          "self",
+          "damage"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Magic",
+            "display": "1–7 Magic dmg (L1–L60)",
+            "sortKey": 7
+          },
+          {
+            "kind": "debuff",
+            "stat": "cast time of your next spell in the Root or Snare line",
+            "min": 100,
+            "max": 100,
+            "unit": "%",
+            "display": "−100%",
+            "sortKey": 100
+          },
+          {
+            "kind": "buff",
+            "stat": "Ranged Damage dealt",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–7 Ranged Damage dealt (L1–L60)",
+            "sortKey": 7
+          }
+        ],
+        "valuesSummary": "+1–7 Ranged Damage dealt (L1–L60) · 1–7 Magic dmg (L1–L60) · −100%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "32": [
+      {
+        "name": "Bristly Barrier",
+        "slug": "Bristly_Barrier",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristly_Barrier",
+        "description": "Surround your target with a bristly barrier, granting them a Damage Shield that deals 10 damage when hit for 10 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "buff",
+          "thorns"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 10,
+            "max": 10,
+            "display": "10 thorns/hit",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "10 thorns/hit",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Bristly Tunic",
+        "slug": "Bristly_Tunic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristly_Tunic?action=edit&redlink=1",
+        "description": "Wrap yourself in a bristly tunic, increasing your Armor Class by 15 and granting you a Damage Shield that deals 3 damage when hit for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 30,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "buff",
+          "thorns",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 3,
+            "max": 3,
+            "display": "3 thorns/hit",
+            "sortKey": 3
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 15,
+            "display": "+15 Armor Class",
+            "sortKey": 15,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "3 thorns/hit · +15 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Heal",
+        "slug": "Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal",
+        "description": "Moderately heals the wounds of a friendly target, healing them for 60 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 60,
+            "display": "60 heal",
+            "sortKey": 60
+          }
+        ],
+        "valuesSummary": "60 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lesser Regeneration",
+        "slug": "Lesser_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Regeneration",
+        "description": "5hp Regen - Lightly regenerate your target, increasing their Health Regeneration by 5 for 30 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 5,
+            "display": "+5 Health Regeneration",
+            "sortKey": 5,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+5 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "ability"
+      }
+    ],
+    "35": [
+      {
+        "name": "Flaming Embers",
+        "slug": "Flaming_Embers",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flaming_Embers",
+        "description": "Burns your target for 60 seconds, dealing 15 Fire Damage every 6 seconds and decreasing AC by 13. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 45,
+        "castTime": null,
+        "level": 35,
+        "tags": [
+          "dot",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 15,
+            "max": 15,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Fire",
+            "display": "15 Fire/6s (60s)",
+            "sortKey": 150
+          },
+          {
+            "kind": "debuff",
+            "stat": "AC",
+            "amount": 13,
+            "display": "−13 AC",
+            "sortKey": 13,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "15 Fire/6s (60s) · −13 AC",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "36": [
+      {
+        "name": "Summon: Cureberries",
+        "slug": "Summon:_Cureberries",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon:_Cureberries",
+        "description": "Summon a handful of cureberries, removing one Disease and one Poison effect when consumed.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 36,
+        "tags": [
+          "dispel",
+          "summon"
+        ],
+        "primaryTag": "summon",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "38": [
+      {
+        "name": "Winged Swarm",
+        "slug": "Winged_Swarm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winged_Swarm",
+        "description": "Engulf your target with a winged swarm, dealing 30 Poison Damage every 6 seconds for 60 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 125,
+        "castTime": null,
+        "level": 38,
+        "tags": [
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 30,
+            "max": 30,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Poison",
+            "display": "30 Poison/6s (60s)",
+            "sortKey": 300
+          }
+        ],
+        "valuesSummary": "30 Poison/6s (60s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "40": [
+      {
+        "name": "Brambly Barrier",
+        "slug": "Brambly_Barrier",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Barrier",
+        "description": "Surround your target with a brambly barrier, granting them a Damage Shield that deals 15 damage when hit for 10 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 75,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "thorns"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 15,
+            "max": 15,
+            "display": "15 thorns/hit",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "15 thorns/hit",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Brambly Tunic",
+        "slug": "Brambly_Tunic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Tunic",
+        "description": "Wrap yourself in a brambly tunic, increasing your Armor Class by 20 and granting you a Damage Shield that deals 4 damage when hit for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 45,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "thorns",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 4,
+            "max": 4,
+            "display": "4 thorns/hit",
+            "sortKey": 4
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 20,
+            "display": "+20 Armor Class",
+            "sortKey": 20,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "4 thorns/hit · +20 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Death's Demise",
+        "slug": "Death's_Demise",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Death%27s_Demise",
+        "description": "Invoke your innate ability to resist corruption, completely absorbing a single death touch and harnessing its power to increase all damage dealt by 100% for 15 seconds.",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 40,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Greater Shroud",
+        "slug": "Greater_Shroud",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Shroud",
+        "description": "Camouflage yourself in nature's shroud, rendering you unseen by the living for 10 minutes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "invisibility",
+          "self"
+        ],
+        "primaryTag": "invisibility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lavaburst",
+        "slug": "Lavaburst",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lavaburst",
+        "description": "Unleash a burst of lava upon your target, dealing 120 Fire Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 75,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 120,
+            "damageType": "Fire",
+            "display": "120 Fire dmg",
+            "sortKey": 120
+          }
+        ],
+        "valuesSummary": "120 Fire dmg",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Steelskin",
+        "slug": "Steelskin",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Steelskin",
+        "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 15 for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 60,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "buff",
+          "utility",
+          "AC"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 15,
+            "display": "+15 Armor Class",
+            "sortKey": 15,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+15 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "41": [
+      {
+        "name": "Lightning Arrows",
+        "slug": "Lightning_Arrows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Arrows",
+        "description": "Imbue your arrows with lightning, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Electricity Damage. Additionally, each ranged attack grants you a chance to stun your target for 0.5 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 41,
+        "tags": [
+          "buff",
+          "crowd-control",
+          "stun",
+          "damage"
+        ],
+        "primaryTag": "stun",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "damageType": "Electricity",
+            "display": "1–7 Electricity dmg (L1–L60)",
+            "sortKey": 7
+          },
+          {
+            "kind": "buff",
+            "stat": "Ranged Damage dealt",
+            "min": 1,
+            "max": 7,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–7 Ranged Damage dealt (L1–L60)",
+            "sortKey": 7
+          }
+        ],
+        "valuesSummary": "1–7 Electricity dmg (L1–L60) · +1–7 Ranged Damage dealt (L1–L60)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "44": [
+      {
+        "name": "Cold Resistance",
+        "slug": "Cold_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
+        "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "CR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Cold Resistance",
+            "amount": 15,
+            "display": "+15 Cold Resistance",
+            "sortKey": 15,
+            "statTag": "CR"
+          }
+        ],
+        "valuesSummary": "+15 Cold Resistance",
+        "statTags": [
+          "CR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Fire Resistance",
+        "slug": "Fire_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
+        "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "FR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Fire Resistance",
+            "amount": 15,
+            "display": "+15 Fire Resistance",
+            "sortKey": 15,
+            "statTag": "FR"
+          }
+        ],
+        "valuesSummary": "+15 Fire Resistance",
+        "statTags": [
+          "FR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Poison Resistance",
+        "slug": "Poison_Resistance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
+        "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "PR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Poison Resistance",
+            "amount": 15,
+            "display": "+15 Poison Resistance",
+            "sortKey": 15,
+            "statTag": "PR"
+          }
+        ],
+        "valuesSummary": "+15 Poison Resistance",
+        "statTags": [
+          "PR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Regeneration",
+        "slug": "Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
+        "description": "Moderately regenerate your target, increasing their Health Regeneration by 7 for 48 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 125,
+        "castTime": null,
+        "level": 44,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 7,
+            "display": "+7 Health Regeneration",
+            "sortKey": 7,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+7 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "ability"
+      }
+    ],
+    "46": [
+      {
+        "name": "Locust Swarm",
+        "slug": "Locust_Swarm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Locust_Swarm",
+        "description": "Engulf your target with a locust swarm, dealing 45 Poison Damage every 6 seconds for 60 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 46,
+        "tags": [
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 45,
+            "max": 45,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Poison",
+            "display": "45 Poison/6s (60s)",
+            "sortKey": 450
+          }
+        ],
+        "valuesSummary": "45 Poison/6s (60s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "47": [
+      {
+        "name": "Blazing Embers",
+        "slug": "Blazing_Embers",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blazing_Embers",
+        "description": "Burns your target for 60 seconds, dealing 20 Fire Damage every 6 seconds and decreasing AC by 19. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 47,
+        "tags": [
+          "dot",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 20,
+            "max": 20,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Fire",
+            "display": "20 Fire/6s (60s)",
+            "sortKey": 200
+          },
+          {
+            "kind": "debuff",
+            "stat": "AC",
+            "amount": 19,
+            "display": "−19 AC",
+            "sortKey": 19,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "20 Fire/6s (60s) · −19 AC",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "48": [
+      {
+        "name": "Speed of Predator",
+        "slug": "Speed_of_Predator",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_Predator",
+        "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. Only useable outdoors.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "buff",
+          "movement",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 100,
+            "max": 100,
+            "unit": "%",
+            "display": "+100%",
+            "sortKey": 100,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+100%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Spiky Barrier",
+        "slug": "Spiky_Barrier",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Barrier",
+        "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "buff",
+          "thorns"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 20,
+            "max": 20,
+            "display": "20 thorns/hit",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "20 thorns/hit",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Spiky Tunic",
+        "slug": "Spiky_Tunic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Tunic",
+        "description": "Wrap yourself in a spiky tunic, increasing your Armor Class by 25 and granting you a Damage Shield that deals 5 damage when hit for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 65,
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "buff",
+          "thorns",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 5,
+            "max": 5,
+            "display": "5 thorns/hit",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 25,
+            "display": "+25 Armor Class",
+            "sortKey": 25,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "5 thorns/hit · +25 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "49": [
+      {
+        "name": "Blaze",
+        "slug": "Blaze",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blaze",
+        "description": "Engulfs your target with a blaze for 200 points of Fire damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 105,
+        "castTime": null,
+        "level": 49,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 200,
+            "damageType": "Fire",
+            "display": "200 Fire dmg",
+            "sortKey": 200
+          }
+        ],
+        "valuesSummary": "200 Fire dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "50": [
+      {
+        "name": "Ensnare",
+        "slug": "Ensnare",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ensnare",
+        "description": "Several small roots emerge from the ground and cling to your target's feet, decreasing their Movement Speed by 50% for 5 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "debuff",
+          "slow"
+        ],
+        "primaryTag": "slow",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Movement Speed",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "−50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "−50%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Greater Camouflage",
+        "slug": "Greater_Camouflage",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Camouflage",
+        "description": "Camouflage a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell has a moderate chance to end early.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "invisibility"
+        ],
+        "primaryTag": "invisibility",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "52": [
+      {
+        "name": "Diamondskin",
+        "slug": "Diamondskin",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Diamondskin",
+        "description": "Coats your target skin as hard as diamond, increasing their Armor Class by 20 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 90,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "buff",
+          "utility",
+          "AC"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 20,
+            "display": "+20 Armor Class",
+            "sortKey": 20,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+20 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "54": [
+      {
+        "name": "Infesting Swarm",
+        "slug": "Infesting_Swarm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infesting_Swarm",
+        "description": "Engulf your target with an infesting swarm, dealing 70 Poison Damage every 6 seconds for 60 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 210,
+        "castTime": null,
+        "level": 54,
+        "tags": [
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 70,
+            "max": 70,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Poison",
+            "display": "70 Poison/6s (60s)",
+            "sortKey": 700
+          }
+        ],
+        "valuesSummary": "70 Poison/6s (60s)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "55": [
+      {
+        "name": "Inferno",
+        "slug": "Inferno",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Inferno",
+        "description": "Engulfs your target with an inferno for 325 points of Fire Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 140,
+        "castTime": null,
+        "level": 55,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 325,
+            "damageType": "Fire",
+            "display": "325 Fire dmg",
+            "sortKey": 325
+          }
+        ],
+        "valuesSummary": "325 Fire dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "56": [
+      {
+        "name": "Greater Heal",
+        "slug": "Greater_Heal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
+        "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 170,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 325,
+            "display": "325 heal",
+            "sortKey": 325
+          }
+        ],
+        "valuesSummary": "325 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Greater Regeneration",
+        "slug": "Greater_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Regeneration",
+        "description": "Causes your target to regenerate, increasing their Health Regeneration by 11 for 50 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 150,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 11,
+            "display": "+11 Health Regeneration",
+            "sortKey": 11,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+11 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Thorny Barrier",
+        "slug": "Thorny_Barrier",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorny_Barrier",
+        "description": "Surround your target with a thorny barrier, granting them a Damage Shield that deals 25 damage when hit for 30 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 125,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "buff",
+          "thorns"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 25,
+            "max": 25,
+            "display": "25 thorns/hit",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "25 thorns/hit",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Thorny Tunic",
+        "slug": "Thorny_Tunic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorny_Tunic",
+        "description": "Wrap yourself in a thorny tunic, increasing your Armor Class by 30 and granting you a Damage Shield that deals 6 damage when hit for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 80,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "buff",
+          "thorns",
+          "self",
+          "AC"
+        ],
+        "primaryTag": "thorns",
+        "effects": [
+          {
+            "kind": "thorns",
+            "min": 6,
+            "max": 6,
+            "display": "6 thorns/hit",
+            "sortKey": 6
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 30,
+            "display": "+30 Armor Class",
+            "sortKey": 30,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "6 thorns/hit · +30 Armor Class",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ],
+    "59": [
+      {
+        "name": "Smoldering Embers",
+        "slug": "Smoldering_Embers",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Smoldering_Embers",
+        "description": "Burns your target for 60 seconds, dealing 30 Fire Damage every 6 seconds and decreasing AC by 25. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 59,
+        "tags": [
+          "dot",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 30,
+            "max": 30,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Fire",
+            "display": "30 Fire/6s (60s)",
+            "sortKey": 300
+          },
+          {
+            "kind": "debuff",
+            "stat": "AC",
+            "amount": 25,
+            "display": "−25 AC",
+            "sortKey": 25,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "30 Fire/6s (60s) · −25 AC",
+        "statTags": [
+          "AC"
+        ],
+        "type": "ability"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "name": "Corruption Protection",
+      "slug": "Corruption_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
+      "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "buff",
+        "COR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Corruption Resistance",
+          "amount": 5,
+          "display": "+5 Corruption Resistance",
+          "sortKey": 5,
+          "statTag": "COR"
+        }
+      ],
+      "valuesSummary": "+5 Corruption Resistance",
+      "statTags": [
+        "COR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Invisibility versus Animals",
+      "slug": "Invisibility_versus_Animals",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Animals",
+      "description": "Shrouds your target with invisibility versus beasts.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "buff",
+        "invisibility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Polar Align: North",
+      "slug": "Polar_Align:_North",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
+      "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "utility",
+        "self"
+      ],
+      "primaryTag": "utility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Taunt",
+      "slug": "Taunt",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
+      "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "taunt"
+      ],
+      "primaryTag": "taunt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Strike",
+      "slug": "Strike",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Strike",
+      "description": "Strikes your target for 1 (L1) to 50 (L60) Melee Damage, with 150% (L1) to 350% (L60) Damage Variance. Triggers cooldown of Might abilities.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 50,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Melee",
+          "display": "1–50 Melee dmg (L1–L60)",
+          "sortKey": 50
+        },
+        {
+          "kind": "damage",
+          "min": 150,
+          "max": 350,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "dmg",
+          "display": "150–350% dmg (L1–L60)",
+          "sortKey": 350
+        }
+      ],
+      "valuesSummary": "150–350% dmg (L1–L60) · 1–50 Melee dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Throw",
+      "slug": "Throw",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
+      "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Weak Heal",
+      "slug": "Weak_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Weak_Heal",
+      "description": "Weakly heals the wounds of a friendly target, healing them for 6 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 6,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 6,
+          "display": "6 heal",
+          "sortKey": 6
+        }
+      ],
+      "valuesSummary": "6 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Truestrike Aura",
+      "slug": "Truestrike_Aura",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Truestrike_Aura",
+      "description": "Heighten the senses of your group, increasing their Archery, Bludgeoning, Piercing, Throwing, and Slashing by 5 and Dexterity by 1 (L1) to 15 (L60).",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 2,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Slashing by 5 and Dexterity",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–15 Slashing by 5 and Dexterity (L1–L60)",
+          "sortKey": 15
+        },
+        {
+          "kind": "buff",
+          "stat": "Archery",
+          "amount": 5,
+          "display": "+5 Archery",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Bludgeoning",
+          "amount": 5,
+          "display": "+5 Bludgeoning",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Piercing",
+          "amount": 5,
+          "display": "+5 Piercing",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Throwing",
+          "amount": 5,
+          "display": "+5 Throwing",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Slashing",
+          "amount": 5,
+          "display": "+5 Slashing",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "+5 Archery/Bludgeoning/Piercing/Throwing/Slashing · +1–15 Slashing by 5 and Dexterity (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Kick",
+      "slug": "Kick",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "category": "Acr",
+      "categorySlug": "Skill_Acrobatics",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "interrupt"
+      ],
+      "primaryTag": "interrupt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Burning Embers",
+      "slug": "Burning_Embers",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burning_Embers",
+      "description": "Burns your target for 60 seconds, dealing 1 Fire Damage every 6 seconds and decreasing AC by 1. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 5,
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "dot",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 1,
+          "max": 1,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Fire",
+          "display": "1 Fire/6s (60s)",
+          "sortKey": 10
+        },
+        {
+          "kind": "debuff",
+          "stat": "AC",
+          "amount": 1,
+          "display": "−1 AC",
+          "sortKey": 1,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "1 Fire/6s (60s) · −1 AC",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Snare",
+      "slug": "Snare",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Snare",
+      "description": "Several small roots emerge from the ground and cling to your target's feet, decreasing their Movement Speed by 35% for 30 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 5,
+      "tags": [
+        "debuff",
+        "slow"
+      ],
+      "primaryTag": "slow",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Movement Speed",
+          "min": 35,
+          "max": 35,
+          "unit": "%",
+          "display": "−35%",
+          "sortKey": 35
+        }
+      ],
+      "valuesSummary": "−35%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Woodskin",
+      "slug": "Woodskin",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Woodskin",
+      "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 5 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 6,
+      "tags": [
+        "buff",
+        "utility",
+        "AC"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 5,
+          "display": "+5 Armor Class",
+          "sortKey": 5,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+5 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Fire Protection",
+      "slug": "Fire_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
+      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 7,
+      "tags": [
+        "buff",
+        "FR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Fire Resistance",
+          "amount": 5,
+          "display": "+5 Fire Resistance",
+          "sortKey": 5,
+          "statTag": "FR"
+        }
+      ],
+      "valuesSummary": "+5 Fire Resistance",
+      "statTags": [
+        "FR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Cure Disease",
+      "slug": "Cure_Disease",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+      "description": "Remove disease effect - Cures target of disease effects",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 8,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Minor Heal",
+      "slug": "Minor_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
+      "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 8,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 10,
+          "display": "10 heal",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "10 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shroud",
+      "slug": "Shroud",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud",
+      "description": "Camouflage yourself in nature's shroud, rendering you unseen by the living for 10 minutes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "invisibility",
+        "self"
+      ],
+      "primaryTag": "invisibility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Twisting Roots",
+      "slug": "Twisting_Roots",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Roots",
+      "description": "Root your target with twisting tendrils, immobilizing them for 30 seconds. This spell has a chance to be removed by damage.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 9,
+      "tags": [
+        "crowd-control",
+        "root"
+      ],
+      "primaryTag": "root",
+      "effects": [
+        {
+          "kind": "crowd-control",
+          "duration": 30,
+          "display": "30s duration",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "30s duration",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Whistling Shot",
+      "slug": "Whistling_Shot",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Shot",
+      "description": "Fire a whistling shot at your target, dealing 90% Weapon Damage plus 1 (L1) to 20 (L60) Physical Damage, and increasing Threat by 25 (L1) to 250 (L60).",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage",
+        "THREAT",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "90% weapon dmg",
+          "sortKey": 90
+        },
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 20,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Physical",
+          "display": "1–20 Physical dmg (L1–L60)",
+          "sortKey": 20
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat",
+          "min": 25,
+          "max": 250,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+25–250 Threat (L1–L60)",
+          "sortKey": 250,
+          "statTag": "THREAT"
+        },
+        {
+          "kind": "buff",
+          "stat": "increasing Threat",
+          "min": 25,
+          "max": 250,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+25–250 increasing Threat (L1–L60)",
+          "sortKey": 250
+        }
+      ],
+      "valuesSummary": "90% weapon dmg · 1–20 Physical dmg (L1–L60) · +25–250 Threat (L1–L60)",
+      "statTags": [
+        "THREAT"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Fire Arrows",
+      "slug": "Fire_Arrows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Arrows",
+      "description": "Imbue your arrows with fire, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Fire Damage. Additionally, each ranged attack grants you a chance to activate Fire Arrow Advantage reducing cast time of your next Flameburst or Burning Embers line by 100% for 10 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 11,
+      "tags": [
+        "buff",
+        "self",
+        "damage"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Fire",
+          "display": "1–7 Fire dmg (L1–L60)",
+          "sortKey": 7
+        },
+        {
+          "kind": "debuff",
+          "stat": "cast time of your next Flameburst or Burning Embers line",
+          "min": 100,
+          "max": 100,
+          "unit": "%",
+          "display": "−100%",
+          "sortKey": 100
+        },
+        {
+          "kind": "buff",
+          "stat": "Ranged Damage dealt",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–7 Ranged Damage dealt (L1–L60)",
+          "sortKey": 7
+        }
+      ],
+      "valuesSummary": "+1–7 Ranged Damage dealt (L1–L60) · 1–7 Fire dmg (L1–L60) · −100%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Imbue Weapon: Fire",
+      "slug": "Imbue_Weapon:_Fire",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Fire",
+      "description": "Imbued your weapon with fire, granting you a chance to activate Fire Attack on melee attacks for 15 minutes. Fire Attack: Unleash a fire attack, dealing 7 (L1) to 75 (L60) Fire Damage.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 11,
+      "tags": [
+        "damage",
+        "buff",
+        "self"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 7,
+          "max": 75,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Fire",
+          "display": "7–75 Fire dmg (L1–L60)",
+          "sortKey": 75
+        }
+      ],
+      "valuesSummary": "7–75 Fire dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Poison Protection",
+      "slug": "Poison_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
+      "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 11,
+      "tags": [
+        "buff",
+        "PR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Poison Resistance",
+          "amount": 5,
+          "display": "+5 Poison Resistance",
+          "sortKey": 5,
+          "statTag": "PR"
+        }
+      ],
+      "valuesSummary": "+5 Poison Resistance",
+      "statTags": [
+        "PR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Cold Protection",
+      "slug": "Cold_Protection",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Protection",
+      "description": "Ward your target against frost, increasing their Cold Resistance by 4 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "buff",
+        "CR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Cold Resistance",
+          "amount": 4,
+          "display": "+4 Cold Resistance",
+          "sortKey": 4,
+          "statTag": "CR"
+        }
+      ],
+      "valuesSummary": "+4 Cold Resistance",
+      "statTags": [
+        "CR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Lesser Heal",
+      "slug": "Lesser_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
+      "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 25,
+          "display": "25 heal",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "25 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lull Exceptional Beasts",
+      "slug": "Lull_Exceptional_Beasts",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Exceptional_Beasts?action=edit&redlink=1",
+      "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "debuff",
+        "crowd-control"
+      ],
+      "primaryTag": "crowd-control",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sneak",
+      "slug": "Sneak",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
+      "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+      "category": "Sub",
+      "categorySlug": "Skill_Subterfuge",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 13,
+      "tags": [
+        "invisibility"
+      ],
+      "primaryTag": "invisibility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Truestrike",
+      "slug": "Truestrike",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Truestrike",
+      "description": "Make your attacks strike true, increasing your Archery and Offense by 10 and Physical Damage dealt by 100% for 30 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 14,
+      "tags": [
+        "buff",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Archery and Offense by 10 and Physical Damage dealt",
+          "min": 100,
+          "max": 100,
+          "unit": "%",
+          "display": "+100%",
+          "sortKey": 100
+        },
+        {
+          "kind": "buff",
+          "stat": "Archery and Offense",
+          "amount": 10,
+          "display": "+10 Archery and Offense",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "+100% · +10 Archery and Offense",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Camouflage",
+      "slug": "Camouflage",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
+      "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 15,
+      "tags": [
+        "invisibility"
+      ],
+      "primaryTag": "invisibility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Salvage Arrows",
+      "slug": "Salvage_Arrows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Salvage_Arrows",
+      "description": "Search the corpses around you, looking for arrows",
+      "category": "Mar",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 15,
+      "tags": [
+        "utility"
+      ],
+      "primaryTag": "utility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Fireburst",
+      "slug": "Fireburst",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fireburst",
+      "description": "Bursts your target with fire for 12 (L4) to 15 (L7) points of Fire Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 12,
+          "max": 15,
+          "minLevel": 4,
+          "maxLevel": 7,
+          "damageType": "Fire",
+          "display": "12–15 Fire dmg (L4–L7)",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "12–15 Fire dmg (L4–L7)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sense Magic",
+      "slug": "Sense_Magic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sense_Magic",
+      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see magical effects when considering targets for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "buff",
+        "utility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Fear Beast",
+      "slug": "Fear_Beast",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_Beast",
+      "description": "Fears an enemy beast, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 17,
+      "tags": [
+        "crowd-control",
+        "fear"
+      ],
+      "primaryTag": "fear",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enduring Breath",
+      "slug": "Enduring_Breath",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
+      "description": "Breathe underwater - Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 18,
+      "tags": [
+        "buff",
+        "utility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Prickly Barrier",
+      "slug": "Prickly_Barrier",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prickly_Barrier",
+      "description": "Surround your target with a prickly barrier, granting them a Damage Shield that deals 5 damage when hit for 10 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 19,
+      "tags": [
+        "buff",
+        "thorns"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 5,
+          "max": 5,
+          "display": "5 thorns/hit",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "5 thorns/hit",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Prickly Tunic",
+      "slug": "Prickly_Tunic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prickly_Tunic",
+      "description": "Wrap yourself in a prickly tunic, increasing your Armor Class by 10 and granting you a damage shield that deals 1 damage when hit for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 19,
+      "tags": [
+        "buff",
+        "thorns",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 1,
+          "max": 1,
+          "display": "1 thorns/hit",
+          "sortKey": 1
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "1 thorns/hit · +10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Minor Regeneration",
+      "slug": "Minor_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Regeneration",
+      "description": "2hp Regen - Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 2,
+          "display": "+2 Health Regeneration",
+          "sortKey": 2,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+2 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "See Invisibility",
+      "slug": "See_Invisibility",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
+      "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "invisibility",
+        "utility"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Stoneskin",
+      "slug": "Stoneskin",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stoneskin",
+      "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 10 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "utility",
+        "AC"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 10,
+          "display": "+10 Armor Class",
+          "sortKey": 10,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+10 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Speed of the Wild",
+      "slug": "Speed_of_the_Wild",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
+      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "movement"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 40,
+          "max": 58,
+          "unit": "%",
+          "display": "+40–58%",
+          "sortKey": 58,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+40–58%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Unity",
+      "slug": "Unity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unity",
+      "description": "Placates a target and any 3 nearby entities, reducing the range of their social and proximity aggro for 2 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Bind Vision",
+      "slug": "Bind_Vision",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bind_Vision",
+      "description": "Bind your vision to that of your target, granting you the ability to see through their eyes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 21,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Ice Arrows",
+      "slug": "Ice_Arrows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Arrows",
+      "description": "Imbue your arrows with ice, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Cold Damage. Additionally, each ranged attack reduces the Attack Speed of your target by 1% for 30 seconds. Stacks up to 25 times.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 21,
+      "tags": [
+        "buff",
+        "debuff",
+        "exhaust",
+        "damage"
+      ],
+      "primaryTag": "debuff",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Cold",
+          "display": "1–7 Cold dmg (L1–L60)",
+          "sortKey": 7
+        },
+        {
+          "kind": "buff",
+          "stat": "Ranged Damage dealt",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–7 Ranged Damage dealt (L1–L60)",
+          "sortKey": 7
+        }
+      ],
+      "valuesSummary": "1–7 Cold dmg (L1–L60) · +1–7 Ranged Damage dealt (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Imbue Weapon: Ice",
+      "slug": "Imbue_Weapon:_Ice",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Ice",
+      "description": "Imbue your weapon with ice, granting you a chance to activate Ice Attack on melee attacks for 15 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 21,
+      "tags": [
+        "buff",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Insect Swarm",
+      "slug": "Insect_Swarm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insect_Swarm",
+      "description": "Engulf your target with an insect swarm, dealing 10 Poison Damage every 6 seconds for 60 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 22,
+      "tags": [
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Poison",
+          "display": "10 Poison/6s (60s)",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "10 Poison/6s (60s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Scorching Embers",
+      "slug": "Scorching_Embers",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scorching_Embers",
+      "description": "Burns your target for 60 seconds, dealing 3 Fire Damage every 6 seconds and decreasing AC by 6. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 23,
+      "tags": [
+        "dot",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 3,
+          "max": 3,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Fire",
+          "display": "3 Fire/6s (60s)",
+          "sortKey": 30
+        },
+        {
+          "kind": "debuff",
+          "stat": "AC",
+          "amount": 6,
+          "display": "−6 AC",
+          "sortKey": 6,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "3 Fire/6s (60s) · −6 AC",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Corruption Resistance",
+      "slug": "Corruption_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
+      "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "buff",
+        "COR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Corruption Resistance",
+          "amount": 15,
+          "display": "+15 Corruption Resistance",
+          "sortKey": 15,
+          "statTag": "COR"
+        }
+      ],
+      "valuesSummary": "+15 Corruption Resistance",
+      "statTags": [
+        "COR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Jackal Form",
+      "slug": "Jackal_Form",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jackal_Form",
+      "description": "Shapeshift into a jackal, increasing your Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "buff",
+        "movement",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 40,
+          "max": 60,
+          "unit": "%",
+          "display": "+40–60%",
+          "sortKey": 60,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+40–60%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Magmaburst",
+      "slug": "Magmaburst",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magmaburst",
+      "description": "Unleash aburst of magma upon your target, dealing 40 Fire Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 40,
+          "damageType": "Fire",
+          "display": "40 Fire dmg",
+          "sortKey": 40
+        }
+      ],
+      "valuesSummary": "40 Fire dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Wolf Form",
+      "slug": "Wolf_Form",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wolf_Form",
+      "description": "Shapeshift into a wolf, increasing your Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "buff",
+        "movement",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 40,
+          "max": 60,
+          "unit": "%",
+          "display": "+40–60%",
+          "sortKey": 60,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+40–60%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Hearth of the Ranger",
+      "slug": "Hearth_of_the_Ranger",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hearth_of_the_Ranger",
+      "description": "Place a Hearth of the Ranger at your feet, providing warmth, comfort, and a place to cook. This ability lasts 50% longer than a normal campfire, and each log adds 50% more burn time. This ability requires 8 Wood.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 26,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Unification",
+      "slug": "Unification",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unification",
+      "description": "Placate your target, reducing their Proximity Aggro for 2 minutes. This spell can only be used outdoors. This spell cannot be resisted. This spell has a very slight chance to end early. This spell has no effect on Social Aggro. This spell is limited to one target.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Stinging Swarm",
+      "slug": "Stinging_Swarm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stinging_Swarm",
+      "description": "Engulf your target with a stinging swarm, dealing 20 Poison Damage every 6 seconds for 60 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 90,
+      "castTime": null,
+      "level": 30,
+      "tags": [
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 20,
+          "max": 20,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Poison",
+          "display": "20 Poison/6s (60s)",
+          "sortKey": 200
+        }
+      ],
+      "valuesSummary": "20 Poison/6s (60s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Imbue Weapon: Nature",
+      "slug": "Imbue_Weapon:_Nature",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Imbue_Weapon:_Nature?action=edit&redlink=1",
+      "description": "Imbue your weapon with nature, granting you a chance to activate Nature Attack on melee attacks for 15 minutes. Nature Attack: Unleash a nature attack, dealing 7 (L1) to 75 (L60) Magic Damage.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 31,
+      "tags": [
+        "damage",
+        "buff",
+        "self"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 7,
+          "max": 75,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Magic",
+          "display": "7–75 Magic dmg (L1–L60)",
+          "sortKey": 75
+        }
+      ],
+      "valuesSummary": "7–75 Magic dmg (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Nature Arrows",
+      "slug": "Nature_Arrows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature_Arrows",
+      "description": "Imbue your arrows with nature, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Magic Damage. Additionally, each ranged attack grants you a chance to activate Nature Arrow Advantage reducing cast time of your next spell in the Root or Snare line by 100%.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 31,
+      "tags": [
+        "buff",
+        "self",
+        "damage"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Magic",
+          "display": "1–7 Magic dmg (L1–L60)",
+          "sortKey": 7
+        },
+        {
+          "kind": "debuff",
+          "stat": "cast time of your next spell in the Root or Snare line",
+          "min": 100,
+          "max": 100,
+          "unit": "%",
+          "display": "−100%",
+          "sortKey": 100
+        },
+        {
+          "kind": "buff",
+          "stat": "Ranged Damage dealt",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–7 Ranged Damage dealt (L1–L60)",
+          "sortKey": 7
+        }
+      ],
+      "valuesSummary": "+1–7 Ranged Damage dealt (L1–L60) · 1–7 Magic dmg (L1–L60) · −100%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Bristly Barrier",
+      "slug": "Bristly_Barrier",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristly_Barrier",
+      "description": "Surround your target with a bristly barrier, granting them a Damage Shield that deals 10 damage when hit for 10 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "buff",
+        "thorns"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 10,
+          "max": 10,
+          "display": "10 thorns/hit",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "10 thorns/hit",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Bristly Tunic",
+      "slug": "Bristly_Tunic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristly_Tunic?action=edit&redlink=1",
+      "description": "Wrap yourself in a bristly tunic, increasing your Armor Class by 15 and granting you a Damage Shield that deals 3 damage when hit for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 30,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "buff",
+        "thorns",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 3,
+          "max": 3,
+          "display": "3 thorns/hit",
+          "sortKey": 3
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 15,
+          "display": "+15 Armor Class",
+          "sortKey": 15,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "3 thorns/hit · +15 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Heal",
+      "slug": "Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal",
+      "description": "Moderately heals the wounds of a friendly target, healing them for 60 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 60,
+          "display": "60 heal",
+          "sortKey": 60
+        }
+      ],
+      "valuesSummary": "60 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lesser Regeneration",
+      "slug": "Lesser_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Regeneration",
+      "description": "5hp Regen - Lightly regenerate your target, increasing their Health Regeneration by 5 for 30 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 5,
+          "display": "+5 Health Regeneration",
+          "sortKey": 5,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+5 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Flaming Embers",
+      "slug": "Flaming_Embers",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flaming_Embers",
+      "description": "Burns your target for 60 seconds, dealing 15 Fire Damage every 6 seconds and decreasing AC by 13. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 45,
+      "castTime": null,
+      "level": 35,
+      "tags": [
+        "dot",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 15,
+          "max": 15,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Fire",
+          "display": "15 Fire/6s (60s)",
+          "sortKey": 150
+        },
+        {
+          "kind": "debuff",
+          "stat": "AC",
+          "amount": 13,
+          "display": "−13 AC",
+          "sortKey": 13,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "15 Fire/6s (60s) · −13 AC",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Summon: Cureberries",
+      "slug": "Summon:_Cureberries",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon:_Cureberries",
+      "description": "Summon a handful of cureberries, removing one Disease and one Poison effect when consumed.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 36,
+      "tags": [
+        "dispel",
+        "summon"
+      ],
+      "primaryTag": "summon",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Winged Swarm",
+      "slug": "Winged_Swarm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winged_Swarm",
+      "description": "Engulf your target with a winged swarm, dealing 30 Poison Damage every 6 seconds for 60 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 125,
+      "castTime": null,
+      "level": 38,
+      "tags": [
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 30,
+          "max": 30,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Poison",
+          "display": "30 Poison/6s (60s)",
+          "sortKey": 300
+        }
+      ],
+      "valuesSummary": "30 Poison/6s (60s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Brambly Barrier",
+      "slug": "Brambly_Barrier",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Barrier",
+      "description": "Surround your target with a brambly barrier, granting them a Damage Shield that deals 15 damage when hit for 10 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 75,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "thorns"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 15,
+          "max": 15,
+          "display": "15 thorns/hit",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "15 thorns/hit",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Brambly Tunic",
+      "slug": "Brambly_Tunic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Tunic",
+      "description": "Wrap yourself in a brambly tunic, increasing your Armor Class by 20 and granting you a Damage Shield that deals 4 damage when hit for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 45,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "thorns",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 4,
+          "max": 4,
+          "display": "4 thorns/hit",
+          "sortKey": 4
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 20,
+          "display": "+20 Armor Class",
+          "sortKey": 20,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "4 thorns/hit · +20 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Death's Demise",
+      "slug": "Death's_Demise",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Death%27s_Demise",
+      "description": "Invoke your innate ability to resist corruption, completely absorbing a single death touch and harnessing its power to increase all damage dealt by 100% for 15 seconds.",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 40,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Shroud",
+      "slug": "Greater_Shroud",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Shroud",
+      "description": "Camouflage yourself in nature's shroud, rendering you unseen by the living for 10 minutes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "invisibility",
+        "self"
+      ],
+      "primaryTag": "invisibility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lavaburst",
+      "slug": "Lavaburst",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lavaburst",
+      "description": "Unleash a burst of lava upon your target, dealing 120 Fire Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 75,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 120,
+          "damageType": "Fire",
+          "display": "120 Fire dmg",
+          "sortKey": 120
+        }
+      ],
+      "valuesSummary": "120 Fire dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Steelskin",
+      "slug": "Steelskin",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Steelskin",
+      "description": "Solidifies the skin of a friendly target, increasing their Armor Class by 15 for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 60,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "buff",
+        "utility",
+        "AC"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 15,
+          "display": "+15 Armor Class",
+          "sortKey": 15,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+15 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Lightning Arrows",
+      "slug": "Lightning_Arrows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Arrows",
+      "description": "Imbue your arrows with lightning, increasing your Ranged Damage dealt by 1 (L1) to 7 (L60) Electricity Damage. Additionally, each ranged attack grants you a chance to stun your target for 0.5 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 41,
+      "tags": [
+        "buff",
+        "crowd-control",
+        "stun",
+        "damage"
+      ],
+      "primaryTag": "stun",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "damageType": "Electricity",
+          "display": "1–7 Electricity dmg (L1–L60)",
+          "sortKey": 7
+        },
+        {
+          "kind": "buff",
+          "stat": "Ranged Damage dealt",
+          "min": 1,
+          "max": 7,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–7 Ranged Damage dealt (L1–L60)",
+          "sortKey": 7
+        }
+      ],
+      "valuesSummary": "1–7 Electricity dmg (L1–L60) · +1–7 Ranged Damage dealt (L1–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cold Resistance",
+      "slug": "Cold_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
+      "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "CR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Cold Resistance",
+          "amount": 15,
+          "display": "+15 Cold Resistance",
+          "sortKey": 15,
+          "statTag": "CR"
+        }
+      ],
+      "valuesSummary": "+15 Cold Resistance",
+      "statTags": [
+        "CR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Fire Resistance",
+      "slug": "Fire_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
+      "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "FR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Fire Resistance",
+          "amount": 15,
+          "display": "+15 Fire Resistance",
+          "sortKey": 15,
+          "statTag": "FR"
+        }
+      ],
+      "valuesSummary": "+15 Fire Resistance",
+      "statTags": [
+        "FR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Poison Resistance",
+      "slug": "Poison_Resistance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
+      "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "PR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Poison Resistance",
+          "amount": 15,
+          "display": "+15 Poison Resistance",
+          "sortKey": 15,
+          "statTag": "PR"
+        }
+      ],
+      "valuesSummary": "+15 Poison Resistance",
+      "statTags": [
+        "PR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Regeneration",
+      "slug": "Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
+      "description": "Moderately regenerate your target, increasing their Health Regeneration by 7 for 48 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 125,
+      "castTime": null,
+      "level": 44,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 7,
+          "display": "+7 Health Regeneration",
+          "sortKey": 7,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+7 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Locust Swarm",
+      "slug": "Locust_Swarm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Locust_Swarm",
+      "description": "Engulf your target with a locust swarm, dealing 45 Poison Damage every 6 seconds for 60 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 46,
+      "tags": [
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 45,
+          "max": 45,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Poison",
+          "display": "45 Poison/6s (60s)",
+          "sortKey": 450
+        }
+      ],
+      "valuesSummary": "45 Poison/6s (60s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Blazing Embers",
+      "slug": "Blazing_Embers",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blazing_Embers",
+      "description": "Burns your target for 60 seconds, dealing 20 Fire Damage every 6 seconds and decreasing AC by 19. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 47,
+      "tags": [
+        "dot",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 20,
+          "max": 20,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Fire",
+          "display": "20 Fire/6s (60s)",
+          "sortKey": 200
+        },
+        {
+          "kind": "debuff",
+          "stat": "AC",
+          "amount": 19,
+          "display": "−19 AC",
+          "sortKey": 19,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "20 Fire/6s (60s) · −19 AC",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Speed of Predator",
+      "slug": "Speed_of_Predator",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_Predator",
+      "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. Only useable outdoors.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "buff",
+        "movement",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 100,
+          "max": 100,
+          "unit": "%",
+          "display": "+100%",
+          "sortKey": 100,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+100%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Spiky Barrier",
+      "slug": "Spiky_Barrier",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Barrier",
+      "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "buff",
+        "thorns"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 20,
+          "max": 20,
+          "display": "20 thorns/hit",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "20 thorns/hit",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Spiky Tunic",
+      "slug": "Spiky_Tunic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Tunic",
+      "description": "Wrap yourself in a spiky tunic, increasing your Armor Class by 25 and granting you a Damage Shield that deals 5 damage when hit for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 65,
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "buff",
+        "thorns",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 5,
+          "max": 5,
+          "display": "5 thorns/hit",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 25,
+          "display": "+25 Armor Class",
+          "sortKey": 25,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "5 thorns/hit · +25 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Blaze",
+      "slug": "Blaze",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blaze",
+      "description": "Engulfs your target with a blaze for 200 points of Fire damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 105,
+      "castTime": null,
+      "level": 49,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 200,
+          "damageType": "Fire",
+          "display": "200 Fire dmg",
+          "sortKey": 200
+        }
+      ],
+      "valuesSummary": "200 Fire dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Ensnare",
+      "slug": "Ensnare",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ensnare",
+      "description": "Several small roots emerge from the ground and cling to your target's feet, decreasing their Movement Speed by 50% for 5 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "debuff",
+        "slow"
+      ],
+      "primaryTag": "slow",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Movement Speed",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "−50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "−50%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Camouflage",
+      "slug": "Greater_Camouflage",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Camouflage",
+      "description": "Camouflage a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell has a moderate chance to end early.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "invisibility"
+      ],
+      "primaryTag": "invisibility",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Diamondskin",
+      "slug": "Diamondskin",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Diamondskin",
+      "description": "Coats your target skin as hard as diamond, increasing their Armor Class by 20 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 90,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "buff",
+        "utility",
+        "AC"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 20,
+          "display": "+20 Armor Class",
+          "sortKey": 20,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+20 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Infesting Swarm",
+      "slug": "Infesting_Swarm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infesting_Swarm",
+      "description": "Engulf your target with an infesting swarm, dealing 70 Poison Damage every 6 seconds for 60 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 210,
+      "castTime": null,
+      "level": 54,
+      "tags": [
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 70,
+          "max": 70,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Poison",
+          "display": "70 Poison/6s (60s)",
+          "sortKey": 700
+        }
+      ],
+      "valuesSummary": "70 Poison/6s (60s)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Inferno",
+      "slug": "Inferno",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Inferno",
+      "description": "Engulfs your target with an inferno for 325 points of Fire Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 140,
+      "castTime": null,
+      "level": 55,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 325,
+          "damageType": "Fire",
+          "display": "325 Fire dmg",
+          "sortKey": 325
+        }
+      ],
+      "valuesSummary": "325 Fire dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Heal",
+      "slug": "Greater_Heal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
+      "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 170,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 325,
+          "display": "325 heal",
+          "sortKey": 325
+        }
+      ],
+      "valuesSummary": "325 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Greater Regeneration",
+      "slug": "Greater_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Regeneration",
+      "description": "Causes your target to regenerate, increasing their Health Regeneration by 11 for 50 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 150,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 11,
+          "display": "+11 Health Regeneration",
+          "sortKey": 11,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+11 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Thorny Barrier",
+      "slug": "Thorny_Barrier",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorny_Barrier",
+      "description": "Surround your target with a thorny barrier, granting them a Damage Shield that deals 25 damage when hit for 30 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 125,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "buff",
+        "thorns"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 25,
+          "max": 25,
+          "display": "25 thorns/hit",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "25 thorns/hit",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Thorny Tunic",
+      "slug": "Thorny_Tunic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorny_Tunic",
+      "description": "Wrap yourself in a thorny tunic, increasing your Armor Class by 30 and granting you a Damage Shield that deals 6 damage when hit for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 80,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "buff",
+        "thorns",
+        "self",
+        "AC"
+      ],
+      "primaryTag": "thorns",
+      "effects": [
+        {
+          "kind": "thorns",
+          "min": 6,
+          "max": 6,
+          "display": "6 thorns/hit",
+          "sortKey": 6
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 30,
+          "display": "+30 Armor Class",
+          "sortKey": 30,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "6 thorns/hit · +30 Armor Class",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Smoldering Embers",
+      "slug": "Smoldering_Embers",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Smoldering_Embers",
+      "description": "Burns your target for 60 seconds, dealing 30 Fire Damage every 6 seconds and decreasing AC by 25. Max 3 Stacks. This spell does not stack with itself or any others in the same line. Requires Fire Beetle Eye.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 59,
+      "tags": [
+        "dot",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 30,
+          "max": 30,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Fire",
+          "display": "30 Fire/6s (60s)",
+          "sortKey": 300
+        },
+        {
+          "kind": "debuff",
+          "stat": "AC",
+          "amount": 25,
+          "display": "−25 AC",
+          "sortKey": 25,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "30 Fire/6s (60s) · −25 AC",
+      "statTags": [
+        "AC"
+      ],
+      "type": "ability"
+    }
+  ]
+}

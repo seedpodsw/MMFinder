@@ -1,5 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { api } from "./api";
+const Walk = lazy(() => import("./Walk"));
+const Spells = lazy(() => import("./Spells"));
 import WorldMap, { campFits, rangeLabel, KIND_LABEL } from "./WorldMap";
 import Enhance, { ZoneQuestTab, searchQuests } from "./Enhance";
 import ItemsGrid from "./ItemsGrid";
@@ -205,7 +207,7 @@ export default function App() {
   const journal = notes.filter((n) => n.targetType === "journal" || n.targetType === "pin");
 
   function selectZone(id, poiId) {
-    setView("atlas");
+    if (view !== "walk") setView("atlas");
     setSelectedId(id);
     setFocusPoi(poiId || null);
     setTab("pois");
@@ -226,10 +228,15 @@ export default function App() {
     setFocusPoi(null);
   }
 
+  function noteWalkZone(id) {
+    if (!id || id === selectedId) return;
+    setSelectedId(id);
+  }
+
   function selectPoi(poiOrId) {
     const poi = typeof poiOrId === "string" ? allPois.find((p) => p.id === poiOrId) : poiOrId;
     if (!poi) return;
-    setView("atlas");
+    if (view !== "walk") setView("atlas");
     setKindFilter("all");
     setSelectedId(poi.zoneId);
     setFocusPoi(poi.id);
@@ -258,7 +265,7 @@ export default function App() {
       typeof itemOrId === "string" ? (world?.items || []).find((x) => x.id === itemOrId) : itemOrId;
     if (!item) return;
     setSelectedItem(item);
-    setView("atlas");
+    if (view !== "walk") setView("atlas");
     setDropMode(false);
     if (item.primaryPoiId) {
       const poi = allPois.find((p) => p.id === item.primaryPoiId);
@@ -423,9 +430,9 @@ export default function App() {
   }
 
   function showZone(id) {
-    setView("atlas");
+    if (view !== "walk") setView("atlas");
     revealZone(id);
-    setTab("quests");
+    if (view !== "walk") setTab("quests");
   }
 
   function toggleStep(stepId) {
@@ -460,6 +467,15 @@ export default function App() {
             Atlas
           </button>
           <button
+            className={view === "walk" ? "on" : ""}
+            onClick={() => {
+              setView("walk");
+              setDropMode(false);
+            }}
+          >
+            Walk
+          </button>
+          <button
             className={view === "atlas" && kindFilter === "quest" ? "on" : ""}
             onClick={() => {
               setView("atlas");
@@ -478,6 +494,15 @@ export default function App() {
             }}
           >
             Items
+          </button>
+          <button
+            className={view === "spells" ? "on" : ""}
+            onClick={() => {
+              setView("spells");
+              setDropMode(false);
+            }}
+          >
+            Spells
           </button>
           <button
             className={view === "gear" ? "on" : ""}
@@ -520,8 +545,7 @@ export default function App() {
             ))}
           </select>
         </label>
-        {view === "atlas" && (
-          <>
+        {(view === "atlas" || view === "walk") && (
             <div className="layer-toggle">
               <button
                 className={layer === "surface" ? "on" : ""}
@@ -550,10 +574,11 @@ export default function App() {
                 The Deep
               </button>
             </div>
+        )}
+        {view === "atlas" && (
             <button className={`pin-btn ${dropMode ? "on" : ""}`} onClick={() => setDropMode((v) => !v)}>
               {dropMode ? "Cancel drop" : "Drop a POI"}
             </button>
-          </>
         )}
       </header>
 
@@ -574,6 +599,10 @@ export default function App() {
           focusQuestId={focusQuestId}
           searchQuery={query}
         />
+      ) : view === "spells" ? (
+        <Suspense fallback={<div className="boot">Opening the spellbook…</div>}>
+          <Spells klass={klass} onClass={setKlass} level={level} />
+        </Suspense>
       ) : view === "items" ? (
         <ItemsGrid
           items={world.items || []}
@@ -737,6 +766,21 @@ export default function App() {
             if (file) dropMapFile(file);
           }}
         >
+          {view === "walk" ? (
+            <Suspense fallback={<div className="walk-boot">Unrolling the ground…</div>}>
+              <Walk
+                atlas={world.atlas}
+                zones={zones}
+                pois={allPois}
+                layer={layer}
+                selectedId={selected?.id}
+                focusPoiId={focusPoi}
+                onEnterZone={noteWalkZone}
+                onSelectPoi={selectPoi}
+                onHoverPoi={setHoverPoi}
+              />
+            </Suspense>
+          ) : (
           <WorldMap
             atlas={world.atlas}
             zones={zones}
@@ -765,6 +809,7 @@ export default function App() {
             onHoverPoi={setHoverPoi}
             onDropPoi={handleDropPoi}
           />
+          )}
         </main>
 
         <aside className="panel">

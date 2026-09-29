@@ -1,0 +1,5340 @@
+{
+  "className": "Beastmaster",
+  "slug": "Beastmaster",
+  "type": "ability",
+  "sectionTitle": "Beastmaster Spells & Abilities",
+  "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beastmaster",
+  "entryCount": 74,
+  "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36,
+    37,
+    39,
+    40,
+    41,
+    43,
+    44,
+    45,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    59
+  ],
+  "entriesByLevel": {
+    "1": [
+      {
+        "name": "Bestial Bond",
+        "slug": "Bestial_Bond",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bestial_Bond",
+        "description": "Appeal to the sense of a target beast, bonding it to your side.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Call Companion",
+        "slug": "Call_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Call_Companion",
+        "description": "Beckon to your pet, calling it to your side.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Enraging Strike I",
+        "slug": "Enraging_Strike_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_I",
+        "description": "Strike your target in a furious rage, dealing 110% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 2 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "110% weapon dmg",
+            "sortKey": 110
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 2,
+            "display": "+2 Strength",
+            "sortKey": 2,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 2,
+            "display": "+2 Dexterity",
+            "sortKey": 2,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 2,
+            "display": "+2 Agility of both you",
+            "sortKey": 2
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 2,
+            "display": "+2 pet",
+            "sortKey": 2
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you and your pet",
+            "amount": 2,
+            "display": "+2 Agility of both you and your pet",
+            "sortKey": 2
+          }
+        ],
+        "valuesSummary": "+2 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 110% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Revive Companion",
+        "slug": "Revive_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion",
+        "description": "Rally your pet, returning it to life and restoring 20% Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 20,
+            "display": "20% heal",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "20% heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Fear Beast",
+        "slug": "Fear_Beast",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_Beast",
+        "description": "Fears an enemy beast, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "crowd-control",
+          "fear"
+        ],
+        "primaryTag": "fear",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "2": [
+      {
+        "name": "Predatory Instinct",
+        "slug": "Predatory_Instinct",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Predatory_Instinct?action=edit&redlink=1",
+        "description": "Awaken the hunter's instinct in your group, increasing their Offense by 5 and Agility by 1 (L1) to 15 (L60). This ability persists until canceled.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 2,
+        "tags": [
+          "buff",
+          "AGI",
+          "OFF"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Offense by 5 and Agility",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–15 Offense by 5 and Agility (L1–L60)",
+            "sortKey": 15
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "+1–15 Agility (L1–L60)",
+            "sortKey": 15,
+            "statTag": "AGI"
+          },
+          {
+            "kind": "buff",
+            "stat": "Offense",
+            "amount": 5,
+            "display": "+5 Offense",
+            "sortKey": 5,
+            "statTag": "OFF"
+          }
+        ],
+        "valuesSummary": "+1–15 Offense by 5 and Agility (L1–L60) · +1–15 Agility (L1–L60) · +5 Offense",
+        "statTags": [
+          "AGI",
+          "OFF"
+        ],
+        "type": "ability"
+      }
+    ],
+    "3": [
+      {
+        "name": "Kick",
+        "slug": "Kick",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "category": "Acr",
+        "categorySlug": "Skill_Acrobatics",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "interrupt"
+        ],
+        "primaryTag": "interrupt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "4": [
+      {
+        "name": "Guardian Spirit",
+        "slug": "Guardian_Spirit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Guardian_Spirit?action=edit&redlink=1",
+        "description": "Invoke your pet's guardian spirit, reducing their Physical Damage received by 10% and increasing their Threat generation by 25% for 1 hour.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "buff",
+          "debuff",
+          "pet"
+        ],
+        "primaryTag": "debuff",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Damage received",
+            "min": 10,
+            "max": 10,
+            "unit": "%",
+            "display": "−10%",
+            "sortKey": 10
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat generation",
+            "min": 25,
+            "max": 25,
+            "unit": "%",
+            "display": "+25%",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "−10% · +25%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Lull Minor Beast",
+        "slug": "Lull_Minor_Beast",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Minor_Beast?action=edit&redlink=1",
+        "description": "Lull a target Beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to beasts up to level 22.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "debuff",
+          "crowd-control"
+        ],
+        "primaryTag": "crowd-control",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Sooth Companion",
+        "slug": "Sooth_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sooth_Companion?action=edit&redlink=1",
+        "description": "Soothe your pet, restoring 10 Health and an additional 10 Health every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 4,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 10,
+            "tick": 10,
+            "interval": 6,
+            "duration": 12,
+            "display": "10 + 10/6s heal (12s)",
+            "sortKey": 30
+          },
+          {
+            "kind": "heal",
+            "amount": 10,
+            "display": "10 heal",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "10 + 10/6s heal (12s) · 10 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "5": [
+      {
+        "name": "Lick Wounds",
+        "slug": "Lick_Wounds",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lick_Wounds?action=edit&redlink=1",
+        "description": "Pause to mend your wounds, restoring 5% Health at the cost of 5 (L1) to 50 (L60) Mana every second over 4 seconds. This ability is channeled.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 5,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 5,
+            "display": "5% heal",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "5% heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Savage Strike I",
+        "slug": "Savage_Strike_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_I?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 110% Weapon Ratio Damage plus 1 (L1) to 15 (L10) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 5,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "110% weapon dmg",
+            "sortKey": 110
+          },
+          {
+            "kind": "damage",
+            "min": 1,
+            "max": 15,
+            "minLevel": 1,
+            "maxLevel": 10,
+            "damageType": "Physical",
+            "display": "1–15 Physical dmg (L1–L10)",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "110% weapon dmg · 1–15 Physical dmg (L1–L10)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "6": [
+      {
+        "name": "Pounce",
+        "slug": "Pounce",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pounce?action=edit&redlink=1",
+        "description": "Leap toward your target, dealing 100% Weapon Ratio Damage and increasing the movement speed of your pet by 75% for 10 seconds.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 6,
+        "tags": [
+          "damage",
+          "buff",
+          "movement",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "buff",
+            "stat": "movement speed of your pet",
+            "min": 75,
+            "max": 75,
+            "unit": "%",
+            "display": "+75%",
+            "sortKey": 75
+          }
+        ],
+        "valuesSummary": "100% weapon dmg · +75%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "7": [
+      {
+        "name": "Chop I",
+        "slug": "Chop_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_I?action=edit&redlink=1",
+        "description": "Viciously chop your target, dealing 120% Weapon Ratio Damage plus 10 (L7) to 15 (L17) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 7,
+        "tags": [
+          "damage",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "120% weapon dmg",
+            "sortKey": 120
+          },
+          {
+            "kind": "damage",
+            "min": 10,
+            "max": 15,
+            "minLevel": 7,
+            "maxLevel": 17,
+            "damageType": "Physical",
+            "display": "10–15 Physical dmg (L7–L17)",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "120% weapon dmg · 10–15 Physical dmg (L7–L17)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "8": [
+      {
+        "name": "Remedy Companion",
+        "slug": "Remedy_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Remedy_Companion?action=edit&redlink=1",
+        "description": "Remedy your pet, restoring 20 Health and an additional 20 Health every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 45,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 20,
+            "tick": 20,
+            "interval": 6,
+            "duration": 12,
+            "display": "20 + 20/6s heal (12s)",
+            "sortKey": 60
+          },
+          {
+            "kind": "heal",
+            "amount": 20,
+            "display": "20 heal",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "20 + 20/6s heal (12s) · 20 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Savage Spirit",
+        "slug": "Savage_Spirit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Spirit",
+        "description": "Awaken a savage spirit within your pet, increasing their Attack Speed by 10% and granting them a chance to activate Rip of melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "dot",
+          "buff",
+          "haste",
+          "pet"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 10,
+            "max": 10,
+            "unit": "%",
+            "display": "+10%",
+            "sortKey": 10,
+            "statTag": "ATK"
+          },
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "Bleed",
+            "display": "10 Bleed/6s (30s)",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "10 Bleed/6s (30s) · +10%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "9": [
+      {
+        "name": "Command: Kill",
+        "slug": "Command:_Kill",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command:_Kill",
+        "description": "Command your pet into action, calling on them to perform a devastating attack.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 9,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "10": [
+      {
+        "name": "Enraging Strike II",
+        "slug": "Enraging_Strike_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_II?action=edit&redlink=1",
+        "description": "Strike your opponent in a furious rage, dealing 120% Weapon Ratio Damage and increasing the Strength, Dexterity and Agility of both you and your pet by 4 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "120% weapon dmg",
+            "sortKey": 120
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 4,
+            "display": "+4 Strength",
+            "sortKey": 4,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 4,
+            "display": "+4 Dexterity",
+            "sortKey": 4,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 4,
+            "display": "+4 Agility of both you",
+            "sortKey": 4
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 4,
+            "display": "+4 pet",
+            "sortKey": 4
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity and Agility of both you and your pet",
+            "amount": 4,
+            "display": "+4 Dexterity and Agility of both you and your pet",
+            "sortKey": 4
+          }
+        ],
+        "valuesSummary": "+4 STR/DEX/Agility of both you/pet/Dexterity and Agility of both you and your pet · 120% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Maul I",
+        "slug": "Maul_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_I?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 60% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 10,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "60% weapon dmg",
+            "sortKey": 60
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "60% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "12": [
+      {
+        "name": "Bestial Glimpse",
+        "slug": "Bestial_Glimpse",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bestial_Glimpse?action=edit&redlink=1",
+        "description": "Bind your vision to that of a target beast, granting you the ability to see through their eyes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Invigorate Companion",
+        "slug": "Invigorate_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invigorate_Companion?action=edit&redlink=1",
+        "description": "Reinvigorate the bond with your pet, instantly resetting their abilities and your Command: Kill and Command: Protect abilities.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 60,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Patch Companion",
+        "slug": "Patch_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Patch_Companion",
+        "description": "Patch your pet, restoring 40 Health and an additional 40 Health every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 60,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 40,
+            "tick": 40,
+            "interval": 6,
+            "duration": 12,
+            "display": "40 + 40/6s heal (12s)",
+            "sortKey": 120
+          },
+          {
+            "kind": "heal",
+            "amount": 40,
+            "display": "40 heal",
+            "sortKey": 40
+          }
+        ],
+        "valuesSummary": "40 + 40/6s heal (12s) · 40 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "15": [
+      {
+        "name": "Savage Strike II",
+        "slug": "Savage_Strike_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_II?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 120% Weapon Ratio Damage plus 20 (L10) to 25 (L20) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 15,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "120% weapon dmg",
+            "sortKey": 120
+          },
+          {
+            "kind": "damage",
+            "min": 20,
+            "max": 25,
+            "minLevel": 10,
+            "maxLevel": 20,
+            "damageType": "Physical",
+            "display": "20–25 Physical dmg (L10–L20)",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "120% weapon dmg · 20–25 Physical dmg (L10–L20)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "16": [
+      {
+        "name": "Preservation",
+        "slug": "Preservation",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
+        "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 27.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 150,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Shrink Companion",
+        "slug": "Shrink_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shrink_Companion",
+        "description": "Shrink your pet, reducing their overall size by 20% for 35 minutes. This spell stacks up to two times.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 16,
+        "tags": [
+          "debuff",
+          "pet"
+        ],
+        "primaryTag": "debuff",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "overall size",
+            "min": 20,
+            "max": 20,
+            "unit": "%",
+            "display": "−20%",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "−20%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "17": [
+      {
+        "name": "Chop II",
+        "slug": "Chop_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_II?action=edit&redlink=1",
+        "description": "Viciously chop your target, dealing 150% Weapon Ration Damage plau 20 (L17) to 25 (L27 Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 17,
+        "tags": [
+          "damage",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 20,
+            "max": 25,
+            "minLevel": 17,
+            "maxLevel": 27,
+            "damageType": "Physical",
+            "display": "20–25 Physical dmg (L17–L27)",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "20–25 Physical dmg (L17–L27)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "18": [
+      {
+        "name": "Cleanse Companion",
+        "slug": "Cleanse_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Companion?action=edit&redlink=1",
+        "description": "Cleanse your pet, removing one Disease and one Poison effect.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 18,
+        "tags": [
+          "dispel",
+          "pet"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "19": [
+      {
+        "name": "Maul II",
+        "slug": "Maul_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_II?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 65% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 19,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "65% weapon dmg",
+            "sortKey": 65
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "65% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "20": [
+      {
+        "name": "Enraging Strike III",
+        "slug": "Enraging_Strike_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_III?action=edit&redlink=1",
+        "description": "Strike your opponent in a furious rage, dealing 130% Weapon Ratio Damage and increasing the Strength, Dexterity and Agility of both you and your pet by 6 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "130% weapon dmg",
+            "sortKey": 130
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 6,
+            "display": "+6 Strength",
+            "sortKey": 6,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 6,
+            "display": "+6 Dexterity",
+            "sortKey": 6,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 6,
+            "display": "+6 Agility of both you",
+            "sortKey": 6
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 6,
+            "display": "+6 pet",
+            "sortKey": 6
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity and Agility of both you and your pet",
+            "amount": 6,
+            "display": "+6 Dexterity and Agility of both you and your pet",
+            "sortKey": 6
+          }
+        ],
+        "valuesSummary": "+6 STR/DEX/Agility of both you/pet/Dexterity and Agility of both you and your pet · 130% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Lull Lesser Beast",
+        "slug": "Lull_Lesser_Beast",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Lesser_Beast?action=edit&redlink=1",
+        "description": "Lull a target Beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to beasts up to level 38.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "debuff",
+          "crowd-control"
+        ],
+        "primaryTag": "crowd-control",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Mend Companion",
+        "slug": "Mend_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_Companion",
+        "description": "Patch your pet, restoring 80 Health and an additional 80 Health every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 120,
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 80,
+            "tick": 80,
+            "interval": 6,
+            "duration": 12,
+            "display": "80 + 80/6s heal (12s)",
+            "sortKey": 240
+          },
+          {
+            "kind": "heal",
+            "amount": 80,
+            "display": "80 heal",
+            "sortKey": 80
+          }
+        ],
+        "valuesSummary": "80 + 80/6s heal (12s) · 80 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Prowler's Instinct",
+        "slug": "Prowler's_Instinct",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prowler%27s_Instinct?action=edit&redlink=1",
+        "description": "Awaken the prowler's instinct in your party, increasing their Movement Speed by 15% and rendering them undetectable to targets while behind them. This ability persists until canceled.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff",
+          "movement"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 15,
+            "max": 15,
+            "unit": "%",
+            "display": "+15%",
+            "sortKey": 15,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+15%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Beast Speech",
+        "slug": "Beast_Speech",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beast_Speech?action=edit&redlink=1",
+        "description": "Imbue the tongue of your target, granting them the ability to speak with beasts for 1 hour.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "?",
+        "castTime": null,
+        "level": 20,
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "21": [
+      {
+        "name": "Revive Companion II",
+        "slug": "Revive_Companion_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion_II",
+        "description": "Rally your pet, returning it to life and restoring 40% Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 200,
+        "castTime": null,
+        "level": 21,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 40,
+            "display": "40% heal",
+            "sortKey": 40
+          }
+        ],
+        "valuesSummary": "40% heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "23": [
+      {
+        "name": "Mangle I",
+        "slug": "Mangle_I",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_I?action=edit&redlink=1",
+        "description": "Mangle your target, dealing 150% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 23,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "debuff",
+            "stat": "incoming healing effects",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "−50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "150% weapon dmg · −50%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "24": [
+      {
+        "name": "Command: Protect",
+        "slug": "Command:_Protect",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command:_Protect?action=edit&redlink=1",
+        "description": "Command your pet to protect you, reducing all damage received by 25% while transfering 50% of it to your pet for 30 seconds. This effect is canceled automatically if your pet falls below 25% health.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "all damage received",
+            "min": 25,
+            "max": 25,
+            "unit": "%",
+            "display": "−25%",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "−25%",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Feral Spirit",
+        "slug": "Feral_Spirit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Feral_Spirit",
+        "description": "Awaken a feral sprit within your pet, increasing their Attack Speed by 20%, Agility by 5, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds. This spell is considered a Primary Haste.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 20,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "dot",
+          "buff",
+          "haste",
+          "pet",
+          "AGI"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 20,
+            "max": 20,
+            "unit": "%",
+            "display": "+20%",
+            "sortKey": 20,
+            "statTag": "ATK"
+          },
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "Bleed",
+            "display": "10 Bleed/6s (30s)",
+            "sortKey": 50
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "amount": 5,
+            "display": "+5 Agility",
+            "sortKey": 5,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "10 Bleed/6s (30s) · +20% · +5 Agility",
+        "statTags": [
+          "AGI"
+        ],
+        "type": "ability"
+      }
+    ],
+    "25": [
+      {
+        "name": "Savage Strike III",
+        "slug": "Savage_Strike_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_III?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 130% Weapon Ratio Damage plus 30 (L20) to 35 (L30) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 25,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "130% weapon dmg",
+            "sortKey": 130
+          },
+          {
+            "kind": "damage",
+            "min": 30,
+            "max": 35,
+            "minLevel": 20,
+            "maxLevel": 30,
+            "damageType": "Physical",
+            "display": "30–35 Physical dmg (L20–L30)",
+            "sortKey": 35
+          }
+        ],
+        "valuesSummary": "130% weapon dmg · 30–35 Physical dmg (L20–L30)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "26": [
+      {
+        "name": "Howl of Dominance",
+        "slug": "Howl_of_Dominance",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Howl_of_Dominance?action=edit&redlink=1",
+        "description": "Exert dominance over your target, decreasing their Physical Damage dealt by 10% and increasing yours by the same amount for 15 seconds.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 26,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 10,
+            "max": 10,
+            "unit": "%",
+            "display": "−10%",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "−10%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "27": [
+      {
+        "name": "Chop III",
+        "slug": "Chop_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_III?action=edit&redlink=1",
+        "description": "This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 27,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "28": [
+      {
+        "name": "Aquatic Affinity",
+        "slug": "Aquatic_Affinity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aquatic_Affinity?action=edit&redlink=1",
+        "description": "Attune yourself to aquatic beasts, increasing your swimming skill by 20 and decreasing your air consumption by 80% for 1 hour.",
+        "category": "Alteration",
+        "categorySlug": "Skill_Altertion",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+        "location": "Vendor",
+        "mana": 100,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "buff",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "swimming skill by 20 and decreasing your air consumption",
+            "min": 80,
+            "max": 80,
+            "unit": "%",
+            "display": "−80%",
+            "sortKey": 80
+          },
+          {
+            "kind": "debuff",
+            "stat": "swimming skill",
+            "amount": 20,
+            "display": "−20 swimming skill",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "−80% · −20 swimming skill",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Deextinction",
+        "slug": "Deextinction",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deextinction",
+        "description": "Deextinct a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
+        "category": "Alteration",
+        "categorySlug": "Skill_Altertion",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+        "location": "Vendor",
+        "mana": 215,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Heal Companion",
+        "slug": "Heal_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal_Companion?action=edit&redlink=1",
+        "description": "Heal your pet, restoring 120 Health and an additional 120 Health every 6 seconds for 12 seconds.",
+        "category": "Alteration",
+        "categorySlug": "Skill_Altertion",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+        "location": "Vendor",
+        "mana": 155,
+        "castTime": null,
+        "level": 28,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 120,
+            "tick": 120,
+            "interval": 6,
+            "duration": 12,
+            "display": "120 + 120/6s heal (12s)",
+            "sortKey": 360
+          },
+          {
+            "kind": "heal",
+            "amount": 120,
+            "display": "120 heal",
+            "sortKey": 120
+          }
+        ],
+        "valuesSummary": "120 + 120/6s heal (12s) · 120 heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "29": [
+      {
+        "name": "Maul III",
+        "slug": "Maul_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_III?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 70% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage by 5% for 5 seconds.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 29,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "70% weapon dmg",
+            "sortKey": 70
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "70% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "30": [
+      {
+        "name": "Enraging Strike IV",
+        "slug": "Enraging_Strike_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_IV?action=edit&redlink=1",
+        "description": "Strike your target in a furious rage, dealing 140% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 8 for 30 seconds.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 30,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "140% weapon dmg",
+            "sortKey": 140
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 8,
+            "display": "+8 Strength",
+            "sortKey": 8,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 8,
+            "display": "+8 Dexterity",
+            "sortKey": 8,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 8,
+            "display": "+8 Agility of both you",
+            "sortKey": 8
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 8,
+            "display": "+8 pet",
+            "sortKey": 8
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you and your pet",
+            "amount": 8,
+            "display": "+8 Agility of both you and your pet",
+            "sortKey": 8
+          }
+        ],
+        "valuesSummary": "+8 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 140% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Kinship: Bat",
+        "slug": "Kinship:_Bat",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinship:_Bat",
+        "description": "Invoke your kinship with a bat, calling on it to fight alongside you for 10 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 80,
+        "castTime": null,
+        "level": 30,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "32": [
+      {
+        "name": "Sight of the Beast",
+        "slug": "Sight_of_the_Beast",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sight_of_the_Beast?action=edit&redlink=1",
+        "description": "Imbue your sight with bestial clarity, enhancing your vision in darkness for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 100,
+        "castTime": null,
+        "level": 32,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "33": [
+      {
+        "name": "Mangle II",
+        "slug": "Mangle_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_II?action=edit&redlink=1",
+        "description": "Mangle your target, dealing 200% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 33,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "200% weapon dmg",
+            "sortKey": 200
+          },
+          {
+            "kind": "debuff",
+            "stat": "incoming healing effects",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "−50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "200% weapon dmg · −50%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "35": [
+      {
+        "name": "Savage Strike IV",
+        "slug": "Savage_Strike_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_IV?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 140% Weapon Ratio Damage plus 40 (L30) to 45 (L40) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 35,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "140% weapon dmg",
+            "sortKey": 140
+          },
+          {
+            "kind": "damage",
+            "min": 40,
+            "max": 45,
+            "minLevel": 30,
+            "maxLevel": 40,
+            "damageType": "Physical",
+            "display": "40–45 Physical dmg (L30–L40)",
+            "sortKey": 45
+          }
+        ],
+        "valuesSummary": "140% weapon dmg · 40–45 Physical dmg (L30–L40)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "36": [
+      {
+        "name": "Lull Beasts",
+        "slug": "Lull_Beasts",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Beasts",
+        "description": "Lulls a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 55.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 100,
+        "castTime": null,
+        "level": 36,
+        "tags": [
+          "debuff"
+        ],
+        "primaryTag": "debuff",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "37": [
+      {
+        "name": "Chop IV",
+        "slug": "Chop_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_IV?action=edit&redlink=1",
+        "description": "Viciously chop your target, dealing 200% Weapon Ratio Damage plus 40(L37) to 45(L47) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 37,
+        "tags": [
+          "damage",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "200% weapon dmg",
+            "sortKey": 200
+          },
+          {
+            "kind": "damage",
+            "min": 40,
+            "max": 45,
+            "minLevel": 37,
+            "maxLevel": 47,
+            "damageType": "Physical",
+            "display": "40–45 Physical dmg (L37–L47)",
+            "sortKey": 45
+          }
+        ],
+        "valuesSummary": "200% weapon dmg · 40–45 Physical dmg (L37–L47)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "39": [
+      {
+        "name": "Maul IV",
+        "slug": "Maul_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_IV?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 75% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 39,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "75% weapon dmg",
+            "sortKey": 75
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "75% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "40": [
+      {
+        "name": "Enraging Strike V",
+        "slug": "Enraging_Strike_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_V?action=edit&redlink=1",
+        "description": "Strike your target in a furious rage, dealing 150% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 12 for 30 seconds. This ability shares a cooldown with other Might abilities",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 12,
+            "display": "+12 Strength",
+            "sortKey": 12,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 12,
+            "display": "+12 Dexterity",
+            "sortKey": 12,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 12,
+            "display": "+12 Agility of both you",
+            "sortKey": 12
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 12,
+            "display": "+12 pet",
+            "sortKey": 12
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you and your pet",
+            "amount": 12,
+            "display": "+12 Agility of both you and your pet",
+            "sortKey": 12
+          }
+        ],
+        "valuesSummary": "+12 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 150% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Ferocious Spirit",
+        "slug": "Ferocious_Spirit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ferocious_Spirit",
+        "description": "Awaken a ferocious spirit within your pet, increasing their Attack Speed by 30%, Agility by 10, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds. This spell is considered a primary haste.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "dot",
+          "buff",
+          "haste",
+          "pet",
+          "AGI"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 30,
+            "max": 30,
+            "unit": "%",
+            "display": "+30%",
+            "sortKey": 30,
+            "statTag": "ATK"
+          },
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "Bleed",
+            "display": "10 Bleed/6s (30s)",
+            "sortKey": 50
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "amount": 10,
+            "display": "+10 Agility",
+            "sortKey": 10,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "10 Bleed/6s (30s) · +30% · +10 Agility",
+        "statTags": [
+          "AGI"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Restore Companion",
+        "slug": "Restore_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restore_Companion?action=edit&redlink=1",
+        "description": "Restore your pet, restoring 180 Health and an additional 180 Healthe every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 195,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "heal",
+          "pet"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 180,
+            "display": "180 heal",
+            "sortKey": 180
+          }
+        ],
+        "valuesSummary": "180 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Species Revivalism",
+        "slug": "Species_Revivalism",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Species_Revivalism",
+        "description": "Revive a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 51.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 300,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "41": [
+      {
+        "name": "Revive Companion III",
+        "slug": "Revive_Companion_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion_III",
+        "description": "Rally your pet, returning it to life and restoring 60% Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 400,
+        "castTime": null,
+        "level": 41,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 60,
+            "display": "60% heal",
+            "sortKey": 60
+          }
+        ],
+        "valuesSummary": "60% heal",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "43": [
+      {
+        "name": "Mangle III",
+        "slug": "Mangle_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_III?action=edit&redlink=1",
+        "description": "Mangle your target, dealing 225% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 43,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "225% weapon dmg",
+            "sortKey": 225
+          },
+          {
+            "kind": "debuff",
+            "stat": "incoming healing effects",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "−50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "225% weapon dmg · −50%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "44": [
+      {
+        "name": "Sight of the Predator",
+        "slug": "Sight_of_the_Predator",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sight_of_the_Predator?action=edit&redlink=1",
+        "description": "Imbue your sight with predatory clarity, greatly enhancing your vision in darkness while reducing it in bright light for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+        "location": "Vendor",
+        "mana": 200,
+        "castTime": null,
+        "level": 44,
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "45": [
+      {
+        "name": "Savage Strike V",
+        "slug": "Savage_Strike_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_V?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 150% Weapon Ratio Damage plus 50 (L40) to 55 (L50) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 45,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "damage",
+            "min": 50,
+            "max": 55,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "damageType": "Physical",
+            "display": "50–55 Physical dmg (L40–L50)",
+            "sortKey": 55
+          }
+        ],
+        "valuesSummary": "150% weapon dmg · 50–55 Physical dmg (L40–L50)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "47": [
+      {
+        "name": "Chop V",
+        "slug": "Chop_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_V?action=edit&redlink=1",
+        "description": "Viciously chop your target, dealing 225% Weapon Ratio Damage plus 50 (L47) to 45 (L57) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 47,
+        "tags": [
+          "damage",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "225% weapon dmg",
+            "sortKey": 225
+          },
+          {
+            "kind": "damage",
+            "min": 50,
+            "max": 45,
+            "minLevel": 47,
+            "maxLevel": 57,
+            "damageType": "Physical",
+            "display": "50–45 Physical dmg (L47–L57)",
+            "sortKey": 45
+          }
+        ],
+        "valuesSummary": "225% weapon dmg · 50–45 Physical dmg (L47–L57)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "48": [
+      {
+        "name": "Hunter's Chase",
+        "slug": "Hunter's_Chase",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Chase?action=edit&redlink=1",
+        "description": "Embody a predator in relentless pursuit, increasing your Movement Speed by 100% for 1 minute. This ability can only be used outdoors.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 25,
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "buff",
+          "movement",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 100,
+            "max": 100,
+            "unit": "%",
+            "display": "+100%",
+            "sortKey": 100,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+100%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "49": [
+      {
+        "name": "Maul V",
+        "slug": "Maul_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_V?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 80% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 49,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "80% weapon dmg",
+            "sortKey": 80
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "80% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "50": [
+      {
+        "name": "Call of the Faithful",
+        "slug": "Call_of_the_Faithful",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Call_of_the_Faithful?action=edit&redlink=1",
+        "description": "Call out to your stowed pets from a great distance, summoning one to replace your current pet.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 300,
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "pet"
+        ],
+        "primaryTag": "pet",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Enraging Strike VI",
+        "slug": "Enraging_Strike_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_VI?action=edit&redlink=1",
+        "description": "Strike your target in a furious rage, dealing 170% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 16 for 30 seconds. This ability shares a cooldown with other Might abilities",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "damage",
+          "buff",
+          "pet",
+          "DEX",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "170% weapon dmg",
+            "sortKey": 170
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 16,
+            "display": "+16 Strength",
+            "sortKey": 16,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 16,
+            "display": "+16 Dexterity",
+            "sortKey": 16,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you",
+            "amount": 16,
+            "display": "+16 Agility of both you",
+            "sortKey": 16
+          },
+          {
+            "kind": "buff",
+            "stat": "pet",
+            "amount": 16,
+            "display": "+16 pet",
+            "sortKey": 16
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility of both you and your pet",
+            "amount": 16,
+            "display": "+16 Agility of both you and your pet",
+            "sortKey": 16
+          }
+        ],
+        "valuesSummary": "+16 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 170% weapon dmg",
+        "statTags": [
+          "DEX",
+          "STR"
+        ],
+        "type": "ability"
+      },
+      {
+        "name": "Lull Greater Beasts",
+        "slug": "Lull_Greater_Beasts",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Greater_Beasts",
+        "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 60.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 200,
+        "castTime": null,
+        "level": 50,
+        "tags": [
+          "debuff",
+          "crowd-control"
+        ],
+        "primaryTag": "crowd-control",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "52": [
+      {
+        "name": "Rejuvenate Companion",
+        "slug": "Rejuvenate_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rejuvenate_Companion?action=edit&redlink=1",
+        "description": "Rejuvenate your pet, restoring 240 Health and an additional 240 Health every 6 seconds for 12 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 240,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "heal",
+          "hot",
+          "pet"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "hot",
+            "initial": 240,
+            "tick": 240,
+            "interval": 6,
+            "duration": 12,
+            "display": "240 + 240/6s heal (12s)",
+            "sortKey": 720
+          },
+          {
+            "kind": "heal",
+            "amount": 240,
+            "display": "240 heal",
+            "sortKey": 240
+          }
+        ],
+        "valuesSummary": "240 + 240/6s heal (12s) · 240 heal",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Renewal of the Wild",
+        "slug": "Renewal_of_the_Wild",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Renewal_of_the_Wild",
+        "description": "Renew a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 60.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 410,
+        "castTime": null,
+        "level": 52,
+        "tags": [
+          "resurrection"
+        ],
+        "primaryTag": "resurrection",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "53": [
+      {
+        "name": "Mangle IV",
+        "slug": "Mangle_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_IV?action=edit&redlink=1",
+        "description": "Mangle your target, dealing 275% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 53,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "275% weapon dmg",
+            "sortKey": 275
+          },
+          {
+            "kind": "debuff",
+            "stat": "incoming healing effects",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "−50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "275% weapon dmg · −50%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "54": [
+      {
+        "name": "Cleanse Companion",
+        "slug": "Cleanse_Companion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Companion?action=edit&redlink=1",
+        "description": "Cleanse your pet, removing one Disease and one Poison effect.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 150,
+        "castTime": null,
+        "level": 54,
+        "tags": [
+          "dispel",
+          "pet"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "55": [
+      {
+        "name": "Savage Strike VI",
+        "slug": "Savage_Strike_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_VI?action=edit&redlink=1",
+        "description": "Savagely strike your target, dealing 170% Weapon Ratio Damage plus 60 (L50) to 65 (L60) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 55,
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "170% weapon dmg",
+            "sortKey": 170
+          },
+          {
+            "kind": "damage",
+            "min": 60,
+            "max": 65,
+            "minLevel": 50,
+            "maxLevel": 60,
+            "damageType": "Physical",
+            "display": "60–65 Physical dmg (L50–L60)",
+            "sortKey": 65
+          }
+        ],
+        "valuesSummary": "170% weapon dmg · 60–65 Physical dmg (L50–L60)",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "56": [
+      {
+        "name": "Untamed Spirit",
+        "slug": "Untamed_Spirit",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Untamed_Spirit",
+        "description": "Awaken an untamed spirit within your pet, increasing their Attack Speed by 40%, Agility by 15, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Physical Damage every 6 seconds for 30 seconds. This spell is considered a Primary Haste",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "dot",
+          "buff",
+          "haste",
+          "pet",
+          "AGI"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 40,
+            "max": 40,
+            "unit": "%",
+            "display": "+40%",
+            "sortKey": 40,
+            "statTag": "ATK"
+          },
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "Physical",
+            "display": "10 Physical/6s (30s)",
+            "sortKey": 50
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "amount": 15,
+            "display": "+15 Agility",
+            "sortKey": 15,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "10 Physical/6s (30s) · +40% · +15 Agility",
+        "statTags": [
+          "AGI"
+        ],
+        "type": "ability"
+      }
+    ],
+    "57": [
+      {
+        "name": "Chop VI",
+        "slug": "Chop_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_VI?action=edit&redlink=1",
+        "description": "Viciously chop your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 57,
+        "tags": [
+          "damage",
+          "pet"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "275% weapon dmg",
+            "sortKey": 275
+          }
+        ],
+        "valuesSummary": "275% weapon dmg",
+        "statTags": [],
+        "type": "ability"
+      }
+    ],
+    "59": [
+      {
+        "name": "Maul VI",
+        "slug": "Maul_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_VI?action=edit&redlink=1",
+        "description": "Violently maul your target, dealing 90% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+        "category": "Martial",
+        "categorySlug": "Skill_Martial",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 59,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "90% weapon dmg",
+            "sortKey": 90
+          },
+          {
+            "kind": "debuff",
+            "stat": "Damage dealt",
+            "min": 5,
+            "max": 5,
+            "unit": "%",
+            "display": "−5%",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "90% weapon dmg · −5%",
+        "statTags": [],
+        "type": "ability"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "name": "Bestial Bond",
+      "slug": "Bestial_Bond",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bestial_Bond",
+      "description": "Appeal to the sense of a target beast, bonding it to your side.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Call Companion",
+      "slug": "Call_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Call_Companion",
+      "description": "Beckon to your pet, calling it to your side.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike I",
+      "slug": "Enraging_Strike_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_I",
+      "description": "Strike your target in a furious rage, dealing 110% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 2 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "110% weapon dmg",
+          "sortKey": 110
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 2,
+          "display": "+2 Strength",
+          "sortKey": 2,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 2,
+          "display": "+2 Dexterity",
+          "sortKey": 2,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 2,
+          "display": "+2 Agility of both you",
+          "sortKey": 2
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 2,
+          "display": "+2 pet",
+          "sortKey": 2
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you and your pet",
+          "amount": 2,
+          "display": "+2 Agility of both you and your pet",
+          "sortKey": 2
+        }
+      ],
+      "valuesSummary": "+2 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 110% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Revive Companion",
+      "slug": "Revive_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion",
+      "description": "Rally your pet, returning it to life and restoring 20% Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 20,
+          "display": "20% heal",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "20% heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Fear Beast",
+      "slug": "Fear_Beast",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_Beast",
+      "description": "Fears an enemy beast, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "crowd-control",
+        "fear"
+      ],
+      "primaryTag": "fear",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Predatory Instinct",
+      "slug": "Predatory_Instinct",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Predatory_Instinct?action=edit&redlink=1",
+      "description": "Awaken the hunter's instinct in your group, increasing their Offense by 5 and Agility by 1 (L1) to 15 (L60). This ability persists until canceled.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 2,
+      "tags": [
+        "buff",
+        "AGI",
+        "OFF"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Offense by 5 and Agility",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–15 Offense by 5 and Agility (L1–L60)",
+          "sortKey": 15
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "+1–15 Agility (L1–L60)",
+          "sortKey": 15,
+          "statTag": "AGI"
+        },
+        {
+          "kind": "buff",
+          "stat": "Offense",
+          "amount": 5,
+          "display": "+5 Offense",
+          "sortKey": 5,
+          "statTag": "OFF"
+        }
+      ],
+      "valuesSummary": "+1–15 Offense by 5 and Agility (L1–L60) · +1–15 Agility (L1–L60) · +5 Offense",
+      "statTags": [
+        "AGI",
+        "OFF"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Kick",
+      "slug": "Kick",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "category": "Acr",
+      "categorySlug": "Skill_Acrobatics",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "interrupt"
+      ],
+      "primaryTag": "interrupt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Guardian Spirit",
+      "slug": "Guardian_Spirit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Guardian_Spirit?action=edit&redlink=1",
+      "description": "Invoke your pet's guardian spirit, reducing their Physical Damage received by 10% and increasing their Threat generation by 25% for 1 hour.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "buff",
+        "debuff",
+        "pet"
+      ],
+      "primaryTag": "debuff",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Damage received",
+          "min": 10,
+          "max": 10,
+          "unit": "%",
+          "display": "−10%",
+          "sortKey": 10
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat generation",
+          "min": 25,
+          "max": 25,
+          "unit": "%",
+          "display": "+25%",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "−10% · +25%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lull Minor Beast",
+      "slug": "Lull_Minor_Beast",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Minor_Beast?action=edit&redlink=1",
+      "description": "Lull a target Beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to beasts up to level 22.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "debuff",
+        "crowd-control"
+      ],
+      "primaryTag": "crowd-control",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sooth Companion",
+      "slug": "Sooth_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sooth_Companion?action=edit&redlink=1",
+      "description": "Soothe your pet, restoring 10 Health and an additional 10 Health every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 4,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 10,
+          "tick": 10,
+          "interval": 6,
+          "duration": 12,
+          "display": "10 + 10/6s heal (12s)",
+          "sortKey": 30
+        },
+        {
+          "kind": "heal",
+          "amount": 10,
+          "display": "10 heal",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "10 + 10/6s heal (12s) · 10 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lick Wounds",
+      "slug": "Lick_Wounds",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lick_Wounds?action=edit&redlink=1",
+      "description": "Pause to mend your wounds, restoring 5% Health at the cost of 5 (L1) to 50 (L60) Mana every second over 4 seconds. This ability is channeled.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 5,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 5,
+          "display": "5% heal",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "5% heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike I",
+      "slug": "Savage_Strike_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_I?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 110% Weapon Ratio Damage plus 1 (L1) to 15 (L10) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 5,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "110% weapon dmg",
+          "sortKey": 110
+        },
+        {
+          "kind": "damage",
+          "min": 1,
+          "max": 15,
+          "minLevel": 1,
+          "maxLevel": 10,
+          "damageType": "Physical",
+          "display": "1–15 Physical dmg (L1–L10)",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "110% weapon dmg · 1–15 Physical dmg (L1–L10)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Pounce",
+      "slug": "Pounce",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pounce?action=edit&redlink=1",
+      "description": "Leap toward your target, dealing 100% Weapon Ratio Damage and increasing the movement speed of your pet by 75% for 10 seconds.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 6,
+      "tags": [
+        "damage",
+        "buff",
+        "movement",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "buff",
+          "stat": "movement speed of your pet",
+          "min": 75,
+          "max": 75,
+          "unit": "%",
+          "display": "+75%",
+          "sortKey": 75
+        }
+      ],
+      "valuesSummary": "100% weapon dmg · +75%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Chop I",
+      "slug": "Chop_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_I?action=edit&redlink=1",
+      "description": "Viciously chop your target, dealing 120% Weapon Ratio Damage plus 10 (L7) to 15 (L17) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 7,
+      "tags": [
+        "damage",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "120% weapon dmg",
+          "sortKey": 120
+        },
+        {
+          "kind": "damage",
+          "min": 10,
+          "max": 15,
+          "minLevel": 7,
+          "maxLevel": 17,
+          "damageType": "Physical",
+          "display": "10–15 Physical dmg (L7–L17)",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "120% weapon dmg · 10–15 Physical dmg (L7–L17)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Remedy Companion",
+      "slug": "Remedy_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Remedy_Companion?action=edit&redlink=1",
+      "description": "Remedy your pet, restoring 20 Health and an additional 20 Health every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 45,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 20,
+          "tick": 20,
+          "interval": 6,
+          "duration": 12,
+          "display": "20 + 20/6s heal (12s)",
+          "sortKey": 60
+        },
+        {
+          "kind": "heal",
+          "amount": 20,
+          "display": "20 heal",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "20 + 20/6s heal (12s) · 20 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Spirit",
+      "slug": "Savage_Spirit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Spirit",
+      "description": "Awaken a savage spirit within your pet, increasing their Attack Speed by 10% and granting them a chance to activate Rip of melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "dot",
+        "buff",
+        "haste",
+        "pet"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 10,
+          "max": 10,
+          "unit": "%",
+          "display": "+10%",
+          "sortKey": 10,
+          "statTag": "ATK"
+        },
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "Bleed",
+          "display": "10 Bleed/6s (30s)",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "10 Bleed/6s (30s) · +10%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Command: Kill",
+      "slug": "Command:_Kill",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command:_Kill",
+      "description": "Command your pet into action, calling on them to perform a devastating attack.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 9,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike II",
+      "slug": "Enraging_Strike_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_II?action=edit&redlink=1",
+      "description": "Strike your opponent in a furious rage, dealing 120% Weapon Ratio Damage and increasing the Strength, Dexterity and Agility of both you and your pet by 4 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "120% weapon dmg",
+          "sortKey": 120
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 4,
+          "display": "+4 Strength",
+          "sortKey": 4,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 4,
+          "display": "+4 Dexterity",
+          "sortKey": 4,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 4,
+          "display": "+4 Agility of both you",
+          "sortKey": 4
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 4,
+          "display": "+4 pet",
+          "sortKey": 4
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity and Agility of both you and your pet",
+          "amount": 4,
+          "display": "+4 Dexterity and Agility of both you and your pet",
+          "sortKey": 4
+        }
+      ],
+      "valuesSummary": "+4 STR/DEX/Agility of both you/pet/Dexterity and Agility of both you and your pet · 120% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Maul I",
+      "slug": "Maul_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_I?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 60% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 10,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "60% weapon dmg",
+          "sortKey": 60
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "60% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Bestial Glimpse",
+      "slug": "Bestial_Glimpse",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bestial_Glimpse?action=edit&redlink=1",
+      "description": "Bind your vision to that of a target beast, granting you the ability to see through their eyes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Invigorate Companion",
+      "slug": "Invigorate_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invigorate_Companion?action=edit&redlink=1",
+      "description": "Reinvigorate the bond with your pet, instantly resetting their abilities and your Command: Kill and Command: Protect abilities.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 60,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Patch Companion",
+      "slug": "Patch_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Patch_Companion",
+      "description": "Patch your pet, restoring 40 Health and an additional 40 Health every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 60,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 40,
+          "tick": 40,
+          "interval": 6,
+          "duration": 12,
+          "display": "40 + 40/6s heal (12s)",
+          "sortKey": 120
+        },
+        {
+          "kind": "heal",
+          "amount": 40,
+          "display": "40 heal",
+          "sortKey": 40
+        }
+      ],
+      "valuesSummary": "40 + 40/6s heal (12s) · 40 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike II",
+      "slug": "Savage_Strike_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_II?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 120% Weapon Ratio Damage plus 20 (L10) to 25 (L20) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 15,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "120% weapon dmg",
+          "sortKey": 120
+        },
+        {
+          "kind": "damage",
+          "min": 20,
+          "max": 25,
+          "minLevel": 10,
+          "maxLevel": 20,
+          "damageType": "Physical",
+          "display": "20–25 Physical dmg (L10–L20)",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "120% weapon dmg · 20–25 Physical dmg (L10–L20)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Preservation",
+      "slug": "Preservation",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
+      "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 27.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 150,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Shrink Companion",
+      "slug": "Shrink_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shrink_Companion",
+      "description": "Shrink your pet, reducing their overall size by 20% for 35 minutes. This spell stacks up to two times.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 16,
+      "tags": [
+        "debuff",
+        "pet"
+      ],
+      "primaryTag": "debuff",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "overall size",
+          "min": 20,
+          "max": 20,
+          "unit": "%",
+          "display": "−20%",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "−20%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Chop II",
+      "slug": "Chop_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_II?action=edit&redlink=1",
+      "description": "Viciously chop your target, dealing 150% Weapon Ration Damage plau 20 (L17) to 25 (L27 Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 17,
+      "tags": [
+        "damage",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 20,
+          "max": 25,
+          "minLevel": 17,
+          "maxLevel": 27,
+          "damageType": "Physical",
+          "display": "20–25 Physical dmg (L17–L27)",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "20–25 Physical dmg (L17–L27)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cleanse Companion",
+      "slug": "Cleanse_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Companion?action=edit&redlink=1",
+      "description": "Cleanse your pet, removing one Disease and one Poison effect.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 18,
+      "tags": [
+        "dispel",
+        "pet"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maul II",
+      "slug": "Maul_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_II?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 65% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 19,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "65% weapon dmg",
+          "sortKey": 65
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "65% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike III",
+      "slug": "Enraging_Strike_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_III?action=edit&redlink=1",
+      "description": "Strike your opponent in a furious rage, dealing 130% Weapon Ratio Damage and increasing the Strength, Dexterity and Agility of both you and your pet by 6 for 30 seconds. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "130% weapon dmg",
+          "sortKey": 130
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 6,
+          "display": "+6 Strength",
+          "sortKey": 6,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 6,
+          "display": "+6 Dexterity",
+          "sortKey": 6,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 6,
+          "display": "+6 Agility of both you",
+          "sortKey": 6
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 6,
+          "display": "+6 pet",
+          "sortKey": 6
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity and Agility of both you and your pet",
+          "amount": 6,
+          "display": "+6 Dexterity and Agility of both you and your pet",
+          "sortKey": 6
+        }
+      ],
+      "valuesSummary": "+6 STR/DEX/Agility of both you/pet/Dexterity and Agility of both you and your pet · 130% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Lull Lesser Beast",
+      "slug": "Lull_Lesser_Beast",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Lesser_Beast?action=edit&redlink=1",
+      "description": "Lull a target Beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to beasts up to level 38.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "debuff",
+        "crowd-control"
+      ],
+      "primaryTag": "crowd-control",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mend Companion",
+      "slug": "Mend_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_Companion",
+      "description": "Patch your pet, restoring 80 Health and an additional 80 Health every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 120,
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 80,
+          "tick": 80,
+          "interval": 6,
+          "duration": 12,
+          "display": "80 + 80/6s heal (12s)",
+          "sortKey": 240
+        },
+        {
+          "kind": "heal",
+          "amount": 80,
+          "display": "80 heal",
+          "sortKey": 80
+        }
+      ],
+      "valuesSummary": "80 + 80/6s heal (12s) · 80 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Prowler's Instinct",
+      "slug": "Prowler's_Instinct",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prowler%27s_Instinct?action=edit&redlink=1",
+      "description": "Awaken the prowler's instinct in your party, increasing their Movement Speed by 15% and rendering them undetectable to targets while behind them. This ability persists until canceled.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff",
+        "movement"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 15,
+          "max": 15,
+          "unit": "%",
+          "display": "+15%",
+          "sortKey": 15,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+15%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Beast Speech",
+      "slug": "Beast_Speech",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beast_Speech?action=edit&redlink=1",
+      "description": "Imbue the tongue of your target, granting them the ability to speak with beasts for 1 hour.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "?",
+      "castTime": null,
+      "level": 20,
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Revive Companion II",
+      "slug": "Revive_Companion_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion_II",
+      "description": "Rally your pet, returning it to life and restoring 40% Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 200,
+      "castTime": null,
+      "level": 21,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 40,
+          "display": "40% heal",
+          "sortKey": 40
+        }
+      ],
+      "valuesSummary": "40% heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mangle I",
+      "slug": "Mangle_I",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_I?action=edit&redlink=1",
+      "description": "Mangle your target, dealing 150% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 23,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "debuff",
+          "stat": "incoming healing effects",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "−50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "150% weapon dmg · −50%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Command: Protect",
+      "slug": "Command:_Protect",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command:_Protect?action=edit&redlink=1",
+      "description": "Command your pet to protect you, reducing all damage received by 25% while transfering 50% of it to your pet for 30 seconds. This effect is canceled automatically if your pet falls below 25% health.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "all damage received",
+          "min": 25,
+          "max": 25,
+          "unit": "%",
+          "display": "−25%",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "−25%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Feral Spirit",
+      "slug": "Feral_Spirit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Feral_Spirit",
+      "description": "Awaken a feral sprit within your pet, increasing their Attack Speed by 20%, Agility by 5, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds. This spell is considered a Primary Haste.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 20,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "dot",
+        "buff",
+        "haste",
+        "pet",
+        "AGI"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 20,
+          "max": 20,
+          "unit": "%",
+          "display": "+20%",
+          "sortKey": 20,
+          "statTag": "ATK"
+        },
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "Bleed",
+          "display": "10 Bleed/6s (30s)",
+          "sortKey": 50
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "amount": 5,
+          "display": "+5 Agility",
+          "sortKey": 5,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "10 Bleed/6s (30s) · +20% · +5 Agility",
+      "statTags": [
+        "AGI"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike III",
+      "slug": "Savage_Strike_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_III?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 130% Weapon Ratio Damage plus 30 (L20) to 35 (L30) Physical Damage. Additionally, this gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 25,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "130% weapon dmg",
+          "sortKey": 130
+        },
+        {
+          "kind": "damage",
+          "min": 30,
+          "max": 35,
+          "minLevel": 20,
+          "maxLevel": 30,
+          "damageType": "Physical",
+          "display": "30–35 Physical dmg (L20–L30)",
+          "sortKey": 35
+        }
+      ],
+      "valuesSummary": "130% weapon dmg · 30–35 Physical dmg (L20–L30)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Howl of Dominance",
+      "slug": "Howl_of_Dominance",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Howl_of_Dominance?action=edit&redlink=1",
+      "description": "Exert dominance over your target, decreasing their Physical Damage dealt by 10% and increasing yours by the same amount for 15 seconds.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 26,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 10,
+          "max": 10,
+          "unit": "%",
+          "display": "−10%",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "−10%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Chop III",
+      "slug": "Chop_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_III?action=edit&redlink=1",
+      "description": "This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 27,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Aquatic Affinity",
+      "slug": "Aquatic_Affinity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aquatic_Affinity?action=edit&redlink=1",
+      "description": "Attune yourself to aquatic beasts, increasing your swimming skill by 20 and decreasing your air consumption by 80% for 1 hour.",
+      "category": "Alteration",
+      "categorySlug": "Skill_Altertion",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+      "location": "Vendor",
+      "mana": 100,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "buff",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "swimming skill by 20 and decreasing your air consumption",
+          "min": 80,
+          "max": 80,
+          "unit": "%",
+          "display": "−80%",
+          "sortKey": 80
+        },
+        {
+          "kind": "debuff",
+          "stat": "swimming skill",
+          "amount": 20,
+          "display": "−20 swimming skill",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "−80% · −20 swimming skill",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Deextinction",
+      "slug": "Deextinction",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deextinction",
+      "description": "Deextinct a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
+      "category": "Alteration",
+      "categorySlug": "Skill_Altertion",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+      "location": "Vendor",
+      "mana": 215,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Heal Companion",
+      "slug": "Heal_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal_Companion?action=edit&redlink=1",
+      "description": "Heal your pet, restoring 120 Health and an additional 120 Health every 6 seconds for 12 seconds.",
+      "category": "Alteration",
+      "categorySlug": "Skill_Altertion",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Altertion?action=edit&redlink=1",
+      "location": "Vendor",
+      "mana": 155,
+      "castTime": null,
+      "level": 28,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 120,
+          "tick": 120,
+          "interval": 6,
+          "duration": 12,
+          "display": "120 + 120/6s heal (12s)",
+          "sortKey": 360
+        },
+        {
+          "kind": "heal",
+          "amount": 120,
+          "display": "120 heal",
+          "sortKey": 120
+        }
+      ],
+      "valuesSummary": "120 + 120/6s heal (12s) · 120 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maul III",
+      "slug": "Maul_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_III?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 70% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage by 5% for 5 seconds.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 29,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "70% weapon dmg",
+          "sortKey": 70
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "70% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike IV",
+      "slug": "Enraging_Strike_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_IV?action=edit&redlink=1",
+      "description": "Strike your target in a furious rage, dealing 140% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 8 for 30 seconds.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 30,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "140% weapon dmg",
+          "sortKey": 140
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 8,
+          "display": "+8 Strength",
+          "sortKey": 8,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 8,
+          "display": "+8 Dexterity",
+          "sortKey": 8,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 8,
+          "display": "+8 Agility of both you",
+          "sortKey": 8
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 8,
+          "display": "+8 pet",
+          "sortKey": 8
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you and your pet",
+          "amount": 8,
+          "display": "+8 Agility of both you and your pet",
+          "sortKey": 8
+        }
+      ],
+      "valuesSummary": "+8 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 140% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Kinship: Bat",
+      "slug": "Kinship:_Bat",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinship:_Bat",
+      "description": "Invoke your kinship with a bat, calling on it to fight alongside you for 10 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 80,
+      "castTime": null,
+      "level": 30,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sight of the Beast",
+      "slug": "Sight_of_the_Beast",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sight_of_the_Beast?action=edit&redlink=1",
+      "description": "Imbue your sight with bestial clarity, enhancing your vision in darkness for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 100,
+      "castTime": null,
+      "level": 32,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mangle II",
+      "slug": "Mangle_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_II?action=edit&redlink=1",
+      "description": "Mangle your target, dealing 200% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 33,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "200% weapon dmg",
+          "sortKey": 200
+        },
+        {
+          "kind": "debuff",
+          "stat": "incoming healing effects",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "−50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "200% weapon dmg · −50%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike IV",
+      "slug": "Savage_Strike_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_IV?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 140% Weapon Ratio Damage plus 40 (L30) to 45 (L40) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 35,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "140% weapon dmg",
+          "sortKey": 140
+        },
+        {
+          "kind": "damage",
+          "min": 40,
+          "max": 45,
+          "minLevel": 30,
+          "maxLevel": 40,
+          "damageType": "Physical",
+          "display": "40–45 Physical dmg (L30–L40)",
+          "sortKey": 45
+        }
+      ],
+      "valuesSummary": "140% weapon dmg · 40–45 Physical dmg (L30–L40)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Lull Beasts",
+      "slug": "Lull_Beasts",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Beasts",
+      "description": "Lulls a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 55.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 100,
+      "castTime": null,
+      "level": 36,
+      "tags": [
+        "debuff"
+      ],
+      "primaryTag": "debuff",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Chop IV",
+      "slug": "Chop_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_IV?action=edit&redlink=1",
+      "description": "Viciously chop your target, dealing 200% Weapon Ratio Damage plus 40(L37) to 45(L47) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 37,
+      "tags": [
+        "damage",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "200% weapon dmg",
+          "sortKey": 200
+        },
+        {
+          "kind": "damage",
+          "min": 40,
+          "max": 45,
+          "minLevel": 37,
+          "maxLevel": 47,
+          "damageType": "Physical",
+          "display": "40–45 Physical dmg (L37–L47)",
+          "sortKey": 45
+        }
+      ],
+      "valuesSummary": "200% weapon dmg · 40–45 Physical dmg (L37–L47)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maul IV",
+      "slug": "Maul_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_IV?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 75% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 39,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "75% weapon dmg",
+          "sortKey": 75
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "75% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike V",
+      "slug": "Enraging_Strike_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_V?action=edit&redlink=1",
+      "description": "Strike your target in a furious rage, dealing 150% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 12 for 30 seconds. This ability shares a cooldown with other Might abilities",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 12,
+          "display": "+12 Strength",
+          "sortKey": 12,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 12,
+          "display": "+12 Dexterity",
+          "sortKey": 12,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 12,
+          "display": "+12 Agility of both you",
+          "sortKey": 12
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 12,
+          "display": "+12 pet",
+          "sortKey": 12
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you and your pet",
+          "amount": 12,
+          "display": "+12 Agility of both you and your pet",
+          "sortKey": 12
+        }
+      ],
+      "valuesSummary": "+12 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 150% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Ferocious Spirit",
+      "slug": "Ferocious_Spirit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ferocious_Spirit",
+      "description": "Awaken a ferocious spirit within your pet, increasing their Attack Speed by 30%, Agility by 10, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Bleed Damage every 6 seconds for 30 seconds. This spell is considered a primary haste.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "dot",
+        "buff",
+        "haste",
+        "pet",
+        "AGI"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 30,
+          "max": 30,
+          "unit": "%",
+          "display": "+30%",
+          "sortKey": 30,
+          "statTag": "ATK"
+        },
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "Bleed",
+          "display": "10 Bleed/6s (30s)",
+          "sortKey": 50
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "amount": 10,
+          "display": "+10 Agility",
+          "sortKey": 10,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "10 Bleed/6s (30s) · +30% · +10 Agility",
+      "statTags": [
+        "AGI"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Restore Companion",
+      "slug": "Restore_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restore_Companion?action=edit&redlink=1",
+      "description": "Restore your pet, restoring 180 Health and an additional 180 Healthe every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 195,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "heal",
+        "pet"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 180,
+          "display": "180 heal",
+          "sortKey": 180
+        }
+      ],
+      "valuesSummary": "180 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Species Revivalism",
+      "slug": "Species_Revivalism",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Species_Revivalism",
+      "description": "Revive a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 51.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 300,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Revive Companion III",
+      "slug": "Revive_Companion_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Revive_Companion_III",
+      "description": "Rally your pet, returning it to life and restoring 60% Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 400,
+      "castTime": null,
+      "level": 41,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 60,
+          "display": "60% heal",
+          "sortKey": 60
+        }
+      ],
+      "valuesSummary": "60% heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mangle III",
+      "slug": "Mangle_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_III?action=edit&redlink=1",
+      "description": "Mangle your target, dealing 225% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 43,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "225% weapon dmg",
+          "sortKey": 225
+        },
+        {
+          "kind": "debuff",
+          "stat": "incoming healing effects",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "−50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "225% weapon dmg · −50%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Sight of the Predator",
+      "slug": "Sight_of_the_Predator",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sight_of_the_Predator?action=edit&redlink=1",
+      "description": "Imbue your sight with predatory clarity, greatly enhancing your vision in darkness while reducing it in bright light for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
+      "location": "Vendor",
+      "mana": 200,
+      "castTime": null,
+      "level": 44,
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike V",
+      "slug": "Savage_Strike_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_V?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 150% Weapon Ratio Damage plus 50 (L40) to 55 (L50) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 45,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "damage",
+          "min": 50,
+          "max": 55,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "damageType": "Physical",
+          "display": "50–55 Physical dmg (L40–L50)",
+          "sortKey": 55
+        }
+      ],
+      "valuesSummary": "150% weapon dmg · 50–55 Physical dmg (L40–L50)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Chop V",
+      "slug": "Chop_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_V?action=edit&redlink=1",
+      "description": "Viciously chop your target, dealing 225% Weapon Ratio Damage plus 50 (L47) to 45 (L57) Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 47,
+      "tags": [
+        "damage",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "225% weapon dmg",
+          "sortKey": 225
+        },
+        {
+          "kind": "damage",
+          "min": 50,
+          "max": 45,
+          "minLevel": 47,
+          "maxLevel": 57,
+          "damageType": "Physical",
+          "display": "50–45 Physical dmg (L47–L57)",
+          "sortKey": 45
+        }
+      ],
+      "valuesSummary": "225% weapon dmg · 50–45 Physical dmg (L47–L57)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Hunter's Chase",
+      "slug": "Hunter's_Chase",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Chase?action=edit&redlink=1",
+      "description": "Embody a predator in relentless pursuit, increasing your Movement Speed by 100% for 1 minute. This ability can only be used outdoors.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 25,
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "buff",
+        "movement",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 100,
+          "max": 100,
+          "unit": "%",
+          "display": "+100%",
+          "sortKey": 100,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+100%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maul V",
+      "slug": "Maul_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_V?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 80% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 49,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "80% weapon dmg",
+          "sortKey": 80
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "80% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Call of the Faithful",
+      "slug": "Call_of_the_Faithful",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Call_of_the_Faithful?action=edit&redlink=1",
+      "description": "Call out to your stowed pets from a great distance, summoning one to replace your current pet.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 300,
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "pet"
+      ],
+      "primaryTag": "pet",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Enraging Strike VI",
+      "slug": "Enraging_Strike_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enraging_Strike_VI?action=edit&redlink=1",
+      "description": "Strike your target in a furious rage, dealing 170% Weapon Ratio Damage and increasing the Strength, Dexterity, and Agility of both you and your pet by 16 for 30 seconds. This ability shares a cooldown with other Might abilities",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "damage",
+        "buff",
+        "pet",
+        "DEX",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "170% weapon dmg",
+          "sortKey": 170
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 16,
+          "display": "+16 Strength",
+          "sortKey": 16,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 16,
+          "display": "+16 Dexterity",
+          "sortKey": 16,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you",
+          "amount": 16,
+          "display": "+16 Agility of both you",
+          "sortKey": 16
+        },
+        {
+          "kind": "buff",
+          "stat": "pet",
+          "amount": 16,
+          "display": "+16 pet",
+          "sortKey": 16
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility of both you and your pet",
+          "amount": 16,
+          "display": "+16 Agility of both you and your pet",
+          "sortKey": 16
+        }
+      ],
+      "valuesSummary": "+16 STR/DEX/Agility of both you/pet/Agility of both you and your pet · 170% weapon dmg",
+      "statTags": [
+        "DEX",
+        "STR"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Lull Greater Beasts",
+      "slug": "Lull_Greater_Beasts",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Greater_Beasts",
+      "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 60.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 200,
+      "castTime": null,
+      "level": 50,
+      "tags": [
+        "debuff",
+        "crowd-control"
+      ],
+      "primaryTag": "crowd-control",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Rejuvenate Companion",
+      "slug": "Rejuvenate_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rejuvenate_Companion?action=edit&redlink=1",
+      "description": "Rejuvenate your pet, restoring 240 Health and an additional 240 Health every 6 seconds for 12 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 240,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "heal",
+        "hot",
+        "pet"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "hot",
+          "initial": 240,
+          "tick": 240,
+          "interval": 6,
+          "duration": 12,
+          "display": "240 + 240/6s heal (12s)",
+          "sortKey": 720
+        },
+        {
+          "kind": "heal",
+          "amount": 240,
+          "display": "240 heal",
+          "sortKey": 240
+        }
+      ],
+      "valuesSummary": "240 + 240/6s heal (12s) · 240 heal",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Renewal of the Wild",
+      "slug": "Renewal_of_the_Wild",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Renewal_of_the_Wild",
+      "description": "Renew a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 60.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 410,
+      "castTime": null,
+      "level": 52,
+      "tags": [
+        "resurrection"
+      ],
+      "primaryTag": "resurrection",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Mangle IV",
+      "slug": "Mangle_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mangle_IV?action=edit&redlink=1",
+      "description": "Mangle your target, dealing 275% Weapon Ratio Damage and reducing incoming healing effects by 50% for 30 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 53,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "275% weapon dmg",
+          "sortKey": 275
+        },
+        {
+          "kind": "debuff",
+          "stat": "incoming healing effects",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "−50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "275% weapon dmg · −50%",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Cleanse Companion",
+      "slug": "Cleanse_Companion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Companion?action=edit&redlink=1",
+      "description": "Cleanse your pet, removing one Disease and one Poison effect.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 150,
+      "castTime": null,
+      "level": 54,
+      "tags": [
+        "dispel",
+        "pet"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Savage Strike VI",
+      "slug": "Savage_Strike_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Savage_Strike_VI?action=edit&redlink=1",
+      "description": "Savagely strike your target, dealing 170% Weapon Ratio Damage plus 60 (L50) to 65 (L60) Physical Damage. Additionally, this ability gains a damage bonus if the target is bleeding. This ability shares a cooldown with other Might abilities.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 55,
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "170% weapon dmg",
+          "sortKey": 170
+        },
+        {
+          "kind": "damage",
+          "min": 60,
+          "max": 65,
+          "minLevel": 50,
+          "maxLevel": 60,
+          "damageType": "Physical",
+          "display": "60–65 Physical dmg (L50–L60)",
+          "sortKey": 65
+        }
+      ],
+      "valuesSummary": "170% weapon dmg · 60–65 Physical dmg (L50–L60)",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Untamed Spirit",
+      "slug": "Untamed_Spirit",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Untamed_Spirit",
+      "description": "Awaken an untamed spirit within your pet, increasing their Attack Speed by 40%, Agility by 15, and granting them a chance to activate Rip on melee attacks for 1 hour. Rip: Rip the flesh of your target, dealing 10 Physical Damage every 6 seconds for 30 seconds. This spell is considered a Primary Haste",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "dot",
+        "buff",
+        "haste",
+        "pet",
+        "AGI"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 40,
+          "max": 40,
+          "unit": "%",
+          "display": "+40%",
+          "sortKey": 40,
+          "statTag": "ATK"
+        },
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "Physical",
+          "display": "10 Physical/6s (30s)",
+          "sortKey": 50
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "amount": 15,
+          "display": "+15 Agility",
+          "sortKey": 15,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "10 Physical/6s (30s) · +40% · +15 Agility",
+      "statTags": [
+        "AGI"
+      ],
+      "type": "ability"
+    },
+    {
+      "name": "Chop VI",
+      "slug": "Chop_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chop_VI?action=edit&redlink=1",
+      "description": "Viciously chop your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and creating an opening that causes your pet to land Critical Hits for 5 seconds. This ability requires a two-handed weapon. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 57,
+      "tags": [
+        "damage",
+        "pet"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "275% weapon dmg",
+          "sortKey": 275
+        }
+      ],
+      "valuesSummary": "275% weapon dmg",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Maul VI",
+      "slug": "Maul_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maul_VI?action=edit&redlink=1",
+      "description": "Violently maul your target, dealing 90% Weapon Ratio Damage per equipped weapon and decreasing their Physical Damage dealt by 5% for 5 seconds. This ability requires dual-wielded weapons. This ability shares a cooldown with other Martial abilities.",
+      "category": "Martial",
+      "categorySlug": "Skill_Martial",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 59,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "90% weapon dmg",
+          "sortKey": 90
+        },
+        {
+          "kind": "debuff",
+          "stat": "Damage dealt",
+          "min": 5,
+          "max": 5,
+          "unit": "%",
+          "display": "−5%",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "90% weapon dmg · −5%",
+      "statTags": [],
+      "type": "ability"
+    }
+  ]
+}
