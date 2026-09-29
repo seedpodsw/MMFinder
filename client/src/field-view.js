@@ -312,14 +312,15 @@ export function createFieldView(scene) {
     return entry;
   }
 
-  function sync(mobs, targetId, playerLevel, px, pz) {
+  function sync(mobs, targetId, playerLevel, px, pz, groundAt) {
     const live = new Set();
     for (const mob of mobs.values()) {
       live.add(mob.id);
       const entry = groups.get(mob.id) || make(mob);
       entry.group.visible = mob.alive;
       if (!mob.alive) continue;
-      entry.group.position.set(mob.x, 0, mob.z);
+      const gy = typeof groundAt === "function" ? groundAt(mob.x, mob.z) : 0;
+      entry.group.position.set(mob.x, gy, mob.z);
       entry.group.rotation.y = 0;
       if (Number.isFinite(px) && Number.isFinite(pz) && mob.aggro) {
         entry.figure.rotation.y = Math.atan2(mob.x - px, mob.z - pz);
