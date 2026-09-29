@@ -1,0 +1,11 @@
+node_modules/
+data/store.json
+data/*.sqlite
+data/maps/
+client/public/data/
+client/public/maps/custom/
+dist/
+.DS_Store
+*.log
+__pycache__/
+*.pyc
