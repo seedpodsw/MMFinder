@@ -176,7 +176,7 @@ export default function Walk({
     const pickMeshes = [];
     const bounds = { minX: 0, maxX: 1, minZ: 0, maxZ: 1 };
     let aspectNow = 0;
-    const cam = { yaw: 0, pitch: 1.08, dist: 64 };
+    const cam = { yaw: Math.PI / 4, pitch: 0.74, dist: 112 };
     const desired = new THREE.Vector3();
 
     let renderer;
@@ -198,7 +198,7 @@ export default function Walk({
     const sun = new THREE.DirectionalLight(0xfff8ee, 1.25);
     sun.position.set(-24, 48, 16);
     scene.add(sun);
-    const camera = new THREE.PerspectiveCamera(42, 1, 0.2, 20000);
+    const camera = new THREE.PerspectiveCamera(46, 1, 0.2, 20000);
     const anisotropy = renderer.capabilities.getMaxAnisotropy();
 
     const voidGeo = new THREE.PlaneGeometry(1, 1);
@@ -699,7 +699,7 @@ export default function Walk({
       ly = e.clientY;
       moved += Math.abs(dx) + Math.abs(dy);
       cam.yaw -= dx * 0.005;
-      cam.pitch = Math.min(1.28, Math.max(0.92, cam.pitch + dy * 0.0035));
+      cam.pitch = Math.min(1.05, Math.max(0.55, cam.pitch + dy * 0.0035));
     }
     function onPointerUp(e) {
       if (!dragging) return;
@@ -715,7 +715,7 @@ export default function Walk({
     }
     function onWheel(e) {
       e.preventDefault();
-      cam.dist = Math.min(120, Math.max(40, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
+      cam.dist = Math.min(200, Math.max(72, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
     }
     function onContext(e) {
       e.preventDefault();
