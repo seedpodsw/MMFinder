@@ -1215,7 +1215,7 @@ export default function Walk({
                   <span>
                     Level {combat.target.level}
                     {combat.target.named ? " · named" : ""}
-                    {combat.attacking ? " · swinging" : " · out of reach"}
+                    {combat.attacking ? " · auto-attack" : " · too far, keep running"}
                   </span>
                 </header>
                 <div className="eq-bar">

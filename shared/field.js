@@ -347,7 +347,7 @@ export function createSession(hero, storage) {
   let lastSwing = 0;
   let lastSave = 0;
   let nextScan = 0;
-  let line = "Find a camp. Click a creature, or press Space.";
+  let line = "Hail. Find a camp. Click a creature, or press Space like you mean it.";
   const log = [line];
 
   function klass() {
@@ -357,7 +357,7 @@ export function createSession(hero, storage) {
   function note(text) {
     line = text;
     log.unshift(text);
-    if (log.length > 3) log.pop();
+    if (log.length > 6) log.pop();
   }
 
   function currentTarget() {
@@ -376,11 +376,11 @@ export function createSession(hero, storage) {
 
   function consider(mob) {
     const diff = mob.level - hero.level;
-    if (diff <= -8) return `${mob.name} looks like a pushover.`;
-    if (diff <= -3) return `${mob.name} looks like an easy mark.`;
-    if (diff <= 1) return `${mob.name} looks about your size.`;
-    if (diff <= 4) return `${mob.name} looks like a tough fight.`;
-    return `${mob.name} looks ready to crush you.`;
+    if (diff <= -8) return `${mob.name} looks like a rug you already own.`;
+    if (diff <= -3) return `${mob.name} looks like an easy kill.`;
+    if (diff <= 1) return `${mob.name} looks like a reasonably safe opponent.`;
+    if (diff <= 4) return `${mob.name} looks like a tough fight. Bring a friend. Or don't.`;
+    return `What would you like your tombstone to say? ${mob.name} looks ready.`;
   }
 
   function nearestAggro() {
@@ -441,8 +441,8 @@ export function createSession(hero, storage) {
     if (targetId === mob.id) targetId = nearestAggro();
     const gain = xpForKill(mob.level, hero.level, mob.named);
     const levels = addXp(hero, gain);
-    if (levels.length) note(`Level ${levels[levels.length - 1]}. ${klass().passive} holds. +${gain} XP.`);
-    else note(`${mob.name} falls. +${gain} XP.`);
+    if (levels.length) note(`You have slain ${mob.name}! You gain a level. Welcome to ${levels[levels.length - 1]}. +${gain} experience.`);
+    else note(`You have slain ${mob.name}! You gain ${gain} experience.`);
   }
 
   function strike(mob, now, rng, neighbors) {
@@ -451,7 +451,7 @@ export function createSession(hero, storage) {
     const diff = mob.level - hero.level;
     const hitChance = Math.min(0.97, Math.max(0.5, 0.9 - diff * 0.045));
     if (rng() > hitChance) {
-      note(`You miss ${mob.name}.`);
+      note(`You try to hit ${mob.name}, but miss!`);
       nextSwing = now + 880;
       lastSwing = now;
       return;
@@ -498,7 +498,7 @@ export function createSession(hero, storage) {
       }
     }
     if (mob.hp <= 0) finish(mob, now);
-    else note(`${tag ? `${tag}. ` : ""}You hit ${mob.name} for ${dmg}.`);
+    else note(`${tag ? `${tag}. ` : ""}You hit ${mob.name} for ${dmg} points of damage.`);
     nextSwing = now + 880;
     lastSwing = now;
   }
@@ -636,14 +636,14 @@ export function createSession(hero, storage) {
           const mobHit = Math.min(0.94, Math.max(0.4, 0.7 + gap * 0.04));
           mob.nextSwing = now + 1500 * (mob.slow || 1);
           if (rng() > mobHit) {
-            note(`${mob.name} misses.`);
+            note(`${mob.name} tries to hit YOU, but misses!`);
             continue;
           }
           let taken = mobDamage(mob.level, mob.named);
           taken = Math.max(1, Math.round(taken * (k.mods.taken || 1) * (0.9 + rng() * 0.2)));
           hero.hp -= taken;
           lastHurt = now;
-          note(`${mob.name} hits you for ${taken}.`);
+          note(`${mob.name} hits YOU for ${taken} points of damage.`);
           if (hero.hp <= 0) {
             hero.hp = maxHp;
             hero.x = null;
@@ -652,7 +652,7 @@ export function createSession(hero, storage) {
             hero.layer = null;
             targetId = null;
             for (const other of mobs.values()) other.aggro = false;
-            note(`You died. You wake in ${originById(hero.originId).name}.`);
+            note(`You have been slain by ${mob.name}! You wake in ${originById(hero.originId).name}, slightly embarrassed.`);
             persist(true);
             return { died: true, originId: hero.originId, hud: hud() };
           }
