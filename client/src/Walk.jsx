@@ -177,7 +177,7 @@ export default function Walk({
   const hudRef = useRef(emptyHud);
   const [hud, setHud] = useState(emptyHud);
   const [hover, setHover] = useState(null);
-  const [roster, setRoster] = useState(() => loadRoster().heroes);
+  const [roster, setRoster] = useState(() => loadRoster(localStorage).heroes);
   const [hero, setHero] = useState(null);
   const [combat, setCombat] = useState(null);
   const heroRef = useRef(hero);
@@ -1312,7 +1312,7 @@ export default function Walk({
   }, [pois, atlasKey]);
 
   function refreshRoster() {
-    setRoster(loadRoster().heroes);
+    setRoster(loadRoster(localStorage).heroes);
   }
 
   function play(saved) {

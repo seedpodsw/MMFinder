@@ -233,10 +233,21 @@ export function sanitizeHero(raw) {
   };
 }
 
+function browserStore(storage) {
+  if (storage?.getItem || storage?.setItem) return storage;
+  try {
+    if (typeof globalThis.localStorage?.getItem === "function") return globalThis.localStorage;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
 function readBook(storage) {
+  const box = browserStore(storage);
   let raw = null;
   try {
-    raw = JSON.parse(storage?.getItem?.(SAVE_KEY) || "null");
+    raw = JSON.parse(box?.getItem?.(SAVE_KEY) || "null");
   } catch {
     raw = null;
   }
@@ -257,8 +268,9 @@ function readBook(storage) {
 }
 
 function writeBook(book, storage) {
-  if (!storage?.setItem) return;
-  storage.setItem(
+  const box = browserStore(storage);
+  if (!box?.setItem) return;
+  box.setItem(
     SAVE_KEY,
     JSON.stringify({
       v: 2,
@@ -298,7 +310,7 @@ export function removeHero(id, storage) {
 }
 
 export function clearHero(storage) {
-  storage?.removeItem?.(SAVE_KEY);
+  browserStore(storage)?.removeItem?.(SAVE_KEY);
 }
 
 function blankMob(spec, layer, homeX, homeZ, alive) {

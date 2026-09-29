@@ -196,6 +196,10 @@ test("a far target is marked, and a wild swing can miss", () => {
   assert.match(missed.line, /miss/);
 });
 
+test("looking up the bench without a store is an empty list", () => {
+  assert.deepEqual(loadRoster().heroes, []);
+});
+
 test("a saved walker keeps their level, and an older save still loads", () => {
   const store = mem();
   store.setItem(
