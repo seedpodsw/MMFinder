@@ -307,7 +307,7 @@ export function createFieldView(scene) {
     group.add(shadow, figure, pad, ring, bar, sprite);
     scene.add(group);
     bodies.push(body, pad);
-    const entry = { group, figure, body, head: critter.head, ring, bar, sprite, color: critter.color, lastHp: mob.maxHp, flash: 0 };
+    const entry = { group, figure, body, head: critter.head, ring, bar, sprite, scale, color: critter.color, lastHp: mob.maxHp, flash: 0 };
     groups.set(mob.id, entry);
     return entry;
   }
@@ -340,7 +340,10 @@ export function createFieldView(scene) {
       entry.ring.material.color.set(con);
       entry.sprite.material.color.set(con);
       entry.ring.scale.setScalar(marked ? 1.35 : 1);
-      entry.figure.position.y = 0;
+      const dist = Number.isFinite(px) && Number.isFinite(pz) ? Math.hypot(mob.x - px, mob.z - pz) : Infinity;
+      entry.sprite.visible = marked || mob.named || dist < 64;
+      entry.sprite.position.y = (marked ? 3.15 : 2.45) * entry.scale;
+      entry.figure.position.y = Math.sin(performance.now() * 0.003 + mob.x) * 0.05;
     }
     for (const [id, entry] of groups) {
       if (!live.has(id)) {

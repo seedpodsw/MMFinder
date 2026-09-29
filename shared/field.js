@@ -33,8 +33,8 @@ export const CLASSES = [
 export const REACH = 9;
 const AGGRO = 6;
 const LEASH = 42;
-const SHOW = 360;
-const HIDE = 540;
+const SHOW = 480;
+const HIDE = 700;
 
 export function classById(id) {
   return CLASSES.find((c) => c.id === id) || null;
@@ -138,8 +138,8 @@ export function layoutPack(poi) {
   const named = poi.kind === "named";
   const names = monsterNames(poi.monsters);
   const list = names.length ? names : [poi.name || "creature"];
-  const per = named ? 1 : list.length <= 1 ? 4 : list.length === 2 ? 3 : 2;
-  const capCount = named ? 1 : 8;
+  const per = named ? 1 : list.length <= 1 ? 6 : list.length === 2 ? 4 : 3;
+  const capCount = named ? 1 : 12;
   const pack = [];
   let i = 0;
   for (const rawName of named ? [poi.name] : list) {
@@ -148,7 +148,7 @@ export function layoutPack(poi) {
       const name = cap(named ? raw : singular(raw));
       const h = hash(`${poi.id}:${i}`);
       const ang = ((h % 360) * Math.PI) / 180;
-      const dist = named ? 0 : 14 + (h % 24);
+      const dist = named ? 0 : 18 + (h % 30);
       pack.push({
         id: `${poi.id}:${i}`,
         poiId: poi.id,

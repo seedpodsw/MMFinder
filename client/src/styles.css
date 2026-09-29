@@ -2450,7 +2450,10 @@ button.linkish.npc-go {
 }
 
 .field-where {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  color: var(--gold);
 }
 
 .field-log {

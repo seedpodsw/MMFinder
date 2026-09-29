@@ -93,12 +93,16 @@ function makeLabel(text) {
   g.textAlign = "center";
   g.textBaseline = "middle";
   g.fillText(text, width / 2, 34);
+  g.strokeStyle = "#a68448";
+  g.lineWidth = 3;
+  g.strokeRect(1.5, 11.5, width - 3, 41);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
   const sprite = new THREE.Sprite(mat);
-  const worldW = Math.min(150, width * 0.62);
+  const worldW = Math.min(34, Math.max(16, width * 0.18));
   sprite.scale.set(worldW, worldW * (64 / width), 1);
+  sprite.center.set(0.5, 0);
   sprite.renderOrder = 3;
   return sprite;
 }
@@ -272,9 +276,9 @@ export default function Walk({
       }
 
       const label = makeLabel(tile.name);
-      label.position.set(art.x, 16, art.z);
+      label.position.set(art.x, 3.2, art.zNorth + Math.min(16, art.h * 0.06));
       label.userData.layer = tileLayer;
-      label.visible = false;
+      label.visible = tileLayer === layerNow;
       scene.add(label);
       labels.push(label);
     }
@@ -473,9 +477,9 @@ export default function Walk({
       const heights = new Float32Array(blurred.length);
       for (let i = 0; i < blurred.length; i++) {
         const ink = blurred[i];
-        if (ink > 0.74) heights[i] = 18;
-        else if (ink > 0.58) heights[i] = 8;
-        else if (ink > 0.46) heights[i] = 3;
+        if (ink > 0.74) heights[i] = 24;
+        else if (ink > 0.58) heights[i] = 11;
+        else if (ink > 0.46) heights[i] = 4;
         else heights[i] = 0;
       }
       const raised = new THREE.PlaneGeometry(Math.max(tile.art.w, 1), Math.max(tile.art.h, 1), cols - 1, rows - 1);
@@ -546,6 +550,7 @@ export default function Walk({
 
     function applyLayer() {
       for (const tile of tiles) tile.mesh.visible = tile.layer === layerNow;
+      for (const label of labels) label.visible = label.userData.layer === layerNow;
       renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x0d1c24, 1);
       voidMat.color.set(layerNow === "deep" ? 0x140c16 : 0x0d1c24);
       recomputeBounds();
@@ -1154,8 +1159,6 @@ export default function Walk({
           onEnterRef.current?.(zid);
         }
       }
-
-      for (const label of labels) label.visible = false;
 
       if (session && heroRef.current) {
         const step = session.update(
