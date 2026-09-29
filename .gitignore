@@ -5,6 +5,7 @@ data/maps/
 client/public/data/
 client/public/maps/custom/
 dist/
+.cursor/
 .DS_Store
 *.log
 __pycache__/

@@ -9,7 +9,10 @@ import {
   damageFor,
   layoutPack,
   loadHero,
+  loadRoster,
   maxHpFor,
+  removeHero,
+  SAVE_KEY,
   saveHero,
   xpForKill,
   xpToNext,
@@ -132,7 +135,7 @@ test("dying sends you back to the city you conjured in", () => {
   assert.equal(hero.zoneId, "faelindral");
 });
 
-test("pulling one creature brings the rest of its camp", () => {
+test("pulling one creature leaves the rest of the camp alone", () => {
   const hero = createHero({ classId: "fighter", originId: "night-harbor" });
   const session = createSession(hero, mem());
   const now = 2_000_000;
@@ -145,8 +148,33 @@ test("pulling one creature brings the rest of its camp", () => {
     mob.aggro = false;
   }
   session.swingAt(pack[0].id, 0, 0, now + 5, () => 0);
-  assert.equal(pack[1].aggro, true);
-  assert.match(session.hud().line, /You hit/);
+  assert.equal(pack[0].aggro, true);
+  assert.equal(pack[1].aggro, false);
+  pack[0].x = 3;
+  pack[0].z = 0;
+  pack[0].aggro = true;
+  pack[1].x = 4;
+  pack[1].z = 0;
+  pack[1].aggro = false;
+  session.update(0.2, 0, 0, "surface", "night-harbor", now + 800, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
+  assert.equal(pack[1].aggro, false);
+});
+
+test("walking in pulls only the nearest creature", () => {
+  const hero = createHero({ classId: "fighter", originId: "night-harbor" });
+  const session = createSession(hero, mem());
+  const now = 4_000_000;
+  session.update(0.2, 0, 0, "surface", "night-harbor", now, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
+  const pack = [...session.mobs.values()];
+  pack[0].x = 4;
+  pack[0].z = 0;
+  pack[0].aggro = false;
+  pack[1].x = 5.5;
+  pack[1].z = 0;
+  pack[1].aggro = false;
+  session.update(0.2, 0, 0, "surface", "night-harbor", now + 500, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
+  assert.equal(pack[0].aggro, true);
+  assert.equal(pack[1].aggro, false);
 });
 
 test("a far target is marked, and a wild swing can miss", () => {
@@ -166,4 +194,48 @@ test("a far target is marked, and a wild swing can miss", () => {
   const missed = session.swingAt(mob.id, 0, 0, now + 5, () => 0.99);
   assert.equal(mob.hp, hp);
   assert.match(missed.line, /miss/);
+});
+
+test("a saved walker keeps their level, and an older save still loads", () => {
+  const store = mem();
+  store.setItem(
+    SAVE_KEY,
+    JSON.stringify({
+      v: 1,
+      name: "Old",
+      classId: "fighter",
+      originId: "night-harbor",
+      level: 4,
+      xp: 3,
+      hp: 20,
+      kills: 2,
+      born: 5,
+      down: {},
+      x: 12,
+      z: -4,
+      layer: "surface",
+      zoneId: "night-harbor",
+    })
+  );
+  const older = loadHero(store);
+  assert.equal(older.name, "Old");
+  assert.equal(older.level, 4);
+  assert.equal(older.hp, 20);
+  assert.equal(older.x, 12);
+  const ada = createHero({ name: "Ada", classId: "fighter", originId: "night-harbor" });
+  ada.level = 3;
+  ada.hp = 20;
+  ada.xp = 9;
+  const bram = createHero({ name: "Bram", classId: "wizard", originId: "faelindral" });
+  saveHero(ada, store);
+  saveHero(bram, store);
+  const book = loadRoster(store);
+  assert.equal(book.heroes.length, 3);
+  assert.equal(book.active, bram.id);
+  assert.equal(loadHero(store).name, "Bram");
+  const kept = book.heroes.find((h) => h.id === ada.id);
+  assert.equal(kept.level, 3);
+  assert.equal(kept.xp, 9);
+  removeHero(bram.id, store);
+  assert.equal(loadHero(store).name, "Ada");
 });

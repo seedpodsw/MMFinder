@@ -31,7 +31,7 @@ export const CLASSES = [
 ];
 
 export const REACH = 16;
-const AGGRO = 12;
+const AGGRO = 6;
 const LEASH = 42;
 const SHOW = 220;
 const HIDE = 400;
@@ -178,6 +178,7 @@ export function createHero(draft) {
   const name = String(draft?.name || "").trim().slice(0, 24) || "Adventurer";
   return {
     v: 1,
+    id: `w${Date.now().toString(36)}${Math.floor(Math.random() * 1296).toString(36)}`,
     name,
     classId: klass.id,
     originId: origin.id,
@@ -215,6 +216,7 @@ export function sanitizeHero(raw) {
   const z = Number(raw.z);
   return {
     v: 1,
+    id: String(raw.id || `w${raw.born || 1}`).slice(0, 40),
     name: String(raw.name || "Adventurer").slice(0, 24),
     classId: klass.id,
     originId: origin,
@@ -231,19 +233,68 @@ export function sanitizeHero(raw) {
   };
 }
 
-export function loadHero(storage) {
+function readBook(storage) {
+  let raw = null;
   try {
-    const raw = JSON.parse(storage?.getItem?.(SAVE_KEY) || "null");
-    return sanitizeHero(raw);
+    raw = JSON.parse(storage?.getItem?.(SAVE_KEY) || "null");
   } catch {
-    return null;
+    raw = null;
   }
+  if (!raw) return { active: null, heroes: [] };
+  if (raw.v === 1 && raw.classId) {
+    const hero = sanitizeHero(raw);
+    return hero ? { active: hero.id, heroes: [hero] } : { active: null, heroes: [] };
+  }
+  if (raw.v !== 2 || !Array.isArray(raw.heroes)) return { active: null, heroes: [] };
+  const heroes = [];
+  for (const row of raw.heroes) {
+    const hero = sanitizeHero(row);
+    if (hero && !heroes.some((h) => h.id === hero.id)) heroes.push(hero);
+    if (heroes.length >= 8) break;
+  }
+  const active = heroes.some((h) => h.id === raw.active) ? raw.active : heroes[0]?.id || null;
+  return { active, heroes };
+}
+
+function writeBook(book, storage) {
+  if (!storage?.setItem) return;
+  storage.setItem(
+    SAVE_KEY,
+    JSON.stringify({
+      v: 2,
+      active: book.active,
+      heroes: book.heroes.map((h) => ({ ...h, down: pruneDown(h.down, Date.now()) })),
+    })
+  );
+}
+
+export function loadRoster(storage) {
+  return readBook(storage);
+}
+
+export function loadHero(storage) {
+  const book = readBook(storage);
+  return book.heroes.find((h) => h.id === book.active) || null;
 }
 
 export function saveHero(hero, storage) {
-  if (!storage?.setItem || !hero) return;
-  const copy = { ...hero, down: pruneDown(hero.down, Date.now()) };
-  storage.setItem(SAVE_KEY, JSON.stringify(copy));
+  const clean = sanitizeHero(hero);
+  if (!clean || !storage?.setItem) return;
+  const book = readBook(storage);
+  const index = book.heroes.findIndex((h) => h.id === clean.id);
+  if (index >= 0) book.heroes[index] = clean;
+  else if (book.heroes.length < 8) book.heroes.push(clean);
+  else return;
+  book.active = clean.id;
+  writeBook(book, storage);
+}
+
+export function removeHero(id, storage) {
+  const book = readBook(storage);
+  book.heroes = book.heroes.filter((h) => h.id !== id);
+  if (book.active === id) book.active = book.heroes[book.heroes.length - 1]?.id || null;
+  writeBook(book, storage);
+  return book;
 }
 
 export function clearHero(storage) {
@@ -334,18 +385,11 @@ export function createSession(hero, storage) {
     return best;
   }
 
-  function callPack(mob) {
-    for (const other of mobs.values()) {
-      if (other === mob || !other.alive || other.aggro) continue;
-      if (other.poiId !== mob.poiId) continue;
-      if (Math.hypot(other.x - mob.x, other.z - mob.z) > 38) continue;
-      other.aggro = true;
-    }
-  }
-
   function hud() {
     const k = klass();
     const maxHp = maxHpFor(hero.level, k);
+    const marked = targetId ? mobs.get(targetId) : null;
+    const attacking = !!(marked && marked.alive && Math.hypot(marked.x - hero.x, marked.z - hero.z) <= REACH);
     return {
       name: hero.name,
       classId: k.id,
@@ -362,6 +406,7 @@ export function createSession(hero, storage) {
       line,
       log: log.slice(),
       target: currentTarget(),
+      attacking,
       speed: k.mods.speed || 1,
     };
   }
@@ -391,7 +436,6 @@ export function createSession(hero, storage) {
   function strike(mob, now, rng, neighbors) {
     const k = klass();
     mob.aggro = true;
-    callPack(mob);
     const diff = mob.level - hero.level;
     const hitChance = Math.min(0.97, Math.max(0.5, 0.9 - diff * 0.045));
     if (rng() > hitChance) {
@@ -438,7 +482,6 @@ export function createSession(hero, storage) {
       }
       if (nearest) {
         nearest.hp -= Math.max(1, Math.round(dmg * k.mods.splash));
-        nearest.aggro = true;
         if (nearest.hp <= 0) finish(nearest, now);
       }
     }
@@ -535,6 +578,19 @@ export function createSession(hero, storage) {
     }
     const k = klass();
     const maxHp = maxHpFor(hero.level, k);
+    let engaged = false;
+    let nearest = null;
+    let nearestD = AGGRO;
+    for (const mob of mobs.values()) {
+      if (!mob.alive) continue;
+      if (mob.aggro) engaged = true;
+      const dist = Math.hypot(mob.x - px, mob.z - pz);
+      if (!mob.aggro && dist < nearestD) {
+        nearestD = dist;
+        nearest = mob;
+      }
+    }
+    if (!engaged && nearest) nearest.aggro = true;
     for (const mob of mobs.values()) {
       if (!mob.alive) {
         if (now >= (hero.down[mob.id] || 0)) {
@@ -553,10 +609,6 @@ export function createSession(hero, storage) {
         mob.z = mob.homeZ;
         mob.stunUntil = 0;
         continue;
-      }
-      if (!mob.aggro && dist < AGGRO) {
-        mob.aggro = true;
-        callPack(mob);
       }
       if (mob.aggro && now >= (mob.stunUntil || 0)) {
         if (dist > 7.5) {

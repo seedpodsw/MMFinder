@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import CharacterCreate from "./CharacterCreate";
 import { createFieldView } from "./field-view";
-import { REACH, clearHero, createHero, createSession, loadHero, saveHero } from "../../shared/field.js";
+import { REACH, createHero, createSession, loadRoster, removeHero, saveHero } from "../../shared/field.js";
 
 const KIND_COLOR = {
   camp: "#c45c26",
@@ -31,6 +31,31 @@ const KIND_NAME = {
 };
 
 const MOVE_KEYS = new Set(["w", "a", "s", "d", "arrowup", "arrowdown", "arrowleft", "arrowright"]);
+
+const CLASS_TINT = {
+  fighter: 0xb5522a,
+  paladin: 0xd8c27a,
+  "shadow-knight": 0x6a3a55,
+  archer: 0x6e8f4a,
+  ranger: 0x3f6b45,
+  rogue: 0x8a7048,
+  monk: 0xc4a574,
+  bard: 0x7a5ea8,
+  beastmaster: 0x6a5330,
+  cleric: 0xf0efe4,
+  druid: 0x4e7a48,
+  shaman: 0x3d6a62,
+  elementalist: 0x4a78a8,
+  enchanter: 0x9a6a9a,
+  necromancer: 0x5c3d55,
+  inquisitor: 0xc8b48a,
+  spellblade: 0x6a7a9a,
+  wizard: 0x3a4a78,
+};
+
+function classTint(id) {
+  return CLASS_TINT[id] || 0xc45c26;
+}
 
 const emptyHud = {
   zoneId: "",
@@ -152,9 +177,9 @@ export default function Walk({
   const hudRef = useRef(emptyHud);
   const [hud, setHud] = useState(emptyHud);
   const [hover, setHover] = useState(null);
-  const [hero, setHero] = useState(() => loadHero());
+  const [roster, setRoster] = useState(() => loadRoster().heroes);
+  const [hero, setHero] = useState(null);
   const [combat, setCombat] = useState(null);
-  const [retiring, setRetiring] = useState(false);
   const heroRef = useRef(hero);
   const onBindRef = useRef(onBind);
   const onCombatRef = useRef(setCombat);
@@ -198,7 +223,7 @@ export default function Walk({
     const dotCache = new Map();
     const bounds = { minX: 0, maxX: 1, minZ: 0, maxZ: 1 };
     let aspectNow = 0;
-    const cam = { yaw: 0, pitch: 0.94, dist: 128 };
+    const cam = { yaw: 0, pitch: 1.2, dist: 104 };
     const desired = new THREE.Vector3();
 
     let renderer;
@@ -296,23 +321,24 @@ export default function Walk({
     const player = new THREE.Group();
     const visuals = new THREE.Group();
     const cloak = new THREE.Mesh(
-      new THREE.CylinderGeometry(2.3, 3.5, 7, 8),
-      new THREE.MeshBasicMaterial({ color: 0xc45c26 })
+      new THREE.CylinderGeometry(1.5, 2.05, 3.1, 8),
+      new THREE.MeshBasicMaterial({ color: classTint(heroRef.current?.classId) })
     );
-    cloak.position.y = 4.2;
+    cloak.position.y = 1.8;
     const head = new THREE.Mesh(
-      new THREE.SphereGeometry(2, 12, 10),
+      new THREE.SphereGeometry(1.15, 12, 10),
       new THREE.MeshBasicMaterial({ color: 0xf0d7a2 })
     );
-    head.position.y = 8.7;
+    head.position.y = 3.7;
     const nose = new THREE.Mesh(
-      new THREE.BoxGeometry(1.1, 1.1, 2.4),
+      new THREE.BoxGeometry(0.7, 0.45, 1.5),
       new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
     );
-    nose.position.set(0, 8.7, -2.4);
+    nose.position.set(0, 3.7, -1.7);
     visuals.add(cloak, head, nose);
+    visuals.scale.setScalar(0.55);
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(4.6, 5.8, 28),
+      new THREE.RingGeometry(1.45, 1.95, 28),
       new THREE.MeshBasicMaterial({ color: 0xf0c14b, side: THREE.DoubleSide, transparent: true, opacity: 0.92 })
     );
     ring.rotation.x = -Math.PI / 2;
@@ -479,7 +505,7 @@ export default function Walk({
       );
       if (force) {
         camera.position.copy(desired);
-        camera.lookAt(player.position.x, 5, player.position.z);
+        camera.lookAt(player.position.x, 1.2, player.position.z);
       }
     }
 
@@ -531,9 +557,18 @@ export default function Walk({
 
     function bindHero(next) {
       session = next ? createSession(structuredClone(next), localStorage) : null;
+      cloak.material.color.set(classTint(next?.classId));
       combatKey = "";
       if (session) publishCombat(session.hud());
       else onCombatRef.current(null);
+    }
+
+    function resume(saved) {
+      if (!saved) return;
+      const tile = tileById.get(saved.zoneId || saved.originId);
+      if (tile?.layer && tile.layer !== layerNow) setLayer(tile.layer, false);
+      if (Number.isFinite(saved.x) && Number.isFinite(saved.z)) snapTo({ x: saved.x, z: saved.z });
+      else if (tile) snapTo({ x: tile.art.x, z: tile.art.z });
     }
 
     function goToZone(id) {
@@ -659,7 +694,7 @@ export default function Walk({
     function publishCombat(snap) {
       if (!snap) return;
       const mark = snap.target;
-      const key = `${snap.hp}|${snap.xp}|${snap.level}|${snap.kills}|${snap.line}|${mark?.id || ""}|${mark?.hp ?? ""}`;
+      const key = `${snap.hp}|${snap.xp}|${snap.level}|${snap.kills}|${snap.line}|${mark?.id || ""}|${mark?.hp ?? ""}|${snap.attacking ? 1 : 0}`;
       if (key === combatKey) return;
       combatKey = key;
       onCombatRef.current(snap);
@@ -777,7 +812,7 @@ export default function Walk({
       ly = e.clientY;
       moved += Math.abs(dx) + Math.abs(dy);
       cam.yaw -= dx * 0.005;
-      cam.pitch = Math.min(1.35, Math.max(0.28, cam.pitch + dy * 0.0035));
+      cam.pitch = Math.min(1.4, Math.max(0.9, cam.pitch + dy * 0.0035));
     }
     function onPointerUp(e) {
       if (!dragging) return;
@@ -793,7 +828,7 @@ export default function Walk({
     }
     function onWheel(e) {
       e.preventDefault();
-      cam.dist = Math.min(540, Math.max(40, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
+      cam.dist = Math.min(210, Math.max(62, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
     }
     function onContext(e) {
       e.preventDefault();
@@ -1014,7 +1049,7 @@ export default function Walk({
       const fx = -Math.sin(cam.yaw);
       const fz = -Math.cos(cam.yaw);
       const sprint = keys.has("shift");
-      const speed = (48 + cam.dist * 0.22) * (sprint ? 2 : 1) * (session?.speed() || 1);
+      const speed = (16 + cam.dist * 0.05) * (sprint ? 1.65 : 1) * (session?.speed() || 1);
       if (!heroRef.current) keys.clear();
       const keyMove =
         keys.has("w") ||
@@ -1167,6 +1202,9 @@ export default function Walk({
           posOf
         );
         fieldView.sync(session.mobs, session.targetId, step.hud.level, player.position.x, player.position.z);
+        const prey = session.targetId ? session.mobs.get(session.targetId) : null;
+        const swinging = prey && prey.alive && Math.hypot(prey.x - player.position.x, prey.z - player.position.z) <= REACH;
+        ring.material.color.set(swinging ? 0xc45c26 : 0xf0c14b);
         publishCombat(step.hud);
         if (step.died) wake(step.originId);
       } else {
@@ -1180,7 +1218,7 @@ export default function Walk({
       } else {
         camera.position.lerp(desired, 1 - Math.exp(-10 * dt));
       }
-      camera.lookAt(player.position.x, 5, player.position.z);
+      camera.lookAt(player.position.x, 1.2, player.position.z);
       renderer.render(scene, camera);
       drawMini();
     }
@@ -1199,6 +1237,10 @@ export default function Walk({
       setPois,
       wake,
       bindHero,
+      resume,
+      flush() {
+        session?.flush();
+      },
     };
     if (session) publishCombat(session.hud());
 
@@ -1269,25 +1311,38 @@ export default function Walk({
     apiRef.current?.setPois(pois);
   }, [pois, atlasKey]);
 
+  function refreshRoster() {
+    setRoster(loadRoster().heroes);
+  }
+
+  function play(saved) {
+    saveHero(saved, localStorage);
+    setHero(saved);
+    refreshRoster();
+    apiRef.current?.bindHero(saved);
+    apiRef.current?.resume(saved);
+  }
+
   function conjure(draft) {
     const next = createHero(draft);
     saveHero(next, localStorage);
     setHero(next);
-    setRetiring(false);
+    refreshRoster();
     apiRef.current?.bindHero(next);
     apiRef.current?.wake(next.originId);
   }
 
-  function retire() {
-    if (!retiring) {
-      setRetiring(true);
-      return;
-    }
-    clearHero(localStorage);
+  function bench() {
+    apiRef.current?.flush();
     setHero(null);
     setCombat(null);
-    setRetiring(false);
+    refreshRoster();
     apiRef.current?.bindHero(null);
+  }
+
+  function release(id) {
+    removeHero(id, localStorage);
+    refreshRoster();
   }
 
   function onMini(e) {
@@ -1338,7 +1393,10 @@ export default function Walk({
             </div>
             <div>
               <dt>Attack</dt>
-              <dd>{combat.attack}</dd>
+              <dd>
+                {combat.attack}
+                {combat.attacking ? " · swinging" : ""}
+              </dd>
             </div>
           </dl>
           <div className="field-bar xp">
@@ -1372,8 +1430,8 @@ export default function Walk({
             ))}
           </ul>
           {hud.zoneName ? <p className="field-where">{hud.zoneName}</p> : null}
-          <button type="button" className="field-retire" onClick={retire}>
-            {retiring ? "Yes, let them go" : "Let this one go"}
+          <button type="button" className="field-retire" onClick={bench}>
+            Characters
           </button>
         </div>
       )}
@@ -1394,7 +1452,7 @@ export default function Walk({
         <p className="walk-go">{hud.travel || "Click the map to run"}</p>
         <p className="walk-keys">Click a creature to pull · Space · Tab · WASD</p>
       </aside>
-      {!hero && <CharacterCreate onConjure={conjure} />}
+      {!hero && <CharacterCreate roster={roster} onPlay={play} onConjure={conjure} onRelease={release} />}
       <div ref={tipRef} className={`map-hover-card${hover ? " show" : ""}`}>
         {hover && (
           <>

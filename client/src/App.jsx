@@ -8,7 +8,7 @@ import ItemsGrid from "./ItemsGrid";
 import GearFinder from "./GearFinder";
 import { huntsHere, huntsAtLevel, huntZonesNear, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
 import { loadHero } from "../../shared/field.js";
-import { appView, kindFor, readPlace, writePlace } from "../../shared/place.js";
+import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
 
 const SITE_TABS = [
   { view: "atlas", label: "Atlas" },
@@ -75,7 +75,11 @@ export default function App() {
   const [addingPoi, setAddingPoi] = useState(false);
   const [saving, setSaving] = useState(false);
   const [view, setView] = useState(() => appView(readPlace(window.location.search)));
-  const [klass, setKlass] = useState(() => readPlace(window.location.search).class || "");
+  const [klass, setKlass] = useState(() => {
+    const place = readPlace(window.location.search);
+    return place.view === "items" ? "" : place.class || "";
+  });
+  const [itemFilters, setItemFilters] = useState(() => itemLinkFilters(readPlace(window.location.search)));
   const [completed, setCompleted] = useState([]);
   const [flyNonce, setFlyNonce] = useState(0);
   const [huntFit, setHuntFit] = useState(true);
@@ -89,7 +93,8 @@ export default function App() {
     setWorld(w);
     setNotes(n);
     if (w.settings?.characterLevel) setLevel(w.settings.characterLevel);
-    if (w.settings?.characterClass && !readPlace(window.location.search).class) {
+    const opened = readPlace(window.location.search);
+    if (w.settings?.characterClass && !(opened.view !== "items" && opened.class)) {
       setKlass(w.settings.characterClass);
     }
     if (Array.isArray(w.settings?.completedSteps)) setCompleted(w.settings.completedSteps);
@@ -120,21 +125,36 @@ export default function App() {
     }
   }, [world]);
 
-  useEffect(() => {
+  const currentPlace = useMemo(() => {
     const placeView =
       view === "enhance" ? "quests" : view === "atlas" && kindFilter === "quest" ? "turnins" : view;
-    const desired = writePlace({
+    const onItems = placeView === "items";
+    return {
       view: placeView,
       zone: selectedId,
       poi: focusPoi,
-      class: klass || null,
+      class: onItems ? itemFilters.classId || null : klass || null,
       quest: focusQuestId,
       item: selectedItem?.id || null,
-    });
+      q: onItems ? itemFilters.q || null : null,
+      slot: onItems ? itemFilters.slot || null : null,
+      type: onItems ? itemFilters.kind || null : null,
+      farm: Boolean(onItems && itemFilters.onlyFarmable),
+      lvl: onItems && itemFilters.onlyFarmable ? itemFilters.level : null,
+      cols: onItems ? itemFilters.cols : null,
+    };
+  }, [view, kindFilter, selectedId, focusPoi, klass, focusQuestId, selectedItem, itemFilters]);
+
+  useEffect(() => {
+    const desired = writePlace(currentPlace);
     const next = desired === "?" ? "" : desired;
     if (window.location.search === next) return;
     window.history.replaceState(null, "", next || window.location.pathname);
-  }, [view, kindFilter, selectedId, focusPoi, klass, focusQuestId, selectedItem]);
+  }, [currentPlace]);
+
+  function updateItemFilters(next) {
+    setItemFilters((prev) => (JSON.stringify(prev) === JSON.stringify(next) ? prev : next));
+  }
 
   const zones = world?.zones || [];
   const allPois = world?.pois || [];
@@ -482,7 +502,7 @@ export default function App() {
     setNotes(await api.notes());
   }
 
-  function applyPlace(place) {
+  function applyPlace(place, { syncItems = false } = {}) {
     setView(appView(place));
     setKindFilter(kindFor(place));
     setDropMode(false);
@@ -492,25 +512,27 @@ export default function App() {
       setSelectedId(place.zone);
     }
     setFocusPoi(place.poi || null);
-    if (place.class) setKlass(place.class);
+    if (place.class && place.view !== "items") setKlass(place.class);
     setFocusQuestId(place.quest || null);
     if (place.item) {
       const item = (world?.items || []).find((x) => x.id === place.item);
       if (item) setSelectedItem(item);
     }
+    if (place.view === "items" && syncItems) setItemFilters(itemLinkFilters(place));
   }
 
   function followLink(event, place) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
     const href = writePlace(place);
+    const next = readPlace(href === "?" ? "" : href);
     window.history.pushState(null, "", href === "?" ? window.location.pathname : href);
-    applyPlace(readPlace(href === "?" ? "" : href));
+    applyPlace(next, { syncItems: next.view === "items" });
   }
 
   useEffect(() => {
     function onPop() {
-      applyPlace(readPlace(window.location.search));
+      applyPlace(readPlace(window.location.search), { syncItems: true });
     }
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
@@ -535,6 +557,13 @@ export default function App() {
   }
 
   const classLabel = (world.classes || []).find((c) => c.id === klass)?.name;
+  const crumbs = breadcrumb(currentPlace, {
+    zone: selected?.name,
+    poi: allPois.find((poi) => poi.id === focusPoi)?.name,
+    class: (world.classes || []).find((c) => c.id === currentPlace.class)?.name,
+    quest: (world.quests || []).find((quest) => quest.id === focusQuestId)?.title,
+    item: selectedItem?.name,
+  });
 
   return (
     <div className="shell">
@@ -641,6 +670,18 @@ export default function App() {
               {dropMode ? "Cancel drop" : "Drop a POI"}
             </button>
         )}
+        {crumbs.length > 2 && (
+          <nav className="crumb-nav" aria-label="Place">
+            {crumbs.map((crumb, index) => (
+              <span key={`${crumb.href}-${crumb.label}`} className="crumb">
+                {index > 0 && <span className="crumb-sep">/</span>}
+                <a href={crumb.href} onClick={(event) => followLink(event, readPlace(crumb.href))}>
+                  {crumb.label}
+                </a>
+              </span>
+            ))}
+          </nav>
+        )}
       </header>
 
       {error && <div className="banner">{error}</div>}
@@ -670,6 +711,8 @@ export default function App() {
           classes={world.classes || []}
           level={level}
           klass={klass}
+          linkFilters={itemFilters}
+          onLinkFilters={updateItemFilters}
           onFarm={showItemOnMap}
           onSelectItem={selectItem}
         />

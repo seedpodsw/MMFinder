@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import {
   AllCommunityModule,
@@ -159,13 +159,147 @@ function saveJSON(key, value) {
 
 const EMPTY_PRESETS = { classId: "", slot: "", kind: "", onlyFarmable: false, level: 1 };
 
-export default function ItemsGrid({ items, classes = [], level = 1, klass = "", onFarm, onSelectItem }) {
+function useFilterOptions(api, getValues) {
+  const [options, setOptions] = useState(() => getValues?.() || []);
+  useEffect(() => {
+    if (!api) return undefined;
+    const refresh = () => setOptions(getValues?.() || []);
+    refresh();
+    api.addEventListener("rowDataUpdated", refresh);
+    return () => api.removeEventListener("rowDataUpdated", refresh);
+  }, [api, getValues]);
+  return options;
+}
+
+function FilterChoices({ value, options, label, onChange }) {
+  const shown = !value || options.includes(value) ? options : [value, ...options];
+  return (
+    <select className="items-col-filter" aria-label={label} value={value} onChange={(event) => onChange(event.target.value)}>
+      <option value="">Any</option>
+      {shown.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  );
+}
+
+/** Kind/slot dropdowns in the column filter row. Slot matches any token on the item. */
+const TokenSetFilter = forwardRef(function TokenSetFilter(props, ref) {
+  const propsRef = useRef(props);
+  propsRef.current = props;
+  const valueRef = useRef("");
+  const [value, setValue] = useState("");
+  const getValues = props.getValues || props.filterParams?.getValues;
+  const options = useFilterOptions(props.api, getValues);
+  const label = props.colDef?.headerName || "Filter";
+
+  const choose = useCallback((next) => {
+    const picked = next || "";
+    valueRef.current = picked;
+    setValue(picked);
+    const current = propsRef.current;
+    (current.onToken || current.filterParams?.onToken)?.(picked);
+    current.filterChangedCallback?.();
+  }, []);
+
+  useImperativeHandle(ref, () => ({
+    isFilterActive() {
+      return Boolean(valueRef.current);
+    },
+    doesFilterPass(params) {
+      const picked = valueRef.current;
+      if (!picked) return true;
+      const data = params.data || params.node?.data;
+      if (!data) return true;
+      const current = propsRef.current;
+      const field = current.colDef?.field;
+      const raw = data[field];
+      const tokenize = current.tokenize ?? current.filterParams?.tokenize;
+      if (tokenize) return tokensOf(raw).includes(picked);
+      return String(raw || "") === picked;
+    },
+    getModel() {
+      return valueRef.current ? { filterType: "token", value: valueRef.current } : null;
+    },
+    setModel(model) {
+      const next = model?.value || "";
+      const changed = next !== valueRef.current;
+      valueRef.current = next;
+      setValue(next);
+      if (changed) {
+        const current = propsRef.current;
+        (current.onToken || current.filterParams?.onToken)?.(next);
+      }
+    },
+    onFloatingFilterChanged(_type, next) {
+      choose(next);
+    },
+  }));
+
+  return (
+    <div className="items-filter-popup">
+      <FilterChoices label={label} value={value} options={options} onChange={choose} />
+    </div>
+  );
+});
+
+const TokenSetFloatingFilter = forwardRef(function TokenSetFloatingFilter(props, ref) {
+  const [value, setValue] = useState("");
+  const options = useFilterOptions(props.api, props.filterParams?.getValues || props.getValues);
+  const label = props.column?.getColDef?.().headerName || "Filter";
+
+  useImperativeHandle(ref, () => ({
+    onParentModelChanged(model) {
+      setValue(model?.value || "");
+    },
+  }));
+
+  return (
+    <FilterChoices
+      label={label}
+      value={value}
+      options={options}
+      onChange={(next) => {
+        setValue(next);
+        props.parentFilterInstance((instance) => {
+          instance.onFloatingFilterChanged?.(null, next);
+        });
+      }}
+    />
+  );
+});
+
+export default function ItemsGrid({
+  items,
+  classes = [],
+  level = 1,
+  klass = "",
+  linkFilters = null,
+  onLinkFilters,
+  onFarm,
+  onSelectItem,
+}) {
   const gridRef = useRef(null);
   const apiRef = useRef(null);
   const restoredRef = useRef(false);
+  const linkFiltersRef = useRef(linkFilters);
+  const onLinkFiltersRef = useRef(onLinkFilters);
+  const publishedRef = useRef("");
+  const seenFilters = useRef(linkFilters);
+  linkFiltersRef.current = linkFilters;
+  onLinkFiltersRef.current = onLinkFilters;
 
-  const [quickFilter, setQuickFilter] = useState("");
-  const [presets, setPresets] = useState(() => ({ ...EMPTY_PRESETS, level: level || 1, classId: klass || "" }));
+  const [quickFilter, setQuickFilter] = useState(() => linkFilters?.q || "");
+  const [presets, setPresets] = useState(() => ({
+    ...EMPTY_PRESETS,
+    level: linkFilters?.level || level || 1,
+    classId: linkFilters?.classId || klass || "",
+    slot: linkFilters?.slot || "",
+    kind: linkFilters?.kind || "",
+    onlyFarmable: Boolean(linkFilters?.onlyFarmable),
+  }));
   const [displayedCount, setDisplayedCount] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [colVisibility, setColVisibility] = useState({});
@@ -173,6 +307,8 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
 
   const presetsRef = useRef(presets);
   presetsRef.current = presets;
+  const quickRef = useRef(quickFilter);
+  quickRef.current = quickFilter;
 
   const farmHandler = useCallback((row) => onFarm?.(row?._item || row), [onFarm]);
   const rowData = useMemo(() => toRows(items), [items]);
@@ -194,11 +330,52 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
     return [...set].sort();
   }, [rowData]);
 
+  const slotOptionsRef = useRef(slotOptions);
+  const kindOptionsRef = useRef(kindOptions);
+  slotOptionsRef.current = slotOptions;
+  kindOptionsRef.current = kindOptions;
+  const slotValues = useCallback(() => slotOptionsRef.current, []);
+  const kindValues = useCallback(() => kindOptionsRef.current, []);
+  const onSlotToken = useCallback((value) => {
+    const prev = presetsRef.current;
+    const slot = value || "";
+    if ((prev.slot || "") === slot) return;
+    const next = { ...prev, slot };
+    presetsRef.current = next;
+    setPresets(next);
+  }, []);
+  const onKindToken = useCallback((value) => {
+    const prev = presetsRef.current;
+    const kind = value || "";
+    if ((prev.kind || "") === kind) return;
+    const next = { ...prev, kind };
+    presetsRef.current = next;
+    setPresets(next);
+  }, []);
+
   const columnDefs = useMemo(
     () => [
       { field: "name", headerName: "Item", filter: "agTextColumnFilter", minWidth: 200, flex: 1.4, pinned: "left" },
-      { field: "kind", headerName: "Kind", filter: "agSetColumnFilter", width: 100 },
-      { field: "slot", headerName: "Slot", filter: "agSetColumnFilter", width: 120 },
+      {
+        field: "kind",
+        headerName: "Kind",
+        width: 130,
+        filter: TokenSetFilter,
+        floatingFilterComponent: TokenSetFloatingFilter,
+        filterParams: { getValues: kindValues, onToken: onKindToken },
+        suppressFloatingFilterButton: true,
+        suppressHeaderFilterButton: true,
+      },
+      {
+        field: "slot",
+        headerName: "Slot",
+        width: 150,
+        filter: TokenSetFilter,
+        floatingFilterComponent: TokenSetFloatingFilter,
+        filterParams: { tokenize: true, getValues: slotValues, onToken: onSlotToken },
+        suppressFloatingFilterButton: true,
+        suppressHeaderFilterButton: true,
+      },
       numCol("ac", "AC"),
       numCol("dmg", "DMG"),
       numCol("delay", "Delay", 86),
@@ -252,7 +429,7 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
       { field: "notes", headerName: "Notes", filter: "agTextColumnFilter", minWidth: 140, flex: 1 },
       { field: "wikiUrl", headerName: "Wiki", width: 80, filter: false, sortable: false, cellRenderer: WikiCell },
     ],
-    [farmHandler]
+    [farmHandler, kindValues, slotValues, onKindToken, onSlotToken]
   );
 
   const allColumns = useMemo(
@@ -266,15 +443,17 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
       resizable: true,
       filter: true,
       floatingFilter: true,
+      menuTabs: ["filterMenuTab"],
       suppressHeaderMenuButton: true,
+      suppressHeaderFilterButton: false,
     }),
     []
   );
 
-  // ---- External (preset) filter -------------------------------------------
+  // Class and farmable stay outside the columns. Kind and slot are column filters.
   const isExternalFilterPresent = useCallback(() => {
     const p = presetsRef.current;
-    return Boolean(p.classId || p.slot || p.kind || p.onlyFarmable);
+    return Boolean(p.classId || p.onlyFarmable);
   }, []);
 
   const doesExternalFilterPass = useCallback((node) => {
@@ -288,12 +467,6 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
       const usableByAll = tokens.length === 0 || tokens.some((t) => ALL_CLASS_TOKENS.has(t));
       const match = usableByAll || tokens.some((t) => abbrs.includes(t));
       if (!match) return false;
-    }
-    if (p.slot) {
-      if (!tokensOf(d.slot).includes(p.slot)) return false;
-    }
-    if (p.kind) {
-      if (d.kind !== p.kind) return false;
     }
     if (p.onlyFarmable) {
       const lvl = Number(p.level) || 0;
@@ -362,22 +535,103 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
     if (view) saveJSON(STORE_LAST, view);
   }, [captureView]);
 
-  const applyView = useCallback(
-    (view) => {
-      const api = apiRef.current;
-      if (!api || !view) return;
-      if (view.columnState) api.applyColumnState({ state: view.columnState, applyOrder: true });
-      if (view.filterModel) api.setFilterModel(view.filterModel);
-      setQuickFilter(view.quickFilter || "");
-      setPresets({ ...EMPTY_PRESETS, ...(view.presets || {}) });
-      // sync visibility map from restored column state
-      const vis = {};
-      for (const cs of view.columnState || []) vis[cs.colId] = !cs.hide;
-      setColVisibility(vis);
-      api.onFilterChanged();
-    },
-    []
-  );
+  const publish = useCallback(() => {
+    const api = apiRef.current;
+    if (!api || !onLinkFiltersRef.current) return;
+    const model = { ...(api.getFilterModel() || {}) };
+    delete model.slot;
+    delete model.kind;
+    const p = presetsRef.current;
+    const next = {
+      q: quickRef.current || "",
+      classId: p.classId || "",
+      slot: p.slot || "",
+      kind: p.kind || "",
+      onlyFarmable: Boolean(p.onlyFarmable),
+      level: p.onlyFarmable ? Number(p.level) || 1 : null,
+      cols: Object.keys(model).length ? model : null,
+    };
+    const key = JSON.stringify(next);
+    if (key === publishedRef.current) return;
+    publishedRef.current = key;
+    onLinkFiltersRef.current(next);
+  }, []);
+
+  const applyLinkFilters = useCallback((filters, api, initial = false) => {
+    const current = presetsRef.current;
+    const nextPresets = {
+      ...EMPTY_PRESETS,
+      ...current,
+      classId: filters?.classId || (initial ? current.classId : "") || "",
+      slot: filters?.slot || "",
+      kind: filters?.kind || "",
+      onlyFarmable: Boolean(filters?.onlyFarmable),
+      level: filters?.level || current.level || 1,
+    };
+    presetsRef.current = nextPresets;
+    quickRef.current = filters?.q || "";
+    setQuickFilter(quickRef.current);
+    setPresets(nextPresets);
+    const model = { ...(filters?.cols || {}) };
+    if (nextPresets.slot) model.slot = { filterType: "token", value: nextPresets.slot };
+    if (nextPresets.kind) model.kind = { filterType: "token", value: nextPresets.kind };
+    api.setFilterModel(Object.keys(model).length ? model : null);
+  }, []);
+
+  const setTokenFilter = useCallback((field, value) => {
+    const api = apiRef.current;
+    const prev = presetsRef.current;
+    const nextPresets = { ...prev, [field]: value };
+    presetsRef.current = nextPresets;
+    setPresets(nextPresets);
+    if (!api) return;
+    const model = { ...(api.getFilterModel() || {}) };
+    if (value) model[field] = { filterType: "token", value };
+    else delete model[field];
+    api.setFilterModel(Object.keys(model).length ? model : null);
+  }, []);
+
+  useEffect(() => {
+    publish();
+  }, [quickFilter, publish]);
+
+  useEffect(() => {
+    if (linkFilters === seenFilters.current) return;
+    seenFilters.current = linkFilters;
+    const key = JSON.stringify(linkFilters || null);
+    if (key === publishedRef.current) return;
+    const api = apiRef.current;
+    if (!api) return;
+    publishedRef.current = key;
+    applyLinkFilters(linkFilters, api, false);
+  }, [linkFilters, applyLinkFilters]);
+
+  const applyView = useCallback((view) => {
+    const api = apiRef.current;
+    if (!api || !view) return;
+    if (view.columnState) api.applyColumnState({ state: view.columnState, applyOrder: true });
+    const nextPresets = { ...EMPTY_PRESETS, level: presetsRef.current.level || 1, ...(view.presets || {}) };
+    const model = { ...(view.filterModel || {}) };
+    if (model.slot?.filterType !== "token" && nextPresets.slot) {
+      model.slot = { filterType: "token", value: nextPresets.slot };
+    }
+    if (model.kind?.filterType !== "token" && nextPresets.kind) {
+      model.kind = { filterType: "token", value: nextPresets.kind };
+    }
+    if (!nextPresets.slot) delete model.slot;
+    if (!nextPresets.kind) delete model.kind;
+    if (model.slot?.filterType === "token") nextPresets.slot = model.slot.value || "";
+    if (model.kind?.filterType === "token") nextPresets.kind = model.kind.value || "";
+    presetsRef.current = nextPresets;
+    quickRef.current = view.quickFilter || "";
+    setQuickFilter(quickRef.current);
+    setPresets(nextPresets);
+    api.setFilterModel(Object.keys(model).length ? model : null);
+    const vis = {};
+    for (const cs of view.columnState || []) vis[cs.colId] = !cs.hide;
+    setColVisibility(vis);
+    api.onFilterChanged();
+  }, []);
 
   const onGridReady = useCallback(
     (e) => {
@@ -385,25 +639,36 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
       if (!restoredRef.current) {
         restoredRef.current = true;
         const last = loadJSON(STORE_LAST, null);
-        if (last) applyView(last);
+        if (last?.columnState) {
+          e.api.applyColumnState({ state: last.columnState, applyOrder: true });
+          const vis = {};
+          for (const cs of last.columnState) vis[cs.colId] = !cs.hide;
+          setColVisibility(vis);
+        }
+        applyLinkFilters(linkFiltersRef.current, e.api, true);
       }
       setDisplayedCount(e.api.getDisplayedRowCount());
+      publish();
     },
-    [applyView]
+    [applyLinkFilters, publish]
   );
 
   const onStateChanged = useCallback(() => {
     setDisplayedCount(apiRef.current?.getDisplayedRowCount() || 0);
+    publish();
     persistLast();
-  }, [persistLast]);
+  }, [persistLast, publish]);
 
   const resetView = useCallback(() => {
     const api = apiRef.current;
     if (!api) return;
+    const nextPresets = { ...EMPTY_PRESETS, level: level || 1 };
+    presetsRef.current = nextPresets;
+    quickRef.current = "";
     api.setFilterModel(null);
     api.applyColumnState({ defaultState: { hide: false, sort: null }, applyOrder: false });
     setQuickFilter("");
-    setPresets({ ...EMPTY_PRESETS, level: level || 1 });
+    setPresets(nextPresets);
     showAllColumns();
     try {
       localStorage.removeItem(STORE_LAST);
@@ -479,8 +744,8 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
           <input
             value={quickFilter}
             onChange={(e) => {
+              quickRef.current = e.target.value;
               setQuickFilter(e.target.value);
-              persistLast();
             }}
             placeholder="Name, AC, zone, mob, slot…"
           />
@@ -542,7 +807,7 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
 
         <label>
           <span>Slot</span>
-          <select value={presets.slot} onChange={(e) => updatePreset({ slot: e.target.value })}>
+          <select value={presets.slot} onChange={(e) => setTokenFilter("slot", e.target.value)}>
             <option value="">Any slot</option>
             {slotOptions.map((s) => (
               <option key={s} value={s}>
@@ -553,9 +818,9 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
         </label>
 
         <label>
-          <span>Type</span>
-          <select value={presets.kind} onChange={(e) => updatePreset({ kind: e.target.value })}>
-            <option value="">Any type</option>
+          <span>Kind</span>
+          <select value={presets.kind} onChange={(e) => setTokenFilter("kind", e.target.value)}>
+            <option value="">Any kind</option>
             {kindOptions.map((k) => (
               <option key={k} value={k}>
                 {k}
@@ -585,7 +850,17 @@ export default function ItemsGrid({ items, classes = [], level = 1, klass = "", 
           <button
             type="button"
             className="items-chip clear"
-            onClick={() => setPresets({ ...EMPTY_PRESETS, level: presets.level })}
+            onClick={() => {
+              const next = { ...EMPTY_PRESETS, level: presets.level };
+              presetsRef.current = next;
+              setPresets(next);
+              const api = apiRef.current;
+              if (!api) return;
+              const model = { ...(api.getFilterModel() || {}) };
+              delete model.slot;
+              delete model.kind;
+              api.setFilterModel(Object.keys(model).length ? model : null);
+            }}
           >
             Clear presets ({activePresetCount})
           </button>

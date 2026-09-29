@@ -13,17 +13,18 @@ function labelTexture(name, level) {
   const c = document.createElement("canvas");
   const g = c.getContext("2d");
   const text = `${name}  ${level}`;
-  g.font = "600 36px Cinzel, serif";
-  const width = Math.max(96, Math.ceil(g.measureText(text).width + 24));
+  g.font = "600 28px sans-serif";
+  const width = Math.max(64, Math.ceil(g.measureText(text).width + 8));
   c.width = width;
-  c.height = 52;
-  g.font = "600 36px Cinzel, serif";
-  g.fillStyle = "rgba(12, 8, 6, 0.78)";
-  g.fillRect(0, 4, width, 44);
-  g.fillStyle = "#f3e6c8";
+  c.height = 36;
+  g.font = "600 28px sans-serif";
   g.textAlign = "center";
   g.textBaseline = "middle";
-  g.fillText(text, width / 2, 28);
+  g.lineWidth = 5;
+  g.strokeStyle = "#9a9084";
+  g.strokeText(text, width / 2, 18);
+  g.fillStyle = "#ffffff";
+  g.fillText(text, width / 2, 18);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   return { tex, width };
@@ -50,36 +51,47 @@ export function createFieldView(scene) {
   function make(mob) {
     const group = new THREE.Group();
     const scale = mob.named ? 1.28 : 1;
+    const figure = new THREE.Group();
     const body = new THREE.Mesh(
-      new THREE.ConeGeometry(2.1 * scale, 6.2 * scale, 7),
+      new THREE.CylinderGeometry(1.35 * scale, 1.85 * scale, 2.2 * scale, 8),
       new THREE.MeshBasicMaterial({ color: colorOf(mob.name) })
     );
-    body.position.y = 3.3 * scale;
+    body.position.y = 1.25 * scale;
     body.userData.mobId = mob.id;
+    const head = new THREE.Mesh(
+      new THREE.SphereGeometry(0.85 * scale, 10, 8),
+      new THREE.MeshBasicMaterial({ color: colorOf(mob.name) })
+    );
+    head.position.y = 2.55 * scale;
+    const nose = new THREE.Mesh(
+      new THREE.BoxGeometry(0.4 * scale, 0.3 * scale, 1.1 * scale),
+      new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
+    );
+    nose.position.set(0, 2.55 * scale, -1.15 * scale);
+    figure.add(body, head, nose);
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(3.1 * scale, 3.8 * scale, 18),
+      new THREE.RingGeometry(2.5 * scale, 3.15 * scale, 18),
       new THREE.MeshBasicMaterial({ color: 0xf3e6c8, side: THREE.DoubleSide })
     );
     ring.rotation.x = -Math.PI / 2;
-    ring.position.y = 0.9;
+    ring.position.y = 0.35;
     const bar = new THREE.Mesh(
-      new THREE.PlaneGeometry(6.2, 0.55),
+      new THREE.PlaneGeometry(4.2, 0.38),
       new THREE.MeshBasicMaterial({ color: 0x6dbf6a })
     );
     bar.rotation.x = -Math.PI / 2;
-    bar.position.y = 0.95;
+    bar.position.set(0, 0.4, 2.3 * scale);
     const { tex, width } = labelTexture(mob.name, mob.level);
     const sprite = new THREE.Sprite(
       new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false })
     );
-    const worldW = Math.min(12, Math.max(7.5, width * 0.042));
-    sprite.scale.set(worldW, worldW * (52 / width), 1);
-    sprite.position.y = 7.4 * scale;
-    sprite.visible = false;
-    group.add(body, ring, bar, sprite);
+    const worldW = Math.min(26, Math.max(16, width * 0.08));
+    sprite.scale.set(worldW, worldW * (36 / width), 1);
+    sprite.position.y = 5.6 * scale;
+    group.add(figure, ring, bar, sprite);
     scene.add(group);
     bodies.push(body);
-    const entry = { group, body, ring, bar, sprite };
+    const entry = { group, figure, body, ring, bar, sprite };
     groups.set(mob.id, entry);
     return entry;
   }
@@ -92,18 +104,21 @@ export function createFieldView(scene) {
       entry.group.visible = mob.alive;
       if (!mob.alive) continue;
       entry.group.position.set(mob.x, 0, mob.z);
-      if (Number.isFinite(px) && Number.isFinite(pz)) {
-        entry.group.rotation.y = Math.atan2(px - mob.x, pz - mob.z);
+      entry.group.rotation.y = 0;
+      if (Number.isFinite(px) && Number.isFinite(pz) && mob.aggro) {
+        entry.figure.rotation.y = Math.atan2(mob.x - px, mob.z - pz);
       }
       const ratio = Math.max(0.05, mob.hp / mob.maxHp);
-      entry.bar.scale.x = ratio;
-      entry.bar.position.x = (ratio - 1) * 3.1;
-      entry.bar.material.color.set(ratio < 0.35 ? 0xd4544a : 0x6dbf6a);
-      entry.ring.material.color.set(conOf(mob.level, playerLevel));
       const marked = mob.id === targetId;
-      entry.sprite.visible = marked;
-      entry.ring.scale.setScalar(marked ? 1.2 : 1);
-      entry.body.position.y = 3.3 * (mob.named ? 1.28 : 1) + Math.sin(performance.now() / 280 + mob.phase) * 0.25;
+      entry.bar.scale.x = ratio;
+      entry.bar.position.x = 0;
+      entry.bar.material.color.set(ratio < 0.35 ? 0xd4544a : 0x6dbf6a);
+      entry.bar.visible = marked || mob.hp < mob.maxHp;
+      const con = conOf(mob.level, playerLevel);
+      entry.ring.material.color.set(con);
+      entry.sprite.material.color.set(con);
+      entry.ring.scale.setScalar(marked ? 1.25 : 1);
+      entry.figure.position.y = Math.sin(performance.now() / 280 + mob.phase) * 0.12;
     }
     for (const [id, entry] of groups) {
       if (!live.has(id)) {
@@ -115,7 +130,14 @@ export function createFieldView(scene) {
 
   function pick(raycaster) {
     const hits = raycaster.intersectObjects(bodies, false);
-    const hit = hits.find((h) => h.object.visible && h.object.parent?.visible);
+    const hit = hits.find((h) => {
+      let node = h.object;
+      while (node) {
+        if (!node.visible) return false;
+        node = node.parent;
+      }
+      return true;
+    });
     return hit?.object.userData.mobId || null;
   }
 
