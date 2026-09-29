@@ -36,6 +36,90 @@ function labelTexture(name, level) {
   return tex;
 }
 
+function lit(color) {
+  return new THREE.MeshLambertMaterial({ color });
+}
+
+export function makeCritter({ color, scale = 1, named = false, mobId = null }) {
+  const figure = new THREE.Group();
+  const s = scale;
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.92 * s, 22, 16), lit(color));
+  body.scale.set(1.15, 0.95, 1.05);
+  body.position.y = 0.82 * s;
+  if (mobId) body.userData.mobId = mobId;
+
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.64 * s, 20, 14), lit(color));
+  head.position.set(0, 1.62 * s, -0.06 * s);
+
+  const belly = new THREE.Mesh(new THREE.SphereGeometry(0.5 * s, 14, 10), lit(0xfff3e4));
+  belly.scale.set(1, 0.82, 0.5);
+  belly.position.set(0, 0.66 * s, -0.78 * s);
+
+  const earMat = lit(0xfff6ea);
+  const earInner = lit(0xf3a0a8);
+  const ear = (x) => {
+    const g = new THREE.Group();
+    const outer = new THREE.Mesh(new THREE.SphereGeometry(0.3 * s, 12, 8), earMat);
+    outer.scale.set(0.5, 1.45, 0.42);
+    const inner = new THREE.Mesh(new THREE.SphereGeometry(0.14 * s, 8, 6), earInner);
+    inner.scale.set(0.4, 0.95, 0.3);
+    inner.position.set(0, -0.02 * s, -0.08 * s);
+    g.add(outer, inner);
+    g.position.set(x * 0.48 * s, 2.12 * s, -0.02 * s);
+    g.rotation.z = x > 0 ? -0.4 : 0.4;
+    return g;
+  };
+
+  const white = lit(0xfffdf8);
+  const pupilMat = lit(0x241810);
+  const eye = (x) => {
+    const g = new THREE.Group();
+    const ball = new THREE.Mesh(new THREE.SphereGeometry(0.18 * s, 12, 8), white);
+    const pupil = new THREE.Mesh(new THREE.SphereGeometry(0.09 * s, 8, 6), pupilMat);
+    pupil.position.set(0, -0.01 * s, -0.13 * s);
+    g.add(ball, pupil);
+    g.position.set(x * 0.26 * s, 1.7 * s, -0.56 * s);
+    return g;
+  };
+
+  const blushMat = lit(0xf09098);
+  const blush = (x) => {
+    const m = new THREE.Mesh(new THREE.SphereGeometry(0.13 * s, 8, 6), blushMat);
+    m.scale.set(1.25, 0.7, 0.35);
+    m.position.set(x * 0.42 * s, 1.46 * s, -0.6 * s);
+    return m;
+  };
+
+  const mouth = new THREE.Mesh(new THREE.TorusGeometry(0.11 * s, 0.028 * s, 6, 12, Math.PI), lit(0x3a2820));
+  mouth.rotation.z = Math.PI;
+  mouth.position.set(0, 1.36 * s, -0.64 * s);
+
+  const footMat = lit(0x3a2820);
+  const foot = (x) => {
+    const m = new THREE.Mesh(new THREE.SphereGeometry(0.2 * s, 10, 8), footMat);
+    m.scale.set(1.15, 0.42, 1.35);
+    m.position.set(x * 0.4 * s, 0.1 * s, -0.28 * s);
+    return m;
+  };
+
+  const tail = new THREE.Mesh(new THREE.SphereGeometry(0.24 * s, 10, 8), lit(color));
+  tail.position.set(0, 0.72 * s, 0.9 * s);
+
+  figure.add(body, head, belly, ear(-1), ear(1), eye(-1), eye(1), blush(-1), blush(1), mouth, foot(-1), foot(1), tail);
+
+  if (named) {
+    const hornMat = lit(0xf0c14b);
+    const horn = (x) => {
+      const m = new THREE.Mesh(new THREE.ConeGeometry(0.11 * s, 0.42 * s, 7), hornMat);
+      m.position.set(x * 0.22 * s, 2.22 * s, 0.04 * s);
+      return m;
+    };
+    figure.add(horn(-1), horn(1));
+  }
+
+  return { figure, body, head, tail };
+}
+
 export function createFieldView(scene) {
   const groups = new Map();
   const bodies = [];
@@ -56,43 +140,11 @@ export function createFieldView(scene) {
 
   function make(mob) {
     const group = new THREE.Group();
-    const scale = mob.named ? 1.18 : 1;
+    const scale = mob.named ? 1.62 : 1.45;
     const color = colorOf(mob.name);
-    const figure = new THREE.Group();
-    const body = new THREE.Mesh(
-      new THREE.SphereGeometry(0.95 * scale, 16, 12),
-      new THREE.MeshBasicMaterial({ color })
-    );
-    body.scale.set(1.05, 0.82, 1.05);
-    body.position.y = 0.78 * scale;
-    body.userData.mobId = mob.id;
-    const earMat = new THREE.MeshBasicMaterial({ color: 0xfff1d6 });
-    const earL = new THREE.Mesh(new THREE.SphereGeometry(0.28 * scale, 8, 6), earMat);
-    earL.scale.set(0.7, 1.2, 0.7);
-    earL.position.set(-0.46 * scale, 1.38 * scale, -0.12 * scale);
-    const earR = earL.clone();
-    earR.position.x = 0.46 * scale;
-    const eyeMat = new THREE.MeshBasicMaterial({ color: 0x2a2118 });
-    const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.12 * scale, 8, 6), eyeMat);
-    eyeL.position.set(-0.28 * scale, 0.9 * scale, -0.78 * scale);
-    const eyeR = eyeL.clone();
-    eyeR.position.x = 0.28 * scale;
-    const blush = new THREE.Mesh(
-      new THREE.SphereGeometry(0.1 * scale, 6, 4),
-      new THREE.MeshBasicMaterial({ color: 0xe07a7a })
-    );
-    blush.position.set(-0.46 * scale, 0.64 * scale, -0.72 * scale);
-    const blushR = blush.clone();
-    blushR.position.x = 0.46 * scale;
-    figure.add(body, earL, earR, eyeL, eyeR, blush, blushR);
-    if (mob.named) {
-      const hornMat = new THREE.MeshBasicMaterial({ color: 0xf0c14b });
-      const hornL = new THREE.Mesh(new THREE.ConeGeometry(0.12 * scale, 0.42 * scale, 5), hornMat);
-      hornL.position.set(-0.26 * scale, 1.62 * scale, 0.02);
-      const hornR = hornL.clone();
-      hornR.position.x = 0.26 * scale;
-      figure.add(hornL, hornR);
-    }
+    const critter = makeCritter({ color, scale, named: mob.named, mobId: mob.id });
+    const figure = critter.figure;
+    const body = critter.body;
     const pad = new THREE.Mesh(
       new THREE.CircleGeometry(2.1 * scale, 16),
       new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })
@@ -121,13 +173,13 @@ export function createFieldView(scene) {
     const sprite = new THREE.Sprite(
       new THREE.SpriteMaterial({ map: labelTexture(mob.name, mob.level), transparent: true, depthWrite: false })
     );
-    sprite.scale.set(3.6, 3.6 * (PLATE_H / PLATE_W), 1);
+    sprite.scale.set(5.2, 5.2 * (PLATE_H / PLATE_W), 1);
     sprite.center.set(0.5, 0);
-    sprite.position.y = 1.9;
+    sprite.position.y = 2.35 * scale;
     group.add(shadow, figure, pad, ring, bar, sprite);
     scene.add(group);
     bodies.push(body, pad);
-    const entry = { group, figure, body, ring, bar, sprite, color, lastHp: mob.maxHp, flash: 0 };
+    const entry = { group, figure, body, head: critter.head, ring, bar, sprite, color, lastHp: mob.maxHp, flash: 0 };
     groups.set(mob.id, entry);
     return entry;
   }
@@ -148,7 +200,9 @@ export function createFieldView(scene) {
       const marked = mob.id === targetId;
       if (mob.hp < entry.lastHp) entry.flash = performance.now() + 140;
       entry.lastHp = mob.hp;
-      entry.body.material.color.set(entry.flash > performance.now() ? 0xfff6e4 : entry.color);
+      const tint = entry.flash > performance.now() ? 0xfff6e4 : entry.color;
+      entry.body.material.color.set(tint);
+      entry.head.material.color.set(tint);
       entry.bar.scale.x = ratio;
       entry.bar.position.x = (ratio - 1) * 1.2;
       entry.bar.material.color.set(ratio < 0.35 ? 0xd4544a : 0x6dbf6a);
