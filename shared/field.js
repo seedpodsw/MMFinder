@@ -33,8 +33,8 @@ export const CLASSES = [
 export const REACH = 9;
 const AGGRO = 6;
 const LEASH = 42;
-const SHOW = 220;
-const HIDE = 400;
+const SHOW = 360;
+const HIDE = 540;
 
 export function classById(id) {
   return CLASSES.find((c) => c.id === id) || null;
@@ -137,24 +137,30 @@ export function layoutPack(poi) {
   if (level == null) return [];
   const named = poi.kind === "named";
   const names = monsterNames(poi.monsters);
-  const count = named ? 1 : Math.min(4, Math.max(1, names.length || 1));
+  const list = names.length ? names : [poi.name || "creature"];
+  const per = named ? 1 : list.length <= 1 ? 4 : list.length === 2 ? 3 : 2;
+  const capCount = named ? 1 : 8;
   const pack = [];
-  for (let i = 0; i < count; i++) {
-    const raw = named ? poi.name : names[i % Math.max(1, names.length)] || poi.name || "creature";
-    const name = cap(named ? raw : singular(raw));
-    const h = hash(`${poi.id}:${i}`);
-    const ang = ((h % 360) * Math.PI) / 180;
-    const dist = 9 + (h % 16);
-    pack.push({
-      id: `${poi.id}:${i}`,
-      poiId: poi.id,
-      name,
-      named,
-      level,
-      ox: Math.cos(ang) * dist,
-      oz: Math.sin(ang) * dist,
-      ...traitOf(name),
-    });
+  let i = 0;
+  for (const rawName of named ? [poi.name] : list) {
+    for (let copy = 0; copy < per && pack.length < capCount; copy++) {
+      const raw = named ? poi.name : rawName;
+      const name = cap(named ? raw : singular(raw));
+      const h = hash(`${poi.id}:${i}`);
+      const ang = ((h % 360) * Math.PI) / 180;
+      const dist = named ? 0 : 14 + (h % 24);
+      pack.push({
+        id: `${poi.id}:${i}`,
+        poiId: poi.id,
+        name,
+        named,
+        level,
+        ox: Math.cos(ang) * dist,
+        oz: Math.sin(ang) * dist,
+        ...traitOf(name),
+      });
+      i += 1;
+    }
   }
   return pack;
 }

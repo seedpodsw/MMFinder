@@ -57,9 +57,10 @@ test("kills grant xp and a gray con is worth one point", () => {
 test("a camp pack is stable and a named is a single tougher spawn", () => {
   const a = layoutPack(rats);
   const b = layoutPack(rats);
-  assert.equal(a.length, 2);
+  assert.equal(a.length, 6);
   assert.deepEqual(a.map((m) => m.id), b.map((m) => m.id));
-  assert.equal(a[0].name, "Rat");
+  assert.equal(a.filter((m) => m.name === "Rat").length, 3);
+  assert.equal(a.filter((m) => m.name === "Bat").length, 3);
   const named = layoutPack({ ...rats, kind: "named", name: "Snar the Egg Collector", monsters: "" });
   assert.equal(named.length, 1);
   assert.equal(named[0].name, "Snar the Egg Collector");
@@ -141,7 +142,7 @@ test("pulling one creature leaves the rest of the camp alone", () => {
   const now = 2_000_000;
   session.update(0.2, 0, 0, "surface", "night-harbor", now, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
   const pack = [...session.mobs.values()];
-  assert.equal(pack.length, 2);
+  assert.equal(pack.length, 6);
   for (const mob of pack) {
     mob.x = 0;
     mob.z = 0;
