@@ -19,7 +19,7 @@ function shuffle(list) {
 }
 
 function paintOutline(img, canvas) {
-  const max = 440;
+  const max = 520;
   const scale = Math.min(max / img.naturalWidth, max / img.naturalHeight);
   const width = Math.max(1, Math.round(img.naturalWidth * scale));
   const height = Math.max(1, Math.round(img.naturalHeight * scale));

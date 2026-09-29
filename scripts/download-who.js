@@ -74,6 +74,16 @@ async function main() {
         .resize(360, 360, { fit: "inside", withoutEnlargement: true })
         .webp({ quality: 82, alphaQuality: 100 })
         .toFile(dest);
+      const meta = await sharp(dest).metadata();
+      const stats = await sharp(dest).stats();
+      const channels = stats.channels.slice(0, 3);
+      const mean = channels.reduce((sum, c) => sum + c.mean, 0) / channels.length;
+      const spread = channels.reduce((sum, c) => sum + c.stdev, 0) / channels.length;
+      if (Math.max(meta.width || 0, meta.height || 0) < 120 || mean < 25 || spread < 15) {
+        fs.unlinkSync(dest);
+        skipped++;
+        return;
+      }
       creatures.push({
         id: mob.id,
         name: mob.name,
