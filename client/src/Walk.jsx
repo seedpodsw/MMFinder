@@ -4,32 +4,6 @@ import CharacterCreate from "./CharacterCreate";
 import { createFieldView } from "./field-view";
 import { REACH, createHero, createSession, loadRoster, removeHero, saveHero } from "../../shared/field.js";
 
-const KIND_COLOR = {
-  camp: "#c45c26",
-  vendor: "#d4a017",
-  quest: "#f0c14b",
-  trainer: "#6b8ecf",
-  zoneline: "#e8c478",
-  dungeon: "#8b3a4a",
-  named: "#c43b6a",
-  landmark: "#7a9e6e",
-  dock: "#4a8aa8",
-  custom: "#fff8ea",
-};
-
-const KIND_NAME = {
-  camp: "Camp",
-  vendor: "Vendor",
-  quest: "Turn-in",
-  trainer: "Trainer",
-  zoneline: "Zoneline",
-  dungeon: "Dungeon",
-  named: "Named",
-  landmark: "Landmark",
-  dock: "Dock",
-  custom: "Custom",
-};
-
 const MOVE_KEYS = new Set(["w", "a", "s", "d", "arrowup", "arrowdown", "arrowleft", "arrowright"]);
 
 const CLASS_TINT = {
@@ -129,25 +103,6 @@ function makeLabel(text) {
   return sprite;
 }
 
-function dotTexture(cache, color) {
-  const hit = cache.get(color);
-  if (hit) return hit;
-  const c = document.createElement("canvas");
-  c.width = c.height = 64;
-  const g = c.getContext("2d");
-  g.beginPath();
-  g.arc(32, 32, 22, 0, Math.PI * 2);
-  g.fillStyle = color;
-  g.fill();
-  g.lineWidth = 8;
-  g.strokeStyle = "#1a120c";
-  g.stroke();
-  const tex = new THREE.CanvasTexture(c);
-  tex.colorSpace = THREE.SRGBColorSpace;
-  cache.set(color, tex);
-  return tex;
-}
-
 export default function Walk({
   atlas,
   zones,
@@ -217,10 +172,8 @@ export default function Walk({
     const keys = new Set();
     const tiles = [];
     const tileById = new Map();
-    const poiSprites = [];
     const labels = [];
     const pickMeshes = [];
-    const dotCache = new Map();
     const bounds = { minX: 0, maxX: 1, minZ: 0, maxZ: 1 };
     let aspectNow = 0;
     const cam = { yaw: 0, pitch: 1.2, dist: 104 };
@@ -373,9 +326,6 @@ export default function Walk({
     outline.visible = false;
     scene.add(outline);
 
-    const poiGroup = new THREE.Group();
-    scene.add(poiGroup);
-
     const north = makeLabel("N");
     north.scale.multiplyScalar(0.55);
     scene.add(north);
@@ -486,10 +436,6 @@ export default function Walk({
 
     function applyLayer() {
       for (const tile of tiles) tile.mesh.visible = tile.layer === layerNow;
-      for (const sprite of poiSprites) {
-        const tile = tileById.get(sprite.userData.poi.zoneId);
-        sprite.visible = !!tile && tile.layer === layerNow;
-      }
       renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x0d1c24, 1);
       voidMat.color.set(layerNow === "deep" ? 0x140c16 : 0x0d1c24);
       recomputeBounds();
@@ -600,33 +546,6 @@ export default function Walk({
       reported = destTile.id;
     }
 
-    function setPois(list) {
-      for (const sprite of poiSprites) {
-        poiGroup.remove(sprite);
-        sprite.material.dispose();
-      }
-      poiSprites.length = 0;
-      for (const poi of list || []) {
-        const tile = tileById.get(poi.zoneId);
-        const pos = poiPosition(poi, tile);
-        if (!pos) continue;
-        const color = KIND_COLOR[poi.kind] || "#c45c26";
-        const mat = new THREE.SpriteMaterial({
-          map: dotTexture(dotCache, color),
-          transparent: true,
-          depthWrite: false,
-        });
-        const sprite = new THREE.Sprite(mat);
-        sprite.position.set(pos.x, 7, pos.z);
-        sprite.scale.set(12, 12, 1);
-        sprite.userData.poi = poi;
-        sprite.visible = tile.layer === layerNow;
-        sprite.renderOrder = 4;
-        poiGroup.add(sprite);
-        poiSprites.push(sprite);
-      }
-    }
-
     function eventToWorld(e) {
       const canvas = miniRef.current;
       if (!canvas) return null;
@@ -714,11 +633,6 @@ export default function Walk({
         const mob = session?.mobs.get(mobId);
         if (mob?.alive) return { type: "mob", id: mobId, name: mob.name, level: mob.level, x: mob.x, z: mob.z };
       }
-      const poiHits = raycaster.intersectObjects(poiSprites, false);
-      if (poiHits.length && poiHits[0].object.visible) {
-        const poi = poiHits[0].object.userData.poi;
-        return { type: "poi", poi, x: poiHits[0].object.position.x, z: poiHits[0].object.position.z };
-      }
       const groundHits = raycaster.intersectObjects(pickMeshes, false);
       if (groundHits.length) {
         return { type: "ground", x: groundHits[0].point.x, z: groundHits[0].point.z };
@@ -737,12 +651,6 @@ export default function Walk({
       const now = performance.now();
       const dbl = now - lastClick < 280;
       lastClick = dbl ? 0 : now;
-      if (hit.type === "poi") {
-        onSelectRef.current?.(hit.poi);
-        if (dbl) snapTo(hit);
-        else travelTo(hit, hit.poi.name);
-        return;
-      }
       const tile = zoneAt(hit.x, hit.z);
       if (dbl) snapTo(hit);
       else travelTo(hit, tile?.name || "");
@@ -764,29 +672,10 @@ export default function Walk({
         setHover({ id, name: hit.name, kind: `Level ${hit.level}`, zone: "", notes: "" });
         return;
       }
-      const poi = hit?.type === "poi" ? hit.poi : null;
-      const id = poi?.id || "";
-      const tip = tipRef.current;
-      const stage = stageRef.current;
-      if (tip && stage) {
-        const box = stage.getBoundingClientRect();
-        tip.style.transform = `translate(${e.clientX - box.left + 14}px, ${e.clientY - box.top + 16}px)`;
-      }
-      if (id === hoverId) return;
-      hoverId = id;
-      onHoverRef.current?.(poi);
-      if (!alive) return;
-      setHover(
-        poi
-          ? {
-              id,
-              name: poi.name,
-              kind: KIND_NAME[poi.kind] || poi.kind,
-              zone: zoneInfo(poi.zoneId)?.name || "",
-              notes: poi.notes || "",
-            }
-          : null
-      );
+      if (!hoverId) return;
+      hoverId = null;
+      onHoverRef.current?.(null);
+      if (alive) setHover(null);
     }
 
     let lx = 0;
@@ -969,20 +858,6 @@ export default function Walk({
         ctx.lineWidth = 2;
         ctx.strokeRect(hereBox.dx, hereBox.dy, hereBox.dw, hereBox.dh);
       }
-      for (const sprite of poiSprites) {
-        if (!sprite.visible) continue;
-        const [px, py] = miniPoint(sprite.position.x, sprite.position.z, cssW, cssH);
-        const focus = sprite.userData.poi.id === focusRef.current;
-        ctx.beginPath();
-        ctx.arc(px, py, focus ? 4.2 : 2.15, 0, Math.PI * 2);
-        ctx.fillStyle = KIND_COLOR[sprite.userData.poi.kind] || "#c45c26";
-        ctx.fill();
-        if (focus) {
-          ctx.strokeStyle = "#fff6e4";
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
       if (session) {
         for (const mob of session.mobs.values()) {
           if (!mob.alive || mob.layer !== layerNow) continue;
@@ -1142,20 +1017,6 @@ export default function Walk({
         arr[4] = 1.15;
         arr[5] = target.z;
         pathGeo.attributes.position.needsUpdate = true;
-        const focusScale = focusRef.current ? 18 : 12;
-        for (const sprite of poiSprites) {
-          const on = sprite.userData.poi.id === focusRef.current;
-          const sc = on ? focusScale : 12;
-          sprite.scale.set(sc, sc, 1);
-        }
-      } else {
-        for (const sprite of poiSprites) {
-          const on = sprite.userData.poi.id === focusRef.current;
-          if ((on && sprite.scale.x < 17) || (!on && sprite.scale.x > 13)) {
-            const sc = on ? 18 : 12;
-            sprite.scale.set(sc, sc, 1);
-          }
-        }
       }
 
       const under = zoneAt(player.position.x, player.position.z);
@@ -1169,21 +1030,6 @@ export default function Walk({
           if (apiRef.current) apiRef.current.echo = zid;
           onEnterRef.current?.(zid);
         }
-      }
-
-      let near = null;
-      let nearD = 24;
-      for (const sprite of poiSprites) {
-        if (!sprite.visible) continue;
-        const d = Math.hypot(sprite.position.x - player.position.x, sprite.position.z - player.position.z);
-        if (d < nearD) {
-          nearD = d;
-          near = sprite.userData.poi;
-        }
-      }
-      const nearId = near?.id || "";
-      if (nearId !== hudRef.current.nearId) {
-        publish({ nearId, nearName: near?.name || "" });
       }
 
       for (const label of labels) {
@@ -1234,7 +1080,6 @@ export default function Walk({
       goToZone,
       goToPoi,
       setLayer,
-      setPois,
       wake,
       bindHero,
       resume,
@@ -1260,16 +1105,14 @@ export default function Walk({
       session?.flush?.();
       fieldView.dispose();
       const textures = new Set();
-      const sharedDots = new Set(dotCache.values());
       scene.traverse((obj) => {
         obj.geometry?.dispose?.();
         const mats = obj.material ? [].concat(obj.material) : [];
         for (const m of mats) {
-          if (m.map && !sharedDots.has(m.map)) textures.add(m.map);
+          if (m.map) textures.add(m.map);
           m.dispose?.();
         }
       });
-      for (const tex of sharedDots) tex.dispose();
       for (const tex of textures) tex.dispose();
       renderer.dispose();
       if (el.parentNode === host) host.removeChild(el);
@@ -1306,10 +1149,6 @@ export default function Walk({
     }
     if (focusPoiId) api.goToPoi(focusPoiId);
   }, [focusPoiId, atlasKey]);
-
-  useEffect(() => {
-    apiRef.current?.setPois(pois);
-  }, [pois, atlasKey]);
 
   function refreshRoster() {
     setRoster(loadRoster(localStorage).heroes);
@@ -1374,66 +1213,76 @@ export default function Walk({
     <div ref={stageRef} className={`walk-stage layer-${layer}`}>
       <div ref={hostRef} className="walk-gl" />
       {combat && hero && (
-        <div className="field-hud">
-          <header>
-            <strong>{combat.name}</strong>
-            <span>
-              {combat.className} · {combat.passive}
-            </span>
-          </header>
-          <div className="field-bar hp">
-            <i style={{ width: `${Math.max(0, Math.min(100, (combat.hp / combat.maxHp) * 100))}%` }} />
-          </div>
-          <dl className="field-stats">
-            <div>
-              <dt>Health</dt>
-              <dd>
-                {combat.hp} / {combat.maxHp}
-              </dd>
-            </div>
-            <div>
-              <dt>Attack</dt>
-              <dd>
-                {combat.attack}
-                {combat.attacking ? " · swinging" : ""}
-              </dd>
-            </div>
-          </dl>
-          <div className="field-bar xp">
-            <i style={{ width: `${Math.max(0, Math.min(100, (combat.xp / combat.xpNext) * 100))}%` }} />
-          </div>
-          <p className="field-nums">
-            Level {combat.level}
-            {combat.level < 60 ? ` · ${combat.xp} / ${combat.xpNext} xp` : " · the road levels off"}
-            {combat.kills ? ` · ${combat.kills} fallen` : ""}
-          </p>
-          {combat.target && (
-            <div className="field-target">
-              <strong style={{ color: combat.target.con }}>{combat.target.name}</strong>
-              <span>
-                Level {combat.target.level}
-                {combat.target.named ? " · named" : ""} · {combat.target.hp} / {combat.target.maxHp}
-              </span>
-              <div className="field-bar mob">
-                <i
-                  style={{
-                    width: `${Math.max(0, Math.min(100, (combat.target.hp / combat.target.maxHp) * 100))}%`,
-                    background: combat.target.con,
-                  }}
-                />
+        <>
+          <section className="field-target" hidden={!combat.target}>
+            {combat.target && (
+              <>
+                <header>
+                  <strong style={{ color: combat.target.con }}>{combat.target.name}</strong>
+                  <span>
+                    Level {combat.target.level}
+                    {combat.target.named ? " · named" : ""}
+                    {combat.attacking ? " · swinging" : " · out of reach"}
+                  </span>
+                </header>
+                <div className="eq-bar">
+                  <i
+                    style={{
+                      width: `${Math.max(0, Math.min(100, (combat.target.hp / combat.target.maxHp) * 100))}%`,
+                      background: combat.target.con,
+                    }}
+                  />
+                  <span>
+                    {combat.target.hp} / {combat.target.maxHp}
+                  </span>
+                </div>
+              </>
+            )}
+          </section>
+          <div className="field-stack">
+            <ul className="field-log">
+              {(combat.log || [combat.line]).filter(Boolean).map((row, i) => (
+                <li key={`${i}-${row}`}>{row}</li>
+              ))}
+            </ul>
+            <section className="field-player">
+              <header>
+                <strong>{combat.name}</strong>
+                <span>
+                  {combat.className} · level {combat.level} · {combat.passive}
+                </span>
+              </header>
+              <p className="eq-label">Health</p>
+              <div className="eq-bar hp">
+                <i style={{ width: `${Math.max(0, Math.min(100, (combat.hp / combat.maxHp) * 100))}%` }} />
+                <span>
+                  {combat.hp} / {combat.maxHp}
+                </span>
               </div>
-            </div>
-          )}
-          <ul className="field-log">
-            {(combat.log || [combat.line]).filter(Boolean).map((row, i) => (
-              <li key={`${i}-${row}`}>{row}</li>
-            ))}
-          </ul>
-          {hud.zoneName ? <p className="field-where">{hud.zoneName}</p> : null}
-          <button type="button" className="field-retire" onClick={bench}>
-            Characters
-          </button>
-        </div>
+              <p className="eq-label">Experience</p>
+              <div className="eq-bar xp">
+                <i style={{ width: `${Math.max(0, Math.min(100, (combat.xp / combat.xpNext) * 100))}%` }} />
+                <span>
+                  {combat.level < 60 ? `${combat.xp} / ${combat.xpNext}` : "60"}
+                </span>
+              </div>
+              <dl className="field-stats">
+                <div>
+                  <dt>Attack</dt>
+                  <dd>{combat.attack}</dd>
+                </div>
+                <div>
+                  <dt>Fallen</dt>
+                  <dd>{combat.kills || 0}</dd>
+                </div>
+              </dl>
+              {hud.zoneName ? <p className="field-where">{hud.zoneName}</p> : null}
+              <button type="button" className="field-retire" onClick={bench}>
+                Characters
+              </button>
+            </section>
+          </div>
+        </>
       )}
       <aside className="walk-minimap">
         <header>

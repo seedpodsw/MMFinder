@@ -2335,49 +2335,99 @@ button.linkish.npc-go {
   position: relative;
 }
 
-.field-hud {
+.field-stack {
   position: absolute;
-  top: 14px;
   left: 14px;
+  bottom: 14px;
   z-index: 5;
-  width: min(280px, calc(100% - 28px));
-  padding: 12px 14px;
-  background: rgba(18, 12, 8, 0.92);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  width: min(320px, calc(100% - 28px));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.field-hud header strong {
+.field-player,
+.field-target,
+.field-log {
+  background: rgba(10, 7, 5, 0.94);
+  border: 1px solid #a68448;
+  border-radius: 3px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.field-player,
+.field-target {
+  padding: 8px 10px 10px;
+}
+
+.field-target {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  z-index: 5;
+  width: min(380px, calc(100% - 32px));
+  transform: translateX(-50%);
+}
+
+.field-target[hidden] {
+  display: none;
+}
+
+.field-player header strong,
+.field-target header strong {
   display: block;
   font-family: "Cinzel", serif;
-  color: var(--gold);
   font-size: 18px;
+  color: var(--gold);
+  line-height: 1.15;
 }
 
-.field-hud header span,
-.field-nums,
+.field-player header span,
+.field-target header span,
 .field-where {
   color: var(--muted);
   font-size: 12px;
 }
 
-.field-bar {
-  height: 8px;
-  margin-top: 8px;
-  background: #120c08;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid var(--line);
+.eq-label {
+  margin: 8px 0 0;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
-.field-bar i {
+.eq-bar {
+  position: relative;
+  height: 16px;
+  margin-top: 4px;
+  background: #140c0c;
+  border: 1px solid #3a2418;
+  overflow: hidden;
+}
+
+.eq-bar i {
   display: block;
   height: 100%;
 }
 
-.field-bar.hp i {
-  background: #c45c26;
+.eq-bar.hp i {
+  background: linear-gradient(#e25a3a, #8d2414);
+}
+
+.eq-bar.xp i {
+  background: linear-gradient(#e6c56a, #8a6a28);
+}
+
+.eq-bar span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  color: #fff6e4;
+  text-shadow: 0 1px 1px #000;
+  pointer-events: none;
 }
 
 .field-stats {
@@ -2399,47 +2449,14 @@ button.linkish.npc-go {
   color: var(--text);
 }
 
-.field-bar.xp i {
-  background: #d4b483;
-}
-
-.field-nums,
-.field-where,
-.field-line {
-  margin: 4px 0 0;
-}
-
-.field-line {
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--text);
-}
-
-.field-target {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
-}
-
-.field-target strong {
-  display: block;
-  font-family: "Cinzel", serif;
-  font-size: 15px;
-}
-
-.field-target span {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.field-bar.mob {
-  margin-top: 6px;
+.field-where {
+  margin: 6px 0 0;
 }
 
 .field-log {
   list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 6px 8px;
 }
 
 .field-log li {
