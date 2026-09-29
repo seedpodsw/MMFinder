@@ -252,15 +252,93 @@ body {
   margin-top: 8px;
 }
 
+.geo-skeletons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.skelly {
+  transform-origin: 50% 100%;
+  animation: dance 0.45s ease-in-out infinite alternate;
+}
+
+.skelly:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.skelly-arm.left {
+  transform-origin: 18px 22px;
+  animation: wave 0.35s ease-in-out infinite alternate;
+}
+
+.skelly-arm.right {
+  transform-origin: 28px 22px;
+  animation: wave 0.35s ease-in-out infinite alternate-reverse;
+}
+
+.skelly-leg.left,
+.skelly-leg.right {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: kick 0.35s ease-in-out infinite alternate;
+}
+
+.skelly-leg.right {
+  animation-delay: 0.15s;
+}
+
+.truck {
+  position: fixed;
+  z-index: 30;
+  pointer-events: none;
+  left: 0;
+  animation: drive 11s linear infinite;
+}
+
+.truck.t1 {
+  top: 18px;
+}
+
+.truck.t2 {
+  top: auto;
+  bottom: 36px;
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+
+.truck.t3 {
+  top: 46%;
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+
+.truck.flip {
+  animation-direction: reverse;
+}
+
+.truck.flip svg {
+  transform: scaleX(-1);
+}
+
+.wheel {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: spin 0.35s linear infinite;
+}
+
 .stream-overlay {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
+  gap: 6px;
+  padding: 6px 10px 8px;
   background: #000080;
   border: 4px ridge #ff00ff;
   color: #ffff00;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+  max-width: min(720px, 96vw);
 }
 
 .stream-live {
@@ -282,9 +360,13 @@ body {
 }
 
 .stream-title {
-  color: #00ff00;
+  margin: 0;
+  color: #ffff00;
   font-weight: 700;
-  animation: blink 1s steps(1) infinite;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-shadow: 2px 2px #ff00ff;
 }
 
 .stream-sub {
@@ -360,13 +442,53 @@ body.is-overlay #root {
   }
 }
 
+@keyframes dance {
+  from {
+    transform: translateY(0) rotate(-6deg);
+  }
+  to {
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(-28deg);
+  }
+  to {
+    transform: rotate(24deg);
+  }
+}
+
+@keyframes kick {
+  from {
+    transform: rotate(-16deg);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-180px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .geo-blink,
   .geo-rainbow,
   .geo-stripes,
   .geo-spin,
   .geo-open,
-  .stream-title,
+  .skelly,
+  .skelly-arm,
+  .skelly-leg,
+  .truck,
+  .wheel,
   .stream-moon,
   .geo-marquee {
     animation: none;

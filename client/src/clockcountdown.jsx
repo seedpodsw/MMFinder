@@ -84,10 +84,20 @@ function ClockPage() {
           <ClipWizard />
           <ClipStar />
         </div>
-        <h1 className="geo-rainbow">MMFinder COUNTDOWN!!!</h1>
+        <h1 className="geo-rainbow">MONSTERS AND MEMORIES COUNTDOWN RELEASE</h1>
         <p className="geo-blink">*** UNDER CONSTRUCTION ***</p>
+        <div className="geo-skeletons" aria-hidden="true">
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+        </div>
         <div className="geo-stripes" />
       </div>
+      <Truck lane="t1" />
+      <Truck lane="t2" flip />
+      <Truck lane="t3" />
 
       <p className="geo-live" aria-live="polite">
         {spoken}
@@ -128,7 +138,7 @@ function ClockPage() {
 
       <section className="overlay-card">
         <h2>COOL STREAMER OVERLAY!!!</h2>
-        <p>paste into OBS browser source. background is see-thru. about 520x130. radical.</p>
+        <p>paste into OBS browser source. background is see-thru. about 720x160. radical.</p>
         <div className="overlay-stage">
           <StreamOverlay left={left} preview />
         </div>
@@ -155,6 +165,7 @@ function ClockPage() {
         <a href="../">« BACK TO MMFinder</a>
         <a href={EARLY_ACCESS_NOTE.source}>STUDIO NEWS</a>
         <a href="https://monstersandmemories.com/">OFFICIAL SITE</a>
+        <a href="https://caniplaymonstersandmemoriesyet.com/">CAN I PLAY YET</a>
       </p>
 
       <div className="geo-marquee">
@@ -197,12 +208,55 @@ function ClipWizard() {
 function StreamOverlay({ left, preview = false }) {
   return (
     <div className={preview ? "stream-overlay" : "stream-overlay stream-live"} aria-hidden={preview}>
+      <p className="stream-title">MONSTERS AND MEMORIES COUNTDOWN RELEASE</p>
       <div className="stream-digits">
         <Digit value={String(left.days)} label="d" />
         <Digit value={pad(left.hours)} label="h" />
         <Digit value={pad(left.minutes)} label="m" />
         <Digit value={pad(left.seconds)} label="s" />
       </div>
+    </div>
+  );
+}
+
+function Skeleton() {
+  return (
+    <svg className="skelly" width="46" height="72" viewBox="0 0 46 72" aria-hidden="true">
+      <circle cx="23" cy="10" r="8" fill="#f4f4f4" stroke="#000" />
+      <circle cx="20" cy="9" r="1.4" fill="#000" />
+      <circle cx="26" cy="9" r="1.4" fill="#000" />
+      <path d="M19 13 Q23 16 27 13" stroke="#000" fill="none" />
+      <rect x="18" y="18" width="10" height="16" rx="2" fill="#f4f4f4" stroke="#000" />
+      <g className="skelly-arm left">
+        <rect x="4" y="20" width="14" height="4" fill="#f4f4f4" stroke="#000" />
+      </g>
+      <g className="skelly-arm right">
+        <rect x="28" y="20" width="14" height="4" fill="#f4f4f4" stroke="#000" />
+      </g>
+      <g className="skelly-leg left">
+        <rect x="16" y="34" width="5" height="22" fill="#f4f4f4" stroke="#000" />
+      </g>
+      <g className="skelly-leg right">
+        <rect x="25" y="34" width="5" height="22" fill="#f4f4f4" stroke="#000" />
+      </g>
+    </svg>
+  );
+}
+
+function Truck({ lane, flip = false }) {
+  return (
+    <div className={`truck ${lane}${flip ? " flip" : ""}`} aria-hidden="true">
+      <svg width="150" height="52" viewBox="0 0 150 52">
+        <rect x="4" y="16" width="78" height="24" fill="#ff3300" stroke="#000" strokeWidth="2" />
+        <rect x="82" y="8" width="48" height="32" fill="#ffff00" stroke="#000" strokeWidth="2" />
+        <rect x="92" y="12" width="22" height="12" fill="#66ccff" stroke="#000" />
+        <circle className="wheel" cx="28" cy="42" r="8" fill="#222" stroke="#ccc" strokeWidth="3" />
+        <circle className="wheel" cx="64" cy="42" r="8" fill="#222" stroke="#ccc" strokeWidth="3" />
+        <circle className="wheel" cx="112" cy="42" r="8" fill="#222" stroke="#ccc" strokeWidth="3" />
+        <text x="12" y="32" fontSize="9" fontFamily="Comic Sans MS, cursive" fill="#fff">
+          M&amp;M
+        </text>
+      </svg>
     </div>
   );
 }
