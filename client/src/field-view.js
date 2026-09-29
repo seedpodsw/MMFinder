@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { conOf } from "../../shared/field.js";
 
-const PALETTE = ["#6b8f4a", "#8a6232", "#6a5a78", "#4e6e66", "#7a4e3c", "#5c6a38", "#6e5644", "#3e5c4c"];
+const PALETTE = ["#7dbe6a", "#e0a15a", "#8f7cc4", "#5eaea0", "#e07a62", "#c4b15a", "#d4899a", "#6aa4c4"];
 
 function colorOf(name) {
   let h = 0;
@@ -60,18 +60,39 @@ export function createFieldView(scene) {
     const color = colorOf(mob.name);
     const figure = new THREE.Group();
     const body = new THREE.Mesh(
-      new THREE.CylinderGeometry(1.05 * scale, 1.05 * scale, 0.55, 12),
+      new THREE.SphereGeometry(0.95 * scale, 16, 12),
       new THREE.MeshBasicMaterial({ color })
     );
-    body.position.y = 0.4;
+    body.scale.set(1.05, 0.82, 1.05);
+    body.position.y = 0.78 * scale;
     body.userData.mobId = mob.id;
-    const pip = new THREE.Mesh(
-      new THREE.ConeGeometry(0.32 * scale, 0.75 * scale, 3),
-      new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
+    const earMat = new THREE.MeshBasicMaterial({ color: 0xfff1d6 });
+    const earL = new THREE.Mesh(new THREE.SphereGeometry(0.28 * scale, 8, 6), earMat);
+    earL.scale.set(0.7, 1.2, 0.7);
+    earL.position.set(-0.46 * scale, 1.38 * scale, -0.12 * scale);
+    const earR = earL.clone();
+    earR.position.x = 0.46 * scale;
+    const eyeMat = new THREE.MeshBasicMaterial({ color: 0x2a2118 });
+    const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.12 * scale, 8, 6), eyeMat);
+    eyeL.position.set(-0.28 * scale, 0.9 * scale, -0.78 * scale);
+    const eyeR = eyeL.clone();
+    eyeR.position.x = 0.28 * scale;
+    const blush = new THREE.Mesh(
+      new THREE.SphereGeometry(0.1 * scale, 6, 4),
+      new THREE.MeshBasicMaterial({ color: 0xe07a7a })
     );
-    pip.rotation.x = Math.PI / 2;
-    pip.position.set(0, 0.62, -1.05 * scale);
-    figure.add(body, pip);
+    blush.position.set(-0.46 * scale, 0.64 * scale, -0.72 * scale);
+    const blushR = blush.clone();
+    blushR.position.x = 0.46 * scale;
+    figure.add(body, earL, earR, eyeL, eyeR, blush, blushR);
+    if (mob.named) {
+      const hornMat = new THREE.MeshBasicMaterial({ color: 0xf0c14b });
+      const hornL = new THREE.Mesh(new THREE.ConeGeometry(0.12 * scale, 0.42 * scale, 5), hornMat);
+      hornL.position.set(-0.26 * scale, 1.62 * scale, 0.02);
+      const hornR = hornL.clone();
+      hornR.position.x = 0.26 * scale;
+      figure.add(hornL, hornR);
+    }
     const pad = new THREE.Mesh(
       new THREE.CircleGeometry(2.1 * scale, 16),
       new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })
@@ -79,8 +100,14 @@ export function createFieldView(scene) {
     pad.rotation.x = -Math.PI / 2;
     pad.position.y = 0.16;
     pad.userData.mobId = mob.id;
+    const shadow = new THREE.Mesh(
+      new THREE.CircleGeometry(1.15 * scale, 18),
+      new THREE.MeshBasicMaterial({ color: 0x1a120c, transparent: true, opacity: 0.28, depthWrite: false })
+    );
+    shadow.rotation.x = -Math.PI / 2;
+    shadow.position.y = 0.06;
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(1.45 * scale, 1.78 * scale, 20),
+      new THREE.RingGeometry(1.15 * scale, 1.42 * scale, 20),
       new THREE.MeshBasicMaterial({ color: 0xf3e6c8, side: THREE.DoubleSide, transparent: true, opacity: 0.9 })
     );
     ring.rotation.x = -Math.PI / 2;
@@ -94,10 +121,10 @@ export function createFieldView(scene) {
     const sprite = new THREE.Sprite(
       new THREE.SpriteMaterial({ map: labelTexture(mob.name, mob.level), transparent: true, depthWrite: false })
     );
-    sprite.scale.set(8, 8 * (PLATE_H / PLATE_W), 1);
+    sprite.scale.set(3.6, 3.6 * (PLATE_H / PLATE_W), 1);
     sprite.center.set(0.5, 0);
-    sprite.position.y = 1.35;
-    group.add(figure, pad, ring, bar, sprite);
+    sprite.position.y = 1.9;
+    group.add(shadow, figure, pad, ring, bar, sprite);
     scene.add(group);
     bodies.push(body, pad);
     const entry = { group, figure, body, ring, bar, sprite, color, lastHp: mob.maxHp, flash: 0 };

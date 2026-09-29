@@ -176,7 +176,7 @@ export default function Walk({
     const pickMeshes = [];
     const bounds = { minX: 0, maxX: 1, minZ: 0, maxZ: 1 };
     let aspectNow = 0;
-    const cam = { yaw: 0, pitch: 1.2, dist: 104 };
+    const cam = { yaw: 0, pitch: 1.12, dist: 22 };
     const desired = new THREE.Vector3();
 
     let renderer;
@@ -194,7 +194,7 @@ export default function Walk({
     host.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(48, 1, 0.4, 20000);
+    const camera = new THREE.PerspectiveCamera(34, 1, 0.2, 20000);
     const anisotropy = renderer.capabilities.getMaxAnisotropy();
 
     const voidGeo = new THREE.PlaneGeometry(1, 1);
@@ -274,24 +274,41 @@ export default function Walk({
     const player = new THREE.Group();
     const visuals = new THREE.Group();
     const cloak = new THREE.Mesh(
-      new THREE.CylinderGeometry(1.05, 1.05, 0.55, 14),
+      new THREE.SphereGeometry(0.95, 16, 12),
       new THREE.MeshBasicMaterial({ color: classTint(heroRef.current?.classId) })
     );
-    cloak.position.y = 0.4;
+    cloak.scale.set(1.05, 0.82, 1.05);
+    cloak.position.y = 0.78;
+    const earMat = new THREE.MeshBasicMaterial({ color: 0xfff1d6 });
+    const earL = new THREE.Mesh(new THREE.SphereGeometry(0.28, 8, 6), earMat);
+    earL.scale.set(0.7, 1.2, 0.7);
+    earL.position.set(-0.46, 1.38, -0.12);
+    const earR = earL.clone();
+    earR.position.x = 0.46;
+    const eyeMat = new THREE.MeshBasicMaterial({ color: 0x2a2118 });
+    const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.12, 8, 6), eyeMat);
+    eyeL.position.set(-0.28, 0.9, -0.78);
+    const eyeR = eyeL.clone();
+    eyeR.position.x = 0.28;
     const nose = new THREE.Mesh(
-      new THREE.ConeGeometry(0.34, 0.85, 3),
-      new THREE.MeshBasicMaterial({ color: 0xfff6e4 })
+      new THREE.SphereGeometry(0.1, 6, 4),
+      new THREE.MeshBasicMaterial({ color: 0xe07a7a })
     );
-    nose.rotation.x = Math.PI / 2;
-    nose.position.set(0, 0.62, -1.05);
-    visuals.add(cloak, nose);
+    nose.position.set(0, 0.68, -0.82);
+    visuals.add(cloak, earL, earR, eyeL, eyeR, nose);
+    const shadow = new THREE.Mesh(
+      new THREE.CircleGeometry(1.15, 18),
+      new THREE.MeshBasicMaterial({ color: 0x1a120c, transparent: true, opacity: 0.28, depthWrite: false })
+    );
+    shadow.rotation.x = -Math.PI / 2;
+    shadow.position.y = 0.06;
     const ring = new THREE.Mesh(
       new THREE.RingGeometry(1.35, 1.7, 24),
       new THREE.MeshBasicMaterial({ color: 0xf0c14b, side: THREE.DoubleSide, transparent: true, opacity: 0.92 })
     );
     ring.rotation.x = -Math.PI / 2;
     ring.position.y = 0.12;
-    player.add(visuals, ring);
+    player.add(shadow, visuals, ring);
     scene.add(player);
 
     const dest = new THREE.Mesh(
@@ -446,7 +463,7 @@ export default function Walk({
       );
       if (force) {
         camera.position.copy(desired);
-        camera.lookAt(player.position.x, 1.2, player.position.z);
+        camera.lookAt(player.position.x, 1, player.position.z);
       }
     }
 
@@ -696,7 +713,7 @@ export default function Walk({
       ly = e.clientY;
       moved += Math.abs(dx) + Math.abs(dy);
       cam.yaw -= dx * 0.005;
-      cam.pitch = Math.min(1.4, Math.max(0.9, cam.pitch + dy * 0.0035));
+      cam.pitch = Math.min(1.28, Math.max(0.92, cam.pitch + dy * 0.0035));
     }
     function onPointerUp(e) {
       if (!dragging) return;
@@ -712,7 +729,7 @@ export default function Walk({
     }
     function onWheel(e) {
       e.preventDefault();
-      cam.dist = Math.min(210, Math.max(62, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
+      cam.dist = Math.min(48, Math.max(16, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
     }
     function onContext(e) {
       e.preventDefault();
@@ -995,7 +1012,7 @@ export default function Walk({
         while (diff < -Math.PI) diff += Math.PI * 2;
         player.rotation.y += diff * Math.min(1, dt * 12);
         bob += dt * (sprint ? 10 : 7);
-        visuals.position.y = Math.abs(Math.sin(bob)) * 0.08;
+        visuals.position.y = Math.abs(Math.sin(bob)) * 0.16;
       } else {
         visuals.position.y += (0 - visuals.position.y) * Math.min(1, dt * 8);
       }
@@ -1057,7 +1074,7 @@ export default function Walk({
       } else {
         camera.position.lerp(desired, 1 - Math.exp(-10 * dt));
       }
-      camera.lookAt(player.position.x, 1.2, player.position.z);
+      camera.lookAt(player.position.x, 1, player.position.z);
       renderer.render(scene, camera);
       drawMini();
     }
