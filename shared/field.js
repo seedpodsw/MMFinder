@@ -31,7 +31,6 @@ export const CLASSES = [
 ];
 
 export const REACH = 9;
-const AGGRO = 6;
 const LEASH = 42;
 const SHOW = 480;
 const HIDE = 700;
@@ -336,7 +335,10 @@ function blankMob(spec, layer, homeX, homeZ, alive) {
     stunUntil: 0,
     slow: 1,
     opened: false,
-    phase: hash(spec.id) % 1000,
+    goalX: homeX,
+    goalZ: homeZ,
+    roamAt: 0,
+    pace: 1.6,
   };
 }
 
@@ -596,19 +598,6 @@ export function createSession(hero, storage) {
     }
     const k = klass();
     const maxHp = maxHpFor(hero.level, k);
-    let engaged = false;
-    let nearest = null;
-    let nearestD = AGGRO;
-    for (const mob of mobs.values()) {
-      if (!mob.alive) continue;
-      if (mob.aggro) engaged = true;
-      const dist = Math.hypot(mob.x - px, mob.z - pz);
-      if (!mob.aggro && dist < nearestD) {
-        nearestD = dist;
-        nearest = mob;
-      }
-    }
-    if (!engaged && nearest) nearest.aggro = true;
     for (const mob of mobs.values()) {
       if (!mob.alive) {
         if (now >= (hero.down[mob.id] || 0)) {
@@ -664,9 +653,23 @@ export function createSession(hero, storage) {
           }
         }
       } else if (!mob.aggro) {
-        const wob = Math.sin((now + mob.phase) / 680);
-        mob.x += (mob.homeX + wob * 3.5 - mob.x) * Math.min(1, dt * 0.7);
-        mob.z += (mob.homeZ + Math.cos((now + mob.phase) / 860) * 3.5 - mob.z) * Math.min(1, dt * 0.7);
+        if (!mob.roamAt || now >= mob.roamAt) {
+          const h = hash(`${mob.id}:${now}`);
+          const ang = ((h % 360) * Math.PI) / 180;
+          const reach = 5 + (h % 16);
+          mob.goalX = mob.homeX + Math.cos(ang) * reach;
+          mob.goalZ = mob.homeZ + Math.sin(ang) * reach;
+          mob.pace = 1.3 + (h % 22) / 10;
+          mob.roamAt = now + 2400 + (h % 5200);
+        }
+        const dx = (mob.goalX ?? mob.homeX) - mob.x;
+        const dz = (mob.goalZ ?? mob.homeZ) - mob.z;
+        const len = Math.hypot(dx, dz);
+        if (len > 0.35) {
+          const step = Math.min(len, (mob.pace || 2) * dt);
+          mob.x += (dx / len) * step;
+          mob.z += (dz / len) * step;
+        }
       }
     }
     if (targetId && now >= nextSwing) {

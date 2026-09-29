@@ -343,7 +343,13 @@ export function createFieldView(scene) {
       const dist = Number.isFinite(px) && Number.isFinite(pz) ? Math.hypot(mob.x - px, mob.z - pz) : Infinity;
       entry.sprite.visible = marked || mob.named || dist < 64;
       entry.sprite.position.y = (marked ? 3.15 : 2.45) * entry.scale;
-      entry.figure.position.y = Math.sin(performance.now() * 0.003 + mob.x) * 0.05;
+      if (entry.sway == null) {
+        let n = 0;
+        for (let i = 0; i < mob.id.length; i++) n = (n + mob.id.charCodeAt(i) * (i + 5)) % 10000;
+        entry.sway = n;
+      }
+      const sway = 0.0011 + (entry.sway % 9) * 0.0004;
+      entry.figure.position.y = Math.sin(performance.now() * sway + entry.sway) * 0.03;
     }
     for (const [id, entry] of groups) {
       if (!live.has(id)) {

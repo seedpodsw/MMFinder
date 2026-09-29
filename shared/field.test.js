@@ -161,7 +161,7 @@ test("pulling one creature leaves the rest of the camp alone", () => {
   assert.equal(pack[1].aggro, false);
 });
 
-test("walking in pulls only the nearest creature", () => {
+test("walking in leaves an indifferent creature alone", () => {
   const hero = createHero({ classId: "fighter", originId: "night-harbor" });
   const session = createSession(hero, mem());
   const now = 4_000_000;
@@ -174,7 +174,7 @@ test("walking in pulls only the nearest creature", () => {
   pack[1].z = 0;
   pack[1].aggro = false;
   session.update(0.2, 0, 0, "surface", "night-harbor", now + 500, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
-  assert.equal(pack[0].aggro, true);
+  assert.equal(pack[0].aggro, false);
   assert.equal(pack[1].aggro, false);
 });
 
