@@ -33,6 +33,8 @@ test("each tab is a link you can open", () => {
   assert.equal(writePlace({ view: "spells" }), "?view=spells");
   assert.equal(writePlace({ view: "gear" }), "?view=gear");
   assert.equal(writePlace({ view: "quests" }), "?view=quests");
+  assert.equal(writePlace({ view: "who" }), "?view=who");
+  assert.equal(readPlace("?view=who").view, "who");
   assert.equal(readPlace("?view=gear").view, "gear");
   assert.equal(readPlace("?view=turnins").view, "turnins");
 });

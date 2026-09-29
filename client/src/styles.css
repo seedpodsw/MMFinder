@@ -2839,3 +2839,113 @@ button.linkish.npc-go {
 .spells-foot {
   margin: 0;
 }
+
+.who-screen {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  overflow: auto;
+}
+
+.who-card {
+  width: min(560px, 100%);
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 18px 16px;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 58%, #badef5 0%, #5c92c2 42%, #24568c 100%);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.who-ask,
+.who-game,
+.who-name,
+.who-count {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 0 #0b2344, 0 0 2px #0b2344;
+}
+
+.who-ask {
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.who-game {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.who-name {
+  font-size: 40px;
+  color: #ffe14a;
+  text-shadow: 0 3px 0 #1a1200, 0 0 2px #1a1200;
+}
+
+.who-outline {
+  margin-top: 12px;
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.who-photo {
+  width: min(460px, 100%);
+  height: auto;
+  margin-top: 8px;
+  background: #d7ecf8;
+}
+
+.who-facts,
+.who-count,
+.who-wait,
+.who-error {
+  color: #f7fbff;
+  text-shadow: 0 1px 0 #0b2344;
+}
+
+.who-count {
+  font-size: 28px;
+}
+
+.who-facts {
+  margin: 4px 0 0;
+  text-align: center;
+}
+
+.who-wiki {
+  color: #fff;
+  font-weight: 600;
+}
+
+.who-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.who-actions button {
+  font: inherit;
+  font-weight: 600;
+  color: #1a120c;
+  background: #ffe14a;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.who-progress {
+  color: #f7fbff;
+  font-size: 13px;
+}

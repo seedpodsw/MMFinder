@@ -6,6 +6,7 @@ import WorldMap, { campFits, rangeLabel, KIND_LABEL } from "./WorldMap";
 import Enhance, { ZoneQuestTab, searchQuests } from "./Enhance";
 import ItemsGrid from "./ItemsGrid";
 import GearFinder from "./GearFinder";
+import WhoIsThat from "./WhoIsThat";
 import { huntsHere, huntsAtLevel, huntZonesNear, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
 import { loadHero } from "../../shared/field.js";
 import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
@@ -18,6 +19,7 @@ const SITE_TABS = [
   { view: "spells", label: "Spells" },
   { view: "gear", label: "Upgrades" },
   { view: "quests", label: "Quests" },
+  { view: "who", label: "Who's that" },
 ];
 
 const emptyPoiForm = {
@@ -609,7 +611,7 @@ export default function App() {
             );
           })}
         </div>
-        {view !== "walk" && (
+        {view !== "walk" && view !== "who" && (
         <>
         <label className="level-ctl">
           <span>Your level</span>
@@ -731,6 +733,8 @@ export default function App() {
             />
           </Suspense>
         </div>
+      ) : view === "who" ? (
+        <WhoIsThat />
       ) : view === "gear" ? (
         <GearFinder
           items={world.items || []}
