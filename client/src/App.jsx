@@ -455,6 +455,9 @@ export default function App() {
         <div>
           <p className="eyebrow">Monsters & Memories</p>
           <h1>MMFinder</h1>
+          <a className="clock-link" href="clockcountdown/">
+            Early Access clock
+          </a>
         </div>
         <div className="tabs view-tabs">
           <button

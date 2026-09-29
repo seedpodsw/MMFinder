@@ -18,6 +18,12 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "../dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        clockcountdown: path.resolve(__dirname, "clockcountdown/index.html"),
+      },
+    },
     commonjsOptions: {
       include: [/shared[/\\]story\.js/, /node_modules/],
     },

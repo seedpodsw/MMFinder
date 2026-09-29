@@ -82,6 +82,18 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+.clock-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.clock-link:hover {
+  color: #fff8ea;
+}
+
 .level-ctl {
   margin-left: auto;
   display: flex;
