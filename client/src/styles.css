@@ -126,6 +126,7 @@ h1 {
 
 .layer-toggle button,
 .tabs button,
+.tabs a,
 .pin-btn,
 .add,
 .note-form button,
@@ -139,12 +140,19 @@ h1 {
 }
 
 .layer-toggle button,
-.tabs button {
+.tabs button,
+.tabs a {
   padding: 8px 14px;
+}
+
+.tabs a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .layer-toggle button.on,
 .tabs button.on,
+.tabs a.on,
 .pin-btn.on {
   background: var(--ember);
   color: #fff8ea;
@@ -2260,6 +2268,234 @@ button.linkish.npc-go {
   .walk-minimap {
     width: min(220px, 46%);
   }
+}
+
+.walk-screen {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.field-hud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  width: min(280px, calc(100% - 28px));
+  padding: 12px 14px;
+  background: rgba(18, 12, 8, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.field-hud header strong {
+  display: block;
+  font-family: "Cinzel", serif;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.field-hud header span,
+.field-nums,
+.field-where {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.field-bar {
+  height: 8px;
+  margin-top: 8px;
+  background: #120c08;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.field-bar i {
+  display: block;
+  height: 100%;
+}
+
+.field-bar.hp i {
+  background: #c45c26;
+}
+
+.field-bar.xp i {
+  background: #d4b483;
+}
+
+.field-nums,
+.field-where,
+.field-line {
+  margin: 4px 0 0;
+}
+
+.field-line {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.field-target {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.field-target strong {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+}
+
+.field-target span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.field-bar.mob {
+  margin-top: 6px;
+}
+
+.field-log {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.field-log li {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.field-log li + li {
+  color: var(--muted);
+}
+
+.field-retire {
+  margin-top: 8px;
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.field-retire:hover {
+  color: var(--gold);
+}
+
+.conjure {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: 24px 16px;
+  background: rgba(8, 6, 4, 0.72);
+}
+
+.conjure-card {
+  width: min(720px, 100%);
+  background: rgba(18, 12, 8, 0.96);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+}
+
+.conjure-card h2 {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  color: var(--gold);
+}
+
+.conjure-lead {
+  margin: 6px 0 12px;
+  color: var(--muted);
+}
+
+.conjure-name {
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #160f0b;
+  color: var(--text);
+  font: inherit;
+}
+
+.conjure-label {
+  margin: 14px 0 6px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.conjure-classes,
+.conjure-origins {
+  display: grid;
+  gap: 6px;
+}
+
+.conjure-classes {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.conjure-origins {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.conjure-classes button,
+.conjure-origins button {
+  text-align: left;
+  background: #160f0b;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.conjure-classes button.on,
+.conjure-origins button.on {
+  border-color: var(--gold);
+  background: #2c2016;
+}
+
+.conjure-classes strong,
+.conjure-origins strong {
+  display: block;
+  font-size: 13px;
+}
+
+.conjure-classes span,
+.conjure-origins span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.conjure-blurb {
+  margin: 8px 0 0;
+  font-family: "Source Serif 4", serif;
+}
+
+.conjure-go {
+  margin-top: 14px;
+  background: var(--ember);
+  color: #fff8ea;
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font: inherit;
+  cursor: pointer;
 }
 
 .spells-view {

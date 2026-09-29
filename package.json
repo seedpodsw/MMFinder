@@ -9,7 +9,7 @@
     "client": "vite --config client/vite.config.js",
     "export:static": "node scripts/export-static.js",
     "build": "node scripts/export-static.js && vite build --config client/vite.config.js",
-    "test": "node --test shared/story.test.js shared/spells.test.js shared/release.test.js server/maps-asset.test.js",
+    "test": "node --test shared/story.test.js shared/spells.test.js shared/release.test.js shared/field.test.js shared/place.test.js server/maps-asset.test.js",
     "start": "node server/index.js",
     "import:wiki-items": "node server/import-wiki-items.js",
     "import:wiki-mobs": "node server/import-wiki-mobs.js"

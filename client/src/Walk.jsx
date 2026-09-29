@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import CharacterCreate from "./CharacterCreate";
+import { createFieldView } from "./field-view";
+import { REACH, clearHero, createHero, createSession, loadHero, saveHero } from "../../shared/field.js";
 
 const KIND_COLOR = {
   camp: "#c45c26",
@@ -130,6 +133,7 @@ export default function Walk({
   onEnterZone,
   onSelectPoi,
   onHoverPoi,
+  onBind,
 }) {
   const stageRef = useRef(null);
   const hostRef = useRef(null);
@@ -148,6 +152,15 @@ export default function Walk({
   const hudRef = useRef(emptyHud);
   const [hud, setHud] = useState(emptyHud);
   const [hover, setHover] = useState(null);
+  const [hero, setHero] = useState(() => loadHero());
+  const [combat, setCombat] = useState(null);
+  const [retiring, setRetiring] = useState(false);
+  const heroRef = useRef(hero);
+  const onBindRef = useRef(onBind);
+  const onCombatRef = useRef(setCombat);
+  heroRef.current = hero;
+  onBindRef.current = onBind;
+  onCombatRef.current = setCombat;
   const [miniAspect, setMiniAspect] = useState(1.35);
   const [failed, setFailed] = useState(false);
 
@@ -506,6 +519,23 @@ export default function Walk({
       showOutline(tile);
     }
 
+    function wake(zoneId) {
+      const tile = tileById.get(zoneId);
+      if (!tile) return;
+      if (tile.layer !== layerNow) setLayer(tile.layer, false);
+      snapTo({ x: tile.art.x, z: tile.art.z });
+      reported = zoneId;
+      if (apiRef.current) apiRef.current.echo = zoneId;
+      onBindRef.current?.(zoneId);
+    }
+
+    function bindHero(next) {
+      session = next ? createSession(structuredClone(next), localStorage) : null;
+      combatKey = "";
+      if (session) publishCombat(session.hud());
+      else onCombatRef.current(null);
+    }
+
     function goToZone(id) {
       const tile = tileById.get(id);
       if (!tile || tile.layer !== layerNow) return;
@@ -577,6 +607,16 @@ export default function Walk({
     }
 
     function spawnPoint() {
+      const saved = heroRef.current;
+      if (saved?.originId) {
+        const origin = tileById.get(saved.zoneId || saved.originId);
+        if (origin && (!saved.layer || origin.layer === saved.layer || origin.layer === layerNow)) {
+          if (Number.isFinite(saved.x) && Number.isFinite(saved.z) && (!saved.layer || saved.layer === layerNow)) {
+            return { pos: { x: saved.x, z: saved.z }, zoneId: saved.zoneId || origin.id };
+          }
+          if (!Number.isFinite(saved.x)) return { pos: { x: origin.art.x, z: origin.art.z }, zoneId: origin.id };
+        }
+      }
       const poi = focusRef.current
         ? (poisRef.current || []).find((p) => p.id === focusRef.current)
         : null;
@@ -591,6 +631,40 @@ export default function Walk({
       return { pos, zoneId: tile.id };
     }
 
+    function posOf(poi) {
+      const tile = tileById.get(poi.zoneId);
+      const p = poiPosition(poi, tile);
+      if (!p || !tile) return null;
+      return { x: p.x, z: p.z, layer: tile.layer };
+    }
+
+    const fieldView = createFieldView(scene);
+    let session = heroRef.current ? createSession(structuredClone(heroRef.current), localStorage) : null;
+    let pullId = null;
+
+    function pullMob(id) {
+      if (!session || !id) return;
+      const mob = session.mobs.get(id);
+      if (!mob || !mob.alive) return;
+      publishCombat(session.engage(id));
+      if (Math.hypot(mob.x - player.position.x, mob.z - player.position.z) <= REACH) {
+        pullId = null;
+        clearTravel();
+        return;
+      }
+      pullId = id;
+      travelTo({ x: mob.x, z: mob.z }, mob.name);
+    }
+    let combatKey = "";
+    function publishCombat(snap) {
+      if (!snap) return;
+      const mark = snap.target;
+      const key = `${snap.hp}|${snap.xp}|${snap.level}|${snap.kills}|${snap.line}|${mark?.id || ""}|${mark?.hp ?? ""}`;
+      if (key === combatKey) return;
+      combatKey = key;
+      onCombatRef.current(snap);
+    }
+
     const raycaster = new THREE.Raycaster();
     const ndc = new THREE.Vector2();
 
@@ -600,6 +674,11 @@ export default function Walk({
       ndc.x = ((clientX - rect.left) / rect.width) * 2 - 1;
       ndc.y = -((clientY - rect.top) / rect.height) * 2 + 1;
       raycaster.setFromCamera(ndc, camera);
+      const mobId = fieldView.pick(raycaster);
+      if (mobId) {
+        const mob = session?.mobs.get(mobId);
+        if (mob?.alive) return { type: "mob", id: mobId, name: mob.name, level: mob.level, x: mob.x, z: mob.z };
+      }
       const poiHits = raycaster.intersectObjects(poiSprites, false);
       if (poiHits.length && poiHits[0].object.visible) {
         const poi = poiHits[0].object.userData.poi;
@@ -615,7 +694,11 @@ export default function Walk({
     let lastClick = 0;
     function handleClick(e) {
       const hit = pick(e.clientX, e.clientY);
-      if (!hit) return;
+      if (!hit || !heroRef.current) return;
+      if (hit.type === "mob" && session) {
+        pullMob(hit.id);
+        return;
+      }
       const now = performance.now();
       const dbl = now - lastClick < 280;
       lastClick = dbl ? 0 : now;
@@ -632,6 +715,20 @@ export default function Walk({
 
     function hoverAt(e) {
       const hit = pick(e.clientX, e.clientY);
+      if (hit?.type === "mob") {
+        const id = hit.id;
+        const tip = tipRef.current;
+        const stage = stageRef.current;
+        if (tip && stage) {
+          const box = stage.getBoundingClientRect();
+          tip.style.transform = `translate(${e.clientX - box.left + 14}px, ${e.clientY - box.top + 16}px)`;
+        }
+        if (id === hoverId) return;
+        hoverId = id;
+        if (!alive) return;
+        setHover({ id, name: hit.name, kind: `Level ${hit.level}`, zone: "", notes: "" });
+        return;
+      }
       const poi = hit?.type === "poi" ? hit.poi : null;
       const id = poi?.id || "";
       const tip = tipRef.current;
@@ -705,7 +802,27 @@ export default function Walk({
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const tag = e.target?.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || e.target?.isContentEditable) return;
+      if (!heroRef.current) return;
       const k = e.key.toLowerCase();
+      if (k === " " || k === "spacebar") {
+        e.preventDefault();
+        if (!session) return;
+        pullMob(session.targetId || session.nearestId(player.position.x, player.position.z, 220));
+        return;
+      }
+      if (k === "tab") {
+        e.preventDefault();
+        if (!session) return;
+        publishCombat(session.cycleTarget(player.position.x, player.position.z));
+        pullMob(session.targetId);
+        return;
+      }
+      if (k === "escape") {
+        pullId = null;
+        clearTravel();
+        if (session) publishCombat(session.clearTarget());
+        return;
+      }
       if (MOVE_KEYS.has(k) || k === "shift") {
         keys.add(k);
         if (MOVE_KEYS.has(k)) e.preventDefault();
@@ -831,6 +948,16 @@ export default function Walk({
           ctx.stroke();
         }
       }
+      if (session) {
+        for (const mob of session.mobs.values()) {
+          if (!mob.alive || mob.layer !== layerNow) continue;
+          const [mx, my] = miniPoint(mob.x, mob.z, cssW, cssH);
+          ctx.beginPath();
+          ctx.arc(mx, my, mob.aggro ? 3.4 : 2.4, 0, Math.PI * 2);
+          ctx.fillStyle = mob.aggro ? "#d4544a" : "#c45c26";
+          ctx.fill();
+        }
+      }
       const [px, py] = miniPoint(player.position.x, player.position.z, cssW, cssH);
       if (target) {
         const [tx, ty] = miniPoint(target.x, target.z, cssW, cssH);
@@ -887,7 +1014,8 @@ export default function Walk({
       const fx = -Math.sin(cam.yaw);
       const fz = -Math.cos(cam.yaw);
       const sprint = keys.has("shift");
-      const speed = (48 + cam.dist * 0.22) * (sprint ? 2 : 1);
+      const speed = (48 + cam.dist * 0.22) * (sprint ? 2 : 1) * (session?.speed() || 1);
+      if (!heroRef.current) keys.clear();
       const keyMove =
         keys.has("w") ||
         keys.has("a") ||
@@ -901,6 +1029,7 @@ export default function Walk({
       let mx = 0;
       let mz = 0;
       if (keyMove) {
+        pullId = null;
         if (target) clearTravel();
         if (keys.has("w") || keys.has("arrowup")) {
           mx += fx;
@@ -918,7 +1047,20 @@ export default function Walk({
           mx -= -fz;
           mz -= fx;
         }
-      } else if (target) {
+      } else if (pullId && session) {
+        const mob = session.mobs.get(pullId);
+        if (!mob || !mob.alive) pullId = null;
+        else if (Math.hypot(mob.x - player.position.x, mob.z - player.position.z) <= REACH) {
+          pullId = null;
+          clearTravel();
+        } else {
+          target = { x: mob.x, z: mob.z };
+          dest.visible = true;
+          dest.position.set(mob.x, 0.75, mob.z);
+          path.visible = true;
+        }
+      }
+      if (!keyMove && target) {
         mx = target.x - player.position.x;
         mz = target.z - player.position.z;
         const len = Math.hypot(mx, mz);
@@ -1013,6 +1155,24 @@ export default function Walk({
         label.visible = label.userData.layer === layerNow && cam.dist > 168;
       }
 
+      if (session && heroRef.current) {
+        const step = session.update(
+          dt,
+          player.position.x,
+          player.position.z,
+          layerNow,
+          standing,
+          Date.now(),
+          poisRef.current,
+          posOf
+        );
+        fieldView.sync(session.mobs, session.targetId, step.hud.level, player.position.x, player.position.z);
+        publishCombat(step.hud);
+        if (step.died) wake(step.originId);
+      } else {
+        fieldView.sync(new Map(), null, 1);
+      }
+
       placeCamera(false);
       if (snapCam || dragging) {
         camera.position.copy(desired);
@@ -1037,7 +1197,10 @@ export default function Walk({
       goToPoi,
       setLayer,
       setPois,
+      wake,
+      bindHero,
     };
+    if (session) publishCombat(session.hud());
 
     return () => {
       alive = false;
@@ -1052,6 +1215,8 @@ export default function Walk({
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
       window.removeEventListener("blur", onBlur);
+      session?.flush?.();
+      fieldView.dispose();
       const textures = new Set();
       const sharedDots = new Set(dotCache.values());
       scene.traverse((obj) => {
@@ -1104,7 +1269,29 @@ export default function Walk({
     apiRef.current?.setPois(pois);
   }, [pois, atlasKey]);
 
+  function conjure(draft) {
+    const next = createHero(draft);
+    saveHero(next, localStorage);
+    setHero(next);
+    setRetiring(false);
+    apiRef.current?.bindHero(next);
+    apiRef.current?.wake(next.originId);
+  }
+
+  function retire() {
+    if (!retiring) {
+      setRetiring(true);
+      return;
+    }
+    clearHero(localStorage);
+    setHero(null);
+    setCombat(null);
+    setRetiring(false);
+    apiRef.current?.bindHero(null);
+  }
+
   function onMini(e) {
+    if (!hero) return;
     const api = apiRef.current;
     if (!api) return;
     const pt = api.eventToWorld(e);
@@ -1131,16 +1318,59 @@ export default function Walk({
   return (
     <div ref={stageRef} className={`walk-stage layer-${layer}`}>
       <div ref={hostRef} className="walk-gl" />
-      <div className="walk-chip">
-        <p className="region">{hud.kind || (layer === "deep" ? "The Deep" : "Surface")}</p>
-        <strong>{hud.zoneName || "Between maps"}</strong>
-        {hud.levels ? <span>{hud.levels}</span> : null}
-        {hud.nearName ? <span className="walk-near">At {hud.nearName}</span> : null}
-      </div>
+      {combat && hero && (
+        <div className="field-hud">
+          <header>
+            <strong>{combat.name}</strong>
+            <span>
+              {combat.className} · {combat.passive}
+            </span>
+          </header>
+          <div className="field-bar hp">
+            <i style={{ width: `${Math.max(0, Math.min(100, (combat.hp / combat.maxHp) * 100))}%` }} />
+          </div>
+          <p className="field-nums">
+            {combat.hp} / {combat.maxHp}
+          </p>
+          <div className="field-bar xp">
+            <i style={{ width: `${Math.max(0, Math.min(100, (combat.xp / combat.xpNext) * 100))}%` }} />
+          </div>
+          <p className="field-nums">
+            Level {combat.level}
+            {combat.level < 60 ? ` · ${combat.xp} / ${combat.xpNext} xp` : " · the road levels off"}
+            {combat.kills ? ` · ${combat.kills} fallen` : ""}
+          </p>
+          {combat.target && (
+            <div className="field-target">
+              <strong style={{ color: combat.target.con }}>{combat.target.name}</strong>
+              <span>
+                Level {combat.target.level}
+                {combat.target.named ? " · named" : ""}
+              </span>
+              <div className="field-bar mob">
+                <i
+                  style={{
+                    width: `${Math.max(0, Math.min(100, (combat.target.hp / combat.target.maxHp) * 100))}%`,
+                    background: combat.target.con,
+                  }}
+                />
+              </div>
+            </div>
+          )}
+          <ul className="field-log">
+            {(combat.log || [combat.line]).filter(Boolean).map((row, i) => (
+              <li key={`${i}-${row}`}>{row}</li>
+            ))}
+          </ul>
+          {hud.zoneName ? <p className="field-where">{hud.zoneName}</p> : null}
+          <button type="button" className="field-retire" onClick={retire}>
+            {retiring ? "Yes, let them go" : "Let this one go"}
+          </button>
+        </div>
+      )}
       <aside className="walk-minimap">
         <header>
-          <span>Atlas</span>
-          <span className="walk-mini-layer">{layer === "deep" ? "The Deep" : "Surface"}</span>
+          <span>{hud.zoneName || "Where you are"}</span>
           <span className="compass-n">N</span>
         </header>
         <canvas
@@ -1152,9 +1382,10 @@ export default function Walk({
           }}
           onPointerUp={onMini}
         />
-        <p className="walk-go">{hud.travel || "Click the atlas to run there"}</p>
-        <p className="walk-keys">Double-click to arrive · WASD · drag to look · scroll to zoom</p>
+        <p className="walk-go">{hud.travel || "Click the map to run"}</p>
+        <p className="walk-keys">Click a creature to pull · Space · Tab · WASD</p>
       </aside>
+      {!hero && <CharacterCreate onConjure={conjure} />}
       <div ref={tipRef} className={`map-hover-card${hover ? " show" : ""}`}>
         {hover && (
           <>

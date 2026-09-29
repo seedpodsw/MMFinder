@@ -7,6 +7,18 @@ import Enhance, { ZoneQuestTab, searchQuests } from "./Enhance";
 import ItemsGrid from "./ItemsGrid";
 import GearFinder from "./GearFinder";
 import { huntsHere, huntsAtLevel, huntZonesNear, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
+import { loadHero } from "../../shared/field.js";
+import { appView, kindFor, readPlace, writePlace } from "../../shared/place.js";
+
+const SITE_TABS = [
+  { view: "atlas", label: "Atlas" },
+  { view: "walk", label: "Walk" },
+  { view: "turnins", label: "Turn-ins" },
+  { view: "items", label: "Items" },
+  { view: "spells", label: "Spells" },
+  { view: "gear", label: "Upgrades" },
+  { view: "quests", label: "Quests" },
+];
 
 const emptyPoiForm = {
   name: "",
@@ -47,25 +59,27 @@ export default function App() {
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState("");
   const [layer, setLayer] = useState("surface");
-  const [selectedId, setSelectedId] = useState("night-harbor");
-  const [focusPoi, setFocusPoi] = useState(null);
+  const [selectedId, setSelectedId] = useState(
+    () => readPlace(window.location.search).zone || "night-harbor"
+  );
+  const [focusPoi, setFocusPoi] = useState(() => readPlace(window.location.search).poi);
   const [hoverPoi, setHoverPoi] = useState(null);
   const [level, setLevel] = useState(1);
   const [query, setQuery] = useState("");
   const [dropMode, setDropMode] = useState(false);
-  const [kindFilter, setKindFilter] = useState("all");
+  const [kindFilter, setKindFilter] = useState(() => kindFor(readPlace(window.location.search)));
   const [tab, setTab] = useState("pois");
   const [noteDraft, setNoteDraft] = useState({ title: "", body: "" });
   const [poiForm, setPoiForm] = useState(emptyPoiForm);
   const [dropHit, setDropHit] = useState(null);
   const [addingPoi, setAddingPoi] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [view, setView] = useState("atlas");
-  const [klass, setKlass] = useState("");
+  const [view, setView] = useState(() => appView(readPlace(window.location.search)));
+  const [klass, setKlass] = useState(() => readPlace(window.location.search).class || "");
   const [completed, setCompleted] = useState([]);
   const [flyNonce, setFlyNonce] = useState(0);
   const [huntFit, setHuntFit] = useState(true);
-  const [focusQuestId, setFocusQuestId] = useState(null);
+  const [focusQuestId, setFocusQuestId] = useState(() => readPlace(window.location.search).quest);
   const [selectedItem, setSelectedItem] = useState(null);
   const [itemDraft, setItemDraft] = useState({ name: "", how: "", kind: "item" });
   const [addingItem, setAddingItem] = useState(false);
@@ -75,7 +89,9 @@ export default function App() {
     setWorld(w);
     setNotes(n);
     if (w.settings?.characterLevel) setLevel(w.settings.characterLevel);
-    if (w.settings?.characterClass) setKlass(w.settings.characterClass);
+    if (w.settings?.characterClass && !readPlace(window.location.search).class) {
+      setKlass(w.settings.characterClass);
+    }
     if (Array.isArray(w.settings?.completedSteps)) setCompleted(w.settings.completedSteps);
   }
 
@@ -90,6 +106,35 @@ export default function App() {
     }, 400);
     return () => clearTimeout(t);
   }, [level, klass, completed, world]);
+
+  useEffect(() => {
+    if (!world) return;
+    const place = readPlace(window.location.search);
+    if (place.zone) {
+      const z = world.zones.find((x) => x.id === place.zone);
+      if (z?.layer) setLayer(z.layer);
+    }
+    if (place.item) {
+      const item = (world.items || []).find((x) => x.id === place.item);
+      if (item) setSelectedItem(item);
+    }
+  }, [world]);
+
+  useEffect(() => {
+    const placeView =
+      view === "enhance" ? "quests" : view === "atlas" && kindFilter === "quest" ? "turnins" : view;
+    const desired = writePlace({
+      view: placeView,
+      zone: selectedId,
+      poi: focusPoi,
+      class: klass || null,
+      quest: focusQuestId,
+      item: selectedItem?.id || null,
+    });
+    const next = desired === "?" ? "" : desired;
+    if (window.location.search === next) return;
+    window.history.replaceState(null, "", next || window.location.pathname);
+  }, [view, kindFilter, selectedId, focusPoi, klass, focusQuestId, selectedItem]);
 
   const zones = world?.zones || [];
   const allPois = world?.pois || [];
@@ -231,6 +276,14 @@ export default function App() {
   function noteWalkZone(id) {
     if (!id || id === selectedId) return;
     setSelectedId(id);
+  }
+
+  function bindHero(zoneId) {
+    if (!zoneId) return;
+    const z = zones.find((x) => x.id === zoneId);
+    if (z?.layer) setLayer(z.layer);
+    setSelectedId(zoneId);
+    setFocusPoi(null);
   }
 
   function selectPoi(poiOrId) {
@@ -429,6 +482,40 @@ export default function App() {
     setNotes(await api.notes());
   }
 
+  function applyPlace(place) {
+    setView(appView(place));
+    setKindFilter(kindFor(place));
+    setDropMode(false);
+    if (place.zone) {
+      const z = (world?.zones || []).find((x) => x.id === place.zone);
+      if (z?.layer) setLayer(z.layer);
+      setSelectedId(place.zone);
+    }
+    setFocusPoi(place.poi || null);
+    if (place.class) setKlass(place.class);
+    setFocusQuestId(place.quest || null);
+    if (place.item) {
+      const item = (world?.items || []).find((x) => x.id === place.item);
+      if (item) setSelectedItem(item);
+    }
+  }
+
+  function followLink(event, place) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    event.preventDefault();
+    const href = writePlace(place);
+    window.history.pushState(null, "", href === "?" ? window.location.pathname : href);
+    applyPlace(readPlace(href === "?" ? "" : href));
+  }
+
+  useEffect(() => {
+    function onPop() {
+      applyPlace(readPlace(window.location.search));
+    }
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  });
+
   function showZone(id) {
     if (view !== "walk") setView("atlas");
     revealZone(id);
@@ -460,72 +547,41 @@ export default function App() {
           </a>
         </div>
         <div className="tabs view-tabs">
-          <button
-            className={view === "atlas" && kindFilter !== "quest" ? "on" : ""}
-            onClick={() => {
-              setView("atlas");
-              setKindFilter("all");
-            }}
-          >
-            Atlas
-          </button>
-          <button
-            className={view === "walk" ? "on" : ""}
-            onClick={() => {
-              setView("walk");
-              setDropMode(false);
-            }}
-          >
-            Walk
-          </button>
-          <button
-            className={view === "atlas" && kindFilter === "quest" ? "on" : ""}
-            onClick={() => {
-              setView("atlas");
-              setKindFilter("quest");
-              setDropMode(false);
-              setQuery("");
-            }}
-          >
-            Turn-ins
-          </button>
-          <button
-            className={view === "items" ? "on" : ""}
-            onClick={() => {
-              setView("items");
-              setDropMode(false);
-            }}
-          >
-            Items
-          </button>
-          <button
-            className={view === "spells" ? "on" : ""}
-            onClick={() => {
-              setView("spells");
-              setDropMode(false);
-            }}
-          >
-            Spells
-          </button>
-          <button
-            className={view === "gear" ? "on" : ""}
-            onClick={() => {
-              setView("gear");
-              setDropMode(false);
-            }}
-          >
-            Upgrades
-          </button>
-          <button
-            className={view === "enhance" ? "on" : ""}
-            onClick={() => {
-              setView("enhance");
-              setDropMode(false);
-            }}
-          >
-            Quests
-          </button>
+          {SITE_TABS.map((siteTab) => {
+            const on =
+              siteTab.view === "turnins"
+                ? view === "atlas" && kindFilter === "quest"
+                : siteTab.view === "quests"
+                  ? view === "enhance"
+                  : siteTab.view === "atlas"
+                    ? view === "atlas" && kindFilter !== "quest"
+                    : view === siteTab.view;
+            return (
+              <a
+                key={siteTab.view}
+                className={on ? "on" : ""}
+                href={writePlace({ view: siteTab.view })}
+                onClick={(event) => {
+                  followLink(event, { view: siteTab.view });
+                  if (!event.defaultPrevented) return;
+                  if (siteTab.view === "turnins") setQuery("");
+                  if (siteTab.view !== "walk") return;
+                  const saved = loadHero();
+                  const zoneId = saved?.zoneId || saved?.originId;
+                  if (!zoneId) return;
+                  const z = zones.find((x) => x.id === zoneId);
+                  if (z?.layer) setLayer(z.layer);
+                  setSelectedId(zoneId);
+                  setFocusPoi(null);
+                }}
+              >
+                {siteTab.label}
+              </a>
+            );
+          })}
         </div>
+        {view !== "walk" && (
+        <>
         <label className="level-ctl">
           <span>Your level</span>
           <strong>{level}</strong>
@@ -548,7 +604,9 @@ export default function App() {
             ))}
           </select>
         </label>
-        {(view === "atlas" || view === "walk") && (
+        </>
+        )}
+        {view === "atlas" && (
             <div className="layer-toggle">
               <button
                 className={layer === "surface" ? "on" : ""}
@@ -615,6 +673,21 @@ export default function App() {
           onFarm={showItemOnMap}
           onSelectItem={selectItem}
         />
+      ) : view === "walk" ? (
+        <div className="walk-screen">
+          <Suspense fallback={<div className="walk-boot">The ground is waking…</div>}>
+            <Walk
+              atlas={world.atlas}
+              zones={zones}
+              pois={allPois}
+              layer={layer}
+              selectedId={selected?.id}
+              focusPoiId={focusPoi}
+              onEnterZone={noteWalkZone}
+              onBind={bindHero}
+            />
+          </Suspense>
+        </div>
       ) : view === "gear" ? (
         <GearFinder
           items={world.items || []}
@@ -769,21 +842,6 @@ export default function App() {
             if (file) dropMapFile(file);
           }}
         >
-          {view === "walk" ? (
-            <Suspense fallback={<div className="walk-boot">Unrolling the ground…</div>}>
-              <Walk
-                atlas={world.atlas}
-                zones={zones}
-                pois={allPois}
-                layer={layer}
-                selectedId={selected?.id}
-                focusPoiId={focusPoi}
-                onEnterZone={noteWalkZone}
-                onSelectPoi={selectPoi}
-                onHoverPoi={setHoverPoi}
-              />
-            </Suspense>
-          ) : (
           <WorldMap
             atlas={world.atlas}
             zones={zones}
@@ -812,7 +870,6 @@ export default function App() {
             onHoverPoi={setHoverPoi}
             onDropPoi={handleDropPoi}
           />
-          )}
         </main>
 
         <aside className="panel">

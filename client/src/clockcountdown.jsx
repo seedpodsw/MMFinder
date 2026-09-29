@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { EARLY_ACCESS_NOTE, formatEastern, partsUntil, releaseInstant } from "../../shared/release.js";
+import { VIEW_LABELS, writePlace } from "../../shared/place.js";
 import "./clock.css";
+
+const SITE_VIEWS = ["atlas", "walk", "turnins", "items", "spells", "gear", "quests"];
 
 const release = releaseInstant();
 const overlayMode = new URLSearchParams(window.location.search).has("overlay");
@@ -162,7 +165,14 @@ function ClockPage() {
       </section>
 
       <p className="geo-webring">
-        <a href="../">« BACK TO MMFinder</a>
+        {SITE_VIEWS.map((view) => {
+          const search = writePlace({ view });
+          return (
+            <a key={view} href={search === "?" ? "../" : `../${search}`}>
+              {VIEW_LABELS[view].toUpperCase()}
+            </a>
+          );
+        })}
         <a href={EARLY_ACCESS_NOTE.source}>STUDIO NEWS</a>
         <a href="https://monstersandmemories.com/">OFFICIAL SITE</a>
         <a href="https://caniplaymonstersandmemoriesyet.com/">CAN I PLAY YET</a>
