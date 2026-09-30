@@ -68,6 +68,27 @@ h3,
   flex-wrap: wrap;
 }
 
+.top-walk {
+  gap: 8px;
+  padding: 4px 12px;
+  flex-wrap: nowrap;
+}
+
+.top-walk .eyebrow,
+.top-walk .clock-link {
+  display: none;
+}
+
+.top-walk h1 {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.top-walk .tabs a {
+  padding: 3px 9px;
+  font-size: 13px;
+}
+
 .eyebrow {
   margin: 0;
   letter-spacing: 0.18em;
@@ -206,6 +227,10 @@ h1 {
   background: var(--panel);
   overflow: auto;
   border-right: 1px solid var(--line);
+}
+
+.rail {
+  padding-top: 8px;
 }
 
 .panel {

@@ -225,9 +225,9 @@ export default function Walk({
       const role = spec.role || "outdoor";
       const geo = new THREE.PlaneGeometry(Math.max(art.w, 1), Math.max(art.h, 1));
       geo.rotateX(-Math.PI / 2);
-      const mat = new THREE.MeshLambertMaterial({ color: 0x4a3b2a });
+      const mat = new THREE.MeshLambertMaterial({ color: 0x4a3b2a, polygonOffset: true });
       const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.set(art.x, role === "nested" ? 0.35 : 0.05, art.z);
+      mesh.position.set(art.x, 0, art.z);
       scene.add(mesh);
       pickMeshes.push(mesh);
       const tile = {
@@ -240,9 +240,7 @@ export default function Walk({
         name: zone?.name || spec.id,
         artClip: spec.artClip,
         image: null,
-        heights: null,
-        cols: 0,
-        rows: 0,
+        area: art.w * art.h,
       };
       tiles.push(tile);
       tileById.set(spec.id, tile);
@@ -271,17 +269,24 @@ export default function Walk({
           mat.color.set(0xffffff);
           mat.needsUpdate = true;
           tile.image = tex.image;
-          raiseTile(tile, tex.image);
         });
       }
 
       const label = makeLabel(tile.name);
-      label.position.set(art.x, 3.2, art.zNorth + Math.min(16, art.h * 0.06));
+      label.position.set(art.x, 1.4, art.zNorth + Math.min(16, art.h * 0.06));
       label.userData.layer = tileLayer;
       label.visible = tileLayer === layerNow;
       scene.add(label);
       labels.push(label);
     }
+
+    const byArea = [...tiles].sort((a, b) => b.area - a.area);
+    byArea.forEach((tile, i) => {
+      const bias = byArea.length - i;
+      tile.mesh.material.polygonOffsetFactor = bias;
+      tile.mesh.material.polygonOffsetUnits = bias;
+      tile.mesh.renderOrder = i;
+    });
 
     const player = new THREE.Group();
     const heroCritter = makeCritter({ color: classTint(heroRef.current?.classId), scale: 1.5 });
@@ -390,115 +395,8 @@ export default function Walk({
       };
     }
 
-    const WALL = 12;
-
-    function groundAt(x, z) {
-      const tile = zoneAt(x, z);
-      if (!tile?.heights) return 0;
-      const u = (x - tile.art.west) / tile.art.w;
-      const v = (z - tile.art.zNorth) / tile.art.h;
-      if (u < 0 || v < 0 || u > 1 || v > 1) return 0;
-      const ix = Math.min(tile.cols - 1, Math.max(0, Math.round(u * (tile.cols - 1))));
-      const iy = Math.min(tile.rows - 1, Math.max(0, Math.round(v * (tile.rows - 1))));
-      return tile.heights[iy * tile.cols + ix];
-    }
-
-    function blocked(x, z) {
-      return groundAt(x, z) >= WALL;
-    }
-
-    function nearestWalkable(x, z) {
-      if (!blocked(x, z)) return { x, z };
-      for (let ring = 6; ring <= 90; ring += 6) {
-        for (let step = 0; step < 10; step++) {
-          const ang = (step / 10) * Math.PI * 2;
-          const nx = x + Math.cos(ang) * ring;
-          const nz = z + Math.sin(ang) * ring;
-          if (!blocked(nx, nz)) return { x: nx, z: nz };
-        }
-      }
-      return { x, z };
-    }
-
-    function raiseTile(tile, image) {
-      const cols = 72;
-      const rows = 72;
-      const canvas = document.createElement("canvas");
-      canvas.width = cols;
-      canvas.height = rows;
-      const g = canvas.getContext("2d", { willReadFrequently: true });
-      if (!g || !image?.width) return;
-      let sx = 0;
-      let sy = 0;
-      let sw = image.width;
-      let sh = image.height;
-      const clip = tile.artClip;
-      if (clip) {
-        const rw = (100 - clip.l - clip.r) / 100;
-        const rh = (100 - clip.t - clip.b) / 100;
-        if (rw > 0.05 && rh > 0.05) {
-          sx = (clip.l / 100) * image.width;
-          sy = (clip.t / 100) * image.height;
-          sw = rw * image.width;
-          sh = rh * image.height;
-        }
-      }
-      let data;
-      try {
-        g.drawImage(image, sx, sy, sw, sh, 0, 0, cols, rows);
-        data = g.getImageData(0, 0, cols, rows).data;
-      } catch {
-        return;
-      }
-      const dark = new Float32Array(cols * rows);
-      for (let i = 0; i < dark.length; i++) {
-        const r = data[i * 4];
-        const gc = data[i * 4 + 1];
-        const b = data[i * 4 + 2];
-        dark[i] = 1 - (0.2126 * r + 0.7152 * gc + 0.0722 * b) / 255;
-      }
-      const blurred = new Float32Array(dark.length);
-      for (let iy = 0; iy < rows; iy++) {
-        for (let ix = 0; ix < cols; ix++) {
-          let acc = 0;
-          let n = 0;
-          for (let dy = -1; dy <= 1; dy++) {
-            for (let dx = -1; dx <= 1; dx++) {
-              const x = ix + dx;
-              const y = iy + dy;
-              if (x < 0 || y < 0 || x >= cols || y >= rows) continue;
-              acc += dark[y * cols + x];
-              n++;
-            }
-          }
-          blurred[iy * cols + ix] = acc / n;
-        }
-      }
-      const heights = new Float32Array(blurred.length);
-      for (let i = 0; i < blurred.length; i++) {
-        const ink = blurred[i];
-        if (ink > 0.74) heights[i] = 24;
-        else if (ink > 0.58) heights[i] = 11;
-        else if (ink > 0.46) heights[i] = 4;
-        else heights[i] = 0;
-      }
-      const raised = new THREE.PlaneGeometry(Math.max(tile.art.w, 1), Math.max(tile.art.h, 1), cols - 1, rows - 1);
-      const pos = raised.attributes.position;
-      for (let i = 0; i < heights.length; i++) pos.setZ(i, heights[i]);
-      raised.rotateX(-Math.PI / 2);
-      raised.computeVertexNormals();
-      const old = tile.mesh.geometry;
-      tile.mesh.geometry = raised;
-      old.dispose();
-      tile.heights = heights;
-      tile.cols = cols;
-      tile.rows = rows;
-      const here = zoneAt(player.position.x, player.position.z);
-      if (here?.id === tile.id && blocked(player.position.x, player.position.z)) {
-        const spot = nearestWalkable(player.position.x, player.position.z);
-        player.position.x = spot.x;
-        player.position.z = spot.z;
-      }
+    function groundAt() {
+      return 0;
     }
 
     function showOutline(tile) {
@@ -507,7 +405,7 @@ export default function Walk({
         return;
       }
       const r = tile.art;
-      const y = 0.95;
+      const y = 0.35;
       outlineArr.set([
         r.west, y, r.zNorth,
         r.east, y, r.zNorth,
@@ -1093,10 +991,8 @@ export default function Walk({
         mz = target.z - player.position.z;
         const len = Math.hypot(mx, mz);
         if (len < 2.8) {
-          if (!blocked(target.x, target.z)) {
-            player.position.x = target.x;
-            player.position.z = target.z;
-          }
+          player.position.x = target.x;
+          player.position.z = target.z;
           clearTravel();
           mx = 0;
           mz = 0;
@@ -1111,14 +1007,7 @@ export default function Walk({
         mx /= mag;
         mz /= mag;
         const step = speed * dt;
-        let next = clampPos(player.position.x + mx * step, player.position.z + mz * step);
-        if (blocked(next.x, next.z)) {
-          const slideX = clampPos(player.position.x + mx * step, player.position.z);
-          const slideZ = clampPos(player.position.x, player.position.z + mz * step);
-          if (!blocked(slideX.x, slideX.z)) next = slideX;
-          else if (!blocked(slideZ.x, slideZ.z)) next = slideZ;
-          else next = { x: player.position.x, z: player.position.z };
-        }
+        const next = clampPos(player.position.x + mx * step, player.position.z + mz * step);
         player.position.x = next.x;
         player.position.z = next.z;
         const face = Math.atan2(-mx, -mz);
@@ -1131,7 +1020,7 @@ export default function Walk({
       } else {
         visuals.position.y += (0 - visuals.position.y) * Math.min(1, dt * 8);
       }
-      player.position.y = groundAt(player.position.x, player.position.z);
+      player.position.y = 0;
 
       if (target) {
         dest.position.set(target.x, groundAt(target.x, target.z) + 0.75, target.z);

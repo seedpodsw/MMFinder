@@ -569,7 +569,7 @@ export default function App() {
 
   return (
     <div className="shell">
-      <header className="top">
+      <header className={view === "walk" ? "top top-walk" : "top"}>
         <div>
           <p className="eyebrow">Monsters & Memories</p>
           <h1>MMFinder</h1>
@@ -672,7 +672,7 @@ export default function App() {
               {dropMode ? "Cancel drop" : "Drop a POI"}
             </button>
         )}
-        {crumbs.length > 2 && (
+        {view !== "walk" && crumbs.length > 2 && (
           <nav className="crumb-nav" aria-label="Place">
             {crumbs.map((crumb, index) => (
               <span key={`${crumb.href}-${crumb.label}`} className="crumb">
@@ -747,12 +747,6 @@ export default function App() {
       ) : (
       <div className="layout">
         <aside className="rail">
-          <input
-            className="search"
-            placeholder="Find a zone, camp, NPC, turn-in, or item…"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
           {!query.trim() && huntNow.length > 0 && kindFilter === "all" && (
             <>
               <p className="hit-label">Hunt now · lvl {level}</p>
