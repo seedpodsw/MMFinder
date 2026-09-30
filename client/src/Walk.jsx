@@ -193,7 +193,7 @@ export default function Walk({
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.NoToneMapping;
-    renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x0d1c24, 1);
+    renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x24180f, 1);
     renderer.domElement.className = "walk-view";
     host.appendChild(renderer.domElement);
 
@@ -207,7 +207,7 @@ export default function Walk({
 
     const voidGeo = new THREE.PlaneGeometry(1, 1);
     voidGeo.rotateX(-Math.PI / 2);
-    const voidMat = new THREE.MeshBasicMaterial({ color: layerNow === "deep" ? 0x140c16 : 0x0d1c24 });
+    const voidMat = new THREE.MeshBasicMaterial({ color: layerNow === "deep" ? 0x140c16 : 0x24180f });
     const voidMesh = new THREE.Mesh(voidGeo, voidMat);
     voidMesh.position.y = -0.8;
     scene.add(voidMesh);
@@ -225,7 +225,7 @@ export default function Walk({
       const role = spec.role || "outdoor";
       const geo = new THREE.PlaneGeometry(Math.max(art.w, 1), Math.max(art.h, 1));
       geo.rotateX(-Math.PI / 2);
-      const mat = new THREE.MeshLambertMaterial({ color: 0x4a3b2a, polygonOffset: true });
+      const mat = new THREE.MeshLambertMaterial({ color: 0x3a2a1c });
       const mesh = new THREE.Mesh(geo, mat);
       mesh.position.set(art.x, 0, art.z);
       scene.add(mesh);
@@ -280,13 +280,15 @@ export default function Walk({
       labels.push(label);
     }
 
-    const byArea = [...tiles].sort((a, b) => b.area - a.area);
-    byArea.forEach((tile, i) => {
-      const bias = byArea.length - i;
-      tile.mesh.material.polygonOffsetFactor = bias;
-      tile.mesh.material.polygonOffsetUnits = bias;
-      tile.mesh.renderOrder = i;
-    });
+    for (const tile of tiles) {
+      tile.mesh.position.y = 0;
+      if (tile.role === "nested") {
+        tile.mesh.renderOrder = 2;
+        tile.mesh.material.polygonOffset = true;
+        tile.mesh.material.polygonOffsetFactor = -1;
+        tile.mesh.material.polygonOffsetUnits = -1;
+      }
+    }
 
     const player = new THREE.Group();
     const heroCritter = makeCritter({ color: classTint(heroRef.current?.classId), scale: 1.5 });
@@ -399,6 +401,53 @@ export default function Walk({
       return 0;
     }
 
+    function onLand(x, z) {
+      for (const tile of tiles) {
+        if (tile.layer !== layerNow) continue;
+        const r = tile.art;
+        if (x >= r.west && x <= r.east && z >= r.zNorth && z <= r.zSouth) return true;
+      }
+      return false;
+    }
+
+    function stayOnLand(fromX, fromZ, x, z) {
+      if (onLand(x, z)) return { x, z };
+      if (onLand(x, fromZ)) return { x, z: fromZ };
+      if (onLand(fromX, z)) return { x: fromX, z };
+      return { x: fromX, z: fromZ };
+    }
+
+    function nearestLand(x, z) {
+      if (onLand(x, z)) return { x, z };
+      let best = null;
+      let bestD = Infinity;
+      for (const tile of tiles) {
+        if (tile.layer !== layerNow) continue;
+        const r = tile.art;
+        const cx = Math.min(r.east, Math.max(r.west, x));
+        const cz = Math.min(r.zSouth, Math.max(r.zNorth, z));
+        const d = (cx - x) * (cx - x) + (cz - z) * (cz - z);
+        if (d < bestD) {
+          bestD = d;
+          best = { x: cx, z: cz };
+        }
+      }
+      return best || { x, z };
+    }
+
+    function keepCreaturesOnArt() {
+      if (!session) return;
+      for (const mob of session.mobs.values()) {
+        if (!mob.alive) continue;
+        const tile = zoneAt(mob.homeX, mob.homeZ) || zoneAt(mob.x, mob.z);
+        if (!tile) continue;
+        const r = tile.art;
+        const edge = 6;
+        mob.x = Math.min(r.east - edge, Math.max(r.west + edge, mob.x));
+        mob.z = Math.min(r.zSouth - edge, Math.max(r.zNorth + edge, mob.z));
+      }
+    }
+
     function showOutline(tile) {
       if (!tile) {
         outline.visible = false;
@@ -449,8 +498,8 @@ export default function Walk({
     function applyLayer() {
       for (const tile of tiles) tile.mesh.visible = tile.layer === layerNow;
       for (const label of labels) label.visible = label.userData.layer === layerNow;
-      renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x0d1c24, 1);
-      voidMat.color.set(layerNow === "deep" ? 0x140c16 : 0x0d1c24);
+      renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x24180f, 1);
+      voidMat.color.set(layerNow === "deep" ? 0x140c16 : 0x24180f);
       recomputeBounds();
       showOutline(zoneAt(player.position.x, player.position.z));
     }
@@ -476,7 +525,7 @@ export default function Walk({
     }
 
     function travelTo(pos, label) {
-      const c = clampPos(pos.x, pos.z);
+      const c = nearestLand(pos.x, pos.z);
       target = { x: c.x, z: c.z };
       dest.visible = true;
       dest.position.set(c.x, 0.75, c.z);
@@ -488,7 +537,7 @@ export default function Walk({
     }
 
     function snapTo(pos) {
-      const c = clampPos(pos.x, pos.z);
+      const c = nearestLand(pos.x, pos.z);
       player.position.x = c.x;
       player.position.z = c.z;
       clearTravel();
@@ -801,7 +850,8 @@ export default function Walk({
     setLayer(layerNow, false);
     const spot = spawnPoint();
     if (spot) {
-      player.position.set(spot.pos.x, 0, spot.pos.z);
+      const landed = nearestLand(spot.pos.x, spot.pos.z);
+      player.position.set(landed.x, 0, landed.z);
       reported = spot.zoneId;
       standing = spot.zoneId;
       publish(describe(spot.zoneId));
@@ -1007,7 +1057,7 @@ export default function Walk({
         mx /= mag;
         mz /= mag;
         const step = speed * dt;
-        const next = clampPos(player.position.x + mx * step, player.position.z + mz * step);
+        const next = stayOnLand(player.position.x, player.position.z, player.position.x + mx * step, player.position.z + mz * step);
         player.position.x = next.x;
         player.position.z = next.z;
         const face = Math.atan2(-mx, -mz);
@@ -1060,6 +1110,7 @@ export default function Walk({
           poisRef.current,
           posOf
         );
+        keepCreaturesOnArt();
         fieldView.sync(session.mobs, session.targetId, step.hud.level, player.position.x, player.position.z, groundAt);
         const prey = session.targetId ? session.mobs.get(session.targetId) : null;
         const swinging = prey && prey.alive && Math.hypot(prey.x - player.position.x, prey.z - player.position.z) <= REACH;
