@@ -72,6 +72,19 @@ function poiPosition(poi, tile) {
   return { x, z: -lat };
 }
 
+function swingFill(combat) {
+  if (!combat?.swingAt || !combat.swingDelay) return 0;
+  const elapsed = Date.now() - combat.swingAt;
+  return Math.max(0, Math.min(100, (elapsed / combat.swingDelay) * 100));
+}
+
+function swingLabel(combat) {
+  if (!combat?.swingAt || !combat.swingDelay) return "—";
+  const left = combat.swingDelay - (Date.now() - combat.swingAt);
+  if (left <= 0) return "ready";
+  return (left / 1000).toFixed(1);
+}
+
 function rot2(x, z, angle) {
   const c = Math.cos(angle);
   const s = Math.sin(angle);
@@ -813,7 +826,10 @@ export default function Walk({
     function publishCombat(snap) {
       if (!snap) return;
       const mark = snap.target;
-      const key = `${snap.hp}|${snap.xp}|${snap.level}|${snap.kills}|${snap.line}|${mark?.id || ""}|${mark?.hp ?? ""}|${snap.attacking ? 1 : 0}`;
+      const delay = snap.swingDelay || 1;
+      const elapsed = snap.swingAt ? Date.now() - snap.swingAt : 0;
+      const swingTick = snap.swingAt ? Math.min(24, Math.floor((elapsed / delay) * 24)) : 0;
+      const key = `${snap.hp}|${snap.xp}|${snap.level}|${snap.kills}|${snap.line}|${mark?.id || ""}|${mark?.hp ?? ""}|${snap.attacking ? 1 : 0}|${swingTick}`;
       if (key === combatKey) return;
       combatKey = key;
       onCombatRef.current(snap);
@@ -917,7 +933,7 @@ export default function Walk({
     }
     function onWheel(e) {
       e.preventDefault();
-      cam.dist = Math.min(200, Math.max(72, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
+      cam.dist = Math.min(200, Math.max(26, cam.dist * (e.deltaY > 0 ? 1.08 : 0.92)));
     }
     function onContext(e) {
       e.preventDefault();
@@ -1473,6 +1489,11 @@ export default function Walk({
                 <span>
                   {combat.level < 60 ? `${combat.xp} / ${combat.xpNext}` : "60"}
                 </span>
+              </div>
+              <p className="eq-label">Swing</p>
+              <div className="eq-bar swing">
+                <i style={{ width: `${swingFill(combat)}%` }} />
+                <span>{swingLabel(combat)}</span>
               </div>
               <dl className="field-stats">
                 <div>

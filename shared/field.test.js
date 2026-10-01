@@ -101,7 +101,7 @@ test("the first rogue blow is the opener and the next is not", () => {
   mob.z = 0;
   mob.hp = 500;
   const first = session.swingAt(mob.id, 0, 0, now + 5, () => 0);
-  const second = session.swingAt(mob.id, 0, 0, now + 2000, () => 0);
+  const second = session.swingAt(mob.id, 0, 0, now + 8000, () => 0);
   assert.match(first.line, /Opener/);
   assert.doesNotMatch(second.line, /Opener/);
 });

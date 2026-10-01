@@ -2444,6 +2444,10 @@ button.linkish.npc-go {
   background: linear-gradient(#e6c56a, #8a6a28);
 }
 
+.eq-bar.swing i {
+  background: linear-gradient(#f7f1e4, #9a8b72);
+}
+
 .eq-bar span {
   position: absolute;
   inset: 0;

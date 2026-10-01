@@ -31,6 +31,32 @@ export const CLASSES = [
 ];
 
 export const REACH = 9;
+
+/** Weapon delay in tenths of a second, the same unit the game prints on a swing timer. */
+const WEAPON_DELAY = {
+  fighter: 30,
+  paladin: 32,
+  "shadow-knight": 30,
+  archer: 35,
+  ranger: 28,
+  rogue: 22,
+  monk: 18,
+  bard: 26,
+  beastmaster: 30,
+  cleric: 34,
+  druid: 32,
+  shaman: 32,
+  elementalist: 36,
+  enchanter: 34,
+  necromancer: 34,
+  inquisitor: 30,
+  spellblade: 24,
+  wizard: 38,
+};
+
+export function weaponDelay(klass) {
+  return (WEAPON_DELAY[klass?.id] || 30) * 100;
+}
 const LEASH = 42;
 const SHOW = 480;
 const HIDE = 700;
@@ -422,6 +448,8 @@ export function createSession(hero, storage) {
       hp: Math.max(0, Math.round(hero.hp)),
       maxHp,
       attack: damageFor(hero.level, k),
+      swingDelay: weaponDelay(k),
+      swingAt: lastSwing,
       kills: hero.kills,
       line,
       log: log.slice(),
@@ -460,8 +488,7 @@ export function createSession(hero, storage) {
     const hitChance = Math.min(0.97, Math.max(0.5, 0.9 - diff * 0.045));
     if (rng() > hitChance) {
       note(`You try to hit ${mob.name}, but miss!`);
-      nextSwing = now + 880;
-      lastSwing = now;
+      armSwing(now);
       return;
     }
     let dmg = damageFor(hero.level, k);
@@ -507,8 +534,12 @@ export function createSession(hero, storage) {
     }
     if (mob.hp <= 0) finish(mob, now);
     else note(`${tag ? `${tag}. ` : ""}You hit ${mob.name} for ${dmg} points of damage.`);
-    nextSwing = now + 880;
+    armSwing(now);
+  }
+
+  function armSwing(now) {
     lastSwing = now;
+    nextSwing = now + weaponDelay(klass());
   }
 
   function ensure(pois, posOf, px, pz, layer, now) {
@@ -629,7 +660,7 @@ export function createSession(hero, storage) {
         if (reach < 8 && now >= mob.nextSwing) {
           const gap = mob.level - hero.level;
           const mobHit = Math.min(0.94, Math.max(0.4, 0.7 + gap * 0.04));
-          mob.nextSwing = now + 1500 * (mob.slow || 1);
+          mob.nextSwing = now + Math.round(2800 * (mob.slow || 1) * (mob.named ? 1.2 : 1));
           if (rng() > mobHit) {
             note(`${mob.name} tries to hit YOU, but misses!`);
             continue;
