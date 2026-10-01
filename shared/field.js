@@ -83,11 +83,13 @@ export function damageFor(level, klass) {
 }
 
 export function mobMaxHp(level, named) {
-  return Math.round((36 + level * 16) * (named ? 2.8 : 1));
+  const base = 14 + level * 8 + Math.floor(level * level * 0.45);
+  return Math.round(base * (named ? 2.8 : 1));
 }
 
 export function mobDamage(level, named) {
-  return Math.max(1, Math.round((3 + level * 1.05) * (named ? 1.55 : 1)));
+  const base = 1 + level * 0.7 + level * level * 0.02;
+  return Math.max(1, Math.round(base * (named ? 1.55 : 1)));
 }
 
 export function xpForKill(mobLevel, playerLevel, named) {
@@ -115,13 +117,25 @@ export function monsterNames(raw) {
     .filter(Boolean);
 }
 
-export function campLevel(poi) {
+export function campSpan(poi) {
   const lo = poi?.soloMin ?? poi?.groupMin;
   const hi = poi?.soloMax ?? poi?.groupMax;
   if (lo == null && hi == null) return null;
-  if (lo == null) return Number(hi);
-  if (hi == null) return Number(lo);
-  return Math.round((Number(lo) + Number(hi)) / 2);
+  const low = Number(lo == null ? hi : lo);
+  const high = Number(hi == null ? lo : hi);
+  return { lo: Math.min(low, high), hi: Math.max(low, high) };
+}
+
+export function campLevel(poi) {
+  const span = campSpan(poi);
+  if (!span) return null;
+  return Math.round((span.lo + span.hi) / 2);
+}
+
+function levelInSpan(span, index, count, named) {
+  if (named || count <= 1) return span.hi;
+  const t = index / (count - 1);
+  return Math.round(span.lo + (span.hi - span.lo) * t);
 }
 
 export function isSpawn(poi) {
@@ -158,8 +172,8 @@ function traitOf(name) {
 }
 
 export function layoutPack(poi) {
-  const level = campLevel(poi);
-  if (level == null) return [];
+  const span = campSpan(poi);
+  if (!span) return [];
   const named = poi.kind === "named";
   const names = monsterNames(poi.monsters);
   const list = names.length ? names : [poi.name || "creature"];
@@ -179,7 +193,7 @@ export function layoutPack(poi) {
         poiId: poi.id,
         name,
         named,
-        level,
+        level: levelInSpan(span, copy, per, named),
         ox: Math.cos(ang) * dist,
         oz: Math.sin(ang) * dist,
         ...traitOf(name),

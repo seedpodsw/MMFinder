@@ -182,6 +182,7 @@ export default function Walk({
     let interior = null;
     let returnSpot = null;
     let portalLock = 0;
+    let portalArmed = true;
     let target = null;
     let reported = "";
     let standing = "";
@@ -537,16 +538,16 @@ export default function Walk({
     }
 
     function nearestWalkable(x, z) {
-      if (!blocked(x, z)) return { x, z };
-      for (let ring = 6; ring <= 90; ring += 6) {
-        for (let step = 0; step < 10; step++) {
-          const ang = (step / 10) * Math.PI * 2;
+      if (onLand(x, z) && !blocked(x, z)) return { x, z };
+      for (let ring = 4; ring <= 80; ring += 4) {
+        for (let step = 0; step < 16; step++) {
+          const ang = (step / 16) * Math.PI * 2;
           const nx = x + Math.cos(ang) * ring;
           const nz = z + Math.sin(ang) * ring;
-          if (!blocked(nx, nz)) return { x: nx, z: nz };
+          if (onLand(nx, nz) && !blocked(nx, nz)) return { x: nx, z: nz };
         }
       }
-      return { x, z };
+      return nearestLand(x, z);
     }
 
     function raiseTile(tile, image) {
@@ -603,6 +604,9 @@ export default function Walk({
           blurred[iy * cols + ix] = acc / n;
         }
       }
+      let wallish = 0;
+      for (let i = 0; i < blurred.length; i++) if (blurred[i] > 0.74) wallish += 1;
+      const darkPlate = isDungeonTile(tile) && wallish / blurred.length > 0.3;
       const heights = new Float32Array(blurred.length);
       for (let iy = 0; iy < rows; iy++) {
         for (let ix = 0; ix < cols; ix++) {
@@ -622,7 +626,10 @@ export default function Walk({
           const ink = blurred[i];
           let h = 0;
           if (!covered && edge > 0) {
-            if (ink > 0.74) h = 18;
+            if (darkPlate) {
+              if (ink > 0.93) h = 5;
+              else if (ink > 0.88) h = 2;
+            } else if (ink > 0.74) h = 18;
             else if (ink > 0.58) h = 8;
             else if (ink > 0.46) h = 3;
           }
@@ -810,12 +817,49 @@ export default function Walk({
       showOutline(tile);
     }
 
+    function insideArt(tile, pos) {
+      const m = 10;
+      return {
+        x: Math.min(tile.art.east - m, Math.max(tile.art.west + m, pos.x)),
+        z: Math.min(tile.art.zSouth - m, Math.max(tile.art.zNorth + m, pos.z)),
+      };
+    }
+
+    function entrancePoint(dest, host) {
+      const hostName = String(host?.name || "").toLowerCase();
+      const list = (poisRef.current || []).filter((p) => p.zoneId === dest.id && p.mx != null && p.my != null);
+      const ranked = list
+        .map((p) => {
+          const n = String(p.name || "").toLowerCase();
+          let score = 9;
+          if (hostName && n.includes(hostName)) score = 0;
+          else if (/entrance/.test(n)) score = 1;
+          else if (p.kind === "zoneline" || p.kind === "dungeon") score = 2;
+          else if (/door/.test(n)) score = 3;
+          return { p, score };
+        })
+        .filter((row) => row.score < 9)
+        .sort((a, b) => a.score - b.score);
+      const poi = ranked[0]?.p;
+      const pos = poi ? poiPosition(poi, dest) : null;
+      if (pos) return insideArt(dest, pos);
+      return insideArt(dest, { x: dest.art.x, z: dest.art.zSouth - 12 });
+    }
+
     function enterDungeon(gate) {
       interior = gate.dest.id;
       returnSpot = { x: gate.x, z: gate.z };
-      portalLock = performance.now() + 1400;
+      portalLock = performance.now() + 600;
+      portalArmed = false;
       applyLayer();
-      snapTo({ x: gate.dest.art.x, z: gate.dest.art.z });
+      const spot = entrancePoint(gate.dest, gate.host);
+      const exit = exits.find((row) => row.tile.id === gate.dest.id);
+      if (exit) {
+        exit.x = spot.x;
+        exit.z = spot.z;
+        exit.group.position.set(spot.x, 0, spot.z);
+      }
+      snapTo(spot);
       publish({ travel: gate.dest.name });
     }
 
@@ -823,7 +867,8 @@ export default function Walk({
       const back = returnSpot;
       interior = null;
       returnSpot = null;
-      portalLock = performance.now() + 1400;
+      portalLock = performance.now() + 600;
+      portalArmed = false;
       applyLayer();
       if (back) snapTo(back);
       publish({ travel: "" });
@@ -1272,23 +1317,19 @@ export default function Walk({
       for (const gate of portals) if (gate.group.visible) gate.ring.position.y = bobY;
       for (const gate of exits) if (gate.group.visible) gate.ring.position.y = bobY;
       if (heroRef.current && now > portalLock) {
-        if (!interior) {
-          for (const gate of portals) {
-            if (!gate.group.visible) continue;
-            if (Math.hypot(player.position.x - gate.x, player.position.z - gate.z) < 7) {
-              enterDungeon(gate);
-              break;
-            }
+        let near = false;
+        const gates = interior ? exits : portals;
+        for (const gate of gates) {
+          if (!gate.group.visible) continue;
+          if (Math.hypot(player.position.x - gate.x, player.position.z - gate.z) >= 7) continue;
+          near = true;
+          if (portalArmed) {
+            if (interior) leaveDungeon();
+            else enterDungeon(gate);
           }
-        } else {
-          for (const gate of exits) {
-            if (!gate.group.visible) continue;
-            if (Math.hypot(player.position.x - gate.x, player.position.z - gate.z) < 7) {
-              leaveDungeon();
-              break;
-            }
-          }
+          break;
         }
+        if (!near) portalArmed = true;
       }
 
       const fx = -Math.sin(cam.yaw);
