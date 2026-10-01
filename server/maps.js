@@ -650,6 +650,7 @@ function layoutStitch(pois, layer, seedId) {
     }
     next.sort((p, q) => Number(ZONE_ROLE[p] === "nested") - Number(ZONE_ROLE[q] === "nested"));
     for (const b of next) {
+      if (ZONE_ROLE[b] === "nested") continue;
       const gateA = findGate(poisByZone, a, b, nameIdx);
       const gateB = findGate(poisByZone, b, a, nameIdx);
       if (!gateA && !gateB) continue;
@@ -664,7 +665,7 @@ function layoutStitch(pois, layer, seedId) {
   while (pending) {
     pending = false;
     for (const id of Object.keys(sizes)) {
-      if (placed[id]) continue;
+      if (placed[id] || ZONE_ROLE[id] === "nested") continue;
       const z = zones.find((x) => x.id === id);
       const host = (z?.adjacent || []).find((adj) => placed[adj]);
       if (!host) continue;
@@ -705,6 +706,13 @@ function layoutStitch(pois, layer, seedId) {
   for (const b of Object.values(placed)) {
     b.x -= minX - pad;
     b.y -= minY - pad;
+  }
+  let slot = 0;
+  for (const id of Object.keys(sizes)) {
+    if (ZONE_ROLE[id] !== "nested" || placed[id]) continue;
+    const size = sizes[id];
+    placed[id] = { ...size, x: -size.w - 240, y: slot };
+    slot += size.h + 48;
   }
   return { WORLD: { w: maxX - minX + pad * 2, h: maxY - minY + pad * 2 }, placed };
 }

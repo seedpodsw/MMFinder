@@ -179,6 +179,9 @@ export default function Walk({
     let alive = true;
     let frame = 0;
     let layerNow = layerPropRef.current || "surface";
+    let interior = null;
+    let returnSpot = null;
+    let portalLock = 0;
     let target = null;
     let reported = "";
     let standing = "";
@@ -289,6 +292,7 @@ export default function Walk({
       const label = makeLabel(tile.name);
       label.position.set(art.x, 22, art.zNorth + Math.min(16, art.h * 0.06));
       label.userData.layer = tileLayer;
+      label.userData.id = spec.id;
       label.visible = tileLayer === layerNow;
       scene.add(label);
       labels.push(label);
@@ -308,6 +312,90 @@ export default function Walk({
       }
       tile.mesh.position.y = y;
       tile.mesh.renderOrder = Math.round(y * 100);
+    }
+
+    const DOOR = {
+      sewers: "night-harbor-sewers",
+      "sewers entrance": "night-harbor-sewers",
+      wyrmsbane: "tomb-wyrmsbane",
+      "wyrmsbane tomb": "tomb-wyrmsbane",
+      "tomb of the last wyrmsbane": "tomb-wyrmsbane",
+    };
+    function makeGate(color) {
+      const group = new THREE.Group();
+      const ring = new THREE.Mesh(
+        new THREE.TorusGeometry(3.2, 0.28, 8, 22),
+        new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.95 })
+      );
+      ring.position.y = 3.6;
+      const glow = new THREE.Mesh(
+        new THREE.CircleGeometry(2.4, 22),
+        new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.38, side: THREE.DoubleSide, depthWrite: false })
+      );
+      glow.position.y = 3.6;
+      const base = new THREE.Mesh(
+        new THREE.RingGeometry(2.2, 3.5, 22),
+        new THREE.MeshBasicMaterial({ color: 0xf0c14b, side: THREE.DoubleSide, transparent: true, opacity: 0.85 })
+      );
+      base.rotation.x = -Math.PI / 2;
+      base.position.y = 0.45;
+      group.add(ring, glow, base);
+      return { group, ring };
+    }
+    function dungeonDoor(poi) {
+      if (!poi || (poi.kind !== "dungeon" && poi.kind !== "zoneline")) return null;
+      const host = tileById.get(poi.zoneId);
+      if (!host || host.role === "nested") return null;
+      const raw = String(poi.name || "").toLowerCase().replace(/['’]/g, "'");
+      const rest = raw
+        .replace(/^zoneline:\s*/, "")
+        .replace(/^(to|into|lift to|elevator to|teleporter to)\s+/, "")
+        .replace(/\s*\(.*\)$/, "")
+        .trim();
+      let dest = tileById.get(DOOR[rest] || DOOR[raw] || "");
+      if (!dest) {
+        for (const tile of tiles) {
+          if (tile.role !== "nested" || tile.layer !== host.layer) continue;
+          const nm = String(tile.name || "").toLowerCase();
+          if (nm.length > 4 && (rest.includes(nm) || raw.includes(nm))) {
+            dest = tile;
+            break;
+          }
+        }
+      }
+      if (!dest || dest.role !== "nested" || dest.layer !== host.layer) return null;
+      const pos = poiPosition(poi, host);
+      if (!pos) return null;
+      return { host, dest, x: pos.x, z: pos.z };
+    }
+    const portals = [];
+    const exits = [];
+    const seenDoor = new Set();
+    for (const poi of poisRef.current || []) {
+      const door = dungeonDoor(poi);
+      if (!door) continue;
+      const key = `${door.dest.id}:${Math.round(door.x)}:${Math.round(door.z)}`;
+      if (seenDoor.has(key)) continue;
+      seenDoor.add(key);
+      const gate = makeGate(0x9a7ad4);
+      gate.group.position.set(door.x, 0, door.z);
+      const plate = makeLabel(door.dest.name);
+      plate.position.set(0, 8.2, 0);
+      gate.group.add(plate);
+      gate.group.visible = door.host.layer === layerNow;
+      scene.add(gate.group);
+      portals.push({ ...door, ...gate });
+    }
+    for (const tile of tiles) {
+      if (tile.role !== "nested") continue;
+      const gate = makeGate(0xe6c56a);
+      gate.group.position.set(tile.art.x, 0, tile.art.zSouth - 16);
+      const plate = makeLabel("Back");
+      plate.position.set(0, 8.2, 0);
+      gate.group.add(plate);
+      gate.group.visible = false;
+      scene.add(gate.group);
+      exits.push({ tile, ...gate, x: tile.art.x, z: tile.art.zSouth - 16 });
     }
 
     const player = new THREE.Group();
@@ -394,11 +482,23 @@ export default function Walk({
       };
     }
 
+    function isDungeonTile(tile) {
+      if (!tile) return false;
+      if (tile.role === "nested") return true;
+      return zoneById.get(tile.id)?.kind === "dungeon";
+    }
+
+    function shown(tile) {
+      if (!tile || tile.layer !== layerNow) return false;
+      if (interior) return tile.id === interior;
+      return !isDungeonTile(tile);
+    }
+
     function zoneAt(x, z) {
       let best = null;
       let area = Infinity;
       for (const tile of tiles) {
-        if (tile.layer !== layerNow) continue;
+        if (!shown(tile)) continue;
         const r = tile.full;
         if (x < r.west || x > r.east || z < r.zNorth || z > r.zSouth) continue;
         const a = r.w * r.h;
@@ -512,7 +612,7 @@ export default function Walk({
           const wz = tile.art.zNorth + (iy / (rows - 1)) * tile.art.h;
           let covered = false;
           for (const other of tiles) {
-            if (other === tile || other.layer !== tile.layer || other.area >= tile.area) continue;
+            if (other === tile || other.role === "nested" || other.layer !== tile.layer || other.area >= tile.area) continue;
             const r = other.art;
             if (wx >= r.west && wx <= r.east && wz >= r.zNorth && wz <= r.zSouth) {
               covered = true;
@@ -549,7 +649,7 @@ export default function Walk({
 
     function onLand(x, z) {
       for (const tile of tiles) {
-        if (tile.layer !== layerNow) continue;
+        if (!shown(tile)) continue;
         const r = tile.art;
         if (x >= r.west && x <= r.east && z >= r.zNorth && z <= r.zSouth) return true;
       }
@@ -568,7 +668,7 @@ export default function Walk({
       let best = null;
       let bestD = Infinity;
       for (const tile of tiles) {
-        if (tile.layer !== layerNow) continue;
+        if (!shown(tile)) continue;
         const r = tile.art;
         const cx = Math.min(r.east, Math.max(r.west, x));
         const cz = Math.min(r.zSouth, Math.max(r.zNorth, z));
@@ -585,7 +685,7 @@ export default function Walk({
       if (!session) return;
       for (const mob of session.mobs.values()) {
         if (!mob.alive) continue;
-        const tile = zoneAt(mob.homeX, mob.homeZ) || zoneAt(mob.x, mob.z);
+        const tile = (mob.zoneId && tileById.get(mob.zoneId)) || zoneAt(mob.homeX, mob.homeZ) || zoneAt(mob.x, mob.z);
         if (!tile) continue;
         const r = tile.art;
         const edge = 6;
@@ -617,7 +717,7 @@ export default function Walk({
       let minZ = Infinity;
       let maxZ = -Infinity;
       for (const tile of tiles) {
-        if (tile.layer !== layerNow) continue;
+        if (!shown(tile)) continue;
         minX = Math.min(minX, tile.art.west);
         maxX = Math.max(maxX, tile.art.east);
         minZ = Math.min(minZ, tile.art.zNorth);
@@ -642,8 +742,17 @@ export default function Walk({
     }
 
     function applyLayer() {
-      for (const tile of tiles) tile.mesh.visible = tile.layer === layerNow;
-      for (const label of labels) label.visible = label.userData.layer === layerNow;
+      if (interior) {
+        const inside = tileById.get(interior);
+        if (!inside || inside.layer !== layerNow) {
+          interior = null;
+          returnSpot = null;
+        }
+      }
+      for (const tile of tiles) tile.mesh.visible = shown(tile);
+      for (const label of labels) label.visible = shown(tileById.get(label.userData.id));
+      for (const gate of portals) gate.group.visible = !interior && gate.host.layer === layerNow;
+      for (const gate of exits) gate.group.visible = interior === gate.tile.id;
       renderer.setClearColor(layerNow === "deep" ? 0x140c16 : 0x24180f, 1);
       voidMat.color.set(layerNow === "deep" ? 0x140c16 : 0x24180f);
       recomputeBounds();
@@ -701,10 +810,32 @@ export default function Walk({
       showOutline(tile);
     }
 
+    function enterDungeon(gate) {
+      interior = gate.dest.id;
+      returnSpot = { x: gate.x, z: gate.z };
+      portalLock = performance.now() + 1400;
+      applyLayer();
+      snapTo({ x: gate.dest.art.x, z: gate.dest.art.z });
+      publish({ travel: gate.dest.name });
+    }
+
+    function leaveDungeon() {
+      const back = returnSpot;
+      interior = null;
+      returnSpot = null;
+      portalLock = performance.now() + 1400;
+      applyLayer();
+      if (back) snapTo(back);
+      publish({ travel: "" });
+    }
+
     function wake(zoneId) {
+      interior = null;
+      returnSpot = null;
       const tile = tileById.get(zoneId);
       if (!tile) return;
       if (tile.layer !== layerNow) setLayer(tile.layer, false);
+      else applyLayer();
       snapTo({ x: tile.art.x, z: tile.art.z });
       reported = zoneId;
       if (apiRef.current) apiRef.current.echo = zoneId;
@@ -1066,7 +1197,7 @@ export default function Walk({
       ctx.fillRect(0, 0, cssW, cssH);
       let hereBox = null;
       for (const tile of tiles) {
-        if (tile.layer !== layerNow) continue;
+        if (!shown(tile)) continue;
         const box = drawTile(ctx, tile, cssW, cssH);
         if (tile.id === standing) hereBox = box;
       }
@@ -1137,6 +1268,28 @@ export default function Walk({
       frame = requestAnimationFrame(tick);
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
+      const bobY = 3.6 + Math.sin(now * 0.003) * 0.28;
+      for (const gate of portals) if (gate.group.visible) gate.ring.position.y = bobY;
+      for (const gate of exits) if (gate.group.visible) gate.ring.position.y = bobY;
+      if (heroRef.current && now > portalLock) {
+        if (!interior) {
+          for (const gate of portals) {
+            if (!gate.group.visible) continue;
+            if (Math.hypot(player.position.x - gate.x, player.position.z - gate.z) < 7) {
+              enterDungeon(gate);
+              break;
+            }
+          }
+        } else {
+          for (const gate of exits) {
+            if (!gate.group.visible) continue;
+            if (Math.hypot(player.position.x - gate.x, player.position.z - gate.z) < 7) {
+              leaveDungeon();
+              break;
+            }
+          }
+        }
+      }
 
       const fx = -Math.sin(cam.yaw);
       const fz = -Math.cos(cam.yaw);
@@ -1271,7 +1424,12 @@ export default function Walk({
           posOf
         );
         keepCreaturesOnArt();
-        fieldView.sync(session.mobs, session.targetId, step.hud.level, player.position.x, player.position.z, groundAt);
+        const viewMobs = new Map();
+        for (const [id, mob] of session.mobs) {
+          if (standing && mob.zoneId && mob.zoneId !== standing) continue;
+          viewMobs.set(id, mob);
+        }
+        fieldView.sync(viewMobs, session.targetId, step.hud.level, player.position.x, player.position.z, groundAt);
         const prey = session.targetId ? session.mobs.get(session.targetId) : null;
         const swinging = prey && prey.alive && Math.hypot(prey.x - player.position.x, prey.z - player.position.z) <= REACH;
         ring.material.color.set(swinging ? 0xc45c26 : 0xf0c14b);

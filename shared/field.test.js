@@ -111,7 +111,7 @@ test("dying sends you back to the city you conjured in", () => {
   hero.hp = 1;
   const session = createSession(hero, mem());
   const now = 5_000_000;
-  session.update(0.2, 0, 0, "surface", "faelindral", now, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
+  session.update(0.2, 0, 0, "surface", "night-harbor", now, [rats], () => ({ x: 0, z: 0, layer: "surface" }));
   const mob = [...session.mobs.values()][0];
   mob.x = 0;
   mob.z = 0;
@@ -124,7 +124,7 @@ test("dying sends you back to the city you conjured in", () => {
     0,
     0,
     "surface",
-    "faelindral",
+    "night-harbor",
     now + 400,
     [rats],
     () => ({ x: 0, z: 0, layer: "surface" }),

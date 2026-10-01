@@ -555,7 +555,9 @@ export function createSession(hero, storage) {
         const homeX = pos.x + spec.ox;
         const homeZ = pos.z + spec.oz;
         const alive = now >= (hero.down[spec.id] || 0);
-        mobs.set(spec.id, blankMob(spec, layer, homeX, homeZ, alive));
+        const mob = blankMob(spec, layer, homeX, homeZ, alive);
+        mob.zoneId = poi.zoneId;
+        mobs.set(spec.id, mob);
       }
     }
     for (const [id, mob] of mobs) {
@@ -584,6 +586,7 @@ export function createSession(hero, storage) {
     const near = [];
     for (const mob of mobs.values()) {
       if (!mob.alive) continue;
+      if (mob.zoneId && hero.zoneId && mob.zoneId !== hero.zoneId) continue;
       const d = Math.hypot(mob.x - px, mob.z - pz);
       if (d < 280) near.push({ id: mob.id, d });
     }
@@ -609,6 +612,7 @@ export function createSession(hero, storage) {
     let bestD = limit;
     for (const mob of mobs.values()) {
       if (!mob.alive) continue;
+      if (mob.zoneId && hero.zoneId && mob.zoneId !== hero.zoneId) continue;
       const d = Math.hypot(mob.x - px, mob.z - pz);
       if (d < bestD) {
         bestD = d;
@@ -630,6 +634,7 @@ export function createSession(hero, storage) {
     const k = klass();
     const maxHp = maxHpFor(hero.level, k);
     for (const mob of mobs.values()) {
+      if (zoneId && mob.zoneId && mob.zoneId !== zoneId) continue;
       if (!mob.alive) {
         if (now >= (hero.down[mob.id] || 0)) {
           const fresh = blankMob(mob, mob.layer, mob.homeX, mob.homeZ, true);
