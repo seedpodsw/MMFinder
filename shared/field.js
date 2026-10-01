@@ -44,7 +44,7 @@ export function originById(id) {
 }
 
 export function xpToNext(level) {
-  return 30 + level * 28;
+  return 180 + level * 52 + level * level * 4;
 }
 
 export function maxHpFor(level, klass) {
@@ -57,19 +57,19 @@ export function damageFor(level, klass) {
 }
 
 export function mobMaxHp(level, named) {
-  return Math.round((12 + level * 7) * (named ? 2.6 : 1));
+  return Math.round((36 + level * 16) * (named ? 2.8 : 1));
 }
 
 export function mobDamage(level, named) {
-  return Math.max(1, Math.round((1 + level * 0.55) * (named ? 1.45 : 1)));
+  return Math.max(1, Math.round((3 + level * 1.05) * (named ? 1.55 : 1)));
 }
 
 export function xpForKill(mobLevel, playerLevel, named) {
-  let base = (named ? 22 : 10) + mobLevel * 5;
+  let base = (named ? 28 : 8) + mobLevel * 4;
   const diff = mobLevel - playerLevel;
   if (diff <= -8) return 1;
-  if (diff <= -4) base = Math.max(1, Math.round(base * 0.4));
-  else if (diff >= 6) base = Math.round(base * 1.4);
+  if (diff <= -4) base = Math.max(1, Math.round(base * 0.25));
+  else if (diff >= 6) base = Math.round(base * 1.35);
   return base;
 }
 
@@ -443,7 +443,7 @@ export function createSession(hero, storage) {
     mob.alive = false;
     mob.aggro = false;
     mob.hp = 0;
-    const wait = (mob.named ? 48000 : 20000) + mob.level * 500;
+    const wait = (mob.named ? 120000 : 50000) + mob.level * 800;
     hero.down[mob.id] = now + wait;
     hero.kills += 1;
     if (targetId === mob.id) targetId = nearestAggro();
@@ -678,7 +678,7 @@ export function createSession(hero, storage) {
       else if (Math.hypot(mob.x - px, mob.z - pz) <= REACH) strike(mob, now, rng, [...mobs.values()]);
     }
     const idle = now - Math.max(lastHurt, lastSwing) > 3200;
-    const regen = (k.mods.regen || 0) + (idle ? 0.04 : 0);
+    const regen = (k.mods.regen || 0) + (idle ? 0.016 : 0);
     if (regen > 0 && hero.hp < maxHp) hero.hp = Math.min(maxHp, hero.hp + maxHp * regen * dt);
     persist(false);
     return { died: false, hud: hud() };

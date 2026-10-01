@@ -185,7 +185,7 @@ export default function Walk({
 
     let renderer;
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, logarithmicDepthBuffer: true });
     } catch {
       setFailed(true);
       return;
@@ -202,7 +202,7 @@ export default function Walk({
     const sun = new THREE.DirectionalLight(0xfff8ee, 1.25);
     sun.position.set(-24, 48, 16);
     scene.add(sun);
-    const camera = new THREE.PerspectiveCamera(46, 1, 0.2, 20000);
+    const camera = new THREE.PerspectiveCamera(46, 1, 1, 6000);
     const anisotropy = renderer.capabilities.getMaxAnisotropy();
 
     const voidGeo = new THREE.PlaneGeometry(1, 1);
@@ -269,25 +269,32 @@ export default function Walk({
           mat.color.set(0xffffff);
           mat.needsUpdate = true;
           tile.image = tex.image;
+          raiseTile(tile, tex.image);
         });
       }
 
       const label = makeLabel(tile.name);
-      label.position.set(art.x, 1.4, art.zNorth + Math.min(16, art.h * 0.06));
+      label.position.set(art.x, 22, art.zNorth + Math.min(16, art.h * 0.06));
       label.userData.layer = tileLayer;
       label.visible = tileLayer === layerNow;
       scene.add(label);
       labels.push(label);
     }
 
-    for (const tile of tiles) {
-      tile.mesh.position.y = 0;
-      if (tile.role === "nested") {
-        tile.mesh.renderOrder = 2;
-        tile.mesh.material.polygonOffset = true;
-        tile.mesh.material.polygonOffsetFactor = -1;
-        tile.mesh.material.polygonOffsetUnits = -1;
+    const byArea = [...tiles].sort((a, b) => b.area - a.area);
+    function artsOverlap(a, b) {
+      return a.west < b.east - 1 && a.east > b.west + 1 && a.zNorth < b.zSouth - 1 && a.zSouth > b.zNorth + 1;
+    }
+    for (const tile of byArea) {
+      let y = 0;
+      for (const under of byArea) {
+        if (under === tile) break;
+        if (under.layer !== tile.layer) continue;
+        if (!artsOverlap(tile.art, under.art)) continue;
+        y = Math.max(y, under.mesh.position.y + 0.06);
       }
+      tile.mesh.position.y = y;
+      tile.mesh.renderOrder = Math.round(y * 100);
     }
 
     const player = new THREE.Group();
@@ -397,8 +404,134 @@ export default function Walk({
       };
     }
 
-    function groundAt() {
-      return 0;
+    const WALL = 12;
+
+    function groundAt(x, z) {
+      const tile = zoneAt(x, z);
+      if (!tile) return 0;
+      const base = tile.mesh.position.y;
+      if (!tile.heights) return base;
+      const u = (x - tile.art.west) / tile.art.w;
+      const v = (z - tile.art.zNorth) / tile.art.h;
+      if (u < 0 || v < 0 || u > 1 || v > 1) return base;
+      const ix = Math.min(tile.cols - 1, Math.max(0, Math.round(u * (tile.cols - 1))));
+      const iy = Math.min(tile.rows - 1, Math.max(0, Math.round(v * (tile.rows - 1))));
+      return base + tile.heights[iy * tile.cols + ix];
+    }
+
+    function blocked(x, z) {
+      return groundAt(x, z) >= WALL;
+    }
+
+    function nearestWalkable(x, z) {
+      if (!blocked(x, z)) return { x, z };
+      for (let ring = 6; ring <= 90; ring += 6) {
+        for (let step = 0; step < 10; step++) {
+          const ang = (step / 10) * Math.PI * 2;
+          const nx = x + Math.cos(ang) * ring;
+          const nz = z + Math.sin(ang) * ring;
+          if (!blocked(nx, nz)) return { x: nx, z: nz };
+        }
+      }
+      return { x, z };
+    }
+
+    function raiseTile(tile, image) {
+      const cols = 72;
+      const rows = 72;
+      const canvas = document.createElement("canvas");
+      canvas.width = cols;
+      canvas.height = rows;
+      const g = canvas.getContext("2d", { willReadFrequently: true });
+      if (!g || !image?.width) return;
+      let sx = 0;
+      let sy = 0;
+      let sw = image.width;
+      let sh = image.height;
+      const clip = tile.artClip;
+      if (clip) {
+        const rw = (100 - clip.l - clip.r) / 100;
+        const rh = (100 - clip.t - clip.b) / 100;
+        if (rw > 0.05 && rh > 0.05) {
+          sx = (clip.l / 100) * image.width;
+          sy = (clip.t / 100) * image.height;
+          sw = rw * image.width;
+          sh = rh * image.height;
+        }
+      }
+      let data;
+      try {
+        g.drawImage(image, sx, sy, sw, sh, 0, 0, cols, rows);
+        data = g.getImageData(0, 0, cols, rows).data;
+      } catch {
+        return;
+      }
+      const dark = new Float32Array(cols * rows);
+      for (let i = 0; i < dark.length; i++) {
+        const r = data[i * 4];
+        const gc = data[i * 4 + 1];
+        const b = data[i * 4 + 2];
+        dark[i] = 1 - (0.2126 * r + 0.7152 * gc + 0.0722 * b) / 255;
+      }
+      const blurred = new Float32Array(dark.length);
+      for (let iy = 0; iy < rows; iy++) {
+        for (let ix = 0; ix < cols; ix++) {
+          let acc = 0;
+          let n = 0;
+          for (let dy = -1; dy <= 1; dy++) {
+            for (let dx = -1; dx <= 1; dx++) {
+              const x = ix + dx;
+              const y = iy + dy;
+              if (x < 0 || y < 0 || x >= cols || y >= rows) continue;
+              acc += dark[y * cols + x];
+              n += 1;
+            }
+          }
+          blurred[iy * cols + ix] = acc / n;
+        }
+      }
+      const heights = new Float32Array(blurred.length);
+      for (let iy = 0; iy < rows; iy++) {
+        for (let ix = 0; ix < cols; ix++) {
+          const i = iy * cols + ix;
+          const edge = Math.min(ix, iy, cols - 1 - ix, rows - 1 - iy);
+          const wx = tile.art.west + (ix / (cols - 1)) * tile.art.w;
+          const wz = tile.art.zNorth + (iy / (rows - 1)) * tile.art.h;
+          let covered = false;
+          for (const other of tiles) {
+            if (other === tile || other.layer !== tile.layer || other.area >= tile.area) continue;
+            const r = other.art;
+            if (wx >= r.west && wx <= r.east && wz >= r.zNorth && wz <= r.zSouth) {
+              covered = true;
+              break;
+            }
+          }
+          const ink = blurred[i];
+          let h = 0;
+          if (!covered && edge > 0) {
+            if (ink > 0.74) h = 18;
+            else if (ink > 0.58) h = 8;
+            else if (ink > 0.46) h = 3;
+          }
+          heights[i] = h;
+        }
+      }
+      const raised = new THREE.PlaneGeometry(Math.max(tile.art.w, 1), Math.max(tile.art.h, 1), cols - 1, rows - 1);
+      const pos = raised.attributes.position;
+      for (let i = 0; i < heights.length; i++) pos.setZ(i, heights[i]);
+      raised.rotateX(-Math.PI / 2);
+      raised.computeVertexNormals();
+      const old = tile.mesh.geometry;
+      tile.mesh.geometry = raised;
+      old.dispose();
+      tile.heights = heights;
+      tile.cols = cols;
+      tile.rows = rows;
+      if (blocked(player.position.x, player.position.z)) {
+        const spot = nearestWalkable(player.position.x, player.position.z);
+        player.position.x = spot.x;
+        player.position.z = spot.z;
+      }
     }
 
     function onLand(x, z) {
@@ -508,12 +641,12 @@ export default function Walk({
       const horiz = Math.cos(cam.pitch) * cam.dist;
       desired.set(
         player.position.x + Math.sin(cam.yaw) * horiz,
-        7 + Math.sin(cam.pitch) * cam.dist,
+        player.position.y + 7 + Math.sin(cam.pitch) * cam.dist,
         player.position.z + Math.cos(cam.yaw) * horiz
       );
       if (force) {
         camera.position.copy(desired);
-        camera.lookAt(player.position.x, 1.5, player.position.z);
+        camera.lookAt(player.position.x, player.position.y + 1.5, player.position.z);
       }
     }
 
@@ -525,7 +658,8 @@ export default function Walk({
     }
 
     function travelTo(pos, label) {
-      const c = nearestLand(pos.x, pos.z);
+      const land = nearestLand(pos.x, pos.z);
+      const c = nearestWalkable(land.x, land.z);
       target = { x: c.x, z: c.z };
       dest.visible = true;
       dest.position.set(c.x, 0.75, c.z);
@@ -537,7 +671,8 @@ export default function Walk({
     }
 
     function snapTo(pos) {
-      const c = nearestLand(pos.x, pos.z);
+      const land = nearestLand(pos.x, pos.z);
+      const c = nearestWalkable(land.x, land.z);
       player.position.x = c.x;
       player.position.z = c.z;
       clearTravel();
@@ -1041,8 +1176,10 @@ export default function Walk({
         mz = target.z - player.position.z;
         const len = Math.hypot(mx, mz);
         if (len < 2.8) {
-          player.position.x = target.x;
-          player.position.z = target.z;
+          if (!blocked(target.x, target.z)) {
+            player.position.x = target.x;
+            player.position.z = target.z;
+          }
           clearTravel();
           mx = 0;
           mz = 0;
@@ -1057,7 +1194,14 @@ export default function Walk({
         mx /= mag;
         mz /= mag;
         const step = speed * dt;
-        const next = stayOnLand(player.position.x, player.position.z, player.position.x + mx * step, player.position.z + mz * step);
+        let next = stayOnLand(player.position.x, player.position.z, player.position.x + mx * step, player.position.z + mz * step);
+        if (blocked(next.x, next.z)) {
+          const slideX = stayOnLand(player.position.x, player.position.z, player.position.x + mx * step, player.position.z);
+          const slideZ = stayOnLand(player.position.x, player.position.z, player.position.x, player.position.z + mz * step);
+          if (!blocked(slideX.x, slideX.z)) next = slideX;
+          else if (!blocked(slideZ.x, slideZ.z)) next = slideZ;
+          else next = { x: player.position.x, z: player.position.z };
+        }
         player.position.x = next.x;
         player.position.z = next.z;
         const face = Math.atan2(-mx, -mz);
@@ -1070,7 +1214,7 @@ export default function Walk({
       } else {
         visuals.position.y += (0 - visuals.position.y) * Math.min(1, dt * 8);
       }
-      player.position.y = 0;
+      player.position.y = groundAt(player.position.x, player.position.z);
 
       if (target) {
         dest.position.set(target.x, groundAt(target.x, target.z) + 0.75, target.z);
@@ -1128,7 +1272,7 @@ export default function Walk({
       } else {
         camera.position.lerp(desired, 1 - Math.exp(-10 * dt));
       }
-      camera.lookAt(player.position.x, 1.5, player.position.z);
+      camera.lookAt(player.position.x, player.position.y + 1.5, player.position.z);
       renderer.render(scene, camera);
       drawMini();
     }
