@@ -56,14 +56,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Sneak",
@@ -77,19 +77,19 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Stab I",
         "slug": "Stab_I",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_I?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_I",
         "description": "Aggressively stab your target, dealing 100% Weapon Damage plus 1 (L1) to 5 (L10) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 125% Weapon Ratio Damage plus 1 (L1) to 10 (L10) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -98,6 +98,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -126,8 +127,7 @@
           }
         ],
         "valuesSummary": "125% weapon dmg · 100% weapon dmg · 1–5 Physical dmg (L1–L10)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Stealth",
@@ -141,20 +141,20 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Throw",
         "slug": "Throw",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-        "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+        "description": "Throw a throwing weapon at your target. (Requires throwing weapon.)",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -162,14 +162,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "2": [
@@ -185,6 +185,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 2,
+        "type": "ability",
         "tags": [
           "buff",
           "haste"
@@ -192,8 +193,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "3": [
@@ -201,7 +201,7 @@
         "name": "Jab",
         "slug": "Jab",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jab",
-        "description": "Swiftly jab your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "description": "Jab your target, interrupting your enemy's casting, and locking them out of that school of magic for 4 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -209,14 +209,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "interrupt"
         ],
         "primaryTag": "interrupt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "5": [
@@ -232,6 +232,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility",
@@ -252,15 +253,14 @@
           }
         ],
         "valuesSummary": "+75%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "6": [
       {
         "name": "Slice I",
         "slug": "Slice_I",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_I?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_I",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 3 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -269,6 +269,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -282,8 +283,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "7": [
@@ -299,6 +299,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "stun"
@@ -313,8 +314,7 @@
           }
         ],
         "valuesSummary": "3s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "8": [
@@ -330,6 +330,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez",
@@ -345,15 +346,14 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "9": [
       {
         "name": "Poison Tolerance",
         "slug": "Poison_Tolerance",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Tolerance?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Tolerance",
         "description": "Develop a tolerance to poison, increasing your Poison Resistance by 5 for 1 hour.",
         "category": "Acr",
         "categorySlug": "Skill_Acrobatics",
@@ -362,6 +362,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "buff",
           "self",
@@ -381,15 +382,14 @@
         "valuesSummary": "+5 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "10": [
       {
         "name": "Stab II",
         "slug": "Stab_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_II",
         "description": "Aggressively stab your target, dealing 110% Weapon Damage plus 5 (L10) to 10 (L20) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 175% Weapon Ratio Damage plus 10 (L10) to 25 (L20) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -398,6 +398,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -426,8 +427,7 @@
           }
         ],
         "valuesSummary": "175% weapon dmg · 110% weapon dmg · 5–10 Physical dmg (L10–L20)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "12": [
@@ -443,6 +443,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "buff",
           "escape",
@@ -452,8 +453,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "13": [
@@ -469,21 +469,21 @@
         "mana": "Innate",
         "castTime": null,
         "level": 13,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "14": [
       {
         "name": "Rain of Steel I",
         "slug": "Rain_of_Steel_I",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_I?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_I",
         "description": "Shower your target with knives, dealing 100% Weapon Ratio Damage three times.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -492,6 +492,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -504,8 +505,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "15": [
@@ -521,6 +521,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -535,8 +536,7 @@
           }
         ],
         "valuesSummary": "10s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "16": [
@@ -552,19 +552,19 @@
         "mana": "Innate",
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Slice II",
         "slug": "Slice_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_II",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 8 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -573,6 +573,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -586,23 +587,23 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "18": [
       {
         "name": "Twin Blades I",
         "slug": "Twin_Blades_I",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_I?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_I",
         "description": "Deftly strike your target with twin blades, dealing 60% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 18,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -615,8 +616,7 @@
           }
         ],
         "valuesSummary": "60% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "20": [
@@ -627,11 +627,12 @@
         "description": "Become incredibly nimble, granting you a 100% chance to doge incoming melee attacks for 12 seconds.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "buff",
           "self"
@@ -639,13 +640,12 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Stab III",
         "slug": "Stab_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_III",
         "description": "Aggressively stab your target, dealing 120% Weapon Damage plus 10 (L20) to 15 (L30) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 225% Weapon Ratio Damage plus 25 (L20) to 45 (L30) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -654,6 +654,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -682,23 +683,23 @@
           }
         ],
         "valuesSummary": "225% weapon dmg · 120% weapon dmg · 10–15 Physical dmg (L20–L30)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "22": [
       {
         "name": "Escape Artist",
         "slug": "Escape_Artist",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Escape_Artist?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Escape_Artist",
         "description": "Become elusive, removing all Root and Snare effects and granting you immunity to them for 15 seconds.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 22,
+        "type": "ability",
         "tags": [
           "buff",
           "self"
@@ -706,15 +707,14 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "24": [
       {
         "name": "Rain of Steel II",
         "slug": "Rain_of_Steel_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_II",
         "description": "Shower your target with knives, dealing 110% Weapon Ratio Damage three times.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -723,6 +723,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -735,15 +736,14 @@
           }
         ],
         "valuesSummary": "110% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "25": [
       {
         "name": "Deadly Throw",
         "slug": "Deadly_Throw",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deadly_Throw?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deadly_Throw",
         "description": "Skillfully throw a weapon at your target, dealing 200% Weapon Ratio Damage. Additionally, if your target is below 20% Health, this ability's damage is doubled.",
         "category": "Mit?",
         "categorySlug": "Skill_Might",
@@ -752,6 +752,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 25,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -764,15 +765,14 @@
           }
         ],
         "valuesSummary": "200% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "26": [
       {
         "name": "Slice III",
         "slug": "Slice_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_III",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 24 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -781,6 +781,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -794,23 +795,23 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "28": [
       {
         "name": "Twin Blades II",
         "slug": "Twin_Blades_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_II",
         "description": "Deftly strike your target with twin blades, dealing 65% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 28,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -823,15 +824,14 @@
           }
         ],
         "valuesSummary": "65% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "30": [
       {
         "name": "Stab IV",
         "slug": "Stab_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_IV",
         "description": "Aggressively stab your target, dealing 130% Weapon Damage plus 15 (L30) to 20 (L40) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 275% Weapon Ratio Damage plus 45 (L30) to 70 (L40) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -840,6 +840,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -868,36 +869,35 @@
           }
         ],
         "valuesSummary": "275% weapon dmg · 130% weapon dmg · 15–20 Physical dmg (L30–L40)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "32": [
       {
         "name": "Gambit",
         "slug": "Gambit",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gambit?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gambit",
         "description": "Execute a daring gambit, resetting the cooldown of your Stab, Uppercut, and Vial of Smoke abilities if hit within 5 seconds.",
         "category": "?",
         "categorySlug": "?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "34": [
       {
         "name": "Rain of Steel III",
         "slug": "Rain_of_Steel_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_III",
         "description": "Shower your target with knives, dealing 120% Weapon Ratio Damage three times.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -906,6 +906,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 34,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -918,15 +919,14 @@
           }
         ],
         "valuesSummary": "120% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "36": [
       {
         "name": "Slice IV",
         "slug": "Slice_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_IV",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 48 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -935,6 +935,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -948,23 +949,23 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "38": [
       {
         "name": "Twin Blades III",
         "slug": "Twin_Blades_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_III",
         "description": "Deftly strike your target with twin blades, dealing 70% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 38,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -977,8 +978,7 @@
           }
         ],
         "valuesSummary": "70% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "40": [
@@ -994,6 +994,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "buff",
           "self"
@@ -1011,13 +1012,12 @@
           }
         ],
         "valuesSummary": "+100%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Stab V",
         "slug": "Stab_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_V",
         "description": "Aggressively stab your target, dealing 140% Weapon Damage plus 20 (L40) to 25 (L50) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 325% Weapon Ratio Damage plus 70 (L40) to 100 (L50) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -1026,6 +1026,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -1054,15 +1055,14 @@
           }
         ],
         "valuesSummary": "325% weapon dmg · 140% weapon dmg · 20–25 Physical dmg (L40–L50)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "44": [
       {
         "name": "Rain of Steel IV",
         "slug": "Rain_of_Steel_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_IV",
         "description": "Shower your target with knives, dealing 130% Weapon Ratio Damage three times.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -1071,6 +1071,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1083,23 +1084,23 @@
           }
         ],
         "valuesSummary": "130% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "45": [
       {
         "name": "Poison Desensitization",
         "slug": "Poison_Desensitization",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Desensitization?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Desensitization",
         "description": "Become desensitized to poison, increasing your Poison Resistance by 15 for 1 hour.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 45,
+        "type": "ability",
         "tags": [
           "buff",
           "self",
@@ -1119,15 +1120,14 @@
         "valuesSummary": "+15 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "46": [
       {
         "name": "Slice V",
         "slug": "Slice_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_V",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 58 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -1136,6 +1136,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 46,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -1149,23 +1150,23 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "48": [
       {
         "name": "Twin Blades IV",
         "slug": "Twin_Blades_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_IV",
         "description": "Deftly strike your target with twin blades, dealing 75% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1178,15 +1179,14 @@
           }
         ],
         "valuesSummary": "75% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "50": [
       {
         "name": "Stab VI",
         "slug": "Stab_VI",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_VI?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_VI",
         "description": "Aggressively stab your target, dealing 150% Weapon Damage plus 25 (L50) to 30 (L60) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 450% Weapon Ratio Damage plus 100 (L50) to 200 (L60) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -1195,6 +1195,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [
           "damage",
           "invisibility"
@@ -1223,15 +1224,14 @@
           }
         ],
         "valuesSummary": "450% weapon dmg · 150% weapon dmg · 25–30 Physical dmg (L50–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "54": [
       {
         "name": "Rain of Steel V",
         "slug": "Rain_of_Steel_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_V",
         "description": "Shower your target with knives, dealing 140% Weapon Ratio Damage three times.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
@@ -1240,6 +1240,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 54,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1252,15 +1253,14 @@
           }
         ],
         "valuesSummary": "140% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "56": [
       {
         "name": "Slice VI",
         "slug": "Slice_VI",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_VI?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_VI",
         "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 72 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
@@ -1269,6 +1269,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "dot",
           "damage"
@@ -1282,23 +1283,23 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "58": [
       {
         "name": "Twin Blades V",
         "slug": "Twin_Blades_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_V",
         "description": "Deftly strike your target with twin blades, dealing 80% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
         "category": "?",
         "categorySlug": "Skill_?",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 58,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1311,8 +1312,7 @@
           }
         ],
         "valuesSummary": "80% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ]
   },
@@ -1329,14 +1329,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sneak",
@@ -1350,19 +1350,19 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stab I",
       "slug": "Stab_I",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_I?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_I",
       "description": "Aggressively stab your target, dealing 100% Weapon Damage plus 1 (L1) to 5 (L10) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 125% Weapon Ratio Damage plus 1 (L1) to 10 (L10) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -1371,6 +1371,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -1399,8 +1400,7 @@
         }
       ],
       "valuesSummary": "125% weapon dmg · 100% weapon dmg · 1–5 Physical dmg (L1–L10)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stealth",
@@ -1414,20 +1414,20 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Throw",
       "slug": "Throw",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-      "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+      "description": "Throw a throwing weapon at your target. (Requires throwing weapon.)",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1435,14 +1435,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Strikes",
@@ -1456,6 +1456,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 2,
+      "type": "ability",
       "tags": [
         "buff",
         "haste"
@@ -1463,14 +1464,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Jab",
       "slug": "Jab",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jab",
-      "description": "Swiftly jab your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "description": "Jab your target, interrupting your enemy's casting, and locking them out of that school of magic for 4 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1478,14 +1478,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "interrupt"
       ],
       "primaryTag": "interrupt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sprint",
@@ -1499,6 +1499,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility",
@@ -1519,13 +1520,12 @@
         }
       ],
       "valuesSummary": "+75%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Slice I",
       "slug": "Slice_I",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_I?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_I",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 3 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -1534,6 +1534,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -1547,8 +1548,7 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Uppercut",
@@ -1562,6 +1562,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "stun"
@@ -1576,8 +1577,7 @@
         }
       ],
       "valuesSummary": "3s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sap",
@@ -1591,6 +1591,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez",
@@ -1606,13 +1607,12 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Poison Tolerance",
       "slug": "Poison_Tolerance",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Tolerance?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Tolerance",
       "description": "Develop a tolerance to poison, increasing your Poison Resistance by 5 for 1 hour.",
       "category": "Acr",
       "categorySlug": "Skill_Acrobatics",
@@ -1621,6 +1621,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "buff",
         "self",
@@ -1640,13 +1641,12 @@
       "valuesSummary": "+5 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Stab II",
       "slug": "Stab_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_II",
       "description": "Aggressively stab your target, dealing 110% Weapon Damage plus 5 (L10) to 10 (L20) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 175% Weapon Ratio Damage plus 10 (L10) to 25 (L20) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -1655,6 +1655,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -1683,8 +1684,7 @@
         }
       ],
       "valuesSummary": "175% weapon dmg · 110% weapon dmg · 5–10 Physical dmg (L10–L20)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Vial of Smoke",
@@ -1698,6 +1698,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "buff",
         "escape",
@@ -1707,8 +1708,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Pick Pocket",
@@ -1722,19 +1722,19 @@
       "mana": "Innate",
       "castTime": null,
       "level": 13,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rain of Steel I",
       "slug": "Rain_of_Steel_I",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_I?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_I",
       "description": "Shower your target with knives, dealing 100% Weapon Ratio Damage three times.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -1743,6 +1743,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -1755,8 +1756,7 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Blinding Powder",
@@ -1770,6 +1770,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -1784,8 +1785,7 @@
         }
       ],
       "valuesSummary": "10s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Distract",
@@ -1799,19 +1799,19 @@
       "mana": "Innate",
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Slice II",
       "slug": "Slice_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_II",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 8 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -1820,6 +1820,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -1833,21 +1834,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twin Blades I",
       "slug": "Twin_Blades_I",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_I?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_I",
       "description": "Deftly strike your target with twin blades, dealing 60% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 18,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -1860,8 +1861,7 @@
         }
       ],
       "valuesSummary": "60% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Nimble Evasion",
@@ -1870,11 +1870,12 @@
       "description": "Become incredibly nimble, granting you a 100% chance to doge incoming melee attacks for 12 seconds.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "buff",
         "self"
@@ -1882,13 +1883,12 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stab III",
       "slug": "Stab_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_III",
       "description": "Aggressively stab your target, dealing 120% Weapon Damage plus 10 (L20) to 15 (L30) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 225% Weapon Ratio Damage plus 25 (L20) to 45 (L30) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -1897,6 +1897,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -1925,21 +1926,21 @@
         }
       ],
       "valuesSummary": "225% weapon dmg · 120% weapon dmg · 10–15 Physical dmg (L20–L30)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Escape Artist",
       "slug": "Escape_Artist",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Escape_Artist?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Escape_Artist",
       "description": "Become elusive, removing all Root and Snare effects and granting you immunity to them for 15 seconds.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 22,
+      "type": "ability",
       "tags": [
         "buff",
         "self"
@@ -1947,13 +1948,12 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rain of Steel II",
       "slug": "Rain_of_Steel_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_II",
       "description": "Shower your target with knives, dealing 110% Weapon Ratio Damage three times.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -1962,6 +1962,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -1974,13 +1975,12 @@
         }
       ],
       "valuesSummary": "110% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Deadly Throw",
       "slug": "Deadly_Throw",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deadly_Throw?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Deadly_Throw",
       "description": "Skillfully throw a weapon at your target, dealing 200% Weapon Ratio Damage. Additionally, if your target is below 20% Health, this ability's damage is doubled.",
       "category": "Mit?",
       "categorySlug": "Skill_Might",
@@ -1989,6 +1989,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 25,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2001,13 +2002,12 @@
         }
       ],
       "valuesSummary": "200% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Slice III",
       "slug": "Slice_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_III",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 24 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -2016,6 +2016,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -2029,21 +2030,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twin Blades II",
       "slug": "Twin_Blades_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_II",
       "description": "Deftly strike your target with twin blades, dealing 65% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 28,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2056,13 +2057,12 @@
         }
       ],
       "valuesSummary": "65% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stab IV",
       "slug": "Stab_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_IV",
       "description": "Aggressively stab your target, dealing 130% Weapon Damage plus 15 (L30) to 20 (L40) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 275% Weapon Ratio Damage plus 45 (L30) to 70 (L40) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2071,6 +2071,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -2099,32 +2100,31 @@
         }
       ],
       "valuesSummary": "275% weapon dmg · 130% weapon dmg · 15–20 Physical dmg (L30–L40)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Gambit",
       "slug": "Gambit",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gambit?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gambit",
       "description": "Execute a daring gambit, resetting the cooldown of your Stab, Uppercut, and Vial of Smoke abilities if hit within 5 seconds.",
       "category": "?",
       "categorySlug": "?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rain of Steel III",
       "slug": "Rain_of_Steel_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_III",
       "description": "Shower your target with knives, dealing 120% Weapon Ratio Damage three times.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2133,6 +2133,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 34,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2145,13 +2146,12 @@
         }
       ],
       "valuesSummary": "120% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Slice IV",
       "slug": "Slice_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_IV",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 48 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -2160,6 +2160,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -2173,21 +2174,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twin Blades III",
       "slug": "Twin_Blades_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_III",
       "description": "Deftly strike your target with twin blades, dealing 70% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 38,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2200,8 +2201,7 @@
         }
       ],
       "valuesSummary": "70% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Fury of the Assassin",
@@ -2215,6 +2215,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "buff",
         "self"
@@ -2232,13 +2233,12 @@
         }
       ],
       "valuesSummary": "+100%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stab V",
       "slug": "Stab_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_V",
       "description": "Aggressively stab your target, dealing 140% Weapon Damage plus 20 (L40) to 25 (L50) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 325% Weapon Ratio Damage plus 70 (L40) to 100 (L50) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2247,6 +2247,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -2275,13 +2276,12 @@
         }
       ],
       "valuesSummary": "325% weapon dmg · 140% weapon dmg · 20–25 Physical dmg (L40–L50)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rain of Steel IV",
       "slug": "Rain_of_Steel_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_IV",
       "description": "Shower your target with knives, dealing 130% Weapon Ratio Damage three times.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2290,6 +2290,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2302,21 +2303,21 @@
         }
       ],
       "valuesSummary": "130% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Poison Desensitization",
       "slug": "Poison_Desensitization",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Desensitization?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Desensitization",
       "description": "Become desensitized to poison, increasing your Poison Resistance by 15 for 1 hour.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 45,
+      "type": "ability",
       "tags": [
         "buff",
         "self",
@@ -2336,13 +2337,12 @@
       "valuesSummary": "+15 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Slice V",
       "slug": "Slice_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_V",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 58 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -2351,6 +2351,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 46,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -2364,21 +2365,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twin Blades IV",
       "slug": "Twin_Blades_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_IV",
       "description": "Deftly strike your target with twin blades, dealing 75% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2391,13 +2392,12 @@
         }
       ],
       "valuesSummary": "75% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Stab VI",
       "slug": "Stab_VI",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_VI?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stab_VI",
       "description": "Aggressively stab your target, dealing 150% Weapon Damage plus 25 (L50) to 30 (L60) Physical Damage. When behind your target, this ability becomes Backstab. Backstab: Surprise your target with a decisive strike, dealing 450% Weapon Ratio Damage plus 100 (L50) to 200 (L60) Physical Damage. Additionally, your Backstab gains a damage bonus when you have been concealed by Stealth for at least 3 seconds.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2406,6 +2406,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [
         "damage",
         "invisibility"
@@ -2434,13 +2435,12 @@
         }
       ],
       "valuesSummary": "450% weapon dmg · 150% weapon dmg · 25–30 Physical dmg (L50–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rain of Steel V",
       "slug": "Rain_of_Steel_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rain_of_Steel_V",
       "description": "Shower your target with knives, dealing 140% Weapon Ratio Damage three times.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
@@ -2449,6 +2449,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 54,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2461,13 +2462,12 @@
         }
       ],
       "valuesSummary": "140% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Slice VI",
       "slug": "Slice_VI",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_VI?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Slice_VI",
       "description": "Deeply slice your target, dealing 100% Weapon Ratio Damage plus 72 Bleed Damage every 6 seconds for 22 seconds. This ability shares a cooldown with other Martial abilities. This ability stacks up to two times.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
@@ -2476,6 +2476,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "dot",
         "damage"
@@ -2489,21 +2490,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twin Blades V",
       "slug": "Twin_Blades_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twin_Blades_V",
       "description": "Deftly strike your target with twin blades, dealing 80% Weapon Ratio Damage per equipped weapon. Additionally, if the target is bleeding from your Slice ability, deal additional damage per stack and consume the bleed effect.",
       "category": "?",
       "categorySlug": "Skill_?",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_%3F?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_?",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 58,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2516,8 +2517,7 @@
         }
       ],
       "valuesSummary": "80% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     }
   ]
 }

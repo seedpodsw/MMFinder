@@ -4,7 +4,7 @@
   "type": "ability",
   "sectionTitle": "Archer Abilities",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Archer",
-  "entryCount": 60,
+  "entryCount": 54,
   "levels": [
     1,
     2,
@@ -51,8 +51,7 @@
     55,
     58,
     59,
-    60,
-    99
+    60
   ],
   "entriesByLevel": {
     "1": [
@@ -68,14 +67,14 @@
         "mana": 0,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "utility"
         ],
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Point Blank I",
@@ -89,6 +88,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -111,8 +111,7 @@
           }
         ],
         "valuesSummary": "80% weapon dmg · 1–3 Physical dmg (L1–L9)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "2": [
@@ -128,6 +127,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 2,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -140,8 +140,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "3": [
@@ -157,6 +156,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -172,8 +172,7 @@
           }
         ],
         "valuesSummary": "−150–1500 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "4": [
@@ -181,7 +180,7 @@
         "name": "Skirmisher",
         "slug": "Skirmisher",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Skirmisher",
-        "description": "Adopt the role of a skirmisher, increasing your Movement Speed by 5%, reducing the cooldown of Strafing Barrage by 20%, and reducing the cast time of all abilities by 20%. This ability persists until cancelled.",
+        "description": "Adopt the role of a skirmisher, increasing your Movement Speed by 10%, reducing the cooldown of Strafing Barrage by 20%, and reducing the cast time of all abilities by 20%. This ability persists until cancelled.",
         "category": "Sub",
         "categorySlug": "Skill_Subterfuge",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -189,6 +188,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "buff",
           "debuff",
@@ -200,11 +200,11 @@
           {
             "kind": "buff",
             "stat": "Movement Speed",
-            "min": 5,
-            "max": 5,
+            "min": 10,
+            "max": 10,
             "unit": "%",
-            "display": "+5%",
-            "sortKey": 5,
+            "display": "+10%",
+            "sortKey": 10,
             "statTag": "MS"
           },
           {
@@ -217,9 +217,8 @@
             "sortKey": 20
           }
         ],
-        "valuesSummary": "−20% · +5%",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "−20% · +10%",
+        "statTags": []
       }
     ],
     "5": [
@@ -235,12 +234,12 @@
         "mana": "Innate",
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Quick Shot I",
@@ -254,6 +253,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -276,8 +276,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 1–10 Physical dmg (L5–L15)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "6": [
@@ -285,7 +284,7 @@
         "name": "Net Shot",
         "slug": "Net_Shot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Net_Shot",
-        "description": "Fire a net shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. This ability has a chance to be removed by damage. This ability has a very strong chance to end early. This ability requires a bow and Net Arrow . This ability shares a cooldown with other Martial abilities.",
+        "description": "Fire a net shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. This ability has a chance to be removed by damage. This ability has a very strong chance to end early. This ability requires a bow and Net Arrow. This ability shares a cooldown with other Martial abilities.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -293,6 +292,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "root",
@@ -308,8 +308,7 @@
           }
         ],
         "valuesSummary": "6s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "7": [
@@ -317,7 +316,7 @@
         "name": "Flare",
         "slug": "Flare",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flare",
-        "description": "Fire off a flare, granting you a temporary light source and revealing invisible entities. This ability requires a bow and Pitch-Wrapped Arrow .",
+        "description": "Fire off a flare, granting you a temporary light source and revealing invisible entities. This ability requires a bow and Pitch-Wrapped Arrow.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -325,6 +324,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility",
@@ -333,8 +333,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Snaring Shot",
@@ -348,6 +347,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "debuff",
           "slow"
@@ -365,8 +365,7 @@
           }
         ],
         "valuesSummary": "−50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "8": [
@@ -382,14 +381,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "interrupt"
         ],
         "primaryTag": "interrupt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Strafing Barrage I",
@@ -403,6 +402,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -415,8 +415,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "9": [
@@ -424,7 +423,7 @@
         "name": "Piercing Shot I",
         "slug": "Piercing_Shot_I",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_I",
-        "description": "Fire a piercing shot at your target, dealing 125% Weapon Ratio Damage plus 12 (L9) to 15 (L19) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 125% Weapon Ratio Damage plus 12 (L9) to 15 (L19) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -432,6 +431,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -463,8 +463,7 @@
           }
         ],
         "valuesSummary": "125% weapon dmg · 12–15 Physical dmg (L9–L19) · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "10": [
@@ -480,6 +479,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -502,8 +502,7 @@
           }
         ],
         "valuesSummary": "90% weapon dmg · 6–9 Physical dmg (L10–L19)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Alarm Trap",
@@ -517,12 +516,12 @@
         "mana": "Innate",
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "11": [
@@ -538,6 +537,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 11,
+        "type": "ability",
         "tags": [
           "buff",
           "debuff",
@@ -566,8 +566,7 @@
         "valuesSummary": "−5% · −5 Defense",
         "statTags": [
           "DEF"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "12": [
@@ -583,6 +582,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -595,8 +595,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Caltrops",
@@ -610,12 +609,12 @@
         "mana": "Innate",
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "13": [
@@ -631,6 +630,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 13,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -646,15 +646,14 @@
           }
         ],
         "valuesSummary": "35 fire dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "14": [
       {
         "name": "Sniper's Blind",
         "slug": "Sniper's_Blind",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sniper%27s_Blind",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sniper's_Blind",
         "description": "Conceal your position, rendering you virtually undetectable. Additionally, your Quick Shot deals increased damage while concealed by Sniper's Blind. This ability is removed by movement.",
         "category": "Sub",
         "categorySlug": "Skill_Subterfuge",
@@ -663,12 +662,12 @@
         "mana": "Innate",
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "15": [
@@ -684,6 +683,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -706,8 +706,7 @@
           }
         ],
         "valuesSummary": "125% weapon dmg · 10–20 Physical dmg (L15–L25)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "16": [
@@ -715,7 +714,7 @@
         "name": "Immobilizing Trap",
         "slug": "Immobilizing_Trap",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Immobilizing_Trap",
-        "description": "Lay a trap at your feet. Enemies who step on the trap will be rooted in place for 1 minute. Damage may break the effect. Was lvl 11.",
+        "description": "Place a trap at your feet, immobilizing the first target that triggers it for 20 seconds.",
         "category": "Sub",
         "categorySlug": "Skill_Subterfuge",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -723,6 +722,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "root"
@@ -730,8 +730,7 @@
         "primaryTag": "root",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "18": [
@@ -739,7 +738,7 @@
         "name": "Splintering Shot I",
         "slug": "Splintering_Shot_I",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_I",
-        "description": "Fire a spreading shot at your target and those around it, dealing 50% Weapon Ratio Damage plus 3 (L18) to 4 (L28) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+        "description": "Fire a spreading shot at your target and those around it, dealing 50% Weapon Ratio Damage plus 3 (L18) to 4 (L28) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -747,6 +746,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 18,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -770,8 +770,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg · 3–4 Physical dmg (L18–L28)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "19": [
@@ -779,7 +778,7 @@
         "name": "Piercing Shot II",
         "slug": "Piercing_Shot_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_II",
-        "description": "Fire a piercing shot at your target, dealing 150% Weapon Ratio Damage plus 20 (L19) to 25 (L29) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 150% Weapon Ratio Damage plus 20 (L19) to 25 (L29) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -787,6 +786,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 19,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -818,8 +818,7 @@
           }
         ],
         "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L19–L29) · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "20": [
@@ -827,7 +826,7 @@
         "name": "Flurry of Arrows",
         "slug": "Flurry_of_Arrows",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_of_Arrows",
-        "description": "Prepare yourself to unleash a flurry of arrows, instantly resetting the cooldown of your Barbed Arrow , Point Blank , and Quick Shot , and increasing your Ranged Attack Speed by 20% for 15 seconds. This ability is considered a tertiary haste. This ability resets the cooldown of Barbed Arrow , Point Blank , and Quick Shot a second time when it ends.",
+        "description": "Prepare yourself to unleash a flurry of arrows, instantly resetting the cooldown of your Barbed Arrow, Point Blank, and Quick Shot, and increasing your Ranged Attack Speed by 20% for 15 seconds. This ability is considered a tertiary haste. This ability resets the cooldown of Barbed Arrow, Point Blank, and Quick Shot a second time when it ends.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -835,6 +834,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "buff",
           "haste",
@@ -854,8 +854,7 @@
           }
         ],
         "valuesSummary": "+20%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Point Blank III",
@@ -869,6 +868,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -891,8 +891,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 12–15 Physical dmg (L20–L29)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "21": [
@@ -908,6 +907,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 21,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -920,8 +920,7 @@
           }
         ],
         "valuesSummary": "110% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "22": [
@@ -937,6 +936,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 22,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -949,8 +949,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "24": [
@@ -958,22 +957,22 @@
         "name": "Marksman",
         "slug": "Marksman",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Marksman",
-        "description": "Adopt the role of a marksman, increasing the damage of your Piercing Shot and Splintering Shot , and granting your ranged attacks and abilities a chance to land Critical Hits. This ability persists until cancelled.",
-        "category": "",
+        "description": "Adopt the role of a marksman, increasing the damage of your Piercing Shot and Splintering Shot, and granting your ranged attacks and abilities a chance to land Critical Hits. This ability persists until cancelled.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "25": [
@@ -989,6 +988,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 25,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1011,8 +1011,7 @@
           }
         ],
         "valuesSummary": "150% weapon dmg · 20–30 Physical dmg (L25–L35)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "26": [
@@ -1028,6 +1027,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [
           "buff",
           "movement",
@@ -1047,8 +1047,7 @@
           }
         ],
         "valuesSummary": "+40%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "28": [
@@ -1056,7 +1055,7 @@
         "name": "Splintering Shot II",
         "slug": "Splintering_Shot_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_II",
-        "description": "Fire a spreading shot at your target and those around it, dealing 60% Weapon Ratio Damage plus 5 (L28) to 8 (L38) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+        "description": "Fire a spreading shot at your target and those around it, dealing 60% Weapon Ratio Damage plus 5 (L28) to 8 (L38) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1064,6 +1063,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 28,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -1087,8 +1087,7 @@
           }
         ],
         "valuesSummary": "60% weapon dmg · 5–8 Physical dmg (L28–L38)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "29": [
@@ -1096,7 +1095,7 @@
         "name": "Piercing Shot III",
         "slug": "Piercing_Shot_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_III",
-        "description": "Fire a piercing shot at your target, dealing 175% Weapon Ratio Damage plus 30 (L29) to 35 (L39) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 175% Weapon Ratio Damage plus 30 (L29) to 35 (L39) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1104,6 +1103,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 29,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1135,8 +1135,7 @@
           }
         ],
         "valuesSummary": "175% weapon dmg · 30–35 Physical dmg (L29–L39) · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "30": [
@@ -1152,6 +1151,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "buff",
           "self"
@@ -1159,8 +1159,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Point Blank IV",
@@ -1174,6 +1173,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1196,8 +1196,7 @@
           }
         ],
         "valuesSummary": "110% weapon dmg · 18–21 Physical dmg (L30–L39)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "32": [
@@ -1213,6 +1212,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1225,8 +1225,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "33": [
@@ -1242,6 +1241,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 33,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1254,8 +1254,7 @@
           }
         ],
         "valuesSummary": "120% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "34": [
@@ -1263,7 +1262,7 @@
         "name": "Smoke Bomb Arrow",
         "slug": "Smoke_Bomb_Arrow",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Smoke_Bomb_Arrow",
-        "description": "Fire a smoke bomb at your target, blinding them and nearby targets for 18 seconds. This ability requires a bow and Smoke Bomb Arrow (item) .",
+        "description": "Fire a smoke bomb at your target, blinding them and nearby targets for 18 seconds. This ability requires a bow and Smoke Bomb Arrow (item).",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1271,14 +1270,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 34,
+        "type": "ability",
         "tags": [
           "aoe"
         ],
         "primaryTag": "aoe",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "35": [
@@ -1294,6 +1293,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 35,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1316,8 +1316,7 @@
           }
         ],
         "valuesSummary": "175% weapon dmg · 30–40 Physical dmg (L35–L45)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "38": [
@@ -1325,7 +1324,7 @@
         "name": "Splintering Shot III",
         "slug": "Splintering_Shot_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_III",
-        "description": "Fire a spreading shot at your target and those around it, dealing 70% Weapon Ratio Damage plus 8 (L38) to 12 (L48) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+        "description": "Fire a spreading shot at your target and those around it, dealing 70% Weapon Ratio Damage plus 8 (L38) to 12 (L48) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1333,6 +1332,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 38,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -1356,8 +1356,7 @@
           }
         ],
         "valuesSummary": "70% weapon dmg · 8–12 Physical dmg (L38–L48)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "39": [
@@ -1365,7 +1364,7 @@
         "name": "Piercing Shot IV",
         "slug": "Piercing_Shot_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_IV",
-        "description": "Fire a piercing shot at your target, dealing 200% Weapon Ratio Damage plus 40 (L39) to 45 (L49) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 200% Weapon Ratio Damage plus 40 (L39) to 45 (L49) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1373,6 +1372,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 39,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1404,8 +1404,7 @@
           }
         ],
         "valuesSummary": "200% weapon dmg · 40–45 Physical dmg (L39–L49) · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "40": [
@@ -1421,6 +1420,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1443,8 +1443,7 @@
           }
         ],
         "valuesSummary": "120% weapon dmg · 24–27 Physical dmg (L40–L49)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "42": [
@@ -1460,6 +1459,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 42,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1472,8 +1472,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "44": [
@@ -1489,6 +1488,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "dot",
           "aoe"
@@ -1507,8 +1507,7 @@
           }
         ],
         "valuesSummary": "35 Poison/6s (30s)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "45": [
@@ -1524,6 +1523,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 45,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1546,8 +1546,7 @@
           }
         ],
         "valuesSummary": "200% weapon dmg · 40–50 Physical dmg (L45–L55)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "46": [
@@ -1563,6 +1562,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 46,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1575,8 +1575,7 @@
           }
         ],
         "valuesSummary": "130% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "48": [
@@ -1584,7 +1583,7 @@
         "name": "Splintering Shot IV",
         "slug": "Splintering_Shot_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_IV",
-        "description": "Fire a spreading shot at your target and those around it, dealing 80% Weapon Ratio Damage plus 12 (L48) to 16 (L58) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+        "description": "Fire a spreading shot at your target and those around it, dealing 80% Weapon Ratio Damage plus 12 (L48) to 16 (L58) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1592,6 +1591,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -1615,8 +1615,7 @@
           }
         ],
         "valuesSummary": "80% weapon dmg · 12–16 Physical dmg (L48–L58)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "49": [
@@ -1624,7 +1623,7 @@
         "name": "Piercing Shot V",
         "slug": "Piercing_Shot_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_V",
-        "description": "Fire a piercing shot at your target, dealing 225% Weapon Ratio Damage plus 50 (L49) to 55 (L59) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 225% Weapon Ratio Damage plus 50 (L49) to 55 (L59) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1632,6 +1631,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 49,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1663,8 +1663,7 @@
           }
         ],
         "valuesSummary": "225% weapon dmg · 50–55 Physical dmg (L49–L59) · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "50": [
@@ -1680,6 +1679,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1702,8 +1702,7 @@
           }
         ],
         "valuesSummary": "130% weapon dmg · 30–33 Physical dmg (L50–L59)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "52": [
@@ -1719,6 +1718,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 52,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1731,8 +1731,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "55": [
@@ -1748,6 +1747,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 55,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1770,8 +1770,7 @@
           }
         ],
         "valuesSummary": "250% weapon dmg · 50–55 Physical dmg (L55–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "58": [
@@ -1779,7 +1778,7 @@
         "name": "Splintering Shot V",
         "slug": "Splintering_Shot_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_V",
-        "description": "Fire a spreading shot at your target and those around it, dealing 100% Weapon Ratio Damage plus 20 Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+        "description": "Fire a spreading shot at your target and those around it, dealing 100% Weapon Ratio Damage plus 20 Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1787,6 +1786,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 58,
+        "type": "ability",
         "tags": [
           "damage",
           "aoe"
@@ -1800,8 +1800,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "59": [
@@ -1809,7 +1808,7 @@
         "name": "Piercing Shot VI",
         "slug": "Piercing_Shot_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_VI",
-        "description": "Fire a piercing shot at your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+        "description": "Fire a piercing shot at your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
         "category": "Mgt",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1817,6 +1816,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 59,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1838,8 +1838,7 @@
           }
         ],
         "valuesSummary": "275% weapon dmg · −50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "60": [
@@ -1855,6 +1854,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "buff"
         ],
@@ -1871,193 +1871,7 @@
           }
         ],
         "valuesSummary": "+50%",
-        "statTags": [],
-        "type": "ability"
-      }
-    ],
-    "99": [
-      {
-        "name": "Quick Shot",
-        "slug": "Quick_Shot",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Quick_Shot",
-        "description": "Fire a quick shot at your target, dealing 100% (L1) to 150% (L60) Weapon Ratio Damage plus 1 (L1) to 40 (L60) Physical Damage. Requires a bow and arrow. Shares a cooldown with other Might abilities. Was Lvl 1.",
-        "category": "Mgt",
-        "categorySlug": "Skill_Might",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "damage"
-        ],
-        "primaryTag": "damage",
-        "effects": [
-          {
-            "kind": "damage",
-            "display": "100–150% weapon + 1–40 Physical (L1–L60)",
-            "sortKey": 40
-          }
-        ],
-        "valuesSummary": "100–150% weapon + 1–40 Physical (L1–L60)",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Dispelling Shot",
-        "slug": "Dispelling_Shot",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispelling_Shot",
-        "description": "Fire off a dispelling shot at your target, dealing 1 (L1) to 15 (L60) Physical Damage, with up to 115% (L1) to 130% (L60) damage variance, and removing one beneficial effect. Requires a bow and arrow. Shares a cooldown with other Might abilities. Was Lvl 4.",
-        "category": "Mgt",
-        "categorySlug": "Skill_Might",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "damage",
-          "purge"
-        ],
-        "primaryTag": "damage",
-        "effects": [
-          {
-            "kind": "damage",
-            "min": 1,
-            "max": 15,
-            "minLevel": 1,
-            "maxLevel": 60,
-            "damageType": "Physical",
-            "display": "1–15 Physical dmg (L1–L60)",
-            "sortKey": 15
-          },
-          {
-            "kind": "damage",
-            "min": 115,
-            "max": 130,
-            "minLevel": 1,
-            "maxLevel": 60,
-            "damageType": "dmg",
-            "display": "115–130% dmg (L1–L60)",
-            "sortKey": 130
-          }
-        ],
-        "valuesSummary": "115–130% dmg (L1–L60) · 1–15 Physical dmg (L1–L60)",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Pinning Shot",
-        "slug": "Pinning_Shot",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pinning_Shot",
-        "description": "Fire a pinning shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. Requires a bow and arrow. Shares a cooldown with other Martial abilities. Was lvl 6.",
-        "category": "Mar",
-        "categorySlug": "Skill_Martial",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "crowd-control",
-          "root",
-          "interrupt"
-        ],
-        "primaryTag": "root",
-        "effects": [
-          {
-            "kind": "crowd-control",
-            "duration": 6,
-            "display": "6s duration",
-            "sortKey": 6
-          }
-        ],
-        "valuesSummary": "6s duration",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Scatter Shot",
-        "slug": "Scatter_Shot",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scatter_Shot",
-        "description": "Fire a scatter shot at your target, incapacitating them for 4 seconds. Disables auto-attack. Requires a bow and arrow. Was lvl 7.",
-        "category": "Mar",
-        "categorySlug": "Skill_Martial",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "crowd-control",
-          "mez"
-        ],
-        "primaryTag": "mez",
-        "effects": [
-          {
-            "kind": "crowd-control",
-            "duration": 4,
-            "display": "4s duration",
-            "sortKey": 4
-          }
-        ],
-        "valuesSummary": "4s duration",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Aimed Shot",
-        "slug": "Aimed_Shot",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aimed_Shot",
-        "description": "Fire an Aimed Shot at your target, dealing 100%(L1) to 150%(L60) Physical Damage, and reduce incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% health, this ability rolls its damage twice. Was lvl 10.",
-        "category": "Mgt",
-        "categorySlug": "Skill_Might",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "damage"
-        ],
-        "primaryTag": "damage",
-        "effects": [
-          {
-            "kind": "damage",
-            "min": 100,
-            "max": 150,
-            "minLevel": 1,
-            "maxLevel": 60,
-            "damageType": "Physical",
-            "display": "100–150% Physical dmg (L1–L60)",
-            "sortKey": 150
-          }
-        ],
-        "valuesSummary": "100–150% Physical dmg (L1–L60)",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Immobilizing Trap",
-        "slug": "Immobilizing_Trap",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Immobilizing_Trap",
-        "description": "Lay a trap at your feet. Enemies who step on the trap will be rooted in place for 1 minute. Damage may break the effect. Was lvl 11.",
-        "category": "",
-        "categorySlug": null,
-        "categoryUrl": null,
-        "location": "Vendor",
-        "mana": "Innate",
-        "castTime": null,
-        "level": 99,
-        "tags": [
-          "crowd-control",
-          "root"
-        ],
-        "primaryTag": "root",
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ]
   },
@@ -2074,14 +1888,14 @@
       "mana": 0,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "utility"
       ],
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank I",
@@ -2095,6 +1909,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2117,8 +1932,7 @@
         }
       ],
       "valuesSummary": "80% weapon dmg · 1–3 Physical dmg (L1–L9)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Arrow I",
@@ -2132,6 +1946,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 2,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2144,8 +1959,7 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Disengagement",
@@ -2159,6 +1973,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -2174,14 +1989,13 @@
         }
       ],
       "valuesSummary": "−150–1500 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Skirmisher",
       "slug": "Skirmisher",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Skirmisher",
-      "description": "Adopt the role of a skirmisher, increasing your Movement Speed by 5%, reducing the cooldown of Strafing Barrage by 20%, and reducing the cast time of all abilities by 20%. This ability persists until cancelled.",
+      "description": "Adopt the role of a skirmisher, increasing your Movement Speed by 10%, reducing the cooldown of Strafing Barrage by 20%, and reducing the cast time of all abilities by 20%. This ability persists until cancelled.",
       "category": "Sub",
       "categorySlug": "Skill_Subterfuge",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -2189,6 +2003,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "buff",
         "debuff",
@@ -2200,11 +2015,11 @@
         {
           "kind": "buff",
           "stat": "Movement Speed",
-          "min": 5,
-          "max": 5,
+          "min": 10,
+          "max": 10,
           "unit": "%",
-          "display": "+5%",
-          "sortKey": 5,
+          "display": "+10%",
+          "sortKey": 10,
           "statTag": "MS"
         },
         {
@@ -2217,9 +2032,8 @@
           "sortKey": 20
         }
       ],
-      "valuesSummary": "−20% · +5%",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "−20% · +10%",
+      "statTags": []
     },
     {
       "name": "Illuminating Shot",
@@ -2233,12 +2047,12 @@
       "mana": "Innate",
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot I",
@@ -2252,6 +2066,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2274,14 +2089,13 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 1–10 Physical dmg (L5–L15)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Net Shot",
       "slug": "Net_Shot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Net_Shot",
-      "description": "Fire a net shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. This ability has a chance to be removed by damage. This ability has a very strong chance to end early. This ability requires a bow and Net Arrow . This ability shares a cooldown with other Martial abilities.",
+      "description": "Fire a net shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. This ability has a chance to be removed by damage. This ability has a very strong chance to end early. This ability requires a bow and Net Arrow. This ability shares a cooldown with other Martial abilities.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -2289,6 +2103,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "root",
@@ -2304,14 +2119,13 @@
         }
       ],
       "valuesSummary": "6s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Flare",
       "slug": "Flare",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flare",
-      "description": "Fire off a flare, granting you a temporary light source and revealing invisible entities. This ability requires a bow and Pitch-Wrapped Arrow .",
+      "description": "Fire off a flare, granting you a temporary light source and revealing invisible entities. This ability requires a bow and Pitch-Wrapped Arrow.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -2319,6 +2133,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility",
@@ -2327,8 +2142,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Snaring Shot",
@@ -2342,6 +2156,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "debuff",
         "slow"
@@ -2359,8 +2174,7 @@
         }
       ],
       "valuesSummary": "−50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Interrupting Shot",
@@ -2374,14 +2188,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "interrupt"
       ],
       "primaryTag": "interrupt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Strafing Barrage I",
@@ -2395,6 +2209,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2407,14 +2222,13 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot I",
       "slug": "Piercing_Shot_I",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_I",
-      "description": "Fire a piercing shot at your target, dealing 125% Weapon Ratio Damage plus 12 (L9) to 15 (L19) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 125% Weapon Ratio Damage plus 12 (L9) to 15 (L19) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -2422,6 +2236,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2453,8 +2268,7 @@
         }
       ],
       "valuesSummary": "125% weapon dmg · 12–15 Physical dmg (L9–L19) · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank II",
@@ -2468,6 +2282,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2490,8 +2305,7 @@
         }
       ],
       "valuesSummary": "90% weapon dmg · 6–9 Physical dmg (L10–L19)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Alarm Trap",
@@ -2505,12 +2319,12 @@
       "mana": "Innate",
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Exposing Shot",
@@ -2524,6 +2338,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 11,
+      "type": "ability",
       "tags": [
         "buff",
         "debuff",
@@ -2552,8 +2367,7 @@
       "valuesSummary": "−5% · −5 Defense",
       "statTags": [
         "DEF"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Barbed Arrow II",
@@ -2567,6 +2381,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2579,8 +2394,7 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Caltrops",
@@ -2594,12 +2408,12 @@
       "mana": "Innate",
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Oil Trap I",
@@ -2613,6 +2427,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 13,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -2628,13 +2443,12 @@
         }
       ],
       "valuesSummary": "35 fire dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sniper's Blind",
       "slug": "Sniper's_Blind",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sniper%27s_Blind",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sniper's_Blind",
       "description": "Conceal your position, rendering you virtually undetectable. Additionally, your Quick Shot deals increased damage while concealed by Sniper's Blind. This ability is removed by movement.",
       "category": "Sub",
       "categorySlug": "Skill_Subterfuge",
@@ -2643,12 +2457,12 @@
       "mana": "Innate",
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot II",
@@ -2662,6 +2476,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2684,14 +2499,13 @@
         }
       ],
       "valuesSummary": "125% weapon dmg · 10–20 Physical dmg (L15–L25)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Immobilizing Trap",
       "slug": "Immobilizing_Trap",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Immobilizing_Trap",
-      "description": "Lay a trap at your feet. Enemies who step on the trap will be rooted in place for 1 minute. Damage may break the effect. Was lvl 11.",
+      "description": "Place a trap at your feet, immobilizing the first target that triggers it for 20 seconds.",
       "category": "Sub",
       "categorySlug": "Skill_Subterfuge",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -2699,6 +2513,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "root"
@@ -2706,14 +2521,13 @@
       "primaryTag": "root",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Splintering Shot I",
       "slug": "Splintering_Shot_I",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_I",
-      "description": "Fire a spreading shot at your target and those around it, dealing 50% Weapon Ratio Damage plus 3 (L18) to 4 (L28) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+      "description": "Fire a spreading shot at your target and those around it, dealing 50% Weapon Ratio Damage plus 3 (L18) to 4 (L28) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -2721,6 +2535,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 18,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -2744,14 +2559,13 @@
         }
       ],
       "valuesSummary": "50% weapon dmg · 3–4 Physical dmg (L18–L28)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot II",
       "slug": "Piercing_Shot_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_II",
-      "description": "Fire a piercing shot at your target, dealing 150% Weapon Ratio Damage plus 20 (L19) to 25 (L29) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 150% Weapon Ratio Damage plus 20 (L19) to 25 (L29) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -2759,6 +2573,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 19,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2790,14 +2605,13 @@
         }
       ],
       "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L19–L29) · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Flurry of Arrows",
       "slug": "Flurry_of_Arrows",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_of_Arrows",
-      "description": "Prepare yourself to unleash a flurry of arrows, instantly resetting the cooldown of your Barbed Arrow , Point Blank , and Quick Shot , and increasing your Ranged Attack Speed by 20% for 15 seconds. This ability is considered a tertiary haste. This ability resets the cooldown of Barbed Arrow , Point Blank , and Quick Shot a second time when it ends.",
+      "description": "Prepare yourself to unleash a flurry of arrows, instantly resetting the cooldown of your Barbed Arrow, Point Blank, and Quick Shot, and increasing your Ranged Attack Speed by 20% for 15 seconds. This ability is considered a tertiary haste. This ability resets the cooldown of Barbed Arrow, Point Blank, and Quick Shot a second time when it ends.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -2805,6 +2619,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "buff",
         "haste",
@@ -2824,8 +2639,7 @@
         }
       ],
       "valuesSummary": "+20%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank III",
@@ -2839,6 +2653,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2861,8 +2676,7 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 12–15 Physical dmg (L20–L29)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Strafing Barrage II",
@@ -2876,6 +2690,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 21,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2888,8 +2703,7 @@
         }
       ],
       "valuesSummary": "110% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Arrow III",
@@ -2903,6 +2717,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 22,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2915,29 +2730,28 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Marksman",
       "slug": "Marksman",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Marksman",
-      "description": "Adopt the role of a marksman, increasing the damage of your Piercing Shot and Splintering Shot , and granting your ranged attacks and abilities a chance to land Critical Hits. This ability persists until cancelled.",
-      "category": "",
+      "description": "Adopt the role of a marksman, increasing the damage of your Piercing Shot and Splintering Shot, and granting your ranged attacks and abilities a chance to land Critical Hits. This ability persists until cancelled.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot III",
@@ -2951,6 +2765,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 25,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2973,8 +2788,7 @@
         }
       ],
       "valuesSummary": "150% weapon dmg · 20–30 Physical dmg (L25–L35)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Relocate",
@@ -2988,6 +2802,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [
         "buff",
         "movement",
@@ -3007,14 +2822,13 @@
         }
       ],
       "valuesSummary": "+40%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Splintering Shot II",
       "slug": "Splintering_Shot_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_II",
-      "description": "Fire a spreading shot at your target and those around it, dealing 60% Weapon Ratio Damage plus 5 (L28) to 8 (L38) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+      "description": "Fire a spreading shot at your target and those around it, dealing 60% Weapon Ratio Damage plus 5 (L28) to 8 (L38) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3022,6 +2836,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 28,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -3045,14 +2860,13 @@
         }
       ],
       "valuesSummary": "60% weapon dmg · 5–8 Physical dmg (L28–L38)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot III",
       "slug": "Piercing_Shot_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_III",
-      "description": "Fire a piercing shot at your target, dealing 175% Weapon Ratio Damage plus 30 (L29) to 35 (L39) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 175% Weapon Ratio Damage plus 30 (L29) to 35 (L39) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3060,6 +2874,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 29,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3091,8 +2906,7 @@
         }
       ],
       "valuesSummary": "175% weapon dmg · 30–35 Physical dmg (L29–L39) · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Anticipate",
@@ -3106,6 +2920,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "buff",
         "self"
@@ -3113,8 +2928,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank IV",
@@ -3128,6 +2942,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3150,8 +2965,7 @@
         }
       ],
       "valuesSummary": "110% weapon dmg · 18–21 Physical dmg (L30–L39)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Arrow IV",
@@ -3165,6 +2979,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3177,8 +2992,7 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Strafing Barrage III",
@@ -3192,6 +3006,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 33,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3204,14 +3019,13 @@
         }
       ],
       "valuesSummary": "120% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Smoke Bomb Arrow",
       "slug": "Smoke_Bomb_Arrow",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Smoke_Bomb_Arrow",
-      "description": "Fire a smoke bomb at your target, blinding them and nearby targets for 18 seconds. This ability requires a bow and Smoke Bomb Arrow (item) .",
+      "description": "Fire a smoke bomb at your target, blinding them and nearby targets for 18 seconds. This ability requires a bow and Smoke Bomb Arrow (item).",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -3219,14 +3033,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 34,
+      "type": "ability",
       "tags": [
         "aoe"
       ],
       "primaryTag": "aoe",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot IV",
@@ -3240,6 +3054,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 35,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3262,14 +3077,13 @@
         }
       ],
       "valuesSummary": "175% weapon dmg · 30–40 Physical dmg (L35–L45)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Splintering Shot III",
       "slug": "Splintering_Shot_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_III",
-      "description": "Fire a spreading shot at your target and those around it, dealing 70% Weapon Ratio Damage plus 8 (L38) to 12 (L48) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+      "description": "Fire a spreading shot at your target and those around it, dealing 70% Weapon Ratio Damage plus 8 (L38) to 12 (L48) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3277,6 +3091,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 38,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -3300,14 +3115,13 @@
         }
       ],
       "valuesSummary": "70% weapon dmg · 8–12 Physical dmg (L38–L48)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot IV",
       "slug": "Piercing_Shot_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_IV",
-      "description": "Fire a piercing shot at your target, dealing 200% Weapon Ratio Damage plus 40 (L39) to 45 (L49) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 200% Weapon Ratio Damage plus 40 (L39) to 45 (L49) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3315,6 +3129,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 39,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3346,8 +3161,7 @@
         }
       ],
       "valuesSummary": "200% weapon dmg · 40–45 Physical dmg (L39–L49) · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank V",
@@ -3361,6 +3175,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3383,8 +3198,7 @@
         }
       ],
       "valuesSummary": "120% weapon dmg · 24–27 Physical dmg (L40–L49)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Arrow V",
@@ -3398,6 +3212,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 42,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3410,8 +3225,7 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Poison Gas Trap I",
@@ -3425,6 +3239,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "dot",
         "aoe"
@@ -3443,8 +3258,7 @@
         }
       ],
       "valuesSummary": "35 Poison/6s (30s)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot V",
@@ -3458,6 +3272,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 45,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3480,8 +3295,7 @@
         }
       ],
       "valuesSummary": "200% weapon dmg · 40–50 Physical dmg (L45–L55)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Strafing Barrage IV",
@@ -3495,6 +3309,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 46,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3507,14 +3322,13 @@
         }
       ],
       "valuesSummary": "130% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Splintering Shot IV",
       "slug": "Splintering_Shot_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_IV",
-      "description": "Fire a spreading shot at your target and those around it, dealing 80% Weapon Ratio Damage plus 12 (L48) to 16 (L58) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+      "description": "Fire a spreading shot at your target and those around it, dealing 80% Weapon Ratio Damage plus 12 (L48) to 16 (L58) Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3522,6 +3336,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -3545,14 +3360,13 @@
         }
       ],
       "valuesSummary": "80% weapon dmg · 12–16 Physical dmg (L48–L58)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot V",
       "slug": "Piercing_Shot_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_V",
-      "description": "Fire a piercing shot at your target, dealing 225% Weapon Ratio Damage plus 50 (L49) to 55 (L59) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 225% Weapon Ratio Damage plus 50 (L49) to 55 (L59) Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3560,6 +3374,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 49,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3591,8 +3406,7 @@
         }
       ],
       "valuesSummary": "225% weapon dmg · 50–55 Physical dmg (L49–L59) · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Point Blank VI",
@@ -3606,6 +3420,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3628,8 +3443,7 @@
         }
       ],
       "valuesSummary": "130% weapon dmg · 30–33 Physical dmg (L50–L59)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Arrow VI",
@@ -3643,6 +3457,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 52,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3655,8 +3470,7 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Quick Shot VI",
@@ -3670,6 +3484,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 55,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3692,14 +3507,13 @@
         }
       ],
       "valuesSummary": "250% weapon dmg · 50–55 Physical dmg (L55–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Splintering Shot V",
       "slug": "Splintering_Shot_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Splintering_Shot_V",
-      "description": "Fire a spreading shot at your target and those around it, dealing 100% Weapon Ratio Damage plus 20 Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage .",
+      "description": "Fire a spreading shot at your target and those around it, dealing 100% Weapon Ratio Damage plus 20 Physical Damage. Requires a bow and arrow. Shares a cooldown with Piercing Shot and Strafing Barrage.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3707,6 +3521,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 58,
+      "type": "ability",
       "tags": [
         "damage",
         "aoe"
@@ -3720,14 +3535,13 @@
         }
       ],
       "valuesSummary": "100% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Piercing Shot VI",
       "slug": "Piercing_Shot_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Piercing_Shot_VI",
-      "description": "Fire a piercing shot at your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot .",
+      "description": "Fire a piercing shot at your target, dealing 275% Weapon Ratio Damage plus 60 Physical Damage, and reducing incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% Health, this ability rolls its damage twice. This ability requires a bow and arrows. This ability shares a cooldown with Splintering Shot.",
       "category": "Mgt",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3735,6 +3549,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 59,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3756,8 +3571,7 @@
         }
       ],
       "valuesSummary": "275% weapon dmg · −50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Deadeye",
@@ -3771,6 +3585,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "buff"
       ],
@@ -3787,191 +3602,7 @@
         }
       ],
       "valuesSummary": "+50%",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Quick Shot",
-      "slug": "Quick_Shot",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Quick_Shot",
-      "description": "Fire a quick shot at your target, dealing 100% (L1) to 150% (L60) Weapon Ratio Damage plus 1 (L1) to 40 (L60) Physical Damage. Requires a bow and arrow. Shares a cooldown with other Might abilities. Was Lvl 1.",
-      "category": "Mgt",
-      "categorySlug": "Skill_Might",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "damage"
-      ],
-      "primaryTag": "damage",
-      "effects": [
-        {
-          "kind": "damage",
-          "display": "100–150% weapon + 1–40 Physical (L1–L60)",
-          "sortKey": 40
-        }
-      ],
-      "valuesSummary": "100–150% weapon + 1–40 Physical (L1–L60)",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Dispelling Shot",
-      "slug": "Dispelling_Shot",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispelling_Shot",
-      "description": "Fire off a dispelling shot at your target, dealing 1 (L1) to 15 (L60) Physical Damage, with up to 115% (L1) to 130% (L60) damage variance, and removing one beneficial effect. Requires a bow and arrow. Shares a cooldown with other Might abilities. Was Lvl 4.",
-      "category": "Mgt",
-      "categorySlug": "Skill_Might",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "damage",
-        "purge"
-      ],
-      "primaryTag": "damage",
-      "effects": [
-        {
-          "kind": "damage",
-          "min": 1,
-          "max": 15,
-          "minLevel": 1,
-          "maxLevel": 60,
-          "damageType": "Physical",
-          "display": "1–15 Physical dmg (L1–L60)",
-          "sortKey": 15
-        },
-        {
-          "kind": "damage",
-          "min": 115,
-          "max": 130,
-          "minLevel": 1,
-          "maxLevel": 60,
-          "damageType": "dmg",
-          "display": "115–130% dmg (L1–L60)",
-          "sortKey": 130
-        }
-      ],
-      "valuesSummary": "115–130% dmg (L1–L60) · 1–15 Physical dmg (L1–L60)",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Pinning Shot",
-      "slug": "Pinning_Shot",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pinning_Shot",
-      "description": "Fire a pinning shot at your target, interrupting their casting, knocking them back, and immobilizing them for 6 seconds. Requires a bow and arrow. Shares a cooldown with other Martial abilities. Was lvl 6.",
-      "category": "Mar",
-      "categorySlug": "Skill_Martial",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "crowd-control",
-        "root",
-        "interrupt"
-      ],
-      "primaryTag": "root",
-      "effects": [
-        {
-          "kind": "crowd-control",
-          "duration": 6,
-          "display": "6s duration",
-          "sortKey": 6
-        }
-      ],
-      "valuesSummary": "6s duration",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Scatter Shot",
-      "slug": "Scatter_Shot",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scatter_Shot",
-      "description": "Fire a scatter shot at your target, incapacitating them for 4 seconds. Disables auto-attack. Requires a bow and arrow. Was lvl 7.",
-      "category": "Mar",
-      "categorySlug": "Skill_Martial",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "crowd-control",
-        "mez"
-      ],
-      "primaryTag": "mez",
-      "effects": [
-        {
-          "kind": "crowd-control",
-          "duration": 4,
-          "display": "4s duration",
-          "sortKey": 4
-        }
-      ],
-      "valuesSummary": "4s duration",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Aimed Shot",
-      "slug": "Aimed_Shot",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aimed_Shot",
-      "description": "Fire an Aimed Shot at your target, dealing 100%(L1) to 150%(L60) Physical Damage, and reduce incoming healing effects by 50% for 30 seconds. Additionally, if your target is below 20% health, this ability rolls its damage twice. Was lvl 10.",
-      "category": "Mgt",
-      "categorySlug": "Skill_Might",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "damage"
-      ],
-      "primaryTag": "damage",
-      "effects": [
-        {
-          "kind": "damage",
-          "min": 100,
-          "max": 150,
-          "minLevel": 1,
-          "maxLevel": 60,
-          "damageType": "Physical",
-          "display": "100–150% Physical dmg (L1–L60)",
-          "sortKey": 150
-        }
-      ],
-      "valuesSummary": "100–150% Physical dmg (L1–L60)",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Immobilizing Trap",
-      "slug": "Immobilizing_Trap",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Immobilizing_Trap",
-      "description": "Lay a trap at your feet. Enemies who step on the trap will be rooted in place for 1 minute. Damage may break the effect. Was lvl 11.",
-      "category": "",
-      "categorySlug": null,
-      "categoryUrl": null,
-      "location": "Vendor",
-      "mana": "Innate",
-      "castTime": null,
-      "level": 99,
-      "tags": [
-        "crowd-control",
-        "root"
-      ],
-      "primaryTag": "root",
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     }
   ]
 }

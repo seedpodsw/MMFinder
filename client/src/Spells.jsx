@@ -169,14 +169,16 @@ export default function Spells({ klass, onClass, level }) {
         <div className="items-title">
           <h2>Spells</h2>
           <p className="spells-credit">
-            Lists, tags, and values from{" "}
-            <a href="https://fustv1337.github.io/MnMWebsite" target="_blank" rel="noreferrer">
-              FuStv1337’s spell site
+            Class lists from the{" "}
+            <a
+              href="https://monstersandmemories.miraheze.org/wiki/Spells_By_Class"
+              target="_blank"
+              rel="noreferrer"
+            >
+              wiki Spells by Class
             </a>{" "}
-            ·{" "}
-            <a href="https://github.com/FuStv1337/MnMWebsite" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
+            pages
+            {fetched ? ` · fetched ${new Date(fetched).toLocaleDateString()}` : ""}
           </p>
         </div>
         <label className="items-search">
@@ -377,7 +379,7 @@ export default function Spells({ klass, onClass, level }) {
         <a href={spellMeta.source} target="_blank" rel="noreferrer">
           Spells by Class
         </a>
-        . Tagging and the browser this view follows are{" "}
+        . Tags and values use classifiers adapted from{" "}
         <a href="https://github.com/FuStv1337/MnMWebsite" target="_blank" rel="noreferrer">
           FuStv1337/MnMWebsite
         </a>

@@ -68,6 +68,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -90,21 +91,21 @@
           }
         ],
         "valuesSummary": "90% weapon dmg · 1–4 Physical dmg (L1–L11)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Polar Alignment: North",
         "slug": "Polar_Alignment:_North",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Alignment:_North",
-        "description": "Magically align yourself, orienting you toward the North Pole.",
-        "category": "",
+        "description": "Orient yourself North.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "utility",
           "self"
@@ -112,14 +113,13 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Throw",
         "slug": "Throw",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-        "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+        "description": "Throw a throwing weapon at your target. Requires a throwing weapon.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -127,27 +127,28 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Warden Stance",
         "slug": "Warden_Stance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Warden_Stance",
         "description": "Increase Melee Damage dealt by 10%. Hamstring Slice reduces Armor Class by 2 (L3) to 25 (L60), and Rending Cut refreshes Barbed Shot on its target. Persists until removed.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "debuff",
           "stance"
@@ -155,8 +156,7 @@
         "primaryTag": "stance",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Weak Healing Poultice",
@@ -170,6 +170,7 @@
         "mana": 4,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -193,8 +194,7 @@
           }
         ],
         "valuesSummary": "2 + 1/6s heal (18s) · 2 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "2": [
@@ -203,13 +203,14 @@
         "slug": "Finishing_Blow",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow",
         "description": "Deal 140% Weapon Ratio Damage plus 10 (L2) to 19 (L12) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 2,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -232,8 +233,7 @@
           }
         ],
         "valuesSummary": "140% weapon dmg · 10–19 Physical dmg (L2–L12)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "3": [
@@ -242,21 +242,21 @@
         "slug": "Hamstring_Slice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hamstring_Slice",
         "description": "Decrease target Movement Speed by 50% for 24 seconds. Survivor Stance adds an Attack Speed reduction; Warden Stance adds an Armor Class reduction. Diminishing returns in PvP. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "movement"
         ],
         "primaryTag": "movement",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "4": [
@@ -265,13 +265,14 @@
         "slug": "Leading_Shot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot",
         "description": "Deal 90% Weapon Ratio Damage plus 2 (L4) to 5 (L14) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -294,43 +295,40 @@
           }
         ],
         "valuesSummary": "90% weapon dmg · 2–5 Physical dmg (L4–L14)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lull Minor Beasts",
         "slug": "Lull_Minor_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Minor_Beasts",
-        "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 22.",
-        "category": "",
+        "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 22.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 4,
-        "tags": [
-          "debuff",
-          "crowd-control"
-        ],
-        "primaryTag": "crowd-control",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Minor Healing Poultice",
         "slug": "Minor_Healing_Poultice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Healing_Poultice",
         "description": "Restore 7 Health and an additional 4 Health every 6 seconds for 18 seconds. Has a 20% chance to cure one Poison and one Disease effect.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -354,8 +352,7 @@
           }
         ],
         "valuesSummary": "7 + 4/6s heal (18s) · 7 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "5": [
@@ -363,7 +360,7 @@
         "name": "Kick",
         "slug": "Kick",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
-        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "description": "Kick your target, interrupting their casting and locking them out of that school of magic for 2 seconds.",
         "category": "Acr",
         "categorySlug": "Skill_Acrobatics",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
@@ -371,27 +368,28 @@
         "mana": "Innate",
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "interrupt"
         ],
         "primaryTag": "interrupt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Marksman Stance",
         "slug": "Marksman_Stance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Marksman_Stance",
         "description": "Increase Ranged Damage dealt by 10%. Maiming Shot decreases Movement Speed by 35% for 24 seconds, and Barbed Shot refreshes Rending Cut on its target. Persists until removed.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "stance",
           "movement"
@@ -399,27 +397,26 @@
         "primaryTag": "stance",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Recuperate",
         "slug": "Recuperate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Recuperate",
         "description": "Party members around a warm campfire recover 2 (L5) to 100 (L60) Health and 5 (L5) to 125 (L60) Mana every 6 seconds for 2 minutes. Taking damage ends the effect. Each party member can benefit once every 17.5 minutes, regardless of caster. While recuperating, Damage dealt is reduced by 95%, Damage taken increases by 30%, and Healing done is reduced by 99%; Rangers can only use Healing Poultice spells. Cleric barriers take much longer to cast. Can be removed early.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "6": [
@@ -428,13 +425,14 @@
         "slug": "Swift_Shot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot",
         "description": "Deal 100% Weapon Ratio Damage plus 1 (L6) to 11 (L16) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -457,8 +455,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 1–11 Physical dmg (L6–L16)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "7": [
@@ -466,14 +463,15 @@
         "name": "Invisibility versus Beasts",
         "slug": "Invisibility_versus_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Beasts",
-        "description": "Shroud a target group member in a cloak of invisibility, rendering them unseen by beasts for 10 minutes. This spell has a moderate chance to end early.",
-        "category": "",
+        "description": "Render a target party member invisible to beasts for 10 minutes, with a moderate chance to end early.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility"
@@ -481,8 +479,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "8": [
@@ -491,13 +488,14 @@
         "slug": "Minor_Mantle_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Mantle_of_the_Hunter",
         "description": "Increase your Armor Class by 10, Wisdom by 2, and Mana Regeneration by 1; grant a Damage Shield dealing 1 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -506,8 +504,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Shroud",
@@ -521,6 +518,7 @@
         "mana": 0,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "invisibility",
           "self"
@@ -528,14 +526,13 @@
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Taunt",
         "slug": "Taunt",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-        "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
+        "description": "Draw the attention of your target. Has additional effects in PvP and is moderately difficult to resist.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -543,14 +540,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "taunt"
         ],
         "primaryTag": "taunt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "9": [
@@ -559,13 +556,14 @@
         "slug": "Barbed_Shot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot",
         "description": "Deal 50% Weapon Ratio Damage plus 2 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -578,14 +576,13 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Twisting Roots",
         "slug": "Twisting_Roots",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Roots",
-        "description": "Root your target with twisting tendrils, immobilizing them for 30 seconds. This spell has a chance to be removed by damage.",
+        "description": "Immobilize your target for 30 seconds. Damage has a chance to remove the effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -593,29 +590,22 @@
         "mana": 15,
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "root"
         ],
         "primaryTag": "root",
-        "effects": [
-          {
-            "kind": "crowd-control",
-            "duration": 30,
-            "display": "30s duration",
-            "sortKey": 30
-          }
-        ],
-        "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "ability"
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ],
     "10": [
       {
         "name": "Hunter's Focus",
         "slug": "Hunter's_Focus",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Focus",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Focus",
         "description": "Heighten the senses of your party, increasing their Archery, Bludgeoning, Hand to Hand, Piercing, Throwing, and Slashing by 5, Dexterity by 3 (L10) to 15 (L60), and Armor Class by 6 (L10) to 22 (L60) for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -624,6 +614,7 @@
         "mana": 10,
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "buff",
           "AC"
@@ -687,21 +678,21 @@
         "valuesSummary": "+5 Archery/Bludgeoning/Hand to Hand/Piercing/Throwing/Slashing · +6–22 Armor Class (L10–L60)",
         "statTags": [
           "AC"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Rending Cut",
         "slug": "Rending_Cut",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut",
         "description": "Deal 50% Weapon Ratio Damage plus 2 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -714,21 +705,21 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Survivor Stance",
         "slug": "Survivor_Stance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Survivor_Stance",
         "description": "Increase Parry chance by 5% and Armor Class by 6 (L10) to 50 (L60). Hamstring Slice reduces Attack Speed by 6% (L10) to 25% (L60), with a secondary reduction of 2% (L10) to 7% (L60). Persists until removed.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "debuff",
           "stance",
@@ -752,8 +743,7 @@
         "valuesSummary": "+6–50 Armor Class (L10–L60)",
         "statTags": [
           "AC"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "11": [
@@ -762,13 +752,14 @@
         "slug": "Opening_Strike_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_II",
         "description": "Deal 95% Weapon Ratio Damage plus 4 (L11) to 7 (L21) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 11,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -791,14 +782,13 @@
           }
         ],
         "valuesSummary": "95% weapon dmg · 4–7 Physical dmg (L11–L21)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Poison Protection",
         "slug": "Poison_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
-        "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+        "description": "Increase target Poison Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -806,26 +796,12 @@
         "mana": 10,
         "castTime": null,
         "level": 11,
-        "tags": [
-          "buff",
-          "PR"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Poison Resistance",
-            "amount": 5,
-            "display": "+5 Poison Resistance",
-            "sortKey": 5,
-            "statTag": "PR"
-          }
-        ],
-        "valuesSummary": "+5 Poison Resistance",
-        "statTags": [
-          "PR"
-        ],
-        "type": "ability"
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ],
     "12": [
@@ -834,13 +810,14 @@
         "slug": "Barbed_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shield",
         "description": "Grant your target a Damage Shield dealing 4 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -848,21 +825,21 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Finishing Blow II",
         "slug": "Finishing_Blow_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_II",
         "description": "Deal 150% Weapon Ratio Damage plus 19 (L12) to 27 (L22) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -885,21 +862,21 @@
           }
         ],
         "valuesSummary": "150% weapon dmg · 19–27 Physical dmg (L12–L22)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lesser Healing Poultice",
         "slug": "Lesser_Healing_Poultice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Healing_Poultice",
         "description": "Restore 29 Health and an additional 19 Health every 6 seconds for 18 seconds. Has a 30% chance to cure one Poison and one Disease effect.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -923,29 +900,28 @@
           }
         ],
         "valuesSummary": "29 + 19/6s heal (18s) · 29 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Maiming Shot",
         "slug": "Maiming_Shot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maiming_Shot",
         "description": "Decrease target Dexterity by 5 (L12) to 18 (L60) for 1 minute. Marksman Stance also decreases Movement Speed. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "movement"
         ],
         "primaryTag": "movement",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "13": [
@@ -953,7 +929,7 @@
         "name": "Sneak",
         "slug": "Sneak",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
-        "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+        "description": "Sneak, becoming undetectable while behind targets.",
         "category": "Sub",
         "categorySlug": "Skill_Subterfuge",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -961,14 +937,12 @@
         "mana": "Innate",
         "castTime": null,
         "level": 13,
-        "tags": [
-          "invisibility"
-        ],
-        "primaryTag": "invisibility",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "14": [
@@ -977,53 +951,54 @@
         "slug": "Apex_Predator",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Apex_Predator",
         "description": "Increase your Archery and Offense by 10 and Physical Damage dealt by 100% for 30 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Hunter's Recovery",
         "slug": "Hunter's_Recovery",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery",
         "description": "Increase target Health Regeneration by 1 for 20 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Leading Shot II",
         "slug": "Leading_Shot_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_II",
         "description": "Deal 95% Weapon Ratio Damage plus 5 (L14) to 8 (L24) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1046,27 +1021,26 @@
           }
         ],
         "valuesSummary": "95% weapon dmg · 5–8 Physical dmg (L14–L24)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Minor Pack Recovery",
         "slug": "Minor_Pack_Recovery",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Pack_Recovery",
         "description": "Increase party Health Regeneration by 1 for 20 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "15": [
@@ -1074,7 +1048,7 @@
         "name": "Camouflage",
         "slug": "Camouflage",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
-        "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+        "description": "Render a target party member unseen by the living for 10 minutes. Outdoors only, with a strong chance to end early.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -1082,27 +1056,28 @@
         "mana": 20,
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Longstrider Stance",
         "slug": "Longstrider_Stance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Longstrider_Stance",
         "description": "Increase nearby group Movement Speed by 44% (L15) to 90% (L60). Taking damage suppresses the effect for 20 seconds. Outdoors only; persists until removed.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "stance",
           "movement"
@@ -1110,14 +1085,13 @@
         "primaryTag": "stance",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Salvage Arrows",
         "slug": "Salvage_Arrows",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Salvage_Arrows",
-        "description": "Search the corpses around you, looking for arrows",
+        "description": "Search nearby corpses for arrows.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1125,14 +1099,14 @@
         "mana": 0,
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "utility"
         ],
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "16": [
@@ -1140,7 +1114,7 @@
         "name": "Corruption Protection",
         "slug": "Corruption_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
-        "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+        "description": "Increase target Corruption Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1148,60 +1122,45 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
-        "tags": [
-          "buff",
-          "COR"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Corruption Resistance",
-            "amount": 5,
-            "display": "+5 Corruption Resistance",
-            "sortKey": 5,
-            "statTag": "COR"
-          }
-        ],
-        "valuesSummary": "+5 Corruption Resistance",
-        "statTags": [
-          "COR"
-        ],
-        "type": "ability"
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Nature's Calm",
         "slug": "Nature's_Calm",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Calm",
-        "description": "Calm your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 30.",
-        "category": "",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Calm",
+        "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 30.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 16,
-        "tags": [
-          "debuff"
-        ],
-        "primaryTag": "debuff",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Swift Shot II",
         "slug": "Swift_Shot_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_II",
         "description": "Deal 121% Weapon Ratio Damage plus 11 (L16) to 21 (L26) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1224,8 +1183,7 @@
           }
         ],
         "valuesSummary": "121% weapon dmg · 11–21 Physical dmg (L16–L26)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "17": [
@@ -1234,13 +1192,14 @@
         "slug": "Terrify_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_Beasts",
         "description": "Cause a target beast to flee for 18 seconds. Damage has a slight chance to break the effect early.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 17,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "fear"
@@ -1248,8 +1207,7 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "18": [
@@ -1257,7 +1215,7 @@
         "name": "Enduring Breath",
         "slug": "Enduring_Breath",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-        "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
+        "description": "Grant your target the ability to breathe underwater for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1265,6 +1223,7 @@
         "mana": 20,
         "castTime": null,
         "level": 18,
+        "type": "ability",
         "tags": [
           "buff",
           "utility"
@@ -1272,8 +1231,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "19": [
@@ -1282,13 +1240,14 @@
         "slug": "Barbed_Shot_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_II",
         "description": "Deal 50% Weapon Ratio Damage plus 6 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 19,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1301,8 +1260,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "20": [
@@ -1311,13 +1269,14 @@
         "slug": "Lesser_Mantle_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Mantle_of_the_Hunter",
         "description": "Increase your Armor Class by 15, Wisdom by 5, and Mana Regeneration by 2; grant a Damage Shield dealing 3 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1326,43 +1285,40 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lull Lesser Beasts",
         "slug": "Lull_Lesser_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Lesser_Beasts",
-        "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 19.",
-        "category": "",
+        "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 38.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 20,
-        "tags": [
-          "debuff",
-          "crowd-control"
-        ],
-        "primaryTag": "crowd-control",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Rending Cut II",
         "slug": "Rending_Cut_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_II",
         "description": "Deal 50% Weapon Ratio Damage plus 6 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1375,14 +1331,13 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "See Invisibility",
         "slug": "See_Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+        "description": "Grant your target the ability to see invisible entities for 35 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -1390,6 +1345,7 @@
         "mana": 20,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility",
@@ -1398,14 +1354,13 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Speed of the Wild",
         "slug": "Speed_of_the_Wild",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
+        "description": "Increase target Movement Speed by 40% (L20) to 60% (L60) for 35 minutes. Outdoors only.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1413,26 +1368,14 @@
         "mana": 20,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
-          "buff",
           "movement"
         ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Movement Speed",
-            "min": 40,
-            "max": 60,
-            "unit": "%",
-            "display": "+40–60%",
-            "sortKey": 60,
-            "statTag": "MS"
-          }
-        ],
-        "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "ability"
+        "primaryTag": "movement",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ],
     "21": [
@@ -1441,13 +1384,14 @@
         "slug": "Opening_Strike_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_III",
         "description": "Deal 100% Weapon Ratio Damage plus 7 (L21) to 11 (L31) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 21,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1470,8 +1414,7 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 7–11 Physical dmg (L21–L31)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "22": [
@@ -1480,13 +1423,14 @@
         "slug": "Bristle_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristle_Shield",
         "description": "Grant your target a Damage Shield dealing 7 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 22,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -1494,21 +1438,21 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Finishing Blow III",
         "slug": "Finishing_Blow_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_III",
         "description": "Deal 160% Weapon Ratio Damage plus 27 (L22) to 36 (L32) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 22,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1531,8 +1475,7 @@
           }
         ],
         "valuesSummary": "160% weapon dmg · 27–36 Physical dmg (L22–L32)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "24": [
@@ -1541,13 +1484,14 @@
         "slug": "Healing_Poultice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Poultice",
         "description": "Restore 59 Health and an additional 38 Health every 6 seconds for 18 seconds. Has a 40% chance to cure one Poison and one Disease effect.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -1571,21 +1515,21 @@
           }
         ],
         "valuesSummary": "59 + 38/6s heal (18s) · 59 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Leading Shot III",
         "slug": "Leading_Shot_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_III",
         "description": "Deal 100% Weapon Ratio Damage plus 8 (L24) to 12 (L34) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1608,29 +1552,28 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 8–12 Physical dmg (L24–L34)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Tanglefoot",
         "slug": "Tanglefoot",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tanglefoot",
         "description": "Decrease Movement Speed of enemies in a frontal cone by 45% for 15 seconds. Diminishing returns in PvP.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "movement"
         ],
         "primaryTag": "movement",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "26": [
@@ -1643,66 +1586,67 @@
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Hunter's Recovery II",
         "slug": "Hunter's_Recovery_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery_II",
         "description": "Increase target Health Regeneration by 3 for 30 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lesser Pack Recovery",
         "slug": "Lesser_Pack_Recovery",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pack_Recovery",
         "description": "Increase party Health Regeneration by 3 for 30 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Swift Shot III",
         "slug": "Swift_Shot_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_III",
         "description": "Deal 142% Weapon Ratio Damage plus 21 (L26) to 31 (L36) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1725,31 +1669,28 @@
           }
         ],
         "valuesSummary": "142% weapon dmg · 21–31 Physical dmg (L26–L36)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "28": [
       {
         "name": "Nature's Lull",
         "slug": "Nature's_Lull",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Lull",
-        "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
-        "category": "",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
+        "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 42.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 28,
-        "tags": [
-          "debuff"
-        ],
-        "primaryTag": "debuff",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "29": [
@@ -1758,13 +1699,14 @@
         "slug": "Barbed_Shot_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_III",
         "description": "Deal 50% Weapon Ratio Damage plus 20 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 29,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1777,8 +1719,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "30": [
@@ -1787,13 +1728,14 @@
         "slug": "Rending_Cut_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_III",
         "description": "Deal 50% Weapon Ratio Damage plus 20 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1806,8 +1748,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "31": [
@@ -1816,13 +1757,14 @@
         "slug": "Opening_Strike_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_IV",
         "description": "Deal 105% Weapon Ratio Damage plus 11 (L31) to 14 (L41) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 31,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1845,8 +1787,7 @@
           }
         ],
         "valuesSummary": "105% weapon dmg · 11–14 Physical dmg (L31–L41)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "32": [
@@ -1854,35 +1795,36 @@
         "name": "Beast Speech",
         "slug": "Beast_Speech",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beast_Speech",
-        "description": "Imbue the tongue of your target, granting them the ability to speak with beasts for 1 hour.",
-        "category": "",
+        "description": "Grant your target the ability to speak with beasts for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Bramble Shield",
         "slug": "Bramble_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bramble_Shield",
         "description": "Grant your target a Damage Shield dealing 11 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -1890,21 +1832,21 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Finishing Blow IV",
         "slug": "Finishing_Blow_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_IV",
         "description": "Deal 170% Weapon Ratio Damage plus 36 (L32) to 45 (L42) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1927,21 +1869,21 @@
           }
         ],
         "valuesSummary": "170% weapon dmg · 36–45 Physical dmg (L32–L42)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Mantle of the Hunter",
         "slug": "Mantle_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_the_Hunter",
         "description": "Increase your Armor Class by 20, Wisdom by 9, and Mana Regeneration by 3; grant a Damage Shield dealing 4 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1950,14 +1892,13 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Poison Resistance",
         "slug": "Poison_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
-        "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+        "description": "Increase target Poison Resistance by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1965,26 +1906,12 @@
         "mana": 40,
         "castTime": null,
         "level": 32,
-        "tags": [
-          "buff",
-          "PR"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Poison Resistance",
-            "amount": 15,
-            "display": "+15 Poison Resistance",
-            "sortKey": 15,
-            "statTag": "PR"
-          }
-        ],
-        "valuesSummary": "+15 Poison Resistance",
-        "statTags": [
-          "PR"
-        ],
-        "type": "ability"
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ],
     "34": [
@@ -1993,13 +1920,14 @@
         "slug": "Leading_Shot_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_IV",
         "description": "Deal 105% Weapon Ratio Damage plus 12 (L34) to 15 (L44) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 34,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2022,8 +1950,7 @@
           }
         ],
         "valuesSummary": "105% weapon dmg · 12–15 Physical dmg (L34–L44)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "36": [
@@ -2032,13 +1959,14 @@
         "slug": "Greater_Healing_Poultice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Healing_Poultice",
         "description": "Restore 125 Health and an additional 81 Health every 6 seconds for 18 seconds. Has a 50% chance to cure one Poison and one Disease effect.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -2062,42 +1990,40 @@
           }
         ],
         "valuesSummary": "125 + 81/6s heal (18s) · 125 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lull Beasts",
         "slug": "Lull_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Beasts",
-        "description": "Lulls a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 55.",
-        "category": "",
+        "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 52.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
-        "tags": [
-          "debuff"
-        ],
-        "primaryTag": "debuff",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Swift Shot IV",
         "slug": "Swift_Shot_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_IV",
         "description": "Deal 163% Weapon Ratio Damage plus 31 (L36) to 41 (L46) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2120,8 +2046,7 @@
           }
         ],
         "valuesSummary": "163% weapon dmg · 31–41 Physical dmg (L36–L46)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "38": [
@@ -2129,7 +2054,7 @@
         "name": "Corruption Resistance",
         "slug": "Corruption_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
-        "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+        "description": "Increase target Corruption Resistance by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2137,64 +2062,50 @@
         "mana": 40,
         "castTime": null,
         "level": 38,
-        "tags": [
-          "buff",
-          "COR"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Corruption Resistance",
-            "amount": 15,
-            "display": "+15 Corruption Resistance",
-            "sortKey": 15,
-            "statTag": "COR"
-          }
-        ],
-        "valuesSummary": "+15 Corruption Resistance",
-        "statTags": [
-          "COR"
-        ],
-        "type": "ability"
-      },
-      {
-        "name": "Hunter's Recovery III",
-        "slug": "Hunter's_Recovery_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery_III",
-        "description": "Increase target Health Regeneration by 5 for 35 minutes.",
-        "category": "",
-        "categorySlug": null,
-        "categoryUrl": null,
-        "location": "Vendor",
-        "mana": "",
-        "castTime": null,
-        "level": 38,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
+      },
+      {
+        "name": "Hunter's Recovery III",
+        "slug": "Hunter's_Recovery_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery_III",
+        "description": "Increase target Health Regeneration by 5 for 35 minutes.",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 38,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Pack Recovery",
         "slug": "Pack_Recovery",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pack_Recovery",
         "description": "Increase party Health Regeneration by 5 for 35 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 38,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "39": [
@@ -2203,13 +2114,14 @@
         "slug": "Barbed_Shot_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_IV",
         "description": "Deal 50% Weapon Ratio Damage plus 40 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 39,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2222,45 +2134,42 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "40": [
       {
         "name": "Nature's Peace",
         "slug": "Nature's_Peace",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Peace",
-        "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
-        "category": "",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
+        "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 54.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
-        "tags": [
-          "debuff",
-          "crowd-control"
-        ],
-        "primaryTag": "crowd-control",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Rending Cut IV",
         "slug": "Rending_Cut_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_IV",
         "description": "Deal 50% Weapon Ratio Damage plus 40 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2273,8 +2182,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "41": [
@@ -2283,13 +2191,14 @@
         "slug": "Opening_Strike_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_V",
         "description": "Deal 110% Weapon Ratio Damage plus 14 (L41) to 17 (L51) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 41,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2312,8 +2221,7 @@
           }
         ],
         "valuesSummary": "110% weapon dmg · 14–17 Physical dmg (L41–L51)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "42": [
@@ -2322,13 +2230,14 @@
         "slug": "Finishing_Blow_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_V",
         "description": "Deal 180% Weapon Ratio Damage plus 45 (L42) to 53 (L52) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 42,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2351,21 +2260,21 @@
           }
         ],
         "valuesSummary": "180% weapon dmg · 45–53 Physical dmg (L42–L52)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Spikey Shield",
         "slug": "Spikey_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spikey_Shield",
         "description": "Grant your target a Damage Shield dealing 16 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 42,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -2373,8 +2282,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "44": [
@@ -2383,13 +2291,14 @@
         "slug": "Greater_Mantle_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Mantle_of_the_Hunter",
         "description": "Increase your Armor Class by 25, Wisdom by 12, and Mana Regeneration by 4; grant a Damage Shield dealing 5 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -2398,21 +2307,21 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Leading Shot V",
         "slug": "Leading_Shot_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_V",
         "description": "Deal 110% Weapon Ratio Damage plus 15 (L44) to 18 (L54) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2435,8 +2344,7 @@
           }
         ],
         "valuesSummary": "110% weapon dmg · 15–18 Physical dmg (L44–L54)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "46": [
@@ -2445,13 +2353,14 @@
         "slug": "Swift_Shot_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_V",
         "description": "Deal 184% Weapon Ratio Damage plus 41 (L46) to 51 (L56) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 46,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2474,8 +2383,7 @@
           }
         ],
         "valuesSummary": "184% weapon dmg · 41–51 Physical dmg (L46–L56)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "48": [
@@ -2484,13 +2392,14 @@
         "slug": "Speed_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Hunter",
         "description": "Increase your Movement Speed by 100% for 1 minute. Outdoors only.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "buff",
           "movement"
@@ -2498,21 +2407,21 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Superior Healing Poultice",
         "slug": "Superior_Healing_Poultice",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Healing_Poultice",
         "description": "Restore 185 Health and an additional 120 Health every 6 seconds for 18 seconds. Has a 60% chance to cure one Poison and one Disease effect.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "heal",
           "hot"
@@ -2536,8 +2445,7 @@
           }
         ],
         "valuesSummary": "185 + 120/6s heal (18s) · 185 heal",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "49": [
@@ -2546,13 +2454,14 @@
         "slug": "Barbed_Shot_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_V",
         "description": "Deal 50% Weapon Ratio Damage plus 52 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 49,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2565,8 +2474,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "50": [
@@ -2575,73 +2483,71 @@
         "slug": "Greater_Pack_Recovery",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pack_Recovery",
         "description": "Increase party Health Regeneration by 9 for 35 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Lull Greater Beasts",
         "slug": "Lull_Greater_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Greater_Beasts",
-        "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 60.",
-        "category": "",
+        "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 60.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 50,
-        "tags": [
-          "debuff",
-          "crowd-control"
-        ],
-        "primaryTag": "crowd-control",
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
-      },
-      {
-        "name": "Ranger's Recovery",
-        "slug": "Ranger's_Recovery",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger%27s_Recovery",
-        "description": "Increase target Health Regeneration by 9 for 35 minutes.",
-        "category": "",
-        "categorySlug": null,
-        "categoryUrl": null,
-        "location": "Vendor",
-        "mana": "",
-        "castTime": null,
-        "level": 50,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
+      },
+      {
+        "name": "Ranger's Recovery",
+        "slug": "Ranger's_Recovery",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger's_Recovery",
+        "description": "Increase target Health Regeneration by 9 for 35 minutes.",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 50,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Rending Cut V",
         "slug": "Rending_Cut_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_V",
         "description": "Deal 50% Weapon Ratio Damage plus 52 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2654,8 +2560,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "51": [
@@ -2664,13 +2569,14 @@
         "slug": "Opening_Strike_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_VI",
         "description": "Deal 120% Weapon Ratio Damage plus 17 (L51) to 20 (L60) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 51,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2693,8 +2599,7 @@
           }
         ],
         "valuesSummary": "120% weapon dmg · 17–20 Physical dmg (L51–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "52": [
@@ -2703,13 +2608,14 @@
         "slug": "Finishing_Blow_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_VI",
         "description": "Deal 226% Weapon Ratio Damage plus 53 (L52) to 60 (L60) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2732,42 +2638,40 @@
           }
         ],
         "valuesSummary": "226% weapon dmg · 53–60 Physical dmg (L52–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Nature's Serenity",
         "slug": "Nature's_Serenity",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Serenity",
-        "description": "Serenade your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 65.",
-        "category": "",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Serenity",
+        "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 60.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
-        "tags": [
-          "debuff"
-        ],
-        "primaryTag": "debuff",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Thorn Shield",
         "slug": "Thorn_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorn_Shield",
         "description": "Grant your target a Damage Shield dealing 20 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -2775,8 +2679,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "54": [
@@ -2785,13 +2688,14 @@
         "slug": "Leading_Shot_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_VI",
         "description": "Deal 120% Weapon Ratio Damage plus 18 (L54) to 20 (L60) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 54,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2814,8 +2718,7 @@
           }
         ],
         "valuesSummary": "120% weapon dmg · 18–20 Physical dmg (L54–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "56": [
@@ -2824,13 +2727,14 @@
         "slug": "Superior_Mantle_of_the_Hunter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Mantle_of_the_Hunter",
         "description": "Increase your Armor Class by 30, Wisdom by 15, and Mana Regeneration by 5; grant a Damage Shield dealing 6 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -2839,21 +2743,21 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Swift Shot VI",
         "slug": "Swift_Shot_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_VI",
         "description": "Deal 226% Weapon Ratio Damage plus 51 (L56) to 55 (L60) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2876,8 +2780,7 @@
           }
         ],
         "valuesSummary": "226% weapon dmg · 51–55 Physical dmg (L56–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "59": [
@@ -2886,13 +2789,14 @@
         "slug": "Barbed_Shot_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_VI",
         "description": "Deal 50% Weapon Ratio Damage plus 60 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 59,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2905,8 +2809,7 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "60": [
@@ -2915,32 +2818,33 @@
         "slug": "Exceptional_Pack_Recovery",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pack_Recovery",
         "description": "Increase party Health Regeneration by 13 for 35 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Jagged Shield",
         "slug": "Jagged_Shield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jagged_Shield",
         "description": "Grant your target a Damage Shield dealing 25 damage when hit for 10 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "damage",
           "buff"
@@ -2948,40 +2852,40 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ranger's Recovery II",
         "slug": "Ranger's_Recovery_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger%27s_Recovery_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger's_Recovery_II",
         "description": "Increase target Health Regeneration by 13 for 35 minutes.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Rending Cut VI",
         "slug": "Rending_Cut_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_VI",
         "description": "Deal 50% Weapon Ratio Damage plus 60 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -2994,41 +2898,28 @@
           }
         ],
         "valuesSummary": "50% weapon dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Speed of the Pack",
         "slug": "Speed_of_the_Pack",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
-        "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
-        "category": "",
+        "description": "Increase party Movement Speed by 60% for 35 minutes. Outdoors only.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
-          "buff",
           "movement"
         ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Movement Speed",
-            "min": 40,
-            "max": 60,
-            "unit": "%",
-            "display": "+40–60%",
-            "sortKey": 60,
-            "statTag": "MS"
-          }
-        ],
-        "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "ability"
+        "primaryTag": "movement",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ]
   },
@@ -3045,6 +2936,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3067,21 +2959,21 @@
         }
       ],
       "valuesSummary": "90% weapon dmg · 1–4 Physical dmg (L1–L11)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Polar Alignment: North",
       "slug": "Polar_Alignment:_North",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Alignment:_North",
-      "description": "Magically align yourself, orienting you toward the North Pole.",
-      "category": "",
+      "description": "Orient yourself North.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "utility",
         "self"
@@ -3089,14 +2981,13 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Throw",
       "slug": "Throw",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-      "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+      "description": "Throw a throwing weapon at your target. Requires a throwing weapon.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -3104,27 +2995,28 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Warden Stance",
       "slug": "Warden_Stance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Warden_Stance",
       "description": "Increase Melee Damage dealt by 10%. Hamstring Slice reduces Armor Class by 2 (L3) to 25 (L60), and Rending Cut refreshes Barbed Shot on its target. Persists until removed.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "debuff",
         "stance"
@@ -3132,8 +3024,7 @@
       "primaryTag": "stance",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Weak Healing Poultice",
@@ -3147,6 +3038,7 @@
       "mana": 4,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -3170,21 +3062,21 @@
         }
       ],
       "valuesSummary": "2 + 1/6s heal (18s) · 2 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow",
       "slug": "Finishing_Blow",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow",
       "description": "Deal 140% Weapon Ratio Damage plus 10 (L2) to 19 (L12) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 2,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3207,42 +3099,42 @@
         }
       ],
       "valuesSummary": "140% weapon dmg · 10–19 Physical dmg (L2–L12)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Hamstring Slice",
       "slug": "Hamstring_Slice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hamstring_Slice",
       "description": "Decrease target Movement Speed by 50% for 24 seconds. Survivor Stance adds an Attack Speed reduction; Warden Stance adds an Armor Class reduction. Diminishing returns in PvP. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "movement"
       ],
       "primaryTag": "movement",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Leading Shot",
       "slug": "Leading_Shot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot",
       "description": "Deal 90% Weapon Ratio Damage plus 2 (L4) to 5 (L14) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3265,43 +3157,40 @@
         }
       ],
       "valuesSummary": "90% weapon dmg · 2–5 Physical dmg (L4–L14)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lull Minor Beasts",
       "slug": "Lull_Minor_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Minor_Beasts",
-      "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 22.",
-      "category": "",
+      "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 22.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 4,
-      "tags": [
-        "debuff",
-        "crowd-control"
-      ],
-      "primaryTag": "crowd-control",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Minor Healing Poultice",
       "slug": "Minor_Healing_Poultice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Healing_Poultice",
       "description": "Restore 7 Health and an additional 4 Health every 6 seconds for 18 seconds. Has a 20% chance to cure one Poison and one Disease effect.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -3325,14 +3214,13 @@
         }
       ],
       "valuesSummary": "7 + 4/6s heal (18s) · 7 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Kick",
       "slug": "Kick",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
-      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "description": "Kick your target, interrupting their casting and locking them out of that school of magic for 2 seconds.",
       "category": "Acr",
       "categorySlug": "Skill_Acrobatics",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
@@ -3340,27 +3228,28 @@
       "mana": "Innate",
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "interrupt"
       ],
       "primaryTag": "interrupt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Marksman Stance",
       "slug": "Marksman_Stance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Marksman_Stance",
       "description": "Increase Ranged Damage dealt by 10%. Maiming Shot decreases Movement Speed by 35% for 24 seconds, and Barbed Shot refreshes Rending Cut on its target. Persists until removed.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "stance",
         "movement"
@@ -3368,40 +3257,40 @@
       "primaryTag": "stance",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Recuperate",
       "slug": "Recuperate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Recuperate",
       "description": "Party members around a warm campfire recover 2 (L5) to 100 (L60) Health and 5 (L5) to 125 (L60) Mana every 6 seconds for 2 minutes. Taking damage ends the effect. Each party member can benefit once every 17.5 minutes, regardless of caster. While recuperating, Damage dealt is reduced by 95%, Damage taken increases by 30%, and Healing done is reduced by 99%; Rangers can only use Healing Poultice spells. Cleric barriers take much longer to cast. Can be removed early.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot",
       "slug": "Swift_Shot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot",
       "description": "Deal 100% Weapon Ratio Damage plus 1 (L6) to 11 (L16) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3424,21 +3313,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 1–11 Physical dmg (L6–L16)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Invisibility versus Beasts",
       "slug": "Invisibility_versus_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Beasts",
-      "description": "Shroud a target group member in a cloak of invisibility, rendering them unseen by beasts for 10 minutes. This spell has a moderate chance to end early.",
-      "category": "",
+      "description": "Render a target party member invisible to beasts for 10 minutes, with a moderate chance to end early.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility"
@@ -3446,21 +3335,21 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Minor Mantle of the Hunter",
       "slug": "Minor_Mantle_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Mantle_of_the_Hunter",
       "description": "Increase your Armor Class by 10, Wisdom by 2, and Mana Regeneration by 1; grant a Damage Shield dealing 1 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -3469,8 +3358,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Shroud",
@@ -3484,6 +3372,7 @@
       "mana": 0,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "invisibility",
         "self"
@@ -3491,14 +3380,13 @@
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Taunt",
       "slug": "Taunt",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-      "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
+      "description": "Draw the attention of your target. Has additional effects in PvP and is moderately difficult to resist.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -3506,27 +3394,28 @@
       "mana": "Innate",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "taunt"
       ],
       "primaryTag": "taunt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot",
       "slug": "Barbed_Shot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot",
       "description": "Deal 50% Weapon Ratio Damage plus 2 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3539,14 +3428,13 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Twisting Roots",
       "slug": "Twisting_Roots",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Roots",
-      "description": "Root your target with twisting tendrils, immobilizing them for 30 seconds. This spell has a chance to be removed by damage.",
+      "description": "Immobilize your target for 30 seconds. Damage has a chance to remove the effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3554,27 +3442,20 @@
       "mana": 15,
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "root"
       ],
       "primaryTag": "root",
-      "effects": [
-        {
-          "kind": "crowd-control",
-          "duration": 30,
-          "display": "30s duration",
-          "sortKey": 30
-        }
-      ],
-      "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "ability"
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Hunter's Focus",
       "slug": "Hunter's_Focus",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Focus",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Focus",
       "description": "Heighten the senses of your party, increasing their Archery, Bludgeoning, Hand to Hand, Piercing, Throwing, and Slashing by 5, Dexterity by 3 (L10) to 15 (L60), and Armor Class by 6 (L10) to 22 (L60) for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -3583,6 +3464,7 @@
       "mana": 10,
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "buff",
         "AC"
@@ -3646,21 +3528,21 @@
       "valuesSummary": "+5 Archery/Bludgeoning/Hand to Hand/Piercing/Throwing/Slashing · +6–22 Armor Class (L10–L60)",
       "statTags": [
         "AC"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Rending Cut",
       "slug": "Rending_Cut",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut",
       "description": "Deal 50% Weapon Ratio Damage plus 2 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3673,21 +3555,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Survivor Stance",
       "slug": "Survivor_Stance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Survivor_Stance",
       "description": "Increase Parry chance by 5% and Armor Class by 6 (L10) to 50 (L60). Hamstring Slice reduces Attack Speed by 6% (L10) to 25% (L60), with a secondary reduction of 2% (L10) to 7% (L60). Persists until removed.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "debuff",
         "stance",
@@ -3711,21 +3593,21 @@
       "valuesSummary": "+6–50 Armor Class (L10–L60)",
       "statTags": [
         "AC"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Opening Strike II",
       "slug": "Opening_Strike_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_II",
       "description": "Deal 95% Weapon Ratio Damage plus 4 (L11) to 7 (L21) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 11,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3748,14 +3630,13 @@
         }
       ],
       "valuesSummary": "95% weapon dmg · 4–7 Physical dmg (L11–L21)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Poison Protection",
       "slug": "Poison_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Protection",
-      "description": "Ward your target against toxins, increasing their Poison Resistance by 5 for 1 hour.",
+      "description": "Increase target Poison Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3763,39 +3644,26 @@
       "mana": 10,
       "castTime": null,
       "level": 11,
-      "tags": [
-        "buff",
-        "PR"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Poison Resistance",
-          "amount": 5,
-          "display": "+5 Poison Resistance",
-          "sortKey": 5,
-          "statTag": "PR"
-        }
-      ],
-      "valuesSummary": "+5 Poison Resistance",
-      "statTags": [
-        "PR"
-      ],
-      "type": "ability"
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Barbed Shield",
       "slug": "Barbed_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shield",
       "description": "Grant your target a Damage Shield dealing 4 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -3803,21 +3671,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow II",
       "slug": "Finishing_Blow_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_II",
       "description": "Deal 150% Weapon Ratio Damage plus 19 (L12) to 27 (L22) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3840,21 +3708,21 @@
         }
       ],
       "valuesSummary": "150% weapon dmg · 19–27 Physical dmg (L12–L22)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lesser Healing Poultice",
       "slug": "Lesser_Healing_Poultice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Healing_Poultice",
       "description": "Restore 29 Health and an additional 19 Health every 6 seconds for 18 seconds. Has a 30% chance to cure one Poison and one Disease effect.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -3878,35 +3746,34 @@
         }
       ],
       "valuesSummary": "29 + 19/6s heal (18s) · 29 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Maiming Shot",
       "slug": "Maiming_Shot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Maiming_Shot",
       "description": "Decrease target Dexterity by 5 (L12) to 18 (L60) for 1 minute. Marksman Stance also decreases Movement Speed. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "movement"
       ],
       "primaryTag": "movement",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sneak",
       "slug": "Sneak",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
-      "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+      "description": "Sneak, becoming undetectable while behind targets.",
       "category": "Sub",
       "categorySlug": "Skill_Subterfuge",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -3914,67 +3781,66 @@
       "mana": "Innate",
       "castTime": null,
       "level": 13,
-      "tags": [
-        "invisibility"
-      ],
-      "primaryTag": "invisibility",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Apex Predator",
       "slug": "Apex_Predator",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Apex_Predator",
       "description": "Increase your Archery and Offense by 10 and Physical Damage dealt by 100% for 30 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Hunter's Recovery",
       "slug": "Hunter's_Recovery",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery",
       "description": "Increase target Health Regeneration by 1 for 20 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Leading Shot II",
       "slug": "Leading_Shot_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_II",
       "description": "Deal 95% Weapon Ratio Damage plus 5 (L14) to 8 (L24) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3997,33 +3863,32 @@
         }
       ],
       "valuesSummary": "95% weapon dmg · 5–8 Physical dmg (L14–L24)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Minor Pack Recovery",
       "slug": "Minor_Pack_Recovery",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Pack_Recovery",
       "description": "Increase party Health Regeneration by 1 for 20 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Camouflage",
       "slug": "Camouflage",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
-      "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+      "description": "Render a target party member unseen by the living for 10 minutes. Outdoors only, with a strong chance to end early.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4031,27 +3896,28 @@
       "mana": 20,
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Longstrider Stance",
       "slug": "Longstrider_Stance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Longstrider_Stance",
       "description": "Increase nearby group Movement Speed by 44% (L15) to 90% (L60). Taking damage suppresses the effect for 20 seconds. Outdoors only; persists until removed.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "stance",
         "movement"
@@ -4059,14 +3925,13 @@
       "primaryTag": "stance",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Salvage Arrows",
       "slug": "Salvage_Arrows",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Salvage_Arrows",
-      "description": "Search the corpses around you, looking for arrows",
+      "description": "Search nearby corpses for arrows.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -4074,20 +3939,20 @@
       "mana": 0,
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "utility"
       ],
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Corruption Protection",
       "slug": "Corruption_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Protection",
-      "description": "Ward your target against subversion, increasing their Corruption Resistance by 5 for 1 hour.",
+      "description": "Increase target Corruption Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4095,60 +3960,45 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
-      "tags": [
-        "buff",
-        "COR"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Corruption Resistance",
-          "amount": 5,
-          "display": "+5 Corruption Resistance",
-          "sortKey": 5,
-          "statTag": "COR"
-        }
-      ],
-      "valuesSummary": "+5 Corruption Resistance",
-      "statTags": [
-        "COR"
-      ],
-      "type": "ability"
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Nature's Calm",
       "slug": "Nature's_Calm",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Calm",
-      "description": "Calm your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 30.",
-      "category": "",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Calm",
+      "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 30.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 16,
-      "tags": [
-        "debuff"
-      ],
-      "primaryTag": "debuff",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot II",
       "slug": "Swift_Shot_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_II",
       "description": "Deal 121% Weapon Ratio Damage plus 11 (L16) to 21 (L26) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4171,21 +4021,21 @@
         }
       ],
       "valuesSummary": "121% weapon dmg · 11–21 Physical dmg (L16–L26)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Terrify Beasts",
       "slug": "Terrify_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_Beasts",
       "description": "Cause a target beast to flee for 18 seconds. Damage has a slight chance to break the effect early.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 17,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "fear"
@@ -4193,14 +4043,13 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Enduring Breath",
       "slug": "Enduring_Breath",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-      "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
+      "description": "Grant your target the ability to breathe underwater for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4208,6 +4057,7 @@
       "mana": 20,
       "castTime": null,
       "level": 18,
+      "type": "ability",
       "tags": [
         "buff",
         "utility"
@@ -4215,21 +4065,21 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot II",
       "slug": "Barbed_Shot_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_II",
       "description": "Deal 50% Weapon Ratio Damage plus 6 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 19,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4242,21 +4092,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lesser Mantle of the Hunter",
       "slug": "Lesser_Mantle_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Mantle_of_the_Hunter",
       "description": "Increase your Armor Class by 15, Wisdom by 5, and Mana Regeneration by 2; grant a Damage Shield dealing 3 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4265,43 +4115,40 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lull Lesser Beasts",
       "slug": "Lull_Lesser_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Lesser_Beasts",
-      "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 19.",
-      "category": "",
+      "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 38.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 20,
-      "tags": [
-        "debuff",
-        "crowd-control"
-      ],
-      "primaryTag": "crowd-control",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rending Cut II",
       "slug": "Rending_Cut_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_II",
       "description": "Deal 50% Weapon Ratio Damage plus 6 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4314,14 +4161,13 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "See Invisibility",
       "slug": "See_Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+      "description": "Grant your target the ability to see invisible entities for 35 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4329,6 +4175,7 @@
       "mana": 20,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility",
@@ -4337,14 +4184,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Speed of the Wild",
       "slug": "Speed_of_the_Wild",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
+      "description": "Increase target Movement Speed by 40% (L20) to 60% (L60) for 35 minutes. Outdoors only.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4352,39 +4198,28 @@
       "mana": 20,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
-        "buff",
         "movement"
       ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Movement Speed",
-          "min": 40,
-          "max": 60,
-          "unit": "%",
-          "display": "+40–60%",
-          "sortKey": 60,
-          "statTag": "MS"
-        }
-      ],
-      "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "ability"
+      "primaryTag": "movement",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Opening Strike III",
       "slug": "Opening_Strike_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_III",
       "description": "Deal 100% Weapon Ratio Damage plus 7 (L21) to 11 (L31) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 21,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4407,21 +4242,21 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 7–11 Physical dmg (L21–L31)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Bristle Shield",
       "slug": "Bristle_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bristle_Shield",
       "description": "Grant your target a Damage Shield dealing 7 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 22,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -4429,21 +4264,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow III",
       "slug": "Finishing_Blow_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_III",
       "description": "Deal 160% Weapon Ratio Damage plus 27 (L22) to 36 (L32) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 22,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4466,21 +4301,21 @@
         }
       ],
       "valuesSummary": "160% weapon dmg · 27–36 Physical dmg (L22–L32)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Healing Poultice",
       "slug": "Healing_Poultice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Poultice",
       "description": "Restore 59 Health and an additional 38 Health every 6 seconds for 18 seconds. Has a 40% chance to cure one Poison and one Disease effect.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -4504,21 +4339,21 @@
         }
       ],
       "valuesSummary": "59 + 38/6s heal (18s) · 59 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Leading Shot III",
       "slug": "Leading_Shot_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_III",
       "description": "Deal 100% Weapon Ratio Damage plus 8 (L24) to 12 (L34) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4541,29 +4376,28 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 8–12 Physical dmg (L24–L34)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Tanglefoot",
       "slug": "Tanglefoot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tanglefoot",
       "description": "Decrease Movement Speed of enemies in a frontal cone by 45% for 15 seconds. Diminishing returns in PvP.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "movement"
       ],
       "primaryTag": "movement",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Hearth of the Ranger",
@@ -4574,66 +4408,67 @@
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Hunter's Recovery II",
       "slug": "Hunter's_Recovery_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery_II",
       "description": "Increase target Health Regeneration by 3 for 30 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lesser Pack Recovery",
       "slug": "Lesser_Pack_Recovery",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pack_Recovery",
       "description": "Increase party Health Regeneration by 3 for 30 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot III",
       "slug": "Swift_Shot_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_III",
       "description": "Deal 142% Weapon Ratio Damage plus 21 (L26) to 31 (L36) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4656,42 +4491,40 @@
         }
       ],
       "valuesSummary": "142% weapon dmg · 21–31 Physical dmg (L26–L36)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Nature's Lull",
       "slug": "Nature's_Lull",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Lull",
-      "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
-      "category": "",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
+      "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 42.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 28,
-      "tags": [
-        "debuff"
-      ],
-      "primaryTag": "debuff",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot III",
       "slug": "Barbed_Shot_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_III",
       "description": "Deal 50% Weapon Ratio Damage plus 20 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 29,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4704,21 +4537,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rending Cut III",
       "slug": "Rending_Cut_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_III",
       "description": "Deal 50% Weapon Ratio Damage plus 20 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4731,21 +4564,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Opening Strike IV",
       "slug": "Opening_Strike_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_IV",
       "description": "Deal 105% Weapon Ratio Damage plus 11 (L31) to 14 (L41) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 31,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4768,42 +4601,42 @@
         }
       ],
       "valuesSummary": "105% weapon dmg · 11–14 Physical dmg (L31–L41)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Beast Speech",
       "slug": "Beast_Speech",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beast_Speech",
-      "description": "Imbue the tongue of your target, granting them the ability to speak with beasts for 1 hour.",
-      "category": "",
+      "description": "Grant your target the ability to speak with beasts for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Bramble Shield",
       "slug": "Bramble_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bramble_Shield",
       "description": "Grant your target a Damage Shield dealing 11 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -4811,21 +4644,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow IV",
       "slug": "Finishing_Blow_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_IV",
       "description": "Deal 170% Weapon Ratio Damage plus 36 (L32) to 45 (L42) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4848,21 +4681,21 @@
         }
       ],
       "valuesSummary": "170% weapon dmg · 36–45 Physical dmg (L32–L42)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Mantle of the Hunter",
       "slug": "Mantle_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_the_Hunter",
       "description": "Increase your Armor Class by 20, Wisdom by 9, and Mana Regeneration by 3; grant a Damage Shield dealing 4 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4871,14 +4704,13 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Poison Resistance",
       "slug": "Poison_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poison_Resistance",
-      "description": "Greatly ward your target against toxins, increasing their Poison Resistance by 15 for 1 hour.",
+      "description": "Increase target Poison Resistance by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4886,39 +4718,26 @@
       "mana": 40,
       "castTime": null,
       "level": 32,
-      "tags": [
-        "buff",
-        "PR"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Poison Resistance",
-          "amount": 15,
-          "display": "+15 Poison Resistance",
-          "sortKey": 15,
-          "statTag": "PR"
-        }
-      ],
-      "valuesSummary": "+15 Poison Resistance",
-      "statTags": [
-        "PR"
-      ],
-      "type": "ability"
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Leading Shot IV",
       "slug": "Leading_Shot_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_IV",
       "description": "Deal 105% Weapon Ratio Damage plus 12 (L34) to 15 (L44) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 34,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -4941,21 +4760,21 @@
         }
       ],
       "valuesSummary": "105% weapon dmg · 12–15 Physical dmg (L34–L44)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Greater Healing Poultice",
       "slug": "Greater_Healing_Poultice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Healing_Poultice",
       "description": "Restore 125 Health and an additional 81 Health every 6 seconds for 18 seconds. Has a 50% chance to cure one Poison and one Disease effect.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -4979,42 +4798,40 @@
         }
       ],
       "valuesSummary": "125 + 81/6s heal (18s) · 125 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lull Beasts",
       "slug": "Lull_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Beasts",
-      "description": "Lulls a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 55.",
-      "category": "",
+      "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 52.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
-      "tags": [
-        "debuff"
-      ],
-      "primaryTag": "debuff",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot IV",
       "slug": "Swift_Shot_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_IV",
       "description": "Deal 163% Weapon Ratio Damage plus 31 (L36) to 41 (L46) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5037,14 +4854,13 @@
         }
       ],
       "valuesSummary": "163% weapon dmg · 31–41 Physical dmg (L36–L46)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Corruption Resistance",
       "slug": "Corruption_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Corruption_Resistance",
-      "description": "Greatly ward your target against subversion, increasing their Corruption Resistance by 15 for 1 hour.",
+      "description": "Increase target Corruption Resistance by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5052,77 +4868,64 @@
       "mana": 40,
       "castTime": null,
       "level": 38,
-      "tags": [
-        "buff",
-        "COR"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Corruption Resistance",
-          "amount": 15,
-          "display": "+15 Corruption Resistance",
-          "sortKey": 15,
-          "statTag": "COR"
-        }
-      ],
-      "valuesSummary": "+15 Corruption Resistance",
-      "statTags": [
-        "COR"
-      ],
-      "type": "ability"
-    },
-    {
-      "name": "Hunter's Recovery III",
-      "slug": "Hunter's_Recovery_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter%27s_Recovery_III",
-      "description": "Increase target Health Regeneration by 5 for 35 minutes.",
-      "category": "",
-      "categorySlug": null,
-      "categoryUrl": null,
-      "location": "Vendor",
-      "mana": "",
-      "castTime": null,
-      "level": 38,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
+    },
+    {
+      "name": "Hunter's Recovery III",
+      "slug": "Hunter's_Recovery_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hunter's_Recovery_III",
+      "description": "Increase target Health Regeneration by 5 for 35 minutes.",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 38,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Pack Recovery",
       "slug": "Pack_Recovery",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pack_Recovery",
       "description": "Increase party Health Regeneration by 5 for 35 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 38,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot IV",
       "slug": "Barbed_Shot_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_IV",
       "description": "Deal 50% Weapon Ratio Damage plus 40 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 39,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5135,43 +4938,40 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Nature's Peace",
       "slug": "Nature's_Peace",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Peace",
-      "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
-      "category": "",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
+      "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 54.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
-      "tags": [
-        "debuff",
-        "crowd-control"
-      ],
-      "primaryTag": "crowd-control",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rending Cut IV",
       "slug": "Rending_Cut_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_IV",
       "description": "Deal 50% Weapon Ratio Damage plus 40 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5184,21 +4984,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Opening Strike V",
       "slug": "Opening_Strike_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_V",
       "description": "Deal 110% Weapon Ratio Damage plus 14 (L41) to 17 (L51) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 41,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5221,21 +5021,21 @@
         }
       ],
       "valuesSummary": "110% weapon dmg · 14–17 Physical dmg (L41–L51)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow V",
       "slug": "Finishing_Blow_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_V",
       "description": "Deal 180% Weapon Ratio Damage plus 45 (L42) to 53 (L52) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 42,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5258,21 +5058,21 @@
         }
       ],
       "valuesSummary": "180% weapon dmg · 45–53 Physical dmg (L42–L52)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Spikey Shield",
       "slug": "Spikey_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spikey_Shield",
       "description": "Grant your target a Damage Shield dealing 16 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 42,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -5280,21 +5080,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Greater Mantle of the Hunter",
       "slug": "Greater_Mantle_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Mantle_of_the_Hunter",
       "description": "Increase your Armor Class by 25, Wisdom by 12, and Mana Regeneration by 4; grant a Damage Shield dealing 5 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -5303,21 +5103,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Leading Shot V",
       "slug": "Leading_Shot_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_V",
       "description": "Deal 110% Weapon Ratio Damage plus 15 (L44) to 18 (L54) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5340,21 +5140,21 @@
         }
       ],
       "valuesSummary": "110% weapon dmg · 15–18 Physical dmg (L44–L54)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot V",
       "slug": "Swift_Shot_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_V",
       "description": "Deal 184% Weapon Ratio Damage plus 41 (L46) to 51 (L56) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 46,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5377,21 +5177,21 @@
         }
       ],
       "valuesSummary": "184% weapon dmg · 41–51 Physical dmg (L46–L56)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Speed of the Hunter",
       "slug": "Speed_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Hunter",
       "description": "Increase your Movement Speed by 100% for 1 minute. Outdoors only.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "buff",
         "movement"
@@ -5399,21 +5199,21 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Superior Healing Poultice",
       "slug": "Superior_Healing_Poultice",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Healing_Poultice",
       "description": "Restore 185 Health and an additional 120 Health every 6 seconds for 18 seconds. Has a 60% chance to cure one Poison and one Disease effect.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "heal",
         "hot"
@@ -5437,21 +5237,21 @@
         }
       ],
       "valuesSummary": "185 + 120/6s heal (18s) · 185 heal",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot V",
       "slug": "Barbed_Shot_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_V",
       "description": "Deal 50% Weapon Ratio Damage plus 52 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 49,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5464,81 +5264,78 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Greater Pack Recovery",
       "slug": "Greater_Pack_Recovery",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pack_Recovery",
       "description": "Increase party Health Regeneration by 9 for 35 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lull Greater Beasts",
       "slug": "Lull_Greater_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lull_Greater_Beasts",
-      "description": "Lull a target beast, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell is limited to targets up to level 60.",
-      "category": "",
+      "description": "Reduce a target beast’s Aggro Radius for 2 minutes, with a very slight chance to end early. Limited to one target at a time, up to level 60.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 50,
-      "tags": [
-        "debuff",
-        "crowd-control"
-      ],
-      "primaryTag": "crowd-control",
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Ranger's Recovery",
-      "slug": "Ranger's_Recovery",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger%27s_Recovery",
-      "description": "Increase target Health Regeneration by 9 for 35 minutes.",
-      "category": "",
-      "categorySlug": null,
-      "categoryUrl": null,
-      "location": "Vendor",
-      "mana": "",
-      "castTime": null,
-      "level": 50,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
+    },
+    {
+      "name": "Ranger's Recovery",
+      "slug": "Ranger's_Recovery",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger's_Recovery",
+      "description": "Increase target Health Regeneration by 9 for 35 minutes.",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 50,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Rending Cut V",
       "slug": "Rending_Cut_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_V",
       "description": "Deal 50% Weapon Ratio Damage plus 52 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5551,21 +5348,21 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Opening Strike VI",
       "slug": "Opening_Strike_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Opening_Strike_VI",
       "description": "Deal 120% Weapon Ratio Damage plus 17 (L51) to 20 (L60) Physical Damage. Shares a cooldown with Leading Shot and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 51,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5588,21 +5385,21 @@
         }
       ],
       "valuesSummary": "120% weapon dmg · 17–20 Physical dmg (L51–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Finishing Blow VI",
       "slug": "Finishing_Blow_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Finishing_Blow_VI",
       "description": "Deal 226% Weapon Ratio Damage plus 53 (L52) to 60 (L60) Physical Damage. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5625,42 +5422,40 @@
         }
       ],
       "valuesSummary": "226% weapon dmg · 53–60 Physical dmg (L52–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Nature's Serenity",
       "slug": "Nature's_Serenity",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Serenity",
-      "description": "Serenade your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 65.",
-      "category": "",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Serenity",
+      "description": "Reduce target Aggro Radius for 2 minutes. Outdoors only, with a very slight chance to end early and additional effects in PvP. Limited to one target at a time, up to level 60.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
-      "tags": [
-        "debuff"
-      ],
-      "primaryTag": "debuff",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Thorn Shield",
       "slug": "Thorn_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thorn_Shield",
       "description": "Grant your target a Damage Shield dealing 20 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -5668,21 +5463,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Leading Shot VI",
       "slug": "Leading_Shot_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leading_Shot_VI",
       "description": "Deal 120% Weapon Ratio Damage plus 18 (L54) to 20 (L60) Physical Damage. Requires a bow and arrows. Shares a cooldown with Opening Strike and resets the cooldown of swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 54,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5705,21 +5500,21 @@
         }
       ],
       "valuesSummary": "120% weapon dmg · 18–20 Physical dmg (L54–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Superior Mantle of the Hunter",
       "slug": "Superior_Mantle_of_the_Hunter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Mantle_of_the_Hunter",
       "description": "Increase your Armor Class by 30, Wisdom by 15, and Mana Regeneration by 5; grant a Damage Shield dealing 6 damage when hit and the ability to see magical effects when considering targets, for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -5728,21 +5523,21 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Swift Shot VI",
       "slug": "Swift_Shot_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swift_Shot_VI",
       "description": "Deal 226% Weapon Ratio Damage plus 51 (L56) to 55 (L60) Physical Damage. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5765,21 +5560,21 @@
         }
       ],
       "valuesSummary": "226% weapon dmg · 51–55 Physical dmg (L56–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Barbed Shot VI",
       "slug": "Barbed_Shot_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Barbed_Shot_VI",
       "description": "Deal 50% Weapon Ratio Damage plus 60 Bleed Damage every 6 seconds for 22 seconds. In Marksman Stance, refreshes Rending Cut on its target. Requires a bow and arrows. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 59,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5792,40 +5587,40 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Exceptional Pack Recovery",
       "slug": "Exceptional_Pack_Recovery",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pack_Recovery",
       "description": "Increase party Health Regeneration by 13 for 35 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Jagged Shield",
       "slug": "Jagged_Shield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Jagged_Shield",
       "description": "Grant your target a Damage Shield dealing 25 damage when hit for 10 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "damage",
         "buff"
@@ -5833,40 +5628,40 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ranger's Recovery II",
       "slug": "Ranger's_Recovery_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger%27s_Recovery_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ranger's_Recovery_II",
       "description": "Increase target Health Regeneration by 13 for 35 minutes.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Rending Cut VI",
       "slug": "Rending_Cut_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rending_Cut_VI",
       "description": "Deal 50% Weapon Ratio Damage plus 60 Bleed Damage every 6 seconds for 22 seconds. In Warden Stance, refreshes Barbed Shot on its target. Shares a cooldown with other swordplay and marksmanship abilities. Stacks up to two times.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -5879,41 +5674,28 @@
         }
       ],
       "valuesSummary": "50% weapon dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Speed of the Pack",
       "slug": "Speed_of_the_Pack",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
-      "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
-      "category": "",
+      "description": "Increase party Movement Speed by 60% for 35 minutes. Outdoors only.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
-        "buff",
         "movement"
       ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Movement Speed",
-          "min": 40,
-          "max": 60,
-          "unit": "%",
-          "display": "+40–60%",
-          "sortKey": 60,
-          "statTag": "MS"
-        }
-      ],
-      "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "ability"
+      "primaryTag": "movement",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     }
   ]
 }

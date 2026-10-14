@@ -2,9 +2,9 @@
   "className": "Druid",
   "slug": "Druid",
   "type": "spell",
-  "sectionTitle": "Druid Spells",
+  "sectionTitle": "Seasonal Exclusive Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Druid",
-  "entryCount": 145,
+  "entryCount": 146,
   "levels": [
     1,
     4,
@@ -31,7 +31,7 @@
         "name": "Blast of Frost",
         "slug": "Blast_of_Frost",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Frost",
-        "description": "Expose your target to a blast of frost, dealing 5 (L1) up to 8 (L4) Cold Damage.",
+        "description": "Blast your target with frost, dealing 5 Cold Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -39,6 +39,7 @@
         "mana": 8,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -46,18 +47,14 @@
         "effects": [
           {
             "kind": "damage",
-            "min": 5,
-            "max": 8,
-            "minLevel": 1,
-            "maxLevel": 4,
+            "amount": 5,
             "damageType": "Cold",
-            "display": "5–8 Cold dmg (L1–L4)",
-            "sortKey": 8
+            "display": "5 Cold dmg",
+            "sortKey": 5
           }
         ],
-        "valuesSummary": "5–8 Cold dmg (L1–L4)",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "5 Cold dmg",
+        "statTags": []
       },
       {
         "name": "Invisibility versus Beasts",
@@ -71,6 +68,7 @@
         "mana": 20,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility"
@@ -78,8 +76,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Frostbite",
@@ -93,6 +90,7 @@
         "mana": 2,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -122,8 +120,7 @@
         "valuesSummary": "2 cold/6s (60s) · −1 armor class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Polar Alignment: North",
@@ -137,6 +134,7 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "utility",
           "self"
@@ -144,8 +142,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spark of Nature",
@@ -159,6 +156,7 @@
         "mana": 7,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -172,13 +170,12 @@
           }
         ],
         "valuesSummary": "8 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Union of Wood",
         "slug": "Union_of_Wood",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Wood?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Wood",
         "description": "Grant your party skin as hard as wood, increasing their Armor Class by 5 for 35 minutes. *Regent - Petrified Bark",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -187,6 +184,7 @@
         "mana": 40,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -206,8 +204,7 @@
         "valuesSummary": "+5 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Woodskin",
@@ -221,6 +218,7 @@
         "mana": 10,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -240,8 +238,7 @@
         "valuesSummary": "+5 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       }
     ],
     "4": [
@@ -249,7 +246,7 @@
         "name": "Camouflage",
         "slug": "Camouflage",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
-        "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+        "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 10 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -257,20 +254,20 @@
         "mana": 20,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cure Poison",
         "slug": "Cure_Poison",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-        "description": "Cure your target, removing one Poison effect.",
+        "description": "Cure your target, removing one poison effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -278,20 +275,20 @@
         "mana": 10,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -299,6 +296,7 @@
         "mana": 55,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "summon",
           "teleport"
@@ -306,8 +304,7 @@
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lull Minor Beasts",
@@ -321,6 +318,7 @@
         "mana": 10,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -328,14 +326,13 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "See Invisibility",
         "slug": "See_Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+        "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -343,6 +340,7 @@
         "mana": 20,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility",
@@ -351,8 +349,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Snare",
@@ -366,6 +363,7 @@
         "mana": 10,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow"
@@ -383,14 +381,13 @@
           }
         ],
         "valuesSummary": "−35%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -398,20 +395,20 @@
         "mana": 50,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Touch of Nature",
         "slug": "Touch_of_Nature",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Nature",
-        "description": "Renew the touch of nature upon your target, restoring 16 Health and an additional 8 Health every 6 seconds for 12 seconds.",
+        "description": "Renew the touch of nature upon your target, restoring 11 Health and an additional 8 Health every 6 seconds for 12 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -419,6 +416,7 @@
         "mana": 22,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "heal",
           "hot"
@@ -427,28 +425,27 @@
         "effects": [
           {
             "kind": "hot",
-            "initial": 16,
+            "initial": 11,
             "tick": 8,
             "interval": 6,
             "duration": 12,
-            "display": "16 + 8/6s heal (12s)",
-            "sortKey": 32
+            "display": "11 + 8/6s heal (12s)",
+            "sortKey": 27
           },
           {
             "kind": "heal",
-            "amount": 16,
-            "display": "16 heal",
-            "sortKey": 16
+            "amount": 11,
+            "display": "11 heal",
+            "sortKey": 11
           }
         ],
-        "valuesSummary": "16 + 8/6s heal (12s) · 16 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "11 + 8/6s heal (12s) · 11 heal",
+        "statTags": []
       },
       {
         "name": "Blast of Sleet",
         "slug": "Blast_of_Sleet",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Sleet?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Sleet",
         "description": "Blast your target with sleet, dealing 10 Cold Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -457,6 +454,7 @@
         "mana": 14,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -471,8 +469,7 @@
           }
         ],
         "valuesSummary": "10 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "8": [
@@ -488,14 +485,14 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Mantle of Summer",
@@ -509,6 +506,7 @@
         "mana": 50,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns",
@@ -550,8 +548,7 @@
         "valuesSummary": "1–8 thorns/hit (L1–L50) · +10–35 Armor Class (L1–L50) · +7%",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Mantle of Winter",
@@ -565,6 +562,7 @@
         "mana": 50,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns",
@@ -606,8 +604,7 @@
         "valuesSummary": "1–8 thorns/hit (L8–L50) · +10–35 Armor Class (L8–L50) · +7%",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Prickly Barrier",
@@ -621,6 +618,7 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -636,8 +634,7 @@
           }
         ],
         "valuesSummary": "5 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sense Magic",
@@ -651,6 +648,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "utility"
@@ -658,14 +656,13 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Speed of the Wild",
         "slug": "Speed_of_the_Wild",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
+        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -673,6 +670,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "movement"
@@ -683,21 +681,20 @@
             "kind": "buff",
             "stat": "Movement Speed",
             "min": 40,
-            "max": 60,
+            "max": 58,
             "unit": "%",
-            "display": "+40–60%",
-            "sortKey": 60,
+            "display": "+40–58%",
+            "sortKey": 58,
             "statTag": "MS"
           }
         ],
-        "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "+40–58%",
+        "statTags": []
       },
       {
         "name": "Summer's Warmth",
         "slug": "Summer's_Warmth",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Warmth",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Warmth",
         "description": "Bless your target with the warmth of summer, restoring 40 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -706,6 +703,7 @@
         "mana": 30,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -719,14 +717,13 @@
           }
         ],
         "valuesSummary": "40 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Drink",
         "slug": "Summon_Drink",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-        "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
+        "description": "Summon 1 (L8) to 4 (L13) flasks of water, providing you with sustenance.",
         "category": "con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -734,20 +731,20 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Food",
         "slug": "Summon_Food",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-        "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
+        "description": "Summon 1 (L8) to 4 (L13) slices of bread, providing you with sustenance.",
         "category": "con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -755,19 +752,19 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Swarm of Mites",
         "slug": "Swarm_of_Mites",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Mites?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Mites",
         "description": "SEngulf your target in a swarm of mites dealing 6 Poison Damage every 6 seconds for 1 minute.",
         "category": "con",
         "categorySlug": "Skill_Conjuration",
@@ -776,6 +773,7 @@
         "mana": 8,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -793,8 +791,7 @@
           }
         ],
         "valuesSummary": "6 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Twisting Roots",
@@ -808,6 +805,7 @@
         "mana": 15,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root"
@@ -822,13 +820,12 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Winter's Chill",
         "slug": "Winter's_Chill",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Chill",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Chill",
         "description": "Freeze your target with winter's chill, dealing 17 (L8) to 30 (L19) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -837,6 +834,7 @@
         "mana": 23,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -865,8 +863,7 @@
           }
         ],
         "valuesSummary": "17–30 Cold dmg (L8–L19) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "12": [
@@ -882,20 +879,20 @@
         "mana": 60,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Dispell magic from your target, removing one harmful effect.",
+        "description": "Dispel magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -903,20 +900,20 @@
         "mana": 25,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Enduring Breath",
         "slug": "Enduring_Breath",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-        "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
+        "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -924,6 +921,7 @@
         "mana": 30,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "utility"
@@ -931,8 +929,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fear Beasts",
@@ -946,6 +943,7 @@
         "mana": 20,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "fear"
@@ -953,8 +951,7 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Jackal Form",
@@ -968,6 +965,7 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "movement",
@@ -987,13 +985,12 @@
           }
         ],
         "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Frostbite",
         "slug": "Lesser_Frostbite",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Frostbite?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Frostbite",
         "description": "Expose your target to frostbite, dealing 5 Cold Damage every 6 seconds and decreasing their Armor Class by 6 for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1002,6 +999,7 @@
         "mana": 0,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -1031,13 +1029,12 @@
         "valuesSummary": "5 Cold/6s (60s) · −6 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Mantle of Autumn",
         "slug": "Mantle_of_Autumn",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Autumn?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Autumn",
         "description": "Wrap yourself in a mantle of autumn, reducing the Mana cost of your Alteration spells by 7%, increasing your Armor Class by 10 (L8) to 35 (L56), and granting you a Damage Shield that deals 1 (L8) to 8 (L56) damage when hit and the ability to see magical effects when considering targets for 1 hour. Additionally, this spell sets your current season to Autumn.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1046,6 +1043,7 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns",
@@ -1088,13 +1086,12 @@
         "valuesSummary": "1–8 thorns/hit (L8–L56) · +10–35 Armor Class (L8–L56) · +7%",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Mantle of Spring",
         "slug": "Mantle_of_Spring",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Spring?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Spring",
         "description": "Wrap yourself in a mantle of spring, reducing the Mana cost of your Evocation spells by 7%, increasing your Armor Class by 10 (L8) to 35 (L56), and granting you a Damage Shield that deals 1 (L8) to 8 (L56) damage when hit and the ability to see magical effects when considering targets for 1 hour. Additionally, this spell sets your current season to Spring.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1103,6 +1100,7 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns",
@@ -1145,8 +1143,7 @@
         "valuesSummary": "1–8 thorns/hit (L8–L56) · +10–35 Armor Class (L8–L56) · +7%",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Minor Regeneration",
@@ -1160,6 +1157,7 @@
         "mana": 25,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -1178,14 +1176,13 @@
         "valuesSummary": "+2 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Minor Communion of Regeneration",
         "slug": "Minor_Communion_of_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
-        "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
+        "description": "Gently regenerate your perty, increasing their Health Regeneration by 2 for 20 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1193,6 +1190,7 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -1211,8 +1209,7 @@
         "valuesSummary": "+2 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Spark of Earth",
@@ -1226,6 +1223,7 @@
         "mana": 21,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1239,8 +1237,7 @@
           }
         ],
         "valuesSummary": "25 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Wolf Form",
@@ -1254,6 +1251,7 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "movement",
@@ -1273,8 +1271,7 @@
           }
         ],
         "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "16": [
@@ -1290,6 +1287,7 @@
         "mana": 45,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1304,8 +1302,7 @@
           }
         ],
         "valuesSummary": "47 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Element Splinter",
@@ -1319,6 +1316,7 @@
         "mana": 25,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "debuff",
           "FR"
@@ -1350,14 +1348,13 @@
         "valuesSummary": "−3–4 Cold and Fire Resistance (L12–L16) · +3–4 Fire Resistance (L12–L16)",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Fire Protection",
         "slug": "Fire_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-        "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1365,6 +1362,7 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "FR"
@@ -1383,13 +1381,12 @@
         "valuesSummary": "+5 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Nature's Calm",
         "slug": "Nature's_Calm",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Calm",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Calm",
         "description": "Calm your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 30.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1398,20 +1395,20 @@
         "mana": 55,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Preservation",
         "slug": "Preservation",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
-        "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 27.",
+        "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1419,14 +1416,14 @@
         "mana": 150,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
         "primaryTag": "resurrection",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Ring of Evershade Weald",
@@ -1440,6 +1437,7 @@
         "mana": 125,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1447,8 +1445,7 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Ring of Sungreet Strand",
@@ -1462,6 +1459,7 @@
         "mana": 125,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1469,8 +1467,7 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Snaring Vines",
@@ -1484,6 +1481,7 @@
         "mana": 15,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow",
@@ -1502,8 +1500,7 @@
           }
         ],
         "valuesSummary": "−30%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Stoneskin",
@@ -1517,6 +1514,7 @@
         "mana": 30,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -1536,13 +1534,12 @@
         "valuesSummary": "+10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Cureberries",
         "slug": "Summon_Cureberries",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Cureberries?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Cureberries",
         "description": "Summon a handful of cureberries, removing one Disease and one Poison effect when consumed. This item can be traded to other players. This item does not persist after logging out.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -1551,6 +1548,7 @@
         "mana": 12,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "dispel",
           "summon"
@@ -1558,8 +1556,7 @@
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Swarm of Gnats",
@@ -1573,6 +1570,7 @@
         "mana": 12,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -1590,8 +1588,7 @@
           }
         ],
         "valuesSummary": "15 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Touch of Earth",
@@ -1605,6 +1602,7 @@
         "mana": 75,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "heal",
           "hot",
@@ -1629,21 +1627,21 @@
           }
         ],
         "valuesSummary": "60 + 30/6s heal (12s) · 60 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Union of Stone",
         "slug": "Union_of_Stone",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Stone?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Stone",
         "description": "Grants your party skin as hard as stone, increasing their Armor Class by 10 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -1663,8 +1661,7 @@
         "valuesSummary": "+10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       }
     ],
     "20": [
@@ -1680,6 +1677,7 @@
         "mana": 50,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -1695,8 +1693,7 @@
           }
         ],
         "valuesSummary": "10 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exodus",
@@ -1710,14 +1707,14 @@
         "mana": 70,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "self"
         ],
         "primaryTag": "self",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Camouflage",
@@ -1731,14 +1728,14 @@
         "mana": 40,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Gust of Wind",
@@ -1752,6 +1749,7 @@
         "mana": 66,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -1767,8 +1765,7 @@
           }
         ],
         "valuesSummary": "27 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lull Lesser Beasts",
@@ -1782,6 +1779,7 @@
         "mana": 40,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -1789,8 +1787,7 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Lightning Strike",
@@ -1804,6 +1801,7 @@
         "mana": 138,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -1811,8 +1809,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prowl of the Wolves",
@@ -1826,6 +1823,7 @@
         "mana": 0,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "movement"
@@ -1844,8 +1842,7 @@
           }
         ],
         "valuesSummary": "+75%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Searing Sun",
@@ -1859,6 +1856,7 @@
         "mana": 0,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1873,13 +1871,12 @@
           }
         ],
         "valuesSummary": "44 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summer's Embrace",
         "slug": "Summer's_Embrace",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Embrace",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Embrace",
         "description": "Bless your target with the embrace of summer, restoring 160 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1888,6 +1885,7 @@
         "mana": 104,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1901,13 +1899,12 @@
           }
         ],
         "valuesSummary": "160 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Winter's Bite",
         "slug": "Winter's_Bite",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Bite",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Bite",
         "description": "Freeze your target with winter's bite, dealing 140 (L20) to 200 (L31) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1916,6 +1913,7 @@
         "mana": 132,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1944,8 +1942,7 @@
           }
         ],
         "valuesSummary": "140–200 Cold dmg (L20–L31) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "24": [
@@ -1961,14 +1958,14 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Evershade Weald",
@@ -1979,17 +1976,17 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 300,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Sungreet Strand",
@@ -2000,17 +1997,17 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 300,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cold Protection",
@@ -2024,6 +2021,7 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "CR"
@@ -2042,8 +2040,7 @@
         "valuesSummary": "+4 Cold Resistance",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Ensnare",
@@ -2054,9 +2051,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 40,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow"
@@ -2074,8 +2072,7 @@
           }
         ],
         "valuesSummary": "−50%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Flaming Embers",
@@ -2089,6 +2086,7 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -2118,8 +2116,7 @@
         "valuesSummary": "15 Fire/6s (60s) · −13 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Heal",
@@ -2133,6 +2130,7 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2146,8 +2144,7 @@
           }
         ],
         "valuesSummary": "278 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Regeneration",
@@ -2161,6 +2158,7 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -2179,8 +2177,7 @@
         "valuesSummary": "+5 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Speed of the Predator",
@@ -2194,6 +2191,7 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "movement",
@@ -2213,8 +2211,7 @@
           }
         ],
         "valuesSummary": "+100%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Ring of Caves of Irem",
@@ -2228,6 +2225,7 @@
         "mana": 125,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -2235,8 +2233,7 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "28": [
@@ -2252,6 +2249,7 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -2267,8 +2265,7 @@
           }
         ],
         "valuesSummary": "15 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Deextinction",
@@ -2282,14 +2279,14 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
         "primaryTag": "resurrection",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Lightning Strike",
@@ -2303,6 +2300,7 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -2310,13 +2308,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Nature's Lull",
         "slug": "Nature's_Lull",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Lull",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
         "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2325,14 +2322,14 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Poison Protection",
@@ -2346,6 +2343,7 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff",
           "PR"
@@ -2364,8 +2362,7 @@
         "valuesSummary": "+5 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Swarm of Flies",
@@ -2379,6 +2376,7 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -2396,8 +2394,7 @@
           }
         ],
         "valuesSummary": "21 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Touch of Life",
@@ -2411,6 +2408,7 @@
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal",
           "hot",
@@ -2435,8 +2433,7 @@
           }
         ],
         "valuesSummary": "191 + 115/6s heal (12s) · 191 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "32": [
@@ -2452,6 +2449,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "debuff",
           "FR"
@@ -2483,8 +2481,7 @@
         "valuesSummary": "−5–6 Cold and Fire Resistance (L31–L38) · +5–6 Fire Resistance (L31–L38)",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Encircling Roots",
@@ -2498,6 +2495,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root",
@@ -2513,8 +2511,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fire Resistance",
@@ -2528,6 +2525,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "FR"
@@ -2546,8 +2544,7 @@
         "valuesSummary": "+15 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Gust of Wind",
@@ -2561,6 +2558,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -2576,8 +2574,7 @@
           }
         ],
         "valuesSummary": "85 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pack Speed",
@@ -2591,6 +2588,7 @@
         "mana": 125,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "movement"
@@ -2609,8 +2607,7 @@
           }
         ],
         "valuesSummary": "+40–58%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Scorching Sun",
@@ -2624,6 +2621,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2638,8 +2636,7 @@
           }
         ],
         "valuesSummary": "141 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Steelskin",
@@ -2653,6 +2650,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -2672,13 +2670,12 @@
         "valuesSummary": "+15 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summer's Bounty",
         "slug": "Summer's_Bounty",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Bounty",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Bounty",
         "description": "Bless your target with the bounty of summer, restoring 410 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2687,6 +2684,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2700,13 +2698,12 @@
           }
         ],
         "valuesSummary": "410 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Winter's Fury",
         "slug": "Winter's_Fury",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Fury",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Fury",
         "description": "Freeze your target with winter's fury, dealing 141 (L1.52) to 200 (L1.63) Cold Damage and decreasing their Movement Speed by 15% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2715,6 +2712,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2733,8 +2731,7 @@
           }
         ],
         "valuesSummary": "−15%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Wolf Pack",
@@ -2748,6 +2745,7 @@
         "mana": 100,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "movement"
@@ -2766,8 +2764,7 @@
           }
         ],
         "valuesSummary": "+40–60%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Caves of Irem",
@@ -2781,14 +2778,14 @@
         "mana": 300,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "36": [
@@ -2804,6 +2801,7 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -2833,8 +2831,7 @@
         "valuesSummary": "30 Fire/6s (60s) · −19 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Cleanse Poison",
@@ -2848,41 +2845,41 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Coax Beasts",
         "slug": "Coax_Beasts",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Coax_Beasts",
-        "description": "Charm a target beast, forcing them to fight alongside you for 5 (L1) to 30 (L60) minutes. This spell has a very strong chance to end early.",
+        "description": "Charm a target beast, forcing them to fight alongside you for 5 (L1) to 20 (L60) minutes. This spell has a very strong chance to end early. Max target 47.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 175,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cold Resistance",
         "slug": "Cold_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
-        "description": "Greatly ward your target from frost, increasing their Cold Resistance by 15 for 35 minutes.",
+        "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2890,6 +2887,7 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "CR"
@@ -2908,8 +2906,7 @@
         "valuesSummary": "+15 Cold Resistance",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Heal",
@@ -2923,6 +2920,7 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2936,8 +2934,7 @@
           }
         ],
         "valuesSummary": "473 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lightning Strike",
@@ -2951,6 +2948,7 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -2958,8 +2956,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lull Beasts",
@@ -2973,27 +2970,56 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
-        "name": "Regeneration",
-        "slug": "Regeneration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
-        "description": "Moderately regenerate your target, increasing their Health Regeneration by 7 for 48 minutes.",
+        "name": "Spark of Harmony",
+        "slug": "Spark_of_Harmony",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
+        "description": "Gift your target a spark of harmony, restoring 181 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 127,
         "castTime": null,
         "level": 36,
+        "type": "spell",
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 181,
+            "display": "181 heal",
+            "sortKey": 181
+          }
+        ],
+        "valuesSummary": "181 heal",
+        "statTags": []
+      },
+      {
+        "name": "Communion of Regeneration",
+        "slug": "Communion_of_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
+        "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 250,
+        "castTime": null,
+        "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -3012,8 +3038,7 @@
         "valuesSummary": "+7 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Sanctuary: Evershade Weald",
@@ -3027,12 +3052,12 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sanctuary: Sungreet Strand",
@@ -3046,12 +3071,12 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spiky Barrier",
@@ -3065,6 +3090,7 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -3080,8 +3106,7 @@
           }
         ],
         "valuesSummary": "20 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "40": [
@@ -3097,14 +3122,14 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cleanse Disease",
@@ -3118,14 +3143,14 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Grip of Nature",
@@ -3139,6 +3164,7 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root"
@@ -3146,13 +3172,12 @@
         "primaryTag": "root",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Nature's Peace",
         "slug": "Nature's_Peace",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Peace",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
         "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3161,6 +3186,7 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -3168,8 +3194,7 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Species Revitalism",
@@ -3183,14 +3208,14 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
         "primaryTag": "resurrection",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Swarm of Bees",
@@ -3204,6 +3229,7 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -3221,8 +3247,7 @@
           }
         ],
         "valuesSummary": "54 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Touch of Harmony",
@@ -3236,6 +3261,7 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "heal",
           "hot",
@@ -3260,8 +3286,7 @@
           }
         ],
         "valuesSummary": "243 + 100/6s heal (12s) · 243 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "44": [
@@ -3277,6 +3302,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3291,8 +3317,7 @@
           }
         ],
         "valuesSummary": "259 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Diamondskin",
@@ -3306,6 +3331,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -3325,8 +3351,7 @@
         "valuesSummary": "+20 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Gust of Wind",
@@ -3340,6 +3365,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -3355,8 +3381,7 @@
           }
         ],
         "valuesSummary": "170 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Lightning Strike",
@@ -3370,6 +3395,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -3377,8 +3403,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Poison Resistance",
@@ -3392,6 +3417,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "PR"
@@ -3410,13 +3436,12 @@
         "valuesSummary": "+15 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summer's Grace",
         "slug": "Summer's_Grace",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Grace",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Grace",
         "description": "Bless your target with the grace of summer, restoring 750 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3425,6 +3450,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3438,8 +3464,7 @@
           }
         ],
         "valuesSummary": "750 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Thorny Barrier",
@@ -3453,6 +3478,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -3468,13 +3494,12 @@
           }
         ],
         "valuesSummary": "25 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Winter's Wrath",
         "slug": "Winter's_Wrath",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Wrath",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Wrath",
         "description": "Freeze your target with winter's wrath, dealing 298 (L1.44) to 340 (L1.5) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3483,6 +3508,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3501,8 +3527,7 @@
           }
         ],
         "valuesSummary": "−25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "48": [
@@ -3518,6 +3543,7 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "debuff",
           "FR"
@@ -3549,8 +3575,7 @@
         "valuesSummary": "−7–8 Cold and Fire Resistance (L40–L44) · +7–8 Fire Resistance (L40–L44)",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Ensnaring Vines",
@@ -3564,6 +3589,7 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow",
@@ -3582,8 +3608,7 @@
           }
         ],
         "valuesSummary": "−75%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Regeneration",
@@ -3597,6 +3622,7 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -3615,8 +3641,7 @@
         "valuesSummary": "+11 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Persuade Beasts",
@@ -3630,14 +3655,14 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Smoldering Embers",
@@ -3651,6 +3676,7 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -3680,8 +3706,7 @@
         "valuesSummary": "30 Fire/6s (60s) · −15 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Superior Heal",
@@ -3695,6 +3720,7 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3708,8 +3734,7 @@
           }
         ],
         "valuesSummary": "850 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "50": [
@@ -3725,6 +3750,7 @@
         "mana": 0,
         "castTime": null,
         "level": 50,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -3732,15 +3758,14 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "52": [
       {
         "name": "Blast of Winter",
         "slug": "Blast_of_Winter",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Winter?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Winter",
         "description": "Blast your target with snow, dealing 313 Cold Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3749,6 +3774,7 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3763,8 +3789,7 @@
           }
         ],
         "valuesSummary": "313 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Lightning Strike",
@@ -3778,6 +3803,7 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -3785,13 +3811,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Nature's Serenity",
         "slug": "Nature's_Serenity",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Serenity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Serenity",
         "description": "Serenade your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 65.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3800,20 +3825,20 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Renewal of the Wild",
         "slug": "Renewal_of_the_Wild",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Renewal_of_the_Wild",
-        "description": "Renew a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 60.",
+        "description": "Resurrect a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3821,14 +3846,14 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
         "primaryTag": "resurrection",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Swarm of Hornets",
@@ -3842,6 +3867,7 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -3859,8 +3885,7 @@
           }
         ],
         "valuesSummary": "55 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Touch of Creation",
@@ -3874,6 +3899,7 @@
         "mana": 0,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "heal",
           "hot",
@@ -3889,13 +3915,12 @@
           }
         ],
         "valuesSummary": "513 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Portal to Caves of Irem",
         "slug": "Portal_to_Caves_of_Irem",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Caves_of_Irem?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Caves_of_Irem",
         "description": "Opens a portal to Caves of Irem. Anyone can go through this portal.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3904,19 +3929,19 @@
         "mana": "?",
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "portal"
         ],
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Portal to Evershade Weald",
         "slug": "Portal_to_Evershade_Weald",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Evershade_Weald?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Evershade_Weald",
         "description": "Opens a portal to Evershade Weald. Anyone can go through this portal.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3925,19 +3950,19 @@
         "mana": "?",
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "portal"
         ],
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Portal to Sungreet Strand",
         "slug": "Portal_to_Sungreet_Strand",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Sungreet_Strand?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Sungreet_Strand",
         "description": "Opens a portal to Sungreet Strand. Anyone can go through this portal.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3946,14 +3971,14 @@
         "mana": "?",
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "portal"
         ],
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "55": [
@@ -3969,12 +3994,12 @@
         "mana": 0,
         "castTime": null,
         "level": 55,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "56": [
@@ -3990,6 +4015,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -4008,8 +4034,7 @@
           }
         ],
         "valuesSummary": "−25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Jagged Barrier",
@@ -4023,6 +4048,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "buff",
           "thorns"
@@ -4038,8 +4064,7 @@
           }
         ],
         "valuesSummary": "30 thorns/hit",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Natureskin",
@@ -4053,6 +4078,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -4082,8 +4108,7 @@
         "statTags": [
           "AC",
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summer Solstice",
@@ -4097,6 +4122,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -4110,8 +4136,7 @@
           }
         ],
         "valuesSummary": "1100 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Windblast",
@@ -4125,6 +4150,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -4140,15 +4166,14 @@
           }
         ],
         "valuesSummary": "581 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "60": [
       {
         "name": "Blizzard",
         "slug": "Blizzard",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blizzard?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blizzard",
         "description": "Engulf your target in a blizzard, dealing 394 Cold Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -4157,6 +4182,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -4171,8 +4197,7 @@
           }
         ],
         "valuesSummary": "394 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Crash of Lightning",
@@ -4186,6 +4211,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage",
           "aoe"
@@ -4193,14 +4219,13 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Element Shatter",
         "slug": "Element_Shatter",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Element_Shatter",
-        "description": "Shatters your target's resistance to the elements, decreasing their Cold, Electricity, Fire and Magic Resistance by 10. This spell is unresistable if the target is not immune to magic or it can otherwise be landed normally.",
+        "description": "Shatter the elemental defenses of your target, decreasing their Cold and Fire Resistance by 30 for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4208,54 +4233,22 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
-          "debuff",
-          "MR"
+          "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [
           {
             "kind": "debuff",
-            "stat": "Cold",
-            "amount": 10,
-            "display": "−10 Cold",
-            "sortKey": 10
-          },
-          {
-            "kind": "debuff",
-            "stat": "Electricity",
-            "amount": 10,
-            "display": "−10 Electricity",
-            "sortKey": 10
-          },
-          {
-            "kind": "debuff",
-            "stat": "Fire",
-            "amount": 10,
-            "display": "−10 Fire",
-            "sortKey": 10
-          },
-          {
-            "kind": "debuff",
-            "stat": "Magic Resistance",
-            "amount": 10,
-            "display": "−10 Magic Resistance",
-            "sortKey": 10,
-            "statTag": "MR"
-          },
-          {
-            "kind": "debuff",
-            "stat": "Fire and Magic Resistance",
-            "amount": 10,
-            "display": "−10 Fire and Magic Resistance",
-            "sortKey": 10
+            "stat": "Cold and Fire Resistance",
+            "amount": 30,
+            "display": "−30 Cold and Fire Resistance",
+            "sortKey": 30
           }
         ],
-        "valuesSummary": "−10 Cold/Electricity/Fire/MR/Fire and Magic Resistance",
-        "statTags": [
-          "MR"
-        ],
-        "type": "spell"
+        "valuesSummary": "−30 Cold and Fire Resistance",
+        "statTags": []
       },
       {
         "name": "Exceptional Regeneration",
@@ -4269,6 +4262,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff",
           "HP REGEN"
@@ -4287,13 +4281,12 @@
         "valuesSummary": "+14 Health Regeneration",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Shattering Frostbite",
         "slug": "Shattering_Frostbite",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shattering_Frostbite?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shattering_Frostbite",
         "description": "Expose your target to frostbite, dealing 45 Cold Damage every 6 seconds and decreasing their Armor Class by 26 for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -4302,6 +4295,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -4331,8 +4325,7 @@
         "valuesSummary": "45 Cold/6s (60s) · −26 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Swarm of Wrath",
@@ -4346,6 +4339,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -4363,8 +4357,7 @@
           }
         ],
         "valuesSummary": "100 Poison/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ]
   },
@@ -4373,7 +4366,7 @@
       "name": "Blast of Frost",
       "slug": "Blast_of_Frost",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Frost",
-      "description": "Expose your target to a blast of frost, dealing 5 (L1) up to 8 (L4) Cold Damage.",
+      "description": "Blast your target with frost, dealing 5 Cold Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -4381,6 +4374,7 @@
       "mana": 8,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4388,18 +4382,14 @@
       "effects": [
         {
           "kind": "damage",
-          "min": 5,
-          "max": 8,
-          "minLevel": 1,
-          "maxLevel": 4,
+          "amount": 5,
           "damageType": "Cold",
-          "display": "5–8 Cold dmg (L1–L4)",
-          "sortKey": 8
+          "display": "5 Cold dmg",
+          "sortKey": 5
         }
       ],
-      "valuesSummary": "5–8 Cold dmg (L1–L4)",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "5 Cold dmg",
+      "statTags": []
     },
     {
       "name": "Invisibility versus Beasts",
@@ -4413,6 +4403,7 @@
       "mana": 20,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility"
@@ -4420,8 +4411,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Frostbite",
@@ -4435,6 +4425,7 @@
       "mana": 2,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -4464,8 +4455,7 @@
       "valuesSummary": "2 cold/6s (60s) · −1 armor class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Polar Alignment: North",
@@ -4479,6 +4469,7 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "utility",
         "self"
@@ -4486,8 +4477,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spark of Nature",
@@ -4501,6 +4491,7 @@
       "mana": 7,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4514,13 +4505,12 @@
         }
       ],
       "valuesSummary": "8 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Union of Wood",
       "slug": "Union_of_Wood",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Wood?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Wood",
       "description": "Grant your party skin as hard as wood, increasing their Armor Class by 5 for 35 minutes. *Regent - Petrified Bark",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -4529,6 +4519,7 @@
       "mana": 40,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -4548,8 +4539,7 @@
       "valuesSummary": "+5 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Woodskin",
@@ -4563,6 +4553,7 @@
       "mana": 10,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -4582,14 +4573,13 @@
       "valuesSummary": "+5 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Camouflage",
       "slug": "Camouflage",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Camouflage",
-      "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 19 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
+      "description": "Camouflages a target group member in nature's shroud, rendering them unseen by the living for 10 minutes. This spell can only be used outdoors. This spell has a strong chance to end early.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4597,20 +4587,20 @@
       "mana": 20,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cure Poison",
       "slug": "Cure_Poison",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-      "description": "Cure your target, removing one Poison effect.",
+      "description": "Cure your target, removing one poison effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4618,20 +4608,20 @@
       "mana": 10,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4639,6 +4629,7 @@
       "mana": 55,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "summon",
         "teleport"
@@ -4646,8 +4637,7 @@
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lull Minor Beasts",
@@ -4661,6 +4651,7 @@
       "mana": 10,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -4668,14 +4659,13 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "See Invisibility",
       "slug": "See_Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+      "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4683,6 +4673,7 @@
       "mana": 20,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility",
@@ -4691,8 +4682,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Snare",
@@ -4706,6 +4696,7 @@
       "mana": 10,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow"
@@ -4723,14 +4714,13 @@
         }
       ],
       "valuesSummary": "−35%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4738,20 +4728,20 @@
       "mana": 50,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Touch of Nature",
       "slug": "Touch_of_Nature",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Nature",
-      "description": "Renew the touch of nature upon your target, restoring 16 Health and an additional 8 Health every 6 seconds for 12 seconds.",
+      "description": "Renew the touch of nature upon your target, restoring 11 Health and an additional 8 Health every 6 seconds for 12 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4759,6 +4749,7 @@
       "mana": 22,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "heal",
         "hot"
@@ -4767,28 +4758,27 @@
       "effects": [
         {
           "kind": "hot",
-          "initial": 16,
+          "initial": 11,
           "tick": 8,
           "interval": 6,
           "duration": 12,
-          "display": "16 + 8/6s heal (12s)",
-          "sortKey": 32
+          "display": "11 + 8/6s heal (12s)",
+          "sortKey": 27
         },
         {
           "kind": "heal",
-          "amount": 16,
-          "display": "16 heal",
-          "sortKey": 16
+          "amount": 11,
+          "display": "11 heal",
+          "sortKey": 11
         }
       ],
-      "valuesSummary": "16 + 8/6s heal (12s) · 16 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "11 + 8/6s heal (12s) · 11 heal",
+      "statTags": []
     },
     {
       "name": "Blast of Sleet",
       "slug": "Blast_of_Sleet",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Sleet?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Sleet",
       "description": "Blast your target with sleet, dealing 10 Cold Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4797,6 +4787,7 @@
       "mana": 14,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4811,8 +4802,7 @@
         }
       ],
       "valuesSummary": "10 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cure Disease",
@@ -4826,14 +4816,14 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Mantle of Summer",
@@ -4847,6 +4837,7 @@
       "mana": 50,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns",
@@ -4888,8 +4879,7 @@
       "valuesSummary": "1–8 thorns/hit (L1–L50) · +10–35 Armor Class (L1–L50) · +7%",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Mantle of Winter",
@@ -4903,6 +4893,7 @@
       "mana": 50,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns",
@@ -4944,8 +4935,7 @@
       "valuesSummary": "1–8 thorns/hit (L8–L50) · +10–35 Armor Class (L8–L50) · +7%",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Prickly Barrier",
@@ -4959,6 +4949,7 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -4974,8 +4965,7 @@
         }
       ],
       "valuesSummary": "5 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sense Magic",
@@ -4989,6 +4979,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "utility"
@@ -4996,14 +4987,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Speed of the Wild",
       "slug": "Speed_of_the_Wild",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
+      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5011,6 +5001,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "movement"
@@ -5021,21 +5012,20 @@
           "kind": "buff",
           "stat": "Movement Speed",
           "min": 40,
-          "max": 60,
+          "max": 58,
           "unit": "%",
-          "display": "+40–60%",
-          "sortKey": 60,
+          "display": "+40–58%",
+          "sortKey": 58,
           "statTag": "MS"
         }
       ],
-      "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "+40–58%",
+      "statTags": []
     },
     {
       "name": "Summer's Warmth",
       "slug": "Summer's_Warmth",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Warmth",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Warmth",
       "description": "Bless your target with the warmth of summer, restoring 40 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5044,6 +5034,7 @@
       "mana": 30,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5057,14 +5048,13 @@
         }
       ],
       "valuesSummary": "40 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Drink",
       "slug": "Summon_Drink",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-      "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
+      "description": "Summon 1 (L8) to 4 (L13) flasks of water, providing you with sustenance.",
       "category": "con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -5072,20 +5062,20 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Food",
       "slug": "Summon_Food",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-      "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
+      "description": "Summon 1 (L8) to 4 (L13) slices of bread, providing you with sustenance.",
       "category": "con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -5093,19 +5083,19 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Swarm of Mites",
       "slug": "Swarm_of_Mites",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Mites?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Mites",
       "description": "SEngulf your target in a swarm of mites dealing 6 Poison Damage every 6 seconds for 1 minute.",
       "category": "con",
       "categorySlug": "Skill_Conjuration",
@@ -5114,6 +5104,7 @@
       "mana": 8,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -5131,8 +5122,7 @@
         }
       ],
       "valuesSummary": "6 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Twisting Roots",
@@ -5146,6 +5136,7 @@
       "mana": 15,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root"
@@ -5160,13 +5151,12 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Winter's Chill",
       "slug": "Winter's_Chill",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Chill",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Chill",
       "description": "Freeze your target with winter's chill, dealing 17 (L8) to 30 (L19) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5175,6 +5165,7 @@
       "mana": 23,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5203,8 +5194,7 @@
         }
       ],
       "valuesSummary": "17–30 Cold dmg (L8–L19) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Charm Beasts",
@@ -5218,20 +5208,20 @@
       "mana": 60,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Dispell magic from your target, removing one harmful effect.",
+      "description": "Dispel magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5239,20 +5229,20 @@
       "mana": 25,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Enduring Breath",
       "slug": "Enduring_Breath",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-      "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
+      "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5260,6 +5250,7 @@
       "mana": 30,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "utility"
@@ -5267,8 +5258,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fear Beasts",
@@ -5282,6 +5272,7 @@
       "mana": 20,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "fear"
@@ -5289,8 +5280,7 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Jackal Form",
@@ -5304,6 +5294,7 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "movement",
@@ -5323,13 +5314,12 @@
         }
       ],
       "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Frostbite",
       "slug": "Lesser_Frostbite",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Frostbite?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Frostbite",
       "description": "Expose your target to frostbite, dealing 5 Cold Damage every 6 seconds and decreasing their Armor Class by 6 for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5338,6 +5328,7 @@
       "mana": 0,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -5367,13 +5358,12 @@
       "valuesSummary": "5 Cold/6s (60s) · −6 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Mantle of Autumn",
       "slug": "Mantle_of_Autumn",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Autumn?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Autumn",
       "description": "Wrap yourself in a mantle of autumn, reducing the Mana cost of your Alteration spells by 7%, increasing your Armor Class by 10 (L8) to 35 (L56), and granting you a Damage Shield that deals 1 (L8) to 8 (L56) damage when hit and the ability to see magical effects when considering targets for 1 hour. Additionally, this spell sets your current season to Autumn.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5382,6 +5372,7 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns",
@@ -5424,13 +5415,12 @@
       "valuesSummary": "1–8 thorns/hit (L8–L56) · +10–35 Armor Class (L8–L56) · +7%",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Mantle of Spring",
       "slug": "Mantle_of_Spring",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Spring?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mantle_of_Spring",
       "description": "Wrap yourself in a mantle of spring, reducing the Mana cost of your Evocation spells by 7%, increasing your Armor Class by 10 (L8) to 35 (L56), and granting you a Damage Shield that deals 1 (L8) to 8 (L56) damage when hit and the ability to see magical effects when considering targets for 1 hour. Additionally, this spell sets your current season to Spring.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5439,6 +5429,7 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns",
@@ -5481,8 +5472,7 @@
       "valuesSummary": "1–8 thorns/hit (L8–L56) · +10–35 Armor Class (L8–L56) · +7%",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Minor Regeneration",
@@ -5496,6 +5486,7 @@
       "mana": 25,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -5514,14 +5505,13 @@
       "valuesSummary": "+2 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Minor Communion of Regeneration",
       "slug": "Minor_Communion_of_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
-      "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
+      "description": "Gently regenerate your perty, increasing their Health Regeneration by 2 for 20 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5529,6 +5519,7 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -5547,8 +5538,7 @@
       "valuesSummary": "+2 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Spark of Earth",
@@ -5562,6 +5552,7 @@
       "mana": 21,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5575,8 +5566,7 @@
         }
       ],
       "valuesSummary": "25 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Wolf Form",
@@ -5590,6 +5580,7 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "movement",
@@ -5609,8 +5600,7 @@
         }
       ],
       "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blast of Hail",
@@ -5624,6 +5614,7 @@
       "mana": 45,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5638,8 +5629,7 @@
         }
       ],
       "valuesSummary": "47 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Element Splinter",
@@ -5653,6 +5643,7 @@
       "mana": 25,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "debuff",
         "FR"
@@ -5684,14 +5675,13 @@
       "valuesSummary": "−3–4 Cold and Fire Resistance (L12–L16) · +3–4 Fire Resistance (L12–L16)",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Fire Protection",
       "slug": "Fire_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-      "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5699,6 +5689,7 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "FR"
@@ -5717,13 +5708,12 @@
       "valuesSummary": "+5 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Nature's Calm",
       "slug": "Nature's_Calm",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Calm",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Calm",
       "description": "Calm your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 30.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5732,20 +5722,20 @@
       "mana": 55,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Preservation",
       "slug": "Preservation",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
-      "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 27.",
+      "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5753,14 +5743,14 @@
       "mana": 150,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
       "primaryTag": "resurrection",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Ring of Evershade Weald",
@@ -5774,6 +5764,7 @@
       "mana": 125,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5781,8 +5772,7 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Ring of Sungreet Strand",
@@ -5796,6 +5786,7 @@
       "mana": 125,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5803,8 +5794,7 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Snaring Vines",
@@ -5818,6 +5808,7 @@
       "mana": 15,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow",
@@ -5836,8 +5827,7 @@
         }
       ],
       "valuesSummary": "−30%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Stoneskin",
@@ -5851,6 +5841,7 @@
       "mana": 30,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -5870,13 +5861,12 @@
       "valuesSummary": "+10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Cureberries",
       "slug": "Summon_Cureberries",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Cureberries?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Cureberries",
       "description": "Summon a handful of cureberries, removing one Disease and one Poison effect when consumed. This item can be traded to other players. This item does not persist after logging out.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -5885,6 +5875,7 @@
       "mana": 12,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "dispel",
         "summon"
@@ -5892,8 +5883,7 @@
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Swarm of Gnats",
@@ -5907,6 +5897,7 @@
       "mana": 12,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -5924,8 +5915,7 @@
         }
       ],
       "valuesSummary": "15 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Touch of Earth",
@@ -5939,6 +5929,7 @@
       "mana": 75,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "heal",
         "hot",
@@ -5963,21 +5954,21 @@
         }
       ],
       "valuesSummary": "60 + 30/6s heal (12s) · 60 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Union of Stone",
       "slug": "Union_of_Stone",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Stone?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Stone",
       "description": "Grants your party skin as hard as stone, increasing their Armor Class by 10 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -5997,8 +5988,7 @@
       "valuesSummary": "+10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Bristly Barrier",
@@ -6012,6 +6002,7 @@
       "mana": 50,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -6027,8 +6018,7 @@
         }
       ],
       "valuesSummary": "10 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exodus",
@@ -6042,14 +6032,14 @@
       "mana": 70,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "self"
       ],
       "primaryTag": "self",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Camouflage",
@@ -6063,14 +6053,14 @@
       "mana": 40,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Gust of Wind",
@@ -6084,6 +6074,7 @@
       "mana": 66,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -6099,8 +6090,7 @@
         }
       ],
       "valuesSummary": "27 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lull Lesser Beasts",
@@ -6114,6 +6104,7 @@
       "mana": 40,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -6121,8 +6112,7 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Lightning Strike",
@@ -6136,6 +6126,7 @@
       "mana": 138,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -6143,8 +6134,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prowl of the Wolves",
@@ -6158,6 +6148,7 @@
       "mana": 0,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "movement"
@@ -6176,8 +6167,7 @@
         }
       ],
       "valuesSummary": "+75%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Searing Sun",
@@ -6191,6 +6181,7 @@
       "mana": 0,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6205,13 +6196,12 @@
         }
       ],
       "valuesSummary": "44 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summer's Embrace",
       "slug": "Summer's_Embrace",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Embrace",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Embrace",
       "description": "Bless your target with the embrace of summer, restoring 160 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6220,6 +6210,7 @@
       "mana": 104,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6233,13 +6224,12 @@
         }
       ],
       "valuesSummary": "160 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Winter's Bite",
       "slug": "Winter's_Bite",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Bite",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Bite",
       "description": "Freeze your target with winter's bite, dealing 140 (L20) to 200 (L31) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6248,6 +6238,7 @@
       "mana": 132,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6276,8 +6267,7 @@
         }
       ],
       "valuesSummary": "140–200 Cold dmg (L20–L31) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Beguile Beasts",
@@ -6291,14 +6281,14 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Evershade Weald",
@@ -6309,17 +6299,17 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 300,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Sungreet Strand",
@@ -6330,17 +6320,17 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 300,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cold Protection",
@@ -6354,6 +6344,7 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "CR"
@@ -6372,8 +6363,7 @@
       "valuesSummary": "+4 Cold Resistance",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Ensnare",
@@ -6384,9 +6374,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 40,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow"
@@ -6404,8 +6395,7 @@
         }
       ],
       "valuesSummary": "−50%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Flaming Embers",
@@ -6419,6 +6409,7 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -6448,8 +6439,7 @@
       "valuesSummary": "15 Fire/6s (60s) · −13 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Heal",
@@ -6463,6 +6453,7 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6476,8 +6467,7 @@
         }
       ],
       "valuesSummary": "278 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Regeneration",
@@ -6491,6 +6481,7 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -6509,8 +6500,7 @@
       "valuesSummary": "+5 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Speed of the Predator",
@@ -6524,6 +6514,7 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "movement",
@@ -6543,8 +6534,7 @@
         }
       ],
       "valuesSummary": "+100%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Ring of Caves of Irem",
@@ -6558,6 +6548,7 @@
       "mana": 125,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -6565,8 +6556,7 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Brambly Barrier",
@@ -6580,6 +6570,7 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -6595,8 +6586,7 @@
         }
       ],
       "valuesSummary": "15 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Deextinction",
@@ -6610,14 +6600,14 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
       "primaryTag": "resurrection",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Lightning Strike",
@@ -6631,6 +6621,7 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -6638,13 +6629,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Nature's Lull",
       "slug": "Nature's_Lull",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Lull",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
       "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6653,14 +6643,14 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Poison Protection",
@@ -6674,6 +6664,7 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff",
         "PR"
@@ -6692,8 +6683,7 @@
       "valuesSummary": "+5 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Swarm of Flies",
@@ -6707,6 +6697,7 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -6724,8 +6715,7 @@
         }
       ],
       "valuesSummary": "21 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Touch of Life",
@@ -6739,6 +6729,7 @@
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal",
         "hot",
@@ -6763,8 +6754,7 @@
         }
       ],
       "valuesSummary": "191 + 115/6s heal (12s) · 191 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Element Crack",
@@ -6778,6 +6768,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "debuff",
         "FR"
@@ -6809,8 +6800,7 @@
       "valuesSummary": "−5–6 Cold and Fire Resistance (L31–L38) · +5–6 Fire Resistance (L31–L38)",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Encircling Roots",
@@ -6824,6 +6814,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root",
@@ -6839,8 +6830,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fire Resistance",
@@ -6854,6 +6844,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "FR"
@@ -6872,8 +6863,7 @@
       "valuesSummary": "+15 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Gust of Wind",
@@ -6887,6 +6877,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -6902,8 +6893,7 @@
         }
       ],
       "valuesSummary": "85 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pack Speed",
@@ -6917,6 +6907,7 @@
       "mana": 125,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "movement"
@@ -6935,8 +6926,7 @@
         }
       ],
       "valuesSummary": "+40–58%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Scorching Sun",
@@ -6950,6 +6940,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6964,8 +6955,7 @@
         }
       ],
       "valuesSummary": "141 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Steelskin",
@@ -6979,6 +6969,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -6998,13 +6989,12 @@
       "valuesSummary": "+15 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summer's Bounty",
       "slug": "Summer's_Bounty",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Bounty",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Bounty",
       "description": "Bless your target with the bounty of summer, restoring 410 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -7013,6 +7003,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -7026,13 +7017,12 @@
         }
       ],
       "valuesSummary": "410 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Winter's Fury",
       "slug": "Winter's_Fury",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Fury",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Fury",
       "description": "Freeze your target with winter's fury, dealing 141 (L1.52) to 200 (L1.63) Cold Damage and decreasing their Movement Speed by 15% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7041,6 +7031,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7059,8 +7050,7 @@
         }
       ],
       "valuesSummary": "−15%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Wolf Pack",
@@ -7074,6 +7064,7 @@
       "mana": 100,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "movement"
@@ -7092,8 +7083,7 @@
         }
       ],
       "valuesSummary": "+40–60%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Caves of Irem",
@@ -7107,14 +7097,14 @@
       "mana": 300,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blazing Embers",
@@ -7128,6 +7118,7 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -7157,8 +7148,7 @@
       "valuesSummary": "30 Fire/6s (60s) · −19 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Cleanse Poison",
@@ -7172,41 +7162,41 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Coax Beasts",
       "slug": "Coax_Beasts",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Coax_Beasts",
-      "description": "Charm a target beast, forcing them to fight alongside you for 5 (L1) to 30 (L60) minutes. This spell has a very strong chance to end early.",
+      "description": "Charm a target beast, forcing them to fight alongside you for 5 (L1) to 20 (L60) minutes. This spell has a very strong chance to end early. Max target 47.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 175,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cold Resistance",
       "slug": "Cold_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
-      "description": "Greatly ward your target from frost, increasing their Cold Resistance by 15 for 35 minutes.",
+      "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -7214,6 +7204,7 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "CR"
@@ -7232,8 +7223,7 @@
       "valuesSummary": "+15 Cold Resistance",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Heal",
@@ -7247,6 +7237,7 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -7260,8 +7251,7 @@
         }
       ],
       "valuesSummary": "473 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lightning Strike",
@@ -7275,6 +7265,7 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -7282,8 +7273,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lull Beasts",
@@ -7297,27 +7287,56 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
-      "name": "Regeneration",
-      "slug": "Regeneration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
-      "description": "Moderately regenerate your target, increasing their Health Regeneration by 7 for 48 minutes.",
+      "name": "Spark of Harmony",
+      "slug": "Spark_of_Harmony",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
+      "description": "Gift your target a spark of harmony, restoring 181 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 127,
       "castTime": null,
       "level": 36,
+      "type": "spell",
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 181,
+          "display": "181 heal",
+          "sortKey": 181
+        }
+      ],
+      "valuesSummary": "181 heal",
+      "statTags": []
+    },
+    {
+      "name": "Communion of Regeneration",
+      "slug": "Communion_of_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
+      "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 250,
+      "castTime": null,
+      "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -7336,8 +7355,7 @@
       "valuesSummary": "+7 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Sanctuary: Evershade Weald",
@@ -7351,12 +7369,12 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sanctuary: Sungreet Strand",
@@ -7370,12 +7388,12 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spiky Barrier",
@@ -7389,6 +7407,7 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -7404,8 +7423,7 @@
         }
       ],
       "valuesSummary": "20 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Abolish Magic",
@@ -7419,14 +7437,14 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cleanse Disease",
@@ -7440,14 +7458,14 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Grip of Nature",
@@ -7461,6 +7479,7 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root"
@@ -7468,13 +7487,12 @@
       "primaryTag": "root",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Nature's Peace",
       "slug": "Nature's_Peace",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Peace",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
       "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -7483,6 +7501,7 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -7490,8 +7509,7 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Species Revitalism",
@@ -7505,14 +7523,14 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
       "primaryTag": "resurrection",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Swarm of Bees",
@@ -7526,6 +7544,7 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -7543,8 +7562,7 @@
         }
       ],
       "valuesSummary": "54 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Touch of Harmony",
@@ -7558,6 +7576,7 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "heal",
         "hot",
@@ -7582,8 +7601,7 @@
         }
       ],
       "valuesSummary": "243 + 100/6s heal (12s) · 243 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Burning Sun",
@@ -7597,6 +7615,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -7611,8 +7630,7 @@
         }
       ],
       "valuesSummary": "259 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Diamondskin",
@@ -7626,6 +7644,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -7645,8 +7664,7 @@
       "valuesSummary": "+20 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Gust of Wind",
@@ -7660,6 +7678,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -7675,8 +7694,7 @@
         }
       ],
       "valuesSummary": "170 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Lightning Strike",
@@ -7690,6 +7708,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -7697,8 +7716,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Poison Resistance",
@@ -7712,6 +7730,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "PR"
@@ -7730,13 +7749,12 @@
       "valuesSummary": "+15 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summer's Grace",
       "slug": "Summer's_Grace",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer%27s_Grace",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Grace",
       "description": "Bless your target with the grace of summer, restoring 750 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -7745,6 +7763,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -7758,8 +7777,7 @@
         }
       ],
       "valuesSummary": "750 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Thorny Barrier",
@@ -7773,6 +7791,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -7788,13 +7807,12 @@
         }
       ],
       "valuesSummary": "25 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Winter's Wrath",
       "slug": "Winter's_Wrath",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter%27s_Wrath",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Wrath",
       "description": "Freeze your target with winter's wrath, dealing 298 (L1.44) to 340 (L1.5) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7803,6 +7821,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7821,8 +7840,7 @@
         }
       ],
       "valuesSummary": "−25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Element Fracture",
@@ -7836,6 +7854,7 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "debuff",
         "FR"
@@ -7867,8 +7886,7 @@
       "valuesSummary": "−7–8 Cold and Fire Resistance (L40–L44) · +7–8 Fire Resistance (L40–L44)",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Ensnaring Vines",
@@ -7882,6 +7900,7 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow",
@@ -7900,8 +7919,7 @@
         }
       ],
       "valuesSummary": "−75%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Regeneration",
@@ -7915,6 +7933,7 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -7933,8 +7952,7 @@
       "valuesSummary": "+11 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Persuade Beasts",
@@ -7948,14 +7966,14 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Smoldering Embers",
@@ -7969,6 +7987,7 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -7998,8 +8017,7 @@
       "valuesSummary": "30 Fire/6s (60s) · −15 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Superior Heal",
@@ -8013,6 +8031,7 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -8026,8 +8045,7 @@
         }
       ],
       "valuesSummary": "850 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lull Greater Beasts",
@@ -8041,6 +8059,7 @@
       "mana": 0,
       "castTime": null,
       "level": 50,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -8048,13 +8067,12 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blast of Winter",
       "slug": "Blast_of_Winter",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Winter?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Winter",
       "description": "Blast your target with snow, dealing 313 Cold Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -8063,6 +8081,7 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -8077,8 +8096,7 @@
         }
       ],
       "valuesSummary": "313 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Lightning Strike",
@@ -8092,6 +8110,7 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -8099,13 +8118,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Nature's Serenity",
       "slug": "Nature's_Serenity",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature%27s_Serenity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Serenity",
       "description": "Serenade your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 65.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -8114,20 +8132,20 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Renewal of the Wild",
       "slug": "Renewal_of_the_Wild",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Renewal_of_the_Wild",
-      "description": "Renew a target beast corpse, returning it to life. This ability inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes. This ability is limited to targets up to level 60.",
+      "description": "Resurrect a target beast corpse, returning it to life. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -8135,14 +8153,14 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
       "primaryTag": "resurrection",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Swarm of Hornets",
@@ -8156,6 +8174,7 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -8173,8 +8192,7 @@
         }
       ],
       "valuesSummary": "55 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Touch of Creation",
@@ -8188,6 +8206,7 @@
       "mana": 0,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "heal",
         "hot",
@@ -8203,13 +8222,12 @@
         }
       ],
       "valuesSummary": "513 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Portal to Caves of Irem",
       "slug": "Portal_to_Caves_of_Irem",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Caves_of_Irem?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Caves_of_Irem",
       "description": "Opens a portal to Caves of Irem. Anyone can go through this portal.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -8218,19 +8236,19 @@
       "mana": "?",
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "portal"
       ],
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Portal to Evershade Weald",
       "slug": "Portal_to_Evershade_Weald",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Evershade_Weald?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Evershade_Weald",
       "description": "Opens a portal to Evershade Weald. Anyone can go through this portal.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -8239,19 +8257,19 @@
       "mana": "?",
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "portal"
       ],
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Portal to Sungreet Strand",
       "slug": "Portal_to_Sungreet_Strand",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Sungreet_Strand?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Portal_to_Sungreet_Strand",
       "description": "Opens a portal to Sungreet Strand. Anyone can go through this portal.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -8260,14 +8278,14 @@
       "mana": "?",
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "portal"
       ],
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sanctuary",
@@ -8281,12 +8299,12 @@
       "mana": 0,
       "castTime": null,
       "level": 55,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dead of Winter",
@@ -8300,6 +8318,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -8318,8 +8337,7 @@
         }
       ],
       "valuesSummary": "−25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Jagged Barrier",
@@ -8333,6 +8351,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "buff",
         "thorns"
@@ -8348,8 +8367,7 @@
         }
       ],
       "valuesSummary": "30 thorns/hit",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Natureskin",
@@ -8363,6 +8381,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -8392,8 +8411,7 @@
       "statTags": [
         "AC",
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summer Solstice",
@@ -8407,6 +8425,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -8420,8 +8439,7 @@
         }
       ],
       "valuesSummary": "1100 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Windblast",
@@ -8435,6 +8453,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -8450,13 +8469,12 @@
         }
       ],
       "valuesSummary": "581 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blizzard",
       "slug": "Blizzard",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blizzard?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blizzard",
       "description": "Engulf your target in a blizzard, dealing 394 Cold Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -8465,6 +8483,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -8479,8 +8498,7 @@
         }
       ],
       "valuesSummary": "394 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Crash of Lightning",
@@ -8494,6 +8512,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage",
         "aoe"
@@ -8501,14 +8520,13 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Element Shatter",
       "slug": "Element_Shatter",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Element_Shatter",
-      "description": "Shatters your target's resistance to the elements, decreasing their Cold, Electricity, Fire and Magic Resistance by 10. This spell is unresistable if the target is not immune to magic or it can otherwise be landed normally.",
+      "description": "Shatter the elemental defenses of your target, decreasing their Cold and Fire Resistance by 30 for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -8516,54 +8534,22 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
-        "debuff",
-        "MR"
+        "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [
         {
           "kind": "debuff",
-          "stat": "Cold",
-          "amount": 10,
-          "display": "−10 Cold",
-          "sortKey": 10
-        },
-        {
-          "kind": "debuff",
-          "stat": "Electricity",
-          "amount": 10,
-          "display": "−10 Electricity",
-          "sortKey": 10
-        },
-        {
-          "kind": "debuff",
-          "stat": "Fire",
-          "amount": 10,
-          "display": "−10 Fire",
-          "sortKey": 10
-        },
-        {
-          "kind": "debuff",
-          "stat": "Magic Resistance",
-          "amount": 10,
-          "display": "−10 Magic Resistance",
-          "sortKey": 10,
-          "statTag": "MR"
-        },
-        {
-          "kind": "debuff",
-          "stat": "Fire and Magic Resistance",
-          "amount": 10,
-          "display": "−10 Fire and Magic Resistance",
-          "sortKey": 10
+          "stat": "Cold and Fire Resistance",
+          "amount": 30,
+          "display": "−30 Cold and Fire Resistance",
+          "sortKey": 30
         }
       ],
-      "valuesSummary": "−10 Cold/Electricity/Fire/MR/Fire and Magic Resistance",
-      "statTags": [
-        "MR"
-      ],
-      "type": "spell"
+      "valuesSummary": "−30 Cold and Fire Resistance",
+      "statTags": []
     },
     {
       "name": "Exceptional Regeneration",
@@ -8577,6 +8563,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff",
         "HP REGEN"
@@ -8595,13 +8582,12 @@
       "valuesSummary": "+14 Health Regeneration",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Shattering Frostbite",
       "slug": "Shattering_Frostbite",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shattering_Frostbite?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shattering_Frostbite",
       "description": "Expose your target to frostbite, dealing 45 Cold Damage every 6 seconds and decreasing their Armor Class by 26 for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -8610,6 +8596,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -8639,8 +8626,7 @@
       "valuesSummary": "45 Cold/6s (60s) · −26 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Swarm of Wrath",
@@ -8654,6 +8640,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -8671,8 +8658,7 @@
         }
       ],
       "valuesSummary": "100 Poison/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     }
   ]
 }

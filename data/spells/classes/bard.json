@@ -4,7 +4,7 @@
   "type": "ability",
   "sectionTitle": "Bard Songs & Abilities",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bard",
-  "entryCount": 50,
+  "entryCount": 57,
   "levels": [
     1,
     2,
@@ -22,7 +22,9 @@
     14,
     15,
     16,
+    18,
     20,
+    22,
     24,
     26,
     28,
@@ -41,10 +43,10 @@
   "entriesByLevel": {
     "1": [
       {
-        "name": "Beats of War",
-        "slug": "Beats_of_War",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beats_of_War",
-        "description": "Immerse your group in an ominous beat, increasing their Strength, Agility, and Dexterity of you and your group by 2 (L1) to 4 (L16) for 18 seconds.",
+        "name": "Beats of Battle",
+        "slug": "Beats_of_Battle",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beats_of_Battle",
+        "description": "Immerse your group in an ominous beat, increasing their Strength, Agility, and Dexterity by 2 (L1) to 4 (L16) for 18 seconds.",
         "category": "Percussion",
         "categorySlug": "Skill_Percussion",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion",
@@ -52,6 +54,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -100,8 +103,7 @@
           "AGI",
           "DEX",
           "STR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Hymn of the Dead",
@@ -115,18 +117,18 @@
         "mana": 0,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Throw",
         "slug": "Throw",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-        "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+        "description": "Throw a throwing weapon at your target. Requires throwing weapon.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -134,15 +136,56 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
+      {
+        "name": "Whistling Slash",
+        "slug": "Whistling_Slash",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash",
+        "description": "Whistle an invigorating tune as you slash at your target, dealing 100% Weapon Ratio Damage and increasing your Strength by 5 for 30 seconds. This ability requires a one-handed weapon.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 1,
+        "type": "ability",
+        "tags": [
+          "damage",
+          "buff",
+          "STR"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "100% weapon dmg",
+            "sortKey": 100
+          },
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 5,
+            "display": "+5 Strength",
+            "sortKey": 5,
+            "statTag": "STR"
+          }
+        ],
+        "valuesSummary": "100% weapon dmg · +5 Strength",
+        "statTags": [
+          "STR"
+        ]
+      }
+    ],
+    "2": [
       {
         "name": "Screaming Vocalization",
         "slug": "Screaming_Vocalization",
@@ -154,7 +197,8 @@
         "location": "Vendor",
         "mana": 3,
         "castTime": null,
-        "level": 1,
+        "level": 2,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -182,44 +226,7 @@
           }
         ],
         "valuesSummary": "150–350% dmg (L1–L60) · 2–5 Magic dmg (L1–L4)",
-        "statTags": [],
-        "type": "ability"
-      }
-    ],
-    "2": [
-      {
-        "name": "Dissonant Riffs",
-        "slug": "Dissonant_Riffs",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dissonant_Riffs",
-        "description": "Overwhelm your target with unnerving riffs, dealing 2 (L2) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
-        "category": "Brass",
-        "categorySlug": "Skill_Brass_Instruments",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
-        "location": "Vendor",
-        "mana": 0,
-        "castTime": null,
-        "level": 2,
-        "tags": [
-          "dot"
-        ],
-        "primaryTag": "dot",
-        "effects": [
-          {
-            "kind": "dot",
-            "min": 2,
-            "max": 20,
-            "minLevel": 2,
-            "maxLevel": 60,
-            "interval": 6,
-            "duration": 18,
-            "damageType": "Magic",
-            "display": "2–20 Magic/6s (18s) (L2–L60)",
-            "sortKey": 60
-          }
-        ],
-        "valuesSummary": "2–20 Magic/6s (18s) (L2–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "3": [
@@ -227,14 +234,15 @@
         "name": "Somniferous Serenade",
         "slug": "Somniferous_Serenade",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Somniferous_Serenade",
-        "description": "Enthrall your target with a somniferous serenade, incapacitating them for 18 seconds.",
-        "category": "String",
-        "categorySlug": "Skill_Stringed_Instruments",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+        "description": "Enthrall your target with a somniferous serenade, incapacitating them for 18 seconds. This ability is removed by damage.",
+        "category": "Wind",
+        "categorySlug": "Skill_Wind_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -249,8 +257,7 @@
           }
         ],
         "valuesSummary": "18s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "4": [
@@ -258,7 +265,7 @@
         "name": "Healing Hymn",
         "slug": "Healing_Hymn",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Hymn",
-        "description": "Immerse your group in a soothing hymn, increasing their Health Regeneration by 2 (L1) to 20 (L60) for 18 seconds.",
+        "description": "Immerse your group in a soothing hymn, increasing their Health Regeneration by 2 (L1) to 12 (L60) for 18 seconds.",
         "category": "String",
         "categorySlug": "Skill_Stringed_Instruments",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
@@ -266,6 +273,7 @@
         "mana": 0,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -277,48 +285,47 @@
             "kind": "buff",
             "stat": "Health Regeneration",
             "min": 2,
-            "max": 20,
+            "max": 12,
             "minLevel": 1,
             "maxLevel": 60,
-            "display": "+2–20 Health Regeneration (L1–L60)",
-            "sortKey": 20,
+            "display": "+2–12 Health Regeneration (L1–L60)",
+            "sortKey": 12,
             "statTag": "HP REGEN"
           }
         ],
-        "valuesSummary": "+2–20 Health Regeneration (L1–L60)",
+        "valuesSummary": "+2–12 Health Regeneration (L1–L60)",
         "statTags": [
           "HP REGEN"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Siren's Call",
         "slug": "Siren's_Call",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Call",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Call",
         "description": "Enthrall your target with an alluring call, forcing them to fight for you for up to 18 seconds. This ability has a slight chance to end early.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "category": "Wind",
+        "categorySlug": "Skill_Wind_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
         "location": "Vendor",
         "mana": 5,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "5": [
       {
         "name": "Traveler's March",
         "slug": "Traveler's_March",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Traveler%27s_March",
-        "description": "Inspire your group with a rousing march, increasing their Movement Speed by 25% (L5) to 75% (L60) for 18 seconds. Can only be used outdoors.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Traveler's_March",
+        "description": "Inspire your group with a rousing march, increasing their Movement Speed by 20% (L5) to 65% (L60) for 18 seconds. Can only be used outdoors.",
         "category": "Percussion",
         "categorySlug": "Skill_Percussion",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion",
@@ -326,6 +333,7 @@
         "mana": 0,
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -336,32 +344,32 @@
           {
             "kind": "buff",
             "stat": "Movement Speed",
-            "min": 25,
-            "max": 75,
+            "min": 20,
+            "max": 65,
             "unit": "%",
-            "display": "+25–75%",
-            "sortKey": 75,
+            "display": "+20–65%",
+            "sortKey": 65,
             "statTag": "MS"
           }
         ],
-        "valuesSummary": "+25–75%",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "+20–65%",
+        "statTags": []
       }
     ],
     "6": [
       {
         "name": "Chant of Purity",
         "slug": "Chant_of_Purity",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Purity?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Purity",
         "description": "Immerse your gorup in a rhythmic chant, increasing their Poison and Disease Resistance by 5 (L6) to 10 (L26) for 18 seconds.",
-        "category": "String",
-        "categorySlug": "Skill_Stringed_Instruments",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+        "category": "Percussion",
+        "categorySlug": "Skill_Percussion_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -394,8 +402,7 @@
         "valuesSummary": "+5–10 Poison and Disease Resistance (L6–L26) · +5–10 Disease Resistance (L6–L26)",
         "statTags": [
           "DR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "7": [
@@ -411,6 +418,7 @@
         "mana": 3,
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "aoe"
         ],
@@ -428,15 +436,14 @@
           }
         ],
         "valuesSummary": "−75–750 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "8": [
       {
-        "name": "Aria de Lento",
-        "slug": "Aria_de_Lento",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aria_de_Lento",
+        "name": "Lento's Aria of Stillness",
+        "slug": "Lento's_Aria_of_Stillness",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lento's_Aria_of_Stillness",
         "description": "Oppress nearby targets with an echoing aria, decreasing their Movement Speed by 20% and Attack Speed by 10% for 18 seconds. This ability is considered a Secondary Slow.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
@@ -445,6 +452,7 @@
         "mana": 0,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "debuff",
           "slow",
@@ -464,14 +472,13 @@
           }
         ],
         "valuesSummary": "−20%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
-        "name": "Disruptive Riffs",
-        "slug": "Disruptive_Riffs",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disruptive_Riffs",
-        "description": "Overwhelm your target with unnerving riffs, dealing 4 (L8) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
+        "name": "Vellicosa's Fanfare",
+        "slug": "Vellicosa's_Fanfare",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Fanfare",
+        "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 100 (L60) Magic Damage every 6 seconds for 18 seconds.",
         "category": "Brass",
         "categorySlug": "Skill_Brass_Instruments",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -479,6 +486,7 @@
         "mana": 0,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "dot"
         ],
@@ -486,20 +494,19 @@
         "effects": [
           {
             "kind": "dot",
-            "min": 4,
-            "max": 20,
+            "min": 8,
+            "max": 100,
             "minLevel": 8,
             "maxLevel": 60,
             "interval": 6,
             "duration": 18,
             "damageType": "Magic",
-            "display": "4–20 Magic/6s (18s) (L8–L60)",
-            "sortKey": 60
+            "display": "8–100 Magic/6s (18s) (L8–L60)",
+            "sortKey": 300
           }
         ],
-        "valuesSummary": "4–20 Magic/6s (18s) (L8–L60)",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "8–100 Magic/6s (18s) (L8–L60)",
+        "statTags": []
       }
     ],
     "9": [
@@ -507,7 +514,7 @@
         "name": "Languid Lullaby",
         "slug": "Languid_Lullaby",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Languid_Lullaby",
-        "description": "Soothe your target with a languid lullaby, reducing their Aggro Radius for 2 minutes. Has a very slight chance to end early.",
+        "description": "Soothe your target with a languid lullaby, reducing their Aggro Radius for 18 seconds. Has a very slight chance to end early and has additional effects in PvP.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
@@ -515,14 +522,14 @@
         "mana": 0,
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "debuff"
         ],
         "primaryTag": "debuff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "10": [
@@ -538,6 +545,7 @@
         "mana": 10,
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -562,8 +570,7 @@
           }
         ],
         "valuesSummary": "150–350% dmg (L1–L60) · 15 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "11": [
@@ -579,6 +586,7 @@
         "mana": 9999,
         "castTime": null,
         "level": 11,
+        "type": "ability",
         "tags": [
           "buff"
         ],
@@ -596,15 +604,14 @@
           }
         ],
         "valuesSummary": "+10000–20000 faction standing with them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "12": [
       {
-        "name": "Allegro con Brio",
-        "slug": "Allegro_con_Brio",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_con_Brio",
+        "name": "Faedawyn's Arcane Alacrity",
+        "slug": "Faedawyn's_Arcane_Alacrity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Faedawyn's_Arcane_Alacrity",
         "description": "Inspire your group with an energetic allegro, increasing their Casting Speed by 10% for 18 seconds.",
         "category": "String",
         "categorySlug": "Skill_Stringed_Instruments",
@@ -613,6 +620,7 @@
         "mana": 0,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -634,14 +642,13 @@
         "valuesSummary": "+10%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       },
       {
-        "name": "Allegro con Fuoco",
-        "slug": "Allegro_con_Fuoco",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_con_Fuoco",
-        "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% for 18 seconds. Stacks with Primary Haste effects.",
+        "name": "Overture of Speed",
+        "slug": "Overture_of_Speed",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Overture_of_Speed",
+        "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% for 18 seconds. This ability is considered a Secondary Haste.",
         "category": "String",
         "categorySlug": "Skill_Stringed_Instruments",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
@@ -649,6 +656,7 @@
         "mana": 0,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -668,13 +676,12 @@
           }
         ],
         "valuesSummary": "+10%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
-        "name": "Allegro Lento",
-        "slug": "Allegro_Lento",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_Lento",
+        "name": "Chords of Quickness",
+        "slug": "Chords_of_Quickness",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chords_of_Quickness",
         "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% (L12) to 15% (L16) for 18 seconds.",
         "category": "String",
         "categorySlug": "Skill_Stringed_Instruments",
@@ -683,6 +690,7 @@
         "mana": 0,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -702,13 +710,12 @@
           }
         ],
         "valuesSummary": "+10–15%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Siren's Allure",
         "slug": "Siren's_Allure",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Allure",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Allure",
         "description": "Charm your target with an alluring melody, forcing them to fight alongside you for 18 seconds",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
@@ -717,14 +724,14 @@
         "mana": 12,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "13": [
@@ -740,6 +747,7 @@
         "mana": 20,
         "castTime": null,
         "level": 13,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "fear"
@@ -747,15 +755,14 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "14": [
       {
         "name": "Selstie's Aeolian Aria",
         "slug": "Selstie's_Aeolian_Aria",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Selstie%27s_Aeolian_Aria",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Selstie's_Aeolian_Aria",
         "description": "Immerse your group in an ethereal aria, granting them the ability to breathe underwater for 18 seconds.",
         "category": "Wind",
         "categorySlug": "Skill_Wind_Instruments",
@@ -764,6 +771,7 @@
         "mana": 0,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -772,31 +780,53 @@
         "primaryTag": "song",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "15": [
       {
-        "name": "Languid Lament",
-        "slug": "Languid_Lament",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Languid_Lament",
-        "description": "Soothe your target with a languid lament, reducing their Proximity Aggro for 2 minutes.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "name": "Whistling Slash II",
+        "slug": "Whistling_Slash_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash_II",
+        "description": "Whistle an invigorating tune as you slash at your target, dealing 105% Weapon Ratio Damage and increasing your Haste by 20% as well as your Strength and Armor Class by 5 for 30 seconds. This ability requires a one-handed weapon.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
-          "debuff"
+          "damage",
+          "buff"
         ],
-        "primaryTag": "debuff",
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "105% weapon dmg",
+            "sortKey": 105
+          },
+          {
+            "kind": "buff",
+            "stat": "Haste",
+            "min": 20,
+            "max": 20,
+            "unit": "%",
+            "display": "+20%",
+            "sortKey": 20
+          },
+          {
+            "kind": "buff",
+            "stat": "as well as your Strength and Armor Class",
+            "amount": 5,
+            "display": "+5 as well as your Strength and Armor Class",
+            "sortKey": 5
+          }
+        ],
+        "valuesSummary": "105% weapon dmg · +20% · +5 as well as your Strength and Armor Class",
+        "statTags": []
       }
     ],
     "16": [
@@ -809,9 +839,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -826,55 +857,57 @@
           }
         ],
         "valuesSummary": "2s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Chant of Magic Resistance",
         "slug": "Chant_of_Magic_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Magic_Resistance",
-        "description": "Immerse your group in a rhythmic chant, increasing their Magic Resistance by 15 for 18 seconds.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "description": "Immerse your party in a rhythmic chant, increasing their Magic Resistance by 5 (L16) to 10 (L36) for 18 seconds.",
+        "category": "Percussion",
+        "categorySlug": "Skill_Percussion_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
-          "song",
           "buff",
           "MR"
         ],
-        "primaryTag": "song",
+        "primaryTag": "buff",
         "effects": [
           {
             "kind": "buff",
             "stat": "Magic Resistance",
-            "amount": 15,
-            "display": "+15 Magic Resistance",
-            "sortKey": 15,
+            "min": 5,
+            "max": 10,
+            "minLevel": 16,
+            "maxLevel": 36,
+            "display": "+5–10 Magic Resistance (L16–L36)",
+            "sortKey": 10,
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+15 Magic Resistance",
+        "valuesSummary": "+5–10 Magic Resistance (L16–L36)",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
-        "name": "Discordant Riffs",
-        "slug": "Discordant_Riffs",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discordant_Riffs",
-        "description": "Overwhelm your target with unnerving riffs, dealing 8 (L16) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
-        "category": "String",
-        "categorySlug": "Skill_Stringed_Instruments",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+        "name": "Vellicosa's Tantara",
+        "slug": "Vellicosa's_Tantara",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Tantara",
+        "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 100 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 20 (L60) damage when afflicted by both.",
+        "category": "Brass",
+        "categorySlug": "Skill_Brass_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "dot"
         ],
@@ -882,33 +915,33 @@
         "effects": [
           {
             "kind": "dot",
-            "min": 8,
-            "max": 20,
+            "min": 12,
+            "max": 100,
             "minLevel": 16,
             "maxLevel": 60,
             "interval": 6,
             "duration": 18,
             "damageType": "Magic",
-            "display": "8–20 Magic/6s (18s) (L16–L60)",
-            "sortKey": 60
+            "display": "12–100 Magic/6s (18s) (L16–L60)",
+            "sortKey": 300
           }
         ],
-        "valuesSummary": "8–20 Magic/6s (18s) (L16–L60)",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "12–100 Magic/6s (18s) (L16–L60)",
+        "statTags": []
       },
       {
         "name": "Hymn of Inspiration",
         "slug": "Hymn_of_Inspiration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Inspiration",
-        "description": "Immerse your group in a soothing hymn, increasing their Mana Regeneration by 1 (L8) to 15 (L60) for 18 seconds.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "description": "Immerse your group in a soothing hymn, increasing their Mana Regeneration by 1 (L8) to 10 (L60) for 18 seconds.",
+        "category": "String",
+        "categorySlug": "Skill_String_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_String_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -920,19 +953,74 @@
             "kind": "buff",
             "stat": "Mana Regeneration",
             "min": 1,
-            "max": 15,
+            "max": 10,
             "minLevel": 8,
             "maxLevel": 60,
-            "display": "+1–15 Mana Regeneration (L8–L60)",
-            "sortKey": 15,
+            "display": "+1–10 Mana Regeneration (L8–L60)",
+            "sortKey": 10,
             "statTag": "MANA"
           }
         ],
-        "valuesSummary": "+1–15 Mana Regeneration (L8–L60)",
+        "valuesSummary": "+1–10 Mana Regeneration (L8–L60)",
         "statTags": [
           "MANA"
+        ]
+      }
+    ],
+    "18": [
+      {
+        "name": "Aristam's Steady Tread",
+        "slug": "Aristam's_Steady_Tread",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aristam's_Steady_Tread",
+        "description": "Immerse your party with a subdued march, increasing their Movement Speed by 5% (L5) to 10% (L60) for 18 seconds. This ability can be used indoors.",
+        "category": "Percussion",
+        "categorySlug": "Skill_Percussion_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 18,
+        "type": "ability",
+        "tags": [
+          "buff",
+          "movement"
         ],
-        "type": "ability"
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Movement Speed",
+            "min": 5,
+            "max": 10,
+            "unit": "%",
+            "display": "+5–10%",
+            "sortKey": 10,
+            "statTag": "MS"
+          }
+        ],
+        "valuesSummary": "+5–10%",
+        "statTags": []
+      },
+      {
+        "name": "Disenchanting Blare",
+        "slug": "Disenchanting_Blare",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disenchanting_Blare",
+        "description": "Dispel magic from your target, removing one harmful effect at random.",
+        "category": "Brass",
+        "categorySlug": "Skill_Brass_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 18,
+        "type": "ability",
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       }
     ],
     "20": [
@@ -940,7 +1028,7 @@
         "name": "Sneak",
         "slug": "Sneak",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
-        "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+        "description": "Walk silently, rendering you undetectable to targets while behind them.",
         "category": "Sub",
         "categorySlug": "Skill_Subterfuge",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -948,20 +1036,18 @@
         "mana": "Innate",
         "castTime": null,
         "level": 20,
-        "tags": [
-          "invisibility"
-        ],
-        "primaryTag": "invisibility",
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Cacophonic Vocalization",
         "slug": "Cacophonic_Vocalization",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cacophonic_Vocalization",
-        "description": "Release a cacophonic shout at your target, dealing 25 Magic Damage, plus 150% (L1) to 350% (L60) damage variance. Costs Mana. Shares a cooldown with other Shout abilities.",
+        "description": "Release a cacophonic shout at your target, dealing 22 Magic Damage, plus 150% (L1) to 350% (L60) damage variance. Costs Mana. Shares a cooldown with other Shout abilities.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
@@ -969,6 +1055,7 @@
         "mana": 50,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -986,28 +1073,28 @@
           },
           {
             "kind": "damage",
-            "amount": 25,
+            "amount": 22,
             "damageType": "Magic",
-            "display": "25 Magic dmg",
-            "sortKey": 25
+            "display": "22 Magic dmg",
+            "sortKey": 22
           }
         ],
-        "valuesSummary": "150–350% dmg (L1–L60) · 25 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "150–350% dmg (L1–L60) · 22 Magic dmg",
+        "statTags": []
       },
       {
         "name": "Sonnet of the Unseen",
         "slug": "Sonnet_of_the_Unseen",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sonnet_of_the_Unseen",
-        "description": "Immerse your group in a wistful sonnet, rendering them unseen by the living and granting them the ability to see invisible entities for 18 seconds. This ability has a slight chance to end early.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "description": "Immerse your group in a wistful sonnet, rendering them unseen by the living and granting them the ability to see invisible entities for 18 seconds. This ability has a slight chance to end early, and requires a Wind Instrument.",
+        "category": "Wind",
+        "categorySlug": "Skill_Wind_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -1017,31 +1104,82 @@
         "primaryTag": "song",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
+      }
+    ],
+    "22": [
+      {
+        "name": "Discordant Purge",
+        "slug": "Discordant_Purge",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discordant_Purge",
+        "description": "Purge magic from your target, removing one beneficial effect at random.",
+        "category": "Brass",
+        "categorySlug": "Skill_Brass_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 22,
+        "type": "ability",
+        "tags": [
+          "purge"
+        ],
+        "primaryTag": "purge",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      },
+      {
+        "name": "Paralyzing Shriek",
+        "slug": "Paralyzing_Shriek",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Paralyzing_Shriek",
+        "description": "Release a paralyzing shriek at up to 4 foes around you, stunning them for 3 seconds. This ability costs Mana. This ability shares a cooldown with other Shout abilities.",
+        "category": "Singing",
+        "categorySlug": "Skill_Singing",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 22,
+        "type": "ability",
+        "tags": [
+          "crowd-control",
+          "stun"
+        ],
+        "primaryTag": "stun",
+        "effects": [
+          {
+            "kind": "crowd-control",
+            "duration": 3,
+            "display": "3s duration",
+            "sortKey": 3
+          }
+        ],
+        "valuesSummary": "3s duration",
+        "statTags": []
       }
     ],
     "24": [
       {
         "name": "Siren's Enchantment",
         "slug": "Siren's_Enchantment",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Enchantment?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Enchantment",
         "description": "Charm your target with an enchanting melody, forcing them to fight alonside you for 18 seconds.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "26": [
@@ -1054,9 +1192,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -1071,23 +1210,55 @@
           }
         ],
         "valuesSummary": "3s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
+      },
+      {
+        "name": "Chant of the Elements",
+        "slug": "Chant_of_the_Elements",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_the_Elements",
+        "description": "Immerse your party in a rhythmic chant, increasing their Fire, Cold, and Electric Resistance by 5 (L26) to 10 (L46) for 18 seconds.",
+        "category": "Percussion",
+        "categorySlug": "Skill_Percussion_Instrument",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instrument",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 26,
+        "type": "ability",
+        "tags": [
+          "buff"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Electric Resistance",
+            "min": 5,
+            "max": 10,
+            "minLevel": 26,
+            "maxLevel": 46,
+            "display": "+5–10 Electric Resistance (L26–L46)",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "+5–10 Electric Resistance (L26–L46)",
+        "statTags": []
       }
     ],
     "28": [
       {
-        "name": "Aria De Largo",
-        "slug": "Aria_De_Largo",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aria_De_Largo",
+        "name": "Lento's Aria of Apathy",
+        "slug": "Lento's_Aria_of_Apathy",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lento's_Aria_of_Apathy",
         "description": "Oppress nearby targets with an echoing aria, decreasing their Movement Speed by 30% and Attack Speed by 15% for 18 seconds.",
-        "category": "String",
-        "categorySlug": "Skill_Stringed_Instruments",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+        "category": "Singing",
+        "categorySlug": "Skill_Singing",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "ability",
         "tags": [
           "debuff",
           "slow",
@@ -1107,21 +1278,21 @@
           }
         ],
         "valuesSummary": "−30%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
-        "name": "Allegro Moderato",
-        "slug": "Allegro_Moderato",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_Moderato",
-        "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 25% (L28) to 35% (L32) for 18 seconds.",
-        "category": "Singing",
-        "categorySlug": "Skill_Singing",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "name": "Chords of Rapidity",
+        "slug": "Chords_of_Rapidity",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chords_of_Rapidity",
+        "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 20% (L28) to 25% (L32) for 18 seconds.",
+        "category": "String",
+        "categorySlug": "Skill_String_Instruments",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_String_Instruments",
         "location": "Vendor",
         "mana": 0,
         "castTime": null,
         "level": 28,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -1132,20 +1303,51 @@
           {
             "kind": "buff",
             "stat": "Attack Speed",
-            "min": 25,
-            "max": 35,
+            "min": 20,
+            "max": 25,
             "unit": "%",
-            "display": "+25–35%",
-            "sortKey": 35,
+            "display": "+20–25%",
+            "sortKey": 25,
             "statTag": "ATK"
           }
         ],
-        "valuesSummary": "+25–35%",
-        "statTags": [],
-        "type": "ability"
+        "valuesSummary": "+20–25%",
+        "statTags": []
       }
     ],
     "30": [
+      {
+        "name": "Crescendo",
+        "slug": "Crescendo",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Crescendo",
+        "description": "Raise your song in a mighty crescendo, increasing your bonus with all instruments by 50% for 30 seconds. This ability costs Mana.",
+        "category": "Singing",
+        "categorySlug": "Skill_Singing",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+        "location": "Vendor",
+        "mana": 200,
+        "castTime": null,
+        "level": 30,
+        "type": "ability",
+        "tags": [
+          "buff",
+          "self"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "bonus with all instruments",
+            "min": 50,
+            "max": 50,
+            "unit": "%",
+            "display": "+50%",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "+50%",
+        "statTags": []
+      },
       {
         "name": "Wailing Vocalization",
         "slug": "Wailing_Vocalization",
@@ -1158,6 +1360,7 @@
         "mana": 70,
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1182,8 +1385,51 @@
           }
         ],
         "valuesSummary": "150–290% dmg (L1–L60) · 29 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
+      },
+      {
+        "name": "Whistling Slash III",
+        "slug": "Whistling_Slash_III",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash_III",
+        "description": "Whistle an invigorating tune as you slash at your target, dealing 110% Weapon Ratio Damage and increasing your Haste by 30% as well as your Strength and Armor Class by 10 for 30 seconds. This ability requires a one-handed weapon.",
+        "category": "Might",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 30,
+        "type": "ability",
+        "tags": [
+          "damage",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "110% weapon dmg",
+            "sortKey": 110
+          },
+          {
+            "kind": "buff",
+            "stat": "Haste",
+            "min": 30,
+            "max": 30,
+            "unit": "%",
+            "display": "+30%",
+            "sortKey": 30
+          },
+          {
+            "kind": "buff",
+            "stat": "as well as your Strength and Armor Class",
+            "amount": 10,
+            "display": "+10 as well as your Strength and Armor Class",
+            "sortKey": 10
+          }
+        ],
+        "valuesSummary": "110% weapon dmg · +30% · +10 as well as your Strength and Armor Class",
+        "statTags": []
       }
     ],
     "32": [
@@ -1199,6 +1445,7 @@
         "mana": 0,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "dot"
         ],
@@ -1218,8 +1465,7 @@
           }
         ],
         "valuesSummary": "12–20 Magic/6s (18s) (L32–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "33": [
@@ -1235,14 +1481,14 @@
         "mana": 0,
         "castTime": null,
         "level": 33,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "36": [
@@ -1255,9 +1501,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -1272,29 +1519,28 @@
           }
         ],
         "valuesSummary": "4s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Siren's Compulsion",
         "slug": "Siren's_Compulsion",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Compulsion?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Compulsion",
         "description": "Charm your target with compulsive melody, forcing them to fight alongside you for 18 seconds.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "40": [
@@ -1310,6 +1556,7 @@
         "mana": 0,
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "dot"
         ],
@@ -1329,8 +1576,7 @@
           }
         ],
         "valuesSummary": "20–30 Magic/6s (18s) (L40–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Discordant Vocalization",
@@ -1341,9 +1587,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1368,8 +1615,7 @@
           }
         ],
         "valuesSummary": "150–350% dmg (L1–L60) · 45 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "44": [
@@ -1385,6 +1631,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -1404,8 +1651,7 @@
           }
         ],
         "valuesSummary": "+40–50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Aria De Grave",
@@ -1419,6 +1665,7 @@
         "mana": 0,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "debuff",
           "slow",
@@ -1438,8 +1685,7 @@
           }
         ],
         "valuesSummary": "−40%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "46": [
@@ -1452,9 +1698,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 46,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -1469,31 +1716,30 @@
           }
         ],
         "valuesSummary": "5s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "48": [
       {
         "name": "Siren's Thrall",
         "slug": "Siren's_Thrall",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Thrall?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Thrall",
         "description": "Charm your target with an enthralling melody, forcing them to fight alongside you for 18 seconds.",
         "category": "Singing",
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "50": [
@@ -1506,9 +1752,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1533,8 +1780,7 @@
           }
         ],
         "valuesSummary": "150–350% dmg (L1–L60) · 55 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "56": [
@@ -1547,9 +1793,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "mez"
@@ -1564,8 +1811,7 @@
           }
         ],
         "valuesSummary": "6s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Aria de Larghissimo",
@@ -1579,6 +1825,7 @@
         "mana": 0,
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "debuff",
           "slow",
@@ -1598,8 +1845,7 @@
           }
         ],
         "valuesSummary": "−50%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "60": [
@@ -1615,6 +1861,7 @@
         "mana": 0,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "song",
           "buff",
@@ -1634,8 +1881,7 @@
           }
         ],
         "valuesSummary": "+55%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Thunderous Vocalization",
@@ -1646,9 +1892,10 @@
         "categorySlug": "Skill_Singing",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "damage"
         ],
@@ -1673,17 +1920,16 @@
           }
         ],
         "valuesSummary": "150–350% dmg (L1–L60) · 60 Magic dmg",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ]
   },
   "entries": [
     {
-      "name": "Beats of War",
-      "slug": "Beats_of_War",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beats_of_War",
-      "description": "Immerse your group in an ominous beat, increasing their Strength, Agility, and Dexterity of you and your group by 2 (L1) to 4 (L16) for 18 seconds.",
+      "name": "Beats of Battle",
+      "slug": "Beats_of_Battle",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Beats_of_Battle",
+      "description": "Immerse your group in an ominous beat, increasing their Strength, Agility, and Dexterity by 2 (L1) to 4 (L16) for 18 seconds.",
       "category": "Percussion",
       "categorySlug": "Skill_Percussion",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion",
@@ -1691,6 +1937,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -1739,8 +1986,7 @@
         "AGI",
         "DEX",
         "STR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Hymn of the Dead",
@@ -1754,18 +2000,18 @@
       "mana": 0,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Throw",
       "slug": "Throw",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Throw",
-      "description": "Throw a throwing weapon at your target. This skill requires a throwing weapon.",
+      "description": "Throw a throwing weapon at your target. Requires throwing weapon.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1773,14 +2019,53 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
+    },
+    {
+      "name": "Whistling Slash",
+      "slug": "Whistling_Slash",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash",
+      "description": "Whistle an invigorating tune as you slash at your target, dealing 100% Weapon Ratio Damage and increasing your Strength by 5 for 30 seconds. This ability requires a one-handed weapon.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 1,
+      "type": "ability",
+      "tags": [
+        "damage",
+        "buff",
+        "STR"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "100% weapon dmg",
+          "sortKey": 100
+        },
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 5,
+          "display": "+5 Strength",
+          "sortKey": 5,
+          "statTag": "STR"
+        }
+      ],
+      "valuesSummary": "100% weapon dmg · +5 Strength",
+      "statTags": [
+        "STR"
+      ]
     },
     {
       "name": "Screaming Vocalization",
@@ -1793,7 +2078,8 @@
       "location": "Vendor",
       "mana": 3,
       "castTime": null,
-      "level": 1,
+      "level": 2,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -1821,55 +2107,21 @@
         }
       ],
       "valuesSummary": "150–350% dmg (L1–L60) · 2–5 Magic dmg (L1–L4)",
-      "statTags": [],
-      "type": "ability"
-    },
-    {
-      "name": "Dissonant Riffs",
-      "slug": "Dissonant_Riffs",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dissonant_Riffs",
-      "description": "Overwhelm your target with unnerving riffs, dealing 2 (L2) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
-      "category": "Brass",
-      "categorySlug": "Skill_Brass_Instruments",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
-      "location": "Vendor",
-      "mana": 0,
-      "castTime": null,
-      "level": 2,
-      "tags": [
-        "dot"
-      ],
-      "primaryTag": "dot",
-      "effects": [
-        {
-          "kind": "dot",
-          "min": 2,
-          "max": 20,
-          "minLevel": 2,
-          "maxLevel": 60,
-          "interval": 6,
-          "duration": 18,
-          "damageType": "Magic",
-          "display": "2–20 Magic/6s (18s) (L2–L60)",
-          "sortKey": 60
-        }
-      ],
-      "valuesSummary": "2–20 Magic/6s (18s) (L2–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Somniferous Serenade",
       "slug": "Somniferous_Serenade",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Somniferous_Serenade",
-      "description": "Enthrall your target with a somniferous serenade, incapacitating them for 18 seconds.",
-      "category": "String",
-      "categorySlug": "Skill_Stringed_Instruments",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+      "description": "Enthrall your target with a somniferous serenade, incapacitating them for 18 seconds. This ability is removed by damage.",
+      "category": "Wind",
+      "categorySlug": "Skill_Wind_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -1884,14 +2136,13 @@
         }
       ],
       "valuesSummary": "18s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Healing Hymn",
       "slug": "Healing_Hymn",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Hymn",
-      "description": "Immerse your group in a soothing hymn, increasing their Health Regeneration by 2 (L1) to 20 (L60) for 18 seconds.",
+      "description": "Immerse your group in a soothing hymn, increasing their Health Regeneration by 2 (L1) to 12 (L60) for 18 seconds.",
       "category": "String",
       "categorySlug": "Skill_Stringed_Instruments",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
@@ -1899,6 +2150,7 @@
       "mana": 0,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -1910,46 +2162,45 @@
           "kind": "buff",
           "stat": "Health Regeneration",
           "min": 2,
-          "max": 20,
+          "max": 12,
           "minLevel": 1,
           "maxLevel": 60,
-          "display": "+2–20 Health Regeneration (L1–L60)",
-          "sortKey": 20,
+          "display": "+2–12 Health Regeneration (L1–L60)",
+          "sortKey": 12,
           "statTag": "HP REGEN"
         }
       ],
-      "valuesSummary": "+2–20 Health Regeneration (L1–L60)",
+      "valuesSummary": "+2–12 Health Regeneration (L1–L60)",
       "statTags": [
         "HP REGEN"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Siren's Call",
       "slug": "Siren's_Call",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Call",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Call",
       "description": "Enthrall your target with an alluring call, forcing them to fight for you for up to 18 seconds. This ability has a slight chance to end early.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "category": "Wind",
+      "categorySlug": "Skill_Wind_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
       "location": "Vendor",
       "mana": 5,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Traveler's March",
       "slug": "Traveler's_March",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Traveler%27s_March",
-      "description": "Inspire your group with a rousing march, increasing their Movement Speed by 25% (L5) to 75% (L60) for 18 seconds. Can only be used outdoors.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Traveler's_March",
+      "description": "Inspire your group with a rousing march, increasing their Movement Speed by 20% (L5) to 65% (L60) for 18 seconds. Can only be used outdoors.",
       "category": "Percussion",
       "categorySlug": "Skill_Percussion",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion",
@@ -1957,6 +2208,7 @@
       "mana": 0,
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -1967,30 +2219,30 @@
         {
           "kind": "buff",
           "stat": "Movement Speed",
-          "min": 25,
-          "max": 75,
+          "min": 20,
+          "max": 65,
           "unit": "%",
-          "display": "+25–75%",
-          "sortKey": 75,
+          "display": "+20–65%",
+          "sortKey": 65,
           "statTag": "MS"
         }
       ],
-      "valuesSummary": "+25–75%",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "+20–65%",
+      "statTags": []
     },
     {
       "name": "Chant of Purity",
       "slug": "Chant_of_Purity",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Purity?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Purity",
       "description": "Immerse your gorup in a rhythmic chant, increasing their Poison and Disease Resistance by 5 (L6) to 10 (L26) for 18 seconds.",
-      "category": "String",
-      "categorySlug": "Skill_Stringed_Instruments",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+      "category": "Percussion",
+      "categorySlug": "Skill_Percussion_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2023,8 +2275,7 @@
       "valuesSummary": "+5–10 Poison and Disease Resistance (L6–L26) · +5–10 Disease Resistance (L6–L26)",
       "statTags": [
         "DR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Repel",
@@ -2038,6 +2289,7 @@
       "mana": 3,
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "aoe"
       ],
@@ -2055,13 +2307,12 @@
         }
       ],
       "valuesSummary": "−75–750 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Aria de Lento",
-      "slug": "Aria_de_Lento",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aria_de_Lento",
+      "name": "Lento's Aria of Stillness",
+      "slug": "Lento's_Aria_of_Stillness",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lento's_Aria_of_Stillness",
       "description": "Oppress nearby targets with an echoing aria, decreasing their Movement Speed by 20% and Attack Speed by 10% for 18 seconds. This ability is considered a Secondary Slow.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
@@ -2070,6 +2321,7 @@
       "mana": 0,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "debuff",
         "slow",
@@ -2089,14 +2341,13 @@
         }
       ],
       "valuesSummary": "−20%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Disruptive Riffs",
-      "slug": "Disruptive_Riffs",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disruptive_Riffs",
-      "description": "Overwhelm your target with unnerving riffs, dealing 4 (L8) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
+      "name": "Vellicosa's Fanfare",
+      "slug": "Vellicosa's_Fanfare",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Fanfare",
+      "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 100 (L60) Magic Damage every 6 seconds for 18 seconds.",
       "category": "Brass",
       "categorySlug": "Skill_Brass_Instruments",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -2104,6 +2355,7 @@
       "mana": 0,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "dot"
       ],
@@ -2111,26 +2363,25 @@
       "effects": [
         {
           "kind": "dot",
-          "min": 4,
-          "max": 20,
+          "min": 8,
+          "max": 100,
           "minLevel": 8,
           "maxLevel": 60,
           "interval": 6,
           "duration": 18,
           "damageType": "Magic",
-          "display": "4–20 Magic/6s (18s) (L8–L60)",
-          "sortKey": 60
+          "display": "8–100 Magic/6s (18s) (L8–L60)",
+          "sortKey": 300
         }
       ],
-      "valuesSummary": "4–20 Magic/6s (18s) (L8–L60)",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "8–100 Magic/6s (18s) (L8–L60)",
+      "statTags": []
     },
     {
       "name": "Languid Lullaby",
       "slug": "Languid_Lullaby",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Languid_Lullaby",
-      "description": "Soothe your target with a languid lullaby, reducing their Aggro Radius for 2 minutes. Has a very slight chance to end early.",
+      "description": "Soothe your target with a languid lullaby, reducing their Aggro Radius for 18 seconds. Has a very slight chance to end early and has additional effects in PvP.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
@@ -2138,14 +2389,14 @@
       "mana": 0,
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "debuff"
       ],
       "primaryTag": "debuff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Dissonant Vocalization",
@@ -2159,6 +2410,7 @@
       "mana": 10,
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2183,8 +2435,7 @@
         }
       ],
       "valuesSummary": "150–350% dmg (L1–L60) · 15 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Unifying Anthem",
@@ -2198,6 +2449,7 @@
       "mana": 9999,
       "castTime": null,
       "level": 11,
+      "type": "ability",
       "tags": [
         "buff"
       ],
@@ -2215,13 +2467,12 @@
         }
       ],
       "valuesSummary": "+10000–20000 faction standing with them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Allegro con Brio",
-      "slug": "Allegro_con_Brio",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_con_Brio",
+      "name": "Faedawyn's Arcane Alacrity",
+      "slug": "Faedawyn's_Arcane_Alacrity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Faedawyn's_Arcane_Alacrity",
       "description": "Inspire your group with an energetic allegro, increasing their Casting Speed by 10% for 18 seconds.",
       "category": "String",
       "categorySlug": "Skill_Stringed_Instruments",
@@ -2230,6 +2481,7 @@
       "mana": 0,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2251,14 +2503,13 @@
       "valuesSummary": "+10%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
-      "name": "Allegro con Fuoco",
-      "slug": "Allegro_con_Fuoco",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_con_Fuoco",
-      "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% for 18 seconds. Stacks with Primary Haste effects.",
+      "name": "Overture of Speed",
+      "slug": "Overture_of_Speed",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Overture_of_Speed",
+      "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% for 18 seconds. This ability is considered a Secondary Haste.",
       "category": "String",
       "categorySlug": "Skill_Stringed_Instruments",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
@@ -2266,6 +2517,7 @@
       "mana": 0,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2285,13 +2537,12 @@
         }
       ],
       "valuesSummary": "+10%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Allegro Lento",
-      "slug": "Allegro_Lento",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_Lento",
+      "name": "Chords of Quickness",
+      "slug": "Chords_of_Quickness",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chords_of_Quickness",
       "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 10% (L12) to 15% (L16) for 18 seconds.",
       "category": "String",
       "categorySlug": "Skill_Stringed_Instruments",
@@ -2300,6 +2551,7 @@
       "mana": 0,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2319,13 +2571,12 @@
         }
       ],
       "valuesSummary": "+10–15%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Siren's Allure",
       "slug": "Siren's_Allure",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Allure",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Allure",
       "description": "Charm your target with an alluring melody, forcing them to fight alongside you for 18 seconds",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
@@ -2334,14 +2585,14 @@
       "mana": 12,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Frightful Screech",
@@ -2355,6 +2606,7 @@
       "mana": 20,
       "castTime": null,
       "level": 13,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "fear"
@@ -2362,13 +2614,12 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Selstie's Aeolian Aria",
       "slug": "Selstie's_Aeolian_Aria",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Selstie%27s_Aeolian_Aria",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Selstie's_Aeolian_Aria",
       "description": "Immerse your group in an ethereal aria, granting them the ability to breathe underwater for 18 seconds.",
       "category": "Wind",
       "categorySlug": "Skill_Wind_Instruments",
@@ -2377,6 +2628,7 @@
       "mana": 0,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2385,29 +2637,51 @@
       "primaryTag": "song",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Languid Lament",
-      "slug": "Languid_Lament",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Languid_Lament",
-      "description": "Soothe your target with a languid lament, reducing their Proximity Aggro for 2 minutes.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "name": "Whistling Slash II",
+      "slug": "Whistling_Slash_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash_II",
+      "description": "Whistle an invigorating tune as you slash at your target, dealing 105% Weapon Ratio Damage and increasing your Haste by 20% as well as your Strength and Armor Class by 5 for 30 seconds. This ability requires a one-handed weapon.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
-        "debuff"
+        "damage",
+        "buff"
       ],
-      "primaryTag": "debuff",
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "105% weapon dmg",
+          "sortKey": 105
+        },
+        {
+          "kind": "buff",
+          "stat": "Haste",
+          "min": 20,
+          "max": 20,
+          "unit": "%",
+          "display": "+20%",
+          "sortKey": 20
+        },
+        {
+          "kind": "buff",
+          "stat": "as well as your Strength and Armor Class",
+          "amount": 5,
+          "display": "+5 as well as your Strength and Armor Class",
+          "sortKey": 5
+        }
+      ],
+      "valuesSummary": "105% weapon dmg · +20% · +5 as well as your Strength and Armor Class",
+      "statTags": []
     },
     {
       "name": "Mesmerizing Whisper",
@@ -2418,9 +2692,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -2435,55 +2710,57 @@
         }
       ],
       "valuesSummary": "2s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Chant of Magic Resistance",
       "slug": "Chant_of_Magic_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_Magic_Resistance",
-      "description": "Immerse your group in a rhythmic chant, increasing their Magic Resistance by 15 for 18 seconds.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "description": "Immerse your party in a rhythmic chant, increasing their Magic Resistance by 5 (L16) to 10 (L36) for 18 seconds.",
+      "category": "Percussion",
+      "categorySlug": "Skill_Percussion_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
-        "song",
         "buff",
         "MR"
       ],
-      "primaryTag": "song",
+      "primaryTag": "buff",
       "effects": [
         {
           "kind": "buff",
           "stat": "Magic Resistance",
-          "amount": 15,
-          "display": "+15 Magic Resistance",
-          "sortKey": 15,
+          "min": 5,
+          "max": 10,
+          "minLevel": 16,
+          "maxLevel": 36,
+          "display": "+5–10 Magic Resistance (L16–L36)",
+          "sortKey": 10,
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+15 Magic Resistance",
+      "valuesSummary": "+5–10 Magic Resistance (L16–L36)",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
-      "name": "Discordant Riffs",
-      "slug": "Discordant_Riffs",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discordant_Riffs",
-      "description": "Overwhelm your target with unnerving riffs, dealing 8 (L16) to 20 (L60) Magic Damage every 6 seconds for 18 seconds.",
-      "category": "String",
-      "categorySlug": "Skill_Stringed_Instruments",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+      "name": "Vellicosa's Tantara",
+      "slug": "Vellicosa's_Tantara",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Tantara",
+      "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 100 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 20 (L60) damage when afflicted by both.",
+      "category": "Brass",
+      "categorySlug": "Skill_Brass_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "dot"
       ],
@@ -2491,33 +2768,33 @@
       "effects": [
         {
           "kind": "dot",
-          "min": 8,
-          "max": 20,
+          "min": 12,
+          "max": 100,
           "minLevel": 16,
           "maxLevel": 60,
           "interval": 6,
           "duration": 18,
           "damageType": "Magic",
-          "display": "8–20 Magic/6s (18s) (L16–L60)",
-          "sortKey": 60
+          "display": "12–100 Magic/6s (18s) (L16–L60)",
+          "sortKey": 300
         }
       ],
-      "valuesSummary": "8–20 Magic/6s (18s) (L16–L60)",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "12–100 Magic/6s (18s) (L16–L60)",
+      "statTags": []
     },
     {
       "name": "Hymn of Inspiration",
       "slug": "Hymn_of_Inspiration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Inspiration",
-      "description": "Immerse your group in a soothing hymn, increasing their Mana Regeneration by 1 (L8) to 15 (L60) for 18 seconds.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "description": "Immerse your group in a soothing hymn, increasing their Mana Regeneration by 1 (L8) to 10 (L60) for 18 seconds.",
+      "category": "String",
+      "categorySlug": "Skill_String_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_String_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2529,25 +2806,78 @@
           "kind": "buff",
           "stat": "Mana Regeneration",
           "min": 1,
-          "max": 15,
+          "max": 10,
           "minLevel": 8,
           "maxLevel": 60,
-          "display": "+1–15 Mana Regeneration (L8–L60)",
-          "sortKey": 15,
+          "display": "+1–10 Mana Regeneration (L8–L60)",
+          "sortKey": 10,
           "statTag": "MANA"
         }
       ],
-      "valuesSummary": "+1–15 Mana Regeneration (L8–L60)",
+      "valuesSummary": "+1–10 Mana Regeneration (L8–L60)",
       "statTags": [
         "MANA"
+      ]
+    },
+    {
+      "name": "Aristam's Steady Tread",
+      "slug": "Aristam's_Steady_Tread",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aristam's_Steady_Tread",
+      "description": "Immerse your party with a subdued march, increasing their Movement Speed by 5% (L5) to 10% (L60) for 18 seconds. This ability can be used indoors.",
+      "category": "Percussion",
+      "categorySlug": "Skill_Percussion_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instruments",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 18,
+      "type": "ability",
+      "tags": [
+        "buff",
+        "movement"
       ],
-      "type": "ability"
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Movement Speed",
+          "min": 5,
+          "max": 10,
+          "unit": "%",
+          "display": "+5–10%",
+          "sortKey": 10,
+          "statTag": "MS"
+        }
+      ],
+      "valuesSummary": "+5–10%",
+      "statTags": []
+    },
+    {
+      "name": "Disenchanting Blare",
+      "slug": "Disenchanting_Blare",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disenchanting_Blare",
+      "description": "Dispel magic from your target, removing one harmful effect at random.",
+      "category": "Brass",
+      "categorySlug": "Skill_Brass_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 18,
+      "type": "ability",
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Sneak",
       "slug": "Sneak",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sneak",
-      "description": "Begin to sneak, causing you to be hidden from enemies while behind them.",
+      "description": "Walk silently, rendering you undetectable to targets while behind them.",
       "category": "Sub",
       "categorySlug": "Skill_Subterfuge",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Subterfuge",
@@ -2555,20 +2885,18 @@
       "mana": "Innate",
       "castTime": null,
       "level": 20,
-      "tags": [
-        "invisibility"
-      ],
-      "primaryTag": "invisibility",
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Cacophonic Vocalization",
       "slug": "Cacophonic_Vocalization",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cacophonic_Vocalization",
-      "description": "Release a cacophonic shout at your target, dealing 25 Magic Damage, plus 150% (L1) to 350% (L60) damage variance. Costs Mana. Shares a cooldown with other Shout abilities.",
+      "description": "Release a cacophonic shout at your target, dealing 22 Magic Damage, plus 150% (L1) to 350% (L60) damage variance. Costs Mana. Shares a cooldown with other Shout abilities.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
@@ -2576,6 +2904,7 @@
       "mana": 50,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2593,28 +2922,28 @@
         },
         {
           "kind": "damage",
-          "amount": 25,
+          "amount": 22,
           "damageType": "Magic",
-          "display": "25 Magic dmg",
-          "sortKey": 25
+          "display": "22 Magic dmg",
+          "sortKey": 22
         }
       ],
-      "valuesSummary": "150–350% dmg (L1–L60) · 25 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "150–350% dmg (L1–L60) · 22 Magic dmg",
+      "statTags": []
     },
     {
       "name": "Sonnet of the Unseen",
       "slug": "Sonnet_of_the_Unseen",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sonnet_of_the_Unseen",
-      "description": "Immerse your group in a wistful sonnet, rendering them unseen by the living and granting them the ability to see invisible entities for 18 seconds. This ability has a slight chance to end early.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "description": "Immerse your group in a wistful sonnet, rendering them unseen by the living and granting them the ability to see invisible entities for 18 seconds. This ability has a slight chance to end early, and requires a Wind Instrument.",
+      "category": "Wind",
+      "categorySlug": "Skill_Wind_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Wind_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2624,29 +2953,78 @@
       "primaryTag": "song",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
+    },
+    {
+      "name": "Discordant Purge",
+      "slug": "Discordant_Purge",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Discordant_Purge",
+      "description": "Purge magic from your target, removing one beneficial effect at random.",
+      "category": "Brass",
+      "categorySlug": "Skill_Brass_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 22,
+      "type": "ability",
+      "tags": [
+        "purge"
+      ],
+      "primaryTag": "purge",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Paralyzing Shriek",
+      "slug": "Paralyzing_Shriek",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Paralyzing_Shriek",
+      "description": "Release a paralyzing shriek at up to 4 foes around you, stunning them for 3 seconds. This ability costs Mana. This ability shares a cooldown with other Shout abilities.",
+      "category": "Singing",
+      "categorySlug": "Skill_Singing",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 22,
+      "type": "ability",
+      "tags": [
+        "crowd-control",
+        "stun"
+      ],
+      "primaryTag": "stun",
+      "effects": [
+        {
+          "kind": "crowd-control",
+          "duration": 3,
+          "display": "3s duration",
+          "sortKey": 3
+        }
+      ],
+      "valuesSummary": "3s duration",
+      "statTags": []
     },
     {
       "name": "Siren's Enchantment",
       "slug": "Siren's_Enchantment",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Enchantment?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Enchantment",
       "description": "Charm your target with an enchanting melody, forcing them to fight alonside you for 18 seconds.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Subduing Whisper",
@@ -2657,9 +3035,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -2674,21 +3053,53 @@
         }
       ],
       "valuesSummary": "3s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Aria De Largo",
-      "slug": "Aria_De_Largo",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aria_De_Largo",
+      "name": "Chant of the Elements",
+      "slug": "Chant_of_the_Elements",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chant_of_the_Elements",
+      "description": "Immerse your party in a rhythmic chant, increasing their Fire, Cold, and Electric Resistance by 5 (L26) to 10 (L46) for 18 seconds.",
+      "category": "Percussion",
+      "categorySlug": "Skill_Percussion_Instrument",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Percussion_Instrument",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 26,
+      "type": "ability",
+      "tags": [
+        "buff"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Electric Resistance",
+          "min": 5,
+          "max": 10,
+          "minLevel": 26,
+          "maxLevel": 46,
+          "display": "+5–10 Electric Resistance (L26–L46)",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "+5–10 Electric Resistance (L26–L46)",
+      "statTags": []
+    },
+    {
+      "name": "Lento's Aria of Apathy",
+      "slug": "Lento's_Aria_of_Apathy",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lento's_Aria_of_Apathy",
       "description": "Oppress nearby targets with an echoing aria, decreasing their Movement Speed by 30% and Attack Speed by 15% for 18 seconds.",
-      "category": "String",
-      "categorySlug": "Skill_Stringed_Instruments",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Stringed_Instruments",
+      "category": "Singing",
+      "categorySlug": "Skill_Singing",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "ability",
       "tags": [
         "debuff",
         "slow",
@@ -2708,21 +3119,21 @@
         }
       ],
       "valuesSummary": "−30%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
-      "name": "Allegro Moderato",
-      "slug": "Allegro_Moderato",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Allegro_Moderato",
-      "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 25% (L28) to 35% (L32) for 18 seconds.",
-      "category": "Singing",
-      "categorySlug": "Skill_Singing",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "name": "Chords of Rapidity",
+      "slug": "Chords_of_Rapidity",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Chords_of_Rapidity",
+      "description": "Inspire your group with an energetic allegro, increasing their Attack Speed by 20% (L28) to 25% (L32) for 18 seconds.",
+      "category": "String",
+      "categorySlug": "Skill_String_Instruments",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_String_Instruments",
       "location": "Vendor",
       "mana": 0,
       "castTime": null,
       "level": 28,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2733,17 +3144,48 @@
         {
           "kind": "buff",
           "stat": "Attack Speed",
-          "min": 25,
-          "max": 35,
+          "min": 20,
+          "max": 25,
           "unit": "%",
-          "display": "+25–35%",
-          "sortKey": 35,
+          "display": "+20–25%",
+          "sortKey": 25,
           "statTag": "ATK"
         }
       ],
-      "valuesSummary": "+25–35%",
-      "statTags": [],
-      "type": "ability"
+      "valuesSummary": "+20–25%",
+      "statTags": []
+    },
+    {
+      "name": "Crescendo",
+      "slug": "Crescendo",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Crescendo",
+      "description": "Raise your song in a mighty crescendo, increasing your bonus with all instruments by 50% for 30 seconds. This ability costs Mana.",
+      "category": "Singing",
+      "categorySlug": "Skill_Singing",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
+      "location": "Vendor",
+      "mana": 200,
+      "castTime": null,
+      "level": 30,
+      "type": "ability",
+      "tags": [
+        "buff",
+        "self"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "bonus with all instruments",
+          "min": 50,
+          "max": 50,
+          "unit": "%",
+          "display": "+50%",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "+50%",
+      "statTags": []
     },
     {
       "name": "Wailing Vocalization",
@@ -2757,6 +3199,7 @@
       "mana": 70,
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2781,8 +3224,51 @@
         }
       ],
       "valuesSummary": "150–290% dmg (L1–L60) · 29 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
+    },
+    {
+      "name": "Whistling Slash III",
+      "slug": "Whistling_Slash_III",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Whistling_Slash_III",
+      "description": "Whistle an invigorating tune as you slash at your target, dealing 110% Weapon Ratio Damage and increasing your Haste by 30% as well as your Strength and Armor Class by 10 for 30 seconds. This ability requires a one-handed weapon.",
+      "category": "Might",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 30,
+      "type": "ability",
+      "tags": [
+        "damage",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "110% weapon dmg",
+          "sortKey": 110
+        },
+        {
+          "kind": "buff",
+          "stat": "Haste",
+          "min": 30,
+          "max": 30,
+          "unit": "%",
+          "display": "+30%",
+          "sortKey": 30
+        },
+        {
+          "kind": "buff",
+          "stat": "as well as your Strength and Armor Class",
+          "amount": 10,
+          "display": "+10 as well as your Strength and Armor Class",
+          "sortKey": 10
+        }
+      ],
+      "valuesSummary": "110% weapon dmg · +30% · +10 as well as your Strength and Armor Class",
+      "statTags": []
     },
     {
       "name": "Despondent Riffs",
@@ -2796,6 +3282,7 @@
       "mana": 0,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "dot"
       ],
@@ -2815,8 +3302,7 @@
         }
       ],
       "valuesSummary": "12–20 Magic/6s (18s) (L32–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Harmony of Visions",
@@ -2830,14 +3316,14 @@
       "mana": 0,
       "castTime": null,
       "level": 33,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Entrancing Whisper",
@@ -2848,9 +3334,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -2865,29 +3352,28 @@
         }
       ],
       "valuesSummary": "4s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Siren's Compulsion",
       "slug": "Siren's_Compulsion",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Compulsion?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Compulsion",
       "description": "Charm your target with compulsive melody, forcing them to fight alongside you for 18 seconds.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Dismal Riffs",
@@ -2901,6 +3387,7 @@
       "mana": 0,
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "dot"
       ],
@@ -2920,8 +3407,7 @@
         }
       ],
       "valuesSummary": "20–30 Magic/6s (18s) (L40–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Discordant Vocalization",
@@ -2932,9 +3418,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -2959,8 +3446,7 @@
         }
       ],
       "valuesSummary": "150–350% dmg (L1–L60) · 45 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Allegro Assai",
@@ -2974,6 +3460,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -2993,8 +3480,7 @@
         }
       ],
       "valuesSummary": "+40–50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Aria De Grave",
@@ -3008,6 +3494,7 @@
       "mana": 0,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "debuff",
         "slow",
@@ -3027,8 +3514,7 @@
         }
       ],
       "valuesSummary": "−40%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Somnolent Whisper",
@@ -3039,9 +3525,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 46,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -3056,29 +3543,28 @@
         }
       ],
       "valuesSummary": "5s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Siren's Thrall",
       "slug": "Siren's_Thrall",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren%27s_Thrall?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Siren's_Thrall",
       "description": "Charm your target with an enthralling melody, forcing them to fight alongside you for 18 seconds.",
       "category": "Singing",
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Chaotic Vocalization",
@@ -3089,9 +3575,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3116,8 +3603,7 @@
         }
       ],
       "valuesSummary": "150–350% dmg (L1–L60) · 55 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Hypnotic Whisper",
@@ -3128,9 +3614,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "mez"
@@ -3145,8 +3632,7 @@
         }
       ],
       "valuesSummary": "6s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Aria de Larghissimo",
@@ -3160,6 +3646,7 @@
       "mana": 0,
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "debuff",
         "slow",
@@ -3179,8 +3666,7 @@
         }
       ],
       "valuesSummary": "−50%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Molto Allegro",
@@ -3194,6 +3680,7 @@
       "mana": 0,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "song",
         "buff",
@@ -3213,8 +3700,7 @@
         }
       ],
       "valuesSummary": "+55%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Thunderous Vocalization",
@@ -3225,9 +3711,10 @@
       "categorySlug": "Skill_Singing",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Singing",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "damage"
       ],
@@ -3252,8 +3739,7 @@
         }
       ],
       "valuesSummary": "150–350% dmg (L1–L60) · 60 Magic dmg",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     }
   ]
 }

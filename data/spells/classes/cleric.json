@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Cleric Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleric",
-  "entryCount": 125,
+  "entryCount": 124,
   "levels": [
     1,
     4,
@@ -38,6 +38,7 @@
         "mana": 0,
         "castTime": "Instant",
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -50,8 +51,7 @@
           }
         ],
         "valuesSummary": "30–60% weapon + 4–60 Holy (L1–L60)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Resilience",
@@ -65,6 +65,7 @@
         "mana": 10,
         "castTime": "4.0s",
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -86,8 +87,7 @@
         "valuesSummary": "+10–20 Health (L1–L8)",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Minor Heal",
@@ -101,6 +101,7 @@
         "mana": 10,
         "castTime": "1.5s",
         "level": 1,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -114,8 +115,7 @@
           }
         ],
         "valuesSummary": "13 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Polar Alignment: North",
@@ -129,6 +129,7 @@
         "mana": 5,
         "castTime": "5s",
         "level": 1,
+        "type": "spell",
         "tags": [
           "utility",
           "self"
@@ -136,8 +137,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rebuke",
@@ -151,6 +151,7 @@
         "mana": 7,
         "castTime": "1.5s",
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -168,8 +169,7 @@
           }
         ],
         "valuesSummary": "3–5 Holy dmg (L1–L4)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "4": [
@@ -185,6 +185,7 @@
         "mana": 16,
         "castTime": "Instant",
         "level": 4,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -198,14 +199,13 @@
           }
         ],
         "valuesSummary": "25 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Blessing of Smiting",
         "slug": "Blessing_of_Smiting",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting?action=edit&redlink=1",
-        "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting",
+        "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Holy Damage, increasing with the attacker's level and Strength.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -213,6 +213,7 @@
         "mana": 10,
         "castTime": "3.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage",
           "buff"
@@ -220,14 +221,13 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cure Disease",
         "slug": "Cure_Disease",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-        "description": "Cures your target, removing one Disease effect.",
+        "description": "Cure your target, removing one Disease effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -235,14 +235,14 @@
         "mana": 10,
         "castTime": "2.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cure Poison",
@@ -256,20 +256,20 @@
         "mana": 10,
         "castTime": "2.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Conjure a magical gate, returning you to your bind location.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -277,6 +277,7 @@
         "mana": 55,
         "castTime": "5.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "summon",
           "teleport"
@@ -284,13 +285,12 @@
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Hymn of Smiting",
         "slug": "Hymn_of_Smiting",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting",
         "description": "Bless your party with smiting, granting them a change to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
         "category": "Abj",
         "categorySlug": "Skill_Alteration",
@@ -299,6 +299,7 @@
         "mana": 40,
         "castTime": "4.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage",
           "buff"
@@ -306,8 +307,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Heal",
@@ -321,6 +321,7 @@
         "mana": 18,
         "castTime": "1.5s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -334,8 +335,7 @@
           }
         ],
         "valuesSummary": "24 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful I",
@@ -349,6 +349,7 @@
         "mana": 15,
         "castTime": "1.5s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -393,8 +394,7 @@
         "statTags": [
           "BLOCK",
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Rebuke II",
@@ -408,6 +408,7 @@
         "mana": 15,
         "castTime": "2s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -425,8 +426,7 @@
           }
         ],
         "valuesSummary": "11–14 Holy dmg (L4–L7)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Smite the Dead I",
@@ -440,6 +440,7 @@
         "mana": 15,
         "castTime": "2.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -454,14 +455,13 @@
           }
         ],
         "valuesSummary": "14 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -469,14 +469,14 @@
         "mana": 50,
         "castTime": "6.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Hammer of the Righteous",
@@ -490,6 +490,7 @@
         "mana": 10,
         "castTime": "3.0s",
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -498,8 +499,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "8": [
@@ -507,7 +507,7 @@
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Dispell magic from your target, removing one harmful effect.",
+        "description": "Dispel magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -515,20 +515,20 @@
         "mana": 25,
         "castTime": "1.5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fear the Dead",
         "slug": "Fear_the_Dead",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_the_Dead",
-        "description": "Fears an undead target, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+        "description": "Fear a target undead, causing them to flee for 18 seconds. This spell has a slight chance to be removed by damage.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -536,6 +536,7 @@
         "mana": 20,
         "castTime": "2.5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "fear"
@@ -543,8 +544,7 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Heal",
@@ -558,6 +558,7 @@
         "mana": 35,
         "castTime": "1.5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -571,14 +572,13 @@
           }
         ],
         "valuesSummary": "50 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Invisibility versus Undead",
         "slug": "Invisibility_versus_Undead",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-        "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
+        "description": "Shroud a target group member in darkness, rendering them unseen by the undead for 10 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -586,6 +586,7 @@
         "mana": 10,
         "castTime": "5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility"
@@ -593,8 +594,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Redemption",
@@ -608,6 +608,7 @@
         "mana": 100,
         "castTime": "6.0s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -621,8 +622,7 @@
           }
         ],
         "valuesSummary": "15% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Poison Protection",
@@ -636,6 +636,7 @@
         "mana": 10,
         "castTime": "2.5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "PR"
@@ -654,8 +655,7 @@
         "valuesSummary": "+5 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Promise of Mending I",
@@ -669,6 +669,7 @@
         "mana": 41,
         "castTime": "3s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -684,8 +685,7 @@
           }
         ],
         "valuesSummary": "70 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rebuke III",
@@ -699,6 +699,7 @@
         "mana": 30,
         "castTime": "2.5s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -713,8 +714,7 @@
           }
         ],
         "valuesSummary": "30 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Resilience",
@@ -728,6 +728,7 @@
         "mana": 30,
         "castTime": "4.0s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -746,8 +747,7 @@
         "valuesSummary": "+50 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Sense Magic",
@@ -761,6 +761,7 @@
         "mana": 20,
         "castTime": "5.0s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "utility"
@@ -768,8 +769,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Shackle",
@@ -783,6 +783,7 @@
         "mana": 25,
         "castTime": "2.0s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root"
@@ -797,8 +798,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Food",
@@ -812,14 +812,14 @@
         "mana": 10,
         "castTime": "3.0s",
         "level": 8,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "12": [
@@ -835,6 +835,7 @@
         "mana": 35,
         "castTime": "Instant",
         "level": 12,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -848,14 +849,13 @@
           }
         ],
         "valuesSummary": "60 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Disease Protection",
         "slug": "Disease_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-        "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
+        "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -863,6 +863,7 @@
         "mana": 10,
         "castTime": "2.5s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "DR"
@@ -881,8 +882,7 @@
         "valuesSummary": "+5 Disease Resistance",
         "statTags": [
           "DR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Healing light",
@@ -896,6 +896,7 @@
         "mana": 90,
         "castTime": "2.0s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -909,14 +910,13 @@
           }
         ],
         "valuesSummary": "47 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Pacify",
         "slug": "Lesser_Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pacify",
-        "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 24.",
+        "description": "Pacify your target, reducing their Aggro Radius for 2 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -924,6 +924,7 @@
         "mana": 10,
         "castTime": "1.5s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -931,8 +932,7 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful II",
@@ -946,6 +946,7 @@
         "mana": 25,
         "castTime": "1.5s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -990,8 +991,7 @@
         "statTags": [
           "BLOCK",
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Smite the Dead II",
@@ -1005,6 +1005,7 @@
         "mana": 44,
         "castTime": "2.0s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1019,14 +1020,13 @@
           }
         ],
         "valuesSummary": "67 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Stun",
         "slug": "Stun",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
-        "description": "Shock your target into a daze, stunning them for 4 seconds.",
+        "description": "Rebuke your target, stunning them for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1034,6 +1034,7 @@
         "mana": 15,
         "castTime": "1.0s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "stun"
@@ -1048,14 +1049,13 @@
           }
         ],
         "valuesSummary": "4s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Drink",
         "slug": "Summon_Drink",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-        "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
+        "description": "Summon 1 (L15) to 4 (L20) flasks of water, providing you with sustenance.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -1063,14 +1063,14 @@
         "mana": 10,
         "castTime": "3.0s",
         "level": 12,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "16": [
@@ -1086,12 +1086,12 @@
         "mana": 15,
         "castTime": "1.5s",
         "level": 16,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Corruption Protection",
@@ -1105,6 +1105,7 @@
         "mana": 10,
         "castTime": "2.5s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "COR"
@@ -1123,14 +1124,13 @@
         "valuesSummary": "+5 Corruption Resistance",
         "statTags": [
           "COR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Heal",
         "slug": "Greater_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-        "description": "Greatly heal your target, restoring 278 Health.",
+        "description": "Heal your target, restoring 146 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1138,6 +1138,7 @@
         "mana": 95,
         "castTime": "1.75s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1145,14 +1146,13 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 278,
-            "display": "278 heal",
-            "sortKey": 278
+            "amount": 146,
+            "display": "146 heal",
+            "sortKey": 146
           }
         ],
-        "valuesSummary": "278 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "146 heal",
+        "statTags": []
       },
       {
         "name": "Promise of Mending II",
@@ -1166,6 +1166,7 @@
         "mana": 111,
         "castTime": "3.25s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -1181,8 +1182,7 @@
           }
         ],
         "valuesSummary": "204 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reckoning",
@@ -1196,6 +1196,7 @@
         "mana": 70,
         "castTime": "3s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1210,14 +1211,13 @@
           }
         ],
         "valuesSummary": "97 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Redemption",
         "slug": "Redemption",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Redemption",
-        "description": "Redeem a target corpse, restoring 25% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+        "description": "Redeem a target corpse, restoring 25% Experience.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1225,6 +1225,7 @@
         "mana": 150,
         "castTime": "6.0s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -1238,8 +1239,7 @@
           }
         ],
         "valuesSummary": "25% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Hammer of the Pious",
@@ -1253,6 +1253,7 @@
         "mana": 30,
         "castTime": "3.0s",
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -1261,8 +1262,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "20": [
@@ -1278,6 +1278,7 @@
         "mana": 102,
         "castTime": "Instant",
         "level": 20,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -1291,8 +1292,7 @@
           }
         ],
         "valuesSummary": "187 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Healing",
@@ -1306,6 +1306,7 @@
         "mana": 60,
         "castTime": "0.5s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1319,14 +1320,13 @@
           }
         ],
         "valuesSummary": "112 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Divine Aegis",
         "slug": "Divine_Aegis",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
-        "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds. This spell can be used while stunned, incapacitated, or feared. This spell inflicts Exhausted Soul upon expiration, preventing the application of immunity effects for 30 seconds.",
+        "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1334,6 +1334,7 @@
         "mana": 15,
         "castTime": "Instant",
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "self"
@@ -1341,8 +1342,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Resilience",
@@ -1356,6 +1356,7 @@
         "mana": 75,
         "castTime": "4.0s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -1374,8 +1375,7 @@
         "valuesSummary": "+125 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Healing Light II",
@@ -1389,6 +1389,7 @@
         "mana": 150,
         "castTime": "2.25s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1402,8 +1403,7 @@
           }
         ],
         "valuesSummary": "82 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Inhibit Pain",
@@ -1417,6 +1417,7 @@
         "mana": 30,
         "castTime": "Instant",
         "level": 20,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -1431,8 +1432,7 @@
           }
         ],
         "valuesSummary": "−40%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Poison Resistance",
@@ -1446,6 +1446,7 @@
         "mana": 40,
         "castTime": "5.0s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "PR"
@@ -1464,8 +1465,7 @@
         "valuesSummary": "+15 Poison Resistance",
         "statTags": [
           "PR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Prayer of the Faithful III",
@@ -1479,6 +1479,7 @@
         "mana": 35,
         "castTime": "1.5s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "utility",
@@ -1487,8 +1488,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Smite the Dead III",
@@ -1502,6 +1502,7 @@
         "mana": 85,
         "castTime": "2.0s",
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1516,8 +1517,7 @@
           }
         ],
         "valuesSummary": "135 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "24": [
@@ -1525,7 +1525,7 @@
         "name": "Cleanse Poison",
         "slug": "Cleanse_Poison",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poison",
-        "description": "Cleanse your target, removing two Poison effects.",
+        "description": "Cleanse your target, removing two Poison effects",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1533,20 +1533,20 @@
         "mana": 50,
         "castTime": "3.0s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Disease Resistance",
         "slug": "Disease_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-        "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
+        "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1554,6 +1554,7 @@
         "mana": 40,
         "castTime": "5.0s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "DR"
@@ -1572,8 +1573,7 @@
         "valuesSummary": "+15 Disease Resistance",
         "statTags": [
           "DR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Redemption",
@@ -1587,6 +1587,7 @@
         "mana": 200,
         "castTime": "6.0s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -1600,8 +1601,7 @@
           }
         ],
         "valuesSummary": "35% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Hymn of Greater Resilience",
@@ -1615,6 +1615,7 @@
         "mana": 130,
         "castTime": "5.2s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -1633,8 +1634,7 @@
         "valuesSummary": "+125 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Blessing of Devotion",
@@ -1648,6 +1648,7 @@
         "mana": 65,
         "castTime": "2.5s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1661,14 +1662,13 @@
           }
         ],
         "valuesSummary": "188 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pacify",
         "slug": "Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pacify",
-        "description": "Pacify your target, reducing their Aggro Radius for 3 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 36.",
+        "description": "Pacify your target, reducing their Aggro Radius for 3 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1676,6 +1676,7 @@
         "mana": 25,
         "castTime": "1.5s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -1683,13 +1684,12 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Promise of Mending III",
         "slug": "Promise_of_Mending_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Mending_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Mending_III",
         "description": "Bestow a promise of mending on your target, restoring 344 health after 6 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1698,6 +1698,7 @@
         "mana": 172,
         "castTime": "3.25s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -1713,13 +1714,12 @@
           }
         ],
         "valuesSummary": "344 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reckoning II",
         "slug": "Reckoning_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_II",
         "description": "Strike your target with divine energy, dealing 193 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1728,6 +1728,7 @@
         "mana": 154,
         "castTime": "3.5s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1742,13 +1743,12 @@
           }
         ],
         "valuesSummary": "193 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rite of Purification",
         "slug": "Rite_of_Purification",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Purification?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Purification",
         "description": "Purify your party, removing one Disease and one Poison effect from each member.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1757,20 +1757,20 @@
         "mana": 120,
         "castTime": "3.0s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Superior Heal",
         "slug": "Superior_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Heal",
-        "description": "Massively heal your target, restoring 850 Health.",
+        "description": "Heal your target, restoring 246 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1778,6 +1778,7 @@
         "mana": 148,
         "castTime": "1.75s",
         "level": 24,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1785,21 +1786,20 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 850,
-            "display": "850 heal",
-            "sortKey": 850
+            "amount": 246,
+            "display": "246 heal",
+            "sortKey": 246
           }
         ],
-        "valuesSummary": "850 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "246 heal",
+        "statTags": []
       }
     ],
     "28": [
       {
         "name": "Blessed Barrier IV",
         "slug": "Blessed_Barrier_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessed_Barrier_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessed_Barrier_IV",
         "description": "Shield your target with a blessed barrier, absorbing 367 damage received for 15 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1808,6 +1808,7 @@
         "mana": 185,
         "castTime": "Instant",
         "level": 28,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -1821,13 +1822,12 @@
           }
         ],
         "valuesSummary": "367 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Healing II",
         "slug": "Circle_of_Healing_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_II",
         "description": "Heal your party, restoring 223 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1836,6 +1836,7 @@
         "mana": 90,
         "castTime": "0.5s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1849,8 +1850,7 @@
           }
         ],
         "valuesSummary": "223 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cleanse Disease",
@@ -1864,14 +1864,14 @@
         "mana": 50,
         "castTime": "3.0s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Corruption Resistance",
@@ -1885,6 +1885,7 @@
         "mana": 40,
         "castTime": "5.0s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff",
           "COR"
@@ -1903,13 +1904,12 @@
         "valuesSummary": "+15 Corruption Resistance",
         "statTags": [
           "COR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Healing Light III",
         "slug": "Healing_Light_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Light_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Light_III",
         "description": "Shine a healing light on targets in a frontal cone, restoring 129 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1918,6 +1918,7 @@
         "mana": 210,
         "castTime": "2.25s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1931,13 +1932,12 @@
           }
         ],
         "valuesSummary": "129 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful IV",
         "slug": "Prayer_of_the_Faithful_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_IV",
         "description": "Increases Strength by 23, Mana Regeneration by 2, Secondary Mana Regeneration by 2, Block by 100, chance to activate Fulfillment on melee, and Sense Magic",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1946,19 +1946,19 @@
         "mana": 45,
         "castTime": "1.5s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Scourge the Dead",
         "slug": "Scourge_the_Dead",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead",
         "description": "Scourge a target undead with holy light, dealing 215 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1967,6 +1967,7 @@
         "mana": 121,
         "castTime": "2.0s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1981,8 +1982,7 @@
           }
         ],
         "valuesSummary": "215 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Hammer of the Virtuous",
@@ -1996,6 +1996,7 @@
         "mana": 60,
         "castTime": "3.0s",
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -2004,8 +2005,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "32": [
@@ -2021,14 +2021,14 @@
         "mana": 50,
         "castTime": "4.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Conjure Drink",
@@ -2042,14 +2042,14 @@
         "mana": 20,
         "castTime": "3.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Conjure Food",
@@ -2063,20 +2063,20 @@
         "mana": 20,
         "castTime": "3.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "summon"
         ],
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Heal",
         "slug": "Exceptional_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-        "description": "Strongly heal your target, restoring 473 Health.",
+        "description": "Heal your target, restoring 395 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2084,6 +2084,7 @@
         "mana": 220,
         "castTime": "2.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2091,19 +2092,18 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 473,
-            "display": "473 heal",
-            "sortKey": 473
+            "amount": 395,
+            "display": "395 heal",
+            "sortKey": 395
           }
         ],
-        "valuesSummary": "473 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "395 heal",
+        "statTags": []
       },
       {
         "name": "Lesser Resolution",
         "slug": "Lesser_Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resolution",
         "description": "Bestow lesser resolution upon your target, increasing their maximum Health by 175 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2112,6 +2112,7 @@
         "mana": 100,
         "castTime": "4.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -2130,13 +2131,12 @@
         "valuesSummary": "+175 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Promise of Renewal",
         "slug": "Promise_of_Renewal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal",
         "description": "Bestow a promise of renewal on your target, restoring 553 Health after 6 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2145,6 +2145,7 @@
         "mana": 257,
         "castTime": "3.5s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -2160,13 +2161,12 @@
           }
         ],
         "valuesSummary": "553 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reckoning III",
         "slug": "Reckoning_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_III",
         "description": "Strike your target with divine energy, dealing 300 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2175,6 +2175,7 @@
         "mana": 198,
         "castTime": "4.0s",
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2189,15 +2190,14 @@
           }
         ],
         "valuesSummary": "300 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "36": [
       {
         "name": "Blessing of Devotion",
         "slug": "Blessing_of_Devotion",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Devotion?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Devotion",
         "description": "Increase maximum Health by 100 for 1 hour. Blessing fades at low health, restoring 263 Health.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2206,6 +2206,7 @@
         "mana": 80,
         "castTime": "2.5s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2219,13 +2220,12 @@
           }
         ],
         "valuesSummary": "263 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Healing III",
         "slug": "Circle_of_Healing_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_III",
         "description": "Heal your party, restoring 342 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2234,6 +2234,7 @@
         "mana": 130,
         "castTime": "0.5s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2247,42 +2248,13 @@
           }
         ],
         "valuesSummary": "342 heal",
-        "statTags": [],
-        "type": "spell"
-      },
-      {
-        "name": "Divine Barrier",
-        "slug": "Divine_Barrier",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier?action=edit&redlink=1",
-        "description": "Shield your target with a divine barrier, absorbing 600 damage received for 15 seconds.",
-        "category": "Abj",
-        "categorySlug": "Skill_Abjuration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
-        "location": "vendor",
-        "mana": 281,
-        "castTime": "Instant",
-        "level": 36,
-        "tags": [
-          "shield"
-        ],
-        "primaryTag": "shield",
-        "effects": [
-          {
-            "kind": "shield",
-            "amount": 600,
-            "display": "600 absorb",
-            "sortKey": 600
-          }
-        ],
-        "valuesSummary": "600 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Pacify",
         "slug": "Greater_Pacify",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify?action=edit&redlink=1",
-        "description": "Pacify your target, reducing their Aggro Radius for 4 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 48.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify",
+        "description": "Pacify your target, reducing their Aggro Radius for 4 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2290,6 +2262,7 @@
         "mana": 45,
         "castTime": "1.5s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -2297,8 +2270,7 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Healing Radiance",
@@ -2312,6 +2284,7 @@
         "mana": 270,
         "castTime": "2.5s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2325,13 +2298,12 @@
           }
         ],
         "valuesSummary": "189 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Hymn of Lesser Resolution",
         "slug": "Hymn_of_Lesser_Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Lesser_Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Lesser_Resolution",
         "description": "Bestow lesser resolution upon your party, increasing their maximum Health by 175 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2340,6 +2312,7 @@
         "mana": 176,
         "castTime": "5.7s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -2358,13 +2331,12 @@
         "valuesSummary": "+175 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Resurrection",
         "slug": "Lesser_Resurrection",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resurrection?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resurrection",
         "description": "Revive a target corpse, restoring 50% Experience.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2373,6 +2345,7 @@
         "mana": 275,
         "castTime": "6.0s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -2386,13 +2359,12 @@
           }
         ],
         "valuesSummary": "50% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful V",
         "slug": "Prayer_of_the_Faithful_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_V",
         "description": "Increase Strength by 29, Mana Regeneration by 3, Secondary Mana Regeneration by 3, Block by 125, chance to activate Fulfillment on melee attacks and Sense Magic",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2401,19 +2373,19 @@
         "mana": 55,
         "castTime": "1.5s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Scourge the Dead II",
         "slug": "Scourge_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_II",
         "description": "Scourge a target undead with holy light, dealing 303 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2422,6 +2394,7 @@
         "mana": 156,
         "castTime": "2.0s",
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2436,8 +2409,7 @@
           }
         ],
         "valuesSummary": "303 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "40": [
@@ -2453,19 +2425,19 @@
         "mana": 100,
         "castTime": "1.5s",
         "level": 40,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Promise of Renewal II",
         "slug": "Promise_of_Renewal_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_II",
         "description": "Bestow a promise of renewal on your target, restoring 777 Health after 6 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2474,6 +2446,7 @@
         "mana": 337,
         "castTime": "3.75s",
         "level": 40,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -2489,8 +2462,7 @@
           }
         ],
         "valuesSummary": "777 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Retribution",
@@ -2504,6 +2476,7 @@
         "mana": 247,
         "castTime": "4.25s",
         "level": 40,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2518,13 +2491,12 @@
           }
         ],
         "valuesSummary": "451 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sublime Heal",
         "slug": "Sublime_Heal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Heal?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Heal",
         "description": "Heal your target, restoring 555 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2533,6 +2505,7 @@
         "mana": 289,
         "castTime": "2.0s",
         "level": 40,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2546,8 +2519,7 @@
           }
         ],
         "valuesSummary": "555 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Hammer of the Divine",
@@ -2561,6 +2533,7 @@
         "mana": 125,
         "castTime": "3.0s",
         "level": 40,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -2569,15 +2542,14 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "44": [
       {
         "name": "Circle of Restoration",
         "slug": "Circle_of_Restoration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration",
         "description": "Heal your party, restoring 470 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2586,6 +2558,7 @@
         "mana": 160,
         "castTime": "0.5s",
         "level": 44,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2599,13 +2572,12 @@
           }
         ],
         "valuesSummary": "470 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Devine Barrier II",
         "slug": "Devine_Barrier_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devine_Barrier_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devine_Barrier_II",
         "description": "Shield your target with a divine barrier, absorbing 733 damage received for 15 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2614,6 +2586,7 @@
         "mana": 321,
         "castTime": "Instant",
         "level": 44,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -2627,13 +2600,12 @@
           }
         ],
         "valuesSummary": "733 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Healing Radiance II",
         "slug": "Healing_Radiance_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_II",
         "description": "Shine a radiant light on targets in a frontal cone, restoring 253 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2642,6 +2614,7 @@
         "mana": 330,
         "castTime": "2.75s",
         "level": 44,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2655,13 +2628,12 @@
           }
         ],
         "valuesSummary": "253 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful VI",
         "slug": "Prayer_of_the_Faithful_VI",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VI?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VI",
         "description": "Increase Strength by 36, Mana Regen by 3, Secondary Mana Regen by 3, Block by 150, chance to Fulfillment on melee, and Sense Magic",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2670,19 +2642,19 @@
         "mana": 65,
         "castTime": "1.5s",
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Resolution",
         "slug": "Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resolution",
         "description": "Bestow resolution upon your target, increasing their maximum Health by 250 for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2691,6 +2663,7 @@
         "mana": 150,
         "castTime": "4.0s",
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -2709,13 +2682,12 @@
         "valuesSummary": "+250 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Scourge the Dead III",
         "slug": "Scourge_the_Dead_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_III",
         "description": "Scourge a target undead with holy light, dealing 415 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2724,6 +2696,7 @@
         "mana": 180,
         "castTime": "2.0s",
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2738,15 +2711,14 @@
           }
         ],
         "valuesSummary": "415 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "48": [
       {
         "name": "Blessing of Dedication",
         "slug": "Blessing_of_Dedication",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Dedication?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Dedication",
         "description": "Increase maximum Health by 150 for 1 hour. Fades at low health, restoring 375 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2755,6 +2727,7 @@
         "mana": 102,
         "castTime": "2.5s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2768,14 +2741,13 @@
           }
         ],
         "valuesSummary": "375 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Pacify",
         "slug": "Exceptional_Pacify",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify?action=edit&redlink=1",
-        "description": "Pacify your target, reducing their Aggro Radius for 5 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 64.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify",
+        "description": "Pacify your target, reducing their Aggro Radius for 5 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2783,6 +2755,7 @@
         "mana": 90,
         "castTime": "1.5s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -2790,13 +2763,12 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Rite of Purification",
         "slug": "Greater_Rite_of_Purification",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Purification?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Purification",
         "description": "Purify your party, removing one Disease, one Poison, and one Magic effect from each member.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2805,17 +2777,17 @@
         "mana": 210,
         "castTime": "3.0s",
         "level": 48,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Hymn of Resolution",
         "slug": "Hymn_of_Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Resolution",
         "description": "Bestow resolution upon your party, increasing their maximum Health by 250 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2824,6 +2796,7 @@
         "mana": 275,
         "castTime": "6.2s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -2842,13 +2815,12 @@
         "valuesSummary": "+250 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Promise of Renewal III",
         "slug": "Promise_of_Renewal_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_III",
         "description": "Bestow a promise of renewal on your target, restoring 1016 Health after 6 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2857,6 +2829,7 @@
         "mana": 414,
         "castTime": "3.75",
         "level": 48,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -2872,8 +2845,7 @@
           }
         ],
         "valuesSummary": "1016 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Resurrection",
@@ -2887,6 +2859,7 @@
         "mana": 350,
         "castTime": "6.0s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -2900,13 +2873,12 @@
           }
         ],
         "valuesSummary": "75% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Retribution II",
         "slug": "Retribution_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_II",
         "description": "Strike your target with divine energy, dealing 599 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2915,6 +2887,7 @@
         "mana": 290,
         "castTime": "4.25s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2929,13 +2902,12 @@
           }
         ],
         "valuesSummary": "599 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Supreme Heal",
         "slug": "Supreme_Heal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supreme_Heal?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supreme_Heal",
         "description": "Heal your target, restoring 726 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2944,6 +2916,7 @@
         "mana": 355,
         "castTime": "2.25s",
         "level": 48,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2957,23 +2930,23 @@
           }
         ],
         "valuesSummary": "726 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "52": [
       {
         "name": "Circle of Restoration II",
         "slug": "Circle_of_Restoration_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_II",
         "description": "Heal your party, restoring 598 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2987,8 +2960,7 @@
           }
         ],
         "valuesSummary": "598 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Devastate the Dead",
@@ -2999,9 +2971,10 @@
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3016,21 +2989,21 @@
           }
         ],
         "valuesSummary": "535 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Divine Barrier III",
         "slug": "Divine_Barrier_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_III",
         "description": "Shield your target with a divine barrier, absorbing 867 damage received for 15 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -3044,13 +3017,12 @@
           }
         ],
         "valuesSummary": "867 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Healing Radiance III",
         "slug": "Healing_Radiance_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_III",
         "description": "Shine a radiant light on targets in a frontal cone, restoring 310 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3059,6 +3031,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 52,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3072,13 +3045,12 @@
           }
         ],
         "valuesSummary": "310 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Prayer of the Faithful VII",
         "slug": "Prayer_of_the_Faithful_VII",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VII?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VII",
         "description": "Increase Strength by 43, Mana Regen by 4, Secondary Mana Regen by 4, Block by 175, chance of Fulfillment on melee, and Sense Magic",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3087,14 +3059,14 @@
         "mana": "@",
         "castTime": "@s",
         "level": 52,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Hammer of the Heavens",
@@ -3108,6 +3080,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 52,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -3116,23 +3089,23 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "55": [
       {
         "name": "Greater Resurrection",
         "slug": "Greater_Resurrection",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resurrection?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resurrection",
         "description": "Resurrect a target corpse, restoring 95% Experience.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 55,
+        "type": "spell",
         "tags": [
           "resurrection"
         ],
@@ -3146,23 +3119,23 @@
           }
         ],
         "valuesSummary": "95% XP",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "56": [
       {
         "name": "Divine Heal",
         "slug": "Divine_Heal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Heal?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Heal",
         "description": "Heal your target, restoring 851 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3176,21 +3149,21 @@
           }
         ],
         "valuesSummary": "851 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Resolution",
         "slug": "Greater_Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resolution",
         "description": "Bestow greater resolution upon your target, increasing their maximum Health by 500 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -3209,21 +3182,21 @@
         "valuesSummary": "+500 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Promise of Renewal IV",
         "slug": "Promise_of_Renewal_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_IV",
         "description": "Bestow a promise of renewal on your target, restoring 1191 Health after 6 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "hot",
           "buff"
@@ -3239,13 +3212,12 @@
           }
         ],
         "valuesSummary": "1191 heal (6s delay)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Retribution III",
         "slug": "Retribution_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_III",
         "description": "Strike your target with divine energy, dealing 744 Holy Damage.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3254,6 +3226,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3268,23 +3241,23 @@
           }
         ],
         "valuesSummary": "744 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "60": [
       {
         "name": "Blessing of Divinity",
         "slug": "Blessing_of_Divinity",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Divinity?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Divinity",
         "description": "Increase maximum Health by 200 for 1 hour. Fades at low health, restoring 750 Health.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3298,21 +3271,21 @@
           }
         ],
         "valuesSummary": "750 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Circle of Restoration III",
         "slug": "Circle_of_Restoration_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_III",
         "description": "Heal your party, restoring 726 Health.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3326,21 +3299,21 @@
           }
         ],
         "valuesSummary": "726 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Devastate the Dead II",
         "slug": "Devastate_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devastate_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devastate_the_Dead_II",
         "description": "Devastate a target undead with holy light, dealing 660 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3355,13 +3328,12 @@
           }
         ],
         "valuesSummary": "660 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Divine Barrier IV",
         "slug": "Divine_Barrier_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_IV",
         "description": "Shield your target with a divine barrier, absorbing 1000 damage received for 15 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3370,6 +3342,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 60,
+        "type": "spell",
         "tags": [
           "shield"
         ],
@@ -3383,13 +3356,12 @@
           }
         ],
         "valuesSummary": "1000 absorb",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Healing Radiance IV",
         "slug": "Healing_Radiance_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_IV",
         "description": "Shine a radiant light on targets in a frontal cone, restoring 358 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -3398,6 +3370,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 60,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3411,13 +3384,12 @@
           }
         ],
         "valuesSummary": "358 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Hymn of Greater Resolution",
         "slug": "Hymn_of_Greater_Resolution",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Greater_Resolution?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Greater_Resolution",
         "description": "Bestow greater resolution upon your party, increasing their maximum Health by 500 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -3426,6 +3398,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff",
           "MAX HP"
@@ -3444,14 +3417,13 @@
         "valuesSummary": "+500 Health",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Prayer of the Faithful VIII",
         "slug": "Prayer_of_the_Faithful_VIII",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VIII?action=edit&redlink=1",
-        "description": "STR +50, Mana Regen +4,2nd Mana Regen +4, Block +200, Fulfillment , Sense Magic",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VIII",
+        "description": "STR +50, Mana Regen +4,2nd Mana Regen +4, Block +200, Fulfillment, Sense Magic",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3459,19 +3431,19 @@
         "mana": "@",
         "castTime": "@s",
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Retribution IV",
         "slug": "Retribution_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_IV",
         "description": "Strike your target with divine energy, dealing 817 Holy Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3480,6 +3452,7 @@
         "mana": "@",
         "castTime": "@s",
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3494,8 +3467,7 @@
           }
         ],
         "valuesSummary": "817 Holy dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ]
   },
@@ -3512,6 +3484,7 @@
       "mana": 0,
       "castTime": "Instant",
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -3524,8 +3497,7 @@
         }
       ],
       "valuesSummary": "30–60% weapon + 4–60 Holy (L1–L60)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Resilience",
@@ -3539,6 +3511,7 @@
       "mana": 10,
       "castTime": "4.0s",
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -3560,8 +3533,7 @@
       "valuesSummary": "+10–20 Health (L1–L8)",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Minor Heal",
@@ -3575,6 +3547,7 @@
       "mana": 10,
       "castTime": "1.5s",
       "level": 1,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -3588,8 +3561,7 @@
         }
       ],
       "valuesSummary": "13 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Polar Alignment: North",
@@ -3603,6 +3575,7 @@
       "mana": 5,
       "castTime": "5s",
       "level": 1,
+      "type": "spell",
       "tags": [
         "utility",
         "self"
@@ -3610,8 +3583,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rebuke",
@@ -3625,6 +3597,7 @@
       "mana": 7,
       "castTime": "1.5s",
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -3642,8 +3615,7 @@
         }
       ],
       "valuesSummary": "3–5 Holy dmg (L1–L4)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessed Barrier",
@@ -3657,6 +3629,7 @@
       "mana": 16,
       "castTime": "Instant",
       "level": 4,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -3670,14 +3643,13 @@
         }
       ],
       "valuesSummary": "25 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessing of Smiting",
       "slug": "Blessing_of_Smiting",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting?action=edit&redlink=1",
-      "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting",
+      "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Holy Damage, increasing with the attacker's level and Strength.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3685,6 +3657,7 @@
       "mana": 10,
       "castTime": "3.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage",
         "buff"
@@ -3692,14 +3665,13 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cure Disease",
       "slug": "Cure_Disease",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-      "description": "Cures your target, removing one Disease effect.",
+      "description": "Cure your target, removing one Disease effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3707,14 +3679,14 @@
       "mana": 10,
       "castTime": "2.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cure Poison",
@@ -3728,20 +3700,20 @@
       "mana": 10,
       "castTime": "2.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Conjure a magical gate, returning you to your bind location.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3749,6 +3721,7 @@
       "mana": 55,
       "castTime": "5.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "summon",
         "teleport"
@@ -3756,13 +3729,12 @@
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Hymn of Smiting",
       "slug": "Hymn_of_Smiting",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting",
       "description": "Bless your party with smiting, granting them a change to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
       "category": "Abj",
       "categorySlug": "Skill_Alteration",
@@ -3771,6 +3743,7 @@
       "mana": 40,
       "castTime": "4.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage",
         "buff"
@@ -3778,8 +3751,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Heal",
@@ -3793,6 +3765,7 @@
       "mana": 18,
       "castTime": "1.5s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -3806,8 +3779,7 @@
         }
       ],
       "valuesSummary": "24 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful I",
@@ -3821,6 +3793,7 @@
       "mana": 15,
       "castTime": "1.5s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -3865,8 +3838,7 @@
       "statTags": [
         "BLOCK",
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Rebuke II",
@@ -3880,6 +3852,7 @@
       "mana": 15,
       "castTime": "2s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -3897,8 +3870,7 @@
         }
       ],
       "valuesSummary": "11–14 Holy dmg (L4–L7)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Smite the Dead I",
@@ -3912,6 +3884,7 @@
       "mana": 15,
       "castTime": "2.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -3926,14 +3899,13 @@
         }
       ],
       "valuesSummary": "14 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3941,14 +3913,14 @@
       "mana": 50,
       "castTime": "6.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Hammer of the Righteous",
@@ -3962,6 +3934,7 @@
       "mana": 10,
       "castTime": "3.0s",
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -3970,14 +3943,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Dispell magic from your target, removing one harmful effect.",
+      "description": "Dispel magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3985,20 +3957,20 @@
       "mana": 25,
       "castTime": "1.5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fear the Dead",
       "slug": "Fear_the_Dead",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fear_the_Dead",
-      "description": "Fears an undead target, causing them to run away in terror. Doing damage has a small chance to break this effect early.",
+      "description": "Fear a target undead, causing them to flee for 18 seconds. This spell has a slight chance to be removed by damage.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4006,6 +3978,7 @@
       "mana": 20,
       "castTime": "2.5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "fear"
@@ -4013,8 +3986,7 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Heal",
@@ -4028,6 +4000,7 @@
       "mana": 35,
       "castTime": "1.5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4041,14 +4014,13 @@
         }
       ],
       "valuesSummary": "50 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Invisibility versus Undead",
       "slug": "Invisibility_versus_Undead",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-      "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
+      "description": "Shroud a target group member in darkness, rendering them unseen by the undead for 10 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4056,6 +4028,7 @@
       "mana": 10,
       "castTime": "5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility"
@@ -4063,8 +4036,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Redemption",
@@ -4078,6 +4050,7 @@
       "mana": 100,
       "castTime": "6.0s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -4091,8 +4064,7 @@
         }
       ],
       "valuesSummary": "15% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Poison Protection",
@@ -4106,6 +4078,7 @@
       "mana": 10,
       "castTime": "2.5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "PR"
@@ -4124,8 +4097,7 @@
       "valuesSummary": "+5 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Promise of Mending I",
@@ -4139,6 +4111,7 @@
       "mana": 41,
       "castTime": "3s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -4154,8 +4127,7 @@
         }
       ],
       "valuesSummary": "70 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rebuke III",
@@ -4169,6 +4141,7 @@
       "mana": 30,
       "castTime": "2.5s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4183,8 +4156,7 @@
         }
       ],
       "valuesSummary": "30 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Resilience",
@@ -4198,6 +4170,7 @@
       "mana": 30,
       "castTime": "4.0s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -4216,8 +4189,7 @@
       "valuesSummary": "+50 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Sense Magic",
@@ -4231,6 +4203,7 @@
       "mana": 20,
       "castTime": "5.0s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "utility"
@@ -4238,8 +4211,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Shackle",
@@ -4253,6 +4225,7 @@
       "mana": 25,
       "castTime": "2.0s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root"
@@ -4267,8 +4240,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Food",
@@ -4282,14 +4254,14 @@
       "mana": 10,
       "castTime": "3.0s",
       "level": 8,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessed Barrier II",
@@ -4303,6 +4275,7 @@
       "mana": 35,
       "castTime": "Instant",
       "level": 12,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -4316,14 +4289,13 @@
         }
       ],
       "valuesSummary": "60 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Disease Protection",
       "slug": "Disease_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-      "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
+      "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4331,6 +4303,7 @@
       "mana": 10,
       "castTime": "2.5s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "DR"
@@ -4349,8 +4322,7 @@
       "valuesSummary": "+5 Disease Resistance",
       "statTags": [
         "DR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Healing light",
@@ -4364,6 +4336,7 @@
       "mana": 90,
       "castTime": "2.0s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4377,14 +4350,13 @@
         }
       ],
       "valuesSummary": "47 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Pacify",
       "slug": "Lesser_Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pacify",
-      "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 24.",
+      "description": "Pacify your target, reducing their Aggro Radius for 2 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4392,6 +4364,7 @@
       "mana": 10,
       "castTime": "1.5s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -4399,8 +4372,7 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful II",
@@ -4414,6 +4386,7 @@
       "mana": 25,
       "castTime": "1.5s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -4458,8 +4431,7 @@
       "statTags": [
         "BLOCK",
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Smite the Dead II",
@@ -4473,6 +4445,7 @@
       "mana": 44,
       "castTime": "2.0s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4487,14 +4460,13 @@
         }
       ],
       "valuesSummary": "67 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Stun",
       "slug": "Stun",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
-      "description": "Shock your target into a daze, stunning them for 4 seconds.",
+      "description": "Rebuke your target, stunning them for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -4502,6 +4474,7 @@
       "mana": 15,
       "castTime": "1.0s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "stun"
@@ -4516,14 +4489,13 @@
         }
       ],
       "valuesSummary": "4s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Drink",
       "slug": "Summon_Drink",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-      "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
+      "description": "Summon 1 (L15) to 4 (L20) flasks of water, providing you with sustenance.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4531,14 +4503,14 @@
       "mana": 10,
       "castTime": "3.0s",
       "level": 12,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blind",
@@ -4552,12 +4524,12 @@
       "mana": 15,
       "castTime": "1.5s",
       "level": 16,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Corruption Protection",
@@ -4571,6 +4543,7 @@
       "mana": 10,
       "castTime": "2.5s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "COR"
@@ -4589,14 +4562,13 @@
       "valuesSummary": "+5 Corruption Resistance",
       "statTags": [
         "COR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Heal",
       "slug": "Greater_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-      "description": "Greatly heal your target, restoring 278 Health.",
+      "description": "Heal your target, restoring 146 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4604,6 +4576,7 @@
       "mana": 95,
       "castTime": "1.75s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4611,14 +4584,13 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 278,
-          "display": "278 heal",
-          "sortKey": 278
+          "amount": 146,
+          "display": "146 heal",
+          "sortKey": 146
         }
       ],
-      "valuesSummary": "278 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "146 heal",
+      "statTags": []
     },
     {
       "name": "Promise of Mending II",
@@ -4632,6 +4604,7 @@
       "mana": 111,
       "castTime": "3.25s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -4647,8 +4620,7 @@
         }
       ],
       "valuesSummary": "204 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reckoning",
@@ -4662,6 +4634,7 @@
       "mana": 70,
       "castTime": "3s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4676,14 +4649,13 @@
         }
       ],
       "valuesSummary": "97 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Redemption",
       "slug": "Redemption",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Redemption",
-      "description": "Redeem a target corpse, restoring 25% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
+      "description": "Redeem a target corpse, restoring 25% Experience.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4691,6 +4663,7 @@
       "mana": 150,
       "castTime": "6.0s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -4704,8 +4677,7 @@
         }
       ],
       "valuesSummary": "25% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Hammer of the Pious",
@@ -4719,6 +4691,7 @@
       "mana": 30,
       "castTime": "3.0s",
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -4727,8 +4700,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessed Barrier III",
@@ -4742,6 +4714,7 @@
       "mana": 102,
       "castTime": "Instant",
       "level": 20,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -4755,8 +4728,7 @@
         }
       ],
       "valuesSummary": "187 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Healing",
@@ -4770,6 +4742,7 @@
       "mana": 60,
       "castTime": "0.5s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4783,14 +4756,13 @@
         }
       ],
       "valuesSummary": "112 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Divine Aegis",
       "slug": "Divine_Aegis",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
-      "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds. This spell can be used while stunned, incapacitated, or feared. This spell inflicts Exhausted Soul upon expiration, preventing the application of immunity effects for 30 seconds.",
+      "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4798,6 +4770,7 @@
       "mana": 15,
       "castTime": "Instant",
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "self"
@@ -4805,8 +4778,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Resilience",
@@ -4820,6 +4792,7 @@
       "mana": 75,
       "castTime": "4.0s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -4838,8 +4811,7 @@
       "valuesSummary": "+125 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Healing Light II",
@@ -4853,6 +4825,7 @@
       "mana": 150,
       "castTime": "2.25s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -4866,8 +4839,7 @@
         }
       ],
       "valuesSummary": "82 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Inhibit Pain",
@@ -4881,6 +4853,7 @@
       "mana": 30,
       "castTime": "Instant",
       "level": 20,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -4895,8 +4868,7 @@
         }
       ],
       "valuesSummary": "−40%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Poison Resistance",
@@ -4910,6 +4882,7 @@
       "mana": 40,
       "castTime": "5.0s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "PR"
@@ -4928,8 +4901,7 @@
       "valuesSummary": "+15 Poison Resistance",
       "statTags": [
         "PR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Prayer of the Faithful III",
@@ -4943,6 +4915,7 @@
       "mana": 35,
       "castTime": "1.5s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "utility",
@@ -4951,8 +4924,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Smite the Dead III",
@@ -4966,6 +4938,7 @@
       "mana": 85,
       "castTime": "2.0s",
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4980,14 +4953,13 @@
         }
       ],
       "valuesSummary": "135 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cleanse Poison",
       "slug": "Cleanse_Poison",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poison",
-      "description": "Cleanse your target, removing two Poison effects.",
+      "description": "Cleanse your target, removing two Poison effects",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4995,20 +4967,20 @@
       "mana": 50,
       "castTime": "3.0s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Disease Resistance",
       "slug": "Disease_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-      "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
+      "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5016,6 +4988,7 @@
       "mana": 40,
       "castTime": "5.0s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "DR"
@@ -5034,8 +5007,7 @@
       "valuesSummary": "+15 Disease Resistance",
       "statTags": [
         "DR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Redemption",
@@ -5049,6 +5021,7 @@
       "mana": 200,
       "castTime": "6.0s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -5062,8 +5035,7 @@
         }
       ],
       "valuesSummary": "35% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Hymn of Greater Resilience",
@@ -5077,6 +5049,7 @@
       "mana": 130,
       "castTime": "5.2s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -5095,8 +5068,7 @@
       "valuesSummary": "+125 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Blessing of Devotion",
@@ -5110,6 +5082,7 @@
       "mana": 65,
       "castTime": "2.5s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5123,14 +5096,13 @@
         }
       ],
       "valuesSummary": "188 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pacify",
       "slug": "Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pacify",
-      "description": "Pacify your target, reducing their Aggro Radius for 3 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 36.",
+      "description": "Pacify your target, reducing their Aggro Radius for 3 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5138,6 +5110,7 @@
       "mana": 25,
       "castTime": "1.5s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -5145,13 +5118,12 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Promise of Mending III",
       "slug": "Promise_of_Mending_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Mending_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Mending_III",
       "description": "Bestow a promise of mending on your target, restoring 344 health after 6 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5160,6 +5132,7 @@
       "mana": 172,
       "castTime": "3.25s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -5175,13 +5148,12 @@
         }
       ],
       "valuesSummary": "344 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reckoning II",
       "slug": "Reckoning_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_II",
       "description": "Strike your target with divine energy, dealing 193 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5190,6 +5162,7 @@
       "mana": 154,
       "castTime": "3.5s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5204,13 +5177,12 @@
         }
       ],
       "valuesSummary": "193 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rite of Purification",
       "slug": "Rite_of_Purification",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Purification?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Purification",
       "description": "Purify your party, removing one Disease and one Poison effect from each member.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5219,20 +5191,20 @@
       "mana": 120,
       "castTime": "3.0s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Superior Heal",
       "slug": "Superior_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Heal",
-      "description": "Massively heal your target, restoring 850 Health.",
+      "description": "Heal your target, restoring 246 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5240,6 +5212,7 @@
       "mana": 148,
       "castTime": "1.75s",
       "level": 24,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5247,19 +5220,18 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 850,
-          "display": "850 heal",
-          "sortKey": 850
+          "amount": 246,
+          "display": "246 heal",
+          "sortKey": 246
         }
       ],
-      "valuesSummary": "850 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "246 heal",
+      "statTags": []
     },
     {
       "name": "Blessed Barrier IV",
       "slug": "Blessed_Barrier_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessed_Barrier_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessed_Barrier_IV",
       "description": "Shield your target with a blessed barrier, absorbing 367 damage received for 15 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5268,6 +5240,7 @@
       "mana": 185,
       "castTime": "Instant",
       "level": 28,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -5281,13 +5254,12 @@
         }
       ],
       "valuesSummary": "367 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Healing II",
       "slug": "Circle_of_Healing_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_II",
       "description": "Heal your party, restoring 223 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5296,6 +5268,7 @@
       "mana": 90,
       "castTime": "0.5s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5309,8 +5282,7 @@
         }
       ],
       "valuesSummary": "223 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cleanse Disease",
@@ -5324,14 +5296,14 @@
       "mana": 50,
       "castTime": "3.0s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Corruption Resistance",
@@ -5345,6 +5317,7 @@
       "mana": 40,
       "castTime": "5.0s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff",
         "COR"
@@ -5363,13 +5336,12 @@
       "valuesSummary": "+15 Corruption Resistance",
       "statTags": [
         "COR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Healing Light III",
       "slug": "Healing_Light_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Light_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Light_III",
       "description": "Shine a healing light on targets in a frontal cone, restoring 129 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5378,6 +5350,7 @@
       "mana": 210,
       "castTime": "2.25s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5391,13 +5364,12 @@
         }
       ],
       "valuesSummary": "129 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful IV",
       "slug": "Prayer_of_the_Faithful_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_IV",
       "description": "Increases Strength by 23, Mana Regeneration by 2, Secondary Mana Regeneration by 2, Block by 100, chance to activate Fulfillment on melee, and Sense Magic",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5406,19 +5378,19 @@
       "mana": 45,
       "castTime": "1.5s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Scourge the Dead",
       "slug": "Scourge_the_Dead",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead",
       "description": "Scourge a target undead with holy light, dealing 215 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5427,6 +5399,7 @@
       "mana": 121,
       "castTime": "2.0s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5441,8 +5414,7 @@
         }
       ],
       "valuesSummary": "215 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Hammer of the Virtuous",
@@ -5456,6 +5428,7 @@
       "mana": 60,
       "castTime": "3.0s",
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -5464,8 +5437,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Atonement",
@@ -5479,14 +5451,14 @@
       "mana": 50,
       "castTime": "4.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Conjure Drink",
@@ -5500,14 +5472,14 @@
       "mana": 20,
       "castTime": "3.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Conjure Food",
@@ -5521,20 +5493,20 @@
       "mana": 20,
       "castTime": "3.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "summon"
       ],
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Heal",
       "slug": "Exceptional_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-      "description": "Strongly heal your target, restoring 473 Health.",
+      "description": "Heal your target, restoring 395 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5542,6 +5514,7 @@
       "mana": 220,
       "castTime": "2.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5549,19 +5522,18 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 473,
-          "display": "473 heal",
-          "sortKey": 473
+          "amount": 395,
+          "display": "395 heal",
+          "sortKey": 395
         }
       ],
-      "valuesSummary": "473 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "395 heal",
+      "statTags": []
     },
     {
       "name": "Lesser Resolution",
       "slug": "Lesser_Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resolution",
       "description": "Bestow lesser resolution upon your target, increasing their maximum Health by 175 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5570,6 +5542,7 @@
       "mana": 100,
       "castTime": "4.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -5588,13 +5561,12 @@
       "valuesSummary": "+175 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Promise of Renewal",
       "slug": "Promise_of_Renewal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal",
       "description": "Bestow a promise of renewal on your target, restoring 553 Health after 6 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5603,6 +5575,7 @@
       "mana": 257,
       "castTime": "3.5s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -5618,13 +5591,12 @@
         }
       ],
       "valuesSummary": "553 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reckoning III",
       "slug": "Reckoning_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reckoning_III",
       "description": "Strike your target with divine energy, dealing 300 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5633,6 +5605,7 @@
       "mana": 198,
       "castTime": "4.0s",
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5647,13 +5620,12 @@
         }
       ],
       "valuesSummary": "300 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessing of Devotion",
       "slug": "Blessing_of_Devotion",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Devotion?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Devotion",
       "description": "Increase maximum Health by 100 for 1 hour. Blessing fades at low health, restoring 263 Health.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5662,6 +5634,7 @@
       "mana": 80,
       "castTime": "2.5s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5675,13 +5648,12 @@
         }
       ],
       "valuesSummary": "263 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Healing III",
       "slug": "Circle_of_Healing_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Healing_III",
       "description": "Heal your party, restoring 342 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5690,6 +5662,7 @@
       "mana": 130,
       "castTime": "0.5s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5703,42 +5676,13 @@
         }
       ],
       "valuesSummary": "342 heal",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
-      "name": "Divine Barrier",
-      "slug": "Divine_Barrier",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier?action=edit&redlink=1",
-      "description": "Shield your target with a divine barrier, absorbing 600 damage received for 15 seconds.",
-      "category": "Abj",
-      "categorySlug": "Skill_Abjuration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
-      "location": "vendor",
-      "mana": 281,
-      "castTime": "Instant",
-      "level": 36,
-      "tags": [
-        "shield"
-      ],
-      "primaryTag": "shield",
-      "effects": [
-        {
-          "kind": "shield",
-          "amount": 600,
-          "display": "600 absorb",
-          "sortKey": 600
-        }
-      ],
-      "valuesSummary": "600 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Pacify",
       "slug": "Greater_Pacify",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify?action=edit&redlink=1",
-      "description": "Pacify your target, reducing their Aggro Radius for 4 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 48.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify",
+      "description": "Pacify your target, reducing their Aggro Radius for 4 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5746,6 +5690,7 @@
       "mana": 45,
       "castTime": "1.5s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -5753,8 +5698,7 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Healing Radiance",
@@ -5768,6 +5712,7 @@
       "mana": 270,
       "castTime": "2.5s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5781,13 +5726,12 @@
         }
       ],
       "valuesSummary": "189 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Hymn of Lesser Resolution",
       "slug": "Hymn_of_Lesser_Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Lesser_Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Lesser_Resolution",
       "description": "Bestow lesser resolution upon your party, increasing their maximum Health by 175 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5796,6 +5740,7 @@
       "mana": 176,
       "castTime": "5.7s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -5814,13 +5759,12 @@
       "valuesSummary": "+175 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Resurrection",
       "slug": "Lesser_Resurrection",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resurrection?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Resurrection",
       "description": "Revive a target corpse, restoring 50% Experience.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5829,6 +5773,7 @@
       "mana": 275,
       "castTime": "6.0s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -5842,13 +5787,12 @@
         }
       ],
       "valuesSummary": "50% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful V",
       "slug": "Prayer_of_the_Faithful_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_V",
       "description": "Increase Strength by 29, Mana Regeneration by 3, Secondary Mana Regeneration by 3, Block by 125, chance to activate Fulfillment on melee attacks and Sense Magic",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5857,19 +5801,19 @@
       "mana": 55,
       "castTime": "1.5s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Scourge the Dead II",
       "slug": "Scourge_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_II",
       "description": "Scourge a target undead with holy light, dealing 303 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5878,6 +5822,7 @@
       "mana": 156,
       "castTime": "2.0s",
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5892,8 +5837,7 @@
         }
       ],
       "valuesSummary": "303 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Abolish Magic",
@@ -5907,19 +5851,19 @@
       "mana": 100,
       "castTime": "1.5s",
       "level": 40,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Promise of Renewal II",
       "slug": "Promise_of_Renewal_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_II",
       "description": "Bestow a promise of renewal on your target, restoring 777 Health after 6 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5928,6 +5872,7 @@
       "mana": 337,
       "castTime": "3.75s",
       "level": 40,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -5943,8 +5888,7 @@
         }
       ],
       "valuesSummary": "777 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Retribution",
@@ -5958,6 +5902,7 @@
       "mana": 247,
       "castTime": "4.25s",
       "level": 40,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5972,13 +5917,12 @@
         }
       ],
       "valuesSummary": "451 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sublime Heal",
       "slug": "Sublime_Heal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Heal?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Heal",
       "description": "Heal your target, restoring 555 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5987,6 +5931,7 @@
       "mana": 289,
       "castTime": "2.0s",
       "level": 40,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6000,8 +5945,7 @@
         }
       ],
       "valuesSummary": "555 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Hammer of the Divine",
@@ -6015,6 +5959,7 @@
       "mana": 125,
       "castTime": "3.0s",
       "level": 40,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -6023,13 +5968,12 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Restoration",
       "slug": "Circle_of_Restoration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration",
       "description": "Heal your party, restoring 470 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6038,6 +5982,7 @@
       "mana": 160,
       "castTime": "0.5s",
       "level": 44,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6051,13 +5996,12 @@
         }
       ],
       "valuesSummary": "470 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Devine Barrier II",
       "slug": "Devine_Barrier_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devine_Barrier_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devine_Barrier_II",
       "description": "Shield your target with a divine barrier, absorbing 733 damage received for 15 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6066,6 +6010,7 @@
       "mana": 321,
       "castTime": "Instant",
       "level": 44,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -6079,13 +6024,12 @@
         }
       ],
       "valuesSummary": "733 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Healing Radiance II",
       "slug": "Healing_Radiance_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_II",
       "description": "Shine a radiant light on targets in a frontal cone, restoring 253 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6094,6 +6038,7 @@
       "mana": 330,
       "castTime": "2.75s",
       "level": 44,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6107,13 +6052,12 @@
         }
       ],
       "valuesSummary": "253 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful VI",
       "slug": "Prayer_of_the_Faithful_VI",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VI?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VI",
       "description": "Increase Strength by 36, Mana Regen by 3, Secondary Mana Regen by 3, Block by 150, chance to Fulfillment on melee, and Sense Magic",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6122,19 +6066,19 @@
       "mana": 65,
       "castTime": "1.5s",
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Resolution",
       "slug": "Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Resolution",
       "description": "Bestow resolution upon your target, increasing their maximum Health by 250 for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6143,6 +6087,7 @@
       "mana": 150,
       "castTime": "4.0s",
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -6161,13 +6106,12 @@
       "valuesSummary": "+250 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Scourge the Dead III",
       "slug": "Scourge_the_Dead_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scourge_the_Dead_III",
       "description": "Scourge a target undead with holy light, dealing 415 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6176,6 +6120,7 @@
       "mana": 180,
       "castTime": "2.0s",
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6190,13 +6135,12 @@
         }
       ],
       "valuesSummary": "415 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessing of Dedication",
       "slug": "Blessing_of_Dedication",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Dedication?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Dedication",
       "description": "Increase maximum Health by 150 for 1 hour. Fades at low health, restoring 375 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6205,6 +6149,7 @@
       "mana": 102,
       "castTime": "2.5s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6218,14 +6163,13 @@
         }
       ],
       "valuesSummary": "375 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Pacify",
       "slug": "Exceptional_Pacify",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify?action=edit&redlink=1",
-      "description": "Pacify your target, reducing their Aggro Radius for 5 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 64.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify",
+      "description": "Pacify your target, reducing their Aggro Radius for 5 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6233,6 +6177,7 @@
       "mana": 90,
       "castTime": "1.5s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -6240,13 +6185,12 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Rite of Purification",
       "slug": "Greater_Rite_of_Purification",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Purification?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Purification",
       "description": "Purify your party, removing one Disease, one Poison, and one Magic effect from each member.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6255,17 +6199,17 @@
       "mana": 210,
       "castTime": "3.0s",
       "level": 48,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Hymn of Resolution",
       "slug": "Hymn_of_Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Resolution",
       "description": "Bestow resolution upon your party, increasing their maximum Health by 250 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -6274,6 +6218,7 @@
       "mana": 275,
       "castTime": "6.2s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -6292,13 +6237,12 @@
       "valuesSummary": "+250 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Promise of Renewal III",
       "slug": "Promise_of_Renewal_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_III",
       "description": "Bestow a promise of renewal on your target, restoring 1016 Health after 6 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6307,6 +6251,7 @@
       "mana": 414,
       "castTime": "3.75",
       "level": 48,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -6322,8 +6267,7 @@
         }
       ],
       "valuesSummary": "1016 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Resurrection",
@@ -6337,6 +6281,7 @@
       "mana": 350,
       "castTime": "6.0s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -6350,13 +6295,12 @@
         }
       ],
       "valuesSummary": "75% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Retribution II",
       "slug": "Retribution_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_II",
       "description": "Strike your target with divine energy, dealing 599 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6365,6 +6309,7 @@
       "mana": 290,
       "castTime": "4.25s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6379,13 +6324,12 @@
         }
       ],
       "valuesSummary": "599 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Supreme Heal",
       "slug": "Supreme_Heal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supreme_Heal?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Supreme_Heal",
       "description": "Heal your target, restoring 726 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6394,6 +6338,7 @@
       "mana": 355,
       "castTime": "2.25s",
       "level": 48,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6407,21 +6352,21 @@
         }
       ],
       "valuesSummary": "726 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Restoration II",
       "slug": "Circle_of_Restoration_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_II",
       "description": "Heal your party, restoring 598 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6435,8 +6380,7 @@
         }
       ],
       "valuesSummary": "598 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Devastate the Dead",
@@ -6447,9 +6391,10 @@
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6464,21 +6409,21 @@
         }
       ],
       "valuesSummary": "535 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Divine Barrier III",
       "slug": "Divine_Barrier_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_III",
       "description": "Shield your target with a divine barrier, absorbing 867 damage received for 15 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -6492,13 +6437,12 @@
         }
       ],
       "valuesSummary": "867 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Healing Radiance III",
       "slug": "Healing_Radiance_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_III",
       "description": "Shine a radiant light on targets in a frontal cone, restoring 310 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6507,6 +6451,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 52,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6520,13 +6465,12 @@
         }
       ],
       "valuesSummary": "310 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Prayer of the Faithful VII",
       "slug": "Prayer_of_the_Faithful_VII",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VII?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VII",
       "description": "Increase Strength by 43, Mana Regen by 4, Secondary Mana Regen by 4, Block by 175, chance of Fulfillment on melee, and Sense Magic",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6535,14 +6479,14 @@
       "mana": "@",
       "castTime": "@s",
       "level": 52,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Hammer of the Heavens",
@@ -6556,6 +6500,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 52,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -6564,21 +6509,21 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Resurrection",
       "slug": "Greater_Resurrection",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resurrection?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resurrection",
       "description": "Resurrect a target corpse, restoring 95% Experience.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 55,
+      "type": "spell",
       "tags": [
         "resurrection"
       ],
@@ -6592,21 +6537,21 @@
         }
       ],
       "valuesSummary": "95% XP",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Divine Heal",
       "slug": "Divine_Heal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Heal?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Heal",
       "description": "Heal your target, restoring 851 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6620,21 +6565,21 @@
         }
       ],
       "valuesSummary": "851 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Resolution",
       "slug": "Greater_Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Resolution",
       "description": "Bestow greater resolution upon your target, increasing their maximum Health by 500 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -6653,21 +6598,21 @@
       "valuesSummary": "+500 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Promise of Renewal IV",
       "slug": "Promise_of_Renewal_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Promise_of_Renewal_IV",
       "description": "Bestow a promise of renewal on your target, restoring 1191 Health after 6 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "hot",
         "buff"
@@ -6683,13 +6628,12 @@
         }
       ],
       "valuesSummary": "1191 heal (6s delay)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Retribution III",
       "slug": "Retribution_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_III",
       "description": "Strike your target with divine energy, dealing 744 Holy Damage.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6698,6 +6642,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6712,21 +6657,21 @@
         }
       ],
       "valuesSummary": "744 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blessing of Divinity",
       "slug": "Blessing_of_Divinity",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Divinity?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Divinity",
       "description": "Increase maximum Health by 200 for 1 hour. Fades at low health, restoring 750 Health.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6740,21 +6685,21 @@
         }
       ],
       "valuesSummary": "750 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Circle of Restoration III",
       "slug": "Circle_of_Restoration_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Restoration_III",
       "description": "Heal your party, restoring 726 Health.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6768,21 +6713,21 @@
         }
       ],
       "valuesSummary": "726 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Devastate the Dead II",
       "slug": "Devastate_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devastate_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Devastate_the_Dead_II",
       "description": "Devastate a target undead with holy light, dealing 660 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6797,13 +6742,12 @@
         }
       ],
       "valuesSummary": "660 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Divine Barrier IV",
       "slug": "Divine_Barrier_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Barrier_IV",
       "description": "Shield your target with a divine barrier, absorbing 1000 damage received for 15 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6812,6 +6756,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 60,
+      "type": "spell",
       "tags": [
         "shield"
       ],
@@ -6825,13 +6770,12 @@
         }
       ],
       "valuesSummary": "1000 absorb",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Healing Radiance IV",
       "slug": "Healing_Radiance_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Healing_Radiance_IV",
       "description": "Shine a radiant light on targets in a frontal cone, restoring 358 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6840,6 +6784,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 60,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6853,13 +6798,12 @@
         }
       ],
       "valuesSummary": "358 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Hymn of Greater Resolution",
       "slug": "Hymn_of_Greater_Resolution",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Greater_Resolution?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Greater_Resolution",
       "description": "Bestow greater resolution upon your party, increasing their maximum Health by 500 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -6868,6 +6812,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff",
         "MAX HP"
@@ -6886,14 +6831,13 @@
       "valuesSummary": "+500 Health",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Prayer of the Faithful VIII",
       "slug": "Prayer_of_the_Faithful_VIII",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VIII?action=edit&redlink=1",
-      "description": "STR +50, Mana Regen +4,2nd Mana Regen +4, Block +200, Fulfillment , Sense Magic",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Prayer_of_the_Faithful_VIII",
+      "description": "STR +50, Mana Regen +4,2nd Mana Regen +4, Block +200, Fulfillment, Sense Magic",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6901,19 +6845,19 @@
       "mana": "@",
       "castTime": "@s",
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Retribution IV",
       "slug": "Retribution_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Retribution_IV",
       "description": "Strike your target with divine energy, dealing 817 Holy Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6922,6 +6866,7 @@
       "mana": "@",
       "castTime": "@s",
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6936,8 +6881,7 @@
         }
       ],
       "valuesSummary": "817 Holy dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     }
   ]
 }

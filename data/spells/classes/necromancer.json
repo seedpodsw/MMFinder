@@ -38,14 +38,14 @@
         "mana": 7,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Locate Corpse",
@@ -59,17 +59,17 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Unliving Shield",
         "slug": "Minor_Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 10, Armor Class by 5, Magic Resistance by 5, and Holy Resistance by 1 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -78,6 +78,7 @@
         "mana": 10,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -128,8 +129,7 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Noxious Deluge",
@@ -143,6 +143,7 @@
         "mana": 10,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -168,14 +169,13 @@
           }
         ],
         "valuesSummary": "2 dmg/6s (30s) · 5 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Polar Align: North",
         "slug": "Polar_Align:_North",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
-        "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+        "description": "Magically align yourself, orienting you toward the North Pole.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -183,6 +183,7 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "utility",
           "self"
@@ -190,8 +191,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reclaim Essence",
@@ -205,19 +205,19 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Skeleton",
         "slug": "Summon_Skeleton",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton",
         "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -226,14 +226,14 @@
         "mana": 10,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "4": [
@@ -241,7 +241,7 @@
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -249,6 +249,7 @@
         "mana": 55,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "summon",
           "teleport"
@@ -256,8 +257,7 @@
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Invisibility versus Undead",
@@ -271,6 +271,7 @@
         "mana": 10,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility"
@@ -278,8 +279,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Steal Strength",
@@ -293,6 +293,7 @@
         "mana": 5,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "debuff",
           "STR"
@@ -311,8 +312,7 @@
         "valuesSummary": "−3 strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lull the Dead",
@@ -323,9 +323,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "debuff",
           "crowd-control"
@@ -333,8 +334,7 @@
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Mend the Dead",
@@ -348,6 +348,7 @@
         "mana": 25,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "heal",
           "pet"
@@ -362,14 +363,13 @@
           }
         ],
         "valuesSummary": "42 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -377,14 +377,14 @@
         "mana": 50,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Swirling Shadows",
@@ -398,6 +398,7 @@
         "mana": 10,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -426,8 +427,7 @@
           }
         ],
         "valuesSummary": "3 Corruption/6s (24s) · −30%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "8": [
@@ -443,6 +443,7 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage",
           "buff",
@@ -462,8 +463,7 @@
           }
         ],
         "valuesSummary": "1–30 Corruption dmg (L1–L60)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Blood Pact",
@@ -477,6 +477,7 @@
         "mana": 5,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -496,14 +497,13 @@
         "valuesSummary": "+2 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Dispell magic from your target, removing one harmful effect.",
+        "description": "Dispel magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -511,19 +511,19 @@
         "mana": 50,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Eye of the Underworld",
         "slug": "Eye_of_the_Underworld",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eye_of_the_Underworld?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eye_of_the_Underworld",
         "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities and sense magical effects for 35 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
@@ -532,6 +532,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility",
@@ -540,8 +541,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Feign Death (Spell)",
@@ -555,12 +555,12 @@
         "mana": 30,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Holy Protection",
@@ -574,6 +574,7 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "HR"
@@ -592,14 +593,13 @@
         "valuesSummary": "+5 Holy Resistance",
         "statTags": [
           "HR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Invisibility",
         "slug": "Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-        "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
+        "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell ends immediately if you take damage.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -607,19 +607,19 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Unliving Shield",
         "slug": "Lesser_Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 25, Armor Class by 10, Magic Resistance by 10, and Holy Resistance by 5 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -628,6 +628,7 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -678,13 +679,12 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Life Drain II",
         "slug": "Life_Drain_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_II",
         "description": "Sap the life force of your target, dealing 29 Corruption Damage and restoring your Health by the same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -693,27 +693,28 @@
         "mana": 15,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pact of Deathly Enduring",
         "slug": "Pact_of_Deathly_Enduring",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Deathly_Enduring?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Deathly_Enduring",
         "description": "Bind your vitality to your pet for 35 minutes, reducing your maximum Health by 20% and increasing their Armor Class by 16 (L8) to 120 (L20), Health Regeneration by 2 (L8) to 20 (L60), and maximum Health by 20%.",
         "category": "Skill",
         "categorySlug": "Skill",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "pet",
@@ -758,14 +759,13 @@
         "statTags": [
           "AC",
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Poisonous Deluge",
         "slug": "Poisonous_Deluge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poisonous_Deluge",
-        "description": "Showers your target in a Poisonous deluge, dealing 20 Poison damage and an additional 10 Poison damage every 6 seconds for 30 Seconds.",
+        "description": "Shower your target with a poisonous deluge, dealing 19 Poison Damage and an additional 10 damage every 6 seconds for 30 seconds.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -773,6 +773,7 @@
         "mana": 40,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -781,10 +782,10 @@
         "effects": [
           {
             "kind": "damage",
-            "amount": 20,
+            "amount": 19,
             "damageType": "Poison",
-            "display": "20 Poison dmg",
-            "sortKey": 20
+            "display": "19 Poison dmg",
+            "sortKey": 19
           },
           {
             "kind": "dot",
@@ -792,19 +793,18 @@
             "max": 10,
             "interval": 6,
             "duration": 30,
-            "damageType": "Poison",
-            "display": "10 Poison/6s (30s)",
+            "damageType": "dmg",
+            "display": "10 dmg/6s (30s)",
             "sortKey": 50
           }
         ],
-        "valuesSummary": "10 Poison/6s (30s) · 20 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "10 dmg/6s (30s) · 19 Poison dmg",
+        "statTags": []
       },
       {
         "name": "Rot Flesh",
         "slug": "Rot_Flesh",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh",
         "description": "Infect your target with a greater malady, dealing 9 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -813,6 +813,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -830,13 +831,12 @@
           }
         ],
         "valuesSummary": "9 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Minor Lifestone",
         "slug": "Summon_Minor_Lifestone",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Minor_Lifestone?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Minor_Lifestone",
         "description": "Summon a Minor Lifestone, restoring 30 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -845,6 +845,7 @@
         "mana": 40,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "heal",
           "summon"
@@ -859,13 +860,12 @@
           }
         ],
         "valuesSummary": "30 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Terrify the Dead",
         "slug": "Terrify_the_Dead",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_the_Dead?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_the_Dead",
         "description": "Fear a target undead, causing them to flee for 24 seconds. This spell has a slight chance to be removed by damage.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -874,6 +874,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "fear"
@@ -881,15 +882,14 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "12": [
       {
         "name": "Command the Dead",
         "slug": "Command_the_Dead",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead",
         "description": "Charms a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This ability has a very strong chance to end early.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -898,20 +898,20 @@
         "mana": 60,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Dark Embrace",
         "slug": "Dark_Embrace",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dark_Embrace",
-        "description": "Embrace your target with lingering shadows, restoring 40 Health and draining yours by the same amount.",
+        "description": "Transfer life force to your target, restoring 43 Health and draining yours by the same amount.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -919,6 +919,7 @@
         "mana": 25,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -926,14 +927,13 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 40,
-            "display": "40 heal",
-            "sortKey": 40
+            "amount": 43,
+            "display": "43 heal",
+            "sortKey": 43
           }
         ],
-        "valuesSummary": "40 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "43 heal",
+        "statTags": []
       },
       {
         "name": "Leech Lifeforce",
@@ -947,6 +947,7 @@
         "mana": 75,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "dot",
           "hot"
@@ -965,8 +966,7 @@
           }
         ],
         "valuesSummary": "10 Corruption/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Locate Corpse",
@@ -980,18 +980,18 @@
         "mana": 5,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Mana Surge",
         "slug": "Mana_Surge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Surge",
-        "description": "Infuse the mind of your target with a mental surge, restoring 210 mana",
+        "description": "Infuse the mind of your target with a mind surge, restoring 33 Mana.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -999,19 +999,19 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [
           {
             "kind": "resource",
-            "amount": 210,
-            "display": "210 mana",
-            "sortKey": 210
+            "amount": 33,
+            "display": "33 mana",
+            "sortKey": 33
           }
         ],
-        "valuesSummary": "210 mana",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "33 mana",
+        "statTags": []
       },
       {
         "name": "Restrain the Dead",
@@ -1025,6 +1025,7 @@
         "mana": 15,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "mez"
@@ -1039,8 +1040,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spirit Splinter",
@@ -1054,6 +1054,7 @@
         "mana": 25,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "debuff",
           "MR"
@@ -1086,34 +1087,33 @@
         "valuesSummary": "−3 Corruption/Holy/MR",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Companion",
         "slug": "Summon_Companion",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Companion?action=edit&redlink=1",
-        "description": "Summons your pet, relocating it to your position.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Companion",
+        "description": "Summon your pet, relocating it to your position.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Zombie",
         "slug": "Summon_Zombie",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie",
         "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -1122,6 +1122,7 @@
         "mana": 10,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -1129,14 +1130,13 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Surging Shadows",
         "slug": "Surging_Shadows",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Surging_Shadows",
-        "description": "Conjure surging shadows that grip your target, dealing 15 Corruption Damage every 6 seconds and decreasing their movement speed by 55% for 60 seconds.",
+        "description": "Conjure surging shadows that grip your target, dealing 5 Corruption Damage every 6 seconds and decreasing their movement speed by 40% for 36 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1144,6 +1144,7 @@
         "mana": 20,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -1154,31 +1155,30 @@
           {
             "kind": "debuff",
             "stat": "movement speed",
-            "min": 55,
-            "max": 55,
+            "min": 40,
+            "max": 40,
             "unit": "%",
-            "display": "−55%",
-            "sortKey": 55
+            "display": "−40%",
+            "sortKey": 40
           },
           {
             "kind": "dot",
-            "min": 15,
-            "max": 15,
+            "min": 5,
+            "max": 5,
             "interval": 6,
-            "duration": 60,
+            "duration": 36,
             "damageType": "Corruption",
-            "display": "15 Corruption/6s (60s)",
-            "sortKey": 150
+            "display": "5 Corruption/6s (36s)",
+            "sortKey": 30
           }
         ],
-        "valuesSummary": "15 Corruption/6s (60s) · −55%",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "5 Corruption/6s (36s) · −40%",
+        "statTags": []
       },
       {
         "name": "Transfer Strength",
         "slug": "Transfer_Strength",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transfer_Strength?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transfer_Strength",
         "description": "Transfer power to your target, increasing their strength by 2 and decreasing yours by the same amount for 5 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1187,6 +1187,7 @@
         "mana": 15,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "STR"
@@ -1205,8 +1206,7 @@
         "valuesSummary": "−2 strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       }
     ],
     "16": [
@@ -1222,6 +1222,7 @@
         "mana": 20,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "fear"
@@ -1229,13 +1230,12 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Grasp of the Dead",
         "slug": "Grasp_of_the_Dead",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grasp_of_the_Dead?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grasp_of_the_Dead",
         "description": "Root your target to the ground, immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1244,6 +1244,7 @@
         "mana": 15,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root"
@@ -1258,13 +1259,12 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Fury of Death",
         "slug": "Lesser_Fury_of_Death",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Fury_of_Death?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Fury_of_Death",
         "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 18% and Strength by 4 for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1273,6 +1273,7 @@
         "mana": 60,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "haste",
@@ -1303,13 +1304,12 @@
         "valuesSummary": "+18% · +4 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Life Drain III",
         "slug": "Life_Drain_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_III",
         "description": "Siphons the life force of your target, dealing 90 Corruption Damage and restoring your Health by the same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1318,19 +1318,19 @@
         "mana": 80,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Mend the Dead II",
         "slug": "Mend_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_II",
         "description": "Stitch the body of your pet, restoring 168 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1339,6 +1339,7 @@
         "mana": 130,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "heal",
           "pet"
@@ -1353,13 +1354,12 @@
           }
         ],
         "valuesSummary": "168 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rot Flesh II",
         "slug": "Rot_Flesh_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_II",
         "description": "Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -1368,6 +1368,7 @@
         "mana": 105,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -1385,8 +1386,7 @@
           }
         ],
         "valuesSummary": "30 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Steal Strength",
@@ -1400,6 +1400,7 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "debuff",
           "STR"
@@ -1418,8 +1419,7 @@
         "valuesSummary": "−5 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Lesser Lifestone",
@@ -1433,6 +1433,7 @@
         "mana": 80,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "heal",
           "summon"
@@ -1447,13 +1448,12 @@
           }
         ],
         "valuesSummary": "75 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Skeleton II",
         "slug": "Summon_Skeleton_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_II",
         "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -1462,19 +1462,19 @@
         "mana": 45,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Unliving Shield",
         "slug": "Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 50, Armor Class by 15, Magic Resistance by 15, and Holy Resistance by 10 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -1483,6 +1483,7 @@
         "mana": 80,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -1533,8 +1534,7 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Venomous Deluge",
@@ -1548,6 +1548,7 @@
         "mana": 70,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -1573,8 +1574,7 @@
           }
         ],
         "valuesSummary": "20 Poison/6s (30s) · 36 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Raise the Departed",
@@ -1588,6 +1588,7 @@
         "mana": 130,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "pet"
@@ -1595,8 +1596,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "20": [
@@ -1612,6 +1612,7 @@
         "mana": 10,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -1625,8 +1626,7 @@
           }
         ],
         "valuesSummary": "20 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Death Pact",
@@ -1640,6 +1640,7 @@
         "mana": 5,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -1659,8 +1660,7 @@
         "valuesSummary": "+5 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Deathly Howl",
@@ -1674,6 +1674,7 @@
         "mana": 50,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "fear",
@@ -1682,21 +1683,21 @@
         "primaryTag": "fear",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pact of Vampirism",
         "slug": "Pact_of_Vampirism",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Vampirism?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Vampirism",
         "description": "Bind your life force to your pet for 35 minutes, reducing your maximum Health by 20% and granting your pet a chance to activate Vampirism on melee attacks. Vampirism: Leech the life force of the target, dealing 1 (L1) to 30 (L60) Corruption Damage and restoring 1 (L1) to 30 (L60) Health to your group.",
         "category": "Skill",
         "categorySlug": "Skill",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "buff",
@@ -1729,8 +1730,7 @@
         "valuesSummary": "1–30 Corruption dmg (L1–L60) · −20%",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Whirling Shadows",
@@ -1744,6 +1744,7 @@
         "mana": 40,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -1772,36 +1773,35 @@
           }
         ],
         "valuesSummary": "9 Corruption/6s (48s) · −50%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "24": [
       {
         "name": "Command the Dead II",
         "slug": "Command_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead_II",
         "description": "Beguile a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Unliving Shield",
         "slug": "Greater_Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 75, Armor Class by 20, Magic Resistance by 20, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -1810,6 +1810,7 @@
         "mana": 75,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -1860,13 +1861,12 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Leech Lifeforce II",
         "slug": "Leech_Lifeforce_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_II",
         "description": "Leech the essence of your target, dealing 20 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1875,6 +1875,7 @@
         "mana": 125,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "dot",
           "hot"
@@ -1893,13 +1894,12 @@
           }
         ],
         "valuesSummary": "20 Corruption/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rot Flesh III",
         "slug": "Rot_Flesh_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_III",
         "description": "Infect your target with a greater sickness, dealing 55 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -1908,6 +1908,7 @@
         "mana": 155,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -1925,8 +1926,7 @@
           }
         ],
         "valuesSummary": "55 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spirit Crack",
@@ -1940,6 +1940,7 @@
         "mana": 40,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "debuff",
           "MR"
@@ -1972,8 +1973,7 @@
         "valuesSummary": "−5 Corruption/Holy/MR",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Corpse",
@@ -1984,20 +1984,20 @@
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Ghoul",
         "slug": "Summon_Ghoul",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul",
         "description": "Reanimates corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2006,6 +2006,7 @@
         "mana": 210,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -2013,14 +2014,13 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Toxic Deluge",
         "slug": "Toxic_Deluge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Toxic_Deluge",
-        "description": "Showers your target in a toxic deluge, dealing 90 damage and an additional 45 Poison damage every 6 seconds for 30 seconds.",
+        "description": "Shower your target in a toxic deluge, dealing 77 damage and an additional 45 damage every 6 seconds for 30 seconds.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -2028,6 +2028,7 @@
         "mana": 135,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -2036,10 +2037,10 @@
         "effects": [
           {
             "kind": "damage",
-            "amount": 90,
+            "amount": 77,
             "damageType": "dmg",
-            "display": "90 dmg",
-            "sortKey": 90
+            "display": "77 dmg",
+            "sortKey": 77
           },
           {
             "kind": "dot",
@@ -2047,14 +2048,13 @@
             "max": 45,
             "interval": 6,
             "duration": 30,
-            "damageType": "Poison",
-            "display": "45 Poison/6s (30s)",
+            "damageType": "dmg",
+            "display": "45 dmg/6s (30s)",
             "sortKey": 225
           }
         ],
-        "valuesSummary": "45 Poison/6s (30s) · 90 dmg",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "45 dmg/6s (30s) · 77 dmg",
+        "statTags": []
       },
       {
         "name": "Unholy Bulwark",
@@ -2068,6 +2068,7 @@
         "mana": 10,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "crowd-control",
@@ -2077,15 +2078,14 @@
         "primaryTag": "mez",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "28": [
       {
         "name": "Mend the Dead III",
         "slug": "Mend_the_Dead_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_III",
         "description": "Reconstruct the body of an undead pet, restoring 252 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2094,6 +2094,7 @@
         "mana": 145,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal",
           "pet"
@@ -2108,21 +2109,21 @@
           }
         ],
         "valuesSummary": "252 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pact of Coldlight",
         "slug": "Pact_of_Coldlight",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Coldlight?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Coldlight",
         "description": "Bind your warmth to your pet for 35 minutes, reducing your maximum Health by 10% and causing your pet to shed a cold, pale light that illuminates its surroundings.",
         "category": "Skill",
         "categorySlug": "Skill",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "pet",
           "MAX HP"
@@ -2143,13 +2144,12 @@
         "valuesSummary": "−10%",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Restrain the Dead II",
         "slug": "Restrain_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_II",
         "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2158,6 +2158,7 @@
         "mana": 15,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "mez"
@@ -2172,14 +2173,13 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sacrificial Embrace",
         "slug": "Sacrificial_Embrace",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sacrificial_Embrace",
-        "description": "Embrace your target with looming shadows, restoring 80 Health and draining yours by the same amount.",
+        "description": "Transfer life force to your target, restoring 94 Health and draining yours by the same amount.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2187,6 +2187,7 @@
         "mana": 25,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2194,14 +2195,13 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 80,
-            "display": "80 heal",
-            "sortKey": 80
+            "amount": 94,
+            "display": "94 heal",
+            "sortKey": 94
           }
         ],
-        "valuesSummary": "80 heal",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "94 heal",
+        "statTags": []
       },
       {
         "name": "Summon Lifestone",
@@ -2215,6 +2215,7 @@
         "mana": 40,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "heal",
           "summon"
@@ -2229,13 +2230,12 @@
           }
         ],
         "valuesSummary": "390 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Zombie II",
         "slug": "Summon_Zombie_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_II",
         "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2244,6 +2244,7 @@
         "mana": 10,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -2251,8 +2252,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Surging Shadows",
@@ -2266,6 +2266,7 @@
         "mana": 70,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -2294,8 +2295,7 @@
           }
         ],
         "valuesSummary": "15 Corruption/6s (60s) · −55%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "32": [
@@ -2311,19 +2311,19 @@
         "mana": 100,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Unliving Shield",
         "slug": "Exceptional_Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 100, Armor Class by 25, Magic Resistance by 25, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2332,6 +2332,7 @@
         "mana": 125,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -2382,13 +2383,12 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Steal Strength",
         "slug": "Greater_Steal_Strength",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Steal_Strength?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Steal_Strength",
         "description": "Extract power from your target, decreasing their Strength by 10 and increasing yours by the same amount for 5 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2397,6 +2397,7 @@
         "mana": 15,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "debuff",
           "STR"
@@ -2415,14 +2416,13 @@
         "valuesSummary": "−10 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Mana Surge",
         "slug": "Mana_Surge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Surge",
-        "description": "Infuse the mind of your target with a mental surge, restoring 210 mana",
+        "description": "Infuse the mind of your target with a mind surge, restoring 110 Mana.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2430,25 +2430,25 @@
         "mana": 150,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [
           {
             "kind": "resource",
-            "amount": 210,
-            "display": "210 mana",
-            "sortKey": 210
+            "amount": 110,
+            "display": "110 mana",
+            "sortKey": 110
           }
         ],
-        "valuesSummary": "210 mana",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "110 mana",
+        "statTags": []
       },
       {
         "name": "Pernicious Deluge",
         "slug": "Pernicious_Deluge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pernicious_Deluge",
-        "description": "Showers your target in a pernicious deluge, dealing 150 Poison damage and an additional 75 poision damage every 6 seconds for 30 seconds.",
+        "description": "Shower your target with a pernicious deluge, dealing 121 Poison Damage and an additional 75 damage every 6 seconds for 30 seconds.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -2456,6 +2456,7 @@
         "mana": 185,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -2464,10 +2465,10 @@
         "effects": [
           {
             "kind": "damage",
-            "amount": 150,
+            "amount": 121,
             "damageType": "Poison",
-            "display": "150 Poison dmg",
-            "sortKey": 150
+            "display": "121 Poison dmg",
+            "sortKey": 121
           },
           {
             "kind": "dot",
@@ -2475,19 +2476,18 @@
             "max": 75,
             "interval": 6,
             "duration": 30,
-            "damageType": "poision",
-            "display": "75 poision/6s (30s)",
+            "damageType": "dmg",
+            "display": "75 dmg/6s (30s)",
             "sortKey": 375
           }
         ],
-        "valuesSummary": "75 poision/6s (30s) · 150 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "75 dmg/6s (30s) · 121 Poison dmg",
+        "statTags": []
       },
       {
         "name": "Rot Bones",
         "slug": "Rot_Bones",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones",
         "description": "Infect your target with a plague, dealing 80 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2496,6 +2496,7 @@
         "mana": 180,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -2513,8 +2514,7 @@
           }
         ],
         "valuesSummary": "80 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Shed Bones",
@@ -2528,6 +2528,7 @@
         "mana": 5,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -2547,13 +2548,12 @@
         "valuesSummary": "+8 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Skeleton III",
         "slug": "Summon_Skeleton_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_III",
         "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2562,14 +2562,14 @@
         "mana": 310,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "36": [
@@ -2582,9 +2582,10 @@
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "CR"
@@ -2603,13 +2604,12 @@
         "valuesSummary": "+15 Cold Resistance",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Dominate the Dead",
         "slug": "Dominate_the_Dead",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead",
         "description": "Coax a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -2618,19 +2618,19 @@
         "mana": 175,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fury of Death",
         "slug": "Fury_of_Death",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fury_of_Death?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fury_of_Death",
         "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 30% and Strength by 10 for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2639,6 +2639,7 @@
         "mana": 125,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "haste",
@@ -2669,13 +2670,12 @@
         "valuesSummary": "+30% · +10 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Leech Lifeforce III",
         "slug": "Leech_Lifeforce_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III",
         "description": "Leech the spirit of your target, dealing 40 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2684,6 +2684,7 @@
         "mana": 200,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "dot",
           "hot"
@@ -2702,13 +2703,12 @@
           }
         ],
         "valuesSummary": "40 Corruption/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Life Drain IV",
         "slug": "Life_Drain_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_IV",
         "description": "Tap the life force your target, dealing 217 Corruption Damage and restoring your Health by the same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2717,27 +2717,28 @@
         "mana": 160,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Pact of Eldritch Quickening",
         "slug": "Pact_of_Eldritch_Quickening",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Eldritch_Quickening?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Eldritch_Quickening",
         "description": "Quicken your afflictions for 35 minutes, reducing your maximum Health by 20%. While active, your poison, corruption, disease and life-draining damage-over-time spells deal damage every 5 seconds instead of every 6 seconds.",
         "category": "Skill",
         "categorySlug": "Skill",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "MAX HP"
         ],
@@ -2757,8 +2758,7 @@
         "valuesSummary": "−20%",
         "statTags": [
           "MAX HP"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Spiraling Shadows",
@@ -2772,6 +2772,7 @@
         "mana": 120,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -2800,15 +2801,14 @@
           }
         ],
         "valuesSummary": "25 Corruption/6s (72s) · −60%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "40": [
       {
         "name": "Arch Unliving Shield",
         "slug": "Arch_Unliving_Shield",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Unliving_Shield?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Unliving_Shield",
         "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 150, Armor Class by 30, Magic Resistance by 35, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2817,6 +2817,7 @@
         "mana": 175,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -2867,8 +2868,7 @@
           "HR",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Covenant of Darkness",
@@ -2882,6 +2882,7 @@
         "mana": 15,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -2895,8 +2896,7 @@
           }
         ],
         "valuesSummary": "90 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reconstruct the Dead",
@@ -2907,9 +2907,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "heal",
           "pet"
@@ -2924,21 +2925,21 @@
           }
         ],
         "valuesSummary": "378 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rot Bones II",
         "slug": "Rot_Bones_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_II",
         "description": "Infect your target with a greater plague, dealing 125 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -2956,8 +2957,7 @@
           }
         ],
         "valuesSummary": "125 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spirit Fracture",
@@ -2971,6 +2971,7 @@
         "mana": 55,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "debuff",
           "MR"
@@ -3003,13 +3004,12 @@
         "valuesSummary": "−7 Corruption/Holy/MR",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Ghoul II",
         "slug": "Summon_Ghoul_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_II",
         "description": "Reanimate corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -3018,6 +3018,7 @@
         "mana": 420,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -3025,13 +3026,12 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Greater Lifestone",
         "slug": "Summon_Greater_Lifestone",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Greater_Lifestone?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Greater_Lifestone",
         "description": "Summon a Greater Lifestone, restoring 705 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -3040,6 +3040,7 @@
         "mana": 250,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "heal",
           "summon"
@@ -3054,8 +3055,7 @@
           }
         ],
         "valuesSummary": "705 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Vile Deluge",
@@ -3069,6 +3069,7 @@
         "mana": 250,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -3094,8 +3095,7 @@
           }
         ],
         "valuesSummary": "108 Poison/6s (30s) · 163 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "44": [
@@ -3111,6 +3111,7 @@
         "mana": 115,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3124,8 +3125,7 @@
           }
         ],
         "valuesSummary": "205 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Holy Resistance",
@@ -3136,9 +3136,10 @@
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "HR"
@@ -3157,13 +3158,12 @@
         "valuesSummary": "+15 Holy Resistance",
         "statTags": [
           "HR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Restrain the Dead III",
         "slug": "Restrain_the_Dead_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_III",
         "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -3172,6 +3172,7 @@
         "mana": 95,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "mez"
@@ -3186,8 +3187,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rippling Shadows",
@@ -3201,6 +3201,7 @@
         "mana": 210,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -3229,8 +3230,7 @@
           }
         ],
         "valuesSummary": "38 Corruption/6s (84s) · −65%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Shed Flesh",
@@ -3241,9 +3241,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -3263,13 +3264,12 @@
         "valuesSummary": "+16 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Zombie III",
         "slug": "Summon_Zombie_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_III",
         "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -3278,6 +3278,7 @@
         "mana": 460,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -3285,37 +3286,36 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "48": [
       {
         "name": "Dominate the Dead II",
         "slug": "Dominate_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead_II",
         "description": "Coax a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Leech Lifeforce III",
         "slug": "Leech_Lifeforce_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III?action=edit&redlink=1",
-        "description": "Leech the spirit of your target, dealing 40 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III",
+        "description": "Leech the soul of your target, dealing 80 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -3323,6 +3323,7 @@
         "mana": 300,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "dot",
           "hot"
@@ -3331,23 +3332,22 @@
         "effects": [
           {
             "kind": "dot",
-            "min": 40,
-            "max": 40,
+            "min": 80,
+            "max": 80,
             "interval": 6,
             "duration": 60,
             "damageType": "Corruption",
-            "display": "40 Corruption/6s (60s)",
-            "sortKey": 400
+            "display": "80 Corruption/6s (60s)",
+            "sortKey": 800
           }
         ],
-        "valuesSummary": "40 Corruption/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "80 Corruption/6s (60s)",
+        "statTags": []
       },
       {
         "name": "Life Drain V",
         "slug": "Life_Drain_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_V",
         "description": "Guzzles the life force of your target, dealing 320 Corruption Damage and restoring your Health by the same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3356,27 +3356,28 @@
         "mana": 225,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Rot Bones III",
         "slug": "Rot_Bones_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_III",
         "description": "Infect your target with pestilence, dealing 170 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -3394,13 +3395,12 @@
           }
         ],
         "valuesSummary": "170 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Skeleton IV",
         "slug": "Summon_Skeleton_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_IV",
         "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -3409,27 +3409,28 @@
         "mana": 540,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "pet"
         ],
         "primaryTag": "pet",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Superior Steal Strength",
         "slug": "Superior_Steal_Strength",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Steal_Strength?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Steal_Strength",
         "description": "Void power from your target, decreasing their Strength by 15 and increasing yours by the same amount for 5 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "debuff",
           "STR"
@@ -3448,21 +3449,21 @@
         "valuesSummary": "−15 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Viscious Deluge",
         "slug": "Viscious_Deluge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Viscious_Deluge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Viscious_Deluge",
         "description": "Shower your target with a vile deluge, dealing 211 Poison Damage and an additional 150 Poison Damage every 6 seconds for 30 seconds.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -3488,23 +3489,23 @@
           }
         ],
         "valuesSummary": "150 Poison/6s (30s) · 211 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "52": [
       {
         "name": "Greater Fury of Death",
         "slug": "Greater_Fury_of_Death",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fury_of_Death?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fury_of_Death",
         "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 40% and Strength by 15 for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "buff",
           "haste",
@@ -3535,8 +3536,7 @@
         "valuesSummary": "+40% · +15 Strength",
         "statTags": [
           "STR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Mental Surge",
@@ -3550,6 +3550,7 @@
         "mana": 280,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -3561,21 +3562,21 @@
           }
         ],
         "valuesSummary": "210 mana",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reconstruct the Dead II",
         "slug": "Reconstruct_the_Dead_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reconstruct_the_Dead_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reconstruct_the_Dead_II",
         "description": "Reconstruct the body of your pet, restoring 504 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "heal",
           "pet"
@@ -3590,21 +3591,21 @@
           }
         ],
         "valuesSummary": "504 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Writhing Shadows",
         "slug": "Writhing_Shadows",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Writhing_Shadows?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Writhing_Shadows",
         "description": "Conjure rippling shadows that grip your target, dealing 50 Corruption Damage every 6 seconds and decreasing their movement speed by 65% for 84 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -3633,31 +3634,30 @@
           }
         ],
         "valuesSummary": "50 Corruption/6s (84s) · −65%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "54": [
       {
         "name": "Life Drain VI",
         "slug": "Life_Drain_VI",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VI?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VI",
         "description": "Draw the life force of your target, dealing 507 Corruption Damage and restoring your Health by the same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 54,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "56": [
@@ -3670,9 +3670,10 @@
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "dot"
@@ -3698,8 +3699,7 @@
           }
         ],
         "valuesSummary": "200 Poison/6s (30s) · 266 Poison dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lich",
@@ -3710,9 +3710,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -3732,21 +3733,21 @@
         "valuesSummary": "+28 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Rot Soul",
         "slug": "Rot_Soul",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Soul?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Soul",
         "description": "Infect your target with greater pestilence, dealing 215 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "dot"
         ],
@@ -3764,21 +3765,21 @@
           }
         ],
         "valuesSummary": "215 Disease/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Exceptional Lifestone",
         "slug": "Summon_Exceptional_Lifestone",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Exceptional_Lifestone?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Exceptional_Lifestone",
         "description": "Summon an Exceptional Lifestone, restoring 1110 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "heal",
           "summon"
@@ -3793,21 +3794,21 @@
           }
         ],
         "valuesSummary": "1110 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Ghoul III",
         "slug": "Summon_Ghoul_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_III",
         "description": "Reanimate corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -3815,8 +3816,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "60": [
@@ -3829,9 +3829,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -3851,8 +3852,7 @@
         "valuesSummary": "+35 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Covenant of Shadow",
@@ -3863,9 +3863,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "heal"
         ],
@@ -3879,21 +3880,21 @@
           }
         ],
         "valuesSummary": "200 heal",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Leech Lifeforce V",
         "slug": "Leech_Lifeforce_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_V",
         "description": "Leech the anima of your target, dealing 120 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "dot",
           "hot"
@@ -3912,8 +3913,7 @@
           }
         ],
         "valuesSummary": "120 Corruption/6s (60s)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lich Spirit",
@@ -3924,9 +3924,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff",
           "self",
@@ -3946,13 +3947,12 @@
         "valuesSummary": "+100 Mana Regeneration",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Life Drain VII",
         "slug": "Life_Drain_VII",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VII?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VII",
         "description": "Flume the life force of your target, dealing 576 Corruption Damage and restoring your Health by same amount.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3961,27 +3961,28 @@
         "mana": 450,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Restrain the Dead IV",
         "slug": "Restrain_the_Dead_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_IV",
         "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "mez"
@@ -3996,8 +3997,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Seething Shadows",
@@ -4008,9 +4008,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "dot",
           "debuff",
@@ -4039,8 +4040,7 @@
           }
         ],
         "valuesSummary": "60 Corruption/6s (96s) · −70%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spirit Shatter",
@@ -4051,9 +4051,10 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "debuff",
           "MR"
@@ -4086,21 +4087,21 @@
         "valuesSummary": "−10 Corruption/Holy/MR",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Summon Zombie IV",
         "slug": "Summon_Zombie_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_IV",
         "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "utility",
           "pet"
@@ -4108,8 +4109,7 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ]
   },
@@ -4126,14 +4126,14 @@
       "mana": 7,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Locate Corpse",
@@ -4147,17 +4147,17 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Unliving Shield",
       "slug": "Minor_Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 10, Armor Class by 5, Magic Resistance by 5, and Holy Resistance by 1 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -4166,6 +4166,7 @@
       "mana": 10,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -4216,8 +4217,7 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Noxious Deluge",
@@ -4231,6 +4231,7 @@
       "mana": 10,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -4256,14 +4257,13 @@
         }
       ],
       "valuesSummary": "2 dmg/6s (30s) · 5 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Polar Align: North",
       "slug": "Polar_Align:_North",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Polar_Align:_North",
-      "description": "Face North - Magically align yourself, orienting you toward the North Pole.",
+      "description": "Magically align yourself, orienting you toward the North Pole.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4271,6 +4271,7 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "utility",
         "self"
@@ -4278,8 +4279,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reclaim Essence",
@@ -4293,19 +4293,19 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Skeleton",
       "slug": "Summon_Skeleton",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton",
       "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -4314,20 +4314,20 @@
       "mana": 10,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4335,6 +4335,7 @@
       "mana": 55,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "summon",
         "teleport"
@@ -4342,8 +4343,7 @@
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Invisibility versus Undead",
@@ -4357,6 +4357,7 @@
       "mana": 10,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility"
@@ -4364,8 +4365,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Steal Strength",
@@ -4379,6 +4379,7 @@
       "mana": 5,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "debuff",
         "STR"
@@ -4397,8 +4398,7 @@
       "valuesSummary": "−3 strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lull the Dead",
@@ -4409,9 +4409,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "debuff",
         "crowd-control"
@@ -4419,8 +4420,7 @@
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Mend the Dead",
@@ -4434,6 +4434,7 @@
       "mana": 25,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "heal",
         "pet"
@@ -4448,14 +4449,13 @@
         }
       ],
       "valuesSummary": "42 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4463,14 +4463,14 @@
       "mana": 50,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Swirling Shadows",
@@ -4484,6 +4484,7 @@
       "mana": 10,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -4512,8 +4513,7 @@
         }
       ],
       "valuesSummary": "3 Corruption/6s (24s) · −30%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Aspect of Vampirism",
@@ -4527,6 +4527,7 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage",
         "buff",
@@ -4546,8 +4547,7 @@
         }
       ],
       "valuesSummary": "1–30 Corruption dmg (L1–L60)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blood Pact",
@@ -4561,6 +4561,7 @@
       "mana": 5,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -4580,14 +4581,13 @@
       "valuesSummary": "+2 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Dispell magic from your target, removing one harmful effect.",
+      "description": "Dispel magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4595,19 +4595,19 @@
       "mana": 50,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Eye of the Underworld",
       "slug": "Eye_of_the_Underworld",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eye_of_the_Underworld?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eye_of_the_Underworld",
       "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities and sense magical effects for 35 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
@@ -4616,6 +4616,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility",
@@ -4624,8 +4625,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Feign Death (Spell)",
@@ -4639,12 +4639,12 @@
       "mana": 30,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Holy Protection",
@@ -4658,6 +4658,7 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "HR"
@@ -4676,14 +4677,13 @@
       "valuesSummary": "+5 Holy Resistance",
       "statTags": [
         "HR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Invisibility",
       "slug": "Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-      "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
+      "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell ends immediately if you take damage.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4691,19 +4691,19 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Unliving Shield",
       "slug": "Lesser_Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 25, Armor Class by 10, Magic Resistance by 10, and Holy Resistance by 5 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -4712,6 +4712,7 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -4762,13 +4763,12 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Life Drain II",
       "slug": "Life_Drain_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_II",
       "description": "Sap the life force of your target, dealing 29 Corruption Damage and restoring your Health by the same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4777,27 +4777,28 @@
       "mana": 15,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pact of Deathly Enduring",
       "slug": "Pact_of_Deathly_Enduring",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Deathly_Enduring?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Deathly_Enduring",
       "description": "Bind your vitality to your pet for 35 minutes, reducing your maximum Health by 20% and increasing their Armor Class by 16 (L8) to 120 (L20), Health Regeneration by 2 (L8) to 20 (L60), and maximum Health by 20%.",
       "category": "Skill",
       "categorySlug": "Skill",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "pet",
@@ -4842,14 +4843,13 @@
       "statTags": [
         "AC",
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Poisonous Deluge",
       "slug": "Poisonous_Deluge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Poisonous_Deluge",
-      "description": "Showers your target in a Poisonous deluge, dealing 20 Poison damage and an additional 10 Poison damage every 6 seconds for 30 Seconds.",
+      "description": "Shower your target with a poisonous deluge, dealing 19 Poison Damage and an additional 10 damage every 6 seconds for 30 seconds.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4857,6 +4857,7 @@
       "mana": 40,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -4865,10 +4866,10 @@
       "effects": [
         {
           "kind": "damage",
-          "amount": 20,
+          "amount": 19,
           "damageType": "Poison",
-          "display": "20 Poison dmg",
-          "sortKey": 20
+          "display": "19 Poison dmg",
+          "sortKey": 19
         },
         {
           "kind": "dot",
@@ -4876,19 +4877,18 @@
           "max": 10,
           "interval": 6,
           "duration": 30,
-          "damageType": "Poison",
-          "display": "10 Poison/6s (30s)",
+          "damageType": "dmg",
+          "display": "10 dmg/6s (30s)",
           "sortKey": 50
         }
       ],
-      "valuesSummary": "10 Poison/6s (30s) · 20 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "10 dmg/6s (30s) · 19 Poison dmg",
+      "statTags": []
     },
     {
       "name": "Rot Flesh",
       "slug": "Rot_Flesh",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh",
       "description": "Infect your target with a greater malady, dealing 9 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -4897,6 +4897,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -4914,13 +4915,12 @@
         }
       ],
       "valuesSummary": "9 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Minor Lifestone",
       "slug": "Summon_Minor_Lifestone",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Minor_Lifestone?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Minor_Lifestone",
       "description": "Summon a Minor Lifestone, restoring 30 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -4929,6 +4929,7 @@
       "mana": 40,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "heal",
         "summon"
@@ -4943,13 +4944,12 @@
         }
       ],
       "valuesSummary": "30 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Terrify the Dead",
       "slug": "Terrify_the_Dead",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_the_Dead?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Terrify_the_Dead",
       "description": "Fear a target undead, causing them to flee for 24 seconds. This spell has a slight chance to be removed by damage.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4958,6 +4958,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "fear"
@@ -4965,13 +4966,12 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Command the Dead",
       "slug": "Command_the_Dead",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead",
       "description": "Charms a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This ability has a very strong chance to end early.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4980,20 +4980,20 @@
       "mana": 60,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dark Embrace",
       "slug": "Dark_Embrace",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dark_Embrace",
-      "description": "Embrace your target with lingering shadows, restoring 40 Health and draining yours by the same amount.",
+      "description": "Transfer life force to your target, restoring 43 Health and draining yours by the same amount.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5001,6 +5001,7 @@
       "mana": 25,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5008,14 +5009,13 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 40,
-          "display": "40 heal",
-          "sortKey": 40
+          "amount": 43,
+          "display": "43 heal",
+          "sortKey": 43
         }
       ],
-      "valuesSummary": "40 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "43 heal",
+      "statTags": []
     },
     {
       "name": "Leech Lifeforce",
@@ -5029,6 +5029,7 @@
       "mana": 75,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "dot",
         "hot"
@@ -5047,8 +5048,7 @@
         }
       ],
       "valuesSummary": "10 Corruption/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Locate Corpse",
@@ -5062,18 +5062,18 @@
       "mana": 5,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Mana Surge",
       "slug": "Mana_Surge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Surge",
-      "description": "Infuse the mind of your target with a mental surge, restoring 210 mana",
+      "description": "Infuse the mind of your target with a mind surge, restoring 33 Mana.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5081,19 +5081,19 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [
         {
           "kind": "resource",
-          "amount": 210,
-          "display": "210 mana",
-          "sortKey": 210
+          "amount": 33,
+          "display": "33 mana",
+          "sortKey": 33
         }
       ],
-      "valuesSummary": "210 mana",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "33 mana",
+      "statTags": []
     },
     {
       "name": "Restrain the Dead",
@@ -5107,6 +5107,7 @@
       "mana": 15,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "mez"
@@ -5121,8 +5122,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spirit Splinter",
@@ -5136,6 +5136,7 @@
       "mana": 25,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "debuff",
         "MR"
@@ -5168,34 +5169,33 @@
       "valuesSummary": "−3 Corruption/Holy/MR",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Companion",
       "slug": "Summon_Companion",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Companion?action=edit&redlink=1",
-      "description": "Summons your pet, relocating it to your position.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Companion",
+      "description": "Summon your pet, relocating it to your position.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Zombie",
       "slug": "Summon_Zombie",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie",
       "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -5204,6 +5204,7 @@
       "mana": 10,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -5211,14 +5212,13 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Surging Shadows",
       "slug": "Surging_Shadows",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Surging_Shadows",
-      "description": "Conjure surging shadows that grip your target, dealing 15 Corruption Damage every 6 seconds and decreasing their movement speed by 55% for 60 seconds.",
+      "description": "Conjure surging shadows that grip your target, dealing 5 Corruption Damage every 6 seconds and decreasing their movement speed by 40% for 36 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5226,6 +5226,7 @@
       "mana": 20,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -5236,31 +5237,30 @@
         {
           "kind": "debuff",
           "stat": "movement speed",
-          "min": 55,
-          "max": 55,
+          "min": 40,
+          "max": 40,
           "unit": "%",
-          "display": "−55%",
-          "sortKey": 55
+          "display": "−40%",
+          "sortKey": 40
         },
         {
           "kind": "dot",
-          "min": 15,
-          "max": 15,
+          "min": 5,
+          "max": 5,
           "interval": 6,
-          "duration": 60,
+          "duration": 36,
           "damageType": "Corruption",
-          "display": "15 Corruption/6s (60s)",
-          "sortKey": 150
+          "display": "5 Corruption/6s (36s)",
+          "sortKey": 30
         }
       ],
-      "valuesSummary": "15 Corruption/6s (60s) · −55%",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "5 Corruption/6s (36s) · −40%",
+      "statTags": []
     },
     {
       "name": "Transfer Strength",
       "slug": "Transfer_Strength",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transfer_Strength?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transfer_Strength",
       "description": "Transfer power to your target, increasing their strength by 2 and decreasing yours by the same amount for 5 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5269,6 +5269,7 @@
       "mana": 15,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "STR"
@@ -5287,8 +5288,7 @@
       "valuesSummary": "−2 strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Fear",
@@ -5302,6 +5302,7 @@
       "mana": 20,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "fear"
@@ -5309,13 +5310,12 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Grasp of the Dead",
       "slug": "Grasp_of_the_Dead",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grasp_of_the_Dead?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grasp_of_the_Dead",
       "description": "Root your target to the ground, immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5324,6 +5324,7 @@
       "mana": 15,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root"
@@ -5338,13 +5339,12 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Fury of Death",
       "slug": "Lesser_Fury_of_Death",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Fury_of_Death?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Fury_of_Death",
       "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 18% and Strength by 4 for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5353,6 +5353,7 @@
       "mana": 60,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "haste",
@@ -5383,13 +5384,12 @@
       "valuesSummary": "+18% · +4 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Life Drain III",
       "slug": "Life_Drain_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_III",
       "description": "Siphons the life force of your target, dealing 90 Corruption Damage and restoring your Health by the same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5398,19 +5398,19 @@
       "mana": 80,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Mend the Dead II",
       "slug": "Mend_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_II",
       "description": "Stitch the body of your pet, restoring 168 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5419,6 +5419,7 @@
       "mana": 130,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "heal",
         "pet"
@@ -5433,13 +5434,12 @@
         }
       ],
       "valuesSummary": "168 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rot Flesh II",
       "slug": "Rot_Flesh_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_II",
       "description": "Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -5448,6 +5448,7 @@
       "mana": 105,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -5465,8 +5466,7 @@
         }
       ],
       "valuesSummary": "30 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Steal Strength",
@@ -5480,6 +5480,7 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "debuff",
         "STR"
@@ -5498,8 +5499,7 @@
       "valuesSummary": "−5 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Lesser Lifestone",
@@ -5513,6 +5513,7 @@
       "mana": 80,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "heal",
         "summon"
@@ -5527,13 +5528,12 @@
         }
       ],
       "valuesSummary": "75 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Skeleton II",
       "slug": "Summon_Skeleton_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_II",
       "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -5542,19 +5542,19 @@
       "mana": 45,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Unliving Shield",
       "slug": "Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 50, Armor Class by 15, Magic Resistance by 15, and Holy Resistance by 10 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5563,6 +5563,7 @@
       "mana": 80,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -5613,8 +5614,7 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Venomous Deluge",
@@ -5628,6 +5628,7 @@
       "mana": 70,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -5653,8 +5654,7 @@
         }
       ],
       "valuesSummary": "20 Poison/6s (30s) · 36 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Raise the Departed",
@@ -5668,6 +5668,7 @@
       "mana": 130,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "pet"
@@ -5675,8 +5676,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Covenant of Life",
@@ -5690,6 +5690,7 @@
       "mana": 10,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -5703,8 +5704,7 @@
         }
       ],
       "valuesSummary": "20 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Death Pact",
@@ -5718,6 +5718,7 @@
       "mana": 5,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -5737,8 +5738,7 @@
       "valuesSummary": "+5 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Deathly Howl",
@@ -5752,6 +5752,7 @@
       "mana": 50,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "fear",
@@ -5760,21 +5761,21 @@
       "primaryTag": "fear",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pact of Vampirism",
       "slug": "Pact_of_Vampirism",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Vampirism?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Vampirism",
       "description": "Bind your life force to your pet for 35 minutes, reducing your maximum Health by 20% and granting your pet a chance to activate Vampirism on melee attacks. Vampirism: Leech the life force of the target, dealing 1 (L1) to 30 (L60) Corruption Damage and restoring 1 (L1) to 30 (L60) Health to your group.",
       "category": "Skill",
       "categorySlug": "Skill",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "buff",
@@ -5807,8 +5808,7 @@
       "valuesSummary": "1–30 Corruption dmg (L1–L60) · −20%",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Whirling Shadows",
@@ -5822,6 +5822,7 @@
       "mana": 40,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -5850,34 +5851,33 @@
         }
       ],
       "valuesSummary": "9 Corruption/6s (48s) · −50%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Command the Dead II",
       "slug": "Command_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Command_the_Dead_II",
       "description": "Beguile a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Unliving Shield",
       "slug": "Greater_Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 75, Armor Class by 20, Magic Resistance by 20, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5886,6 +5886,7 @@
       "mana": 75,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -5936,13 +5937,12 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Leech Lifeforce II",
       "slug": "Leech_Lifeforce_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_II",
       "description": "Leech the essence of your target, dealing 20 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5951,6 +5951,7 @@
       "mana": 125,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "dot",
         "hot"
@@ -5969,13 +5970,12 @@
         }
       ],
       "valuesSummary": "20 Corruption/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rot Flesh III",
       "slug": "Rot_Flesh_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Flesh_III",
       "description": "Infect your target with a greater sickness, dealing 55 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -5984,6 +5984,7 @@
       "mana": 155,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -6001,8 +6002,7 @@
         }
       ],
       "valuesSummary": "55 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spirit Crack",
@@ -6016,6 +6016,7 @@
       "mana": 40,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "debuff",
         "MR"
@@ -6048,8 +6049,7 @@
       "valuesSummary": "−5 Corruption/Holy/MR",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Corpse",
@@ -6060,20 +6060,20 @@
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Ghoul",
       "slug": "Summon_Ghoul",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul",
       "description": "Reanimates corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6082,6 +6082,7 @@
       "mana": 210,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -6089,14 +6090,13 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Toxic Deluge",
       "slug": "Toxic_Deluge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Toxic_Deluge",
-      "description": "Showers your target in a toxic deluge, dealing 90 damage and an additional 45 Poison damage every 6 seconds for 30 seconds.",
+      "description": "Shower your target in a toxic deluge, dealing 77 damage and an additional 45 damage every 6 seconds for 30 seconds.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -6104,6 +6104,7 @@
       "mana": 135,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -6112,10 +6113,10 @@
       "effects": [
         {
           "kind": "damage",
-          "amount": 90,
+          "amount": 77,
           "damageType": "dmg",
-          "display": "90 dmg",
-          "sortKey": 90
+          "display": "77 dmg",
+          "sortKey": 77
         },
         {
           "kind": "dot",
@@ -6123,14 +6124,13 @@
           "max": 45,
           "interval": 6,
           "duration": 30,
-          "damageType": "Poison",
-          "display": "45 Poison/6s (30s)",
+          "damageType": "dmg",
+          "display": "45 dmg/6s (30s)",
           "sortKey": 225
         }
       ],
-      "valuesSummary": "45 Poison/6s (30s) · 90 dmg",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "45 dmg/6s (30s) · 77 dmg",
+      "statTags": []
     },
     {
       "name": "Unholy Bulwark",
@@ -6144,6 +6144,7 @@
       "mana": 10,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "crowd-control",
@@ -6153,13 +6154,12 @@
       "primaryTag": "mez",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Mend the Dead III",
       "slug": "Mend_the_Dead_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mend_the_Dead_III",
       "description": "Reconstruct the body of an undead pet, restoring 252 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6168,6 +6168,7 @@
       "mana": 145,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal",
         "pet"
@@ -6182,21 +6183,21 @@
         }
       ],
       "valuesSummary": "252 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pact of Coldlight",
       "slug": "Pact_of_Coldlight",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Coldlight?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Coldlight",
       "description": "Bind your warmth to your pet for 35 minutes, reducing your maximum Health by 10% and causing your pet to shed a cold, pale light that illuminates its surroundings.",
       "category": "Skill",
       "categorySlug": "Skill",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "pet",
         "MAX HP"
@@ -6217,13 +6218,12 @@
       "valuesSummary": "−10%",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Restrain the Dead II",
       "slug": "Restrain_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_II",
       "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6232,6 +6232,7 @@
       "mana": 15,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "mez"
@@ -6246,14 +6247,13 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sacrificial Embrace",
       "slug": "Sacrificial_Embrace",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sacrificial_Embrace",
-      "description": "Embrace your target with looming shadows, restoring 80 Health and draining yours by the same amount.",
+      "description": "Transfer life force to your target, restoring 94 Health and draining yours by the same amount.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6261,6 +6261,7 @@
       "mana": 25,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6268,14 +6269,13 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 80,
-          "display": "80 heal",
-          "sortKey": 80
+          "amount": 94,
+          "display": "94 heal",
+          "sortKey": 94
         }
       ],
-      "valuesSummary": "80 heal",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "94 heal",
+      "statTags": []
     },
     {
       "name": "Summon Lifestone",
@@ -6289,6 +6289,7 @@
       "mana": 40,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "heal",
         "summon"
@@ -6303,13 +6304,12 @@
         }
       ],
       "valuesSummary": "390 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Zombie II",
       "slug": "Summon_Zombie_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_II",
       "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6318,6 +6318,7 @@
       "mana": 10,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -6325,8 +6326,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Surging Shadows",
@@ -6340,6 +6340,7 @@
       "mana": 70,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -6368,8 +6369,7 @@
         }
       ],
       "valuesSummary": "15 Corruption/6s (60s) · −55%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Abolish Magic",
@@ -6383,19 +6383,19 @@
       "mana": 100,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Unliving Shield",
       "slug": "Exceptional_Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 100, Armor Class by 25, Magic Resistance by 25, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -6404,6 +6404,7 @@
       "mana": 125,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -6454,13 +6455,12 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Steal Strength",
       "slug": "Greater_Steal_Strength",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Steal_Strength?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Steal_Strength",
       "description": "Extract power from your target, decreasing their Strength by 10 and increasing yours by the same amount for 5 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6469,6 +6469,7 @@
       "mana": 15,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "debuff",
         "STR"
@@ -6487,14 +6488,13 @@
       "valuesSummary": "−10 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Mana Surge",
       "slug": "Mana_Surge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Surge",
-      "description": "Infuse the mind of your target with a mental surge, restoring 210 mana",
+      "description": "Infuse the mind of your target with a mind surge, restoring 110 Mana.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6502,25 +6502,25 @@
       "mana": 150,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [
         {
           "kind": "resource",
-          "amount": 210,
-          "display": "210 mana",
-          "sortKey": 210
+          "amount": 110,
+          "display": "110 mana",
+          "sortKey": 110
         }
       ],
-      "valuesSummary": "210 mana",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "110 mana",
+      "statTags": []
     },
     {
       "name": "Pernicious Deluge",
       "slug": "Pernicious_Deluge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pernicious_Deluge",
-      "description": "Showers your target in a pernicious deluge, dealing 150 Poison damage and an additional 75 poision damage every 6 seconds for 30 seconds.",
+      "description": "Shower your target with a pernicious deluge, dealing 121 Poison Damage and an additional 75 damage every 6 seconds for 30 seconds.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -6528,6 +6528,7 @@
       "mana": 185,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -6536,10 +6537,10 @@
       "effects": [
         {
           "kind": "damage",
-          "amount": 150,
+          "amount": 121,
           "damageType": "Poison",
-          "display": "150 Poison dmg",
-          "sortKey": 150
+          "display": "121 Poison dmg",
+          "sortKey": 121
         },
         {
           "kind": "dot",
@@ -6547,19 +6548,18 @@
           "max": 75,
           "interval": 6,
           "duration": 30,
-          "damageType": "poision",
-          "display": "75 poision/6s (30s)",
+          "damageType": "dmg",
+          "display": "75 dmg/6s (30s)",
           "sortKey": 375
         }
       ],
-      "valuesSummary": "75 poision/6s (30s) · 150 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "75 dmg/6s (30s) · 121 Poison dmg",
+      "statTags": []
     },
     {
       "name": "Rot Bones",
       "slug": "Rot_Bones",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones",
       "description": "Infect your target with a plague, dealing 80 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6568,6 +6568,7 @@
       "mana": 180,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -6585,8 +6586,7 @@
         }
       ],
       "valuesSummary": "80 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Shed Bones",
@@ -6600,6 +6600,7 @@
       "mana": 5,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -6619,13 +6620,12 @@
       "valuesSummary": "+8 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Skeleton III",
       "slug": "Summon_Skeleton_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_III",
       "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6634,14 +6634,14 @@
       "mana": 310,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cold Resistance",
@@ -6652,9 +6652,10 @@
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "CR"
@@ -6673,13 +6674,12 @@
       "valuesSummary": "+15 Cold Resistance",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Dominate the Dead",
       "slug": "Dominate_the_Dead",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead",
       "description": "Coax a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -6688,19 +6688,19 @@
       "mana": 175,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fury of Death",
       "slug": "Fury_of_Death",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fury_of_Death?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fury_of_Death",
       "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 30% and Strength by 10 for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6709,6 +6709,7 @@
       "mana": 125,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "haste",
@@ -6739,13 +6740,12 @@
       "valuesSummary": "+30% · +10 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Leech Lifeforce III",
       "slug": "Leech_Lifeforce_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III",
       "description": "Leech the spirit of your target, dealing 40 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6754,6 +6754,7 @@
       "mana": 200,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "dot",
         "hot"
@@ -6772,13 +6773,12 @@
         }
       ],
       "valuesSummary": "40 Corruption/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Life Drain IV",
       "slug": "Life_Drain_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_IV",
       "description": "Tap the life force your target, dealing 217 Corruption Damage and restoring your Health by the same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6787,27 +6787,28 @@
       "mana": 160,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Pact of Eldritch Quickening",
       "slug": "Pact_of_Eldritch_Quickening",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Eldritch_Quickening?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Eldritch_Quickening",
       "description": "Quicken your afflictions for 35 minutes, reducing your maximum Health by 20%. While active, your poison, corruption, disease and life-draining damage-over-time spells deal damage every 5 seconds instead of every 6 seconds.",
       "category": "Skill",
       "categorySlug": "Skill",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "MAX HP"
       ],
@@ -6827,8 +6828,7 @@
       "valuesSummary": "−20%",
       "statTags": [
         "MAX HP"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Spiraling Shadows",
@@ -6842,6 +6842,7 @@
       "mana": 120,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -6870,13 +6871,12 @@
         }
       ],
       "valuesSummary": "25 Corruption/6s (72s) · −60%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arch Unliving Shield",
       "slug": "Arch_Unliving_Shield",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Unliving_Shield?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Unliving_Shield",
       "description": "Raise a shield of unliving energy around yourself, increasing your maximum Health by 150, Armor Class by 30, Magic Resistance by 35, and Holy Resistance by 15 for 1 hour. You also gain the ability to sense magical effects. If your Health falls low, Soul Tether binds your pet to you for 10 seconds, and your pet takes 50% of the damage you receive. Soul Tether can't trigger again until 30 seconds after it ends.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -6885,6 +6885,7 @@
       "mana": 175,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -6935,8 +6936,7 @@
         "HR",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Covenant of Darkness",
@@ -6950,6 +6950,7 @@
       "mana": 15,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -6963,8 +6964,7 @@
         }
       ],
       "valuesSummary": "90 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reconstruct the Dead",
@@ -6975,9 +6975,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "heal",
         "pet"
@@ -6992,21 +6993,21 @@
         }
       ],
       "valuesSummary": "378 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rot Bones II",
       "slug": "Rot_Bones_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_II",
       "description": "Infect your target with a greater plague, dealing 125 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -7024,8 +7025,7 @@
         }
       ],
       "valuesSummary": "125 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spirit Fracture",
@@ -7039,6 +7039,7 @@
       "mana": 55,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "debuff",
         "MR"
@@ -7071,13 +7072,12 @@
       "valuesSummary": "−7 Corruption/Holy/MR",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Ghoul II",
       "slug": "Summon_Ghoul_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_II",
       "description": "Reanimate corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -7086,6 +7086,7 @@
       "mana": 420,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -7093,13 +7094,12 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Greater Lifestone",
       "slug": "Summon_Greater_Lifestone",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Greater_Lifestone?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Greater_Lifestone",
       "description": "Summon a Greater Lifestone, restoring 705 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -7108,6 +7108,7 @@
       "mana": 250,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "heal",
         "summon"
@@ -7122,8 +7123,7 @@
         }
       ],
       "valuesSummary": "705 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Vile Deluge",
@@ -7137,6 +7137,7 @@
       "mana": 250,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -7162,8 +7163,7 @@
         }
       ],
       "valuesSummary": "108 Poison/6s (30s) · 163 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Corporeal Embrace",
@@ -7177,6 +7177,7 @@
       "mana": 115,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -7190,8 +7191,7 @@
         }
       ],
       "valuesSummary": "205 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Holy Resistance",
@@ -7202,9 +7202,10 @@
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "HR"
@@ -7223,13 +7224,12 @@
       "valuesSummary": "+15 Holy Resistance",
       "statTags": [
         "HR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Restrain the Dead III",
       "slug": "Restrain_the_Dead_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_III",
       "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -7238,6 +7238,7 @@
       "mana": 95,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "mez"
@@ -7252,8 +7253,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rippling Shadows",
@@ -7267,6 +7267,7 @@
       "mana": 210,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -7295,8 +7296,7 @@
         }
       ],
       "valuesSummary": "38 Corruption/6s (84s) · −65%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Shed Flesh",
@@ -7307,9 +7307,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -7329,13 +7330,12 @@
       "valuesSummary": "+16 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Zombie III",
       "slug": "Summon_Zombie_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_III",
       "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -7344,6 +7344,7 @@
       "mana": 460,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -7351,35 +7352,34 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dominate the Dead II",
       "slug": "Dominate_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dominate_the_Dead_II",
       "description": "Coax a target undead, forcing them to fight alongside you for 5 minutes to 6 minutes. This spell has a very strong chance to end early.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Leech Lifeforce III",
       "slug": "Leech_Lifeforce_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III?action=edit&redlink=1",
-      "description": "Leech the spirit of your target, dealing 40 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_III",
+      "description": "Leech the soul of your target, dealing 80 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -7387,6 +7387,7 @@
       "mana": 300,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "dot",
         "hot"
@@ -7395,23 +7396,22 @@
       "effects": [
         {
           "kind": "dot",
-          "min": 40,
-          "max": 40,
+          "min": 80,
+          "max": 80,
           "interval": 6,
           "duration": 60,
           "damageType": "Corruption",
-          "display": "40 Corruption/6s (60s)",
-          "sortKey": 400
+          "display": "80 Corruption/6s (60s)",
+          "sortKey": 800
         }
       ],
-      "valuesSummary": "40 Corruption/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "80 Corruption/6s (60s)",
+      "statTags": []
     },
     {
       "name": "Life Drain V",
       "slug": "Life_Drain_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_V",
       "description": "Guzzles the life force of your target, dealing 320 Corruption Damage and restoring your Health by the same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7420,27 +7420,28 @@
       "mana": 225,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Rot Bones III",
       "slug": "Rot_Bones_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Bones_III",
       "description": "Infect your target with pestilence, dealing 170 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -7458,13 +7459,12 @@
         }
       ],
       "valuesSummary": "170 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Skeleton IV",
       "slug": "Summon_Skeleton_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Skeleton_IV",
       "description": "Reanimate bone, conjuring a skeleton to serve you. This pet uses the abilities Strike and Provoke. This spell persists until the death of the pet or master. This spell requires Bone Chips.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -7473,27 +7473,28 @@
       "mana": 540,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "pet"
       ],
       "primaryTag": "pet",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Superior Steal Strength",
       "slug": "Superior_Steal_Strength",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Steal_Strength?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Steal_Strength",
       "description": "Void power from your target, decreasing their Strength by 15 and increasing yours by the same amount for 5 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "debuff",
         "STR"
@@ -7512,21 +7513,21 @@
       "valuesSummary": "−15 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Viscious Deluge",
       "slug": "Viscious_Deluge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Viscious_Deluge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Viscious_Deluge",
       "description": "Shower your target with a vile deluge, dealing 211 Poison Damage and an additional 150 Poison Damage every 6 seconds for 30 seconds.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -7552,21 +7553,21 @@
         }
       ],
       "valuesSummary": "150 Poison/6s (30s) · 211 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Fury of Death",
       "slug": "Greater_Fury_of_Death",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fury_of_Death?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fury_of_Death",
       "description": "Stoke the fury of death within your pet, increasing their Attack Speed by 40% and Strength by 15 for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "buff",
         "haste",
@@ -7597,8 +7598,7 @@
       "valuesSummary": "+40% · +15 Strength",
       "statTags": [
         "STR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Mental Surge",
@@ -7612,6 +7612,7 @@
       "mana": 280,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -7623,21 +7624,21 @@
         }
       ],
       "valuesSummary": "210 mana",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reconstruct the Dead II",
       "slug": "Reconstruct_the_Dead_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reconstruct_the_Dead_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reconstruct_the_Dead_II",
       "description": "Reconstruct the body of your pet, restoring 504 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "heal",
         "pet"
@@ -7652,21 +7653,21 @@
         }
       ],
       "valuesSummary": "504 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Writhing Shadows",
       "slug": "Writhing_Shadows",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Writhing_Shadows?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Writhing_Shadows",
       "description": "Conjure rippling shadows that grip your target, dealing 50 Corruption Damage every 6 seconds and decreasing their movement speed by 65% for 84 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -7695,29 +7696,28 @@
         }
       ],
       "valuesSummary": "50 Corruption/6s (84s) · −65%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Life Drain VI",
       "slug": "Life_Drain_VI",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VI?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VI",
       "description": "Draw the life force of your target, dealing 507 Corruption Damage and restoring your Health by the same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 54,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lethal Deluge",
@@ -7728,9 +7728,10 @@
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "dot"
@@ -7756,8 +7757,7 @@
         }
       ],
       "valuesSummary": "200 Poison/6s (30s) · 266 Poison dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lich",
@@ -7768,9 +7768,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -7790,21 +7791,21 @@
       "valuesSummary": "+28 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Rot Soul",
       "slug": "Rot_Soul",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Soul?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rot_Soul",
       "description": "Infect your target with greater pestilence, dealing 215 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "dot"
       ],
@@ -7822,21 +7823,21 @@
         }
       ],
       "valuesSummary": "215 Disease/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Exceptional Lifestone",
       "slug": "Summon_Exceptional_Lifestone",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Exceptional_Lifestone?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Exceptional_Lifestone",
       "description": "Summon an Exceptional Lifestone, restoring 1110 Health when consumed on a 5-minute cooldown. This item can be traded to other players. This item does not persist after logging out. This item shares a cooldown with other Lifestones.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "heal",
         "summon"
@@ -7851,21 +7852,21 @@
         }
       ],
       "valuesSummary": "1110 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Ghoul III",
       "slug": "Summon_Ghoul_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Ghoul_III",
       "description": "Reanimate corrupted flesh, conjuring a ghoul to serve you. This pet uses the abilities Ghoul Tendrils and Provoke. Persists until the death of the pet or master. This spell requires Ghoul Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -7873,8 +7874,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arch Lich",
@@ -7885,9 +7885,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -7907,8 +7908,7 @@
       "valuesSummary": "+35 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Covenant of Shadow",
@@ -7919,9 +7919,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "heal"
       ],
@@ -7935,21 +7936,21 @@
         }
       ],
       "valuesSummary": "200 heal",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Leech Lifeforce V",
       "slug": "Leech_Lifeforce_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Leech_Lifeforce_V",
       "description": "Leech the anima of your target, dealing 120 Corruption Damage every 6 seconds and restoring your Health by the same amount for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "dot",
         "hot"
@@ -7968,8 +7969,7 @@
         }
       ],
       "valuesSummary": "120 Corruption/6s (60s)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lich Spirit",
@@ -7980,9 +7980,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff",
         "self",
@@ -8002,13 +8003,12 @@
       "valuesSummary": "+100 Mana Regeneration",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Life Drain VII",
       "slug": "Life_Drain_VII",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VII?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Life_Drain_VII",
       "description": "Flume the life force of your target, dealing 576 Corruption Damage and restoring your Health by same amount.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -8017,27 +8017,28 @@
       "mana": 450,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Restrain the Dead IV",
       "slug": "Restrain_the_Dead_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Restrain_the_Dead_IV",
       "description": "Restrain a target undead, incapacitating them for 30 seconds. This spell is limited to one target. This spell is removed by damage.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "mez"
@@ -8052,8 +8053,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Seething Shadows",
@@ -8064,9 +8064,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "dot",
         "debuff",
@@ -8095,8 +8096,7 @@
         }
       ],
       "valuesSummary": "60 Corruption/6s (96s) · −70%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spirit Shatter",
@@ -8107,9 +8107,10 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "debuff",
         "MR"
@@ -8142,21 +8143,21 @@
       "valuesSummary": "−10 Corruption/Holy/MR",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Summon Zombie IV",
       "slug": "Summon_Zombie_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Zombie_IV",
       "description": "Reanimate rotting flesh, conjuring a zombie to serve you. This pet uses the abilities Zombie Drain and Provoke. This spell persists until the death of the pet or master. This spell requires Zombie Skin.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "utility",
         "pet"
@@ -8164,8 +8165,7 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     }
   ]
 }

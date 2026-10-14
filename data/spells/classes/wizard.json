@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Wizard Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wizard",
-  "entryCount": 119,
+  "entryCount": 121,
   "levels": [
     1,
     4,
@@ -40,6 +40,7 @@
         "mana": 8,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -68,8 +69,7 @@
           }
         ],
         "valuesSummary": "6–9 Cold dmg (L1–L4) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Polar Alignment: North",
@@ -83,6 +83,7 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "utility",
           "self"
@@ -90,14 +91,13 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Spellshield",
         "slug": "Minor_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Class by 5, and Magic Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -105,10 +105,12 @@
         "mana": 10,
         "castTime": null,
         "level": 1,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
           "self",
+          "AC",
           "MAX HP",
           "MR"
         ],
@@ -124,10 +126,11 @@
           },
           {
             "kind": "buff",
-            "stat": "Armor Calss",
+            "stat": "Armor Class",
             "amount": 5,
-            "display": "+5 Armor Calss",
-            "sortKey": 5
+            "display": "+5 Armor Class",
+            "sortKey": 5,
+            "statTag": "AC"
           },
           {
             "kind": "buff",
@@ -138,19 +141,19 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
+        "valuesSummary": "+10 Health · +5 Armor Class · +5 Magic Resistance",
         "statTags": [
+          "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       }
     ],
     "4": [
       {
         "name": "Eldritch Ward",
         "slug": "Eldritch_Ward",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward",
         "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 25 damage received for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -159,6 +162,7 @@
         "mana": 20,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -185,14 +189,13 @@
         "valuesSummary": "25 absorb · +10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -200,6 +203,7 @@
         "mana": 55,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "summon",
           "teleport"
@@ -207,8 +211,7 @@
         "primaryTag": "summon",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Arcane Volley",
@@ -222,6 +225,7 @@
         "mana": 27,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -236,63 +240,28 @@
           }
         ],
         "valuesSummary": "6 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Reclaim Magic",
         "slug": "Reclaim_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reclaim_Magic?action=edit&redlink=1",
-        "description": "Reclaim Marks of Magic from your target, converting each reclaimed stack into 5 (L4) to 25 (L60) Mana and granting your party Arcane Acceleration. Arcane Acceleration: Magically accelerate your thoughts, increasing your Casting Speed by 10% (L4) to 30% (L60) and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reclaim_Magic",
+        "description": "Reclaim your Sparks of Magic from your target, converting them into Mana and granting your party Arcane Acceleration if you don't already have it.",
         "category": "n/a",
         "categorySlug": "Skill_n/a",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_n/a?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_n/a",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
-          "buff",
-          "CAST"
+          "buff"
         ],
         "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Mana and granting your party Arcane Acceleration",
-            "min": 5,
-            "max": 25,
-            "minLevel": 4,
-            "maxLevel": 60,
-            "display": "+5–25 Mana and granting your party Arcane Acceleration (L4–L60)",
-            "sortKey": 25
-          },
-          {
-            "kind": "buff",
-            "stat": "and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration",
-            "min": 10,
-            "max": 30,
-            "minLevel": 4,
-            "maxLevel": 60,
-            "display": "+10–30% and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration (L4–L60)",
-            "sortKey": 30
-          },
-          {
-            "kind": "buff",
-            "stat": "Casting Speed",
-            "min": 10,
-            "max": 30,
-            "unit": "%",
-            "display": "+10–30%",
-            "sortKey": 30,
-            "statTag": "CAST"
-          }
-        ],
-        "valuesSummary": "+10–30% and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration (L4–L60) · +10–30% · +5–25 Mana and granting your party Arcane Acceleration (L4–L60)",
-        "statTags": [
-          "CAST"
-        ],
-        "type": "spell"
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Root",
@@ -306,6 +275,7 @@
         "mana": 25,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root"
@@ -320,8 +290,7 @@
           }
         ],
         "valuesSummary": "30s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Seal of Magic",
@@ -335,6 +304,7 @@
         "mana": 30,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -351,21 +321,21 @@
           }
         ],
         "valuesSummary": "+2%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "See Invisibility",
         "slug": "See_Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
-        "location": "",
-        "mana": "",
+        "location": null,
+        "mana": null,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility",
@@ -374,8 +344,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sense Magic",
@@ -389,6 +358,7 @@
         "mana": 20,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "buff",
           "utility"
@@ -396,14 +366,13 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -411,14 +380,14 @@
         "mana": 50,
         "castTime": null,
         "level": 4,
+        "type": "spell",
         "tags": [
           "teleport"
         ],
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "8": [
@@ -434,20 +403,20 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "crowd-control"
         ],
         "primaryTag": "crowd-control",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Dispell magic from your target, removing one harmful effect.",
+        "description": "Dispel magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -455,38 +424,38 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Glyph: Mun",
         "slug": "Glyph:_Mun",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Mun?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Mun",
         "description": "Invoke Glyph: Mun, granting an arcane foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
         "category": "Glyph",
         "categorySlug": "Skill_Glyph",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Insidious Magic",
         "slug": "Insidious_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Magic?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Magic",
         "description": "Distort the defenses of your target, decreasing their Magic Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -495,6 +464,7 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "debuff",
           "MR"
@@ -516,8 +486,7 @@
         "valuesSummary": "−1–20 Magic Resistance (L1–L60)",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Spellshield",
@@ -531,6 +500,7 @@
         "mana": 25,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -571,13 +541,12 @@
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Minor Arcane Surge",
         "slug": "Minor_Arcane_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Arcane_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Arcane_Surge",
         "description": "Overwhelm your target with a surge of arcane energy, dealing 20 (L8) to 30 (L15) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -586,6 +555,7 @@
         "mana": 18,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -617,21 +587,21 @@
         "valuesSummary": "20–30 Magic dmg (L8–L15) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Minor Iceblast",
         "slug": "Minor_Iceblast",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Iceblast?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Iceblast",
         "description": "Blast your target with ice, dealing 34 (L8) to 60 (L15) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-        "location": "",
-        "mana": "",
+        "location": null,
+        "mana": null,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -660,13 +630,12 @@
           }
         ],
         "valuesSummary": "34–60 Cold dmg (L8–L15) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Sorcerous Mind",
         "slug": "Sorcerous_Mind",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sorcerous_Mind?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sorcerous_Mind",
         "description": "Infuse your mind with sorcery, increasing your Mana Regeneration by 1 (L1) to 10 (L60) and Casting Speed by 10%, and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -675,6 +644,7 @@
         "mana": 10,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility",
@@ -709,27 +679,26 @@
         "valuesSummary": "+1–10 Mana Regeneration (L1–L60) · 1–10% weapon dmg (L1–L60)",
         "statTags": [
           "MANA"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Spell Catalyst",
         "slug": "Spell_Catalyst",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spell_Catalyst?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spell_Catalyst",
         "description": "Activate your incantation, casting a spell based on your foundation and enhancement glyphs. Incantations use your highest known rank of the activate spell.",
         "category": "Glyph",
         "categorySlug": "Skill_Glyph",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Summon Mage Light",
@@ -739,10 +708,11 @@
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-        "location": "",
+        "location": null,
         "mana": 40,
         "castTime": null,
         "level": 8,
+        "type": "spell",
         "tags": [
           "buff",
           "summon",
@@ -751,8 +721,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "12": [
@@ -768,19 +737,19 @@
         "mana": 10,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Eldritch Ward II",
         "slug": "Eldritch_Ward_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_II",
         "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 75 damage received for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -789,6 +758,7 @@
         "mana": 20,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -815,13 +785,12 @@
         "valuesSummary": "75 absorb · +10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Flash of Ice",
         "slug": "Lesser_Flash_of_Ice",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Flash_of_Ice?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Flash_of_Ice",
         "description": "Assault your target with a flash of ice, dealing 27 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -830,6 +799,7 @@
         "mana": 22,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -855,13 +825,12 @@
           }
         ],
         "valuesSummary": "27 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Minor Burst of Magic",
         "slug": "Minor_Burst_of_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Burst_of_Magic?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Burst_of_Magic",
         "description": "Strike your target and those around it with a burst of magic, dealing 35 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -870,6 +839,7 @@
         "mana": 122,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -899,8 +869,7 @@
         "valuesSummary": "35 Magic dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Purge",
@@ -914,14 +883,14 @@
         "mana": 20,
         "castTime": null,
         "level": 12,
+        "type": "spell",
         "tags": [
           "purge"
         ],
         "primaryTag": "purge",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "16": [
@@ -937,20 +906,20 @@
         "mana": 70,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "self"
         ],
         "primaryTag": "self",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fire Protection",
         "slug": "Fire_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-        "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -958,6 +927,7 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "FR"
@@ -976,32 +946,31 @@
         "valuesSummary": "+5 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Glyph: Hil",
         "slug": "Glyph:_Hil",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Hil?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Hil",
         "description": "Invoke Glyph: Hil, granting an ice foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
         "category": "Glyph",
         "categorySlug": "Skill_Glyph",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Great Cavern Sea Gate",
         "slug": "Great_Cavern_Sea_Gate",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Gate?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Gate",
         "description": "Teleport yourself, relocating to Great Cavern Sea. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1010,6 +979,7 @@
         "mana": 125,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1017,13 +987,12 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Insidious Ice",
         "slug": "Insidious_Ice",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Ice?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Ice",
         "description": "Distort the defenses of your target, decreasing their Cold Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Cold effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1032,6 +1001,7 @@
         "mana": 25,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "debuff",
           "CR"
@@ -1053,8 +1023,7 @@
         "valuesSummary": "−1–20 Cold Resistance (L1–L60)",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Arcane Volley",
@@ -1068,6 +1037,7 @@
         "mana": 22,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1082,13 +1052,12 @@
           }
         ],
         "valuesSummary": "11 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Iceblast",
         "slug": "Lesser_Iceblast",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Iceblast?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Iceblast",
         "description": "Blast your target with ice, dealing 155 (L28) to 195 (L39) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1097,6 +1066,7 @@
         "mana": 98,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1125,8 +1095,7 @@
           }
         ],
         "valuesSummary": "155–195 Cold dmg (L28–L39) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Recharge Item",
@@ -1136,21 +1105,21 @@
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "",
+        "location": null,
         "mana": 10,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Scarwood Gate",
         "slug": "Scarwood_Gate",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Gate?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Gate",
         "description": "Teleport yourself, relocating to Scarwood. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1159,6 +1128,7 @@
         "mana": 125,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1166,13 +1136,12 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Seal of Magic II",
         "slug": "Seal_of_Magic_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_II",
         "description": "Invoke a magical seal, causing Evocation spells to activate Mark of Magic for 1 hour. Mark of Magic: Mark your target with magic, increasing all Spell Damage dealt to them by 2% for 1 minute. This effect is limited to targets up to level 34. This effect stacks up to five times.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1181,6 +1150,7 @@
         "mana": 70,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -1197,8 +1167,7 @@
           }
         ],
         "valuesSummary": "+2%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Shaded Dunes Gate",
@@ -1212,6 +1181,7 @@
         "mana": 125,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1219,13 +1189,12 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Shroud of the Magi",
         "slug": "Shroud_of_the_Magi",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud_of_the_Magi?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud_of_the_Magi",
         "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living and granting them the ability to see invisible entities for 10 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
@@ -1234,6 +1203,7 @@
         "mana": 20,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "invisibility",
@@ -1242,8 +1212,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Spellshield",
@@ -1257,6 +1226,7 @@
         "mana": 50,
         "castTime": null,
         "level": 16,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -1297,8 +1267,7 @@
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       }
     ],
     "20": [
@@ -1314,17 +1283,17 @@
         "mana": "n/a",
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Arcane Surge",
         "slug": "Lesser_Arcane_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Arcane_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Arcane_Surge",
         "description": "Overwhelm your target with a surge of arcane energy, dealing 108 (L20) to 128 (L31) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1333,6 +1302,7 @@
         "mana": 60,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1364,8 +1334,7 @@
         "valuesSummary": "108–128 Magic dmg (L20–L31) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Flash of Lightning",
@@ -1379,6 +1348,7 @@
         "mana": 53,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -1386,14 +1356,13 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Magic Protection",
         "slug": "Magic_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-        "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
+        "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1401,6 +1370,7 @@
         "mana": 10,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "buff",
           "MR"
@@ -1419,8 +1389,7 @@
         "valuesSummary": "+5 Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Telekinetic Knockback",
@@ -1434,6 +1403,7 @@
         "mana": 15,
         "castTime": null,
         "level": 20,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "stun"
@@ -1448,8 +1418,7 @@
           }
         ],
         "valuesSummary": "3s duration",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "24": [
@@ -1465,6 +1434,7 @@
         "mana": 70,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow",
@@ -1483,14 +1453,13 @@
           }
         ],
         "valuesSummary": "−50%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Cold Protection",
         "slug": "Cold_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Protection",
-        "description": "Ward your target against frost, increasing their Cold Resistance by 4 for 1 hour.",
+        "description": "Ward your target against frost, increasing their Cold Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1498,6 +1467,7 @@
         "mana": 10,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "CR"
@@ -1507,22 +1477,21 @@
           {
             "kind": "buff",
             "stat": "Cold Resistance",
-            "amount": 4,
-            "display": "+4 Cold Resistance",
-            "sortKey": 4,
+            "amount": 5,
+            "display": "+5 Cold Resistance",
+            "sortKey": 5,
             "statTag": "CR"
           }
         ],
-        "valuesSummary": "+4 Cold Resistance",
+        "valuesSummary": "+5 Cold Resistance",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Eldritch Ward III",
         "slug": "Eldritch_Ward_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_III",
         "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 150 damage received for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -1531,6 +1500,7 @@
         "mana": 20,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -1557,13 +1527,12 @@
         "valuesSummary": "150 absorb · +10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Flash of Ice",
         "slug": "Flash_of_Ice",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Ice?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Ice",
         "description": "Assault your target with a flash of ice, dealing 87 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1572,6 +1541,7 @@
         "mana": 65,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1597,8 +1567,7 @@
           }
         ],
         "valuesSummary": "87 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Glass Flats Gate",
@@ -1612,6 +1581,7 @@
         "mana": 125,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1619,33 +1589,54 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Glyph: Nas",
         "slug": "Glyph:_Nas",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Nas?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Nas",
         "description": "Invoke Glyph: Nas, granting an electric foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
         "category": "Glyph",
         "categorySlug": "Skill_Glyph",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
+      },
+      {
+        "name": "Great Cavern Sea Portal",
+        "slug": "Great_Cavern_Sea_Portal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Portal",
+        "description": "Teleport your party, relocating them to Great Cavern Sea. This spell has no effect on encumbered targets.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Group",
+        "mana": 300,
+        "castTime": null,
+        "level": 24,
+        "type": "spell",
+        "tags": [
+          "portal",
+          "teleport"
+        ],
+        "primaryTag": "portal",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Greater Spellshield",
         "slug": "Greater_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1653,6 +1644,7 @@
         "mana": 75,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -1665,17 +1657,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 75,
-            "display": "+75 HP",
+            "display": "+75 Health",
             "sortKey": 75,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 20,
-            "display": "+20 AC",
+            "display": "+20 Armor Class",
             "sortKey": 20,
             "statTag": "AC"
           },
@@ -1688,18 +1680,17 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
+        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Insidious Lightning",
         "slug": "Insidious_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Lightning",
         "description": "Distort the defenses of your target, decreasing their Electric Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Electric effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1708,6 +1699,7 @@
         "mana": 25,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "debuff"
         ],
@@ -1725,13 +1717,12 @@
           }
         ],
         "valuesSummary": "−1–20 Electric Resistance (L1–L60)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lesser Burst of Magic",
         "slug": "Lesser_Burst_of_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Burst_of_Magic?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Burst_of_Magic",
         "description": "Strike your target and those arount it with a burst of magic, dealing 204 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1740,6 +1731,7 @@
         "mana": 215,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1768,8 +1760,7 @@
         "valuesSummary": "204 Magic dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Lesser Lightning Surge",
@@ -1783,6 +1774,7 @@
         "mana": 73,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -1801,8 +1793,29 @@
           }
         ],
         "valuesSummary": "145–189 Electric dmg (L24–L35)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
+      },
+      {
+        "name": "Scarwood Portal",
+        "slug": "Scarwood_Portal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Portal",
+        "description": "Teleport your party, relocating them to Scarwood. This spell has no effect on encumbered targets.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Group",
+        "mana": 300,
+        "castTime": null,
+        "level": 24,
+        "type": "spell",
+        "tags": [
+          "portal",
+          "teleport"
+        ],
+        "primaryTag": "portal",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
       },
       {
         "name": "Shaded Dunes Portal",
@@ -1816,6 +1829,7 @@
         "mana": 300,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "portal",
           "teleport"
@@ -1823,8 +1837,7 @@
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Vale of Zintar Gate",
@@ -1838,6 +1851,7 @@
         "mana": 125,
         "castTime": null,
         "level": 24,
+        "type": "spell",
         "tags": [
           "teleport",
           "self"
@@ -1845,8 +1859,7 @@
         "primaryTag": "teleport",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "28": [
@@ -1862,6 +1875,7 @@
         "mana": 33,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -1876,13 +1890,12 @@
           }
         ],
         "valuesSummary": "23 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Burst of Lightning",
         "slug": "Burst_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burst_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burst_of_Lightning",
         "description": "Strike your target and those around it with a burst of lightning, dealing 263 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1891,6 +1904,7 @@
         "mana": 245,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt",
@@ -1899,8 +1913,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Electric Protection",
@@ -1914,6 +1927,7 @@
         "mana": 10,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -1928,13 +1942,12 @@
           }
         ],
         "valuesSummary": "+5 Electric Resistance",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Iceblast",
         "slug": "Iceblast",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iceblast?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iceblast",
         "description": "Blast your target with ice, dealing 376 (L28) to 450 (L39) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -1943,6 +1956,7 @@
         "mana": 167,
         "castTime": null,
         "level": 28,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -1971,15 +1985,14 @@
           }
         ],
         "valuesSummary": "376–450 Cold dmg (L28–L39) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "30": [
       {
         "name": "Seal of Magic III",
         "slug": "Seal_of_Magic_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_III",
         "description": "Invoke a magical seal, causing Evocation spells to activate Mark of Magic for 1 hour. Mark of Magic: Mark your target with magic, increasing all Spell Damage dealt to them by 2% for 1 minute. This effect is limited to targets up to level 64. This effect stacks up to five times.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1988,6 +2001,7 @@
         "mana": 110,
         "castTime": null,
         "level": 30,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -2004,8 +2018,7 @@
           }
         ],
         "valuesSummary": "+2%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "32": [
@@ -2021,14 +2034,14 @@
         "mana": 100,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Arcane Surge (wiz)",
@@ -2042,6 +2055,7 @@
         "mana": 90,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2073,14 +2087,13 @@
         "valuesSummary": "231–270 Magic dmg (L32–L44) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Spellshield",
         "slug": "Exceptional_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2088,6 +2101,7 @@
         "mana": 125,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -2100,17 +2114,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 100,
-            "display": "+100 HP",
+            "display": "+100 Health",
             "sortKey": 100,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 25,
-            "display": "+25 AC",
+            "display": "+25 Armor Class",
             "sortKey": 25,
             "statTag": "AC"
           },
@@ -2123,13 +2137,12 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
+        "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Fire Resistance",
@@ -2143,6 +2156,7 @@
         "mana": 40,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "FR"
@@ -2161,13 +2175,12 @@
         "valuesSummary": "+15 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Fire Volley",
         "slug": "Fire_Volley",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Volley?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Volley",
         "description": "Launch a flaming volley at your target, dealing 29 Fire Damage four times. This spell is channeled.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2176,6 +2189,7 @@
         "mana": 39,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2190,13 +2204,12 @@
           }
         ],
         "valuesSummary": "29 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Flash of Lightning",
         "slug": "Flash_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Lightning",
         "description": "Assault your target with a flash of lightning, dealing 138 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2205,6 +2218,7 @@
         "mana": 81,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -2212,8 +2226,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Glass Flats Portal",
@@ -2227,6 +2240,7 @@
         "mana": 300,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "portal",
           "teleport"
@@ -2234,32 +2248,31 @@
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Glyph: Dur",
         "slug": "Glyph:_Dur",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Dur?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Dur",
         "description": "Invoke Glyph: Dur, granting a fire foundation or enhancmeent for your invocation. Activate your incantation with Spell Catalyst.",
         "category": "Glyph",
         "categorySlug": "Skill_Glyph",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-        "location": "",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+        "location": null,
         "mana": "n/a",
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [],
         "primaryTag": null,
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Insidious Fire",
         "slug": "Insidious_Fire",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Fire?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Fire",
         "description": "Distort the defenses of your target, decreasing their Fire Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Fire effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2268,6 +2281,7 @@
         "mana": 25,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "debuff",
           "FR"
@@ -2289,14 +2303,13 @@
         "valuesSummary": "−1–20 Fire Resistance (L1–L60)",
         "statTags": [
           "FR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Magic Resistance",
         "slug": "Magic_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
+        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2304,6 +2317,7 @@
         "mana": 40,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "buff",
           "MR"
@@ -2322,8 +2336,7 @@
         "valuesSummary": "+15 Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Vale of Zintar Portal",
@@ -2337,6 +2350,7 @@
         "mana": 300,
         "castTime": null,
         "level": 32,
+        "type": "spell",
         "tags": [
           "portal",
           "teleport"
@@ -2344,8 +2358,7 @@
         "primaryTag": "portal",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "36": [
@@ -2361,6 +2374,7 @@
         "mana": 187,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2390,8 +2404,7 @@
         "valuesSummary": "292 Arcane dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Burst of Magic",
@@ -2405,6 +2418,7 @@
         "mana": 328,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2434,14 +2448,13 @@
         "valuesSummary": "409 Magic dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Cold Resistance",
         "slug": "Cold_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
-        "description": "Greatly ward your target from frost, increasing their Cold Resistance by 15 for 35 minutes.",
+        "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2449,6 +2462,7 @@
         "mana": 40,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "buff",
           "CR"
@@ -2467,8 +2481,7 @@
         "valuesSummary": "+15 Cold Resistance",
         "statTags": [
           "CR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Evacuation: Shaded Dunes",
@@ -2482,14 +2495,14 @@
         "mana": 325,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "escape"
         ],
         "primaryTag": "escape",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Flash of Ice",
@@ -2503,6 +2516,7 @@
         "mana": 93,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2528,13 +2542,12 @@
           }
         ],
         "valuesSummary": "175 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lightning Surge",
         "slug": "Lightning_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Surge",
         "description": "Overwhelm your target with a surge of lightning, dealing 292 (L36) to 325 (L47) Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2543,6 +2556,7 @@
         "mana": 103,
         "castTime": null,
         "level": 36,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -2561,8 +2575,7 @@
           }
         ],
         "valuesSummary": "292–325 Electric dmg (L36–L47)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "40": [
@@ -2570,7 +2583,7 @@
         "name": "Arch Spellshield",
         "slug": "Arch_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2578,6 +2591,7 @@
         "mana": 175,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -2590,17 +2604,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 150,
-            "display": "+150 HP",
+            "display": "+150 Health",
             "sortKey": 150,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 30,
-            "display": "+30 AC",
+            "display": "+30 Armor Class",
             "sortKey": 30,
             "statTag": "AC"
           },
@@ -2613,18 +2627,17 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
+        "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Eldritch Ward IV",
         "slug": "Eldritch_Ward_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_IV",
         "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 250 damage received for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -2633,6 +2646,7 @@
         "mana": 20,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -2659,8 +2673,7 @@
         "valuesSummary": "250 absorb · +10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Electric Resistance",
@@ -2674,6 +2687,7 @@
         "mana": 40,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -2688,8 +2702,7 @@
           }
         ],
         "valuesSummary": "+15 Electric Resistance",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Evacuation: Vale of Zintar",
@@ -2703,19 +2716,19 @@
         "mana": 325,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "escape"
         ],
         "primaryTag": "escape",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Arcane Volley",
         "slug": "Greater_Arcane_Volley",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Volley?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Volley",
         "description": "Launch an arcane volley at your target, dealing 40 Magic Damage four times. This spell is channeled.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2724,6 +2737,7 @@
         "mana": 50,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2738,13 +2752,12 @@
           }
         ],
         "valuesSummary": "40 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Burst of Lightning",
         "slug": "Greater_Burst_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Lightning",
         "description": "Strike your target and those around it with a burst of lightning, dealing 487 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2753,6 +2766,7 @@
         "mana": 358,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt",
@@ -2761,13 +2775,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Iceblast",
         "slug": "Greater_Iceblast",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Iceblast?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Iceblast",
         "description": "Blast your target with ice, dealing 697 (L40) to 715 (L51) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2776,6 +2789,7 @@
         "mana": 226,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2804,13 +2818,12 @@
           }
         ],
         "valuesSummary": "697–715 Cold dmg (L40–L51) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Icestorm",
         "slug": "Icestorm",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Icestorm?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Icestorm",
         "description": "Call forth an ice storm, dealing 23 Cold Damage targets within the affected area every 6 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2819,6 +2832,7 @@
         "mana": 314,
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "dot",
           "aoe",
@@ -2835,21 +2849,21 @@
           }
         ],
         "valuesSummary": "23 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Wall of Force",
         "slug": "Wall_of_Force",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wall_of_Force?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wall_of_Force",
         "description": "Summon a wall of force, immobilizing targets that attempt to pass through the affected area. This effect is removed by damage.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-        "location": "",
+        "location": null,
         "mana": "??",
         "castTime": null,
         "level": 40,
+        "type": "spell",
         "tags": [
           "crowd-control",
           "root",
@@ -2858,8 +2872,7 @@
         "primaryTag": "root",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "44": [
@@ -2875,19 +2888,19 @@
         "mana": 325,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "escape"
         ],
         "primaryTag": "escape",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Arcane Surge",
         "slug": "Greater_Arcane_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Surge",
         "description": "Overwhelm your target with a surge of arcane energy, dealing 405 (L44) to 440 (L55) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2896,6 +2909,7 @@
         "mana": 123,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -2927,13 +2941,12 @@
         "valuesSummary": "405–440 Magic dmg (L44–L55) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Fire Volley",
         "slug": "Greater_Fire_Volley",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fire_Volley?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fire_Volley",
         "description": "Launch a flaming volley at your target, dealing 44 Fire Damage four times. This spell is channeled.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2942,6 +2955,7 @@
         "mana": 52,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -2956,13 +2970,12 @@
           }
         ],
         "valuesSummary": "44 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Flash of Lightning",
         "slug": "Greater_Flash_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Flash_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Flash_of_Lightning",
         "description": "Assault your target with a flash of lightning, dealing 243 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2971,6 +2984,7 @@
         "mana": 110,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -2978,13 +2992,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Ice Spike",
         "slug": "Ice_Spike",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Spike?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Spike",
         "description": "Lance your target with an icy spike, dealing 445 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -2993,6 +3006,7 @@
         "mana": 208,
         "castTime": null,
         "level": 44,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3018,8 +3032,7 @@
           }
         ],
         "valuesSummary": "445 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "48": [
@@ -3035,6 +3048,7 @@
         "mana": 140,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "debuff",
           "slow",
@@ -3053,13 +3067,12 @@
           }
         ],
         "valuesSummary": "−60%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Flash of Ice",
         "slug": "Exceptional_Flash_of_Ice",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Ice?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Ice",
         "description": "Assault your target with a flash of ice, dealing 285 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3068,6 +3081,7 @@
         "mana": 123,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3093,8 +3107,7 @@
           }
         ],
         "valuesSummary": "285 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fireball",
@@ -3108,6 +3121,7 @@
         "mana": 277,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3125,13 +3139,12 @@
           }
         ],
         "valuesSummary": "890–965 Fire dmg (L48–L59)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Arcane Nova",
         "slug": "Greater_Arcane_Nova",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Nova?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Nova",
         "description": "Unleash an arcane nova upon nearby targets, dealing 441 Arcane Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3140,6 +3153,7 @@
         "mana": 247,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3169,13 +3183,12 @@
         "valuesSummary": "441 Arcane dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Burst of Magic",
         "slug": "Greater_Burst_of_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Magic?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Magic",
         "description": "Strike your target and those arount it with a burst of magic, dealing 618 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3184,6 +3197,7 @@
         "mana": 432,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3212,13 +3226,12 @@
         "valuesSummary": "618 Magic dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Greater Lightning Surge",
         "slug": "Greater_Lightning_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Lightning_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Lightning_Surge",
         "description": "Overwhelm your target with a surge of lightning, dealing 470 (L48) to 520 (L59) Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3227,6 +3240,7 @@
         "mana": 136,
         "castTime": null,
         "level": 48,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -3245,8 +3259,7 @@
           }
         ],
         "valuesSummary": "470–520 Electric dmg (L48–L59)",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "50": [
@@ -3262,21 +3275,21 @@
         "mana": 175,
         "castTime": null,
         "level": 50,
+        "type": "spell",
         "tags": [
           "utility"
         ],
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "52": [
       {
         "name": "Exceptional Arcane Volley",
         "slug": "Exceptional_Arcane_Volley",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Volley?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Volley",
         "description": "Launch an arcane volley at your target, dealing 45 Magic Damage five times. This spell is channeled.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3285,6 +3298,7 @@
         "mana": 55,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3299,13 +3313,12 @@
           }
         ],
         "valuesSummary": "45 Magic dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Burst of Lightning",
         "slug": "Exceptional_Burst_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Lightning",
         "description": "Strike your target and those around it with a burst of lightning, dealing 710 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3314,6 +3327,7 @@
         "mana": 455,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt",
@@ -3322,13 +3336,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Iceblast",
         "slug": "Exceptional_Iceblast",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Iceblast?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Iceblast",
         "description": "Blast your target with ice, dealing 1030 (L52) to 1120 (L59) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3337,6 +3350,7 @@
         "mana": 285,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3365,21 +3379,21 @@
           }
         ],
         "valuesSummary": "1030–1120 Cold dmg (L52–L59) · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Icestorm",
         "slug": "Greater_Icestorm",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Icestorm?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Icestorm",
         "description": "Call forth an ice storm, dealing 51 Cold Damage targets within the affected area every 6 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "AoE",
         "mana": 440,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "dot",
           "aoe",
@@ -3396,13 +3410,12 @@
           }
         ],
         "valuesSummary": "51 Cold dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Lightning Nova",
         "slug": "Lightning_Nova",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Nova?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Nova",
         "description": "Unleash a lightning nova upon nearby targets, dealing 507 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3411,6 +3424,7 @@
         "mana": 260,
         "castTime": null,
         "level": 52,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt",
@@ -3419,8 +3433,7 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "55": [
@@ -3436,21 +3449,21 @@
         "mana": 325,
         "castTime": null,
         "level": 55,
+        "type": "spell",
         "tags": [
           "escape"
         ],
         "primaryTag": "escape",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "56": [
       {
         "name": "Exceptional Arcane Surge",
         "slug": "Exceptional_Arcane_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Surge",
         "description": "Overwhelm your target with a surge of arcane energy, dealing 572 (L56) to 588 (L59) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3459,6 +3472,7 @@
         "mana": 149,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3490,13 +3504,12 @@
         "valuesSummary": "572–588 Magic dmg (L56–L59) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Fire Volley",
         "slug": "Exceptional_Fire_Volley",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Fire_Volley?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Fire_Volley",
         "description": "Launch a flaming volley at your target, dealing 51 Fire Damage five times. This spell is channeled.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3505,6 +3518,7 @@
         "mana": 60,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3519,13 +3533,12 @@
           }
         ],
         "valuesSummary": "51 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Exceptional Flash of Lightning",
         "slug": "Exceptional_Flash_of_Lightning",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Lightning?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Lightning",
         "description": "Assault your target with a flash of lightning, dealing 343 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3534,6 +3547,7 @@
         "mana": 135,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -3541,13 +3555,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Greater Ice Spike",
         "slug": "Greater_Ice_Spike",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ice_Spike?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ice_Spike",
         "description": "Lance your target with an icy spike, dealing 630 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3556,6 +3569,7 @@
         "mana": 253,
         "castTime": null,
         "level": 56,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3581,15 +3595,14 @@
           }
         ],
         "valuesSummary": "630 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ],
     "60": [
       {
         "name": "Eldritch Ward V",
         "slug": "Eldritch_Ward_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_V",
         "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 400 damage received for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -3598,6 +3611,7 @@
         "mana": 20,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff",
           "shield",
@@ -3624,13 +3638,12 @@
         "valuesSummary": "400 absorb · +10 Armor Class",
         "statTags": [
           "AC"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Arcane Nova",
         "slug": "Exceptional_Arcane_Nova",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Nova?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Nova",
         "description": "Unleash an arcane nova upon nearby targets, dealing 657 Arcane Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3639,6 +3652,7 @@
         "mana": 302,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3668,13 +3682,12 @@
         "valuesSummary": "657 Arcane dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Burst of Magic",
         "slug": "Exceptional_Burst_of_Magic",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Magic?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Magic",
         "description": "Strike your target and those arount it with a burst of magic, dealing 920 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3683,6 +3696,7 @@
         "mana": 528,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3711,13 +3725,12 @@
         "valuesSummary": "920 Magic dmg · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "spell"
+        ]
       },
       {
         "name": "Exceptional Lightning Surge",
         "slug": "Exceptional_Lightning_Surge",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Lightning_Surge?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Lightning_Surge",
         "description": "Overwhelm your target with a surge of lightning, dealing 657 Electric Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3726,6 +3739,7 @@
         "mana": 165,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage",
           "interrupt"
@@ -3733,13 +3747,12 @@
         "primaryTag": "damage",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Fire Spike",
         "slug": "Fire_Spike",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Spike?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Spike",
         "description": "Lance your target with a fiery spike, dealing 723 Fire Damage. This spell is very difficult to resist.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3748,6 +3761,7 @@
         "mana": 281,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3762,14 +3776,13 @@
           }
         ],
         "valuesSummary": "723 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Firestorm",
         "slug": "Firestorm",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Firestorm",
-        "description": "(Removed in Beta 0.29; replaced by Elemental Blast) Engulfs your targer with a firestorm for 700 points of Fire Damage.",
+        "description": "Call forth a fire storm, dealing 20 (L1) to 200 (L60) Fire Damage to targets within the affected area every 6 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -3777,27 +3790,32 @@
         "mana": 572,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
-          "damage"
+          "dot",
+          "aoe"
         ],
-        "primaryTag": null,
+        "primaryTag": "dot",
         "effects": [
           {
-            "kind": "damage",
-            "amount": 700,
+            "kind": "dot",
+            "min": 20,
+            "max": 200,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "interval": 6,
             "damageType": "Fire",
-            "display": "700 Fire dmg",
-            "sortKey": 700
+            "display": "20–200 Fire/6s (L1–L60)",
+            "sortKey": 200
           }
         ],
-        "valuesSummary": "700 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "valuesSummary": "20–200 Fire/6s (L1–L60)",
+        "statTags": []
       },
       {
         "name": "Greater Fireball",
         "slug": "Greater_Fireball",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fireball?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fireball",
         "description": "Hurl a blazing fireball at your taget, dealing 1280 Fire Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3806,6 +3824,7 @@
         "mana": 330,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage"
         ],
@@ -3820,13 +3839,12 @@
           }
         ],
         "valuesSummary": "1280 Fire dmg",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Superior Flash of Ice",
         "slug": "Superior_Flash_of_Ice",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Flash_of_Ice?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Flash_of_Ice",
         "description": "Assault your target with a flash of ice, dealing 395 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
@@ -3835,6 +3853,7 @@
         "mana": 149,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "damage",
           "debuff",
@@ -3860,21 +3879,21 @@
           }
         ],
         "valuesSummary": "395 Cold dmg · −25%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       },
       {
         "name": "Arcane Acceleration",
         "slug": "Arcane_Acceleration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Acceleration?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Acceleration",
         "description": "Burns Marks of Magic from your target, increasing the Casting Speed of your party by 10% (L4) to 30% (L60) and converting each burned stack into an additional 2 minutes of duration.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
-        "location": "",
-        "mana": "",
+        "location": null,
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "spell",
         "tags": [
           "buff"
         ],
@@ -3901,8 +3920,7 @@
           }
         ],
         "valuesSummary": "+10–30% and converting each burned stack into an additional 2 minutes of duration (L4–L60) · +10–30%",
-        "statTags": [],
-        "type": "spell"
+        "statTags": []
       }
     ]
   },
@@ -3919,6 +3937,7 @@
       "mana": 8,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -3947,8 +3966,7 @@
         }
       ],
       "valuesSummary": "6–9 Cold dmg (L1–L4) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Polar Alignment: North",
@@ -3962,6 +3980,7 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "utility",
         "self"
@@ -3969,14 +3988,13 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Spellshield",
       "slug": "Minor_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Class by 5, and Magic Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3984,10 +4002,12 @@
       "mana": 10,
       "castTime": null,
       "level": 1,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
         "self",
+        "AC",
         "MAX HP",
         "MR"
       ],
@@ -4003,10 +4023,11 @@
         },
         {
           "kind": "buff",
-          "stat": "Armor Calss",
+          "stat": "Armor Class",
           "amount": 5,
-          "display": "+5 Armor Calss",
-          "sortKey": 5
+          "display": "+5 Armor Class",
+          "sortKey": 5,
+          "statTag": "AC"
         },
         {
           "kind": "buff",
@@ -4017,17 +4038,17 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
+      "valuesSummary": "+10 Health · +5 Armor Class · +5 Magic Resistance",
       "statTags": [
+        "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Eldritch Ward",
       "slug": "Eldritch_Ward",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward",
       "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 25 damage received for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -4036,6 +4057,7 @@
       "mana": 20,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -4062,14 +4084,13 @@
       "valuesSummary": "25 absorb · +10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4077,6 +4098,7 @@
       "mana": 55,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "summon",
         "teleport"
@@ -4084,8 +4106,7 @@
       "primaryTag": "summon",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Arcane Volley",
@@ -4099,6 +4120,7 @@
       "mana": 27,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4113,63 +4135,28 @@
         }
       ],
       "valuesSummary": "6 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Reclaim Magic",
       "slug": "Reclaim_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reclaim_Magic?action=edit&redlink=1",
-      "description": "Reclaim Marks of Magic from your target, converting each reclaimed stack into 5 (L4) to 25 (L60) Mana and granting your party Arcane Acceleration. Arcane Acceleration: Magically accelerate your thoughts, increasing your Casting Speed by 10% (L4) to 30% (L60) and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reclaim_Magic",
+      "description": "Reclaim your Sparks of Magic from your target, converting them into Mana and granting your party Arcane Acceleration if you don't already have it.",
       "category": "n/a",
       "categorySlug": "Skill_n/a",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_n/a?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_n/a",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
-        "buff",
-        "CAST"
+        "buff"
       ],
       "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Mana and granting your party Arcane Acceleration",
-          "min": 5,
-          "max": 25,
-          "minLevel": 4,
-          "maxLevel": 60,
-          "display": "+5–25 Mana and granting your party Arcane Acceleration (L4–L60)",
-          "sortKey": 25
-        },
-        {
-          "kind": "buff",
-          "stat": "and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration",
-          "min": 10,
-          "max": 30,
-          "minLevel": 4,
-          "maxLevel": 60,
-          "display": "+10–30% and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration (L4–L60)",
-          "sortKey": 30
-        },
-        {
-          "kind": "buff",
-          "stat": "Casting Speed",
-          "min": 10,
-          "max": 30,
-          "unit": "%",
-          "display": "+10–30%",
-          "sortKey": 30,
-          "statTag": "CAST"
-        }
-      ],
-      "valuesSummary": "+10–30% and converting each reclaimed stack of Mark of Magic into an additional 2 minutes of duration (L4–L60) · +10–30% · +5–25 Mana and granting your party Arcane Acceleration (L4–L60)",
-      "statTags": [
-        "CAST"
-      ],
-      "type": "spell"
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Root",
@@ -4183,6 +4170,7 @@
       "mana": 25,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root"
@@ -4197,8 +4185,7 @@
         }
       ],
       "valuesSummary": "30s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Seal of Magic",
@@ -4212,6 +4199,7 @@
       "mana": 30,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -4228,21 +4216,21 @@
         }
       ],
       "valuesSummary": "+2%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "See Invisibility",
       "slug": "See_Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
-      "location": "",
-      "mana": "",
+      "location": null,
+      "mana": null,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility",
@@ -4251,8 +4239,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sense Magic",
@@ -4266,6 +4253,7 @@
       "mana": 20,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "buff",
         "utility"
@@ -4273,14 +4261,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4288,14 +4275,14 @@
       "mana": 50,
       "castTime": null,
       "level": 4,
+      "type": "spell",
       "tags": [
         "teleport"
       ],
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Blink",
@@ -4309,20 +4296,20 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "crowd-control"
       ],
       "primaryTag": "crowd-control",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Dispell magic from your target, removing one harmful effect.",
+      "description": "Dispel magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4330,38 +4317,38 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Glyph: Mun",
       "slug": "Glyph:_Mun",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Mun?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Mun",
       "description": "Invoke Glyph: Mun, granting an arcane foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
       "category": "Glyph",
       "categorySlug": "Skill_Glyph",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Insidious Magic",
       "slug": "Insidious_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Magic?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Magic",
       "description": "Distort the defenses of your target, decreasing their Magic Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4370,6 +4357,7 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "debuff",
         "MR"
@@ -4391,8 +4379,7 @@
       "valuesSummary": "−1–20 Magic Resistance (L1–L60)",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Spellshield",
@@ -4406,6 +4393,7 @@
       "mana": 25,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -4446,13 +4434,12 @@
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Minor Arcane Surge",
       "slug": "Minor_Arcane_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Arcane_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Arcane_Surge",
       "description": "Overwhelm your target with a surge of arcane energy, dealing 20 (L8) to 30 (L15) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4461,6 +4448,7 @@
       "mana": 18,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -4492,21 +4480,21 @@
       "valuesSummary": "20–30 Magic dmg (L8–L15) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Minor Iceblast",
       "slug": "Minor_Iceblast",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Iceblast?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Iceblast",
       "description": "Blast your target with ice, dealing 34 (L8) to 60 (L15) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-      "location": "",
-      "mana": "",
+      "location": null,
+      "mana": null,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -4535,13 +4523,12 @@
         }
       ],
       "valuesSummary": "34–60 Cold dmg (L8–L15) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Sorcerous Mind",
       "slug": "Sorcerous_Mind",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sorcerous_Mind?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sorcerous_Mind",
       "description": "Infuse your mind with sorcery, increasing your Mana Regeneration by 1 (L1) to 10 (L60) and Casting Speed by 10%, and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4550,6 +4537,7 @@
       "mana": 10,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility",
@@ -4584,27 +4572,26 @@
       "valuesSummary": "+1–10 Mana Regeneration (L1–L60) · 1–10% weapon dmg (L1–L60)",
       "statTags": [
         "MANA"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Spell Catalyst",
       "slug": "Spell_Catalyst",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spell_Catalyst?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spell_Catalyst",
       "description": "Activate your incantation, casting a spell based on your foundation and enhancement glyphs. Incantations use your highest known rank of the activate spell.",
       "category": "Glyph",
       "categorySlug": "Skill_Glyph",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Summon Mage Light",
@@ -4614,10 +4601,11 @@
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-      "location": "",
+      "location": null,
       "mana": 40,
       "castTime": null,
       "level": 8,
+      "type": "spell",
       "tags": [
         "buff",
         "summon",
@@ -4626,8 +4614,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Bind Vision",
@@ -4641,19 +4628,19 @@
       "mana": 10,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Eldritch Ward II",
       "slug": "Eldritch_Ward_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_II",
       "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 75 damage received for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -4662,6 +4649,7 @@
       "mana": 20,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -4688,13 +4676,12 @@
       "valuesSummary": "75 absorb · +10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Flash of Ice",
       "slug": "Lesser_Flash_of_Ice",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Flash_of_Ice?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Flash_of_Ice",
       "description": "Assault your target with a flash of ice, dealing 27 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4703,6 +4690,7 @@
       "mana": 22,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -4728,13 +4716,12 @@
         }
       ],
       "valuesSummary": "27 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Minor Burst of Magic",
       "slug": "Minor_Burst_of_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Burst_of_Magic?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Burst_of_Magic",
       "description": "Strike your target and those around it with a burst of magic, dealing 35 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4743,6 +4730,7 @@
       "mana": 122,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -4772,8 +4760,7 @@
       "valuesSummary": "35 Magic dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Purge",
@@ -4787,14 +4774,14 @@
       "mana": 20,
       "castTime": null,
       "level": 12,
+      "type": "spell",
       "tags": [
         "purge"
       ],
       "primaryTag": "purge",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exodus",
@@ -4808,20 +4795,20 @@
       "mana": 70,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "self"
       ],
       "primaryTag": "self",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fire Protection",
       "slug": "Fire_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-      "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4829,6 +4816,7 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "FR"
@@ -4847,32 +4835,31 @@
       "valuesSummary": "+5 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Glyph: Hil",
       "slug": "Glyph:_Hil",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Hil?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Hil",
       "description": "Invoke Glyph: Hil, granting an ice foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
       "category": "Glyph",
       "categorySlug": "Skill_Glyph",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Great Cavern Sea Gate",
       "slug": "Great_Cavern_Sea_Gate",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Gate?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Gate",
       "description": "Teleport yourself, relocating to Great Cavern Sea. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4881,6 +4868,7 @@
       "mana": 125,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -4888,13 +4876,12 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Insidious Ice",
       "slug": "Insidious_Ice",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Ice?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Ice",
       "description": "Distort the defenses of your target, decreasing their Cold Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Cold effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -4903,6 +4890,7 @@
       "mana": 25,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "debuff",
         "CR"
@@ -4924,8 +4912,7 @@
       "valuesSummary": "−1–20 Cold Resistance (L1–L60)",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Arcane Volley",
@@ -4939,6 +4926,7 @@
       "mana": 22,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -4953,13 +4941,12 @@
         }
       ],
       "valuesSummary": "11 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Iceblast",
       "slug": "Lesser_Iceblast",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Iceblast?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Iceblast",
       "description": "Blast your target with ice, dealing 155 (L28) to 195 (L39) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -4968,6 +4955,7 @@
       "mana": 98,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -4996,8 +4984,7 @@
         }
       ],
       "valuesSummary": "155–195 Cold dmg (L28–L39) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Recharge Item",
@@ -5007,21 +4994,21 @@
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "",
+      "location": null,
       "mana": 10,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Scarwood Gate",
       "slug": "Scarwood_Gate",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Gate?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Gate",
       "description": "Teleport yourself, relocating to Scarwood. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5030,6 +5017,7 @@
       "mana": 125,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5037,13 +5025,12 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Seal of Magic II",
       "slug": "Seal_of_Magic_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_II",
       "description": "Invoke a magical seal, causing Evocation spells to activate Mark of Magic for 1 hour. Mark of Magic: Mark your target with magic, increasing all Spell Damage dealt to them by 2% for 1 minute. This effect is limited to targets up to level 34. This effect stacks up to five times.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5052,6 +5039,7 @@
       "mana": 70,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -5068,8 +5056,7 @@
         }
       ],
       "valuesSummary": "+2%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Shaded Dunes Gate",
@@ -5083,6 +5070,7 @@
       "mana": 125,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5090,13 +5078,12 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Shroud of the Magi",
       "slug": "Shroud_of_the_Magi",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud_of_the_Magi?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shroud_of_the_Magi",
       "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living and granting them the ability to see invisible entities for 10 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
@@ -5105,6 +5092,7 @@
       "mana": 20,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "invisibility",
@@ -5113,8 +5101,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Spellshield",
@@ -5128,6 +5115,7 @@
       "mana": 50,
       "castTime": null,
       "level": 16,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -5168,8 +5156,7 @@
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Arcane Invocation",
@@ -5183,17 +5170,17 @@
       "mana": "n/a",
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Arcane Surge",
       "slug": "Lesser_Arcane_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Arcane_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Arcane_Surge",
       "description": "Overwhelm your target with a surge of arcane energy, dealing 108 (L20) to 128 (L31) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5202,6 +5189,7 @@
       "mana": 60,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5233,8 +5221,7 @@
       "valuesSummary": "108–128 Magic dmg (L20–L31) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Flash of Lightning",
@@ -5248,6 +5235,7 @@
       "mana": 53,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -5255,14 +5243,13 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Magic Protection",
       "slug": "Magic_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-      "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
+      "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5270,6 +5257,7 @@
       "mana": 10,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "buff",
         "MR"
@@ -5288,8 +5276,7 @@
       "valuesSummary": "+5 Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Telekinetic Knockback",
@@ -5303,6 +5290,7 @@
       "mana": 15,
       "castTime": null,
       "level": 20,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "stun"
@@ -5317,8 +5305,7 @@
         }
       ],
       "valuesSummary": "3s duration",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Bonds",
@@ -5332,6 +5319,7 @@
       "mana": 70,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow",
@@ -5350,14 +5338,13 @@
         }
       ],
       "valuesSummary": "−50%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Cold Protection",
       "slug": "Cold_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Protection",
-      "description": "Ward your target against frost, increasing their Cold Resistance by 4 for 1 hour.",
+      "description": "Ward your target against frost, increasing their Cold Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5365,6 +5352,7 @@
       "mana": 10,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "CR"
@@ -5374,22 +5362,21 @@
         {
           "kind": "buff",
           "stat": "Cold Resistance",
-          "amount": 4,
-          "display": "+4 Cold Resistance",
-          "sortKey": 4,
+          "amount": 5,
+          "display": "+5 Cold Resistance",
+          "sortKey": 5,
           "statTag": "CR"
         }
       ],
-      "valuesSummary": "+4 Cold Resistance",
+      "valuesSummary": "+5 Cold Resistance",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Eldritch Ward III",
       "slug": "Eldritch_Ward_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_III",
       "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 150 damage received for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -5398,6 +5385,7 @@
       "mana": 20,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -5424,13 +5412,12 @@
       "valuesSummary": "150 absorb · +10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Flash of Ice",
       "slug": "Flash_of_Ice",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Ice?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Ice",
       "description": "Assault your target with a flash of ice, dealing 87 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5439,6 +5426,7 @@
       "mana": 65,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5464,8 +5452,7 @@
         }
       ],
       "valuesSummary": "87 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Glass Flats Gate",
@@ -5479,6 +5466,7 @@
       "mana": 125,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5486,33 +5474,54 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Glyph: Nas",
       "slug": "Glyph:_Nas",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Nas?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Nas",
       "description": "Invoke Glyph: Nas, granting an electric foundation or enhancement for your invocation. Activate your incantation with Spell Catalyst.",
       "category": "Glyph",
       "categorySlug": "Skill_Glyph",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
+    },
+    {
+      "name": "Great Cavern Sea Portal",
+      "slug": "Great_Cavern_Sea_Portal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Great_Cavern_Sea_Portal",
+      "description": "Teleport your party, relocating them to Great Cavern Sea. This spell has no effect on encumbered targets.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Group",
+      "mana": 300,
+      "castTime": null,
+      "level": 24,
+      "type": "spell",
+      "tags": [
+        "portal",
+        "teleport"
+      ],
+      "primaryTag": "portal",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Greater Spellshield",
       "slug": "Greater_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5520,6 +5529,7 @@
       "mana": 75,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -5532,17 +5542,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 75,
-          "display": "+75 HP",
+          "display": "+75 Health",
           "sortKey": 75,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 20,
-          "display": "+20 AC",
+          "display": "+20 Armor Class",
           "sortKey": 20,
           "statTag": "AC"
         },
@@ -5555,18 +5565,17 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
+      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Insidious Lightning",
       "slug": "Insidious_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Lightning",
       "description": "Distort the defenses of your target, decreasing their Electric Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Electric effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5575,6 +5584,7 @@
       "mana": 25,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "debuff"
       ],
@@ -5592,13 +5602,12 @@
         }
       ],
       "valuesSummary": "−1–20 Electric Resistance (L1–L60)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lesser Burst of Magic",
       "slug": "Lesser_Burst_of_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Burst_of_Magic?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Burst_of_Magic",
       "description": "Strike your target and those arount it with a burst of magic, dealing 204 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5607,6 +5616,7 @@
       "mana": 215,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5635,8 +5645,7 @@
       "valuesSummary": "204 Magic dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Lesser Lightning Surge",
@@ -5650,6 +5659,7 @@
       "mana": 73,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -5668,8 +5678,29 @@
         }
       ],
       "valuesSummary": "145–189 Electric dmg (L24–L35)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
+    },
+    {
+      "name": "Scarwood Portal",
+      "slug": "Scarwood_Portal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scarwood_Portal",
+      "description": "Teleport your party, relocating them to Scarwood. This spell has no effect on encumbered targets.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Group",
+      "mana": 300,
+      "castTime": null,
+      "level": 24,
+      "type": "spell",
+      "tags": [
+        "portal",
+        "teleport"
+      ],
+      "primaryTag": "portal",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
     },
     {
       "name": "Shaded Dunes Portal",
@@ -5683,6 +5714,7 @@
       "mana": 300,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "portal",
         "teleport"
@@ -5690,8 +5722,7 @@
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Vale of Zintar Gate",
@@ -5705,6 +5736,7 @@
       "mana": 125,
       "castTime": null,
       "level": 24,
+      "type": "spell",
       "tags": [
         "teleport",
         "self"
@@ -5712,8 +5744,7 @@
       "primaryTag": "teleport",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Volley",
@@ -5727,6 +5758,7 @@
       "mana": 33,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -5741,13 +5773,12 @@
         }
       ],
       "valuesSummary": "23 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Burst of Lightning",
       "slug": "Burst_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burst_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Burst_of_Lightning",
       "description": "Strike your target and those around it with a burst of lightning, dealing 263 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5756,6 +5787,7 @@
       "mana": 245,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt",
@@ -5764,8 +5796,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Electric Protection",
@@ -5779,6 +5810,7 @@
       "mana": 10,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -5793,13 +5825,12 @@
         }
       ],
       "valuesSummary": "+5 Electric Resistance",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Iceblast",
       "slug": "Iceblast",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iceblast?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iceblast",
       "description": "Blast your target with ice, dealing 376 (L28) to 450 (L39) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -5808,6 +5839,7 @@
       "mana": 167,
       "castTime": null,
       "level": 28,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5836,13 +5868,12 @@
         }
       ],
       "valuesSummary": "376–450 Cold dmg (L28–L39) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Seal of Magic III",
       "slug": "Seal_of_Magic_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Seal_of_Magic_III",
       "description": "Invoke a magical seal, causing Evocation spells to activate Mark of Magic for 1 hour. Mark of Magic: Mark your target with magic, increasing all Spell Damage dealt to them by 2% for 1 minute. This effect is limited to targets up to level 64. This effect stacks up to five times.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -5851,6 +5882,7 @@
       "mana": 110,
       "castTime": null,
       "level": 30,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -5867,8 +5899,7 @@
         }
       ],
       "valuesSummary": "+2%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Abolish Magic",
@@ -5882,14 +5913,14 @@
       "mana": 100,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Surge (wiz)",
@@ -5903,6 +5934,7 @@
       "mana": 90,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -5934,14 +5966,13 @@
       "valuesSummary": "231–270 Magic dmg (L32–L44) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Spellshield",
       "slug": "Exceptional_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5949,6 +5980,7 @@
       "mana": 125,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -5961,17 +5993,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 100,
-          "display": "+100 HP",
+          "display": "+100 Health",
           "sortKey": 100,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 25,
-          "display": "+25 AC",
+          "display": "+25 Armor Class",
           "sortKey": 25,
           "statTag": "AC"
         },
@@ -5984,13 +6016,12 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
+      "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Fire Resistance",
@@ -6004,6 +6035,7 @@
       "mana": 40,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "FR"
@@ -6022,13 +6054,12 @@
       "valuesSummary": "+15 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Fire Volley",
       "slug": "Fire_Volley",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Volley?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Volley",
       "description": "Launch a flaming volley at your target, dealing 29 Fire Damage four times. This spell is channeled.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6037,6 +6068,7 @@
       "mana": 39,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6051,13 +6083,12 @@
         }
       ],
       "valuesSummary": "29 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Flash of Lightning",
       "slug": "Flash_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flash_of_Lightning",
       "description": "Assault your target with a flash of lightning, dealing 138 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6066,6 +6097,7 @@
       "mana": 81,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -6073,8 +6105,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Glass Flats Portal",
@@ -6088,6 +6119,7 @@
       "mana": 300,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "portal",
         "teleport"
@@ -6095,32 +6127,31 @@
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Glyph: Dur",
       "slug": "Glyph:_Dur",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Dur?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Glyph:_Dur",
       "description": "Invoke Glyph: Dur, granting a fire foundation or enhancmeent for your invocation. Activate your incantation with Spell Catalyst.",
       "category": "Glyph",
       "categorySlug": "Skill_Glyph",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph?action=edit&redlink=1",
-      "location": "",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Glyph",
+      "location": null,
       "mana": "n/a",
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [],
       "primaryTag": null,
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Insidious Fire",
       "slug": "Insidious_Fire",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Fire?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Insidious_Fire",
       "description": "Distort the defenses of your target, decreasing their Fire Resistance by 1 (L1) to 20 (L60) for 5 minutes. This spell cannot be resisted unless the target is immune to Fire effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -6129,6 +6160,7 @@
       "mana": 25,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "debuff",
         "FR"
@@ -6150,14 +6182,13 @@
       "valuesSummary": "−1–20 Fire Resistance (L1–L60)",
       "statTags": [
         "FR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Magic Resistance",
       "slug": "Magic_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
+      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -6165,6 +6196,7 @@
       "mana": 40,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "buff",
         "MR"
@@ -6183,8 +6215,7 @@
       "valuesSummary": "+15 Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Vale of Zintar Portal",
@@ -6198,6 +6229,7 @@
       "mana": 300,
       "castTime": null,
       "level": 32,
+      "type": "spell",
       "tags": [
         "portal",
         "teleport"
@@ -6205,8 +6237,7 @@
       "primaryTag": "portal",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Nova",
@@ -6220,6 +6251,7 @@
       "mana": 187,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6249,8 +6281,7 @@
       "valuesSummary": "292 Arcane dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Burst of Magic",
@@ -6264,6 +6295,7 @@
       "mana": 328,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6293,14 +6325,13 @@
       "valuesSummary": "409 Magic dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Cold Resistance",
       "slug": "Cold_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cold_Resistance",
-      "description": "Greatly ward your target from frost, increasing their Cold Resistance by 15 for 35 minutes.",
+      "description": "Greatly ward your target against frost, increasing their Cold Resistance by 15 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -6308,6 +6339,7 @@
       "mana": 40,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "buff",
         "CR"
@@ -6326,8 +6358,7 @@
       "valuesSummary": "+15 Cold Resistance",
       "statTags": [
         "CR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Evacuation: Shaded Dunes",
@@ -6341,14 +6372,14 @@
       "mana": 325,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "escape"
       ],
       "primaryTag": "escape",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Flash of Ice",
@@ -6362,6 +6393,7 @@
       "mana": 93,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6387,13 +6419,12 @@
         }
       ],
       "valuesSummary": "175 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lightning Surge",
       "slug": "Lightning_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Surge",
       "description": "Overwhelm your target with a surge of lightning, dealing 292 (L36) to 325 (L47) Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6402,6 +6433,7 @@
       "mana": 103,
       "castTime": null,
       "level": 36,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -6420,14 +6452,13 @@
         }
       ],
       "valuesSummary": "292–325 Electric dmg (L36–L47)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arch Spellshield",
       "slug": "Arch_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -6435,6 +6466,7 @@
       "mana": 175,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -6447,17 +6479,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 150,
-          "display": "+150 HP",
+          "display": "+150 Health",
           "sortKey": 150,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 30,
-          "display": "+30 AC",
+          "display": "+30 Armor Class",
           "sortKey": 30,
           "statTag": "AC"
         },
@@ -6470,18 +6502,17 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
+      "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Eldritch Ward IV",
       "slug": "Eldritch_Ward_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_IV",
       "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 250 damage received for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -6490,6 +6521,7 @@
       "mana": 20,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -6516,8 +6548,7 @@
       "valuesSummary": "250 absorb · +10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Electric Resistance",
@@ -6531,6 +6562,7 @@
       "mana": 40,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -6545,8 +6577,7 @@
         }
       ],
       "valuesSummary": "+15 Electric Resistance",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Evacuation: Vale of Zintar",
@@ -6560,19 +6591,19 @@
       "mana": 325,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "escape"
       ],
       "primaryTag": "escape",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Arcane Volley",
       "slug": "Greater_Arcane_Volley",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Volley?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Volley",
       "description": "Launch an arcane volley at your target, dealing 40 Magic Damage four times. This spell is channeled.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6581,6 +6612,7 @@
       "mana": 50,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6595,13 +6627,12 @@
         }
       ],
       "valuesSummary": "40 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Burst of Lightning",
       "slug": "Greater_Burst_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Lightning",
       "description": "Strike your target and those around it with a burst of lightning, dealing 487 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6610,6 +6641,7 @@
       "mana": 358,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt",
@@ -6618,13 +6650,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Iceblast",
       "slug": "Greater_Iceblast",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Iceblast?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Iceblast",
       "description": "Blast your target with ice, dealing 697 (L40) to 715 (L51) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6633,6 +6664,7 @@
       "mana": 226,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6661,13 +6693,12 @@
         }
       ],
       "valuesSummary": "697–715 Cold dmg (L40–L51) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Icestorm",
       "slug": "Icestorm",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Icestorm?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Icestorm",
       "description": "Call forth an ice storm, dealing 23 Cold Damage targets within the affected area every 6 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6676,6 +6707,7 @@
       "mana": 314,
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "dot",
         "aoe",
@@ -6692,21 +6724,21 @@
         }
       ],
       "valuesSummary": "23 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Wall of Force",
       "slug": "Wall_of_Force",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wall_of_Force?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wall_of_Force",
       "description": "Summon a wall of force, immobilizing targets that attempt to pass through the affected area. This effect is removed by damage.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-      "location": "",
+      "location": null,
       "mana": "??",
       "castTime": null,
       "level": 40,
+      "type": "spell",
       "tags": [
         "crowd-control",
         "root",
@@ -6715,8 +6747,7 @@
       "primaryTag": "root",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Evacuation: Glass Flats",
@@ -6730,19 +6761,19 @@
       "mana": 325,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "escape"
       ],
       "primaryTag": "escape",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Arcane Surge",
       "slug": "Greater_Arcane_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Surge",
       "description": "Overwhelm your target with a surge of arcane energy, dealing 405 (L44) to 440 (L55) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6751,6 +6782,7 @@
       "mana": 123,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6782,13 +6814,12 @@
       "valuesSummary": "405–440 Magic dmg (L44–L55) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Fire Volley",
       "slug": "Greater_Fire_Volley",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fire_Volley?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fire_Volley",
       "description": "Launch a flaming volley at your target, dealing 44 Fire Damage four times. This spell is channeled.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6797,6 +6828,7 @@
       "mana": 52,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6811,13 +6843,12 @@
         }
       ],
       "valuesSummary": "44 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Flash of Lightning",
       "slug": "Greater_Flash_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Flash_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Flash_of_Lightning",
       "description": "Assault your target with a flash of lightning, dealing 243 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6826,6 +6857,7 @@
       "mana": 110,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -6833,13 +6865,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Ice Spike",
       "slug": "Ice_Spike",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Spike?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ice_Spike",
       "description": "Lance your target with an icy spike, dealing 445 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6848,6 +6879,7 @@
       "mana": 208,
       "castTime": null,
       "level": 44,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6873,8 +6905,7 @@
         }
       ],
       "valuesSummary": "445 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Shackles",
@@ -6888,6 +6919,7 @@
       "mana": 140,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "debuff",
         "slow",
@@ -6906,13 +6938,12 @@
         }
       ],
       "valuesSummary": "−60%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Flash of Ice",
       "slug": "Exceptional_Flash_of_Ice",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Ice?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Ice",
       "description": "Assault your target with a flash of ice, dealing 285 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6921,6 +6952,7 @@
       "mana": 123,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -6946,8 +6978,7 @@
         }
       ],
       "valuesSummary": "285 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fireball",
@@ -6961,6 +6992,7 @@
       "mana": 277,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -6978,13 +7010,12 @@
         }
       ],
       "valuesSummary": "890–965 Fire dmg (L48–L59)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Arcane Nova",
       "slug": "Greater_Arcane_Nova",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Nova?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Arcane_Nova",
       "description": "Unleash an arcane nova upon nearby targets, dealing 441 Arcane Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -6993,6 +7024,7 @@
       "mana": 247,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7022,13 +7054,12 @@
       "valuesSummary": "441 Arcane dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Burst of Magic",
       "slug": "Greater_Burst_of_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Magic?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Burst_of_Magic",
       "description": "Strike your target and those arount it with a burst of magic, dealing 618 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7037,6 +7068,7 @@
       "mana": 432,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7065,13 +7097,12 @@
       "valuesSummary": "618 Magic dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Greater Lightning Surge",
       "slug": "Greater_Lightning_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Lightning_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Lightning_Surge",
       "description": "Overwhelm your target with a surge of lightning, dealing 470 (L48) to 520 (L59) Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7080,6 +7111,7 @@
       "mana": 136,
       "castTime": null,
       "level": 48,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -7098,8 +7130,7 @@
         }
       ],
       "valuesSummary": "470–520 Electric dmg (L48–L59)",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Translocate",
@@ -7113,19 +7144,19 @@
       "mana": 175,
       "castTime": null,
       "level": 50,
+      "type": "spell",
       "tags": [
         "utility"
       ],
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Arcane Volley",
       "slug": "Exceptional_Arcane_Volley",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Volley?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Volley",
       "description": "Launch an arcane volley at your target, dealing 45 Magic Damage five times. This spell is channeled.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7134,6 +7165,7 @@
       "mana": 55,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -7148,13 +7180,12 @@
         }
       ],
       "valuesSummary": "45 Magic dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Burst of Lightning",
       "slug": "Exceptional_Burst_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Lightning",
       "description": "Strike your target and those around it with a burst of lightning, dealing 710 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7163,6 +7194,7 @@
       "mana": 455,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt",
@@ -7171,13 +7203,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Iceblast",
       "slug": "Exceptional_Iceblast",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Iceblast?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Iceblast",
       "description": "Blast your target with ice, dealing 1030 (L52) to 1120 (L59) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7186,6 +7217,7 @@
       "mana": 285,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7214,21 +7246,21 @@
         }
       ],
       "valuesSummary": "1030–1120 Cold dmg (L52–L59) · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Icestorm",
       "slug": "Greater_Icestorm",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Icestorm?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Icestorm",
       "description": "Call forth an ice storm, dealing 51 Cold Damage targets within the affected area every 6 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "AoE",
       "mana": 440,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "dot",
         "aoe",
@@ -7245,13 +7277,12 @@
         }
       ],
       "valuesSummary": "51 Cold dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Lightning Nova",
       "slug": "Lightning_Nova",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Nova?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lightning_Nova",
       "description": "Unleash a lightning nova upon nearby targets, dealing 507 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7260,6 +7291,7 @@
       "mana": 260,
       "castTime": null,
       "level": 52,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt",
@@ -7268,8 +7300,7 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Evacuation",
@@ -7283,19 +7314,19 @@
       "mana": 325,
       "castTime": null,
       "level": 55,
+      "type": "spell",
       "tags": [
         "escape"
       ],
       "primaryTag": "escape",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Arcane Surge",
       "slug": "Exceptional_Arcane_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Surge",
       "description": "Overwhelm your target with a surge of arcane energy, dealing 572 (L56) to 588 (L59) Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7304,6 +7335,7 @@
       "mana": 149,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7335,13 +7367,12 @@
       "valuesSummary": "572–588 Magic dmg (L56–L59) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Fire Volley",
       "slug": "Exceptional_Fire_Volley",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Fire_Volley?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Fire_Volley",
       "description": "Launch a flaming volley at your target, dealing 51 Fire Damage five times. This spell is channeled.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7350,6 +7381,7 @@
       "mana": 60,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -7364,13 +7396,12 @@
         }
       ],
       "valuesSummary": "51 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Exceptional Flash of Lightning",
       "slug": "Exceptional_Flash_of_Lightning",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Lightning?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Flash_of_Lightning",
       "description": "Assault your target with a flash of lightning, dealing 343 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7379,6 +7410,7 @@
       "mana": 135,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -7386,13 +7418,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Greater Ice Spike",
       "slug": "Greater_Ice_Spike",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ice_Spike?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ice_Spike",
       "description": "Lance your target with an icy spike, dealing 630 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7401,6 +7432,7 @@
       "mana": 253,
       "castTime": null,
       "level": 56,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7426,13 +7458,12 @@
         }
       ],
       "valuesSummary": "630 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Eldritch Ward V",
       "slug": "Eldritch_Ward_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Eldritch_Ward_V",
       "description": "Weave an eldritch ward, increasing your Armor Class by 10 and absorbing 400 damage received for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -7441,6 +7472,7 @@
       "mana": 20,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff",
         "shield",
@@ -7467,13 +7499,12 @@
       "valuesSummary": "400 absorb · +10 Armor Class",
       "statTags": [
         "AC"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Arcane Nova",
       "slug": "Exceptional_Arcane_Nova",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Nova?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Arcane_Nova",
       "description": "Unleash an arcane nova upon nearby targets, dealing 657 Arcane Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7482,6 +7513,7 @@
       "mana": 302,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7511,13 +7543,12 @@
       "valuesSummary": "657 Arcane dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Burst of Magic",
       "slug": "Exceptional_Burst_of_Magic",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Magic?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Burst_of_Magic",
       "description": "Strike your target and those arount it with a burst of magic, dealing 920 Magic Damage and decreasing their Casting Speed by 25% for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7526,6 +7557,7 @@
       "mana": 528,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7554,13 +7586,12 @@
       "valuesSummary": "920 Magic dmg · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "spell"
+      ]
     },
     {
       "name": "Exceptional Lightning Surge",
       "slug": "Exceptional_Lightning_Surge",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Lightning_Surge?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Lightning_Surge",
       "description": "Overwhelm your target with a surge of lightning, dealing 657 Electric Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7569,6 +7600,7 @@
       "mana": 165,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage",
         "interrupt"
@@ -7576,13 +7608,12 @@
       "primaryTag": "damage",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Fire Spike",
       "slug": "Fire_Spike",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Spike?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Spike",
       "description": "Lance your target with a fiery spike, dealing 723 Fire Damage. This spell is very difficult to resist.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7591,6 +7622,7 @@
       "mana": 281,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -7605,14 +7637,13 @@
         }
       ],
       "valuesSummary": "723 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Firestorm",
       "slug": "Firestorm",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Firestorm",
-      "description": "(Removed in Beta 0.29; replaced by Elemental Blast) Engulfs your targer with a firestorm for 700 points of Fire Damage.",
+      "description": "Call forth a fire storm, dealing 20 (L1) to 200 (L60) Fire Damage to targets within the affected area every 6 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -7620,27 +7651,32 @@
       "mana": 572,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
-        "damage"
+        "dot",
+        "aoe"
       ],
-      "primaryTag": null,
+      "primaryTag": "dot",
       "effects": [
         {
-          "kind": "damage",
-          "amount": 700,
+          "kind": "dot",
+          "min": 20,
+          "max": 200,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "interval": 6,
           "damageType": "Fire",
-          "display": "700 Fire dmg",
-          "sortKey": 700
+          "display": "20–200 Fire/6s (L1–L60)",
+          "sortKey": 200
         }
       ],
-      "valuesSummary": "700 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "valuesSummary": "20–200 Fire/6s (L1–L60)",
+      "statTags": []
     },
     {
       "name": "Greater Fireball",
       "slug": "Greater_Fireball",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fireball?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Fireball",
       "description": "Hurl a blazing fireball at your taget, dealing 1280 Fire Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7649,6 +7685,7 @@
       "mana": 330,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage"
       ],
@@ -7663,13 +7700,12 @@
         }
       ],
       "valuesSummary": "1280 Fire dmg",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Superior Flash of Ice",
       "slug": "Superior_Flash_of_Ice",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Flash_of_Ice?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Superior_Flash_of_Ice",
       "description": "Assault your target with a flash of ice, dealing 395 Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
@@ -7678,6 +7714,7 @@
       "mana": 149,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "damage",
         "debuff",
@@ -7703,21 +7740,21 @@
         }
       ],
       "valuesSummary": "395 Cold dmg · −25%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     },
     {
       "name": "Arcane Acceleration",
       "slug": "Arcane_Acceleration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Acceleration?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Acceleration",
       "description": "Burns Marks of Magic from your target, increasing the Casting Speed of your party by 10% (L4) to 30% (L60) and converting each burned stack into an additional 2 minutes of duration.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
-      "location": "",
-      "mana": "",
+      "location": null,
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "spell",
       "tags": [
         "buff"
       ],
@@ -7744,8 +7781,7 @@
         }
       ],
       "valuesSummary": "+10–30% and converting each burned stack into an additional 2 minutes of duration (L4–L60) · +10–30%",
-      "statTags": [],
-      "type": "spell"
+      "statTags": []
     }
   ]
 }

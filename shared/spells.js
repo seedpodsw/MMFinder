@@ -1,7 +1,7 @@
 /**
- * Spell browser helpers for the class lists compiled by FuStv1337.
- * Data and tag model: https://github.com/FuStv1337/MnMWebsite
- * Site: https://fustv1337.github.io/MnMWebsite
+ * Spell browser helpers for the wiki class lists.
+ * Source: https://monstersandmemories.miraheze.org/wiki/Spells_By_Class
+ * Tag model adapted from https://github.com/FuStv1337/MnMWebsite
  */
 
 export const TAG_LABELS = {

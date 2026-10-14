@@ -63,6 +63,7 @@
         "mana": "n/a",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage",
           "debuff",
@@ -99,8 +100,7 @@
         "valuesSummary": "100% weapon dmg · 1–4 Physical dmg (L1–L8) · −20%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Distress",
@@ -114,6 +114,7 @@
         "mana": 7,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -158,8 +159,7 @@
         "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their magic resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Polar Alignment: North",
@@ -173,6 +173,7 @@
         "mana": 5,
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "utility",
           "self"
@@ -180,14 +181,13 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Taunt",
         "slug": "Taunt",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-        "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
+        "description": "Taunt your target, drawing their attention.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -195,14 +195,14 @@
         "mana": "Innate",
         "castTime": null,
         "level": 1,
+        "type": "ability",
         "tags": [
           "taunt"
         ],
         "primaryTag": "taunt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "2": [
@@ -218,6 +218,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 2,
+        "type": "ability",
         "tags": [
           "buff",
           "debuff",
@@ -249,8 +250,7 @@
         "valuesSummary": "+2–30 Magic Resistance (L1–L60) · −5%",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "3": [
@@ -258,7 +258,7 @@
         "name": "Kick",
         "slug": "Kick",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
-        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 2 seconds.",
         "category": "Acr",
         "categorySlug": "Skill_Acrobatics",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
@@ -266,14 +266,14 @@
         "mana": "n/a",
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "interrupt"
         ],
         "primaryTag": "interrupt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Minor Spellshield",
@@ -287,6 +287,7 @@
         "mana": 10,
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -324,8 +325,7 @@
         "statTags": [
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Reflecting Bash",
@@ -339,14 +339,14 @@
         "mana": "n/a",
         "castTime": null,
         "level": 3,
+        "type": "ability",
         "tags": [
           "interrupt"
         ],
         "primaryTag": "interrupt",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "4": [
@@ -362,6 +362,7 @@
         "mana": 15,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "buff",
           "self"
@@ -369,8 +370,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Spell Ward",
@@ -384,14 +384,14 @@
         "mana": 20,
         "castTime": null,
         "level": 4,
+        "type": "ability",
         "tags": [
           "shield"
         ],
         "primaryTag": "shield",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "5": [
@@ -407,6 +407,7 @@
         "mana": 10,
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility",
@@ -444,8 +445,7 @@
         "statTags": [
           "MR",
           "STR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Interdiction",
@@ -459,6 +459,7 @@
         "mana": 15,
         "castTime": null,
         "level": 5,
+        "type": "ability",
         "tags": [
           "buff",
           "crowd-control",
@@ -481,8 +482,7 @@
           }
         ],
         "valuesSummary": "+40 Threat against them · 30s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "6": [
@@ -498,6 +498,7 @@
         "mana": 15,
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "silence"
@@ -505,8 +506,7 @@
         "primaryTag": "silence",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ward of Suspicion",
@@ -520,6 +520,7 @@
         "mana": 20,
         "castTime": null,
         "level": 6,
+        "type": "ability",
         "tags": [
           "shield",
           "self"
@@ -534,8 +535,7 @@
           }
         ],
         "valuesSummary": "25 absorb",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "7": [
@@ -543,7 +543,7 @@
         "name": "Fire Protection",
         "slug": "Fire_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-        "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+        "description": "Ward yourself against heat, increasing your Fire Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -551,8 +551,10 @@
         "mana": 10,
         "castTime": null,
         "level": 7,
+        "type": "ability",
         "tags": [
           "buff",
+          "self",
           "FR"
         ],
         "primaryTag": "buff",
@@ -569,15 +571,14 @@
         "valuesSummary": "+5 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "8": [
       {
         "name": "Censuring Strike II",
         "slug": "Censuring_Strike_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_II",
         "description": "Censure your target with a violent strike, dealing 105% Weapon Ratio Damage plus 4 (L8) to 8 (L21) Physical Damage, and decreasing their Casting Speed by 25% for 30 seconds.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
@@ -586,6 +587,7 @@
         "mana": "n/a",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "damage",
           "debuff",
@@ -622,8 +624,7 @@
         "valuesSummary": "105% weapon dmg · 4–8 Physical dmg (L8–L21) · −25%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Dominate the Mind",
@@ -637,14 +638,14 @@
         "mana": "n/a",
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "charm"
         ],
         "primaryTag": "charm",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Pillage Mana",
@@ -658,6 +659,7 @@
         "mana": 8,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -669,8 +671,7 @@
           }
         ],
         "valuesSummary": "20 mana",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Sense Magic",
@@ -684,6 +685,7 @@
         "mana": 20,
         "castTime": null,
         "level": 8,
+        "type": "ability",
         "tags": [
           "buff",
           "utility"
@@ -691,8 +693,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "9": [
@@ -700,7 +701,7 @@
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Dispell magic from your target, removing one harmful effect.",
+        "description": "Dispel magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -708,14 +709,14 @@
         "mana": 25,
         "castTime": null,
         "level": 9,
+        "type": "ability",
         "tags": [
           "dispel"
         ],
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "10": [
@@ -731,6 +732,7 @@
         "mana": "n/a",
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -765,14 +767,13 @@
           }
         ],
         "valuesSummary": "150% weapon dmg · 2–10 Magic dmg (L10–L20) · +30–300 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Scintillating Shock",
         "slug": "Scintillating_Shock",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Shock",
-        "description": "Shock nearby targets with scintillation ligths, stunning them for 4 seconds.",
+        "description": "Shock nearby targets with scintillating lights, stunning them for 4 seconds.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -780,6 +781,7 @@
         "mana": 15,
         "castTime": null,
         "level": 10,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "stun",
@@ -795,8 +797,7 @@
           }
         ],
         "valuesSummary": "4s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "11": [
@@ -804,7 +805,7 @@
         "name": "Invisibility",
         "slug": "Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-        "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
+        "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -812,14 +813,14 @@
         "mana": 20,
         "castTime": null,
         "level": 11,
+        "type": "ability",
         "tags": [
           "invisibility"
         ],
         "primaryTag": "invisibility",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "12": [
@@ -835,6 +836,7 @@
         "mana": "Innate",
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "buff",
           "haste"
@@ -853,8 +855,7 @@
           }
         ],
         "valuesSummary": "+5–25%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Mana Ward",
@@ -868,14 +869,14 @@
         "mana": 50,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "shield"
         ],
         "primaryTag": "shield",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Memory Fog",
@@ -889,20 +890,20 @@
         "mana": 25,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "See Invisibility",
         "slug": "See_Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -910,6 +911,7 @@
         "mana": 20,
         "castTime": null,
         "level": 12,
+        "type": "ability",
         "tags": [
           "buff",
           "invisibility",
@@ -918,8 +920,7 @@
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "13": [
@@ -935,6 +936,7 @@
         "mana": 25,
         "castTime": null,
         "level": 13,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -975,8 +977,7 @@
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "14": [
@@ -992,6 +993,7 @@
         "mana": 40,
         "castTime": null,
         "level": 14,
+        "type": "ability",
         "tags": [
           "damage",
           "crowd-control",
@@ -1011,8 +1013,7 @@
           }
         ],
         "valuesSummary": "1–10 Corruption dmg (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "15": [
@@ -1028,14 +1029,14 @@
         "mana": 20,
         "castTime": null,
         "level": 15,
+        "type": "ability",
         "tags": [
           "purge"
         ],
         "primaryTag": "purge",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "16": [
@@ -1043,7 +1044,7 @@
         "name": "Electric Protection",
         "slug": "Electric_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Protection",
-        "description": "Ward your target against shock, increasing their Electric Resistance by 5 for 1 hour.",
+        "description": "Ward yourself against shock, increasing your Electric Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1051,8 +1052,10 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
+        "type": "ability",
         "tags": [
-          "buff"
+          "buff",
+          "self"
         ],
         "primaryTag": "buff",
         "effects": [
@@ -1065,8 +1068,7 @@
           }
         ],
         "valuesSummary": "+5 Electric Resistance",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "18": [
@@ -1082,6 +1084,7 @@
         "mana": 60,
         "castTime": null,
         "level": 18,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -1096,8 +1099,7 @@
           }
         ],
         "valuesSummary": "90 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ward of Accusation",
@@ -1111,6 +1113,7 @@
         "mana": 50,
         "castTime": null,
         "level": 18,
+        "type": "ability",
         "tags": [
           "shield",
           "self"
@@ -1125,15 +1128,14 @@
           }
         ],
         "valuesSummary": "60 absorb",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "20": [
       {
         "name": "Persecute",
         "slug": "Persecute",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Persecute?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Persecute",
         "description": "Persecute your target, dealing 70 Magic Damage, increasing your Threat against them by 50, and decreasing their Magic Resistance by 4 for 30 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -1142,6 +1144,7 @@
         "mana": 85,
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1183,13 +1186,12 @@
         "valuesSummary": "70 Magic dmg · −50 Threat against them · −4 decreasing their Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Purifying Blow II",
         "slug": "Purifying_Blow_II",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_II?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_II",
         "description": "Unleash a purifying blow upon your target, dealing 155% Weapon Ratio Damage plus 12 (L20) to 22 (L30) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
@@ -1198,6 +1200,7 @@
         "mana": "n/a",
         "castTime": null,
         "level": 20,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1232,15 +1235,14 @@
           }
         ],
         "valuesSummary": "155% weapon dmg · 12–22 Magic dmg (L20–L30) · +30–300 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "21": [
       {
         "name": "Censuring Strike III",
         "slug": "Censuring_Strike_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_III",
         "description": "Censure your target with a violent strike, dealing 110% Weapon Ratio Damage plus 8 (L21) to 12 (L36) Physical Damage, and decreasing their Casting Speed by 30% for 30 seconds.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
@@ -1249,6 +1251,7 @@
         "mana": "n/a",
         "castTime": null,
         "level": 21,
+        "type": "ability",
         "tags": [
           "damage",
           "debuff",
@@ -1285,8 +1288,7 @@
         "valuesSummary": "110% weapon dmg · 8–12 Physical dmg (L21–L36) · −30%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "22": [
@@ -1297,11 +1299,12 @@
         "description": "Encase your party in a magic-disrupting shell, reducing their Spell Damage received by 75% for 15 seconds. This spell cannot be dispelled. This spell inflicts Recently Exhausted upon expiration, preventing reapplication of this effect for 20 minutes.",
         "category": "Alt",
         "categorySlug": "Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
         "location": "Vendor",
         "mana": "n/a",
         "castTime": null,
         "level": 22,
+        "type": "ability",
         "tags": [
           "debuff"
         ],
@@ -1318,8 +1321,7 @@
           }
         ],
         "valuesSummary": "−75%",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "23": [
@@ -1335,27 +1337,28 @@
         "mana": 15,
         "castTime": null,
         "level": 23,
+        "type": "ability",
         "tags": [
           "buff"
         ],
         "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Plunder Mana",
         "slug": "Plunder_Mana",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Plunder_Mana?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Plunder_Mana",
         "description": "Plunder the mind of your target, draining 180 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
         "category": "Alt",
         "categorySlug": "Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
         "location": "Vendor",
         "mana": 70,
         "castTime": null,
         "level": 23,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -1367,23 +1370,23 @@
           }
         ],
         "valuesSummary": "180 mana",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "24": [
       {
         "name": "Attainder",
         "slug": "Attainder",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Attainder?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Attainder",
         "description": "Condemn your target, increasing your Threat against them by 80 and incapacitating them for 45 seconds. This spell is removed by damage.",
         "category": "Con",
         "categorySlug": "Conjuration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Conjuration?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Conjuration",
         "location": "Vendor",
         "mana": 35,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "buff",
           "crowd-control",
@@ -1406,8 +1409,7 @@
           }
         ],
         "valuesSummary": "+80 Threat against them · 45s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Magic Ward",
@@ -1421,14 +1423,14 @@
         "mana": 165,
         "castTime": null,
         "level": 24,
+        "type": "ability",
         "tags": [
           "shield"
         ],
         "primaryTag": "shield",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "25": [
@@ -1439,11 +1441,12 @@
         "description": "Purge your target and those around it, removing one beneficial effect, all songs, and all damage immunity effects.",
         "category": "Alt",
         "categorySlug": "Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
         "location": "Vendor",
         "mana": 150,
         "castTime": null,
         "level": 25,
+        "type": "ability",
         "tags": [
           "purge",
           "aoe"
@@ -1451,8 +1454,7 @@
         "primaryTag": "purge",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "26": [
@@ -1461,13 +1463,14 @@
         "slug": "Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spellshield",
         "description": "Encircle yourself with a magical shield, increasing your maximum Health by 50, Armor Class by 15, and Magic Resistance by 15 for 1 hour.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 26,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -1508,8 +1511,7 @@
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "27": [
@@ -1518,13 +1520,14 @@
         "slug": "Mana_Burn_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_II",
         "description": "Burn the mind of your target, depleting 135 Mana and dealing damage equal to 75% of the amount depleted.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 27,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -1539,8 +1542,7 @@
           }
         ],
         "valuesSummary": "135 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "28": [
@@ -1549,13 +1551,14 @@
         "slug": "Mandate_of_Silence",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mandate_of_Silence",
         "description": "Silence nearby targets, preventing them from casting spells for 6 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 28,
+        "type": "ability",
         "tags": [
           "crowd-control",
           "silence",
@@ -1564,23 +1567,23 @@
         "primaryTag": "silence",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "30": [
       {
         "name": "Purifying Blow III",
         "slug": "Purifying_Blow_III",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_III?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_III",
         "description": "Unleash a purifying blow upon your target, dealing 160% Weapon Ratio Damage plus 22 (L30) to 30 (L40) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1615,21 +1618,21 @@
           }
         ],
         "valuesSummary": "160% weapon dmg · 22–30 Magic dmg (L30–L40) · +30–300 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ward of Judgement",
         "slug": "Ward_of_Judgement",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Judgement?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Judgement",
         "description": "Encase yourself in a ward of judgement, absorbing 250 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 14% for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 30,
+        "type": "ability",
         "tags": [
           "shield",
           "self"
@@ -1644,8 +1647,7 @@
           }
         ],
         "valuesSummary": "250 absorb",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "31": [
@@ -1653,17 +1655,19 @@
         "name": "Scintillating Stupor",
         "slug": "Scintillating_Stupor",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Stupor",
-        "description": "Shocks nearby enemies with bright lights, stunning them for 5 seconds. This ability shares a cooldown with other abilities in the same line.",
-        "category": "",
+        "description": "Shock nearby targets with scintillating lights, stunning them for 5 seconds.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 31,
+        "type": "ability",
         "tags": [
           "crowd-control",
-          "stun"
+          "stun",
+          "aoe"
         ],
         "primaryTag": "stun",
         "effects": [
@@ -1675,23 +1679,23 @@
           }
         ],
         "valuesSummary": "5s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "32": [
       {
         "name": "Excruciate",
         "slug": "Excruciate",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Excruciate?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Excruciate",
         "description": "Excruciate your target, dealing 128 Magic Damage, increasing your Threat against them by 75, and decreasing their Magic Resistance by 8 for 30 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 32,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1733,8 +1737,7 @@
         "valuesSummary": "128 Magic dmg · −75 Threat against them · −8 decreasing their Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "34": [
@@ -1742,16 +1745,18 @@
         "name": "Fire Resistance",
         "slug": "Fire_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
-        "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
-        "category": "",
+        "description": "Greatly ward yourself against heat, increasing your Fire Resistance by 15 for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 34,
+        "type": "ability",
         "tags": [
           "buff",
+          "self",
           "FR"
         ],
         "primaryTag": "buff",
@@ -1768,8 +1773,7 @@
         "valuesSummary": "+15 Fire Resistance",
         "statTags": [
           "FR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "36": [
@@ -1782,30 +1786,31 @@
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "shield"
         ],
         "primaryTag": "shield",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Censuring Strike IV",
         "slug": "Censuring_Strike_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_IV",
         "description": "Censure your target with a violent strike, dealing 115% Weapon Ratio Damage plus 12 (L36) to 16 (L55) Physical Damage, and decreasing their Casting Speed by 35% for 30 seconds.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "damage",
           "debuff",
@@ -1842,21 +1847,21 @@
         "valuesSummary": "115% weapon dmg · 12–16 Physical dmg (L36–L55) · −35%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Greater Spellshield",
         "slug": "Greater_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
-        "category": "",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -1869,17 +1874,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 75,
-            "display": "+75 HP",
+            "display": "+75 Health",
             "sortKey": 75,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 20,
-            "display": "+20 AC",
+            "display": "+20 Armor Class",
             "sortKey": 20,
             "statTag": "AC"
           },
@@ -1892,26 +1897,26 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
+        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Mana Burn III",
         "slug": "Mana_Burn_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_III",
         "description": "Burn the mind of your target, depleting 165 Mana and dealing damage equal to 75% of the amount depleted.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 36,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -1926,23 +1931,23 @@
           }
         ],
         "valuesSummary": "165 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "40": [
       {
         "name": "Purifying Blow IV",
         "slug": "Purifying_Blow_IV",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_IV?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_IV",
         "description": "Unleash a purifying blow upon your target, dealing 165% Weapon Ratio Damage plus 30 (L40) to 40 (L50) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 40,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -1977,23 +1982,23 @@
           }
         ],
         "valuesSummary": "165% weapon dmg · 30–40 Magic dmg (L40–L50) · +30–300 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "42": [
       {
         "name": "Proscription",
         "slug": "Proscription",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Proscription?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Proscription",
         "description": "Condemn your target, increasing your Threat against them by 150 and incapacitating them for 1 minute. This spell is removed by damage.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 42,
+        "type": "ability",
         "tags": [
           "buff",
           "crowd-control",
@@ -2010,21 +2015,21 @@
           }
         ],
         "valuesSummary": "+150 Threat against them",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ward of Condemnation",
         "slug": "Ward_of_Condemnation",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Condemnation?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Condemnation",
         "description": "Encase yourself in a ward of condemnation, absorbing 600 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 16% for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 42,
+        "type": "ability",
         "tags": [
           "shield",
           "self"
@@ -2039,8 +2044,7 @@
           }
         ],
         "valuesSummary": "600 absorb",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "44": [
@@ -2048,16 +2052,18 @@
         "name": "Electric Resistance",
         "slug": "Electric_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Resistance",
-        "description": "Greatly ward your target against shock, increasing their Electric Resistance by 15 for 1 hour.",
-        "category": "",
+        "description": "Greatly ward yourself against shock, increasing your Electric Resistance by 15 for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
-          "buff"
+          "buff",
+          "self"
         ],
         "primaryTag": "buff",
         "effects": [
@@ -2070,21 +2076,21 @@
           }
         ],
         "valuesSummary": "+15 Electric Resistance",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Harrow",
         "slug": "Harrow",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Harrow?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Harrow",
         "description": "Harrow your target, dealing 176 Magic Damage, increasing your Threat against them by 125, and decreasing their Magic Resistance by 12 for 30 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -2126,21 +2132,21 @@
         "valuesSummary": "176 Magic dmg · −125 Threat against them · −12 decreasing their Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Mana Burn IV",
         "slug": "Mana_Burn_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_IV",
         "description": "Burn the mind of your target, depleting 225 Mana and dealing damage equal to 75% of the amount depleted.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -2155,21 +2161,21 @@
           }
         ],
         "valuesSummary": "225 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Reive Mana",
         "slug": "Reive_Mana",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reive_Mana?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reive_Mana",
         "description": "Reive the mind of your target, draining 360 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 44,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -2181,8 +2187,7 @@
           }
         ],
         "valuesSummary": "360 mana",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "48": [
@@ -2190,14 +2195,15 @@
         "name": "Exceptional Spellshield",
         "slug": "Exceptional_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
-        "category": "",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -2210,17 +2216,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 100,
-            "display": "+100 HP",
+            "display": "+100 Health",
             "sortKey": 100,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 25,
-            "display": "+25 AC",
+            "display": "+25 Armor Class",
             "sortKey": 25,
             "statTag": "AC"
           },
@@ -2233,13 +2239,12 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
+        "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Mystical Ward",
@@ -2250,32 +2255,33 @@
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 48,
+        "type": "ability",
         "tags": [
           "shield"
         ],
         "primaryTag": "shield",
         "effects": [],
         "valuesSummary": "",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "50": [
       {
         "name": "Purifying Blow V",
         "slug": "Purifying_Blow_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_V",
         "description": "Unleash a purifying blow upon your target, dealing 175% Weapon Ratio Damage plus 40 (L50) to 60 (L60) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 50,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -2310,8 +2316,7 @@
           }
         ],
         "valuesSummary": "175% weapon dmg · 40–60 Magic dmg (L50–L60) · +30–300 Threat against them (L1–L60)",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "52": [
@@ -2320,13 +2325,14 @@
         "slug": "Mana_Burn_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_V",
         "description": "Burn the mind of your target, depleting 300 Mana and dealing damage equal to 75% of the amount depleted.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 52,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -2341,8 +2347,7 @@
           }
         ],
         "valuesSummary": "300 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "53": [
@@ -2350,17 +2355,19 @@
         "name": "Scintillation",
         "slug": "Scintillation",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillation",
-        "description": "Shock nearby enemies with bright lights, stunning them for 6 seconds. This ability shares a cooldown with other abilities in the same line.",
-        "category": "",
+        "description": "Shock nearby targets with scintillating lights, stunning them for 6 seconds.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 53,
+        "type": "ability",
         "tags": [
           "crowd-control",
-          "stun"
+          "stun",
+          "aoe"
         ],
         "primaryTag": "stun",
         "effects": [
@@ -2372,23 +2379,23 @@
           }
         ],
         "valuesSummary": "6s duration",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "54": [
       {
         "name": "Ward of Inquisition",
         "slug": "Ward_of_Inquisition",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Inquisition?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Inquisition",
         "description": "Encase yourself in a ward of suspicion, absorbing 800 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 20% for 15 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 54,
+        "type": "ability",
         "tags": [
           "shield",
           "self"
@@ -2403,23 +2410,23 @@
           }
         ],
         "valuesSummary": "800 absorb",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ],
     "55": [
       {
         "name": "Censuring Strike V",
         "slug": "Censuring_Strike_V",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_V?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_V",
         "description": "Censure your target with a violent strike, dealing 120% Weapon Ratio Damage plus 16 (L55) to 20 (L60) Physical Damage, and decreasing their Casting Speed by 40% for 30 seconds.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 55,
+        "type": "ability",
         "tags": [
           "damage",
           "debuff",
@@ -2456,23 +2463,23 @@
         "valuesSummary": "120% weapon dmg · 16–20 Physical dmg (L55–L60) · −40%",
         "statTags": [
           "CAST"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "56": [
       {
         "name": "Tyrannize",
         "slug": "Tyrannize",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tyrannize?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tyrannize",
         "description": "Tyrannize of your target, dealing 313 Magic Damage, increasing your Threat against them by 200, and decreasing their Magic Resistance by 16 for 30 seconds.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 56,
+        "type": "ability",
         "tags": [
           "damage",
           "buff",
@@ -2514,8 +2521,7 @@
         "valuesSummary": "313 Magic dmg · −200 Threat against them · −16 decreasing their Magic Resistance",
         "statTags": [
           "MR"
-        ],
-        "type": "ability"
+        ]
       }
     ],
     "60": [
@@ -2523,14 +2529,15 @@
         "name": "Arch Spellshield",
         "slug": "Arch_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
-        "category": "",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "buff",
           "shield",
@@ -2543,17 +2550,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 150,
-            "display": "+150 HP",
+            "display": "+150 Health",
             "sortKey": 150,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Class",
             "amount": 30,
-            "display": "+30 AC",
+            "display": "+30 Armor Class",
             "sortKey": 30,
             "statTag": "AC"
           },
@@ -2566,26 +2573,26 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
+        "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
           "MR"
-        ],
-        "type": "ability"
+        ]
       },
       {
         "name": "Mana Burn VI",
         "slug": "Mana_Burn_VI",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_VI",
         "description": "Burn the mind of your target, depleting 400 Mana and dealing damage equal to 75% of the amount depleted.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [
           "damage",
           "mana-drain"
@@ -2600,21 +2607,21 @@
           }
         ],
         "valuesSummary": "400 mana drain",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       },
       {
         "name": "Ravage Mana",
         "slug": "Ravage_Mana",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ravage_Mana?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ravage_Mana",
         "description": "Ravage the mind of your target, draining 540 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
-        "category": "",
+        "category": null,
         "categorySlug": null,
         "categoryUrl": null,
         "location": "Vendor",
-        "mana": "",
+        "mana": null,
         "castTime": null,
         "level": 60,
+        "type": "ability",
         "tags": [],
         "primaryTag": null,
         "effects": [
@@ -2626,8 +2633,7 @@
           }
         ],
         "valuesSummary": "540 mana",
-        "statTags": [],
-        "type": "ability"
+        "statTags": []
       }
     ]
   },
@@ -2644,6 +2650,7 @@
       "mana": "n/a",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage",
         "debuff",
@@ -2680,8 +2687,7 @@
       "valuesSummary": "100% weapon dmg · 1–4 Physical dmg (L1–L8) · −20%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Distress",
@@ -2695,6 +2701,7 @@
       "mana": 7,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -2739,8 +2746,7 @@
       "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their magic resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Polar Alignment: North",
@@ -2754,6 +2760,7 @@
       "mana": 5,
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "utility",
         "self"
@@ -2761,14 +2768,13 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Taunt",
       "slug": "Taunt",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-      "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
+      "description": "Taunt your target, drawing their attention.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -2776,14 +2782,14 @@
       "mana": "Innate",
       "castTime": null,
       "level": 1,
+      "type": "ability",
       "tags": [
         "taunt"
       ],
       "primaryTag": "taunt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Aura of Resistance",
@@ -2797,6 +2803,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 2,
+      "type": "ability",
       "tags": [
         "buff",
         "debuff",
@@ -2828,14 +2835,13 @@
       "valuesSummary": "+2–30 Magic Resistance (L1–L60) · −5%",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Kick",
       "slug": "Kick",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
-      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 2 seconds.",
       "category": "Acr",
       "categorySlug": "Skill_Acrobatics",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
@@ -2843,14 +2849,14 @@
       "mana": "n/a",
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "interrupt"
       ],
       "primaryTag": "interrupt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Minor Spellshield",
@@ -2864,6 +2870,7 @@
       "mana": 10,
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -2901,8 +2908,7 @@
       "statTags": [
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Reflecting Bash",
@@ -2916,14 +2922,14 @@
       "mana": "n/a",
       "castTime": null,
       "level": 3,
+      "type": "ability",
       "tags": [
         "interrupt"
       ],
       "primaryTag": "interrupt",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Arcane Aegis",
@@ -2937,6 +2943,7 @@
       "mana": 15,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "buff",
         "self"
@@ -2944,8 +2951,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Spell Ward",
@@ -2959,14 +2965,14 @@
       "mana": 20,
       "castTime": null,
       "level": 4,
+      "type": "ability",
       "tags": [
         "shield"
       ],
       "primaryTag": "shield",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Arcane Tyrant",
@@ -2980,6 +2986,7 @@
       "mana": 10,
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility",
@@ -3017,8 +3024,7 @@
       "statTags": [
         "MR",
         "STR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Interdiction",
@@ -3032,6 +3038,7 @@
       "mana": 15,
       "castTime": null,
       "level": 5,
+      "type": "ability",
       "tags": [
         "buff",
         "crowd-control",
@@ -3054,8 +3061,7 @@
         }
       ],
       "valuesSummary": "+40 Threat against them · 30s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Silence",
@@ -3069,6 +3075,7 @@
       "mana": 15,
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "silence"
@@ -3076,8 +3083,7 @@
       "primaryTag": "silence",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ward of Suspicion",
@@ -3091,6 +3097,7 @@
       "mana": 20,
       "castTime": null,
       "level": 6,
+      "type": "ability",
       "tags": [
         "shield",
         "self"
@@ -3105,14 +3112,13 @@
         }
       ],
       "valuesSummary": "25 absorb",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Fire Protection",
       "slug": "Fire_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-      "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
+      "description": "Ward yourself against heat, increasing your Fire Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3120,8 +3126,10 @@
       "mana": 10,
       "castTime": null,
       "level": 7,
+      "type": "ability",
       "tags": [
         "buff",
+        "self",
         "FR"
       ],
       "primaryTag": "buff",
@@ -3138,13 +3146,12 @@
       "valuesSummary": "+5 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Censuring Strike II",
       "slug": "Censuring_Strike_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_II",
       "description": "Censure your target with a violent strike, dealing 105% Weapon Ratio Damage plus 4 (L8) to 8 (L21) Physical Damage, and decreasing their Casting Speed by 25% for 30 seconds.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
@@ -3153,6 +3160,7 @@
       "mana": "n/a",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "damage",
         "debuff",
@@ -3189,8 +3197,7 @@
       "valuesSummary": "105% weapon dmg · 4–8 Physical dmg (L8–L21) · −25%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Dominate the Mind",
@@ -3204,14 +3211,14 @@
       "mana": "n/a",
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "charm"
       ],
       "primaryTag": "charm",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Pillage Mana",
@@ -3225,6 +3232,7 @@
       "mana": 8,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -3236,8 +3244,7 @@
         }
       ],
       "valuesSummary": "20 mana",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Sense Magic",
@@ -3251,6 +3258,7 @@
       "mana": 20,
       "castTime": null,
       "level": 8,
+      "type": "ability",
       "tags": [
         "buff",
         "utility"
@@ -3258,14 +3266,13 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Dispell magic from your target, removing one harmful effect.",
+      "description": "Dispel magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3273,14 +3280,14 @@
       "mana": 25,
       "castTime": null,
       "level": 9,
+      "type": "ability",
       "tags": [
         "dispel"
       ],
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Purifying Blow",
@@ -3294,6 +3301,7 @@
       "mana": "n/a",
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -3328,14 +3336,13 @@
         }
       ],
       "valuesSummary": "150% weapon dmg · 2–10 Magic dmg (L10–L20) · +30–300 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Scintillating Shock",
       "slug": "Scintillating_Shock",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Shock",
-      "description": "Shock nearby targets with scintillation ligths, stunning them for 4 seconds.",
+      "description": "Shock nearby targets with scintillating lights, stunning them for 4 seconds.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3343,6 +3350,7 @@
       "mana": 15,
       "castTime": null,
       "level": 10,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "stun",
@@ -3358,14 +3366,13 @@
         }
       ],
       "valuesSummary": "4s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Invisibility",
       "slug": "Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-      "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
+      "description": "Shroud a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3373,14 +3380,14 @@
       "mana": 20,
       "castTime": null,
       "level": 11,
+      "type": "ability",
       "tags": [
         "invisibility"
       ],
       "primaryTag": "invisibility",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Aura of Rapidity",
@@ -3394,6 +3401,7 @@
       "mana": "Innate",
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "buff",
         "haste"
@@ -3412,8 +3420,7 @@
         }
       ],
       "valuesSummary": "+5–25%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Mana Ward",
@@ -3427,14 +3434,14 @@
       "mana": 50,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "shield"
       ],
       "primaryTag": "shield",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Memory Fog",
@@ -3448,20 +3455,20 @@
       "mana": 25,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "See Invisibility",
       "slug": "See_Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
+      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3469,6 +3476,7 @@
       "mana": 20,
       "castTime": null,
       "level": 12,
+      "type": "ability",
       "tags": [
         "buff",
         "invisibility",
@@ -3477,8 +3485,7 @@
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Lesser Spellshield",
@@ -3492,6 +3499,7 @@
       "mana": 25,
       "castTime": null,
       "level": 13,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -3532,8 +3540,7 @@
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Psychic Choke",
@@ -3547,6 +3554,7 @@
       "mana": 40,
       "castTime": null,
       "level": 14,
+      "type": "ability",
       "tags": [
         "damage",
         "crowd-control",
@@ -3566,8 +3574,7 @@
         }
       ],
       "valuesSummary": "1–10 Corruption dmg (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Purge",
@@ -3581,20 +3588,20 @@
       "mana": 20,
       "castTime": null,
       "level": 15,
+      "type": "ability",
       "tags": [
         "purge"
       ],
       "primaryTag": "purge",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Electric Protection",
       "slug": "Electric_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Protection",
-      "description": "Ward your target against shock, increasing their Electric Resistance by 5 for 1 hour.",
+      "description": "Ward yourself against shock, increasing your Electric Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3602,8 +3609,10 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
+      "type": "ability",
       "tags": [
-        "buff"
+        "buff",
+        "self"
       ],
       "primaryTag": "buff",
       "effects": [
@@ -3616,8 +3625,7 @@
         }
       ],
       "valuesSummary": "+5 Electric Resistance",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Mana Burn",
@@ -3631,6 +3639,7 @@
       "mana": 60,
       "castTime": null,
       "level": 18,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -3645,8 +3654,7 @@
         }
       ],
       "valuesSummary": "90 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ward of Accusation",
@@ -3660,6 +3668,7 @@
       "mana": 50,
       "castTime": null,
       "level": 18,
+      "type": "ability",
       "tags": [
         "shield",
         "self"
@@ -3674,13 +3683,12 @@
         }
       ],
       "valuesSummary": "60 absorb",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Persecute",
       "slug": "Persecute",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Persecute?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Persecute",
       "description": "Persecute your target, dealing 70 Magic Damage, increasing your Threat against them by 50, and decreasing their Magic Resistance by 4 for 30 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -3689,6 +3697,7 @@
       "mana": 85,
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -3730,13 +3739,12 @@
       "valuesSummary": "70 Magic dmg · −50 Threat against them · −4 decreasing their Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Purifying Blow II",
       "slug": "Purifying_Blow_II",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_II?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_II",
       "description": "Unleash a purifying blow upon your target, dealing 155% Weapon Ratio Damage plus 12 (L20) to 22 (L30) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
@@ -3745,6 +3753,7 @@
       "mana": "n/a",
       "castTime": null,
       "level": 20,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -3779,13 +3788,12 @@
         }
       ],
       "valuesSummary": "155% weapon dmg · 12–22 Magic dmg (L20–L30) · +30–300 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Censuring Strike III",
       "slug": "Censuring_Strike_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_III",
       "description": "Censure your target with a violent strike, dealing 110% Weapon Ratio Damage plus 8 (L21) to 12 (L36) Physical Damage, and decreasing their Casting Speed by 30% for 30 seconds.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
@@ -3794,6 +3802,7 @@
       "mana": "n/a",
       "castTime": null,
       "level": 21,
+      "type": "ability",
       "tags": [
         "damage",
         "debuff",
@@ -3830,8 +3839,7 @@
       "valuesSummary": "110% weapon dmg · 8–12 Physical dmg (L21–L36) · −30%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Magic Disruption Shell",
@@ -3840,11 +3848,12 @@
       "description": "Encase your party in a magic-disrupting shell, reducing their Spell Damage received by 75% for 15 seconds. This spell cannot be dispelled. This spell inflicts Recently Exhausted upon expiration, preventing reapplication of this effect for 20 minutes.",
       "category": "Alt",
       "categorySlug": "Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
       "location": "Vendor",
       "mana": "n/a",
       "castTime": null,
       "level": 22,
+      "type": "ability",
       "tags": [
         "debuff"
       ],
@@ -3861,8 +3870,7 @@
         }
       ],
       "valuesSummary": "−75%",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Arcane Protection",
@@ -3876,27 +3884,28 @@
       "mana": 15,
       "castTime": null,
       "level": 23,
+      "type": "ability",
       "tags": [
         "buff"
       ],
       "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Plunder Mana",
       "slug": "Plunder_Mana",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Plunder_Mana?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Plunder_Mana",
       "description": "Plunder the mind of your target, draining 180 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
       "category": "Alt",
       "categorySlug": "Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
       "location": "Vendor",
       "mana": 70,
       "castTime": null,
       "level": 23,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -3908,21 +3917,21 @@
         }
       ],
       "valuesSummary": "180 mana",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Attainder",
       "slug": "Attainder",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Attainder?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Attainder",
       "description": "Condemn your target, increasing your Threat against them by 80 and incapacitating them for 45 seconds. This spell is removed by damage.",
       "category": "Con",
       "categorySlug": "Conjuration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Conjuration?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Conjuration",
       "location": "Vendor",
       "mana": 35,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "buff",
         "crowd-control",
@@ -3945,8 +3954,7 @@
         }
       ],
       "valuesSummary": "+80 Threat against them · 45s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Magic Ward",
@@ -3960,14 +3968,14 @@
       "mana": 165,
       "castTime": null,
       "level": 24,
+      "type": "ability",
       "tags": [
         "shield"
       ],
       "primaryTag": "shield",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Greater Purge",
@@ -3976,11 +3984,12 @@
       "description": "Purge your target and those around it, removing one beneficial effect, all songs, and all damage immunity effects.",
       "category": "Alt",
       "categorySlug": "Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration?action=edit&redlink=1",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Alteration",
       "location": "Vendor",
       "mana": 150,
       "castTime": null,
       "level": 25,
+      "type": "ability",
       "tags": [
         "purge",
         "aoe"
@@ -3988,21 +3997,21 @@
       "primaryTag": "purge",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Spellshield",
       "slug": "Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spellshield",
       "description": "Encircle yourself with a magical shield, increasing your maximum Health by 50, Armor Class by 15, and Magic Resistance by 15 for 1 hour.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 26,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -4043,21 +4052,21 @@
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Mana Burn II",
       "slug": "Mana_Burn_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_II",
       "description": "Burn the mind of your target, depleting 135 Mana and dealing damage equal to 75% of the amount depleted.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 27,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -4072,21 +4081,21 @@
         }
       ],
       "valuesSummary": "135 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Mandate of Silence",
       "slug": "Mandate_of_Silence",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mandate_of_Silence",
       "description": "Silence nearby targets, preventing them from casting spells for 6 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 28,
+      "type": "ability",
       "tags": [
         "crowd-control",
         "silence",
@@ -4095,21 +4104,21 @@
       "primaryTag": "silence",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Purifying Blow III",
       "slug": "Purifying_Blow_III",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_III?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_III",
       "description": "Unleash a purifying blow upon your target, dealing 160% Weapon Ratio Damage plus 22 (L30) to 30 (L40) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4144,21 +4153,21 @@
         }
       ],
       "valuesSummary": "160% weapon dmg · 22–30 Magic dmg (L30–L40) · +30–300 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ward of Judgement",
       "slug": "Ward_of_Judgement",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Judgement?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Judgement",
       "description": "Encase yourself in a ward of judgement, absorbing 250 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 14% for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 30,
+      "type": "ability",
       "tags": [
         "shield",
         "self"
@@ -4173,24 +4182,25 @@
         }
       ],
       "valuesSummary": "250 absorb",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Scintillating Stupor",
       "slug": "Scintillating_Stupor",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Stupor",
-      "description": "Shocks nearby enemies with bright lights, stunning them for 5 seconds. This ability shares a cooldown with other abilities in the same line.",
-      "category": "",
+      "description": "Shock nearby targets with scintillating lights, stunning them for 5 seconds.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 31,
+      "type": "ability",
       "tags": [
         "crowd-control",
-        "stun"
+        "stun",
+        "aoe"
       ],
       "primaryTag": "stun",
       "effects": [
@@ -4202,21 +4212,21 @@
         }
       ],
       "valuesSummary": "5s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Excruciate",
       "slug": "Excruciate",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Excruciate?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Excruciate",
       "description": "Excruciate your target, dealing 128 Magic Damage, increasing your Threat against them by 75, and decreasing their Magic Resistance by 8 for 30 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 32,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4258,23 +4268,24 @@
       "valuesSummary": "128 Magic dmg · −75 Threat against them · −8 decreasing their Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Fire Resistance",
       "slug": "Fire_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Resistance",
-      "description": "Greatly ward your target against heat, increasing their Fire Resistance by 15 for 1 hour.",
-      "category": "",
+      "description": "Greatly ward yourself against heat, increasing your Fire Resistance by 15 for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 34,
+      "type": "ability",
       "tags": [
         "buff",
+        "self",
         "FR"
       ],
       "primaryTag": "buff",
@@ -4291,8 +4302,7 @@
       "valuesSummary": "+15 Fire Resistance",
       "statTags": [
         "FR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Arcane Ward",
@@ -4303,30 +4313,31 @@
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "shield"
       ],
       "primaryTag": "shield",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Censuring Strike IV",
       "slug": "Censuring_Strike_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_IV",
       "description": "Censure your target with a violent strike, dealing 115% Weapon Ratio Damage plus 12 (L36) to 16 (L55) Physical Damage, and decreasing their Casting Speed by 35% for 30 seconds.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "damage",
         "debuff",
@@ -4363,21 +4374,21 @@
       "valuesSummary": "115% weapon dmg · 12–16 Physical dmg (L36–L55) · −35%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Greater Spellshield",
       "slug": "Greater_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
-      "category": "",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -4390,17 +4401,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 75,
-          "display": "+75 HP",
+          "display": "+75 Health",
           "sortKey": 75,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 20,
-          "display": "+20 AC",
+          "display": "+20 Armor Class",
           "sortKey": 20,
           "statTag": "AC"
         },
@@ -4413,26 +4424,26 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
+      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Mana Burn III",
       "slug": "Mana_Burn_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_III",
       "description": "Burn the mind of your target, depleting 165 Mana and dealing damage equal to 75% of the amount depleted.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 36,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -4447,21 +4458,21 @@
         }
       ],
       "valuesSummary": "165 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Purifying Blow IV",
       "slug": "Purifying_Blow_IV",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_IV?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_IV",
       "description": "Unleash a purifying blow upon your target, dealing 165% Weapon Ratio Damage plus 30 (L40) to 40 (L50) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 40,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4496,21 +4507,21 @@
         }
       ],
       "valuesSummary": "165% weapon dmg · 30–40 Magic dmg (L40–L50) · +30–300 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Proscription",
       "slug": "Proscription",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Proscription?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Proscription",
       "description": "Condemn your target, increasing your Threat against them by 150 and incapacitating them for 1 minute. This spell is removed by damage.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 42,
+      "type": "ability",
       "tags": [
         "buff",
         "crowd-control",
@@ -4527,21 +4538,21 @@
         }
       ],
       "valuesSummary": "+150 Threat against them",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ward of Condemnation",
       "slug": "Ward_of_Condemnation",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Condemnation?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Condemnation",
       "description": "Encase yourself in a ward of condemnation, absorbing 600 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 16% for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 42,
+      "type": "ability",
       "tags": [
         "shield",
         "self"
@@ -4556,23 +4567,24 @@
         }
       ],
       "valuesSummary": "600 absorb",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Electric Resistance",
       "slug": "Electric_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Electric_Resistance",
-      "description": "Greatly ward your target against shock, increasing their Electric Resistance by 15 for 1 hour.",
-      "category": "",
+      "description": "Greatly ward yourself against shock, increasing your Electric Resistance by 15 for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
-        "buff"
+        "buff",
+        "self"
       ],
       "primaryTag": "buff",
       "effects": [
@@ -4585,21 +4597,21 @@
         }
       ],
       "valuesSummary": "+15 Electric Resistance",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Harrow",
       "slug": "Harrow",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Harrow?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Harrow",
       "description": "Harrow your target, dealing 176 Magic Damage, increasing your Threat against them by 125, and decreasing their Magic Resistance by 12 for 30 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4641,21 +4653,21 @@
       "valuesSummary": "176 Magic dmg · −125 Threat against them · −12 decreasing their Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Mana Burn IV",
       "slug": "Mana_Burn_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_IV",
       "description": "Burn the mind of your target, depleting 225 Mana and dealing damage equal to 75% of the amount depleted.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -4670,21 +4682,21 @@
         }
       ],
       "valuesSummary": "225 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Reive Mana",
       "slug": "Reive_Mana",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reive_Mana?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reive_Mana",
       "description": "Reive the mind of your target, draining 360 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 44,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -4696,21 +4708,21 @@
         }
       ],
       "valuesSummary": "360 mana",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Exceptional Spellshield",
       "slug": "Exceptional_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
-      "category": "",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -4723,17 +4735,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 100,
-          "display": "+100 HP",
+          "display": "+100 Health",
           "sortKey": 100,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 25,
-          "display": "+25 AC",
+          "display": "+25 Armor Class",
           "sortKey": 25,
           "statTag": "AC"
         },
@@ -4746,13 +4758,12 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
+      "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Mystical Ward",
@@ -4763,30 +4774,31 @@
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 48,
+      "type": "ability",
       "tags": [
         "shield"
       ],
       "primaryTag": "shield",
       "effects": [],
       "valuesSummary": "",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Purifying Blow V",
       "slug": "Purifying_Blow_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purifying_Blow_V",
       "description": "Unleash a purifying blow upon your target, dealing 175% Weapon Ratio Damage plus 40 (L50) to 60 (L60) Magic Damage, increasing your Threat against them by 30 (L1) to 300 (L60), and granting you a chance to remove one beneficial effect from them. Additionally, if the target is afflicted by any spell in the Distress line, the purge effect is guaranteed.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 50,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -4821,21 +4833,21 @@
         }
       ],
       "valuesSummary": "175% weapon dmg · 40–60 Magic dmg (L50–L60) · +30–300 Threat against them (L1–L60)",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Mana Burn V",
       "slug": "Mana_Burn_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_V",
       "description": "Burn the mind of your target, depleting 300 Mana and dealing damage equal to 75% of the amount depleted.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 52,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -4850,24 +4862,25 @@
         }
       ],
       "valuesSummary": "300 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Scintillation",
       "slug": "Scintillation",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillation",
-      "description": "Shock nearby enemies with bright lights, stunning them for 6 seconds. This ability shares a cooldown with other abilities in the same line.",
-      "category": "",
+      "description": "Shock nearby targets with scintillating lights, stunning them for 6 seconds.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 53,
+      "type": "ability",
       "tags": [
         "crowd-control",
-        "stun"
+        "stun",
+        "aoe"
       ],
       "primaryTag": "stun",
       "effects": [
@@ -4879,21 +4892,21 @@
         }
       ],
       "valuesSummary": "6s duration",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ward of Inquisition",
       "slug": "Ward_of_Inquisition",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Inquisition?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ward_of_Inquisition",
       "description": "Encase yourself in a ward of suspicion, absorbing 800 damage received for 15 seconds. Additionally, when an attacker breaks the ward, their Attack Speed is decreased by 20% for 15 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 54,
+      "type": "ability",
       "tags": [
         "shield",
         "self"
@@ -4908,21 +4921,21 @@
         }
       ],
       "valuesSummary": "800 absorb",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Censuring Strike V",
       "slug": "Censuring_Strike_V",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_V?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike_V",
       "description": "Censure your target with a violent strike, dealing 120% Weapon Ratio Damage plus 16 (L55) to 20 (L60) Physical Damage, and decreasing their Casting Speed by 40% for 30 seconds.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 55,
+      "type": "ability",
       "tags": [
         "damage",
         "debuff",
@@ -4959,21 +4972,21 @@
       "valuesSummary": "120% weapon dmg · 16–20 Physical dmg (L55–L60) · −40%",
       "statTags": [
         "CAST"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Tyrannize",
       "slug": "Tyrannize",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tyrannize?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tyrannize",
       "description": "Tyrannize of your target, dealing 313 Magic Damage, increasing your Threat against them by 200, and decreasing their Magic Resistance by 16 for 30 seconds.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 56,
+      "type": "ability",
       "tags": [
         "damage",
         "buff",
@@ -5015,21 +5028,21 @@
       "valuesSummary": "313 Magic dmg · −200 Threat against them · −16 decreasing their Magic Resistance",
       "statTags": [
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Arch Spellshield",
       "slug": "Arch_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
-      "category": "",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "buff",
         "shield",
@@ -5042,17 +5055,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 150,
-          "display": "+150 HP",
+          "display": "+150 Health",
           "sortKey": 150,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Class",
           "amount": 30,
-          "display": "+30 AC",
+          "display": "+30 Armor Class",
           "sortKey": 30,
           "statTag": "AC"
         },
@@ -5065,26 +5078,26 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
+      "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
         "MR"
-      ],
-      "type": "ability"
+      ]
     },
     {
       "name": "Mana Burn VI",
       "slug": "Mana_Burn_VI",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Mana_Burn_VI",
       "description": "Burn the mind of your target, depleting 400 Mana and dealing damage equal to 75% of the amount depleted.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [
         "damage",
         "mana-drain"
@@ -5099,21 +5112,21 @@
         }
       ],
       "valuesSummary": "400 mana drain",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     },
     {
       "name": "Ravage Mana",
       "slug": "Ravage_Mana",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ravage_Mana?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ravage_Mana",
       "description": "Ravage the mind of your target, draining 540 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
-      "category": "",
+      "category": null,
       "categorySlug": null,
       "categoryUrl": null,
       "location": "Vendor",
-      "mana": "",
+      "mana": null,
       "castTime": null,
       "level": 60,
+      "type": "ability",
       "tags": [],
       "primaryTag": null,
       "effects": [
@@ -5125,8 +5138,7 @@
         }
       ],
       "valuesSummary": "540 mana",
-      "statTags": [],
-      "type": "ability"
+      "statTags": []
     }
   ]
 }
