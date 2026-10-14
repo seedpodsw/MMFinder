@@ -1,0 +1,1421 @@
+{
+  "importedAt": "2026-10-06T20:01:19.687Z",
+  "count": 66,
+  "merchants": [
+    {
+      "name": "A cobbler",
+      "type": "cobbler",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Boots",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A bag merchant",
+      "type": "bag merchant",
+      "zones": [
+        "Faelindral",
+        "Night Harbor"
+      ],
+      "place": "In Faelindral: Traders Terrace In Night Harbor: Night Market / North Gate / Shortfolk Area",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags and packs",
+          "keywords": []
+        },
+        {
+          "phrase": "Hides",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A fisherman (Night Harbor)",
+      "type": "fisherman",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Twilight Harbor at the end of the 3rd pier from the west",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bait",
+          "keywords": [
+            "grub"
+          ]
+        },
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A grocer",
+      "type": "grocer",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market, next to a used weapons dealer. Appears only at night.",
+      "items": [
+        "Bell Pepper",
+        "Cheese"
+      ],
+      "categories": [
+        {
+          "phrase": "Various vegetables",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A produce vendor",
+      "type": "produce vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Saltbreeze Park, on the west wall",
+      "items": [
+        "Bell Pepper",
+        "Cheese",
+        "Mushroom"
+      ],
+      "categories": [
+        {
+          "phrase": "Various vegetables",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A barkeep",
+      "type": "barkeep",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The North Gate Inn, The Thirsty Glance",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Charred fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Cooked meat",
+          "keywords": []
+        },
+        {
+          "phrase": "Roots",
+          "keywords": [
+            "harvallen",
+            "multhele"
+          ]
+        },
+        {
+          "phrase": "Snake eggs",
+          "keywords": []
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": [
+            "wild carrots"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A cook",
+      "type": "cook",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The Shaded Bloom Inn",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": [
+            "meat",
+            "foot",
+            "legs",
+            "ear",
+            "tooth",
+            "eye",
+            "fang",
+            "egg"
+          ]
+        },
+        {
+          "phrase": "Cleaver",
+          "keywords": []
+        },
+        {
+          "phrase": "Fish",
+          "keywords": [
+            "raw",
+            "charred",
+            "grilled",
+            "scales"
+          ]
+        },
+        {
+          "phrase": "Herbs",
+          "keywords": [
+            "thyme"
+          ]
+        },
+        {
+          "phrase": "Skeleton parts",
+          "keywords": [
+            "chips",
+            "jawbone"
+          ]
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": [
+            "wild carrots"
+          ]
+        },
+        {
+          "phrase": "Wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A merchant traveler",
+      "type": "merchant traveler",
+      "zones": [
+        "Vale of Zintar"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": [
+            "meat",
+            "silk",
+            "skin",
+            "teeth",
+            "wings"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A cleric scribe",
+      "type": "cleric scribe",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Wayfarers Hospice in the Sojourners camp",
+      "items": [
+        "Blister Beetle Gland",
+        "Immature Snake Venom Sac",
+        "Intact Diseased Bat Bile Duct"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A fisherman (Faelindral)",
+      "type": "fisherman",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Base of the Traveler's Lift (aka Noob lift)",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bait",
+          "keywords": [
+            "grub"
+          ]
+        },
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A goods merchant",
+      "type": "goods merchant",
+      "zones": [
+        "Night Harbor",
+        "Shallow Shoals"
+      ],
+      "place": "North gate, first building on the right when heading to the Mage Tower. Smallfolk area in Night Harbor",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Torches",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A miner",
+      "type": "miner",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Sojourner Camp",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Ores",
+          "keywords": []
+        },
+        {
+          "phrase": "Gems",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A lumberjack",
+      "type": "lumberjack",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Located in Sojourner's Camp.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Lumberjack Materials",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A medic",
+      "type": "medic",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Sojourner Camp",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bandages",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A leatherworker",
+      "type": "leatherworker",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "North Night Harbor, Tannery",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Leather Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Hides",
+          "keywords": []
+        },
+        {
+          "phrase": "Thread",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A jewelcrafter",
+      "type": "jewelcrafter",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Jewelry",
+          "keywords": []
+        },
+        {
+          "phrase": "Gems",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A chain armorer",
+      "type": "chain armorer",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Chain Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Metal Scraps",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A plate armorer",
+      "type": "plate armorer",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Plate Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Metal Scraps",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A blacksmith",
+      "type": "blacksmith",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market, at the forge, next to Blacksmith Musafar",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Carapaces",
+          "keywords": []
+        },
+        {
+          "phrase": "Gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Ores",
+          "keywords": []
+        },
+        {
+          "phrase": "Stones",
+          "keywords": []
+        },
+        {
+          "phrase": "Metal Scraps",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A cloth armorer",
+      "type": "cloth armorer",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market. Shortfolk area",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cloth Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Thread",
+          "keywords": []
+        },
+        {
+          "phrase": "Cloth Scraps",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A pelt trader",
+      "type": "pelt trader",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Blackfeather Bazaar",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Leather Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Hides",
+          "keywords": []
+        },
+        {
+          "phrase": "Thread",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A poison maker (Night Harbor)",
+      "type": "poison maker",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Second floor of The City Illuminator's Guild",
+      "items": [
+        "Bat Wing",
+        "Bone Ash",
+        "Bone Chips",
+        "Fire Beetle Eye",
+        "Fire Beetle Gland",
+        "Ghoul Skin",
+        "Holy Water",
+        "Multhele Root",
+        "Resin",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A reagent vendor (Shortfolk Area)",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Shortfolk Area",
+      "items": [
+        "Bat Wing",
+        "Bone Chips",
+        "Fire Beetle Eye",
+        "Fire Beetle Gland",
+        "Ghoul Skin",
+        "Holy Water",
+        "Multhele Root",
+        "Resin",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A reagent vendor (Concourse of Souls)",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Concourse of Souls",
+      "items": [
+        "Bat Fur",
+        "Bat Wing",
+        "Bone Chips",
+        "Ghoul Skin",
+        "Multhele Root",
+        "Resin",
+        "Scorched Skeletal Remains",
+        "Shattered Skeleton Femur",
+        "Skeleton Jawbone",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A reagent vendor (Chartered Academy of Arcane Inquiry)",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Chartered Academy of Arcane Inquiry (wizard guild)",
+      "items": [
+        "Bat Wing",
+        "Bone Chips",
+        "Drake Scale",
+        "Fire Beetle Gland",
+        "Ghoul Skin",
+        "Multhele Root",
+        "Resin",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "An alchemist",
+      "type": "alchemist",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Alchemy Supplies shop in the Black Feather Bazaar",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cauldrons",
+          "keywords": []
+        },
+        {
+          "phrase": "Ghoul Bile",
+          "keywords": []
+        },
+        {
+          "phrase": "Limestone",
+          "keywords": []
+        },
+        {
+          "phrase": "Sealants",
+          "keywords": []
+        },
+        {
+          "phrase": "Spectral Dust",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A reagent vendor (Wayfarers Hospice)",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Wayfarers Hospice in the Sojourners camp",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Limestone",
+          "keywords": []
+        },
+        {
+          "phrase": "Multhele Root",
+          "keywords": []
+        },
+        {
+          "phrase": "Resin",
+          "keywords": []
+        },
+        {
+          "phrase": "Sealants",
+          "keywords": []
+        },
+        {
+          "phrase": "Undead parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A used weapons dealer",
+      "type": "used weapons dealer",
+      "zones": [
+        "Night Harbor",
+        "Shallow Shoals"
+      ],
+      "place": "Night Market, Shortfolk area",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "All Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A weaponsmith",
+      "type": "weaponsmith",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Carapaces",
+          "keywords": []
+        },
+        {
+          "phrase": "Gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Ores",
+          "keywords": []
+        },
+        {
+          "phrase": "Stones",
+          "keywords": []
+        },
+        {
+          "phrase": "Blacksmithed items",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A smelter",
+      "type": "smelter",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market, at the forge",
+      "items": [
+        "Antique Billon Coin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "An elemental quartermaster",
+      "type": "elemental quartermaster",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Bottom alcove in the School of the Fourfold Path (ELE/MNK guildhall)",
+      "items": [
+        "Basic Mortar",
+        "Bone Chips",
+        "Coarse Sand",
+        "Chipped Malachite",
+        "Fire Beetle Eye",
+        "Fire Beetle Gland",
+        "Ghoul Skin",
+        "Golden Palm Resin",
+        "Limestone",
+        "Multhele Root",
+        "Resin",
+        "Small Incense Stick",
+        "Water Flask",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A survivalist",
+      "type": "survivalist",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Sojourner Camp",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Lighting items",
+          "keywords": []
+        },
+        {
+          "phrase": "Resins",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "An exotic cook",
+      "type": "exotic cook",
+      "zones": [
+        "Shallow Shoals"
+      ],
+      "place": "On Zaedin's Landing island, upstairs from the cooking apprentice room.",
+      "items": [
+        "Bone Chips",
+        "Wood"
+      ],
+      "categories": [
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "An herbalist",
+      "type": "herbalist",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Sojourner Camp",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Herbs",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A tanner",
+      "type": "tanner",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The Tannery",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Hides",
+          "keywords": []
+        },
+        {
+          "phrase": "Leather",
+          "keywords": []
+        },
+        {
+          "phrase": "Thread",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A reagent vendor (Spellbinders of the Spire)",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Spellbinders of the Spire bottom floor, in Registrar Vauquelin's room. Take 2 rights when entering from the entrance in the residential area",
+      "items": [
+        "Bat Wing",
+        "Bone Chips",
+        "Fire Beetle Gland",
+        "Ghoul Skin",
+        "Multhele Root",
+        "Resin",
+        "Zombie Skin"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A wise elder",
+      "type": "wise elder",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Inside the temple against the cliff between Sojourner's Camp and the Tannery.",
+      "items": [
+        "Handmade Torch",
+        "Resin",
+        "Wood"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A scrap dealer",
+      "type": "scrap dealer",
+      "zones": [
+        "Evershade Weald"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "All Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "An outfitter",
+      "type": "outfitter",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Torches",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Mafeed the Butcher",
+      "type": "butcher",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Monster Parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Chef Belle",
+      "type": "cook",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "At the North Gate inn, next to Chef Daisy",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": [
+            "meat",
+            "legs"
+          ]
+        },
+        {
+          "phrase": "Skeleton parts",
+          "keywords": [
+            "chips",
+            "jawbone"
+          ]
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": [
+            "wild carrots"
+          ]
+        },
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Halrinn Grimsul",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The Shaded Bloom Inn",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Drinks",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Enchanter Reagents",
+      "type": "reagent vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Spellbinders of the Spire, outside the door an on a balcony from Jaakima",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Chipped gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Limestone",
+          "keywords": []
+        },
+        {
+          "phrase": "Multhele Roots",
+          "keywords": []
+        },
+        {
+          "phrase": "Resin",
+          "keywords": []
+        },
+        {
+          "phrase": "Sealants",
+          "keywords": []
+        },
+        {
+          "phrase": "Undead parts",
+          "keywords": [
+            "bone chips - 1c"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barkeep Zahra",
+      "type": "barkeep",
+      "zones": [
+        "Shallow Shoals"
+      ],
+      "place": "The Rusted Anchor, on Zaedin's Landing island.",
+      "items": [
+        "Water Flask"
+      ],
+      "categories": []
+    },
+    {
+      "name": "Karsyn",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Enchanters guild (near the docks), outside the door and on a balcony from Jaakima",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Chipped gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Limestone",
+          "keywords": []
+        },
+        {
+          "phrase": "Multhele Roots",
+          "keywords": []
+        },
+        {
+          "phrase": "Resin",
+          "keywords": []
+        },
+        {
+          "phrase": "Sealants",
+          "keywords": []
+        },
+        {
+          "phrase": "Undead parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Dilshad Abolfazl",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "West building in the Tannery",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Hides",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Haredi",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Haredi is in the Library. Once there, take the teleportation platform in front of you. You'll see Haredi to the left.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Spell scrolls",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Hendrik Valbreken",
+      "type": "",
+      "zones": [
+        "Keeper's Bight"
+      ],
+      "place": "Timberwolf Trading Co.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Torches",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Delloreli the Butcher",
+      "type": "butcher",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Monster Parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Drogo the Grocer",
+      "type": "grocer",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Melzorra",
+      "type": "",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "Foreign Quarter's Courtyard",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Bat Fur",
+          "keywords": []
+        },
+        {
+          "phrase": "Leatherworking Mats",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Leatherworker Vex",
+      "type": "leatherworker",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "In the Foreign Trader's Market",
+      "items": [
+        "Tattered Rawhide Armor",
+        "Rawhide Scarps"
+      ],
+      "categories": []
+    },
+    {
+      "name": "Sproggets Bedsprings",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night market inside the house just northwest of a used weapons dealer",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Bandages",
+          "keywords": []
+        },
+        {
+          "phrase": "Light Stones",
+          "keywords": []
+        },
+        {
+          "phrase": "Giant Beetle Eyes",
+          "keywords": []
+        },
+        {
+          "phrase": "Torches",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Mira Gables",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "North gate, third door on the right when heading to the Mage Tower",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Animal fur, fangs, silk",
+          "keywords": []
+        },
+        {
+          "phrase": "Bandages",
+          "keywords": []
+        },
+        {
+          "phrase": "Skeleton parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Tailored armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Tailoring material",
+          "keywords": [
+            "scraps"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Used Armor Trader",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Night Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Various Armor Drops",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Weaponsmith Sielah Zefir",
+      "type": "weaponsmith",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Blackfeather Bazaar",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Tessa Kentwell",
+      "type": "",
+      "zones": [
+        "Keeper's Bight"
+      ],
+      "place": "In the tannery near the Red Mantle building.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Pelts and Hides",
+          "keywords": []
+        },
+        {
+          "phrase": "Threads",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Quartermaster Obaid",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "The Steel Talons Garrison",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Weapons",
+          "keywords": []
+        },
+        {
+          "phrase": "Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Otto Roth",
+      "type": "",
+      "zones": [
+        "Keeper's Bight"
+      ],
+      "place": "The Wheelhouse Tavern",
+      "items": [
+        "Water Flask"
+      ],
+      "categories": []
+    },
+    {
+      "name": "Sybille Abegg",
+      "type": "",
+      "zones": [
+        "Keeper's Bight"
+      ],
+      "place": "Village of Penshaw - Mossy Brook Inn",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "fish, vegetables, and meats",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Tolrad Oarsen",
+      "type": "",
+      "zones": [
+        "Keeper's Bight"
+      ],
+      "place": "In the fishing camp at the end of the docks of Penshaw.",
+      "items": [
+        "Grub",
+        "Wood"
+      ],
+      "categories": []
+    },
+    {
+      "name": "Stonecutter Selin",
+      "type": "",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Inside the temple against the cliff between Sojourner's Camp and the Tannery.",
+      "items": [
+        "Brittle Stone",
+        "Weighty Stone"
+      ],
+      "categories": []
+    },
+    {
+      "name": "Munk",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Monster Parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Nyxia Ak'kin",
+      "type": "",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "Foreign Quarter Supper Hall",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Drinks, Deep Beetle Eye , Food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Supplier Jul",
+      "type": "",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "Located in Foreign Quarter in first house on left.",
+      "items": [
+        "Tattered Cloth",
+        "Tattered Rawhide"
+      ],
+      "categories": [
+        {
+          "phrase": "Raw Meats",
+          "keywords": []
+        },
+        {
+          "phrase": "Gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Various",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Ruzzuna",
+      "type": "",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "Foreign Trader's Market",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cloth Armour",
+          "keywords": []
+        }
+      ]
+    }
+  ]
+}
