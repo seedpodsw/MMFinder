@@ -9,24 +9,38 @@ import ItemCard from "./ItemCard";
 import GearFinder from "./GearFinder";
 import WhoIsThat from "./WhoIsThat";
 import Notes from "./Notes";
+import Characters from "./Characters";
 import Hunt from "./Hunt";
 import Trades from "./Trades";
+import {
+  adoptLegacy,
+  characterLabel,
+  equipItem,
+  loadCharacters,
+  patchCharacter,
+  readLegacyLoadout,
+  saveCharacters,
+  selectCharacter,
+  unequipItem,
+} from "./characters-store.js";
 import { huntsHere, huntsAtLevel, huntZonesNear, huntSide, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
 import { loadHero } from "../../shared/field.js";
 import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
+
+let characterSeedClaimed = false;
 
 const SITE_TABS = [
   { view: "atlas", label: "Atlas" },
   { view: "hunt", label: "Hunt" },
   { view: "trades", label: "Trades" },
-  { view: "walk", label: "Walk" },
   { view: "turnins", label: "Turn-ins" },
   { view: "items", label: "Items" },
   { view: "spells", label: "Spells" },
+  { view: "characters", label: "Characters" },
   { view: "gear", label: "Upgrades" },
   { view: "quests", label: "Quests" },
-  { view: "who", label: "Who's that" },
   { view: "notes", label: "Notes" },
+  { view: "walk", label: "Walk" },
 ];
 
 const emptyPoiForm = {
@@ -74,8 +88,10 @@ export default function App() {
   );
   const [focusPoi, setFocusPoi] = useState(() => readPlace(window.location.search).poi);
   const [hoverPoi, setHoverPoi] = useState(null);
-  const [level, setLevel] = useState(1);
+  const [book, setBook] = useState(() => loadCharacters(localStorage));
+  const [looseLevel, setLooseLevel] = useState(1);
   const [query, setQuery] = useState("");
+  const [searchSlot, setSearchSlot] = useState(null);
   const [dropMode, setDropMode] = useState(false);
   const [kindFilter, setKindFilter] = useState(() => kindFor(readPlace(window.location.search)));
   const [tab, setTab] = useState("pois");
@@ -85,7 +101,7 @@ export default function App() {
   const [addingPoi, setAddingPoi] = useState(false);
   const [saving, setSaving] = useState(false);
   const [view, setView] = useState(() => appView(readPlace(window.location.search)));
-  const [klass, setKlass] = useState(() => {
+  const [looseKlass, setLooseKlass] = useState(() => {
     const place = readPlace(window.location.search);
     return place.view === "items" ? "" : place.class || "";
   });
@@ -101,17 +117,91 @@ export default function App() {
   const [landed, setLanded] = useState(null);
   const [itemDraft, setItemDraft] = useState({ name: "", how: "", kind: "item" });
   const [addingItem, setAddingItem] = useState(false);
+  const activeChar = book.characters.find((character) => character.id === book.activeId) || null;
+  const level = activeChar ? activeChar.level : looseLevel;
+  const klass = activeChar ? activeChar.classId : looseKlass;
+
+  function commitBook(next) {
+    if (next === book) return;
+    if (!next.characters.length && book.characters.length) {
+      const gone = book.characters.find((character) => character.id === book.activeId) || book.characters[0];
+      if (gone) {
+        setLooseLevel(gone.level);
+        setLooseKlass(gone.classId);
+      }
+    }
+    setBook(next);
+    try {
+      saveCharacters(localStorage, next);
+    } catch {
+      setError("Couldn't save characters in this browser.");
+    }
+  }
+
+  function setLevel(next) {
+    const n = Number(next);
+    if (!activeChar) {
+      setLooseLevel(Number.isFinite(n) ? Math.min(60, Math.max(1, Math.round(n))) : 1);
+      return;
+    }
+    commitBook(patchCharacter(book, activeChar.id, { level: n }));
+  }
+
+  function setKlass(next) {
+    const id = String(next || "");
+    if (!activeChar) {
+      setLooseKlass(id);
+      return;
+    }
+    commitBook(patchCharacter(book, activeChar.id, { classId: id }));
+  }
+
+  function chooseCharacter(id) {
+    commitBook(selectCharacter(book, id));
+  }
 
   async function reload() {
+    const stored = loadCharacters(localStorage);
+    let mode = "ready";
+    if (!stored.seeded) mode = characterSeedClaimed ? "wait" : "adopt";
+    if (mode === "adopt") characterSeedClaimed = true;
     const [w, n] = await Promise.all([api.world(), api.notes()]);
     setWorld(w);
     setNotes(n);
-    if (w.settings?.characterLevel) setLevel(w.settings.characterLevel);
-    const opened = readPlace(window.location.search);
-    if (w.settings?.characterClass && !(opened.view !== "items" && opened.class)) {
-      setKlass(w.settings.characterClass);
-    }
     if (Array.isArray(w.settings?.completedSteps)) setCompleted(w.settings.completedSteps);
+    if (mode === "wait") return;
+
+    const opened = readPlace(window.location.search);
+    const classId = w.settings?.characterClass || "";
+    let nextBook =
+      mode === "adopt"
+        ? adoptLegacy(stored, {
+            level: w.settings?.characterLevel || 1,
+            classId,
+            className: (w.classes || []).find((c) => c.id === classId)?.name || "",
+            loadout: readLegacyLoadout(localStorage),
+          })
+        : stored;
+    if (opened.class && opened.view !== "items" && nextBook.activeId) {
+      const active = nextBook.characters.find((character) => character.id === nextBook.activeId);
+      if (active && active.classId !== opened.class) {
+        nextBook = patchCharacter(nextBook, active.id, { classId: opened.class });
+      }
+    }
+    if (nextBook !== stored) {
+      try {
+        saveCharacters(localStorage, nextBook);
+      } catch {
+        setError("Couldn't save characters in this browser.");
+      }
+      setBook(nextBook);
+    }
+    if (!nextBook.characters.length) {
+      if (w.settings?.characterLevel) setLooseLevel(w.settings.characterLevel);
+      if (w.settings?.characterClass && !(opened.view !== "items" && opened.class)) {
+        setLooseKlass(w.settings.characterClass);
+      }
+    }
   }
 
   useEffect(() => {
@@ -558,25 +648,6 @@ export default function App() {
     setWorld(w);
   }
 
-  async function dropMapFile(file) {
-    if (!selected || !file) return;
-    if (!file.type.startsWith("image/")) {
-      setError("Drop a jpg, png, or webp map.");
-      return;
-    }
-    setSaving(true);
-    setError("");
-    try {
-      await api.uploadMap(selected.id, file);
-      const w = await api.world();
-      setWorld(w);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setSaving(false);
-    }
-  }
-
   async function removeNote(id) {
     await api.deleteNote(id);
     setNotes(await api.notes());
@@ -608,6 +679,10 @@ export default function App() {
     const next = readPlace(href === "?" ? "" : href);
     window.history.pushState(null, "", href === "?" ? window.location.pathname : href);
     applyPlace(next, { syncItems: next.view === "items" });
+  }
+
+  function openCharacters() {
+    followLink({ button: 0, preventDefault() {} }, { view: "characters" });
   }
 
   useEffect(() => {
@@ -647,13 +722,10 @@ export default function App() {
 
   return (
     <div className="shell">
-      <header className={view === "walk" ? "top top-walk" : "top"}>
+      <header className="top">
         <div>
           <p className="eyebrow">Monsters & Memories</p>
           <h1>MMFinder</h1>
-          <a className="clock-link" href="clockcountdown/">
-            Early Access clock
-          </a>
         </div>
         <div className="tabs view-tabs">
           {SITE_TABS.map((siteTab) => {
@@ -689,78 +761,80 @@ export default function App() {
             );
           })}
         </div>
-        {view !== "walk" && view !== "who" && (
-        <>
-        <label className="level-ctl">
-          <span>Your level</span>
-          <strong>{level}</strong>
-          <input
-            type="range"
-            min="1"
-            max="60"
-            value={level}
-            onChange={(e) => setLevel(Number(e.target.value))}
-          />
-        </label>
-        <label className="class-ctl">
-          <span>Class</span>
-          <select value={klass} onChange={(e) => setKlass(e.target.value)}>
-            <option value="">Pick a class</option>
-            {(world.classes || []).map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        </>
-        )}
-        {view === "atlas" && (
-            <div className="layer-toggle">
-              <button
-                className={layer === "surface" ? "on" : ""}
-                onClick={() => {
-                  setFocusPoi(null);
-                  setLayer("surface");
-                  setSelectedId((id) => {
-                    const z = zones.find((x) => x.id === id);
-                    return z?.layer === "surface" ? id : "night-harbor";
-                  });
-                }}
+        {view !== "walk" && view !== "who" && activeChar && (
+          <div className="char-ctl">
+            <label>
+              <span>Character</span>
+              <select
+                value={activeChar.id}
+                aria-label="Active character"
+                onChange={(e) => chooseCharacter(e.target.value)}
               >
-                Surface
-              </button>
-              <button
-                className={layer === "deep" ? "on" : ""}
-                onClick={() => {
-                  setFocusPoi(null);
-                  setLayer("deep");
-                  setSelectedId((id) => {
-                    const z = zones.find((x) => x.id === id);
-                    return z?.layer === "deep" ? id : "ail-vorith";
-                  });
-                }}
-              >
-                The Deep
-              </button>
-            </div>
+                {book.characters.map((character) => (
+                  <option key={character.id} value={character.id}>
+                    {characterLabel(character, world.classes || [])}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="level-ctl">
+              <span>Level</span>
+              <strong>{level}</strong>
+              <input
+                type="range"
+                min="1"
+                max="60"
+                value={level}
+                onChange={(e) => setLevel(Number(e.target.value))}
+              />
+            </label>
+          </div>
         )}
-        {view === "atlas" && (
-            <button className={`pin-btn ${dropMode ? "on" : ""}`} onClick={() => setDropMode((v) => !v)}>
-              {dropMode ? "Cancel drop" : "Drop a POI"}
-            </button>
+        {view !== "walk" && view !== "who" && !activeChar && (
+          <>
+            <label className="level-ctl">
+              <span>Your level</span>
+              <strong>{level}</strong>
+              <input
+                type="range"
+                min="1"
+                max="60"
+                value={level}
+                onChange={(e) => setLevel(Number(e.target.value))}
+              />
+            </label>
+            <label className="class-ctl">
+              <span>Class</span>
+              <select value={klass} onChange={(e) => setKlass(e.target.value)}>
+                <option value="">Pick a class</option>
+                {(world.classes || []).map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <a className="char-add" href={writePlace({ view: "characters" })} onClick={(event) => followLink(event, { view: "characters" })}>
+              Add character
+            </a>
+          </>
         )}
-        {view !== "walk" && crumbs.length > 2 && (
-          <nav className="crumb-nav" aria-label="Place">
-            {crumbs.map((crumb, index) => (
-              <span key={`${crumb.href}-${crumb.label}`} className="crumb">
-                {index > 0 && <span className="crumb-sep">/</span>}
-                <a href={crumb.href} onClick={(event) => followLink(event, readPlace(crumb.href))}>
-                  {crumb.label}
-                </a>
-              </span>
-            ))}
-          </nav>
+        {(view === "atlas" || (view !== "walk" && crumbs.length > 2)) && (
+          <div className={view === "atlas" ? "crumb-row crumb-row-map" : "crumb-row"}>
+            {view !== "walk" && crumbs.length > 2 && (
+              <nav className="crumb-nav" aria-label="Place">
+                {crumbs.map((crumb, index) => (
+                  <span key={`${crumb.href}-${crumb.label}`} className="crumb">
+                    {index > 0 && <span className="crumb-sep">/</span>}
+                    <a href={crumb.href} onClick={(event) => followLink(event, readPlace(crumb.href))}>
+                      {crumb.label}
+                    </a>
+                  </span>
+                ))}
+              </nav>
+            )}
+            {view === "atlas" && <div className="map-search-slot" ref={setSearchSlot} />}
+          </div>
         )}
       </header>
 
@@ -848,6 +922,14 @@ export default function App() {
         <WhoIsThat />
       ) : view === "notes" ? (
         <Notes />
+      ) : view === "characters" ? (
+        <Characters
+          book={book}
+          classes={world.classes || []}
+          items={world.items || []}
+          onChange={commitBook}
+          onOpenItem={setItemModal}
+        />
       ) : view === "hunt" ? (
         <Hunt zones={zones} pois={allPois} level={level} onShowPoi={selectPoi} />
       ) : view === "trades" ? (
@@ -862,8 +944,15 @@ export default function App() {
         <GearFinder
           items={world.items || []}
           classes={world.classes || []}
+          characters={book.characters}
+          activeId={book.activeId || ""}
           level={level}
           klass={klass}
+          loadout={activeChar?.gear || {}}
+          onSelectCharacter={chooseCharacter}
+          onEquip={(slot, itemId) => activeChar && commitBook(equipItem(book, activeChar.id, slot, itemId))}
+          onUnequip={(slot) => activeChar && commitBook(unequipItem(book, activeChar.id, slot))}
+          onOpenCharacters={openCharacters}
           onFarm={showItemOnMap}
           onSelectItem={selectItem}
         />
@@ -1028,18 +1117,7 @@ export default function App() {
           </ul>
         </aside>
 
-        <main
-          className="stage"
-          onDragOver={(e) => {
-            e.preventDefault();
-            e.dataTransfer.dropEffect = "copy";
-          }}
-          onDrop={(e) => {
-            e.preventDefault();
-            const file = [...e.dataTransfer.files].find((f) => f.type.startsWith("image/"));
-            if (file) dropMapFile(file);
-          }}
-        >
+        <main className="stage">
           <WorldMap
             atlas={world.atlas}
             zones={zones}
@@ -1048,11 +1126,22 @@ export default function App() {
             focusPoiId={focusPoi}
             hoverPoiId={hoverPoi?.id}
             layer={layer}
+            onLayer={(next) => {
+              setFocusPoi(null);
+              setLayer(next);
+              setSelectedId((id) => {
+                const z = zones.find((x) => x.id === id);
+                if (z?.layer === next) return id;
+                return next === "deep" ? "ail-vorith" : "night-harbor";
+              });
+            }}
             dropMode={dropMode}
+            onToggleDrop={() => setDropMode((v) => !v)}
             kindFilter={kindFilter}
             onKindFilter={setKindFilter}
             query={query}
             onQuery={setQuery}
+            searchSlot={searchSlot}
             regions={world.regions || []}
             quests={world.quests || []}
             items={world.items || []}
@@ -1121,20 +1210,6 @@ export default function App() {
                   setView("enhance");
                 }}
               />
-
-              <label className="drop-map">
-                <input
-                  type="file"
-                  accept="image/jpeg,image/png,image/webp,image/gif"
-                  hidden
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    e.target.value = "";
-                    if (file) dropMapFile(file);
-                  }}
-                />
-                {saving ? "Saving map…" : `Drop a sharper map onto the atlas, or click to replace ${selected.name}`}
-              </label>
 
               <div className="tabs">
                 <button className={tab === "pois" ? "on" : ""} onClick={() => setTab("pois")}>
@@ -1509,7 +1584,7 @@ function FinderCard({
         </article>
       )}
       {!klass && (
-        <p className="empty">Pick a class up top to pin your next guild turn-in on the map.</p>
+        <p className="empty">Pick a class for your character to pin the next guild turn-in on the map.</p>
       )}
       {(soloHunts.length > 0 || groupHunts.length > 0) ? (
         <>

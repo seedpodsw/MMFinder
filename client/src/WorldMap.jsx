@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { questTarget, campFits, hasHuntLevel } from "./finder";
@@ -49,6 +50,10 @@ const AIL_PIN = {
   "av-gate": "#f3e6c8",
   "av-gate-double": "#f3e6c8",
 };
+
+function pinQuiet(poi) {
+  return /^av-.+-\d+$/.test(String(poi?.id || ""));
+}
 
 function pinFace(poi) {
   const named = AIL_PIN[poi.id];
@@ -166,7 +171,7 @@ const MaggotLayer = L.Layer.extend({
       .slice()
       .sort((a, b) => (PIN_PRIORITY[a.kind] || 1) - (PIN_PRIORITY[b.kind] || 1))
       .map((p) => {
-        const cls = `gpoi kind-${p.kind}${p._active ? " active" : ""}${p._blip ? " blip" : ""}${p._open ? " open-zone" : ""}${p._fits ? " fits" : p._hunt ? " out" : ""}`;
+        const cls = `gpoi kind-${p.kind}${pinQuiet(p) ? " quiet" : ""}${p._active ? " active" : ""}${p._blip ? " blip" : ""}${p._open ? " open-zone" : ""}${p._fits ? " fits" : p._hunt ? " out" : ""}`;
         return `<button type="button" class="${cls}" data-poi="${escapeHtml(p.id)}" style="left:${p.mx}%;top:${p.my}%"><div class="gpoi-pin"${pinFace(p)}></div><span class="gpoi-label">${escapeHtml(poiMapLabel(p))}</span></button>`;
       })
       .join("");
@@ -181,7 +186,9 @@ export default function WorldMap({
   focusPoiId,
   hoverPoiId,
   layer,
+  onLayer,
   dropMode,
+  onToggleDrop,
   onSelect,
   onPeek,
   onSelectPoi,
@@ -192,6 +199,7 @@ export default function WorldMap({
   onKindFilter,
   query = "",
   onQuery,
+  searchSlot = null,
   regions = [],
   quests = [],
   items = [],
@@ -682,7 +690,7 @@ export default function WorldMap({
         riseOnHover: true,
         keyboard: true,
         icon: L.divIcon({
-          className: `gpoi kind-${poi.kind} rank-${rank}${active ? " active" : ""}${blip ? " blip" : ""}${inOpenZone ? " open-zone" : ""}${huntFit && fits ? " fits" : dim ? " out" : ""}`,
+          className: `gpoi kind-${poi.kind} rank-${rank}${pinQuiet(poi) ? " quiet" : ""}${active ? " active" : ""}${blip ? " blip" : ""}${inOpenZone ? " open-zone" : ""}${huntFit && fits ? " fits" : dim ? " out" : ""}`,
           html: `<div class="gpoi-pin"${pinFace(poi)}></div><span class="gpoi-label">${escapeHtml(poiMapLabel(poi))}</span>`,
           iconSize: [28, 36],
           iconAnchor: [14, 34],
@@ -863,54 +871,58 @@ export default function WorldMap({
   const focusPoi = (pois || []).find((p) => p.id === focusPoiId);
   const miniSrc = atlas?.stitch ? null : zoomBand === "far" ? atlas?.continent?.src : atlas?.discovered?.src;
 
+  const searchBox = (
+    <div className="map-search">
+      <input
+        ref={searchRef}
+        value={query}
+        placeholder="Find a zone, camp, NPC, quest, or item…"
+        onChange={(e) => onQuery?.(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setHitIndex((i) => Math.min(i + 1, Math.max(0, searchHits.length - 1)));
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setHitIndex((i) => Math.max(i - 1, 0));
+          } else if (e.key === "Enter") {
+            e.preventDefault();
+            activateHit(searchHits[hitIndex] || searchHits[0]);
+          }
+        }}
+      />
+      {query.trim().length >= 2 && (
+        <ul className="map-search-hits">
+          {searchHits.length === 0 && <li className="empty-hit">No places or items match</li>}
+          {searchHits.map((hit, i) => (
+            <li key={`${hit.type}-${hit.id}`}>
+              <button className={i === hitIndex ? "on" : ""} onMouseDown={() => activateHit(hit)}>
+                <span
+                  className={`gpoi-dot ${
+                    hit.type === "poi"
+                      ? `kind-${hit.poi?.kind}`
+                      : hit.type === "zone"
+                        ? "kind-landmark"
+                        : hit.type === "item"
+                          ? "kind-item"
+                          : "kind-quest"
+                  }`}
+                ></span>
+                <span className="zn">{hit.title}</span>
+                <span className="lv">{hit.sub}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+
   return (
     <div className={`map-wrap zoom-${zoomBand} layer-${layer} ${selectedId === "ail-vorith" ? "labels-on" : ""} ${dropMode ? "pinning" : ""}`}>
+      {searchSlot ? createPortal(searchBox, searchSlot) : null}
       <div className="leaflet-stage">
         <div className="map-float map-float-tl">
-          <div className="map-search">
-            <input
-              ref={searchRef}
-              value={query}
-              placeholder="Find a zone, camp, NPC, quest, or item…"
-              onChange={(e) => onQuery?.(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "ArrowDown") {
-                  e.preventDefault();
-                  setHitIndex((i) => Math.min(i + 1, Math.max(0, searchHits.length - 1)));
-                } else if (e.key === "ArrowUp") {
-                  e.preventDefault();
-                  setHitIndex((i) => Math.max(i - 1, 0));
-                } else if (e.key === "Enter") {
-                  e.preventDefault();
-                  activateHit(searchHits[hitIndex] || searchHits[0]);
-                }
-              }}
-            />
-            {query.trim().length >= 2 && (
-              <ul className="map-search-hits">
-                {searchHits.length === 0 && <li className="empty-hit">No places or items match</li>}
-                {searchHits.map((hit, i) => (
-                  <li key={`${hit.type}-${hit.id}`}>
-                    <button className={i === hitIndex ? "on" : ""} onMouseDown={() => activateHit(hit)}>
-                      <span
-                        className={`gpoi-dot ${
-                          hit.type === "poi"
-                            ? `kind-${hit.poi?.kind}`
-                            : hit.type === "zone"
-                              ? "kind-landmark"
-                              : hit.type === "item"
-                                ? "kind-item"
-                                : "kind-quest"
-                        }`}
-                      ></span>
-                      <span className="zn">{hit.title}</span>
-                      <span className="lv">{hit.sub}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
           <div className="map-switch">
             <button className={zoomBand === "far" || zoomBand === "mid" ? "on" : ""} onClick={() => fit("all")}>
               {layer === "deep" ? "Deep map" : "Surface map"}
@@ -929,6 +941,15 @@ export default function WorldMap({
               </button>
             ))}
           </div>
+        </div>
+        <div className="map-float map-float-tr">
+          <button
+            type="button"
+            className={`pin-btn ${dropMode ? "on" : ""}`}
+            onClick={() => onToggleDrop?.()}
+          >
+            {dropMode ? "Cancel drop" : "Drop a POI"}
+          </button>
         </div>
         <div ref={hostRef} className="leaflet-host" />
         {(selectedZone || landed) && (
@@ -960,7 +981,7 @@ export default function WorldMap({
                 Sell {landed.item} to {landed.type}
                 {landed.zone ? ` in ${landed.zone}` : ""}.
                 {landed.place ? ` ${landed.place}.` : ""}
-                {landed.pin ? ` Pinned at ${landed.pin}.` : landed.zone ? " No stall pin on the map." : ""}
+                {landed.pin ? ` ${landed.pin}.` : ""}
                 {landed.buys ? ` Buys ${landed.buys}.` : ""}
               </p>
             )}
@@ -979,16 +1000,28 @@ export default function WorldMap({
             )}
           </div>
         )}
-        {atlas && (
-          <button type="button" className="minimap minimap-stitch" onClick={jumpMinimap} title="Click to pan">
-            {atlas.stitch ? (
-              <canvas ref={miniCanvasRef} />
-            ) : miniSrc ? (
-              <img src={miniSrc} alt="" />
-            ) : null}
-            {miniBox && <i style={miniBox} />}
-          </button>
-        )}
+        <div className="map-br">
+          <div className="layer-toggle" role="group" aria-label="Map layer">
+            <button type="button" className={layer === "surface" ? "on" : ""} onClick={() => onLayer?.("surface")}>
+              Surface
+            </button>
+            <button type="button" className={layer === "deep" ? "on" : ""} onClick={() => onLayer?.("deep")}>
+              The Deep
+            </button>
+          </div>
+          {atlas && (
+            <button type="button" className="minimap minimap-stitch" onClick={jumpMinimap} title="Click to pan">
+              <span className="minimap-frame">
+                {atlas.stitch ? (
+                  <canvas ref={miniCanvasRef} />
+                ) : miniSrc ? (
+                  <img src={miniSrc} alt="" />
+                ) : null}
+                {miniBox && <i style={miniBox} />}
+              </span>
+            </button>
+          )}
+        </div>
         <div ref={tipRef} className={`map-hover-card${hoverPoi ? " show" : ""}`}>
           {hoverPoi && (
             <>
@@ -1011,13 +1044,7 @@ export default function WorldMap({
             </>
           )}
         </div>
-        <span className="map-hint">
-          {dropMode
-            ? "Click the map to drop a POI"
-            : layer === "deep"
-              ? "The Deep — Underdocks, Caves of Irem, Great Cavern Sea, Ail'vorith · Double-click a zone to dive in"
-              : "Surface — pan across zoneline-stitched maps · Double-click a zone to dive in · / to search"}
-        </span>
+        {dropMode ? <span className="map-hint">Click the map to drop a POI</span> : null}
       </div>
     </div>
   );
@@ -1041,7 +1068,7 @@ function chromePad(size) {
   const y = Math.max(size.y, 1);
   let left = Math.min(48, Math.max(16, x * 0.04));
   let right = Math.min(176, Math.max(72, x * 0.14));
-  let top = Math.min(132, Math.max(40, y * 0.16));
+  let top = Math.min(96, Math.max(28, y * 0.11));
   let bottom = Math.min(300, Math.max(140, y * 0.4));
   const maxX = x * 0.7;
   const maxY = y * 0.58;

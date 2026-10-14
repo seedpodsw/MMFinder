@@ -76,8 +76,57 @@ export const EQUIP_SLOTS = [
   { key: "FEET", label: "Feet" },
 ];
 
-const ATTRS = ["str", "sta", "agi", "dex", "int", "wis", "cha"];
+/** Attribute stats players prioritize. Order is the classic STR–CHA line. */
+export const STATS = ["str", "sta", "agi", "dex", "int", "wis", "cha"];
 const RESISTS = ["cr", "cor", "dr", "er", "fr", "hr", "mr", "pr"];
+
+function roundWeight(value) {
+  return Math.round(Number(value) * 10) / 10;
+}
+
+/**
+ * Starting weights for a class. The class primary is boosted on top of the
+ * role's flat attribute weight, so the default ranking matches the old scorer.
+ */
+export function defaultStatWeights(classId, role) {
+  const w = ROLE_WEIGHTS[role] || ROLE_WEIGHTS.dps;
+  const primary = CLASS_PRIMARY[classId] || "str";
+  const weights = {};
+  for (const stat of STATS) {
+    weights[stat] = roundWeight(stat === primary ? w.attr + w.primary : w.attr);
+  }
+  return weights;
+}
+
+/** Clamp a partial weight map onto defaults. Values stay in 0–3. */
+export function normalizeStatWeights(raw, fallback) {
+  const out = { ...fallback };
+  if (!raw || typeof raw !== "object") return out;
+  for (const stat of STATS) {
+    if (raw[stat] == null || raw[stat] === "") continue;
+    const n = Number(raw[stat]);
+    if (!Number.isFinite(n)) continue;
+    out[stat] = Math.max(0, Math.min(3, roundWeight(n)));
+  }
+  return out;
+}
+
+export function weightsDiffer(a, b) {
+  if (!a || !b) return false;
+  return STATS.some((stat) => a[stat] !== b[stat]);
+}
+
+/** Highest-weighted stats, for the toolbar summary. Tied leaders are all listed. */
+export function priorityLabel(weights) {
+  const ranked = STATS.map((stat) => [stat, Number(weights?.[stat]) || 0]).sort(
+    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0])
+  );
+  const top = ranked[0]?.[1] ?? 0;
+  if (top <= 0) return "no stat weight";
+  const leaders = ranked.filter(([, value]) => value === top);
+  if (leaders.length === STATS.length) return "even stats";
+  return leaders.map(([stat, value]) => `${stat.toUpperCase()} ${value}`).join(", ");
+}
 
 export function tokensOf(value) {
   return String(value || "")
@@ -121,9 +170,8 @@ export function matchesSlot(item, slotDef) {
 }
 
 /** Weighted upgrade score for an item, given role + primary stat + weapon-ness. */
-export function scoreItem(item, role, primaryStat, isWeapon) {
+export function scoreItem(item, role, primaryStat, isWeapon, statWeights) {
   const w = ROLE_WEIGHTS[role] || ROLE_WEIGHTS.dps;
-  const attrSum = ATTRS.reduce((s, k) => s + num(item[k]), 0);
   const resistSum = RESISTS.reduce((s, k) => s + num(item[k]), 0);
   const dmg = num(item.dmg);
   const delay = num(item.delay);
@@ -135,8 +183,13 @@ export function scoreItem(item, role, primaryStat, isWeapon) {
   score += num(item.mana) * w.mana;
   score += num(item.hp_regen) * (w.hp * 2);
   score += num(item.mana_regen) * (w.mana * 2);
-  score += (primaryStat ? num(item[primaryStat]) : 0) * w.primary;
-  score += attrSum * w.attr;
+  if (statWeights) {
+    for (const stat of STATS) score += num(item[stat]) * (Number(statWeights[stat]) || 0);
+  } else {
+    const attrSum = STATS.reduce((s, k) => s + num(item[k]), 0);
+    score += (primaryStat ? num(item[primaryStat]) : 0) * w.primary;
+    score += attrSum * w.attr;
+  }
   score += resistSum * w.resist;
   score += ratio * w.ratio;
   score += dmg * w.dmg;
@@ -156,7 +209,7 @@ export function statSummary(item, isWeapon) {
   if (num(item.ac)) bits.push(`AC ${num(item.ac)}`);
   if (num(item.hp)) bits.push(`HP ${num(item.hp)}`);
   if (num(item.mana)) bits.push(`Mana ${num(item.mana)}`);
-  for (const k of ATTRS) {
+  for (const k of STATS) {
     const v = num(item[k]);
     if (v) bits.push(`${k.toUpperCase()} ${v > 0 ? "+" : ""}${v}`);
   }
@@ -170,8 +223,9 @@ export function statSummary(item, isWeapon) {
  * Rank upgrades per slot.
  * @returns [{ slot, label, weapon, items: [{item, score, summary}] }]
  */
-export function bestUpgrades(items, { classId, role, level, onlyFarmable = true, slotKey = "", perSlot = 5 }) {
+export function bestUpgrades(items, { classId, role, level, onlyFarmable = true, slotKey = "", perSlot = 5, statWeights } = {}) {
   const primaryStat = CLASS_PRIMARY[classId] || "str";
+  const weights = normalizeStatWeights(statWeights, defaultStatWeights(classId, role));
   const slots = slotKey ? EQUIP_SLOTS.filter((s) => s.key === slotKey) : EQUIP_SLOTS;
 
   const usable = (items || []).filter(
@@ -184,7 +238,7 @@ export function bestUpgrades(items, { classId, role, level, onlyFarmable = true,
     const ranked = matches
       .map((item) => ({
         item,
-        score: scoreItem(item, role, primaryStat, slotDef.weapon),
+        score: scoreItem(item, role, primaryStat, slotDef.weapon, weights),
         summary: statSummary(item, slotDef.weapon),
       }))
       .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))

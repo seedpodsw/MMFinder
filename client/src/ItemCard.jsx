@@ -209,7 +209,7 @@ export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onOp
                 </button>
               )}
               {stop.place ? <span className="src-loc"> · {stop.place}</span> : null}
-              {stop.pin ? <span className="src-loc"> · pin: {stop.pin}</span> : <span className="src-loc"> · no map pin</span>}
+              {stop.pin ? <span className="src-loc"> · {stop.pin}</span> : null}
               {stop.buys ? <span className="src-mobs"> · buys {stop.buys}</span> : null}
               {goLabel && (stop.poiId || stop.zoneId) && (
                 <button type="button" className="go-loc" onClick={() => onSellStop?.(stop)}>
@@ -222,12 +222,24 @@ export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onOp
       ) : (
         <p className="hint">{item.sellTo || "no known vendor"}</p>
       )}
-      <p className="rail-label">Recipe</p>
-      <p className="hint">{item.recipe || "no known recipe"}</p>
-      <p className="rail-label">Materials</p>
-      <p className="hint">{item.materials || "no known recipe"}</p>
-      <p className="rail-label">Used in</p>
-      <p className="hint">{item.usedIn || "no known recipe"}</p>
+      {item.recipe ? (
+        <>
+          <p className="rail-label">Recipe</p>
+          <p className="hint">{item.recipe}</p>
+        </>
+      ) : null}
+      {item.materials ? (
+        <>
+          <p className="rail-label">Materials</p>
+          <p className="hint">{item.materials}</p>
+        </>
+      ) : null}
+      {item.usedIn ? (
+        <>
+          <p className="rail-label">Used in</p>
+          <p className="hint">{item.usedIn}</p>
+        </>
+      ) : null}
       {quests.length > 0 && (
         <>
           <p className="rail-label">Quests</p>

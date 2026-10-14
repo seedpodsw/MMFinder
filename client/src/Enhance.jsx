@@ -132,7 +132,6 @@ export default function Enhance({
     <div className="layout enhance-layout">
       <aside className="rail">
         <p className="rail-label">Your class</p>
-        <p className="hint class-rail-note">Picks the next step. The list is every quest.</p>
         <ul className="zone-list class-list">
           {classes.map((c) => (
             <li key={c.id}>

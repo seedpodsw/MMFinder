@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
-const multer = require("multer");
 const { zones } = require("./world");
 const db = require("./db");
 const quests = require("./quests");
@@ -12,20 +11,10 @@ const { buildWorld } = require("./payload");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const CUSTOM_DIR = path.join(__dirname, "..", "client", "public", "maps", "custom");
-const DATA_MAPS = path.join(__dirname, "..", "data", "maps");
 
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 app.use("/maps/custom", express.static(CUSTOM_DIR));
-
-const upload = multer({
-  storage: multer.memoryStorage(),
-  limits: { fileSize: 12 * 1024 * 1024 },
-  fileFilter: (_req, file, cb) => {
-    const ok = /image\/(jpeg|png|webp|gif)/.test(file.mimetype);
-    cb(ok ? null : new Error("Drop a jpg or png map."), ok);
-  },
-});
 
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
@@ -345,25 +334,6 @@ app.delete("/api/items/:id", (req, res) => {
   db.run("DELETE FROM item_sources WHERE item_id = ?", [req.params.id]);
   db.run("DELETE FROM items WHERE id = ?", [req.params.id]);
   res.json({ ok: true });
-});
-
-app.post("/api/maps/:zoneId", upload.single("map"), (req, res) => {
-  const zoneId = req.params.zoneId;
-  if (!zones.some((z) => z.id === zoneId)) return res.status(400).json({ error: "Unknown zone." });
-  if (!req.file) return res.status(400).json({ error: "Drop a map image." });
-  const ext = req.file.mimetype === "image/png" ? ".png" : req.file.mimetype === "image/webp" ? ".webp" : ".jpg";
-  const filename = `${zoneId}${ext}`;
-  fs.mkdirSync(CUSTOM_DIR, { recursive: true });
-  fs.mkdirSync(DATA_MAPS, { recursive: true });
-  fs.writeFileSync(path.join(CUSTOM_DIR, filename), req.file.buffer);
-  fs.writeFileSync(path.join(DATA_MAPS, filename), req.file.buffer);
-  const updatedAt = db.now();
-  db.run(
-    `INSERT INTO custom_maps (zone_id, filename, original_name, updated_at) VALUES (?, ?, ?, ?)
-     ON CONFLICT(zone_id) DO UPDATE SET filename=excluded.filename, original_name=excluded.original_name, updated_at=excluded.updated_at`,
-    [zoneId, filename, req.file.originalname, updatedAt]
-  );
-  res.json({ ok: true, filename, src: `/maps/custom/${filename}?v=${encodeURIComponent(updatedAt)}` });
 });
 
 function numOrNull(value) {

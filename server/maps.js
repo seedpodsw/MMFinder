@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20261012underdocks";
+const MAP_VER = "20261014ailvorith";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 

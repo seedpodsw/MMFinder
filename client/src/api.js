@@ -14,10 +14,9 @@ import {
   updateNote,
   updatePoi,
 } from "../../shared/story.js";
-import { listMaps, saveMap } from "./map-store";
+import { listMaps } from "./map-store";
 
 const STORY_KEY = "mmfinder.story.v1";
-const MAX_MAP_BYTES = 12 * 1024 * 1024;
 
 const clock = {
   id: () => crypto.randomUUID(),
@@ -193,16 +192,5 @@ export const api = {
     const result = deleteItem(story, id);
     persist(result.story);
     return { ok: true };
-  },
-  async uploadMap(zoneId, file) {
-    const { seed } = await view();
-    if (!seed.world.zones.some((zone) => zone.id === zoneId)) throw new Error("Unknown zone.");
-    if (!file) throw new Error("Drop a map image.");
-    if (!/image\/(jpeg|png|webp|gif)/.test(file.type || "")) throw new Error("Drop a jpg or png map.");
-    if (file.size > MAX_MAP_BYTES) throw new Error("That map is larger than 12 MB.");
-    const saved = await saveMap(zoneId, file);
-    const key = `${zoneId}:${saved.updatedAt}`;
-    if (!mapUrls.has(key)) mapUrls.set(key, URL.createObjectURL(file));
-    return { ok: true, filename: saved.filename, src: mapUrls.get(key) };
   },
 };

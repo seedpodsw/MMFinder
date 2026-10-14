@@ -1,5 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
-import { bestUpgrades, scoreItem, statSummary, CLASS_PRIMARY, EQUIP_SLOTS } from "./gear";
+import {
+  bestUpgrades,
+  scoreItem,
+  STATS,
+  EQUIP_SLOTS,
+  defaultStatWeights,
+  normalizeStatWeights,
+  weightsDiffer,
+  priorityLabel,
+} from "./gear";
+import { characterLabel } from "./characters-store.js";
 
 const ROLE_LABEL = {
   tank: "Tank",
@@ -9,7 +19,7 @@ const ROLE_LABEL = {
   support: "Support",
 };
 
-const STORE_LOADOUT = "mmfinder.gear.loadout.v1";
+const STORE_WEIGHTS = "mmfinder.gear.weights.v1";
 
 function loadJSON(key, fallback) {
   try {
@@ -28,6 +38,43 @@ function saveJSON(key, value) {
   }
 }
 
+function WeightField({ stat, value, leading, onChange }) {
+  const [draft, setDraft] = useState(null);
+  const shown = draft == null ? value : draft;
+  return (
+    <label className={`gear-weight${leading ? " is-top" : ""}`}>
+      <span className="gear-weight-label">
+        <strong>{stat.toUpperCase()}</strong>
+        <input
+          type="number"
+          min="0"
+          max="3"
+          step="0.1"
+          value={shown}
+          aria-label={`${stat.toUpperCase()} weight`}
+          onFocus={() => setDraft(String(value))}
+          onChange={(e) => {
+            setDraft(e.target.value);
+            if (e.target.value === "") return;
+            const n = Number(e.target.value);
+            if (Number.isFinite(n)) onChange(n);
+          }}
+          onBlur={() => setDraft(null)}
+        />
+      </span>
+      <input
+        type="range"
+        min="0"
+        max="3"
+        step="0.1"
+        value={value}
+        aria-label={`${stat.toUpperCase()} priority`}
+        onChange={(e) => onChange(e.target.value)}
+      />
+    </label>
+  );
+}
+
 function DeltaBadge({ delta }) {
   if (delta == null) return null;
   const rounded = Math.round(delta * 10) / 10;
@@ -41,21 +88,41 @@ function DeltaBadge({ delta }) {
   );
 }
 
-export default function GearFinder({ items, classes = [], level = 1, klass = "", onFarm, onSelectItem }) {
-  const [classId, setClassId] = useState(klass || "");
-  const [lvl, setLvl] = useState(level || 1);
+export default function GearFinder({
+  items,
+  classes = [],
+  characters = [],
+  activeId = "",
+  level = 1,
+  klass = "",
+  loadout = {},
+  onSelectCharacter,
+  onEquip,
+  onUnequip,
+  onOpenCharacters,
+  onFarm,
+  onSelectItem,
+}) {
   const [onlyFarmable, setOnlyFarmable] = useState(true);
   const [onlyUpgrades, setOnlyUpgrades] = useState(false);
   const [slotKey, setSlotKey] = useState("");
-  const [loadout, setLoadout] = useState(() => loadJSON(STORE_LOADOUT, {}));
+  const [weightStore, setWeightStore] = useState(() => loadJSON(STORE_WEIGHTS, {}));
+  const classId = klass || "";
+  const lvl = level || 1;
 
   useEffect(() => {
-    saveJSON(STORE_LOADOUT, loadout);
-  }, [loadout]);
+    saveJSON(STORE_WEIGHTS, weightStore);
+  }, [weightStore]);
 
   const cls = useMemo(() => classes.find((c) => c.id === classId), [classes, classId]);
   const role = cls?.role || "dps";
-  const primaryStat = CLASS_PRIMARY[classId] || "str";
+  const defaults = useMemo(() => (classId ? defaultStatWeights(classId, role) : null), [classId, role]);
+  const weights = useMemo(
+    () => (defaults ? normalizeStatWeights(weightStore[classId], defaults) : null),
+    [defaults, weightStore, classId]
+  );
+  const customWeights = Boolean(weights && defaults && weightsDiffer(weights, defaults));
+  const topWeight = weights ? Math.max(...STATS.map((stat) => weights[stat])) : 0;
 
   const itemsById = useMemo(() => {
     const map = new Map();
@@ -67,20 +134,50 @@ export default function GearFinder({ items, classes = [], level = 1, klass = "",
   const results = useMemo(
     () =>
       classId
-        ? bestUpgrades(items || [], { classId, role, level: lvl, onlyFarmable, slotKey, perSlot })
+        ? bestUpgrades(items || [], {
+            classId,
+            role,
+            level: lvl,
+            onlyFarmable,
+            slotKey,
+            perSlot,
+            statWeights: weights,
+          })
         : [],
-    [items, classId, role, lvl, onlyFarmable, slotKey, perSlot]
+    [items, classId, role, lvl, onlyFarmable, slotKey, perSlot, weights]
   );
 
-  function equip(slot, itemId) {
-    setLoadout((prev) => ({ ...prev, [slot]: itemId }));
+  function setStatWeight(stat, raw) {
+    if (!classId || !defaults || !weights) return;
+    if (raw === "" || raw == null) return;
+    const n = Number(raw);
+    if (!Number.isFinite(n)) return;
+    const clamped = Math.max(0, Math.min(3, Math.round(n * 10) / 10));
+    setWeightStore((prev) => {
+      const nextWeights = { ...weights, [stat]: clamped };
+      if (!weightsDiffer(nextWeights, defaults)) {
+        const next = { ...prev };
+        delete next[classId];
+        return next;
+      }
+      return { ...prev, [classId]: nextWeights };
+    });
   }
-  function unequip(slot) {
-    setLoadout((prev) => {
+
+  function resetWeights() {
+    if (!classId) return;
+    setWeightStore((prev) => {
       const next = { ...prev };
-      delete next[slot];
+      delete next[classId];
       return next;
     });
+  }
+
+  function equip(slot, itemId) {
+    onEquip?.(slot, itemId);
+  }
+  function unequip(slot) {
+    onUnequip?.(slot);
   }
 
   const equippedCount = Object.keys(loadout).length;
@@ -94,22 +191,18 @@ export default function GearFinder({ items, classes = [], level = 1, klass = "",
           <h2>Best gear you can farm</h2>
         </div>
 
-        <label className="gear-ctl">
-          <span>Class</span>
-          <select value={classId} onChange={(e) => setClassId(e.target.value)}>
-            <option value="">Pick a class…</option>
-            {classes.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="gear-ctl">
-          <span>Level</span>
-          <input type="number" min="1" max="60" value={lvl} onChange={(e) => setLvl(Number(e.target.value) || 1)} />
-        </label>
+        {characters.length > 0 && (
+          <label className="gear-ctl">
+            <span>Character</span>
+            <select value={activeId || ""} onChange={(e) => onSelectCharacter?.(e.target.value)}>
+              {characters.map((character) => (
+                <option key={character.id} value={character.id}>
+                  {characterLabel(character, classes)}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
 
         <label className="gear-ctl">
           <span>Slot</span>
@@ -133,20 +226,49 @@ export default function GearFinder({ items, classes = [], level = 1, klass = "",
           <span>Only upgrades vs my gear</span>
         </label>
 
-        {classId && (
+        {classId && weights && (
           <p className="gear-meta">
-            {ROLE_LABEL[role] || role} · weights {primaryStat.toUpperCase()} · {totalFound} matches
+            {cls?.name} · level {lvl} · {ROLE_LABEL[role] || role} · {priorityLabel(weights)} · {totalFound} matches
             {equippedCount > 0 && ` · ${equippedCount} equipped`}
           </p>
         )}
       </div>
 
-      {!classId ? (
+      {classId && weights && (
+        <section className="gear-weights" aria-label="Stat priority">
+          <div className="gear-weights-head">
+            <span>Stat priority</span>
+            <button type="button" className="gear-reset" onClick={resetWeights} disabled={!customWeights}>
+              Reset {cls?.name || "class"}
+            </button>
+          </div>
+          <div className="gear-weight-grid">
+            {STATS.map((stat) => (
+              <WeightField
+                key={stat}
+                stat={stat}
+                value={weights[stat]}
+                leading={weights[stat] > 0 && weights[stat] === topWeight}
+                onChange={(next) => setStatWeight(stat, next)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!characters.length ? (
         <div className="gear-empty">
-          <p>
-            Pick a class to see the best farmable upgrades for every slot, ranked by stats. Mark what you already have
-            with <strong>Equip</strong> to see only real upgrades.
-          </p>
+          <p>Add a character.</p>
+          <button type="button" className="add char-go" onClick={onOpenCharacters}>
+            Add a character
+          </button>
+        </div>
+      ) : !classId ? (
+        <div className="gear-empty">
+          <p>Pick a class.</p>
+          <button type="button" className="add char-go" onClick={onOpenCharacters}>
+            Edit character
+          </button>
         </div>
       ) : (
         <div className={`gear-grid ${slotKey ? "single" : ""}`}>
@@ -154,7 +276,7 @@ export default function GearFinder({ items, classes = [], level = 1, klass = "",
             const equippedId = loadout[group.slot];
             const equippedItem = equippedId ? itemsById.get(equippedId) : null;
             const equippedScore = equippedItem
-              ? scoreItem(equippedItem, role, primaryStat, group.weapon)
+              ? scoreItem(equippedItem, role, null, group.weapon, weights)
               : null;
 
             const suggestions = group.items.filter((x) => {
@@ -170,13 +292,17 @@ export default function GearFinder({ items, classes = [], level = 1, klass = "",
                   <span className="gear-count">{suggestions.length}</span>
                 </header>
 
-                {equippedItem && (
+                {equippedId && (
                   <div className="gear-equipped">
                     <span className="gear-eq-tag">Equipped</span>
-                    <button className="gear-name" onClick={() => onSelectItem?.(equippedItem)}>
-                      {equippedItem.name}
-                    </button>
-                    <span className="gear-score">{equippedScore}</span>
+                    {equippedItem ? (
+                      <button className="gear-name" onClick={() => onSelectItem?.(equippedItem)}>
+                        {equippedItem.name}
+                      </button>
+                    ) : (
+                      <span className="gear-name">Missing item</span>
+                    )}
+                    {equippedScore != null && <span className="gear-score">{equippedScore}</span>}
                     <button className="gear-x" title="Clear" onClick={() => unequip(group.slot)}>
                       ×
                     </button>
