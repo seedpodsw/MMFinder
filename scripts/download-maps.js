@@ -41,9 +41,10 @@ async function fetchBytes(url) {
   return buf;
 }
 
-async function writeWebp(buf, dest) {
-  const out = await sharp(buf, { limitInputPixels: false, animated: false })
-    .rotate()
+async function writeWebp(buf, dest, turn = 0) {
+  let img = sharp(buf, { limitInputPixels: false, animated: false }).rotate();
+  if (turn) img = img.rotate(turn);
+  const out = await img
     .resize({ width: MAX_EDGE, height: MAX_EDGE, fit: "inside", withoutEnlargement: true })
     .webp({ quality: WEBP_QUALITY, effort: 4 })
     .toBuffer();
@@ -56,9 +57,9 @@ async function writeWebp(buf, dest) {
   return { kb: Math.round(out.length / 1024), fromKb: Math.round(buf.length / 1024) };
 }
 
-async function saveCompressed(url, dest) {
+async function saveCompressed(url, dest, turn = 0) {
   const buf = await fetchBytes(url);
-  return writeWebp(buf, dest);
+  return writeWebp(buf, dest, turn);
 }
 
 (async () => {
@@ -69,13 +70,13 @@ async function saveCompressed(url, dest) {
 
   console.log(`Wiki map art → WebP ≤${MAX_EDGE}px q${WEBP_QUALITY} in ${outDir}`);
 
-  async function pull(wikiFile, destName, fallbackUrl) {
+  async function pull(wikiFile, destName, fallbackUrl, turn = 0) {
     const dest = path.join(outDir, destName);
     const info = wikiFile ? infos.get(wikiFile) : null;
     const thumb = wikiFile ? thumbUrl(wikiFile, MAX_EDGE) : null;
     const original = info?.url || fallbackUrl;
     try {
-      const r = await saveCompressed(thumb || original, dest);
+      const r = await saveCompressed(thumb || original, dest, turn);
       console.log("ok", destName, `${r.fromKb}kb → ${r.kb}kb`);
       return;
     } catch (err) {
@@ -84,7 +85,7 @@ async function saveCompressed(url, dest) {
         return;
       }
       try {
-        const r = await saveCompressed(original, dest);
+        const r = await saveCompressed(original, dest, turn);
         console.log("ok", destName, `${r.fromKb}kb → ${r.kb}kb`, "original");
       } catch (err2) {
         console.error("FAIL", destName, err2.message);
@@ -96,8 +97,8 @@ async function saveCompressed(url, dest) {
     await pull(m.wikiFile, assetName(m.file), null);
   }
   for (const z of Object.values(zoneMaps)) {
-    if (!z.wikiFile) continue;
-    await pull(z.wikiFile, assetName(z.file), null);
+    if (!z.wikiFile || z.skipDownload) continue;
+    await pull(z.wikiFile, assetName(z.file), null, z.turn || 0);
   }
 })().catch((err) => {
   console.error(err);

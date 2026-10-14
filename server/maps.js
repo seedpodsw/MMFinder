@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20260928webp";
+const MAP_VER = "20261012underdocks";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 
@@ -121,10 +121,12 @@ const zoneMaps = {
   "sungreet-strand": {
     file: "sungreet-strand.jpg",
     wikiFile: "Sungreet Strand v4.jpg",
-    width: 2800,
-    aspect: 2800 / 1808,
+    width: 1808,
+    aspect: 1808 / 2800,
     fit: "contain",
-    inset: { l: 0.03, t: 0.11, r: 0.03, b: 0.06 },
+    // North-up plate with upright labels. scripts/rebuild-sungreet.js rebuilds it.
+    skipDownload: true,
+    inset: { l: 0.034, t: 0.028, r: 0.03, b: 0.032 },
   },
   "fallen-pass": {
     file: "fallen-pass.jpg",
@@ -198,9 +200,9 @@ const zoneMaps = {
   },
   underdocks: {
     file: "underdocks.png",
-    wikiFile: "Underdocks map.png",
+    wikiFile: "Underdocks AI.png",
     width: 900,
-    aspect: 900 / 1125,
+    aspect: 1122 / 1402,
     fit: "contain",
   },
   "grimtide-sanctum": {
@@ -287,7 +289,7 @@ function downloads() {
     });
   }
   for (const z of Object.values(zoneMaps)) {
-    if (!z.wikiFile) continue;
+    if (!z.wikiFile || z.skipDownload) continue;
     jobs.push({ file: assetName(z.file), url: thumbUrl(z.wikiFile, ART_LONG) });
   }
   return jobs;
@@ -771,6 +773,33 @@ function artClip(meta) {
   return c;
 }
 
+/**
+ * Plates parked off the outdoor stitch (Grimtide and the other nested maps)
+ * sit southwest of the old 0,0 origin. The world rect has to include them,
+ * with extra southwest room so a fully zoomed-out camera can sit that corner
+ * above the place chip.
+ */
+function worldFrame(overlays) {
+  let south = 0;
+  let west = 0;
+  let north = WORLD.h;
+  let east = WORLD.w;
+  for (const o of overlays) {
+    const b = o.bounds;
+    if (!b) continue;
+    south = Math.min(south, b[0][0]);
+    west = Math.min(west, b[0][1]);
+    north = Math.max(north, b[1][0]);
+    east = Math.max(east, b[1][1]);
+  }
+  const h = Math.max(1, north - south);
+  const w = Math.max(1, east - west);
+  return [
+    [south - Math.max(900, h * 0.5), west - Math.max(1100, w * 0.28)],
+    [north + h * 0.08, east + w * 0.08],
+  ];
+}
+
 function imageBounds(rect) {
   const west = rect.x;
   const east = rect.x + rect.w;
@@ -828,10 +857,7 @@ function buildAtlas(customMaps = {}, pois = seedPois) {
     })
     .filter(Boolean);
 
-  const worldBounds = [
-    [0, 0],
-    [WORLD.h, WORLD.w],
-  ];
+  const worldBounds = worldFrame(overlays);
 
   return {
     world: WORLD,

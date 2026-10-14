@@ -1,11 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { questTarget } from "./finder";
+import { questTarget, campFits, hasHuntLevel } from "./finder";
+
+export { campFits, hasHuntLevel };
 
 export const KIND_LABEL = {
   camp: "Camp",
   vendor: "Vendor",
+  tradeskill: "Tradeskill",
   quest: "Turn-in",
   trainer: "Trainer",
   zoneline: "Zoneline",
@@ -22,6 +25,7 @@ const PIN_PRIORITY = {
   named: 4,
   quest: 3,
   vendor: 3,
+  tradeskill: 3,
   trainer: 2,
   dock: 2,
   landmark: 2,
@@ -162,7 +166,7 @@ const MaggotLayer = L.Layer.extend({
       .slice()
       .sort((a, b) => (PIN_PRIORITY[a.kind] || 1) - (PIN_PRIORITY[b.kind] || 1))
       .map((p) => {
-        const cls = `gpoi kind-${p.kind}${p._active ? " active" : ""}${p._fits ? " fits" : p._hunt ? " out" : ""}`;
+        const cls = `gpoi kind-${p.kind}${p._active ? " active" : ""}${p._blip ? " blip" : ""}${p._open ? " open-zone" : ""}${p._fits ? " fits" : p._hunt ? " out" : ""}`;
         return `<button type="button" class="${cls}" data-poi="${escapeHtml(p.id)}" style="left:${p.mx}%;top:${p.my}%"><div class="gpoi-pin"${pinFace(p)}></div><span class="gpoi-label">${escapeHtml(poiMapLabel(p))}</span></button>`;
       })
       .join("");
@@ -192,10 +196,13 @@ export default function WorldMap({
   quests = [],
   items = [],
   flyNonce = 0,
+  blipPoiId = null,
+  blipNonce = 0,
   level = 1,
   huntFit = false,
   onHuntFit,
   completed = [],
+  landed = null,
 }) {
   const hostRef = useRef(null);
   const mapRef = useRef(null);
@@ -219,6 +226,8 @@ export default function WorldMap({
   const layerFrameRef = useRef(0);
   const seenFrameRef = useRef(0);
   const clickTimerRef = useRef(null);
+  const layerBootRef = useRef(true);
+  const miniCanvasRef = useRef(null);
   const [zoomBand, setZoomBand] = useState("mid");
   const [miniBox, setMiniBox] = useState(null);
   const [hitIndex, setHitIndex] = useState(0);
@@ -286,7 +295,7 @@ export default function WorldMap({
         ...(p.quests || []),
       ].join(" ");
       if (!hayMatch(hay, q) && !(huntQuery && fits)) continue;
-      if (huntFit && hunt && !fits) continue;
+      if (huntFit && hunt && hasHuntLevel(p) && !fits) continue;
       hits.push({
         type: "poi",
         id: p.id,
@@ -362,7 +371,7 @@ export default function WorldMap({
 
     const map = L.map(hostRef.current, {
       crs: L.CRS.Simple,
-      minZoom: -2,
+      minZoom: -6,
       maxZoom: 5,
       zoomSnap: 0,
       zoomDelta: 0.5,
@@ -374,9 +383,6 @@ export default function WorldMap({
     });
     mapRef.current = map;
     L.control.zoom({ position: "bottomright" }).addTo(map);
-
-    const worldBounds = L.latLngBounds(atlas.continent?.bounds || [[0, 0], [1200, 1800]]);
-    map.setMaxBounds(worldBounds.pad(0.35));
 
     if (atlas.continent?.src) {
       L.imageOverlay(atlas.continent.src, atlas.continent.bounds, {
@@ -505,10 +511,14 @@ export default function WorldMap({
       refresh();
       peekViewport(map);
     });
-    map.fitBounds(stitchBounds(atlas, layerRef.current), { padding: [28, 28] });
+    map.invalidateSize();
+    showWholeLayer(map, atlas, layerRef.current, false);
     refresh();
 
-    const ro = new ResizeObserver(() => map.invalidateSize());
+    const ro = new ResizeObserver(() => {
+      map.invalidateSize();
+      holdFrame(map, atlas, layerRef.current);
+    });
     ro.observe(hostRef.current);
 
     return () => {
@@ -527,8 +537,70 @@ export default function WorldMap({
     if (!map) return;
     syncLayers(map);
     layerFrameRef.current += 1;
-    map.flyToBounds(stitchBounds(atlas, layer), { padding: [36, 36], duration: 0.65 });
+    if (layerBootRef.current) {
+      layerBootRef.current = false;
+      return;
+    }
+    showWholeLayer(map, atlas, layer, true);
   }, [layer]);
+
+  useEffect(() => {
+    const canvas = miniCanvasRef.current;
+    if (!canvas || !atlas?.stitch) return undefined;
+    let alive = true;
+    const specs = (atlas.overlays || []).filter(
+      (o) => o.src && o.bounds && (!layer || !o.layer || o.layer === layer)
+    );
+    const world = stitchBounds(atlas, layer);
+    const images = specs.map((spec) => {
+      const img = new Image();
+      img.src = spec.src;
+      return { img, spec };
+    });
+    const draw = () => {
+      if (!alive) return;
+      const cssW = canvas.clientWidth;
+      const cssH = canvas.clientHeight;
+      if (cssW < 2 || cssH < 2) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const bw = Math.round(cssW * dpr);
+      const bh = Math.round(cssH * dpr);
+      if (canvas.width !== bw || canvas.height !== bh) {
+        canvas.width = bw;
+        canvas.height = bh;
+      }
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = layer === "deep" ? "#140c16" : "#0d1c24";
+      ctx.fillRect(0, 0, cssW, cssH);
+      const west = world.getWest();
+      const north = world.getNorth();
+      const dx = world.getEast() - west || 1;
+      const dy = north - world.getSouth() || 1;
+      for (const { img, spec } of images) {
+        const b = spec.bounds;
+        const x = ((b[0][1] - west) / dx) * cssW;
+        const y = ((north - b[1][0]) / dy) * cssH;
+        const iw = ((b[1][1] - b[0][1]) / dx) * cssW;
+        const ih = ((b[1][0] - b[0][0]) / dy) * cssH;
+        if (!(img.complete && img.naturalWidth)) {
+          ctx.fillStyle = spec.layer === "deep" ? "#24182c" : "#1a3040";
+          ctx.fillRect(x, y, iw, ih);
+          continue;
+        }
+        ctx.drawImage(img, x, y, iw, ih);
+      }
+    };
+    for (const { img } of images) img.addEventListener("load", draw);
+    draw();
+    const ro = new ResizeObserver(draw);
+    ro.observe(canvas);
+    return () => {
+      alive = false;
+      ro.disconnect();
+      for (const { img } of images) img.removeEventListener("load", draw);
+    };
+  }, [atlas, layer, atlasKey]);
 
   const prevSelRef = useRef(null);
   const prevFlyRef = useRef(0);
@@ -577,14 +649,18 @@ export default function WorldMap({
       const zone = zoneById[poi.zoneId];
       if (!zone || zone.layer !== layerRef.current) continue;
       const active = poi.id === focusPoiId;
+      const blip = poi.id === blipPoiId;
       const hunt = poi.kind === "camp" || poi.kind === "named";
       const fits = hunt && campFits(poi, level);
-      if (huntFit && hunt && !fits && !active) continue;
+      const inOpenZone = poi.zoneId === selectedId;
       const rank = PIN_PRIORITY[poi.kind] || 1;
-      const showRank = huntFit && fits ? Math.max(rank, 2) : rank;
-      if (band === "far" && showRank < 4 && !active) continue;
-      if (band === "mid" && showRank < 2 && !active) continue;
-      const tagged = { ...poi, _active: active, _fits: fits, _hunt: hunt };
+      // Camps stay on every zone plate from mid zoom up. My level rings the ones
+      // that fit and dims the rest, instead of removing them.
+      const showRank = hunt ? Math.max(rank, 2) : rank;
+      if (band === "far" && !hunt && showRank < 4 && !active && !inOpenZone) continue;
+      if (band === "mid" && showRank < 2 && !active && !inOpenZone) continue;
+      const dim = huntFit && hunt && hasHuntLevel(poi) && !fits && !inOpenZone;
+      const tagged = { ...poi, _active: active, _blip: blip, _fits: huntFit && fits, _hunt: dim, _open: inOpenZone };
       const entry = overlaysRef.current.get(poi.zoneId);
       if (entry?.overlay?.setPois && poi.mx != null && poi.my != null) {
         const list = byZone.get(poi.zoneId) || [];
@@ -606,7 +682,7 @@ export default function WorldMap({
         riseOnHover: true,
         keyboard: true,
         icon: L.divIcon({
-          className: `gpoi kind-${poi.kind} rank-${rank}${active ? " active" : ""}${fits ? " fits" : hunt ? " out" : ""}`,
+          className: `gpoi kind-${poi.kind} rank-${rank}${active ? " active" : ""}${blip ? " blip" : ""}${inOpenZone ? " open-zone" : ""}${huntFit && fits ? " fits" : dim ? " out" : ""}`,
           html: `<div class="gpoi-pin"${pinFace(poi)}></div><span class="gpoi-label">${escapeHtml(poiMapLabel(poi))}</span>`,
           iconSize: [28, 36],
           iconAnchor: [14, 34],
@@ -628,7 +704,7 @@ export default function WorldMap({
       if (!entry.overlay?.setPois) continue;
       entry.overlay.setPois(byZone.get(id) || []);
     }
-  }, [pois, layer, zoneById, kindFilter, focusPoiId, zoomBand, level, huntFit, atlasKey]);
+  }, [pois, layer, zoneById, kindFilter, focusPoiId, blipPoiId, blipNonce, zoomBand, level, huntFit, atlasKey, selectedId]);
 
   useEffect(() => {
     for (const [id, marker] of poiMarkersRef.current) {
@@ -757,7 +833,7 @@ export default function WorldMap({
         return;
       }
     }
-    map.flyToBounds(stitchBounds(atlas, layerRef.current), { padding: [24, 24], duration: 0.7 });
+    showWholeLayer(map, atlas, layerRef.current, true);
   }
 
   function jumpMinimap(e) {
@@ -784,6 +860,7 @@ export default function WorldMap({
   ).length;
   const hoverPoi = (pois || []).find((p) => p.id === hoverPoiId);
   const hoverZone = hoverPoi ? zoneById[hoverPoi.zoneId] : null;
+  const focusPoi = (pois || []).find((p) => p.id === focusPoiId);
   const miniSrc = atlas?.stitch ? null : zoomBand === "far" ? atlas?.continent?.src : atlas?.discovered?.src;
 
   return (
@@ -854,16 +931,40 @@ export default function WorldMap({
           </div>
         </div>
         <div ref={hostRef} className="leaflet-host" />
-        {selectedZone && (
+        {(selectedZone || landed) && (
           <div className="place-chip">
-            <p className="region">{selectedZone.kind}</p>
-            <strong>{selectedZone.name}</strong>
+            {focusPoi ? (
+              <>
+                <p className="region">
+                  {KIND_LABEL[focusPoi.kind] || focusPoi.kind}
+                  {selectedZone ? ` · ${selectedZone.name}` : ""}
+                </p>
+                <strong>{focusPoi.name}</strong>
+                {focusPoi.notes ? <p className="chip-notes">{focusPoi.notes}</p> : null}
+              </>
+            ) : selectedZone ? (
+              <>
+                <p className="region">{selectedZone.kind}</p>
+                <strong>{selectedZone.name}</strong>
+              </>
+            ) : null}
+            {selectedZone && (
             <span>
               levels {selectedZone.levelMin}–{selectedZone.levelMax}
               {selectedZone.start ? " · starting city" : ""}
               {huntCount > 0 ? ` · ${huntCount} hunt${huntCount === 1 ? "" : "s"} at ${level}` : ""}
             </span>
-            {selectedZone.adjacent?.length > 0 && (
+            )}
+            {landed && (
+              <p className="chip-notes">
+                Sell {landed.item} to {landed.type}
+                {landed.zone ? ` in ${landed.zone}` : ""}.
+                {landed.place ? ` ${landed.place}.` : ""}
+                {landed.pin ? ` Pinned at ${landed.pin}.` : landed.zone ? " No stall pin on the map." : ""}
+                {landed.buys ? ` Buys ${landed.buys}.` : ""}
+              </p>
+            )}
+            {selectedZone?.adjacent?.length > 0 && (
               <div className="place-links">
                 {selectedZone.adjacent.slice(0, 5).map((id) => {
                   const z = zoneById[id];
@@ -880,7 +981,11 @@ export default function WorldMap({
         )}
         {atlas && (
           <button type="button" className="minimap minimap-stitch" onClick={jumpMinimap} title="Click to pan">
-            {miniSrc ? <img src={miniSrc} alt="" /> : null}
+            {atlas.stitch ? (
+              <canvas ref={miniCanvasRef} />
+            ) : miniSrc ? (
+              <img src={miniSrc} alt="" />
+            ) : null}
             {miniBox && <i style={miniBox} />}
           </button>
         )}
@@ -923,12 +1028,85 @@ function stitchBounds(atlas, layer) {
   const pts = [];
   for (const o of atlas.overlays || []) {
     if (layer && o.layer && o.layer !== layer) continue;
-    if (o.role === "nested") continue;
-    const b = o.geoBounds || o.bounds;
+    const b = o.bounds || o.geoBounds;
     if (b) pts.push(b[0], b[1]);
   }
   if (pts.length) return L.latLngBounds(pts);
   return L.latLngBounds(atlas.continent?.bounds || [[0, 0], [1200, 1800]]);
+}
+
+/** Pixels the corner chrome covers. Bottom is the place chip, right is the minimap. */
+function chromePad(size) {
+  const x = Math.max(size.x, 1);
+  const y = Math.max(size.y, 1);
+  let left = Math.min(48, Math.max(16, x * 0.04));
+  let right = Math.min(176, Math.max(72, x * 0.14));
+  let top = Math.min(132, Math.max(40, y * 0.16));
+  let bottom = Math.min(300, Math.max(140, y * 0.4));
+  const maxX = x * 0.7;
+  const maxY = y * 0.58;
+  if (left + right > maxX) {
+    const s = maxX / (left + right);
+    left *= s;
+    right *= s;
+  }
+  if (top + bottom > maxY) {
+    const s = maxY / (top + bottom);
+    top *= s;
+    bottom *= s;
+  }
+  return {
+    paddingTopLeft: [left, top],
+    paddingBottomRight: [right, bottom],
+  };
+}
+
+function frameOf(map, content, pad) {
+  const padTL = L.point(pad.paddingTopLeft);
+  const padBR = L.point(pad.paddingBottomRight);
+  const prevMin = map.options.minZoom;
+  map.options.minZoom = -6;
+  const zoom = map.getBoundsZoom(content, false, padTL.add(padBR));
+  map.options.minZoom = prevMin;
+  const paddingOffset = padBR.subtract(padTL).divideBy(2);
+  const sw = map.project(content.getSouthWest(), zoom);
+  const ne = map.project(content.getNorthEast(), zoom);
+  const center = map.unproject(sw.add(ne).divideBy(2).add(paddingOffset), zoom);
+  const half = map.getSize().divideBy(2);
+  const cpx = map.project(center, zoom);
+  return {
+    zoom,
+    center,
+    bounds: L.latLngBounds(
+      map.unproject(cpx.subtract(half), zoom),
+      map.unproject(cpx.add(half), zoom)
+    ),
+  };
+}
+
+function layerFrame(map, atlas, layer) {
+  const content = stitchBounds(atlas, layer);
+  const size = map.getSize();
+  if (!content?.isValid?.() || size.x < 40 || size.y < 40) return null;
+  return frameOf(map, content, chromePad(size));
+}
+
+function showWholeLayer(map, atlas, layer, animate) {
+  const frame = layerFrame(map, atlas, layer);
+  if (!frame) return;
+  map.setMinZoom(frame.zoom);
+  map.setMaxBounds(frame.bounds.pad(0.04));
+  if (animate) map.flyTo(frame.center, frame.zoom, { duration: 0.65 });
+  else map.setView(frame.center, frame.zoom, { animate: false });
+}
+
+function holdFrame(map, atlas, layer) {
+  const frame = layerFrame(map, atlas, layer);
+  if (!frame) return;
+  const zoomedOut = map.getZoom() <= map.getMinZoom() + 0.05;
+  map.setMinZoom(frame.zoom);
+  map.setMaxBounds(frame.bounds.pad(0.04));
+  if (zoomedOut) map.setView(frame.center, frame.zoom, { animate: false });
 }
 
 function flyToZone(map, entry) {
@@ -1109,15 +1287,6 @@ function escapeHtml(s) {
   return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
 
-export function campFits(camp, level) {
-  const lo = camp.groupMin ?? camp.soloMin;
-  const hi = camp.groupMax ?? camp.soloMax;
-  if (lo == null && hi == null) return true;
-  if (lo == null) return level <= hi + 3;
-  if (hi == null) return level >= lo - 3;
-  return level >= lo - 3 && level <= hi + 3;
-}
-
 export function rangeLabel(camp) {
   const solo = span(camp.soloMin, camp.soloMax);
   const group = span(camp.groupMin, camp.groupMax);
@@ -1146,8 +1315,12 @@ export function compactLevelRange(poi) {
 
 export function poiMapLabel(poi) {
   if (!isHuntPoi(poi)) return poi.name;
-  const range = compactLevelRange(poi);
-  return range ? `${poi.name} (${range})` : poi.name;
+  const solo = span(poi.soloMin, poi.soloMax);
+  const group = span(poi.groupMin, poi.groupMax);
+  if (solo && group) return `${poi.name} (solo ${solo} · grp ${group})`;
+  if (group) return `${poi.name} (grp ${group})`;
+  if (solo) return `${poi.name} (solo ${solo})`;
+  return poi.name;
 }
 
 export function monsterList(raw) {

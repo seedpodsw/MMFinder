@@ -1,6 +1,6 @@
 /** Shareable "where you are" for MMFinder. Query strings survive GitHub Pages. */
 
-const VIEWS = new Set(["atlas", "walk", "turnins", "items", "spells", "gear", "quests", "who"]);
+const VIEWS = new Set(["atlas", "walk", "turnins", "items", "spells", "gear", "quests", "who", "notes", "hunt", "trades"]);
 const MAP_VIEWS = new Set(["atlas", "turnins", "walk"]);
 const CLASS_VIEWS = new Set(["spells", "gear", "quests"]);
 const TEXT_TYPES = new Set(["contains", "notContains", "equals", "notEqual", "startsWith", "endsWith"]);
@@ -22,6 +22,9 @@ export const VIEW_LABELS = {
   gear: "Upgrades",
   quests: "Quests",
   who: "Who's that",
+  notes: "Notes",
+  hunt: "Hunt",
+  trades: "Trades",
 };
 
 function encodeSpec(spec) {

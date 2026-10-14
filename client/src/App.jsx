@@ -2,17 +2,23 @@ import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { api } from "./api";
 const Walk = lazy(() => import("./Walk"));
 const Spells = lazy(() => import("./Spells"));
-import WorldMap, { campFits, rangeLabel, KIND_LABEL } from "./WorldMap";
+import WorldMap, { campFits, hasHuntLevel, rangeLabel, KIND_LABEL } from "./WorldMap";
 import Enhance, { ZoneQuestTab, searchQuests } from "./Enhance";
 import ItemsGrid from "./ItemsGrid";
+import ItemCard from "./ItemCard";
 import GearFinder from "./GearFinder";
 import WhoIsThat from "./WhoIsThat";
-import { huntsHere, huntsAtLevel, huntZonesNear, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
+import Notes from "./Notes";
+import Hunt from "./Hunt";
+import Trades from "./Trades";
+import { huntsHere, huntsAtLevel, huntZonesNear, huntSide, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
 import { loadHero } from "../../shared/field.js";
 import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
 
 const SITE_TABS = [
   { view: "atlas", label: "Atlas" },
+  { view: "hunt", label: "Hunt" },
+  { view: "trades", label: "Trades" },
   { view: "walk", label: "Walk" },
   { view: "turnins", label: "Turn-ins" },
   { view: "items", label: "Items" },
@@ -20,6 +26,7 @@ const SITE_TABS = [
   { view: "gear", label: "Upgrades" },
   { view: "quests", label: "Quests" },
   { view: "who", label: "Who's that" },
+  { view: "notes", label: "Notes" },
 ];
 
 const emptyPoiForm = {
@@ -37,6 +44,7 @@ const POI_KINDS = [
   "camp",
   "quest",
   "vendor",
+  "tradeskill",
   "trainer",
   "zoneline",
   "dungeon",
@@ -87,6 +95,10 @@ export default function App() {
   const [huntFit, setHuntFit] = useState(true);
   const [focusQuestId, setFocusQuestId] = useState(() => readPlace(window.location.search).quest);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [itemModal, setItemModal] = useState(null);
+  const [blipPoiId, setBlipPoiId] = useState(null);
+  const [blipNonce, setBlipNonce] = useState(0);
+  const [landed, setLanded] = useState(null);
   const [itemDraft, setItemDraft] = useState({ name: "", how: "", kind: "item" });
   const [addingItem, setAddingItem] = useState(false);
 
@@ -210,7 +222,7 @@ export default function App() {
       const z = zones.find((x) => x.id === p.zoneId);
       if (!q && z && z.layer !== layer) return false;
       if (kindFilter !== "all" && p.kind !== kindFilter) return false;
-      if (huntFit && (p.kind === "camp" || p.kind === "named") && !campFits(p, level)) return false;
+      if (huntFit && (p.kind === "camp" || p.kind === "named") && hasHuntLevel(p) && !campFits(p, level)) return false;
       if (!q) return kindFilter !== "all";
       const hay = [
         p.name,
@@ -244,7 +256,12 @@ export default function App() {
           item.slot,
           item.how,
           item.notes,
-          ...(item.sources || []).flatMap((s) => [s.label, s.npc, s.method]),
+          item.sellTo,
+          item.recipe,
+          item.materials,
+          item.usedIn,
+          ...(item.quests || []),
+          ...(item.sources || []).flatMap((s) => [s.label, s.npc, s.method, s.notes, s.role]),
         ]
           .join(" ")
           .toLowerCase();
@@ -258,7 +275,9 @@ export default function App() {
       .slice(0, 16);
   }, [query, world]);
 
-  const huntNow = useMemo(() => huntsAtLevel(allPois, level).slice(0, 8), [allPois, level]);
+  const huntNow = useMemo(() => huntsAtLevel(allPois, level), [allPois, level]);
+  const soloNow = useMemo(() => huntNow.filter((p) => huntSide(p, level) === "solo").slice(0, 6), [huntNow, level]);
+  const groupNow = useMemo(() => huntNow.filter((p) => huntSide(p, level) === "group").slice(0, 6), [huntNow, level]);
 
   const zoneNotes = useMemo(() => {
     if (!selected) return [];
@@ -273,18 +292,19 @@ export default function App() {
 
   const journal = notes.filter((n) => n.targetType === "journal" || n.targetType === "pin");
 
-  function selectZone(id, poiId) {
+  function selectZone(id, poiId, opts = {}) {
     if (view !== "walk") setView("atlas");
     setSelectedId(id);
     setFocusPoi(poiId || null);
-    setTab("pois");
+    setTab(opts.tab || "pois");
     setDropMode(false);
+    if (!opts.keepLanded) setLanded(null);
     const z = world?.zones.find((x) => x.id === id);
     if (z?.layer) setLayer(z.layer);
   }
 
-  function revealZone(id) {
-    selectZone(id);
+  function revealZone(id, opts) {
+    selectZone(id, null, opts);
     setKindFilter("all");
     setFlyNonce((n) => n + 1);
   }
@@ -308,17 +328,52 @@ export default function App() {
     setFocusPoi(null);
   }
 
-  function selectPoi(poiOrId) {
+  function selectPoi(poiOrId, opts = {}) {
     const poi = typeof poiOrId === "string" ? allPois.find((p) => p.id === poiOrId) : poiOrId;
     if (!poi) return;
     if (view !== "walk") setView("atlas");
     setKindFilter("all");
     setSelectedId(poi.zoneId);
     setFocusPoi(poi.id);
-    setTab("pois");
+    setTab(opts.tab || "pois");
     setDropMode(false);
+    if (!opts.keepLanded) setLanded(null);
     const z = world?.zones.find((x) => x.id === poi.zoneId);
     if (z?.layer) setLayer(z.layer);
+  }
+
+  function showSellStop(item, stop) {
+    if (!item || !stop) return;
+    setSelectedItem(item);
+    if (view !== "walk") setView("atlas");
+    setDropMode(false);
+    setKindFilter("all");
+    setLanded({
+      item: item.name,
+      type: stop.type,
+      name: stop.name,
+      zone: stop.zone,
+      place: stop.place,
+      pin: stop.pin,
+      buys: stop.buys,
+    });
+    if (stop.poiId) selectPoi(stop.poiId, { keepLanded: true, tab: "item" });
+    else if (stop.zoneId) {
+      revealZone(stop.zoneId, { keepLanded: true, tab: "item" });
+    } else setTab("item");
+  }
+
+  function showSellers(item) {
+    if (!item) return;
+    const stops = item.sellTos || [];
+    if (stops.length === 1) {
+      showSellStop(item, stops[0]);
+      return;
+    }
+    setSelectedItem(item);
+    if (view !== "walk") setView("atlas");
+    setLanded(null);
+    setTab("item");
   }
 
   function showVendor(poiId) {
@@ -360,6 +415,20 @@ export default function App() {
       if (z?.layer) setLayer(z.layer);
     }
     setTab("item");
+  }
+
+  function goToItemPlace(item, place) {
+    if (!item || !place) return;
+    setItemModal(null);
+    setSelectedItem(item);
+    if (place.poiId && allPois.some((p) => p.id === place.poiId)) {
+      setBlipPoiId(place.poiId);
+      setBlipNonce((n) => n + 1);
+      selectPoi(place.poiId);
+      return;
+    }
+    setBlipPoiId(null);
+    if (place.zoneId) revealZone(place.zoneId);
   }
 
   function showItemOnMap(itemOrId) {
@@ -417,6 +486,15 @@ export default function App() {
     const el = document.getElementById(focusPoi);
     el?.scrollIntoView({ block: "nearest" });
   }, [focusPoi, tab]);
+
+  useEffect(() => {
+    if (!itemModal) return;
+    function onKey(e) {
+      if (e.key === "Escape") setItemModal(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [itemModal]);
 
   async function saveNote(extra) {
     if (!noteDraft.body.trim() && !noteDraft.title.trim()) return;
@@ -688,6 +766,40 @@ export default function App() {
 
       {error && <div className="banner">{error}</div>}
 
+      {itemModal && (
+        <div className="item-modal-back" onClick={() => setItemModal(null)}>
+          <div
+            className="item-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="item-modal-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="item-modal-bar">
+              <button type="button" className="tiny ghost" onClick={() => setItemModal(null)}>
+                Close
+              </button>
+            </div>
+            <ItemCard
+              key={itemModal.id}
+              item={itemModal}
+              titleId="item-modal-title"
+              columns
+              goLabel="Go to Location"
+              onSellStop={(stop) => goToItemPlace(itemModal, stop)}
+              onShowPoi={(poiId) => goToItemPlace(itemModal, { poiId })}
+              onShowZone={(zoneId) => goToItemPlace(itemModal, { zoneId })}
+              onOpenQuest={(src) => {
+                setItemModal(null);
+                setFocusQuestId(src.questId);
+                setQuery(itemModal.name);
+                setView("enhance");
+              }}
+            />
+          </div>
+        </div>
+      )}
+
       {view === "enhance" ? (
         <Enhance
           classes={world.classes || []}
@@ -715,8 +827,7 @@ export default function App() {
           klass={klass}
           linkFilters={itemFilters}
           onLinkFilters={updateItemFilters}
-          onFarm={showItemOnMap}
-          onSelectItem={selectItem}
+          onSelectItem={setItemModal}
         />
       ) : view === "walk" ? (
         <div className="walk-screen">
@@ -735,6 +846,18 @@ export default function App() {
         </div>
       ) : view === "who" ? (
         <WhoIsThat />
+      ) : view === "notes" ? (
+        <Notes />
+      ) : view === "hunt" ? (
+        <Hunt zones={zones} pois={allPois} level={level} onShowPoi={selectPoi} />
+      ) : view === "trades" ? (
+        <Trades
+          items={world.items || []}
+          pois={allPois}
+          zones={zones}
+          onShowPoi={selectPoi}
+          onSelectItem={setItemModal}
+        />
       ) : view === "gear" ? (
         <GearFinder
           items={world.items || []}
@@ -747,30 +870,60 @@ export default function App() {
       ) : (
       <div className="layout">
         <aside className="rail">
-          {!query.trim() && huntNow.length > 0 && kindFilter === "all" && (
+          {!query.trim() && kindFilter === "all" && (soloNow.length > 0 || groupNow.length > 0) && (
             <>
-              <p className="hit-label">Hunt now · lvl {level}</p>
-              <ul className="poi-hits">
-                {huntNow.map((poi) => {
-                  const z = zones.find((x) => x.id === poi.zoneId);
-                  return (
-                    <li key={poi.id}>
-                      <button
-                        className={focusPoi === poi.id ? "active" : ""}
-                        onClick={() => selectPoi(poi)}
-                        onMouseEnter={() => setHoverPoi(poi)}
-                        onMouseLeave={() => setHoverPoi((cur) => (cur?.id === poi.id ? null : cur))}
-                      >
-                        <span className={`gpoi-dot kind-${poi.kind}`}></span>
-                        <span className="zn">{poi.name}</span>
-                        <span className="lv">
-                          {z?.name || poi.kind} · {rangeLabel(poi)}
-                        </span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
+              {soloNow.length > 0 && (
+                <>
+                  <p className="hit-label">Solo now · lvl {level}</p>
+                  <ul className="poi-hits">
+                    {soloNow.map((poi) => {
+                      const z = zones.find((x) => x.id === poi.zoneId);
+                      return (
+                        <li key={poi.id}>
+                          <button
+                            className={focusPoi === poi.id ? "active" : ""}
+                            onClick={() => selectPoi(poi)}
+                            onMouseEnter={() => setHoverPoi(poi)}
+                            onMouseLeave={() => setHoverPoi((cur) => (cur?.id === poi.id ? null : cur))}
+                          >
+                            <span className={`gpoi-dot kind-${poi.kind}`}></span>
+                            <span className="zn">{poi.name}</span>
+                            <span className="lv">
+                              {z?.name || poi.kind} · {rangeLabel(poi)}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              )}
+              {groupNow.length > 0 && (
+                <>
+                  <p className="hit-label">Group now · lvl {level}</p>
+                  <ul className="poi-hits">
+                    {groupNow.map((poi) => {
+                      const z = zones.find((x) => x.id === poi.zoneId);
+                      return (
+                        <li key={poi.id}>
+                          <button
+                            className={focusPoi === poi.id ? "active" : ""}
+                            onClick={() => selectPoi(poi)}
+                            onMouseEnter={() => setHoverPoi(poi)}
+                            onMouseLeave={() => setHoverPoi((cur) => (cur?.id === poi.id ? null : cur))}
+                          >
+                            <span className={`gpoi-dot kind-${poi.kind}`}></span>
+                            <span className="zn">{poi.name}</span>
+                            <span className="lv">
+                              {z?.name || poi.kind} · {rangeLabel(poi)}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              )}
             </>
           )}
           {matchedZones.length > 0 && (
@@ -830,7 +983,11 @@ export default function App() {
                     >
                       <span className="gpoi-dot kind-item"></span>
                       <span className="zn">{item.name}</span>
-                      <span className="lv">{item.how || item.kind}</span>
+                      <span className="lv">
+                        {(item.quests || []).length
+                          ? item.quests.slice(0, 2).join(" · ")
+                          : item.how || item.kind}
+                      </span>
                     </button>
                   </li>
                 ))}
@@ -900,6 +1057,8 @@ export default function App() {
             quests={world.quests || []}
             items={world.items || []}
             flyNonce={flyNonce}
+            blipPoiId={blipPoiId}
+            blipNonce={blipNonce}
             level={level}
             huntFit={huntFit}
             onHuntFit={setHuntFit}
@@ -908,6 +1067,7 @@ export default function App() {
             onPeek={peekZone}
             onSelectPoi={selectPoi}
             onSelectItem={selectItem}
+            landed={landed}
             onHoverPoi={setHoverPoi}
             onDropPoi={handleDropPoi}
           />
@@ -997,63 +1157,17 @@ export default function App() {
               {tab === "item" && (
                 <div className="stack">
                   {selectedItem ? (
-                    <article className="camp-card focus">
-                      <header>
-                        <h3>{selectedItem.name}</h3>
-                        <span className="range">{selectedItem.kind || "item"}</span>
-                      </header>
-                      {selectedItem.slot && <p className="kind-pill">{selectedItem.slot}</p>}
-                      <p className="hint">{selectedItem.how || "How to get unknown"}</p>
-                      {(selectedItem.sources || []).length > 0 && (
-                        <ul className="item-sources">
-                          {selectedItem.sources.map((src, i) => (
-                            <li key={`${src.method}-${src.npc || src.label}-${i}`}>
-                              <strong>{src.method}</strong>: {src.label}
-                              {src.level && <span className="src-lvl"> ({src.level})</span>}
-                              {src.monsters && <span className="src-mobs"> · {src.monsters}</span>}
-                              {src.location && <span className="src-loc"> · {src.location}</span>}
-                              {src.poiId && (
-                                <>
-                                  {" "}
-                                  <button className="linkish" onClick={() => selectPoi(src.poiId)}>
-                                    Show on map
-                                  </button>
-                                </>
-                              )}
-                              {!src.poiId && src.zoneId && (
-                                <>
-                                  {" "}
-                                  <button className="linkish" onClick={() => revealZone(src.zoneId)}>
-                                    Open zone
-                                  </button>
-                                </>
-                              )}
-                              {src.questId && (
-                                <>
-                                  {" "}
-                                  <button
-                                    className="linkish"
-                                    onClick={() => {
-                                      setFocusQuestId(src.questId);
-                                      setView("enhance");
-                                    }}
-                                  >
-                                    Quest steps
-                                  </button>
-                                </>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                      {selectedItem.wikiUrl && (
-                        <p className="adj">
-                          <a className="linkish" href={selectedItem.wikiUrl} target="_blank" rel="noreferrer">
-                            Wiki page
-                          </a>
-                        </p>
-                      )}
-                    </article>
+                    <ItemCard
+                      item={selectedItem}
+                      onSellStop={(stop) => showSellStop(selectedItem, stop)}
+                      onShowPoi={selectPoi}
+                      onShowZone={revealZone}
+                      onOpenQuest={(src) => {
+                        setFocusQuestId(src.questId);
+                        setQuery(selectedItem.name);
+                        setView("enhance");
+                      }}
+                    />
                   ) : (
                     <p className="empty">Search for an item to see where to get it.</p>
                   )}
@@ -1328,8 +1442,10 @@ function FinderCard({
   onToggleStep,
   onOpenQuests,
 }) {
-  const hunts = huntsHere(pois, zone.id, level).slice(0, 5);
-  const nearby = hunts.length ? [] : huntZonesNear(pois, zones, zone.id, level);
+  const hunts = huntsHere(pois, zone.id, level);
+  const soloHunts = hunts.filter((p) => huntSide(p, level) === "solo").slice(0, 4);
+  const groupHunts = hunts.filter((p) => huntSide(p, level) === "group").slice(0, 4);
+  const nearby = soloHunts.length || groupHunts.length ? [] : huntZonesNear(pois, zones, zone.id, level);
   const next = nextForYou(quests, klass, completed, level);
   const startId = startCityFor(zone);
   const path = routeBetween(zones, startId, zone.id);
@@ -1395,18 +1511,41 @@ function FinderCard({
       {!klass && (
         <p className="empty">Pick a class up top to pin your next guild turn-in on the map.</p>
       )}
-      {hunts.length > 0 ? (
-        <ul className="finder-hunts">
-          {hunts.map((poi) => (
-            <li key={poi.id}>
-              <button onClick={() => onSelectPoi(poi)}>
-                <span className={`gpoi-dot kind-${poi.kind}`}></span>
-                <span className="zn">{poi.name}</span>
-                <span className="lv">{rangeLabel(poi)}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
+      {(soloHunts.length > 0 || groupHunts.length > 0) ? (
+        <>
+          {soloHunts.length > 0 && (
+            <>
+              <p className="hit-label">Solo here</p>
+              <ul className="finder-hunts">
+                {soloHunts.map((poi) => (
+                  <li key={poi.id}>
+                    <button onClick={() => onSelectPoi(poi)}>
+                      <span className={`gpoi-dot kind-${poi.kind}`}></span>
+                      <span className="zn">{poi.name}</span>
+                      <span className="lv">{rangeLabel(poi)}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {groupHunts.length > 0 && (
+            <>
+              <p className="hit-label">Group here</p>
+              <ul className="finder-hunts">
+                {groupHunts.map((poi) => (
+                  <li key={poi.id}>
+                    <button onClick={() => onSelectPoi(poi)}>
+                      <span className={`gpoi-dot kind-${poi.kind}`}></span>
+                      <span className="zn">{poi.name}</span>
+                      <span className="lv">{rangeLabel(poi)}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </>
       ) : nearby.length > 0 ? (
         <>
           <p className="empty">No listed camps here fit level {level}. Closest hunts:</p>

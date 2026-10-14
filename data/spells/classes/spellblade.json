@@ -226,7 +226,7 @@
         "name": "Minor Spellshield",
         "slug": "Minor_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
-        "description": "A magical shield encircles you, increasing your HP by 10, AC by 5, and Magic Resistance by 5.",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -238,7 +238,6 @@
           "buff",
           "shield",
           "self",
-          "AC",
           "MAX HP",
           "MR"
         ],
@@ -246,19 +245,18 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "HP",
+            "stat": "Health",
             "amount": 10,
-            "display": "+10 HP",
+            "display": "+10 Health",
             "sortKey": 10,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "AC",
+            "stat": "Armor Calss",
             "amount": 5,
-            "display": "+5 AC",
-            "sortKey": 5,
-            "statTag": "AC"
+            "display": "+5 Armor Calss",
+            "sortKey": 5
           },
           {
             "kind": "buff",
@@ -269,9 +267,8 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+10 HP · +5 AC · +5 Magic Resistance",
+        "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
         "statTags": [
-          "AC",
           "MAX HP",
           "MR"
         ],
@@ -426,7 +423,7 @@
         "name": "Magic Protection",
         "slug": "Magic_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-        "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+        "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -543,7 +540,7 @@
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+        "description": "Dispell magic from your target, removing one harmful effect.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -946,7 +943,7 @@
         "name": "Fire Protection",
         "slug": "Fire_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+        "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1110,7 +1107,7 @@
         "name": "Greater Spellshield",
         "slug": "Greater_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1130,17 +1127,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 75,
-            "display": "+75 Health",
+            "display": "+75 HP",
             "sortKey": 75,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 20,
-            "display": "+20 Armor Class",
+            "display": "+20 AC",
             "sortKey": 20,
             "statTag": "AC"
           },
@@ -1153,7 +1150,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+        "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -1392,7 +1389,7 @@
         "name": "Exceptional Spellshield",
         "slug": "Exceptional_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1412,17 +1409,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 100,
-            "display": "+100 Health",
+            "display": "+100 HP",
             "sortKey": 100,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 25,
-            "display": "+25 Armor Class",
+            "display": "+25 AC",
             "sortKey": 25,
             "statTag": "AC"
           },
@@ -1435,7 +1432,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+        "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -1553,7 +1550,7 @@
         "name": "Arch Spellshield",
         "slug": "Arch_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1573,17 +1570,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 150,
-            "display": "+150 Health",
+            "display": "+150 HP",
             "sortKey": 150,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 30,
-            "display": "+30 Armor Class",
+            "display": "+30 AC",
             "sortKey": 30,
             "statTag": "AC"
           },
@@ -1596,7 +1593,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+        "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -1705,7 +1702,7 @@
         "name": "Magic Resistance",
         "slug": "Magic_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1852,7 +1849,7 @@
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2375,7 +2372,7 @@
       "name": "Minor Spellshield",
       "slug": "Minor_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
-      "description": "A magical shield encircles you, increasing your HP by 10, AC by 5, and Magic Resistance by 5.",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2387,7 +2384,6 @@
         "buff",
         "shield",
         "self",
-        "AC",
         "MAX HP",
         "MR"
       ],
@@ -2395,19 +2391,18 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "HP",
+          "stat": "Health",
           "amount": 10,
-          "display": "+10 HP",
+          "display": "+10 Health",
           "sortKey": 10,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "AC",
+          "stat": "Armor Calss",
           "amount": 5,
-          "display": "+5 AC",
-          "sortKey": 5,
-          "statTag": "AC"
+          "display": "+5 Armor Calss",
+          "sortKey": 5
         },
         {
           "kind": "buff",
@@ -2418,9 +2413,8 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+10 HP · +5 AC · +5 Magic Resistance",
+      "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
       "statTags": [
-        "AC",
         "MAX HP",
         "MR"
       ],
@@ -2567,7 +2561,7 @@
       "name": "Magic Protection",
       "slug": "Magic_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-      "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+      "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -2680,7 +2674,7 @@
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+      "description": "Dispell magic from your target, removing one harmful effect.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3069,7 +3063,7 @@
       "name": "Fire Protection",
       "slug": "Fire_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+      "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3227,7 +3221,7 @@
       "name": "Greater Spellshield",
       "slug": "Greater_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3247,17 +3241,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 75,
-          "display": "+75 Health",
+          "display": "+75 HP",
           "sortKey": 75,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 20,
-          "display": "+20 Armor Class",
+          "display": "+20 AC",
           "sortKey": 20,
           "statTag": "AC"
         },
@@ -3270,7 +3264,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+      "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -3499,7 +3493,7 @@
       "name": "Exceptional Spellshield",
       "slug": "Exceptional_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3519,17 +3513,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 100,
-          "display": "+100 Health",
+          "display": "+100 HP",
           "sortKey": 100,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 25,
-          "display": "+25 Armor Class",
+          "display": "+25 AC",
           "sortKey": 25,
           "statTag": "AC"
         },
@@ -3542,7 +3536,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+      "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -3650,7 +3644,7 @@
       "name": "Arch Spellshield",
       "slug": "Arch_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3670,17 +3664,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 150,
-          "display": "+150 Health",
+          "display": "+150 HP",
           "sortKey": 150,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 30,
-          "display": "+30 Armor Class",
+          "display": "+30 AC",
           "sortKey": 30,
           "statTag": "AC"
         },
@@ -3693,7 +3687,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+      "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -3798,7 +3792,7 @@
       "name": "Magic Resistance",
       "slug": "Magic_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3935,7 +3929,7 @@
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",

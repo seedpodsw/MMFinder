@@ -1,26 +1,37 @@
 /**
- * Import gear from Monsters & Memories wiki into data/wiki-items.json.
- * Usage: node server/import-wiki-items.js [--limit=200] [--categories=Weapon,Armor]
+ * Import items from the Monsters & Memories wiki into data/wiki-items.json.
+ * Category:Items is the full catalog. The gear categories are included so a
+ * page that is only filed under Weapon or Armor is not dropped.
+ * Usage: node server/import-wiki-items.js [--limit=200] [--categories=Items,Weapon]
  */
 const fs = require("fs");
 const path = require("path");
 const { slugify, sourcesFromWikiItem, WIKI_CACHE } = require("./items");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
-const DEFAULT_CATS = ["Weapon", "Armor", "Jewelry", "Shield", "Quest_Rewards"];
+const DEFAULT_CATS = ["Items", "Weapon", "Armor", "Jewelry", "Shield", "Quest_Rewards", "Quest_Items", "Food", "Drink"];
 
 function arg(name, fallback) {
   const hit = process.argv.find((a) => a.startsWith(`--${name}=`));
   return hit ? hit.slice(name.length + 3) : fallback;
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function apiGet(params) {
   const url = new URL(API);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
   url.searchParams.set("format", "json");
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Wiki API ${res.status}`);
-  return res.json();
+  let lastErr;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const res = await fetch(url);
+    if (res.ok) return res.json();
+    lastErr = new Error(`Wiki API ${res.status}`);
+    await sleep(400 * (attempt + 1));
+  }
+  throw lastErr;
 }
 
 async function categoryMembers(title) {
@@ -185,6 +196,7 @@ async function fetchPages(titles) {
         dropsfrom: pageFields.dropsfrom || "",
         soldby: pageFields.soldby || "",
         playercrafted: pageFields.playercrafted || "",
+        recipes: pageFields.recipes || "",
         categories: cats,
         ...stats,
       };
@@ -192,6 +204,7 @@ async function fetchPages(titles) {
       out.push(raw);
     }
     process.stdout.write(`\rFetched ${Math.min(i + batch.length, titles.length)}/${titles.length} pages`);
+    await sleep(120);
   }
   process.stdout.write("\n");
   return out;

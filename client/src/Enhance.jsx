@@ -4,6 +4,7 @@ const KIND_LABEL = {
   class: "Class path",
   armor: "Armor turn-in",
   hunt: "Hunt / named",
+  turnin: "Turn-in",
 };
 
 const ROLE_LABEL = {
@@ -48,6 +49,15 @@ export function questHay(quest, classes = []) {
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
+}
+
+export function audienceLabel(quest, classes = []) {
+  const ids = quest?.classIds || [];
+  const total = classes.length || 18;
+  if (!ids.length || ids.includes("all") || ids.length >= total) return "All classes";
+  const names = ids.map((id) => classes.find((c) => c.id === id)?.name || id);
+  if (names.length > 4) return `${names.length} classes`;
+  return names.join(", ");
 }
 
 export function searchQuests(quests, classes, query) {
@@ -96,7 +106,6 @@ export default function Enhance({
   const mine = useMemo(
     () =>
       quests
-        .filter((q) => appliesToClass(q, klass))
         .filter((q) => kind === "all" || q.kind === kind)
         .filter((q) => {
           const qtext = query.trim().toLowerCase();
@@ -104,20 +113,26 @@ export default function Enhance({
           const hay = questHay(q, classes);
           return hay.includes(qtext) || qtext.split(/\s+/).filter(Boolean).every((t) => hay.includes(t));
         })
-        .sort((a, b) => (a.levelMin || 1) - (b.levelMin || 1) || a.title.localeCompare(b.title)),
+        .sort((a, b) => {
+          const ay = klass && appliesToClass(a, klass) ? 0 : 1;
+          const by = klass && appliesToClass(b, klass) ? 0 : 1;
+          return ay - by || (a.levelMin || 1) - (b.levelMin || 1) || a.title.localeCompare(b.title);
+        }),
     [quests, klass, kind, query, classes]
   );
 
   const picked = mine.find((q) => q.id === pickedId) || mine[0];
-  const nextClass = mine.find((q) => q.kind === "class" && nextOpenStep(q, completed, level));
-  const nextAny = mine.find((q) => nextOpenStep(q, completed, level));
+  const yours = klass ? mine.filter((q) => appliesToClass(q, klass)) : [];
+  const nextClass = yours.find((q) => q.kind === "class" && nextOpenStep(q, completed, level));
+  const nextAny = yours.find((q) => nextOpenStep(q, completed, level));
   const spotlight = nextClass || nextAny;
   const spotlightStep = spotlight ? nextOpenStep(spotlight, completed, level) : null;
 
   return (
     <div className="layout enhance-layout">
       <aside className="rail">
-        <p className="rail-label">Pick a class</p>
+        <p className="rail-label">Your class</p>
+        <p className="hint class-rail-note">Picks the next step. The list is every quest.</p>
         <ul className="zone-list class-list">
           {classes.map((c) => (
             <li key={c.id}>
@@ -132,11 +147,8 @@ export default function Enhance({
       </aside>
 
       <main className="enhance-board">
-        {!klass ? (
-          <p className="empty enhance-empty">Pick a class to see guild turn-ins, armor hunts, and what to do at your level.</p>
-        ) : (
-          <>
-            {spotlightStep && (
+        <>
+            {klass && spotlightStep && (
               <article className="next-card">
                 <p className="region">Do this next · {cls?.name} · lvl {level}</p>
                 <h2>{spotlight.title}</h2>
@@ -182,10 +194,13 @@ export default function Enhance({
                 <button className={kind === "hunt" ? "on" : ""} onClick={() => setKind("hunt")}>
                   Hunts
                 </button>
+                <button className={kind === "turnin" ? "on" : ""} onClick={() => setKind("turnin")}>
+                  Turn-ins
+                </button>
               </div>
               <input
                 className="search enhance-search"
-                placeholder="Search turn-ins, NPCs, rewards…"
+                placeholder="Search items, turn-ins, NPCs…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -199,17 +214,19 @@ export default function Enhance({
                 return (
                   <article
                     key={quest.id}
-                    className={`quest-card ${picked?.id === quest.id ? "focus" : ""} ${ready ? "fits" : ""} ${
+                    className={`quest-card ${picked?.id === quest.id ? "focus" : ""} ${ready && appliesToClass(quest, klass) ? "fits" : ""} ${
                       locked ? "locked" : ""
-                    }`}
+                    } ${klass && appliesToClass(quest, klass) ? "yours" : ""}`}
                     onClick={() => setPickedId(quest.id)}
                   >
                     <header>
                       <h3>{quest.title}</h3>
                       <span className="range">
-                        {KIND_LABEL[quest.kind]} · {quest.levelMin}+
+                        {KIND_LABEL[quest.kind] || quest.kind} · {quest.levelMin}+
+                        {quest.repeatable ? " · repeatable" : ""}
                       </span>
                     </header>
+                    <p className="quest-classes">{audienceLabel(quest, classes)}</p>
                     <p className="hint">
                       <NpcLink
                         npc={quest.npc}
@@ -228,16 +245,16 @@ export default function Enhance({
                   </article>
                 );
               })}
-              {mine.length === 0 && <p className="empty">Nothing in this filter for {cls.name}.</p>}
+              {mine.length === 0 && <p className="empty">Nothing matches that search.</p>}
             </div>
-          </>
-        )}
+        </>
       </main>
 
       <aside className="panel enhance-detail">
-        {picked && klass ? (
+        {picked ? (
           <QuestDetail
             quest={picked}
+            classes={classes}
             zones={zones}
             level={level}
             completed={completed}
@@ -246,7 +263,7 @@ export default function Enhance({
             onShowVendor={onShowVendor}
           />
         ) : (
-          <p className="empty">Walkthroughs land here once you pick a class.</p>
+          <p className="empty">Pick a quest to open its walkthrough.</p>
         )}
       </aside>
     </div>
@@ -266,20 +283,17 @@ export function ZoneQuestTab({
   onShowVendor,
   onOpenEnhance,
 }) {
-  const here = quests.filter((q) => appliesToClass(q, className) && questTouchesZone(q, zoneId));
+  const here = quests
+    .filter((q) => questTouchesZone(q, zoneId))
+    .sort((a, b) => {
+      const ay = className && appliesToClass(a, className) ? 0 : 1;
+      const by = className && appliesToClass(b, className) ? 0 : 1;
+      return ay - by || (a.levelMin || 1) - (b.levelMin || 1) || a.title.localeCompare(b.title);
+    });
   const classPath = quests.filter((q) => q.kind === "class" && appliesToClass(q, className));
-  const next = classPath.map((q) => ({ q, step: nextOpenStep(q, completed, level) })).find((x) => x.step);
-
-  if (!className) {
-    return (
-      <div className="stack">
-        <p className="empty">Pick a class in the header to see guild turn-ins and armor hunts.</p>
-        <button className="add" onClick={onOpenEnhance}>
-          Open Quests
-        </button>
-      </div>
-    );
-  }
+  const next = className
+    ? classPath.map((q) => ({ q, step: nextOpenStep(q, completed, level) })).find((x) => x.step)
+    : null;
 
   return (
     <div className="stack">
@@ -319,8 +333,8 @@ export function ZoneQuestTab({
         </article>
       )}
 
-      <p className="rail-label">In this zone</p>
-      {here.length === 0 && <p className="empty">No listed turn-ins start here. Open Quests for the full {classLabel} path.</p>}
+      <p className="rail-label">In this zone · all classes</p>
+      {here.length === 0 && <p className="empty">No listed turn-ins touch this zone.</p>}
       {here.map((quest) => (
         <QuestSummary
           key={quest.id}
@@ -348,7 +362,7 @@ function QuestSummary({ quest, zones, level, completed, onToggleStep, onShowZone
       <header>
         <h3>{quest.title}</h3>
         <span className="range">
-          {KIND_LABEL[quest.kind]} · {done}/{total}
+          {KIND_LABEL[quest.kind] || quest.kind} · {audienceLabel(quest)} · {done}/{total}
         </span>
       </header>
       <p className="hint">
@@ -378,14 +392,14 @@ function QuestSummary({ quest, zones, level, completed, onToggleStep, onShowZone
   );
 }
 
-function QuestDetail({ quest, zones, level, completed, onToggleStep, onShowZone, onShowVendor }) {
+function QuestDetail({ quest, classes, zones, level, completed, onToggleStep, onShowZone, onShowVendor }) {
   const { done, total } = progress(quest, completed);
   return (
     <>
-      <p className="region">{KIND_LABEL[quest.kind]}</p>
+      <p className="region">{KIND_LABEL[quest.kind] || quest.kind}{quest.repeatable ? " · repeatable" : ""}</p>
       <h2>{quest.title}</h2>
       <p className="meta">
-        {quest.city} · lvl {quest.levelMin}+ · {done}/{total} done
+        {audienceLabel(quest, classes)} · {quest.city} · lvl {quest.levelMin}+ · {done}/{total} done
       </p>
       <p className="desc">{quest.where}</p>
       <p className="adj">

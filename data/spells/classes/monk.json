@@ -161,7 +161,7 @@
         "name": "Taunt",
         "slug": "Taunt",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-        "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+        "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -536,7 +536,7 @@
         "name": "Wind Style",
         "slug": "Wind_Style",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wind_Style?action=edit&redlink=1",
-        "description": "Assume a wind-based fighting style, increasing your Movement Speed by 10%. Additionally, Celestial Fury grants you a chance to strike your target a second time on melee attacks. This ability persists until canceled.",
+        "description": "Assume a wind-based fighting style, increasing your Movement Speed by 15%. Additionally, Celestial Fury grants you a chance to strike your target a second time on melee attacks. This ability persists until canceled.",
         "category": "Mit?",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -554,15 +554,15 @@
           {
             "kind": "buff",
             "stat": "Movement Speed",
-            "min": 10,
-            "max": 10,
+            "min": 15,
+            "max": 15,
             "unit": "%",
-            "display": "+10%",
-            "sortKey": 10,
+            "display": "+15%",
+            "sortKey": 15,
             "statTag": "MS"
           }
         ],
-        "valuesSummary": "+10%",
+        "valuesSummary": "+15%",
         "statTags": [],
         "type": "ability"
       }
@@ -639,7 +639,7 @@
         "name": "Quivering Palm",
         "slug": "Quivering_Palm",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Quivering_Palm?action=edit&redlink=1",
-        "description": "Strike through your target and into their soul, inflicting increasingly debilitating effects with each strike for 30 seconds. One strike knocks them off balance. Two strikes block their Chi, reducing their Physical Damage dealt by 5%. three strikes fracture their Chakra, increasing their Physical Damage received by 5%. This ability shares a cooldown with other Martial abilities.",
+        "description": "Strike through your target and into their soul, inflicting increasingly debilitating effects with each strike for 30 seconds. The first strike block their chi, reducing their Physical Damage dealt by 10%, and the second strike fractures their chakra, increasing their Physical Damage received by 10%. This ability shares a cooldown with other Martial abilities.",
         "category": "Mit?",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -656,23 +656,23 @@
           {
             "kind": "debuff",
             "stat": "Damage dealt",
-            "min": 5,
-            "max": 5,
+            "min": 10,
+            "max": 10,
             "unit": "%",
-            "display": "−5%",
-            "sortKey": 5
+            "display": "−10%",
+            "sortKey": 10
           },
           {
             "kind": "buff",
             "stat": "Damage received",
-            "min": 5,
-            "max": 5,
+            "min": 10,
+            "max": 10,
             "unit": "%",
-            "display": "+5%",
-            "sortKey": 5
+            "display": "+10%",
+            "sortKey": 10
           }
         ],
-        "valuesSummary": "−5% · +5%",
+        "valuesSummary": "−10% · +10%",
         "statTags": [],
         "type": "ability"
       }
@@ -1267,7 +1267,7 @@
       "name": "Taunt",
       "slug": "Taunt",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-      "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+      "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1622,7 +1622,7 @@
       "name": "Wind Style",
       "slug": "Wind_Style",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wind_Style?action=edit&redlink=1",
-      "description": "Assume a wind-based fighting style, increasing your Movement Speed by 10%. Additionally, Celestial Fury grants you a chance to strike your target a second time on melee attacks. This ability persists until canceled.",
+      "description": "Assume a wind-based fighting style, increasing your Movement Speed by 15%. Additionally, Celestial Fury grants you a chance to strike your target a second time on melee attacks. This ability persists until canceled.",
       "category": "Mit?",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1640,15 +1640,15 @@
         {
           "kind": "buff",
           "stat": "Movement Speed",
-          "min": 10,
-          "max": 10,
+          "min": 15,
+          "max": 15,
           "unit": "%",
-          "display": "+10%",
-          "sortKey": 10,
+          "display": "+15%",
+          "sortKey": 15,
           "statTag": "MS"
         }
       ],
-      "valuesSummary": "+10%",
+      "valuesSummary": "+15%",
       "statTags": [],
       "type": "ability"
     },
@@ -1719,7 +1719,7 @@
       "name": "Quivering Palm",
       "slug": "Quivering_Palm",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Quivering_Palm?action=edit&redlink=1",
-      "description": "Strike through your target and into their soul, inflicting increasingly debilitating effects with each strike for 30 seconds. One strike knocks them off balance. Two strikes block their Chi, reducing their Physical Damage dealt by 5%. three strikes fracture their Chakra, increasing their Physical Damage received by 5%. This ability shares a cooldown with other Martial abilities.",
+      "description": "Strike through your target and into their soul, inflicting increasingly debilitating effects with each strike for 30 seconds. The first strike block their chi, reducing their Physical Damage dealt by 10%, and the second strike fractures their chakra, increasing their Physical Damage received by 10%. This ability shares a cooldown with other Martial abilities.",
       "category": "Mit?",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1736,23 +1736,23 @@
         {
           "kind": "debuff",
           "stat": "Damage dealt",
-          "min": 5,
-          "max": 5,
+          "min": 10,
+          "max": 10,
           "unit": "%",
-          "display": "−5%",
-          "sortKey": 5
+          "display": "−10%",
+          "sortKey": 10
         },
         {
           "kind": "buff",
           "stat": "Damage received",
-          "min": 5,
-          "max": 5,
+          "min": 10,
+          "max": 10,
           "unit": "%",
-          "display": "+5%",
-          "sortKey": 5
+          "display": "+10%",
+          "sortKey": 10
         }
       ],
-      "valuesSummary": "−5% · +5%",
+      "valuesSummary": "−10% · +10%",
       "statTags": [],
       "type": "ability"
     },

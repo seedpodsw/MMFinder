@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Cleric Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleric",
-  "entryCount": 123,
+  "entryCount": 125,
   "levels": [
     1,
     4,
@@ -93,7 +93,7 @@
         "name": "Minor Heal",
         "slug": "Minor_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
-        "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+        "description": "Gently heal your target, restoring 13 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -108,12 +108,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 10,
-            "display": "10 heal",
-            "sortKey": 10
+            "amount": 13,
+            "display": "13 heal",
+            "sortKey": 13
           }
         ],
-        "valuesSummary": "10 heal",
+        "valuesSummary": "13 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -202,10 +202,32 @@
         "type": "spell"
       },
       {
+        "name": "Blessing of Smiting",
+        "slug": "Blessing_of_Smiting",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting?action=edit&redlink=1",
+        "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": "3.0s",
+        "level": 4,
+        "tags": [
+          "damage",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
         "name": "Cure Disease",
         "slug": "Cure_Disease",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-        "description": "Remove disease effect - Cures target of disease effects",
+        "description": "Cures your target, removing one Disease effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -213,8 +235,10 @@
         "mana": 10,
         "castTime": "2.0s",
         "level": 4,
-        "tags": [],
-        "primaryTag": null,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
         "statTags": [],
@@ -224,7 +248,7 @@
         "name": "Cure Poison",
         "slug": "Cure_Poison",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-        "description": "Remove Poison Effect - Cures target of poison effects.",
+        "description": "Cure your target, removing one Poison effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -232,8 +256,10 @@
         "mana": 10,
         "castTime": "2.0s",
         "level": 4,
-        "tags": [],
-        "primaryTag": null,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
         "statTags": [],
@@ -243,7 +269,7 @@
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -262,10 +288,32 @@
         "type": "spell"
       },
       {
+        "name": "Hymn of Smiting",
+        "slug": "Hymn_of_Smiting",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting?action=edit&redlink=1",
+        "description": "Bless your party with smiting, granting them a change to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+        "category": "Abj",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 40,
+        "castTime": "4.0s",
+        "level": 4,
+        "tags": [
+          "damage",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
         "name": "Lesser Heal",
         "slug": "Lesser_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
-        "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+        "description": "Heal your target, restoring 24 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -280,12 +328,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 25,
-            "display": "25 heal",
-            "sortKey": 25
+            "amount": 24,
+            "display": "24 heal",
+            "sortKey": 24
           }
         ],
-        "valuesSummary": "25 heal",
+        "valuesSummary": "24 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -413,7 +461,7 @@
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -459,7 +507,7 @@
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+        "description": "Dispell magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -502,7 +550,7 @@
         "name": "Heal",
         "slug": "Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal",
-        "description": "Moderately heals the wounds of a friendly target, healing them for 60 Health.",
+        "description": "Heal your target, restoring 50 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -517,12 +565,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 60,
-            "display": "60 heal",
-            "sortKey": 60
+            "amount": 50,
+            "display": "50 heal",
+            "sortKey": 50
           }
         ],
-        "valuesSummary": "60 heal",
+        "valuesSummary": "50 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -530,7 +578,7 @@
         "name": "Invisibility versus Undead",
         "slug": "Invisibility_versus_Undead",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-        "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
+        "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -756,7 +804,7 @@
         "name": "Summon Food",
         "slug": "Summon_Food",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-        "description": "Summon Food - Summon a small amount of bread, providing you with sustenance.",
+        "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -807,7 +855,7 @@
         "name": "Disease Protection",
         "slug": "Disease_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-        "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+        "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -868,7 +916,7 @@
         "name": "Lesser Pacify",
         "slug": "Lesser_Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pacify",
-        "description": "Pacify your target, reducing their Aggro Radius for 2 minutes.",
+        "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 24.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -978,7 +1026,7 @@
         "name": "Stun",
         "slug": "Stun",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
-        "description": "Shocks your target, applying a Stun for 4 seconds.",
+        "description": "Shock your target into a daze, stunning them for 4 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1007,7 +1055,7 @@
         "name": "Summon Drink",
         "slug": "Summon_Drink",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-        "description": "Summon Water - Summon a small amount of water, providing you with sustenance.",
+        "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -1030,7 +1078,7 @@
         "name": "Blind",
         "slug": "Blind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
-        "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+        "description": "Shroud the vision of your target, blinding them for 12 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1082,7 +1130,7 @@
         "name": "Greater Heal",
         "slug": "Greater_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-        "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+        "description": "Greatly heal your target, restoring 278 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1097,12 +1145,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 325,
-            "display": "325 heal",
-            "sortKey": 325
+            "amount": 278,
+            "display": "278 heal",
+            "sortKey": 278
           }
         ],
-        "valuesSummary": "325 heal",
+        "valuesSummary": "278 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -1169,7 +1217,7 @@
         "name": "Redemption",
         "slug": "Redemption",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Redemption",
-        "description": "Redeem a target corpse, restoring 25% Experience.",
+        "description": "Redeem a target corpse, restoring 25% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1278,7 +1326,7 @@
         "name": "Divine Aegis",
         "slug": "Divine_Aegis",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
-        "description": "Surrounds the caster with an impenetrable divine aegis, making them invulnerable to all attacks for 15 seconds. Also grants Exhausted Soul, preventing you from receiving another immunity buff for 1 minute. Can by used while Stunned, Mesmerized, and Feared.",
+        "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds. This spell can be used while stunned, incapacitated, or feared. This spell inflicts Exhausted Soul upon expiration, preventing the application of immunity effects for 30 seconds.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1287,10 +1335,10 @@
         "castTime": "Instant",
         "level": 20,
         "tags": [
-          "crowd-control",
-          "mez"
+          "buff",
+          "self"
         ],
-        "primaryTag": "mez",
+        "primaryTag": "buff",
         "effects": [],
         "valuesSummary": "",
         "statTags": [],
@@ -1498,7 +1546,7 @@
         "name": "Disease Resistance",
         "slug": "Disease_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-        "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+        "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1620,7 +1668,7 @@
         "name": "Pacify",
         "slug": "Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pacify",
-        "description": "Pacify your target, reducing their Aggro Radius for 3 minutes.",
+        "description": "Pacify your target, reducing their Aggro Radius for 3 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 36.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2028,7 +2076,7 @@
         "name": "Exceptional Heal",
         "slug": "Exceptional_Heal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-        "description": "Exceptionally heals the wounds of a friendly target, healing them for 600 Health.",
+        "description": "Strongly heal your target, restoring 473 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2043,12 +2091,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 600,
-            "display": "600 heal",
-            "sortKey": 600
+            "amount": 473,
+            "display": "473 heal",
+            "sortKey": 473
           }
         ],
-        "valuesSummary": "600 heal",
+        "valuesSummary": "473 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -2234,7 +2282,7 @@
         "name": "Greater Pacify",
         "slug": "Greater_Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify?action=edit&redlink=1",
-        "description": "Pacify your target, reducing their Aggro Radius for 4 minutes.",
+        "description": "Pacify your target, reducing their Aggro Radius for 4 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 48.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2727,7 +2775,7 @@
         "name": "Exceptional Pacify",
         "slug": "Exceptional_Pacify",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify?action=edit&redlink=1",
-        "description": "Pacify your target, reducing their Aggro Radius for 5 minutes.",
+        "description": "Pacify your target, reducing their Aggro Radius for 5 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 64.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3519,7 +3567,7 @@
       "name": "Minor Heal",
       "slug": "Minor_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Heal",
-      "description": "Slightly heals the wounds of a friendly target, healing them for 10 Health.",
+      "description": "Gently heal your target, restoring 13 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3534,12 +3582,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 10,
-          "display": "10 heal",
-          "sortKey": 10
+          "amount": 13,
+          "display": "13 heal",
+          "sortKey": 13
         }
       ],
-      "valuesSummary": "10 heal",
+      "valuesSummary": "13 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -3626,10 +3674,32 @@
       "type": "spell"
     },
     {
+      "name": "Blessing of Smiting",
+      "slug": "Blessing_of_Smiting",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blessing_of_Smiting?action=edit&redlink=1",
+      "description": "Bless your target with smiting, granting them a chance to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": "3.0s",
+      "level": 4,
+      "tags": [
+        "damage",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Cure Disease",
       "slug": "Cure_Disease",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-      "description": "Remove disease effect - Cures target of disease effects",
+      "description": "Cures your target, removing one Disease effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3637,8 +3707,10 @@
       "mana": 10,
       "castTime": "2.0s",
       "level": 4,
-      "tags": [],
-      "primaryTag": null,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
       "statTags": [],
@@ -3648,7 +3720,7 @@
       "name": "Cure Poison",
       "slug": "Cure_Poison",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-      "description": "Remove Poison Effect - Cures target of poison effects.",
+      "description": "Cure your target, removing one Poison effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3656,8 +3728,10 @@
       "mana": 10,
       "castTime": "2.0s",
       "level": 4,
-      "tags": [],
-      "primaryTag": null,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
       "statTags": [],
@@ -3667,7 +3741,7 @@
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3686,10 +3760,32 @@
       "type": "spell"
     },
     {
+      "name": "Hymn of Smiting",
+      "slug": "Hymn_of_Smiting",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hymn_of_Smiting?action=edit&redlink=1",
+      "description": "Bless your party with smiting, granting them a change to activate Sanctified Weapon on melee attacks for 35 minutes. Sanctified Weapon: Purify your target, dealing 2 to 18 Hole Damage, increasing with the attacker's level and Strength.",
+      "category": "Abj",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 40,
+      "castTime": "4.0s",
+      "level": 4,
+      "tags": [
+        "damage",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Lesser Heal",
       "slug": "Lesser_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Heal",
-      "description": "Lightly heals the wounds of a friendly target, healing them for 25 Health.",
+      "description": "Heal your target, restoring 24 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3704,12 +3800,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 25,
-          "display": "25 heal",
-          "sortKey": 25
+          "amount": 24,
+          "display": "24 heal",
+          "sortKey": 24
         }
       ],
-      "valuesSummary": "25 heal",
+      "valuesSummary": "24 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -3837,7 +3933,7 @@
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3881,7 +3977,7 @@
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+      "description": "Dispell magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3924,7 +4020,7 @@
       "name": "Heal",
       "slug": "Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Heal",
-      "description": "Moderately heals the wounds of a friendly target, healing them for 60 Health.",
+      "description": "Heal your target, restoring 50 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3939,12 +4035,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 60,
-          "display": "60 heal",
-          "sortKey": 60
+          "amount": 50,
+          "display": "50 heal",
+          "sortKey": 50
         }
       ],
-      "valuesSummary": "60 heal",
+      "valuesSummary": "50 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -3952,7 +4048,7 @@
       "name": "Invisibility versus Undead",
       "slug": "Invisibility_versus_Undead",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-      "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
+      "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -4178,7 +4274,7 @@
       "name": "Summon Food",
       "slug": "Summon_Food",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-      "description": "Summon Food - Summon a small amount of bread, providing you with sustenance.",
+      "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4227,7 +4323,7 @@
       "name": "Disease Protection",
       "slug": "Disease_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-      "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+      "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4288,7 +4384,7 @@
       "name": "Lesser Pacify",
       "slug": "Lesser_Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Pacify",
-      "description": "Pacify your target, reducing their Aggro Radius for 2 minutes.",
+      "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 24.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4398,7 +4494,7 @@
       "name": "Stun",
       "slug": "Stun",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Stun",
-      "description": "Shocks your target, applying a Stun for 4 seconds.",
+      "description": "Shock your target into a daze, stunning them for 4 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -4427,7 +4523,7 @@
       "name": "Summon Drink",
       "slug": "Summon_Drink",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-      "description": "Summon Water - Summon a small amount of water, providing you with sustenance.",
+      "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4448,7 +4544,7 @@
       "name": "Blind",
       "slug": "Blind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
-      "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+      "description": "Shroud the vision of your target, blinding them for 12 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4500,7 +4596,7 @@
       "name": "Greater Heal",
       "slug": "Greater_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-      "description": "Greatly heals the wounds of a friendly target, healing them for 325 Health.",
+      "description": "Greatly heal your target, restoring 278 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4515,12 +4611,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 325,
-          "display": "325 heal",
-          "sortKey": 325
+          "amount": 278,
+          "display": "278 heal",
+          "sortKey": 278
         }
       ],
-      "valuesSummary": "325 heal",
+      "valuesSummary": "278 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -4587,7 +4683,7 @@
       "name": "Redemption",
       "slug": "Redemption",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Redemption",
-      "description": "Redeem a target corpse, restoring 25% Experience.",
+      "description": "Redeem a target corpse, restoring 25% Experience. This spell inflicts Resurrection Illness on the target, reducing all of their stats for 3 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4694,7 +4790,7 @@
       "name": "Divine Aegis",
       "slug": "Divine_Aegis",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Divine_Aegis",
-      "description": "Surrounds the caster with an impenetrable divine aegis, making them invulnerable to all attacks for 15 seconds. Also grants Exhausted Soul, preventing you from receiving another immunity buff for 1 minute. Can by used while Stunned, Mesmerized, and Feared.",
+      "description": "Surround yourself with a divine aegis, granting you immunity to all incoming damage for 15 seconds. This spell can be used while stunned, incapacitated, or feared. This spell inflicts Exhausted Soul upon expiration, preventing the application of immunity effects for 30 seconds.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -4703,10 +4799,10 @@
       "castTime": "Instant",
       "level": 20,
       "tags": [
-        "crowd-control",
-        "mez"
+        "buff",
+        "self"
       ],
-      "primaryTag": "mez",
+      "primaryTag": "buff",
       "effects": [],
       "valuesSummary": "",
       "statTags": [],
@@ -4912,7 +5008,7 @@
       "name": "Disease Resistance",
       "slug": "Disease_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-      "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+      "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -5034,7 +5130,7 @@
       "name": "Pacify",
       "slug": "Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pacify",
-      "description": "Pacify your target, reducing their Aggro Radius for 3 minutes.",
+      "description": "Pacify your target, reducing their Aggro Radius for 3 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 36.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5438,7 +5534,7 @@
       "name": "Exceptional Heal",
       "slug": "Exceptional_Heal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-      "description": "Exceptionally heals the wounds of a friendly target, healing them for 600 Health.",
+      "description": "Strongly heal your target, restoring 473 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5453,12 +5549,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 600,
-          "display": "600 heal",
-          "sortKey": 600
+          "amount": 473,
+          "display": "473 heal",
+          "sortKey": 473
         }
       ],
-      "valuesSummary": "600 heal",
+      "valuesSummary": "473 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -5642,7 +5738,7 @@
       "name": "Greater Pacify",
       "slug": "Greater_Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pacify?action=edit&redlink=1",
-      "description": "Pacify your target, reducing their Aggro Radius for 4 minutes.",
+      "description": "Pacify your target, reducing their Aggro Radius for 4 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 48.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6129,7 +6225,7 @@
       "name": "Exceptional Pacify",
       "slug": "Exceptional_Pacify",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Pacify?action=edit&redlink=1",
-      "description": "Pacify your target, reducing their Aggro Radius for 5 minutes.",
+      "description": "Pacify your target, reducing their Aggro Radius for 5 minutes. This spell has a very slight chance to end early. This spell has additional effects in PvP. This spell is limited to one target. This spell is limited to targets up to level 64.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",

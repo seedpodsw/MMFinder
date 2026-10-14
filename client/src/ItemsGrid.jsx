@@ -1,5 +1,5 @@
-import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
-import { AgGridReact } from "ag-grid-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { AgGridReact, useGridFilter } from "ag-grid-react";
 import {
   AllCommunityModule,
   ModuleRegistry,
@@ -38,18 +38,15 @@ const gridTheme = themeQuartz.withPart(colorSchemeDarkWarm).withParams({
   borderRadius: 4,
 });
 
-function FarmCell({ value, data, onFarm }) {
-  const canJump = Boolean(data?.primaryPoiId || data?.primaryZoneId || data?.zoneName);
+function FarmCell({ value, data, onOpen }) {
   if (!value) return <span className="items-muted">—</span>;
-  if (!canJump) return <span>{value}</span>;
   return (
     <button
       type="button"
       className="items-farm-link"
-      title="Show on world map"
       onClick={(e) => {
         e.stopPropagation();
-        onFarm?.(data);
+        onOpen?.(data?._item);
       }}
     >
       {value}
@@ -96,7 +93,7 @@ const NUM_FIELDS = [
 
 /** Column presets: which fields are visible. */
 const COLUMN_PRESETS = {
-  Compact: ["name", "kind", "slot", "ac", "dmg", "delay", "skill", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
+  Compact: ["name", "kind", "slot", "ac", "dmg", "delay", "skill", "classReq", "recipe", "materials", "usedIn", "sellTo", "quests", "farmAt", "zoneName", "level", "wikiUrl"],
   Combat: ["name", "slot", "ac", "dmg", "delay", "skill", "str", "sta", "agi", "dex", "hp", "haste", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
   Caster: ["name", "slot", "ac", "int", "wis", "cha", "hp", "mana", "mana_regen", "effect", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
   Resists: ["name", "slot", "ac", "mr", "fr", "cr", "dr", "pr", "er", "hr", "cor", "classReq", "farmAt", "zoneName", "wikiUrl"],
@@ -127,6 +124,11 @@ function toRows(items) {
       levelMin: item.levelMin ?? null,
       levelMax: item.levelMax ?? null,
       how: item.how || "",
+      quests: Array.isArray(item.quests) ? item.quests.join(" · ") : "",
+      sellTo: item.sellTo || "no known vendor",
+      recipe: item.recipe || "no known recipe",
+      materials: item.materials || "no known recipe",
+      usedIn: item.usedIn || "no known recipe",
       origin: item.origin || "",
       notes: item.notes || "",
       categories: Array.isArray(item.categories) ? item.categories.join(", ") : "",
@@ -185,76 +187,51 @@ function FilterChoices({ value, options, label, onChange }) {
   );
 }
 
+function tokenModel(value) {
+  return value ? { filterType: "token", value } : null;
+}
+
 /** Kind/slot dropdowns in the column filter row. Slot matches any token on the item. */
-const TokenSetFilter = forwardRef(function TokenSetFilter(props, ref) {
+function TokenSetFilter(props) {
   const propsRef = useRef(props);
   propsRef.current = props;
-  const valueRef = useRef("");
-  const [value, setValue] = useState("");
+  const value = props.model?.value || "";
   const getValues = props.getValues || props.filterParams?.getValues;
   const options = useFilterOptions(props.api, getValues);
   const label = props.colDef?.headerName || "Filter";
 
-  const choose = useCallback((next) => {
-    const picked = next || "";
-    valueRef.current = picked;
-    setValue(picked);
+  const doesFilterPass = useCallback((params) => {
     const current = propsRef.current;
-    (current.onToken || current.filterParams?.onToken)?.(picked);
-    current.filterChangedCallback?.();
+    const picked = current.model?.value || "";
+    if (!picked) return true;
+    const data = params.data || params.node?.data;
+    if (!data) return true;
+    const field = current.colDef?.field;
+    const raw = data[field];
+    const tokenize = current.tokenize ?? current.filterParams?.tokenize;
+    if (tokenize) return tokensOf(raw).includes(picked);
+    return String(raw || "") === picked;
   }, []);
 
-  useImperativeHandle(ref, () => ({
-    isFilterActive() {
-      return Boolean(valueRef.current);
-    },
-    doesFilterPass(params) {
-      const picked = valueRef.current;
-      if (!picked) return true;
-      const data = params.data || params.node?.data;
-      if (!data) return true;
-      const current = propsRef.current;
-      const field = current.colDef?.field;
-      const raw = data[field];
-      const tokenize = current.tokenize ?? current.filterParams?.tokenize;
-      if (tokenize) return tokensOf(raw).includes(picked);
-      return String(raw || "") === picked;
-    },
-    getModel() {
-      return valueRef.current ? { filterType: "token", value: valueRef.current } : null;
-    },
-    setModel(model) {
-      const next = model?.value || "";
-      const changed = next !== valueRef.current;
-      valueRef.current = next;
-      setValue(next);
-      if (changed) {
-        const current = propsRef.current;
-        (current.onToken || current.filterParams?.onToken)?.(next);
-      }
-    },
-    onFloatingFilterChanged(_type, next) {
-      choose(next);
-    },
-  }));
+  useGridFilter({ doesFilterPass });
+
+  const choose = (next) => {
+    const picked = next || "";
+    (props.onToken || props.filterParams?.onToken)?.(picked);
+    props.onModelChange?.(tokenModel(picked));
+  };
 
   return (
     <div className="items-filter-popup">
       <FilterChoices label={label} value={value} options={options} onChange={choose} />
     </div>
   );
-});
+}
 
-const TokenSetFloatingFilter = forwardRef(function TokenSetFloatingFilter(props, ref) {
-  const [value, setValue] = useState("");
+function TokenSetFloatingFilter(props) {
+  const value = props.model?.value || "";
   const options = useFilterOptions(props.api, props.filterParams?.getValues || props.getValues);
   const label = props.column?.getColDef?.().headerName || "Filter";
-
-  useImperativeHandle(ref, () => ({
-    onParentModelChanged(model) {
-      setValue(model?.value || "");
-    },
-  }));
 
   return (
     <FilterChoices
@@ -262,14 +239,13 @@ const TokenSetFloatingFilter = forwardRef(function TokenSetFloatingFilter(props,
       value={value}
       options={options}
       onChange={(next) => {
-        setValue(next);
-        props.parentFilterInstance((instance) => {
-          instance.onFloatingFilterChanged?.(null, next);
-        });
+        const picked = next || "";
+        props.filterParams?.onToken?.(picked);
+        props.onModelChange?.(tokenModel(picked));
       }}
     />
   );
-});
+}
 
 export default function ItemsGrid({
   items,
@@ -278,7 +254,6 @@ export default function ItemsGrid({
   klass = "",
   linkFilters = null,
   onLinkFilters,
-  onFarm,
   onSelectItem,
 }) {
   const gridRef = useRef(null);
@@ -310,7 +285,7 @@ export default function ItemsGrid({
   const quickRef = useRef(quickFilter);
   quickRef.current = quickFilter;
 
-  const farmHandler = useCallback((row) => onFarm?.(row?._item || row), [onFarm]);
+  const openItem = useCallback((item) => onSelectItem?.(item), [onSelectItem]);
   const rowData = useMemo(() => toRows(items), [items]);
 
   const classOptions = useMemo(
@@ -355,7 +330,7 @@ export default function ItemsGrid({
 
   const columnDefs = useMemo(
     () => [
-      { field: "name", headerName: "Item", filter: "agTextColumnFilter", minWidth: 200, flex: 1.4, pinned: "left" },
+      { field: "name", headerName: "Item", filter: "agTextColumnFilter", minWidth: 200, flex: 1.4, pinned: "left", tooltip: true },
       {
         field: "kind",
         headerName: "Kind",
@@ -404,11 +379,11 @@ export default function ItemsGrid({
       numCol("cor", "CoR"),
       numCol("weight", "Wt", 72),
       { field: "size", headerName: "Size", filter: "agSetColumnFilter", width: 90 },
-      { field: "classReq", headerName: "Class", filter: "agTextColumnFilter", minWidth: 140, flex: 1 },
+      { field: "classReq", headerName: "Class", filter: "agTextColumnFilter", minWidth: 140, flex: 1, tooltip: true },
       { field: "race", headerName: "Race", filter: "agSetColumnFilter", width: 90 },
       { field: "magic", headerName: "Magic", filter: "agSetColumnFilter", width: 90 },
       { field: "unique", headerName: "Unique", filter: "agSetColumnFilter", width: 90 },
-      { field: "effect", headerName: "Effect", filter: "agTextColumnFilter", minWidth: 160, flex: 1 },
+      { field: "effect", headerName: "Effect", filter: "agTextColumnFilter", minWidth: 160, flex: 1, tooltip: true },
       { field: "method", headerName: "Method", filter: "agSetColumnFilter", width: 100 },
       {
         field: "farmAt",
@@ -417,19 +392,25 @@ export default function ItemsGrid({
         minWidth: 220,
         flex: 1.6,
         cellRenderer: FarmCell,
-        cellRendererParams: { onFarm: farmHandler },
+        cellRendererParams: { onOpen: openItem },
         cellClass: "items-farm-cell",
+        tooltip: true,
       },
       { field: "zoneName", headerName: "Zone", filter: "agSetColumnFilter", width: 140 },
-      { field: "campName", headerName: "Camp", filter: "agTextColumnFilter", width: 130 },
-      { field: "npc", headerName: "NPC / Mob", filter: "agTextColumnFilter", minWidth: 140, flex: 1 },
+      { field: "campName", headerName: "Camp", filter: "agTextColumnFilter", width: 130, tooltip: true },
+      { field: "npc", headerName: "NPC / Mob", filter: "agTextColumnFilter", minWidth: 140, flex: 1, tooltip: true },
       { field: "level", headerName: "Level", filter: "agTextColumnFilter", width: 90 },
-      { field: "how", headerName: "How to get", filter: "agTextColumnFilter", minWidth: 160, flex: 1 },
+      { field: "recipe", headerName: "Recipe", filter: "agTextColumnFilter", minWidth: 220, flex: 1.2, tooltip: true },
+      { field: "materials", headerName: "Materials", filter: "agTextColumnFilter", minWidth: 220, flex: 1.3, tooltip: true },
+      { field: "usedIn", headerName: "Used in", filter: "agTextColumnFilter", minWidth: 220, flex: 1.3, tooltip: true },
+      { field: "sellTo", headerName: "Sell to", filter: "agTextColumnFilter", minWidth: 280, flex: 1.6, tooltip: true },
+      { field: "quests", headerName: "Quests", filter: "agTextColumnFilter", minWidth: 220, flex: 1.4, tooltip: true },
+      { field: "how", headerName: "How to get", filter: "agTextColumnFilter", minWidth: 160, flex: 1, tooltip: true },
       { field: "origin", headerName: "Origin", filter: "agSetColumnFilter", width: 90 },
-      { field: "notes", headerName: "Notes", filter: "agTextColumnFilter", minWidth: 140, flex: 1 },
+      { field: "notes", headerName: "Notes", filter: "agTextColumnFilter", minWidth: 140, flex: 1, tooltip: true },
       { field: "wikiUrl", headerName: "Wiki", width: 80, filter: false, sortable: false, cellRenderer: WikiCell },
     ],
-    [farmHandler, kindValues, slotValues, onKindToken, onSlotToken]
+    [openItem, kindValues, slotValues, onKindToken, onSlotToken]
   );
 
   const allColumns = useMemo(
@@ -718,14 +699,10 @@ export default function ItemsGrid({
 
   const onCellClicked = useCallback(
     (e) => {
-      if (e.colDef?.field === "farmAt") {
-        if (e.data?.primaryPoiId || e.data?.primaryZoneId || e.data?.zoneName) farmHandler(e.data);
-        return;
-      }
       if (e.colDef?.field === "wikiUrl") return;
       if (e.data?._item) onSelectItem?.(e.data._item);
     },
-    [farmHandler, onSelectItem]
+    [onSelectItem]
   );
 
   const activePresetCount =
@@ -747,7 +724,7 @@ export default function ItemsGrid({
               quickRef.current = e.target.value;
               setQuickFilter(e.target.value);
             }}
-            placeholder="Name, AC, zone, mob, slot…"
+            placeholder="Name, recipe, material, vendor, quest…"
           />
         </label>
 
@@ -927,6 +904,9 @@ export default function ItemsGrid({
           onColumnResized={persistLast}
           onModelUpdated={() => setDisplayedCount(apiRef.current?.getDisplayedRowCount() || 0)}
           animateRows
+          tooltipShowMode="whenTruncated"
+          tooltipShowDelay={400}
+          tooltipInteraction
           rowSelection={{ mode: "singleRow", checkboxes: false, enableClickSelection: true }}
           onCellClicked={onCellClicked}
           suppressCellFocus

@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Shaman Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shaman",
-  "entryCount": 121,
+  "entryCount": 126,
   "levels": [
     1,
     4,
@@ -29,7 +29,7 @@
         "name": "Berserker Spirit",
         "slug": "Berserker_Spirit",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Spirit",
-        "description": "+2 Str, Sta, Dex, Agi - Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 1 hour.",
+        "description": "+2 Str, Sta, Dex, Agi - Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -89,15 +89,55 @@
         "type": "spell"
       },
       {
+        "name": "Lesser Ghostly Blight",
+        "slug": "Lesser_Ghostly_Blight",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Ghostly_Blight",
+        "description": "5hp DD + 3hp every 6 seconds - Engulf your target in ghostly blight, dealing 5 Magic Damage and an additional 3 damage every 6 seconds for 30 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 4,
+        "castTime": null,
+        "level": 1,
+        "tags": [
+          "damage",
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 5,
+            "damageType": "Magic",
+            "display": "5 Magic dmg",
+            "sortKey": 5
+          },
+          {
+            "kind": "dot",
+            "min": 3,
+            "max": 3,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "dmg",
+            "display": "3 dmg/6s (30s)",
+            "sortKey": 15
+          }
+        ],
+        "valuesSummary": "3 dmg/6s (30s) · 5 Magic dmg",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
         "name": "Minor Spirit Mending",
         "slug": "Minor_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spirit_Mending",
-        "description": "15hp Heal - Mend your target, restoring 15 Health.",
+        "description": "10hp Heal - Mend your target, restoring 10 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 13,
+        "mana": 9,
         "castTime": null,
         "level": 1,
         "tags": [
@@ -107,12 +147,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 15,
-            "display": "15 heal",
-            "sortKey": 15
+            "amount": 10,
+            "display": "10 heal",
+            "sortKey": 10
           }
         ],
-        "valuesSummary": "15 heal",
+        "valuesSummary": "10 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -171,12 +211,12 @@
         "name": "Tribal Spirit",
         "slug": "Tribal_Spirit",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Spirit",
-        "description": "+2 Str, Sta, Dex, Agi - Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 1 hour.",
+        "description": "Group +2 Str, Sta, Dex, Agi - Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
-        "mana": 30,
+        "location": "Vendor",
+        "mana": 48,
         "castTime": null,
         "level": 1,
         "tags": [
@@ -237,9 +277,9 @@
         "slug": "Ancestral_Wisdom",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestral_Wisdom",
         "description": "+5 Wis, 2hp regen, See Invs, See Effects - Invoke ancestral wisdom, increasing your Wisdom by 2(L4) to 5(L15) and Health Regeneration by 1(L4) to 2(L15), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
         "location": "Vendor",
         "mana": 15,
         "castTime": null,
@@ -288,7 +328,7 @@
         "name": "Gate",
         "slug": "Gate",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-        "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+        "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -310,12 +350,12 @@
         "name": "Lesser Spirit Mending",
         "slug": "Lesser_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Spirit_Mending",
-        "description": "28hp Heal - Mend your target, restoring 28 Health.",
+        "description": "18hp Heal - Mend your target, restoring 18 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 24,
+        "mana": 16,
         "castTime": null,
         "level": 4,
         "tags": [
@@ -325,12 +365,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 28,
-            "display": "28 heal",
-            "sortKey": 28
+            "amount": 18,
+            "display": "18 heal",
+            "sortKey": 18
           }
         ],
-        "valuesSummary": "28 heal",
+        "valuesSummary": "18 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -402,7 +442,7 @@
         "name": "Soulbind",
         "slug": "Soulbind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-        "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+        "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -452,7 +492,7 @@
         "name": "Summon Drink",
         "slug": "Summon_Drink",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-        "description": "Summon Water - Summon a small amount of water, providing you with sustenance.",
+        "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -475,10 +515,10 @@
         "name": "Ancestor's Eye",
         "slug": "Ancestor's_Eye",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestor%27s_Eye",
-        "description": "See Invs - Bestow your target ancestral sight, granting them the ability to see invisible and magical effects when considering targets for 1 hour.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "description": "Bestow your target ancestral sight, granting them the ability to see invisible entities and magical effects when considering targets for 35 minutes.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
         "location": "Vendor",
         "mana": 20,
         "castTime": null,
@@ -495,9 +535,49 @@
         "type": "spell"
       },
       {
-        "name": "Grater Malady",
-        "slug": "Grater_Malady",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grater_Malady",
+        "name": "Ghostly Blight",
+        "slug": "Ghostly_Blight",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ghostly_Blight",
+        "description": "Engulf your target in ghostly blight, dealing 7 Magic Damage and an additional 10 damage every 6 seconds for 30 seconds.",
+        "category": "Con",
+        "categorySlug": "Skill_Conjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "location": "Vendor",
+        "mana": 15,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "damage",
+          "dot"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 7,
+            "damageType": "Magic",
+            "display": "7 Magic dmg",
+            "sortKey": 7
+          },
+          {
+            "kind": "dot",
+            "min": 10,
+            "max": 10,
+            "interval": 6,
+            "duration": 30,
+            "damageType": "dmg",
+            "display": "10 dmg/6s (30s)",
+            "sortKey": 50
+          }
+        ],
+        "valuesSummary": "10 dmg/6s (30s) · 7 Magic dmg",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
+        "name": "Greater Malady",
+        "slug": "Greater_Malady",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Malady",
         "description": "9/90hp DOT - Infect your target with a greater malady, dealing 9 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -530,10 +610,10 @@
         "name": "Invisibility versus Undead",
         "slug": "Invisibility_versus_Undead",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-        "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
         "location": "Vendor",
         "mana": 10,
         "castTime": null,
@@ -549,10 +629,43 @@
         "type": "spell"
       },
       {
+        "name": "Minor Communion of Regeneration",
+        "slug": "Minor_Communion_of_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
+        "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 50,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 2,
+            "display": "+2 Health Regeneration",
+            "sortKey": 2,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+2 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "spell"
+      },
+      {
         "name": "Minor Regeneration",
         "slug": "Minor_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Regeneration",
-        "description": "2hp Regen - Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
+        "description": "Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -585,12 +698,12 @@
         "name": "Pact of Haste",
         "slug": "Pact_of_Haste",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Haste",
-        "description": "15% Haste - Form a pact of haste with your target, increasing their Attack Speed by 10%(L8) to 15%(L15) for 1 hour.",
+        "description": "Form a pact of haste with your target, increasing their Attack Speed by 10% (L8) to 15% (L15) for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 10,
+        "mana": 5,
         "castTime": null,
         "level": 8,
         "tags": [
@@ -615,10 +728,39 @@
         "type": "spell"
       },
       {
+        "name": "Pact of Renewal",
+        "slug": "Pact_of_Renewal",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Renewal",
+        "description": "Form a pact of renewal with your target, restoring 21 Health every 6 seconds for 18 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 45,
+        "castTime": null,
+        "level": 8,
+        "tags": [
+          "heal",
+          "hot"
+        ],
+        "primaryTag": "hot",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 21,
+            "display": "21 heal",
+            "sortKey": 21
+          }
+        ],
+        "valuesSummary": "21 heal",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
         "name": "Purge",
         "slug": "Purge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purge",
-        "description": "Remove beneficial effect 1 - Purge your target, removing one beneficial effect.",
+        "description": "Purge your target, removing one beneficial effect and one song.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -639,7 +781,7 @@
         "name": "Speed of the Wild",
         "slug": "Speed_of_the_Wild",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
+        "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -657,14 +799,14 @@
             "kind": "buff",
             "stat": "Movement Speed",
             "min": 40,
-            "max": 58,
+            "max": 60,
             "unit": "%",
-            "display": "+40–58%",
-            "sortKey": 58,
+            "display": "+40–60%",
+            "sortKey": 60,
             "statTag": "MS"
           }
         ],
-        "valuesSummary": "+40–58%",
+        "valuesSummary": "+40–60%",
         "statTags": [],
         "type": "spell"
       },
@@ -673,9 +815,9 @@
         "slug": "Spirit_Bane_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Bane_III",
         "description": "22hp DD - Mercilessly rend the spirit of your target, dealing 22 Magic Damage.",
-        "category": "Con",
-        "categorySlug": "Skill_Conjuration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
         "mana": 24,
         "castTime": null,
@@ -701,12 +843,12 @@
         "name": "Spirit Mending",
         "slug": "Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Mending",
-        "description": "57hp Heal - Mend your target, restoring 57 Health.",
+        "description": "Mend your target, restoring 38 Health.",
         "category": "Alt",
-        "categorySlug": "Skill_Alternation",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alternation?action=edit&redlink=1",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 47,
+        "mana": 31,
         "castTime": null,
         "level": 8,
         "tags": [
@@ -716,12 +858,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 57,
-            "display": "57 heal",
-            "sortKey": 57
+            "amount": 38,
+            "display": "38 heal",
+            "sortKey": 38
           }
         ],
-        "valuesSummary": "57 heal",
+        "valuesSummary": "38 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -729,7 +871,7 @@
         "name": "Summon Food",
         "slug": "Summon_Food",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-        "description": "Summon Food - Summon a small amount of bread, providing you with sustenance.",
+        "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -745,39 +887,6 @@
         "valuesSummary": "",
         "statTags": [],
         "type": "spell"
-      },
-      {
-        "name": "Minor Communion of Regeneration",
-        "slug": "Minor_Communion_of_Regeneration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
-        "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
-        "mana": 50,
-        "castTime": null,
-        "level": 8,
-        "tags": [
-          "buff",
-          "HP REGEN"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Health Regeneration",
-            "amount": 2,
-            "display": "+2 Health Regeneration",
-            "sortKey": 2,
-            "statTag": "HP REGEN"
-          }
-        ],
-        "valuesSummary": "+2 Health Regeneration",
-        "statTags": [
-          "HP REGEN"
-        ],
-        "type": "spell"
       }
     ],
     "12": [
@@ -785,7 +894,7 @@
         "name": "Consume",
         "slug": "Consume",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume",
-        "description": "Canni 2:1 - Consume your own flesh, restoring 48 Mana at the cost of 98 Health.",
+        "description": "Consume an offering of your own flesh, restoring 48 Mana at the cost of 98 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -808,15 +917,15 @@
         "type": "spell"
       },
       {
-        "name": "Cure Disease",
-        "slug": "Cure_Disease",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-        "description": "Remove disease effect - Cures target of disease effects",
+        "name": "Consuming Pact",
+        "slug": "Consuming_Pact",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consuming_Pact",
+        "description": "Seal a consuming pact, restoring 30 (L12) to 214 (L60) Mana at the cost of 24 (L12) to 190 (L60) Health and greatly reducing incoming healing effects for 2 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 10,
+        "mana": 0,
         "castTime": null,
         "level": 12,
         "tags": [],
@@ -827,10 +936,31 @@
         "type": "spell"
       },
       {
+        "name": "Cure Disease",
+        "slug": "Cure_Disease",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+        "description": "Cures your target, removing one Disease effect.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 12,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+        "description": "Dispell magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -851,7 +981,7 @@
         "name": "Enduring Breath",
         "slug": "Enduring_Breath",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-        "description": "Breathe underwater - Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
+        "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -870,50 +1000,10 @@
         "type": "spell"
       },
       {
-        "name": "Ghostly Blight",
-        "slug": "Ghostly_Blight",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ghostly_Blight",
-        "description": "13hp DD + 18/90hp DOT - Engulf your target in ghostly blight, dealing 13 Magic Damage and an additional 18 damage every 6 seconds for 30 seconds.",
-        "category": "Con",
-        "categorySlug": "Skill_Conjuration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-        "location": "Vendor",
-        "mana": 55,
-        "castTime": null,
-        "level": 12,
-        "tags": [
-          "damage",
-          "dot"
-        ],
-        "primaryTag": "dot",
-        "effects": [
-          {
-            "kind": "damage",
-            "amount": 13,
-            "damageType": "Magic",
-            "display": "13 Magic dmg",
-            "sortKey": 13
-          },
-          {
-            "kind": "dot",
-            "min": 18,
-            "max": 18,
-            "interval": 6,
-            "duration": 30,
-            "damageType": "dmg",
-            "display": "18 dmg/6s (30s)",
-            "sortKey": 90
-          }
-        ],
-        "valuesSummary": "18 dmg/6s (30s) · 13 Magic dmg",
-        "statTags": [],
-        "type": "spell"
-      },
-      {
         "name": "Omen of Enfeeblement",
         "slug": "Omen_of_Enfeeblement",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Omen_of_Enfeeblement",
-        "description": "-4 Str, Dex, Agi - Enfeeble your target, decreasing their Strength, Dexterity, and Agility by 4 for 1 minutes.",
+        "description": "Enfeeble your target, decreasing their Strength, Dexterity, and Agility by 4 for 1 minute.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -963,35 +1053,6 @@
         "type": "spell"
       },
       {
-        "name": "Pact of Renewal",
-        "slug": "Pact_of_Renewal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Renewal",
-        "description": "35/140hp HOT - Form a pact of renewal with your target, restoring 35 Health every 6 seconds for 24 seconds.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 75,
-        "castTime": null,
-        "level": 12,
-        "tags": [
-          "heal",
-          "hot"
-        ],
-        "primaryTag": "hot",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 35,
-            "display": "35 heal",
-            "sortKey": 35
-          }
-        ],
-        "valuesSummary": "35 heal",
-        "statTags": [],
-        "type": "spell"
-      },
-      {
         "name": "Root",
         "slug": "Root",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Root",
@@ -1000,7 +1061,7 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 15,
+        "mana": 25,
         "castTime": null,
         "level": 12,
         "tags": [
@@ -1026,10 +1087,10 @@
         "name": "Ancestral Wisdom II",
         "slug": "Ancestral_Wisdom_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestral_Wisdom_II",
-        "description": "+7 Wis, 3hp regen, See Invs, See Effects - Invoke ancestral wisdom, increasing your Wisdom by 5(L16) to 7(L27) and Health Regeneration by 2(L16) to 3(L27), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "description": "Invoke ancestral wisdom, increasing your Wisdom by 5 (L16) to 7 (L27) and Health Regeneration by 2 (L16) to 3 (L27), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
+        "category": "Div",
+        "categorySlug": "Skill_Divination",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
         "location": "Vendor",
         "mana": 30,
         "castTime": null,
@@ -1078,7 +1139,7 @@
         "name": "Berserker Rage",
         "slug": "Berserker_Rage",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Rage",
-        "description": "+5 Str, Sta, Dex, Agi - Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 5 for 1 hour.",
+        "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 5 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1141,7 +1202,7 @@
         "name": "Blind",
         "slug": "Blind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
-        "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+        "description": "Shroud the vision of your target, blinding them for 12 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1160,7 +1221,7 @@
         "name": "Cure Poison",
         "slug": "Cure_Poison",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-        "description": "Remove Poison Effect - Cures target of poison effects.",
+        "description": "Cure your target, removing one Poison effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1168,8 +1229,10 @@
         "mana": 10,
         "castTime": null,
         "level": 16,
-        "tags": [],
-        "primaryTag": null,
+        "tags": [
+          "dispel"
+        ],
+        "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
         "statTags": [],
@@ -1179,7 +1242,7 @@
         "name": "Disease Protection",
         "slug": "Disease_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-        "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+        "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1212,7 +1275,7 @@
         "name": "Greater Ghostly Blight",
         "slug": "Greater_Ghostly_Blight",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ghostly_Blight",
-        "description": "21hp DD + 23/115hp DOT - Engulf your target in a greater ghostly blight, dealing 21 Magic Damage and an additional 23 damage every 6 seconds for 30 seconds.",
+        "description": "Engulf your target in a greater ghostly blight, dealing 21 Magic Damage and an additional 23 damage every 6 seconds for 30 seconds.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -1252,7 +1315,7 @@
         "name": "Invisibility",
         "slug": "Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-        "description": "Invs - Shroud a target group member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
+        "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -1273,7 +1336,7 @@
         "name": "Magic Protection",
         "slug": "Magic_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-        "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+        "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1306,7 +1369,7 @@
         "name": "Omen of Susceptibility",
         "slug": "Omen_of_Susceptibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Omen_of_Susceptibility",
-        "description": "-2DR, HR, MR - Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 1(L16) to 2(L23) for 5 minutes.",
+        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 1 (L16) to 2 (L23) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1342,7 +1405,7 @@
         "name": "Sickness",
         "slug": "Sickness",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sickness",
-        "description": "30/300hp DOT - Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
+        "description": "Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -1374,12 +1437,12 @@
         "name": "Tribal Rage",
         "slug": "Tribal_Rage",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Rage",
-        "description": "Group +5 Str, Sta, Dex - Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 5 for 1 hour.",
+        "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 5 for 35 minutes. This spell requires a Ritual Talisman.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
-        "mana": 63,
+        "location": "Vendor",
+        "mana": 100,
         "castTime": null,
         "level": 16,
         "tags": [
@@ -1437,12 +1500,12 @@
         "name": "Greater Omen of Lethargy",
         "slug": "Greater_Omen_of_Lethargy",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Omen_of_Lethargy",
-        "description": "20% Slow - Afflict your target with lethargy, decreasing their Attack Speed by 20% for 2 minutes.",
+        "description": "Afflict your target with lethargy, decreasing their Attack Speed by 20% for 1 minute.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 30,
+        "mana": 18,
         "castTime": null,
         "level": 16,
         "tags": [
@@ -1469,12 +1532,12 @@
         "name": "Greater Pact of Haste",
         "slug": "Greater_Pact_of_Haste",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Haste",
-        "description": "Group SOW - Form a greater pact of haste with your target, increasing their Attack Speed by 20%(L16) to 25%(L31) for 1 hour.",
+        "description": "Form a greater pact of haste with your target, increasing their Attack Speed by 20% (L16) to 25% (L31) for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 75,
+        "mana": 38,
         "castTime": null,
         "level": 16,
         "tags": [
@@ -1497,21 +1560,19 @@
         "valuesSummary": "+20–25%",
         "statTags": [],
         "type": "spell"
-      }
-    ],
-    "20": [
+      },
       {
         "name": "Greater Pact of Renewal",
         "slug": "Greater_Pact_of_Renewal",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Renewal",
-        "description": "75/300hp HOT - Form a greater pact of renewal with your target, restoring 75 Health every 6 seconds for 24 seconds.",
+        "description": "Form a greater pact of renewal with your target, restoring 63 Health every 6 seconds for 18 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 150,
+        "mana": 122,
         "castTime": null,
-        "level": 20,
+        "level": 16,
         "tags": [
           "heal",
           "hot"
@@ -1520,20 +1581,22 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 75,
-            "display": "75 heal",
-            "sortKey": 75
+            "amount": 63,
+            "display": "63 heal",
+            "sortKey": 63
           }
         ],
-        "valuesSummary": "75 heal",
+        "valuesSummary": "63 heal",
         "statTags": [],
         "type": "spell"
-      },
+      }
+    ],
+    "20": [
       {
         "name": "Greater Spirit Mending",
         "slug": "Greater_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spirit_Mending",
-        "description": "226hp Heal - Mend your target, restoring 226 Health.",
+        "description": "Mend your target, restoring 110 Health.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -1548,12 +1611,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 226,
-            "display": "226 heal",
-            "sortKey": 226
+            "amount": 110,
+            "display": "110 heal",
+            "sortKey": 110
           }
         ],
-        "valuesSummary": "226 heal",
+        "valuesSummary": "110 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -1561,7 +1624,7 @@
         "name": "Holy Protection",
         "slug": "Holy_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Protection",
-        "description": "+5HR - Ward your target against divine, increasing their Holy Resistance by 5 for 1 hour.",
+        "description": "Wards your target against the divine, increasing their Holy Resistance by 5 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1594,7 +1657,7 @@
         "name": "Lesser Regeneration",
         "slug": "Lesser_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Regeneration",
-        "description": "5hp Regen - Lightly regenerate your target, increasing their Health Regeneration by 5 for 30 minutes.",
+        "description": "Lightly regenerate your target, increasing their Health Regeneration by 5 for 10 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1627,7 +1690,7 @@
         "name": "Lesser Rite of Mending",
         "slug": "Lesser_Rite_of_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Rite_of_Mending",
-        "description": "Group 61/244hp HOT - Perform a lesser rite of mending on your party, restoring 61 Health every 6 seconds for 24 seconds.",
+        "description": "Perform a lesser rite of mending on your party, restoring 61 Health every 6 seconds for 24 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1655,7 +1718,7 @@
         "name": "Shrink",
         "slug": "Shrink",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shrink",
-        "description": "Shrink - Shrink a target group member, reducing their overall size by 20% for 1 hour.",
+        "description": "Shrink a target party member, reducing their overall size by 20% for 35 minutes. This spell stacks up to two times.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1686,7 +1749,7 @@
         "name": "Spirit Blight",
         "slug": "Spirit_Blight",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Blight",
-        "description": "69hp DD - Blight the spirit of your target, dealing 69 Magic Damage.",
+        "description": "Blight the spirit of your target, dealing 69 Magic Damage.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1715,11 +1778,11 @@
         "name": "Lesser Communion of Regeneration",
         "slug": "Lesser_Communion_of_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Communion_of_Regeneration",
-        "description": "Group 5hp Regen - Lightly regenerate your party, increasing their Health Regeneration by 5 for 30 minutes.",
+        "description": "Lightly regenerate your party, increasing their Health Regeneration by 5 for 30 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
+        "location": "Vendor",
         "mana": 100,
         "castTime": null,
         "level": 20,
@@ -1750,7 +1813,7 @@
         "name": "Consume II",
         "slug": "Consume_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_II",
-        "description": "Consume your flesh, granting 100 Mana at the cost of 189 Health.",
+        "description": "Consume an offering of your own flesh, restoring 100 Mana at the cost of 189 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1758,10 +1821,8 @@
         "mana": 0,
         "castTime": null,
         "level": 24,
-        "tags": [
-          "utility"
-        ],
-        "primaryTag": "utility",
+        "tags": [],
+        "primaryTag": null,
         "effects": [
           {
             "kind": "resource",
@@ -1892,7 +1953,7 @@
         "name": "Greater Omen of Susceptibility",
         "slug": "Greater_Omen_of_Susceptibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Omen_of_Susceptibility",
-        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 3(L24) to 4(L35) for 5 minutes.",
+        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 3(L24) to 4(L35) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1960,7 +2021,7 @@
         "name": "Lurching Impairment",
         "slug": "Lurching_Impairment",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lurching_Impairment",
-        "description": "Knock back your target, while applying an Immobilize effect for 30 seconds. This effect can only be applied to one target at a time, and has a chance to be removed by Damage or end early. This will also interrupt spell casting.",
+        "description": "Send your target lurching, knocking them back and immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early. This spell is limited to one target.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1970,20 +2031,26 @@
         "level": 24,
         "tags": [
           "crowd-control",
-          "root",
-          "interrupt"
+          "root"
         ],
         "primaryTag": "root",
-        "effects": [],
-        "valuesSummary": "",
+        "effects": [
+          {
+            "kind": "crowd-control",
+            "duration": 30,
+            "display": "30s duration",
+            "sortKey": 30
+          }
+        ],
+        "valuesSummary": "30s duration",
         "statTags": [],
         "type": "spell"
       },
       {
-        "name": "Speed of Predator",
-        "slug": "Speed_of_Predator",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_Predator",
-        "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. Only useable outdoors.",
+        "name": "Speed of the Predator",
+        "slug": "Speed_of_the_Predator",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Predator",
+        "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2010,6 +2077,34 @@
           }
         ],
         "valuesSummary": "+100%",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
+        "name": "Pact of Restoration",
+        "slug": "Pact_of_Restoration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Restoration",
+        "description": "Form a pact of restoration with your target, restoring 107 Health every 6 seconds for 18 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 200,
+        "castTime": null,
+        "level": 24,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 107,
+            "display": "107 heal",
+            "sortKey": 107
+          }
+        ],
+        "valuesSummary": "107 heal",
         "statTags": [],
         "type": "spell"
       }
@@ -2148,34 +2243,6 @@
         "type": "spell"
       },
       {
-        "name": "Pact of Restoration",
-        "slug": "Pact_of_Restoration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Restoration",
-        "description": "Form a pact of restoration with your target, restoring 115 Health every 6 seconds for 24 seconds.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 200,
-        "castTime": null,
-        "level": 28,
-        "tags": [
-          "heal"
-        ],
-        "primaryTag": "heal",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 115,
-            "display": "115 heal",
-            "sortKey": 115
-          }
-        ],
-        "valuesSummary": "115 heal",
-        "statTags": [],
-        "type": "spell"
-      },
-      {
         "name": "Rite of Mending",
         "slug": "Rite_of_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Mending",
@@ -2209,7 +2276,7 @@
         "name": "Berserker Fury",
         "slug": "Berserker_Fury",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Fury",
-        "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 10 for 1 hour.",
+        "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 10 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2272,7 +2339,7 @@
         "name": "Exceptional Spirit Mending",
         "slug": "Exceptional_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spirit_Mending",
-        "description": "Mend your target, restoring 406 Health.",
+        "description": "Mend your target, restoring 296 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2287,12 +2354,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 406,
-            "display": "406 heal",
-            "sortKey": 406
+            "amount": 296,
+            "display": "296 heal",
+            "sortKey": 296
           }
         ],
-        "valuesSummary": "406 heal",
+        "valuesSummary": "296 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -2340,7 +2407,7 @@
         "name": "Hex of Lethargy",
         "slug": "Hex_of_Lethargy",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hex_of_Lethargy",
-        "description": "Afflict your target with lethargy, decreasing their Attack Speed by 30% for 3 minutes.",
+        "description": "Afflict your target with lethargy, decreasing their Attack Speed by 30% for 1 minute.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2437,7 +2504,7 @@
         "name": "Rite of Haste",
         "slug": "Rite_of_Haste",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Haste",
-        "description": "Form a rite of haste with your target, increasing their Attack Speed by 30%(L32) to 35%(L47) for 1 hour.",
+        "description": "Perform a rite of haste on your target, increasing their Attack Speed by 30% (L32) to 35% (L47) for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2470,7 +2537,7 @@
         "name": "Speed of the Pack",
         "slug": "Speed_of_the_Pack",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
-        "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+        "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2532,11 +2599,11 @@
         "name": "Tribal Fury",
         "slug": "Tribal_Fury",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Fury",
-        "description": "Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 10 for 1 hour.",
+        "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 10 for 35 minutes. This spell requires two Ritual Talismans.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
+        "location": "Vendor",
         "mana": 300,
         "castTime": null,
         "level": 32,
@@ -2595,11 +2662,11 @@
         "name": "Communion of Regeneration",
         "slug": "Communion_of_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
-        "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 40 minutes.",
+        "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
+        "location": "Vendor",
         "mana": 250,
         "castTime": null,
         "level": 32,
@@ -2622,6 +2689,34 @@
         "statTags": [
           "HP REGEN"
         ],
+        "type": "spell"
+      },
+      {
+        "name": "Greater Pact of Restoration",
+        "slug": "Greater_Pact_of_Restoration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Restoration",
+        "description": "Form a greater pact of restoration with your target, restoring 171 Health every 6 seconds for 18 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 223,
+        "castTime": null,
+        "level": 32,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 171,
+            "display": "171 heal",
+            "sortKey": 171
+          }
+        ],
+        "valuesSummary": "171 heal",
+        "statTags": [],
         "type": "spell"
       }
     ],
@@ -2651,7 +2746,7 @@
         "name": "Consume III",
         "slug": "Consume_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_III",
-        "description": "Consume your flesh, granting 180 Mana at the cost of 292 Health.",
+        "description": "Consume an offering of your own flesh, restoring 180 Mana at the cost of 292 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2659,10 +2754,8 @@
         "mana": 0,
         "castTime": null,
         "level": 36,
-        "tags": [
-          "utility"
-        ],
-        "primaryTag": "utility",
+        "tags": [],
+        "primaryTag": null,
         "effects": [
           {
             "kind": "resource",
@@ -2672,34 +2765,6 @@
           }
         ],
         "valuesSummary": "180 mana",
-        "statTags": [],
-        "type": "spell"
-      },
-      {
-        "name": "Greater Pact of Restoration",
-        "slug": "Greater_Pact_of_Restoration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Restoration",
-        "description": "Form a greater pact of restoration with your target, restoring 138 Health every 6 seconds for 24 seconds.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 223,
-        "castTime": null,
-        "level": 36,
-        "tags": [
-          "heal"
-        ],
-        "primaryTag": "heal",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 138,
-            "display": "138 heal",
-            "sortKey": 138
-          }
-        ],
-        "valuesSummary": "138 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -2788,7 +2853,7 @@
         "name": "Hex of Susceptibility",
         "slug": "Hex_of_Susceptibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hex_of_Susceptibility",
-        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 5(L36) to 6(L47) for 5 minutes.",
+        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 5(L36) to 6(L47) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2933,9 +2998,9 @@
         "type": "spell"
       },
       {
-        "name": "Cleanse Poisons",
-        "slug": "Cleanse_Poisons",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poisons",
+        "name": "Cleanse Poison",
+        "slug": "Cleanse_Poison",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poison",
         "description": "Cleanse your target, removing two Poison effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -2957,7 +3022,7 @@
         "name": "Disease Resistance",
         "slug": "Disease_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-        "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+        "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3062,7 +3127,7 @@
         "name": "Magic Resistance",
         "slug": "Magic_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+        "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3123,6 +3188,34 @@
         "valuesSummary": "150–300 heal (L40–L60)",
         "statTags": [],
         "type": "spell"
+      },
+      {
+        "name": "Pact of Revival",
+        "slug": "Pact_of_Revival",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Revival",
+        "description": "Form a pact of revival with your target, restoring 240 Health every 6 seconds for 18 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 273,
+        "castTime": null,
+        "level": 40,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 240,
+            "display": "240 heal",
+            "sortKey": 240
+          }
+        ],
+        "valuesSummary": "240 heal",
+        "statTags": [],
+        "type": "spell"
       }
     ],
     "44": [
@@ -3151,7 +3244,7 @@
         "name": "Berserker Frenzy",
         "slug": "Berserker_Frenzy",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Frenzy",
-        "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 15 for 30 minutes.",
+        "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 15 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3214,7 +3307,7 @@
         "name": "Greater Regeneration",
         "slug": "Greater_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Regeneration",
-        "description": "Causes your target to regenerate, increasing their Health Regeneration by 11 for 50 minutes.",
+        "description": "Greatly regenerate your target, increasing their Health Regeneration by 11 for 10 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3247,7 +3340,7 @@
         "name": "Holy Resistance",
         "slug": "Holy_Resistance",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resistance",
-        "description": "Greatly ward your target against the divine, increasing their Holy Resistance by 15 for 1 hour.",
+        "description": "Greatly ward your target against the divine, increasing their Holy Resistance by 15 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3274,34 +3367,6 @@
         "statTags": [
           "HR"
         ],
-        "type": "spell"
-      },
-      {
-        "name": "Pact of Revival",
-        "slug": "Pact_of_Revival",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Revival",
-        "description": "Form a pact of revival with your target, restoring 193 Health every 6 seconds for 24 seconds.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 273,
-        "castTime": null,
-        "level": 44,
-        "tags": [
-          "heal"
-        ],
-        "primaryTag": "heal",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 193,
-            "display": "193 heal",
-            "sortKey": 193
-          }
-        ],
-        "valuesSummary": "193 heal",
-        "statTags": [],
         "type": "spell"
       },
       {
@@ -3337,7 +3402,7 @@
         "name": "Sublime Spirit Mending",
         "slug": "Sublime_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Spirit_Mending",
-        "description": "Mend your target, restoring 598 Health.",
+        "description": "Mend your target, restoring 416 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3352,12 +3417,12 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 598,
-            "display": "598 heal",
-            "sortKey": 598
+            "amount": 416,
+            "display": "416 heal",
+            "sortKey": 416
           }
         ],
-        "valuesSummary": "598 heal",
+        "valuesSummary": "416 heal",
         "statTags": [],
         "type": "spell"
       },
@@ -3365,11 +3430,11 @@
         "name": "Tribal Frenzy",
         "slug": "Tribal_Frenzy",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Frenzy",
-        "description": "Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 15 for 1 hour.",
+        "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 15 for 35 minutes. This spell requires a Greater Ritual Talisman.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
+        "location": "Vendor",
         "mana": 188,
         "castTime": null,
         "level": 44,
@@ -3428,11 +3493,11 @@
         "name": "Greater Communion of Regeneration",
         "slug": "Greater_Communion_of_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Communion_of_Regeneration",
-        "description": "Greatly regenerate your party, increasing their Health Regeneration by 11 for 50 minutes.",
+        "description": "Greatly regenerate your party, increasing their Health Regeneration by 11 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Research",
+        "location": "Vendor",
         "mana": 300,
         "castTime": null,
         "level": 44,
@@ -3463,7 +3528,7 @@
         "name": "Consume IV",
         "slug": "Consume_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_IV",
-        "description": "Consume your flesh, granting 360 Mana at the cost of 528 Health.",
+        "description": "Consume an offering of your own flesh, restoring 360 Mana at the cost of 528 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3471,10 +3536,8 @@
         "mana": 0,
         "castTime": null,
         "level": 48,
-        "tags": [
-          "utility"
-        ],
-        "primaryTag": "utility",
+        "tags": [],
+        "primaryTag": null,
         "effects": [
           {
             "kind": "resource",
@@ -3605,7 +3668,7 @@
         "name": "Greater Hex of Lethargy",
         "slug": "Greater_Hex_of_Lethargy",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Hex_of_Lethargy",
-        "description": "Afflict your target with lethargy, decreasing their Attack Speed by 40% for 4 minutes.",
+        "description": "Afflict your target with lethargy, decreasing their Attack Speed by 40% for 1 minute.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3637,7 +3700,7 @@
         "name": "Greater Hex of Susceptibility",
         "slug": "Greater_Hex_of_Susceptibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Hex_of_Susceptibility",
-        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 7(L48) to 8(L59) for 5 minutes.",
+        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 7(L48) to 8(L59) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3673,7 +3736,7 @@
         "name": "Greater Rite of Haste",
         "slug": "Greater_Rite_of_Haste",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Haste",
-        "description": "Form a greater rite of haste with your target, increasing their Attack Speed by 40%(L48) to 45%(L60) for 1 hour.",
+        "description": "Perform a greater rite of haste on your target, increasing their Attack Speed by 40% (L48) to 45% (L60) for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3759,6 +3822,34 @@
           }
         ],
         "valuesSummary": "205 heal",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
+        "name": "Greater Pact of Revival",
+        "slug": "Greater_Pact_of_Revival",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Revival",
+        "description": "Form a greater pact of revival with your target, restoring 315 Health every 6 seconds for 18 seconds.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 48,
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 315,
+            "display": "315 heal",
+            "sortKey": 315
+          }
+        ],
+        "valuesSummary": "315 heal",
         "statTags": [],
         "type": "spell"
       }
@@ -3873,42 +3964,14 @@
           "WIS"
         ],
         "type": "spell"
-      },
-      {
-        "name": "Greater Pact of Revival",
-        "slug": "Greater_Pact_of_Revival",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Revival",
-        "description": "Form a greater pact of revival with your target, restoring 258 Health every 6 seconds for 24 seconds.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": "",
-        "castTime": null,
-        "level": 52,
-        "tags": [
-          "heal"
-        ],
-        "primaryTag": "heal",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 258,
-            "display": "258 heal",
-            "sortKey": 258
-          }
-        ],
-        "valuesSummary": "258 heal",
-        "statTags": [],
-        "type": "spell"
       }
     ],
     "56": [
       {
-        "name": "Berserkers Wrath",
-        "slug": "Berserkers_Wrath",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserkers_Wrath",
-        "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 20 for 1 hour.",
+        "name": "Berserker Wrath",
+        "slug": "Berserker_Wrath",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Wrath",
+        "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 20 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3971,7 +4034,7 @@
         "name": "Exceptional Regeneration",
         "slug": "Exceptional_Regeneration",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Regeneration",
-        "description": "Causes your target to regenerate, increasing their Health Regeneration by 16 for 60 minutes.",
+        "description": "Strongly regenerate your target, increasing their Health Regeneration by 14 for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3988,13 +4051,13 @@
           {
             "kind": "buff",
             "stat": "Health Regeneration",
-            "amount": 16,
-            "display": "+16 Health Regeneration",
-            "sortKey": 16,
+            "amount": 14,
+            "display": "+14 Health Regeneration",
+            "sortKey": 14,
             "statTag": "HP REGEN"
           }
         ],
-        "valuesSummary": "+16 Health Regeneration",
+        "valuesSummary": "+14 Health Regeneration",
         "statTags": [
           "HP REGEN"
         ],
@@ -4076,7 +4139,7 @@
         "name": "Transcendent Spirit Mending",
         "slug": "Transcendent_Spirit_Mending",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transcendent_Spirit_Mending",
-        "description": "Mend your target, restoring 790 Health.",
+        "description": "Mend your target, restoring 638 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4091,13 +4154,139 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 790,
-            "display": "790 heal",
-            "sortKey": 790
+            "amount": 638,
+            "display": "638 heal",
+            "sortKey": 638
           }
         ],
-        "valuesSummary": "790 heal",
+        "valuesSummary": "638 heal",
         "statTags": [],
+        "type": "spell"
+      },
+      {
+        "name": "Bedeviling Spirits",
+        "slug": "Bedeviling_Spirits",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bedeviling_Spirits",
+        "description": "Torment your target with bedeviling spirits, dealing 354 Magic Damage.",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "damage",
+          "debuff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 354,
+            "damageType": "Magic",
+            "display": "354 Magic dmg",
+            "sortKey": 354
+          }
+        ],
+        "valuesSummary": "354 Magic dmg",
+        "statTags": [],
+        "type": "spell"
+      },
+      {
+        "name": "Exceptional Communion of Regeneration",
+        "slug": "Exceptional_Communion_of_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Communion_of_Regeneration",
+        "description": "Strongly regenerate your party, increasing their Health Regeneration by 16 for 35 minutes.",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "buff",
+          "HP REGEN"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 16,
+            "display": "+16 Health Regeneration",
+            "sortKey": 16,
+            "statTag": "HP REGEN"
+          }
+        ],
+        "valuesSummary": "+16 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ],
+        "type": "spell"
+      },
+      {
+        "name": "Tribal Wrath",
+        "slug": "Tribal_Wrath",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Wrath",
+        "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 20 for 35 minutes. This spell requires an Ancestral Ritual Talisman.",
+        "category": "",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": "",
+        "castTime": null,
+        "level": 56,
+        "tags": [
+          "buff",
+          "AGI",
+          "DEX",
+          "STA",
+          "STR"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Strength",
+            "amount": 20,
+            "display": "+20 Strength",
+            "sortKey": 20,
+            "statTag": "STR"
+          },
+          {
+            "kind": "buff",
+            "stat": "Stamina",
+            "amount": 20,
+            "display": "+20 Stamina",
+            "sortKey": 20,
+            "statTag": "STA"
+          },
+          {
+            "kind": "buff",
+            "stat": "Dexterity",
+            "amount": 20,
+            "display": "+20 Dexterity",
+            "sortKey": 20,
+            "statTag": "DEX"
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "amount": 20,
+            "display": "+20 Agility",
+            "sortKey": 20,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "+20 STR/STA/DEX/AGI",
+        "statTags": [
+          "AGI",
+          "DEX",
+          "STA",
+          "STR"
+        ],
         "type": "spell"
       }
     ],
@@ -4191,7 +4380,7 @@
         "name": "Curse of Susceptibility",
         "slug": "Curse_of_Susceptibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Curse_of_Susceptibility",
-        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 10 for 5 minutes.",
+        "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 10 for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4269,7 +4458,7 @@
       "name": "Berserker Spirit",
       "slug": "Berserker_Spirit",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Spirit",
-      "description": "+2 Str, Sta, Dex, Agi - Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 1 hour.",
+      "description": "+2 Str, Sta, Dex, Agi - Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4329,15 +4518,55 @@
       "type": "spell"
     },
     {
+      "name": "Lesser Ghostly Blight",
+      "slug": "Lesser_Ghostly_Blight",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Ghostly_Blight",
+      "description": "5hp DD + 3hp every 6 seconds - Engulf your target in ghostly blight, dealing 5 Magic Damage and an additional 3 damage every 6 seconds for 30 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 4,
+      "castTime": null,
+      "level": 1,
+      "tags": [
+        "damage",
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 5,
+          "damageType": "Magic",
+          "display": "5 Magic dmg",
+          "sortKey": 5
+        },
+        {
+          "kind": "dot",
+          "min": 3,
+          "max": 3,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "dmg",
+          "display": "3 dmg/6s (30s)",
+          "sortKey": 15
+        }
+      ],
+      "valuesSummary": "3 dmg/6s (30s) · 5 Magic dmg",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Minor Spirit Mending",
       "slug": "Minor_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spirit_Mending",
-      "description": "15hp Heal - Mend your target, restoring 15 Health.",
+      "description": "10hp Heal - Mend your target, restoring 10 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 13,
+      "mana": 9,
       "castTime": null,
       "level": 1,
       "tags": [
@@ -4347,12 +4576,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 15,
-          "display": "15 heal",
-          "sortKey": 15
+          "amount": 10,
+          "display": "10 heal",
+          "sortKey": 10
         }
       ],
-      "valuesSummary": "15 heal",
+      "valuesSummary": "10 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -4411,12 +4640,12 @@
       "name": "Tribal Spirit",
       "slug": "Tribal_Spirit",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Spirit",
-      "description": "+2 Str, Sta, Dex, Agi - Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 1 hour.",
+      "description": "Group +2 Str, Sta, Dex, Agi - Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 2 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
-      "mana": 30,
+      "location": "Vendor",
+      "mana": 48,
       "castTime": null,
       "level": 1,
       "tags": [
@@ -4475,9 +4704,9 @@
       "slug": "Ancestral_Wisdom",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestral_Wisdom",
       "description": "+5 Wis, 2hp regen, See Invs, See Effects - Invoke ancestral wisdom, increasing your Wisdom by 2(L4) to 5(L15) and Health Regeneration by 1(L4) to 2(L15), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
       "location": "Vendor",
       "mana": 15,
       "castTime": null,
@@ -4526,7 +4755,7 @@
       "name": "Gate",
       "slug": "Gate",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gate",
-      "description": "Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
+      "description": "Gate - Conjure a magical gate, returning you to your bind location. This spell has a slight chance to fail. This spell has no effect if you are encumbered.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4548,12 +4777,12 @@
       "name": "Lesser Spirit Mending",
       "slug": "Lesser_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Spirit_Mending",
-      "description": "28hp Heal - Mend your target, restoring 28 Health.",
+      "description": "18hp Heal - Mend your target, restoring 18 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 24,
+      "mana": 16,
       "castTime": null,
       "level": 4,
       "tags": [
@@ -4563,12 +4792,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 28,
-          "display": "28 heal",
-          "sortKey": 28
+          "amount": 18,
+          "display": "18 heal",
+          "sortKey": 18
         }
       ],
-      "valuesSummary": "28 heal",
+      "valuesSummary": "18 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -4640,7 +4869,7 @@
       "name": "Soulbind",
       "slug": "Soulbind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Soulbind",
-      "description": "Bind the soul of a target group member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
+      "description": "Bind - Bind the soul of a target party member to their current location, causing them to respawn there upon death. This spell has no effect in certain areas.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4690,7 +4919,7 @@
       "name": "Summon Drink",
       "slug": "Summon_Drink",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Drink",
-      "description": "Summon Water - Summon a small amount of water, providing you with sustenance.",
+      "description": "Summon Water - Summon 1 (L4) to 4 (L9) flasks of water, providing you with sustenance. This item can be traded to other players. This item does not persist after logging out.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4711,10 +4940,10 @@
       "name": "Ancestor's Eye",
       "slug": "Ancestor's_Eye",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestor%27s_Eye",
-      "description": "See Invs - Bestow your target ancestral sight, granting them the ability to see invisible and magical effects when considering targets for 1 hour.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "description": "Bestow your target ancestral sight, granting them the ability to see invisible entities and magical effects when considering targets for 35 minutes.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
       "location": "Vendor",
       "mana": 20,
       "castTime": null,
@@ -4731,9 +4960,49 @@
       "type": "spell"
     },
     {
-      "name": "Grater Malady",
-      "slug": "Grater_Malady",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Grater_Malady",
+      "name": "Ghostly Blight",
+      "slug": "Ghostly_Blight",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ghostly_Blight",
+      "description": "Engulf your target in ghostly blight, dealing 7 Magic Damage and an additional 10 damage every 6 seconds for 30 seconds.",
+      "category": "Con",
+      "categorySlug": "Skill_Conjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "location": "Vendor",
+      "mana": 15,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "damage",
+        "dot"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 7,
+          "damageType": "Magic",
+          "display": "7 Magic dmg",
+          "sortKey": 7
+        },
+        {
+          "kind": "dot",
+          "min": 10,
+          "max": 10,
+          "interval": 6,
+          "duration": 30,
+          "damageType": "dmg",
+          "display": "10 dmg/6s (30s)",
+          "sortKey": 50
+        }
+      ],
+      "valuesSummary": "10 dmg/6s (30s) · 7 Magic dmg",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
+      "name": "Greater Malady",
+      "slug": "Greater_Malady",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Malady",
       "description": "9/90hp DOT - Infect your target with a greater malady, dealing 9 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -4766,10 +5035,10 @@
       "name": "Invisibility versus Undead",
       "slug": "Invisibility_versus_Undead",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility_versus_Undead",
-      "description": "IVU - Shroud a target group member in a cloak of invisibility, rendering them unseen by the undead for 10 minutes.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "description": "Shroud a target party member in darkness, rendering them unseen by undead for 10 minutes. This spell end immediately if you take damage.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
       "location": "Vendor",
       "mana": 10,
       "castTime": null,
@@ -4785,10 +5054,43 @@
       "type": "spell"
     },
     {
+      "name": "Minor Communion of Regeneration",
+      "slug": "Minor_Communion_of_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
+      "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 50,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 2,
+          "display": "+2 Health Regeneration",
+          "sortKey": 2,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+2 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "spell"
+    },
+    {
       "name": "Minor Regeneration",
       "slug": "Minor_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Regeneration",
-      "description": "2hp Regen - Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
+      "description": "Gently regenerate your target, increasing their Health Regeneration by 2 for 20 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4821,12 +5123,12 @@
       "name": "Pact of Haste",
       "slug": "Pact_of_Haste",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Haste",
-      "description": "15% Haste - Form a pact of haste with your target, increasing their Attack Speed by 10%(L8) to 15%(L15) for 1 hour.",
+      "description": "Form a pact of haste with your target, increasing their Attack Speed by 10% (L8) to 15% (L15) for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 10,
+      "mana": 5,
       "castTime": null,
       "level": 8,
       "tags": [
@@ -4851,10 +5153,39 @@
       "type": "spell"
     },
     {
+      "name": "Pact of Renewal",
+      "slug": "Pact_of_Renewal",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Renewal",
+      "description": "Form a pact of renewal with your target, restoring 21 Health every 6 seconds for 18 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 45,
+      "castTime": null,
+      "level": 8,
+      "tags": [
+        "heal",
+        "hot"
+      ],
+      "primaryTag": "hot",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 21,
+          "display": "21 heal",
+          "sortKey": 21
+        }
+      ],
+      "valuesSummary": "21 heal",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Purge",
       "slug": "Purge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purge",
-      "description": "Remove beneficial effect 1 - Purge your target, removing one beneficial effect.",
+      "description": "Purge your target, removing one beneficial effect and one song.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4875,7 +5206,7 @@
       "name": "Speed of the Wild",
       "slug": "Speed_of_the_Wild",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Wild",
-      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (2.60) for 1 hour. This spell can only be used outdoors.",
+      "description": "Infuse your target with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4893,14 +5224,14 @@
           "kind": "buff",
           "stat": "Movement Speed",
           "min": 40,
-          "max": 58,
+          "max": 60,
           "unit": "%",
-          "display": "+40–58%",
-          "sortKey": 58,
+          "display": "+40–60%",
+          "sortKey": 60,
           "statTag": "MS"
         }
       ],
-      "valuesSummary": "+40–58%",
+      "valuesSummary": "+40–60%",
       "statTags": [],
       "type": "spell"
     },
@@ -4909,9 +5240,9 @@
       "slug": "Spirit_Bane_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Bane_III",
       "description": "22hp DD - Mercilessly rend the spirit of your target, dealing 22 Magic Damage.",
-      "category": "Con",
-      "categorySlug": "Skill_Conjuration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
       "mana": 24,
       "castTime": null,
@@ -4937,12 +5268,12 @@
       "name": "Spirit Mending",
       "slug": "Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Mending",
-      "description": "57hp Heal - Mend your target, restoring 57 Health.",
+      "description": "Mend your target, restoring 38 Health.",
       "category": "Alt",
-      "categorySlug": "Skill_Alternation",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alternation?action=edit&redlink=1",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 47,
+      "mana": 31,
       "castTime": null,
       "level": 8,
       "tags": [
@@ -4952,12 +5283,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 57,
-          "display": "57 heal",
-          "sortKey": 57
+          "amount": 38,
+          "display": "38 heal",
+          "sortKey": 38
         }
       ],
-      "valuesSummary": "57 heal",
+      "valuesSummary": "38 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -4965,7 +5296,7 @@
       "name": "Summon Food",
       "slug": "Summon_Food",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summon_Food",
-      "description": "Summon Food - Summon a small amount of bread, providing you with sustenance.",
+      "description": "Summon 1 (L15) to 4 (L20) slices of bread, providing you with sustenance.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -4983,43 +5314,10 @@
       "type": "spell"
     },
     {
-      "name": "Minor Communion of Regeneration",
-      "slug": "Minor_Communion_of_Regeneration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Communion_of_Regeneration",
-      "description": "Group 2hp Regen - Gently regenerate your party, increasing their Health Regeneration by 2 for 20 minutes.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
-      "mana": 50,
-      "castTime": null,
-      "level": 8,
-      "tags": [
-        "buff",
-        "HP REGEN"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Health Regeneration",
-          "amount": 2,
-          "display": "+2 Health Regeneration",
-          "sortKey": 2,
-          "statTag": "HP REGEN"
-        }
-      ],
-      "valuesSummary": "+2 Health Regeneration",
-      "statTags": [
-        "HP REGEN"
-      ],
-      "type": "spell"
-    },
-    {
       "name": "Consume",
       "slug": "Consume",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume",
-      "description": "Canni 2:1 - Consume your own flesh, restoring 48 Mana at the cost of 98 Health.",
+      "description": "Consume an offering of your own flesh, restoring 48 Mana at the cost of 98 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5042,15 +5340,15 @@
       "type": "spell"
     },
     {
-      "name": "Cure Disease",
-      "slug": "Cure_Disease",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
-      "description": "Remove disease effect - Cures target of disease effects",
+      "name": "Consuming Pact",
+      "slug": "Consuming_Pact",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consuming_Pact",
+      "description": "Seal a consuming pact, restoring 30 (L12) to 214 (L60) Mana at the cost of 24 (L12) to 190 (L60) Health and greatly reducing incoming healing effects for 2 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 10,
+      "mana": 0,
       "castTime": null,
       "level": 12,
       "tags": [],
@@ -5061,10 +5359,31 @@
       "type": "spell"
     },
     {
+      "name": "Cure Disease",
+      "slug": "Cure_Disease",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Disease",
+      "description": "Cures your target, removing one Disease effect.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 12,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+      "description": "Dispell magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5085,7 +5404,7 @@
       "name": "Enduring Breath",
       "slug": "Enduring_Breath",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enduring_Breath",
-      "description": "Breathe underwater - Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 1 hour.",
+      "description": "Fill the lungs of your target with magical air, granting them the ability to breathe underwater for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5104,50 +5423,10 @@
       "type": "spell"
     },
     {
-      "name": "Ghostly Blight",
-      "slug": "Ghostly_Blight",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ghostly_Blight",
-      "description": "13hp DD + 18/90hp DOT - Engulf your target in ghostly blight, dealing 13 Magic Damage and an additional 18 damage every 6 seconds for 30 seconds.",
-      "category": "Con",
-      "categorySlug": "Skill_Conjuration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
-      "location": "Vendor",
-      "mana": 55,
-      "castTime": null,
-      "level": 12,
-      "tags": [
-        "damage",
-        "dot"
-      ],
-      "primaryTag": "dot",
-      "effects": [
-        {
-          "kind": "damage",
-          "amount": 13,
-          "damageType": "Magic",
-          "display": "13 Magic dmg",
-          "sortKey": 13
-        },
-        {
-          "kind": "dot",
-          "min": 18,
-          "max": 18,
-          "interval": 6,
-          "duration": 30,
-          "damageType": "dmg",
-          "display": "18 dmg/6s (30s)",
-          "sortKey": 90
-        }
-      ],
-      "valuesSummary": "18 dmg/6s (30s) · 13 Magic dmg",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
       "name": "Omen of Enfeeblement",
       "slug": "Omen_of_Enfeeblement",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Omen_of_Enfeeblement",
-      "description": "-4 Str, Dex, Agi - Enfeeble your target, decreasing their Strength, Dexterity, and Agility by 4 for 1 minutes.",
+      "description": "Enfeeble your target, decreasing their Strength, Dexterity, and Agility by 4 for 1 minute.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5197,35 +5476,6 @@
       "type": "spell"
     },
     {
-      "name": "Pact of Renewal",
-      "slug": "Pact_of_Renewal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Renewal",
-      "description": "35/140hp HOT - Form a pact of renewal with your target, restoring 35 Health every 6 seconds for 24 seconds.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 75,
-      "castTime": null,
-      "level": 12,
-      "tags": [
-        "heal",
-        "hot"
-      ],
-      "primaryTag": "hot",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 35,
-          "display": "35 heal",
-          "sortKey": 35
-        }
-      ],
-      "valuesSummary": "35 heal",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
       "name": "Root",
       "slug": "Root",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Root",
@@ -5234,7 +5484,7 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 15,
+      "mana": 25,
       "castTime": null,
       "level": 12,
       "tags": [
@@ -5258,10 +5508,10 @@
       "name": "Ancestral Wisdom II",
       "slug": "Ancestral_Wisdom_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ancestral_Wisdom_II",
-      "description": "+7 Wis, 3hp regen, See Invs, See Effects - Invoke ancestral wisdom, increasing your Wisdom by 5(L16) to 7(L27) and Health Regeneration by 2(L16) to 3(L27), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "description": "Invoke ancestral wisdom, increasing your Wisdom by 5 (L16) to 7 (L27) and Health Regeneration by 2 (L16) to 3 (L27), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
+      "category": "Div",
+      "categorySlug": "Skill_Divination",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
       "location": "Vendor",
       "mana": 30,
       "castTime": null,
@@ -5310,7 +5560,7 @@
       "name": "Berserker Rage",
       "slug": "Berserker_Rage",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Rage",
-      "description": "+5 Str, Sta, Dex, Agi - Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 5 for 1 hour.",
+      "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 5 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5373,7 +5623,7 @@
       "name": "Blind",
       "slug": "Blind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blind",
-      "description": "Blind - Shroud the vision of your target, blinding them for 12 seconds.",
+      "description": "Shroud the vision of your target, blinding them for 12 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5392,7 +5642,7 @@
       "name": "Cure Poison",
       "slug": "Cure_Poison",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cure_Poison",
-      "description": "Remove Poison Effect - Cures target of poison effects.",
+      "description": "Cure your target, removing one Poison effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5400,8 +5650,10 @@
       "mana": 10,
       "castTime": null,
       "level": 16,
-      "tags": [],
-      "primaryTag": null,
+      "tags": [
+        "dispel"
+      ],
+      "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
       "statTags": [],
@@ -5411,7 +5663,7 @@
       "name": "Disease Protection",
       "slug": "Disease_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Protection",
-      "description": "+5DR - Ward your target against sickness, increasing their Disease Resistance by 5 for 1 hour.",
+      "description": "Ward your target against sickness, increasing their Disease Resistance by 5 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5444,7 +5696,7 @@
       "name": "Greater Ghostly Blight",
       "slug": "Greater_Ghostly_Blight",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Ghostly_Blight",
-      "description": "21hp DD + 23/115hp DOT - Engulf your target in a greater ghostly blight, dealing 21 Magic Damage and an additional 23 damage every 6 seconds for 30 seconds.",
+      "description": "Engulf your target in a greater ghostly blight, dealing 21 Magic Damage and an additional 23 damage every 6 seconds for 30 seconds.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -5484,7 +5736,7 @@
       "name": "Invisibility",
       "slug": "Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-      "description": "Invs - Shroud a target group member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
+      "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -5505,7 +5757,7 @@
       "name": "Magic Protection",
       "slug": "Magic_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Protection",
-      "description": "+5MR - Ward your target against arcane, increasing their Magic Resistance by 5 for 1 hour.",
+      "description": "Ward your target against the arcane, increasing their Magic Resistance by 5 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5538,7 +5790,7 @@
       "name": "Omen of Susceptibility",
       "slug": "Omen_of_Susceptibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Omen_of_Susceptibility",
-      "description": "-2DR, HR, MR - Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 1(L16) to 2(L23) for 5 minutes.",
+      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 1 (L16) to 2 (L23) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5574,7 +5826,7 @@
       "name": "Sickness",
       "slug": "Sickness",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sickness",
-      "description": "30/300hp DOT - Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
+      "description": "Infect your target with sickness, dealing 30 Disease Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
@@ -5606,12 +5858,12 @@
       "name": "Tribal Rage",
       "slug": "Tribal_Rage",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Rage",
-      "description": "Group +5 Str, Sta, Dex - Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 5 for 1 hour.",
+      "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 5 for 35 minutes. This spell requires a Ritual Talisman.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
-      "mana": 63,
+      "location": "Vendor",
+      "mana": 100,
       "castTime": null,
       "level": 16,
       "tags": [
@@ -5669,12 +5921,12 @@
       "name": "Greater Omen of Lethargy",
       "slug": "Greater_Omen_of_Lethargy",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Omen_of_Lethargy",
-      "description": "20% Slow - Afflict your target with lethargy, decreasing their Attack Speed by 20% for 2 minutes.",
+      "description": "Afflict your target with lethargy, decreasing their Attack Speed by 20% for 1 minute.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 30,
+      "mana": 18,
       "castTime": null,
       "level": 16,
       "tags": [
@@ -5701,12 +5953,12 @@
       "name": "Greater Pact of Haste",
       "slug": "Greater_Pact_of_Haste",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Haste",
-      "description": "Group SOW - Form a greater pact of haste with your target, increasing their Attack Speed by 20%(L16) to 25%(L31) for 1 hour.",
+      "description": "Form a greater pact of haste with your target, increasing their Attack Speed by 20% (L16) to 25% (L31) for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 75,
+      "mana": 38,
       "castTime": null,
       "level": 16,
       "tags": [
@@ -5734,14 +5986,14 @@
       "name": "Greater Pact of Renewal",
       "slug": "Greater_Pact_of_Renewal",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Renewal",
-      "description": "75/300hp HOT - Form a greater pact of renewal with your target, restoring 75 Health every 6 seconds for 24 seconds.",
+      "description": "Form a greater pact of renewal with your target, restoring 63 Health every 6 seconds for 18 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 150,
+      "mana": 122,
       "castTime": null,
-      "level": 20,
+      "level": 16,
       "tags": [
         "heal",
         "hot"
@@ -5750,12 +6002,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 75,
-          "display": "75 heal",
-          "sortKey": 75
+          "amount": 63,
+          "display": "63 heal",
+          "sortKey": 63
         }
       ],
-      "valuesSummary": "75 heal",
+      "valuesSummary": "63 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -5763,7 +6015,7 @@
       "name": "Greater Spirit Mending",
       "slug": "Greater_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spirit_Mending",
-      "description": "226hp Heal - Mend your target, restoring 226 Health.",
+      "description": "Mend your target, restoring 110 Health.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -5778,12 +6030,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 226,
-          "display": "226 heal",
-          "sortKey": 226
+          "amount": 110,
+          "display": "110 heal",
+          "sortKey": 110
         }
       ],
-      "valuesSummary": "226 heal",
+      "valuesSummary": "110 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -5791,7 +6043,7 @@
       "name": "Holy Protection",
       "slug": "Holy_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Protection",
-      "description": "+5HR - Ward your target against divine, increasing their Holy Resistance by 5 for 1 hour.",
+      "description": "Wards your target against the divine, increasing their Holy Resistance by 5 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5824,7 +6076,7 @@
       "name": "Lesser Regeneration",
       "slug": "Lesser_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Regeneration",
-      "description": "5hp Regen - Lightly regenerate your target, increasing their Health Regeneration by 5 for 30 minutes.",
+      "description": "Lightly regenerate your target, increasing their Health Regeneration by 5 for 10 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5857,7 +6109,7 @@
       "name": "Lesser Rite of Mending",
       "slug": "Lesser_Rite_of_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Rite_of_Mending",
-      "description": "Group 61/244hp HOT - Perform a lesser rite of mending on your party, restoring 61 Health every 6 seconds for 24 seconds.",
+      "description": "Perform a lesser rite of mending on your party, restoring 61 Health every 6 seconds for 24 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5885,7 +6137,7 @@
       "name": "Shrink",
       "slug": "Shrink",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shrink",
-      "description": "Shrink - Shrink a target group member, reducing their overall size by 20% for 1 hour.",
+      "description": "Shrink a target party member, reducing their overall size by 20% for 35 minutes. This spell stacks up to two times.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5916,7 +6168,7 @@
       "name": "Spirit Blight",
       "slug": "Spirit_Blight",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spirit_Blight",
-      "description": "69hp DD - Blight the spirit of your target, dealing 69 Magic Damage.",
+      "description": "Blight the spirit of your target, dealing 69 Magic Damage.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -5945,11 +6197,11 @@
       "name": "Lesser Communion of Regeneration",
       "slug": "Lesser_Communion_of_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Communion_of_Regeneration",
-      "description": "Group 5hp Regen - Lightly regenerate your party, increasing their Health Regeneration by 5 for 30 minutes.",
+      "description": "Lightly regenerate your party, increasing their Health Regeneration by 5 for 30 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
+      "location": "Vendor",
       "mana": 100,
       "castTime": null,
       "level": 20,
@@ -5978,7 +6230,7 @@
       "name": "Consume II",
       "slug": "Consume_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_II",
-      "description": "Consume your flesh, granting 100 Mana at the cost of 189 Health.",
+      "description": "Consume an offering of your own flesh, restoring 100 Mana at the cost of 189 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -5986,10 +6238,8 @@
       "mana": 0,
       "castTime": null,
       "level": 24,
-      "tags": [
-        "utility"
-      ],
-      "primaryTag": "utility",
+      "tags": [],
+      "primaryTag": null,
       "effects": [
         {
           "kind": "resource",
@@ -6120,7 +6370,7 @@
       "name": "Greater Omen of Susceptibility",
       "slug": "Greater_Omen_of_Susceptibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Omen_of_Susceptibility",
-      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 3(L24) to 4(L35) for 5 minutes.",
+      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 3(L24) to 4(L35) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6188,7 +6438,7 @@
       "name": "Lurching Impairment",
       "slug": "Lurching_Impairment",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lurching_Impairment",
-      "description": "Knock back your target, while applying an Immobilize effect for 30 seconds. This effect can only be applied to one target at a time, and has a chance to be removed by Damage or end early. This will also interrupt spell casting.",
+      "description": "Send your target lurching, knocking them back and immobilizing them for 30 seconds. This spell has a chance to be removed by damage. This spell has a very strong chance to end early. This spell is limited to one target.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6198,20 +6448,26 @@
       "level": 24,
       "tags": [
         "crowd-control",
-        "root",
-        "interrupt"
+        "root"
       ],
       "primaryTag": "root",
-      "effects": [],
-      "valuesSummary": "",
+      "effects": [
+        {
+          "kind": "crowd-control",
+          "duration": 30,
+          "display": "30s duration",
+          "sortKey": 30
+        }
+      ],
+      "valuesSummary": "30s duration",
       "statTags": [],
       "type": "spell"
     },
     {
-      "name": "Speed of Predator",
-      "slug": "Speed_of_Predator",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_Predator",
-      "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. Only useable outdoors.",
+      "name": "Speed of the Predator",
+      "slug": "Speed_of_the_Predator",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Predator",
+      "description": "Infuse yourself with bestial speed, increasing your Movement Speed by 100% for 1 minute. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6238,6 +6494,34 @@
         }
       ],
       "valuesSummary": "+100%",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
+      "name": "Pact of Restoration",
+      "slug": "Pact_of_Restoration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Restoration",
+      "description": "Form a pact of restoration with your target, restoring 107 Health every 6 seconds for 18 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 200,
+      "castTime": null,
+      "level": 24,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 107,
+          "display": "107 heal",
+          "sortKey": 107
+        }
+      ],
+      "valuesSummary": "107 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -6374,34 +6658,6 @@
       "type": "spell"
     },
     {
-      "name": "Pact of Restoration",
-      "slug": "Pact_of_Restoration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Restoration",
-      "description": "Form a pact of restoration with your target, restoring 115 Health every 6 seconds for 24 seconds.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 200,
-      "castTime": null,
-      "level": 28,
-      "tags": [
-        "heal"
-      ],
-      "primaryTag": "heal",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 115,
-          "display": "115 heal",
-          "sortKey": 115
-        }
-      ],
-      "valuesSummary": "115 heal",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
       "name": "Rite of Mending",
       "slug": "Rite_of_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Mending",
@@ -6433,7 +6689,7 @@
       "name": "Berserker Fury",
       "slug": "Berserker_Fury",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Fury",
-      "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 10 for 1 hour.",
+      "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 10 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6496,7 +6752,7 @@
       "name": "Exceptional Spirit Mending",
       "slug": "Exceptional_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spirit_Mending",
-      "description": "Mend your target, restoring 406 Health.",
+      "description": "Mend your target, restoring 296 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6511,12 +6767,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 406,
-          "display": "406 heal",
-          "sortKey": 406
+          "amount": 296,
+          "display": "296 heal",
+          "sortKey": 296
         }
       ],
-      "valuesSummary": "406 heal",
+      "valuesSummary": "296 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -6564,7 +6820,7 @@
       "name": "Hex of Lethargy",
       "slug": "Hex_of_Lethargy",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hex_of_Lethargy",
-      "description": "Afflict your target with lethargy, decreasing their Attack Speed by 30% for 3 minutes.",
+      "description": "Afflict your target with lethargy, decreasing their Attack Speed by 30% for 1 minute.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6661,7 +6917,7 @@
       "name": "Rite of Haste",
       "slug": "Rite_of_Haste",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rite_of_Haste",
-      "description": "Form a rite of haste with your target, increasing their Attack Speed by 30%(L32) to 35%(L47) for 1 hour.",
+      "description": "Perform a rite of haste on your target, increasing their Attack Speed by 30% (L32) to 35% (L47) for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6694,7 +6950,7 @@
       "name": "Speed of the Pack",
       "slug": "Speed_of_the_Pack",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
-      "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+      "description": "Infuse your party with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6756,11 +7012,11 @@
       "name": "Tribal Fury",
       "slug": "Tribal_Fury",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Fury",
-      "description": "Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 10 for 1 hour.",
+      "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 10 for 35 minutes. This spell requires two Ritual Talismans.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
+      "location": "Vendor",
       "mana": 300,
       "castTime": null,
       "level": 32,
@@ -6819,11 +7075,11 @@
       "name": "Communion of Regeneration",
       "slug": "Communion_of_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
-      "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 40 minutes.",
+      "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
+      "location": "Vendor",
       "mana": 250,
       "castTime": null,
       "level": 32,
@@ -6846,6 +7102,34 @@
       "statTags": [
         "HP REGEN"
       ],
+      "type": "spell"
+    },
+    {
+      "name": "Greater Pact of Restoration",
+      "slug": "Greater_Pact_of_Restoration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Restoration",
+      "description": "Form a greater pact of restoration with your target, restoring 171 Health every 6 seconds for 18 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 223,
+      "castTime": null,
+      "level": 32,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 171,
+          "display": "171 heal",
+          "sortKey": 171
+        }
+      ],
+      "valuesSummary": "171 heal",
+      "statTags": [],
       "type": "spell"
     },
     {
@@ -6873,7 +7157,7 @@
       "name": "Consume III",
       "slug": "Consume_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_III",
-      "description": "Consume your flesh, granting 180 Mana at the cost of 292 Health.",
+      "description": "Consume an offering of your own flesh, restoring 180 Mana at the cost of 292 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6881,10 +7165,8 @@
       "mana": 0,
       "castTime": null,
       "level": 36,
-      "tags": [
-        "utility"
-      ],
-      "primaryTag": "utility",
+      "tags": [],
+      "primaryTag": null,
       "effects": [
         {
           "kind": "resource",
@@ -6894,34 +7176,6 @@
         }
       ],
       "valuesSummary": "180 mana",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
-      "name": "Greater Pact of Restoration",
-      "slug": "Greater_Pact_of_Restoration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Restoration",
-      "description": "Form a greater pact of restoration with your target, restoring 138 Health every 6 seconds for 24 seconds.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 223,
-      "castTime": null,
-      "level": 36,
-      "tags": [
-        "heal"
-      ],
-      "primaryTag": "heal",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 138,
-          "display": "138 heal",
-          "sortKey": 138
-        }
-      ],
-      "valuesSummary": "138 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -7010,7 +7264,7 @@
       "name": "Hex of Susceptibility",
       "slug": "Hex_of_Susceptibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hex_of_Susceptibility",
-      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 5(L36) to 6(L47) for 5 minutes.",
+      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 5(L36) to 6(L47) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7153,9 +7407,9 @@
       "type": "spell"
     },
     {
-      "name": "Cleanse Poisons",
-      "slug": "Cleanse_Poisons",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poisons",
+      "name": "Cleanse Poison",
+      "slug": "Cleanse_Poison",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cleanse_Poison",
       "description": "Cleanse your target, removing two Poison effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -7177,7 +7431,7 @@
       "name": "Disease Resistance",
       "slug": "Disease_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Disease_Resistance",
-      "description": "Greatly ward your target against subversion, increasing their Disease Resistance by 15 for 1 hour.",
+      "description": "Greatly ward your target against sickness, increasing their Disease Resistance by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -7282,7 +7536,7 @@
       "name": "Magic Resistance",
       "slug": "Magic_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Magic_Resistance",
-      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 1 hour.",
+      "description": "Greatly ward your target against the arcane, increasing their Magic Resistance by 15 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7345,6 +7599,34 @@
       "type": "spell"
     },
     {
+      "name": "Pact of Revival",
+      "slug": "Pact_of_Revival",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Revival",
+      "description": "Form a pact of revival with your target, restoring 240 Health every 6 seconds for 18 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 273,
+      "castTime": null,
+      "level": 40,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 240,
+          "display": "240 heal",
+          "sortKey": 240
+        }
+      ],
+      "valuesSummary": "240 heal",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
       "name": "Abolish Magic",
       "slug": "Abolish_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Abolish_Magic",
@@ -7369,7 +7651,7 @@
       "name": "Berserker Frenzy",
       "slug": "Berserker_Frenzy",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Frenzy",
-      "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 15 for 30 minutes.",
+      "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 15 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7432,7 +7714,7 @@
       "name": "Greater Regeneration",
       "slug": "Greater_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Regeneration",
-      "description": "Causes your target to regenerate, increasing their Health Regeneration by 11 for 50 minutes.",
+      "description": "Greatly regenerate your target, increasing their Health Regeneration by 11 for 10 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7465,7 +7747,7 @@
       "name": "Holy Resistance",
       "slug": "Holy_Resistance",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Holy_Resistance",
-      "description": "Greatly ward your target against the divine, increasing their Holy Resistance by 15 for 1 hour.",
+      "description": "Greatly ward your target against the divine, increasing their Holy Resistance by 15 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7492,34 +7774,6 @@
       "statTags": [
         "HR"
       ],
-      "type": "spell"
-    },
-    {
-      "name": "Pact of Revival",
-      "slug": "Pact_of_Revival",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pact_of_Revival",
-      "description": "Form a pact of revival with your target, restoring 193 Health every 6 seconds for 24 seconds.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 273,
-      "castTime": null,
-      "level": 44,
-      "tags": [
-        "heal"
-      ],
-      "primaryTag": "heal",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 193,
-          "display": "193 heal",
-          "sortKey": 193
-        }
-      ],
-      "valuesSummary": "193 heal",
-      "statTags": [],
       "type": "spell"
     },
     {
@@ -7555,7 +7809,7 @@
       "name": "Sublime Spirit Mending",
       "slug": "Sublime_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Sublime_Spirit_Mending",
-      "description": "Mend your target, restoring 598 Health.",
+      "description": "Mend your target, restoring 416 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7570,12 +7824,12 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 598,
-          "display": "598 heal",
-          "sortKey": 598
+          "amount": 416,
+          "display": "416 heal",
+          "sortKey": 416
         }
       ],
-      "valuesSummary": "598 heal",
+      "valuesSummary": "416 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -7583,11 +7837,11 @@
       "name": "Tribal Frenzy",
       "slug": "Tribal_Frenzy",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Frenzy",
-      "description": "Make your group go berserk, increasing their Strength, Stamina, Dexterity, and Ability by 15 for 1 hour.",
+      "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 15 for 35 minutes. This spell requires a Greater Ritual Talisman.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
+      "location": "Vendor",
       "mana": 188,
       "castTime": null,
       "level": 44,
@@ -7646,11 +7900,11 @@
       "name": "Greater Communion of Regeneration",
       "slug": "Greater_Communion_of_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Communion_of_Regeneration",
-      "description": "Greatly regenerate your party, increasing their Health Regeneration by 11 for 50 minutes.",
+      "description": "Greatly regenerate your party, increasing their Health Regeneration by 11 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Research",
+      "location": "Vendor",
       "mana": 300,
       "castTime": null,
       "level": 44,
@@ -7679,7 +7933,7 @@
       "name": "Consume IV",
       "slug": "Consume_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Consume_IV",
-      "description": "Consume your flesh, granting 360 Mana at the cost of 528 Health.",
+      "description": "Consume an offering of your own flesh, restoring 360 Mana at the cost of 528 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7687,10 +7941,8 @@
       "mana": 0,
       "castTime": null,
       "level": 48,
-      "tags": [
-        "utility"
-      ],
-      "primaryTag": "utility",
+      "tags": [],
+      "primaryTag": null,
       "effects": [
         {
           "kind": "resource",
@@ -7821,7 +8073,7 @@
       "name": "Greater Hex of Lethargy",
       "slug": "Greater_Hex_of_Lethargy",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Hex_of_Lethargy",
-      "description": "Afflict your target with lethargy, decreasing their Attack Speed by 40% for 4 minutes.",
+      "description": "Afflict your target with lethargy, decreasing their Attack Speed by 40% for 1 minute.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7853,7 +8105,7 @@
       "name": "Greater Hex of Susceptibility",
       "slug": "Greater_Hex_of_Susceptibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Hex_of_Susceptibility",
-      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 7(L48) to 8(L59) for 5 minutes.",
+      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 7(L48) to 8(L59) for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7889,7 +8141,7 @@
       "name": "Greater Rite of Haste",
       "slug": "Greater_Rite_of_Haste",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Rite_of_Haste",
-      "description": "Form a greater rite of haste with your target, increasing their Attack Speed by 40%(L48) to 45%(L60) for 1 hour.",
+      "description": "Perform a greater rite of haste on your target, increasing their Attack Speed by 40% (L48) to 45% (L60) for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7975,6 +8227,34 @@
         }
       ],
       "valuesSummary": "205 heal",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
+      "name": "Greater Pact of Revival",
+      "slug": "Greater_Pact_of_Revival",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Revival",
+      "description": "Form a greater pact of revival with your target, restoring 315 Health every 6 seconds for 18 seconds.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 48,
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 315,
+          "display": "315 heal",
+          "sortKey": 315
+        }
+      ],
+      "valuesSummary": "315 heal",
       "statTags": [],
       "type": "spell"
     },
@@ -8089,38 +8369,10 @@
       "type": "spell"
     },
     {
-      "name": "Greater Pact of Revival",
-      "slug": "Greater_Pact_of_Revival",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Pact_of_Revival",
-      "description": "Form a greater pact of revival with your target, restoring 258 Health every 6 seconds for 24 seconds.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": "",
-      "castTime": null,
-      "level": 52,
-      "tags": [
-        "heal"
-      ],
-      "primaryTag": "heal",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 258,
-          "display": "258 heal",
-          "sortKey": 258
-        }
-      ],
-      "valuesSummary": "258 heal",
-      "statTags": [],
-      "type": "spell"
-    },
-    {
-      "name": "Berserkers Wrath",
-      "slug": "Berserkers_Wrath",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserkers_Wrath",
-      "description": "Increases the Strength, Stamina, Dexterity, and Agility of a friendly target by 20 for 1 hour.",
+      "name": "Berserker Wrath",
+      "slug": "Berserker_Wrath",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Berserker_Wrath",
+      "description": "Make your target go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 20 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -8183,7 +8435,7 @@
       "name": "Exceptional Regeneration",
       "slug": "Exceptional_Regeneration",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Regeneration",
-      "description": "Causes your target to regenerate, increasing their Health Regeneration by 16 for 60 minutes.",
+      "description": "Strongly regenerate your target, increasing their Health Regeneration by 14 for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -8200,13 +8452,13 @@
         {
           "kind": "buff",
           "stat": "Health Regeneration",
-          "amount": 16,
-          "display": "+16 Health Regeneration",
-          "sortKey": 16,
+          "amount": 14,
+          "display": "+14 Health Regeneration",
+          "sortKey": 14,
           "statTag": "HP REGEN"
         }
       ],
-      "valuesSummary": "+16 Health Regeneration",
+      "valuesSummary": "+14 Health Regeneration",
       "statTags": [
         "HP REGEN"
       ],
@@ -8288,7 +8540,7 @@
       "name": "Transcendent Spirit Mending",
       "slug": "Transcendent_Spirit_Mending",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Transcendent_Spirit_Mending",
-      "description": "Mend your target, restoring 790 Health.",
+      "description": "Mend your target, restoring 638 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -8303,13 +8555,139 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 790,
-          "display": "790 heal",
-          "sortKey": 790
+          "amount": 638,
+          "display": "638 heal",
+          "sortKey": 638
         }
       ],
-      "valuesSummary": "790 heal",
+      "valuesSummary": "638 heal",
       "statTags": [],
+      "type": "spell"
+    },
+    {
+      "name": "Bedeviling Spirits",
+      "slug": "Bedeviling_Spirits",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Bedeviling_Spirits",
+      "description": "Torment your target with bedeviling spirits, dealing 354 Magic Damage.",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "damage",
+        "debuff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 354,
+          "damageType": "Magic",
+          "display": "354 Magic dmg",
+          "sortKey": 354
+        }
+      ],
+      "valuesSummary": "354 Magic dmg",
+      "statTags": [],
+      "type": "spell"
+    },
+    {
+      "name": "Exceptional Communion of Regeneration",
+      "slug": "Exceptional_Communion_of_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Communion_of_Regeneration",
+      "description": "Strongly regenerate your party, increasing their Health Regeneration by 16 for 35 minutes.",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "buff",
+        "HP REGEN"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 16,
+          "display": "+16 Health Regeneration",
+          "sortKey": 16,
+          "statTag": "HP REGEN"
+        }
+      ],
+      "valuesSummary": "+16 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ],
+      "type": "spell"
+    },
+    {
+      "name": "Tribal Wrath",
+      "slug": "Tribal_Wrath",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Tribal_Wrath",
+      "description": "Make your party go berserk, increasing their Strength, Stamina, Dexterity, and Agility by 20 for 35 minutes. This spell requires an Ancestral Ritual Talisman.",
+      "category": "",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": "",
+      "castTime": null,
+      "level": 56,
+      "tags": [
+        "buff",
+        "AGI",
+        "DEX",
+        "STA",
+        "STR"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Strength",
+          "amount": 20,
+          "display": "+20 Strength",
+          "sortKey": 20,
+          "statTag": "STR"
+        },
+        {
+          "kind": "buff",
+          "stat": "Stamina",
+          "amount": 20,
+          "display": "+20 Stamina",
+          "sortKey": 20,
+          "statTag": "STA"
+        },
+        {
+          "kind": "buff",
+          "stat": "Dexterity",
+          "amount": 20,
+          "display": "+20 Dexterity",
+          "sortKey": 20,
+          "statTag": "DEX"
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "amount": 20,
+          "display": "+20 Agility",
+          "sortKey": 20,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "+20 STR/STA/DEX/AGI",
+      "statTags": [
+        "AGI",
+        "DEX",
+        "STA",
+        "STR"
+      ],
       "type": "spell"
     },
     {
@@ -8401,7 +8779,7 @@
       "name": "Curse of Susceptibility",
       "slug": "Curse_of_Susceptibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Curse_of_Susceptibility",
-      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 10 for 5 minutes.",
+      "description": "Make your target more susceptible to harm, decreasing their Disease, Holy, and Magic Resistance by 10 for 5 minutes. This spell cannot be resisted unless the target is immune to Magic effects.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",

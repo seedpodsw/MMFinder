@@ -4,7 +4,7 @@
   "type": "ability",
   "sectionTitle": "Inquisitor Spells & Abilities",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Inquisitor",
-  "entryCount": 70,
+  "entryCount": 72,
   "levels": [
     1,
     2,
@@ -54,7 +54,7 @@
       {
         "name": "Censuring Strike",
         "slug": "Censuring_Strike",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike",
         "description": "Censure your target with a violent strike, dealing 100% Weapon Ratio Damage plus 1 (L1) to 4 (L8) Physical Damage, and decreasing their Casting Speed by 20% for 30 seconds.",
         "category": "Mig",
         "categorySlug": "Skill_Might",
@@ -105,8 +105,8 @@
       {
         "name": "Distress",
         "slug": "Distress",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Distress?action=edit&redlink=1",
-        "description": "Distress your target, dealing 3 (L1) to 5 (L4) Magic Damage, increasing your Threat against them by 25, and decreasing their Magic Resistance by 2 for 30 seconds.",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Distress",
+        "description": "Distress your target, dealing 3 (L1) to 5 (L4) Magic Damage, increasing your Threat against them by 25, and decreasing their magic resistance by 2 for 30 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -141,21 +141,21 @@
           },
           {
             "kind": "debuff",
-            "stat": "decreasing their Magic Resistance",
+            "stat": "decreasing their magic resistance",
             "amount": 2,
-            "display": "−2 decreasing their Magic Resistance",
+            "display": "−2 decreasing their magic resistance",
             "sortKey": 2
           },
           {
             "kind": "debuff",
-            "stat": "Magic Resistance",
+            "stat": "magic resistance",
             "amount": 2,
-            "display": "−2 Magic Resistance",
+            "display": "−2 magic resistance",
             "sortKey": 2,
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their Magic Resistance",
+        "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their magic resistance",
         "statTags": [
           "MR"
         ],
@@ -187,7 +187,7 @@
         "name": "Taunt",
         "slug": "Taunt",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-        "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+        "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -255,9 +255,82 @@
     ],
     "3": [
       {
+        "name": "Kick",
+        "slug": "Kick",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+        "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+        "category": "Acr",
+        "categorySlug": "Skill_Acrobatics",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+        "location": "Vendor",
+        "mana": "n/a",
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "interrupt"
+        ],
+        "primaryTag": "interrupt",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": [],
+        "type": "ability"
+      },
+      {
+        "name": "Minor Spellshield",
+        "slug": "Minor_Spellshield",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
+        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+        "location": "Vendor",
+        "mana": 10,
+        "castTime": null,
+        "level": 3,
+        "tags": [
+          "buff",
+          "shield",
+          "self",
+          "MAX HP",
+          "MR"
+        ],
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Health",
+            "amount": 10,
+            "display": "+10 Health",
+            "sortKey": 10,
+            "statTag": "MAX HP"
+          },
+          {
+            "kind": "buff",
+            "stat": "Armor Calss",
+            "amount": 5,
+            "display": "+5 Armor Calss",
+            "sortKey": 5
+          },
+          {
+            "kind": "buff",
+            "stat": "Magic Resistance",
+            "amount": 5,
+            "display": "+5 Magic Resistance",
+            "sortKey": 5,
+            "statTag": "MR"
+          }
+        ],
+        "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
+        "statTags": [
+          "MAX HP",
+          "MR"
+        ],
+        "type": "ability"
+      },
+      {
         "name": "Reflecting Bash",
         "slug": "Reflecting_Bash",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reflecting_Bash?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reflecting_Bash",
         "description": "Fiercely bash your target with a shield, interrupting their casting, dealing Magic Damage equal to the Mana cost of the interrupted spell, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.\"",
         "category": "Mig",
         "categorySlug": "Skill_Might",
@@ -325,7 +398,7 @@
       {
         "name": "Arcane Tyrant",
         "slug": "Arcane_Tyrant",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Tyrant?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Tyrant",
         "description": "Embody tyranny over the arcane, increasing your Strength by 2 (L1) to 10 (L50) and Magic Resistance by 5 (L1) to 15 (L50), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -377,7 +450,7 @@
       {
         "name": "Interdiction",
         "slug": "Interdiction",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Interdiction?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Interdiction",
         "description": "Condemn your target, increasing your Threat against them by 40 and incapacitating them for 30 seconds. This spell is removed by damage.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
@@ -470,7 +543,7 @@
         "name": "Fire Protection",
         "slug": "Fire_Protection",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-        "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+        "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -576,7 +649,7 @@
       {
         "name": "Pillage Mana",
         "slug": "Pillage_Mana",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pillage_Mana?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pillage_Mana",
         "description": "Pillage the mind of your target, draining 20 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -627,7 +700,7 @@
         "name": "Dispel Magic",
         "slug": "Dispel_Magic",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-        "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+        "description": "Dispell magic from your target, removing one harmful effect.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -699,7 +772,7 @@
         "name": "Scintillating Shock",
         "slug": "Scintillating_Shock",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Shock",
-        "description": "Shocks nearby enemies with bright lights, stunning them for 4 seconds. This ability shares a cooldown with other abilities in the same line.",
+        "description": "Shock nearby targets with scintillation ligths, stunning them for 4 seconds.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -709,7 +782,8 @@
         "level": 10,
         "tags": [
           "crowd-control",
-          "stun"
+          "stun",
+          "aoe"
         ],
         "primaryTag": "stun",
         "effects": [
@@ -730,7 +804,7 @@
         "name": "Invisibility",
         "slug": "Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-        "description": "Invs - Shroud a target group member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
+        "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -752,7 +826,7 @@
       {
         "name": "Aura of Rapidity",
         "slug": "Aura_of_Rapidity",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_Rapidity?action=edit&redlink=1",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_Rapidity",
         "description": "Envelop your party in an aura of rapidity, increasing their Attack Speed by 5% (L12) to 25% (L52) plus an additional 5% as Secondary Haste. This ability is considered a Primary Haste. This ability persists until canceled.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
@@ -828,7 +902,7 @@
         "name": "See Invisibility",
         "slug": "See_Invisibility",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-        "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
+        "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
         "category": "Div",
         "categorySlug": "Skill_Divination",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -946,7 +1020,7 @@
         "name": "Purge",
         "slug": "Purge",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purge",
-        "description": "Remove beneficial effect 1 - Purge your target, removing one beneficial effect.",
+        "description": "Purge your target, removing one beneficial effect and one song.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -1775,7 +1849,7 @@
         "name": "Greater Spellshield",
         "slug": "Greater_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
         "category": "",
         "categorySlug": null,
         "categoryUrl": null,
@@ -1795,17 +1869,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 75,
-            "display": "+75 Health",
+            "display": "+75 HP",
             "sortKey": 75,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 20,
-            "display": "+20 Armor Class",
+            "display": "+20 AC",
             "sortKey": 20,
             "statTag": "AC"
           },
@@ -1818,7 +1892,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+        "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -2116,7 +2190,7 @@
         "name": "Exceptional Spellshield",
         "slug": "Exceptional_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
         "category": "",
         "categorySlug": null,
         "categoryUrl": null,
@@ -2136,17 +2210,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 100,
-            "display": "+100 Health",
+            "display": "+100 HP",
             "sortKey": 100,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 25,
-            "display": "+25 Armor Class",
+            "display": "+25 AC",
             "sortKey": 25,
             "statTag": "AC"
           },
@@ -2159,7 +2233,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+        "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -2449,7 +2523,7 @@
         "name": "Arch Spellshield",
         "slug": "Arch_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-        "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+        "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
         "category": "",
         "categorySlug": null,
         "categoryUrl": null,
@@ -2469,17 +2543,17 @@
         "effects": [
           {
             "kind": "buff",
-            "stat": "Health",
+            "stat": "HP",
             "amount": 150,
-            "display": "+150 Health",
+            "display": "+150 HP",
             "sortKey": 150,
             "statTag": "MAX HP"
           },
           {
             "kind": "buff",
-            "stat": "Armor Class",
+            "stat": "AC",
             "amount": 30,
-            "display": "+30 Armor Class",
+            "display": "+30 AC",
             "sortKey": 30,
             "statTag": "AC"
           },
@@ -2492,7 +2566,7 @@
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+        "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -2561,7 +2635,7 @@
     {
       "name": "Censuring Strike",
       "slug": "Censuring_Strike",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Censuring_Strike",
       "description": "Censure your target with a violent strike, dealing 100% Weapon Ratio Damage plus 1 (L1) to 4 (L8) Physical Damage, and decreasing their Casting Speed by 20% for 30 seconds.",
       "category": "Mig",
       "categorySlug": "Skill_Might",
@@ -2612,8 +2686,8 @@
     {
       "name": "Distress",
       "slug": "Distress",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Distress?action=edit&redlink=1",
-      "description": "Distress your target, dealing 3 (L1) to 5 (L4) Magic Damage, increasing your Threat against them by 25, and decreasing their Magic Resistance by 2 for 30 seconds.",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Distress",
+      "description": "Distress your target, dealing 3 (L1) to 5 (L4) Magic Damage, increasing your Threat against them by 25, and decreasing their magic resistance by 2 for 30 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2648,21 +2722,21 @@
         },
         {
           "kind": "debuff",
-          "stat": "decreasing their Magic Resistance",
+          "stat": "decreasing their magic resistance",
           "amount": 2,
-          "display": "−2 decreasing their Magic Resistance",
+          "display": "−2 decreasing their magic resistance",
           "sortKey": 2
         },
         {
           "kind": "debuff",
-          "stat": "Magic Resistance",
+          "stat": "magic resistance",
           "amount": 2,
-          "display": "−2 Magic Resistance",
+          "display": "−2 magic resistance",
           "sortKey": 2,
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their Magic Resistance",
+      "valuesSummary": "3–5 Magic dmg (L1–L4) · −25 Threat against them · −2 decreasing their magic resistance",
       "statTags": [
         "MR"
       ],
@@ -2694,7 +2768,7 @@
       "name": "Taunt",
       "slug": "Taunt",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Taunt",
-      "description": "Taunt your target, causing them to focus their attacks on you. Triggers cooldown of Martial abilities.",
+      "description": "Taunt your target, drawing their attention. This ability has additional effects in PvP. This ability is moderately difficult to resist.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -2758,9 +2832,82 @@
       "type": "ability"
     },
     {
+      "name": "Kick",
+      "slug": "Kick",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kick",
+      "description": "Swiftly kick your target, interrupting their casting and preventing them from casting spells from the same school of magic for 4 seconds.",
+      "category": "Acr",
+      "categorySlug": "Skill_Acrobatics",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+      "location": "Vendor",
+      "mana": "n/a",
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "interrupt"
+      ],
+      "primaryTag": "interrupt",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": [],
+      "type": "ability"
+    },
+    {
+      "name": "Minor Spellshield",
+      "slug": "Minor_Spellshield",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Minor_Spellshield",
+      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 10, Armor Calss by 5, and Magic Resistance by 5 for 1 hour.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
+      "location": "Vendor",
+      "mana": 10,
+      "castTime": null,
+      "level": 3,
+      "tags": [
+        "buff",
+        "shield",
+        "self",
+        "MAX HP",
+        "MR"
+      ],
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Health",
+          "amount": 10,
+          "display": "+10 Health",
+          "sortKey": 10,
+          "statTag": "MAX HP"
+        },
+        {
+          "kind": "buff",
+          "stat": "Armor Calss",
+          "amount": 5,
+          "display": "+5 Armor Calss",
+          "sortKey": 5
+        },
+        {
+          "kind": "buff",
+          "stat": "Magic Resistance",
+          "amount": 5,
+          "display": "+5 Magic Resistance",
+          "sortKey": 5,
+          "statTag": "MR"
+        }
+      ],
+      "valuesSummary": "+10 Health · +5 Armor Calss · +5 Magic Resistance",
+      "statTags": [
+        "MAX HP",
+        "MR"
+      ],
+      "type": "ability"
+    },
+    {
       "name": "Reflecting Bash",
       "slug": "Reflecting_Bash",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reflecting_Bash?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Reflecting_Bash",
       "description": "Fiercely bash your target with a shield, interrupting their casting, dealing Magic Damage equal to the Mana cost of the interrupted spell, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.\"",
       "category": "Mig",
       "categorySlug": "Skill_Might",
@@ -2824,7 +2971,7 @@
     {
       "name": "Arcane Tyrant",
       "slug": "Arcane_Tyrant",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Tyrant?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arcane_Tyrant",
       "description": "Embody tyranny over the arcane, increasing your Strength by 2 (L1) to 10 (L50) and Magic Resistance by 5 (L1) to 15 (L50), and granting you the ability to see invisible entities and magical effects when considering targets for 1 hour.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -2876,7 +3023,7 @@
     {
       "name": "Interdiction",
       "slug": "Interdiction",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Interdiction?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Interdiction",
       "description": "Condemn your target, increasing your Threat against them by 40 and incapacitating them for 30 seconds. This spell is removed by damage.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
@@ -2965,7 +3112,7 @@
       "name": "Fire Protection",
       "slug": "Fire_Protection",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fire_Protection",
-      "description": "Ward your target against heat, increasing their Fire Resistance by 5 for 1 hour.",
+      "description": "Wards your target against heat, increasing their Fire Resistance by 5 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3069,7 +3216,7 @@
     {
       "name": "Pillage Mana",
       "slug": "Pillage_Mana",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pillage_Mana?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pillage_Mana",
       "description": "Pillage the mind of your target, draining 20 Mana and distributing 25% of the amount drained to each party member. Additionally, when this spell successfully lands on the target, its Mana cost is refunded.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
@@ -3118,7 +3265,7 @@
       "name": "Dispel Magic",
       "slug": "Dispel_Magic",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Dispel_Magic",
-      "description": "Remove harmful effect 1 - Dispel magic from your target, removing one harmful effect.",
+      "description": "Dispell magic from your target, removing one harmful effect.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -3188,7 +3335,7 @@
       "name": "Scintillating Shock",
       "slug": "Scintillating_Shock",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scintillating_Shock",
-      "description": "Shocks nearby enemies with bright lights, stunning them for 4 seconds. This ability shares a cooldown with other abilities in the same line.",
+      "description": "Shock nearby targets with scintillation ligths, stunning them for 4 seconds.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3198,7 +3345,8 @@
       "level": 10,
       "tags": [
         "crowd-control",
-        "stun"
+        "stun",
+        "aoe"
       ],
       "primaryTag": "stun",
       "effects": [
@@ -3217,7 +3365,7 @@
       "name": "Invisibility",
       "slug": "Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Invisibility",
-      "description": "Invs - Shroud a target group member in a cloak of invisibility, rendering them unseen by the living for 10 minutes.",
+      "description": "Shrouds a target party member in a cloak of invisibility, rendering them unseen by the living for 10 minutes. This spell has a moderate chance to end early.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3237,7 +3385,7 @@
     {
       "name": "Aura of Rapidity",
       "slug": "Aura_of_Rapidity",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_Rapidity?action=edit&redlink=1",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Aura_of_Rapidity",
       "description": "Envelop your party in an aura of rapidity, increasing their Attack Speed by 5% (L12) to 25% (L52) plus an additional 5% as Secondary Haste. This ability is considered a Primary Haste. This ability persists until canceled.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
@@ -3313,7 +3461,7 @@
       "name": "See Invisibility",
       "slug": "See_Invisibility",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/See_Invisibility",
-      "description": "Clear the eyes of your target with a magical coating, granting them the ability to see invisible entities for 1 hour.",
+      "description": "Glaze the eyes of your target with a magical coating, granting them the ability to see invisible entites for 35 minutes.",
       "category": "Div",
       "categorySlug": "Skill_Divination",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Divination",
@@ -3425,7 +3573,7 @@
       "name": "Purge",
       "slug": "Purge",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Purge",
-      "description": "Remove beneficial effect 1 - Purge your target, removing one beneficial effect.",
+      "description": "Purge your target, removing one beneficial effect and one song.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -4222,7 +4370,7 @@
       "name": "Greater Spellshield",
       "slug": "Greater_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 75, AC by 20, and Magic Resistance by 20.",
       "category": "",
       "categorySlug": null,
       "categoryUrl": null,
@@ -4242,17 +4390,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 75,
-          "display": "+75 Health",
+          "display": "+75 HP",
           "sortKey": 75,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 20,
-          "display": "+20 Armor Class",
+          "display": "+20 AC",
           "sortKey": 20,
           "statTag": "AC"
         },
@@ -4265,7 +4413,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
+      "valuesSummary": "+75 HP · +20 AC · +20 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -4555,7 +4703,7 @@
       "name": "Exceptional Spellshield",
       "slug": "Exceptional_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 100, Armor Class by 25, and Magic Resistance by 25 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 100, AC by 25, and Magic Resistance by 25.",
       "category": "",
       "categorySlug": null,
       "categoryUrl": null,
@@ -4575,17 +4723,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 100,
-          "display": "+100 Health",
+          "display": "+100 HP",
           "sortKey": 100,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 25,
-          "display": "+25 Armor Class",
+          "display": "+25 AC",
           "sortKey": 25,
           "statTag": "AC"
         },
@@ -4598,7 +4746,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+100 Health · +25 Armor Class · +25 Magic Resistance",
+      "valuesSummary": "+100 HP · +25 AC · +25 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -4874,7 +5022,7 @@
       "name": "Arch Spellshield",
       "slug": "Arch_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Arch_Spellshield",
-      "description": "Encircle yourself with a magical shield, increasing your maximum Health by 150, Armor Class by 30, and Magic Resistance by 30 for 1 hour.",
+      "description": "(Merged into Elemental Spellshield in Beta 0.29) A magical shield encircles you, increasing your HP by 150, AC by 30, and Magic Resistance by 30.",
       "category": "",
       "categorySlug": null,
       "categoryUrl": null,
@@ -4894,17 +5042,17 @@
       "effects": [
         {
           "kind": "buff",
-          "stat": "Health",
+          "stat": "HP",
           "amount": 150,
-          "display": "+150 Health",
+          "display": "+150 HP",
           "sortKey": 150,
           "statTag": "MAX HP"
         },
         {
           "kind": "buff",
-          "stat": "Armor Class",
+          "stat": "AC",
           "amount": 30,
-          "display": "+30 Armor Class",
+          "display": "+30 AC",
           "sortKey": 30,
           "statTag": "AC"
         },
@@ -4917,7 +5065,7 @@
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+150 Health · +30 Armor Class · +30 Magic Resistance",
+      "valuesSummary": "+150 HP · +30 AC · +30 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",

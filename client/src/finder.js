@@ -1,12 +1,39 @@
 import { appliesToClass, nextOpenStep } from "./Enhance";
 
-function campFits(camp, level) {
-  const lo = camp.groupMin ?? camp.soloMin;
-  const hi = camp.groupMax ?? camp.soloMax;
-  if (lo == null && hi == null) return true;
+function hasSpan(lo, hi) {
+  return lo != null || hi != null;
+}
+
+function inSpan(level, lo, hi) {
+  if (!hasSpan(lo, hi)) return false;
   if (lo == null) return level <= hi + 3;
   if (hi == null) return level >= lo - 3;
   return level >= lo - 3 && level <= hi + 3;
+}
+
+export function hasHuntLevel(camp) {
+  return hasSpan(camp?.soloMin, camp?.soloMax) || hasSpan(camp?.groupMin, camp?.groupMax);
+}
+
+export function fitsSolo(camp, level) {
+  return inSpan(level, camp?.soloMin, camp?.soloMax);
+}
+
+export function fitsGroup(camp, level) {
+  return inSpan(level, camp?.groupMin, camp?.groupMax);
+}
+
+/** True when your level sits in the solo window or the group window. A camp with no levels is not a match. */
+export function campFits(camp, level) {
+  if (!hasHuntLevel(camp)) return false;
+  return fitsSolo(camp, level) || fitsGroup(camp, level);
+}
+
+/** "solo" when you are in the solo window, otherwise "group", otherwise null. */
+export function huntSide(camp, level) {
+  if (fitsSolo(camp, level)) return "solo";
+  if (fitsGroup(camp, level)) return "group";
+  return null;
 }
 
 function huntMin(poi) {
@@ -42,24 +69,30 @@ export function startCityFor(zone) {
   return "night-harbor";
 }
 
+function huntSortKey(poi, level) {
+  const side = huntSide(poi, level);
+  const min = side === "group" ? poi.groupMin ?? poi.soloMin : poi.soloMin ?? poi.groupMin;
+  return Math.abs((min ?? 99) - level);
+}
+
 export function huntsHere(pois, zoneId, level) {
   return (pois || [])
     .filter((p) => p.zoneId === zoneId && (p.kind === "camp" || p.kind === "named"))
-    .filter((p) => campFits(p, level))
-    .sort((a, b) => huntMin(a) - huntMin(b));
+    .filter((p) => huntSide(p, level))
+    .sort((a, b) => (huntSide(a, level) === "solo" ? 0 : 1) - (huntSide(b, level) === "solo" ? 0 : 1) || huntSortKey(a, level) - huntSortKey(b, level));
 }
 
 export function huntsAtLevel(pois, level) {
   return (pois || [])
-    .filter((p) => (p.kind === "camp" || p.kind === "named") && campFits(p, level))
-    .sort((a, b) => Math.abs(huntMin(a) - level) - Math.abs(huntMin(b) - level) || huntMin(a) - huntMin(b));
+    .filter((p) => (p.kind === "camp" || p.kind === "named") && huntSide(p, level))
+    .sort((a, b) => (huntSide(a, level) === "solo" ? 0 : 1) - (huntSide(b, level) === "solo" ? 0 : 1) || huntSortKey(a, level) - huntSortKey(b, level));
 }
 
 export function huntZonesNear(pois, zones, fromId, level, limit = 4) {
   const counts = new Map();
   for (const p of pois || []) {
     if (p.kind !== "camp" && p.kind !== "named") continue;
-    if (!campFits(p, level)) continue;
+    if (!huntSide(p, level)) continue;
     const cur = counts.get(p.zoneId) || { count: 0, min: 99 };
     cur.count += 1;
     cur.min = Math.min(cur.min, huntMin(p));

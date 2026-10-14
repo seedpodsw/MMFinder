@@ -3,6 +3,8 @@
 const fs = require("fs");
 const path = require("path");
 const { wikiUrl, NPC_POI, QUESTS } = require("./quests");
+const { sellStopsFor, sellToFor } = require("./vendors");
+const { attachCraftInfo } = require("./craft");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 const WIKI_CACHE = path.join(DATA_DIR, "wiki-items.json");
@@ -30,7 +32,13 @@ function splitNames(raw) {
   return String(raw || "")
     .split(/\s*,\s*/)
     .map((s) => s.replace(/\s*\([^)]*\)\s*$/, "").trim())
-    .filter((s) => s && !/^(experience|xp|pinwheel tokens|elemental essences|degree sashes)$/i.test(s));
+    .filter((s) => {
+      if (!s) return false;
+      if (/^(experience|xp|pinwheel tokens|elemental essences|degree sashes)$/i.test(s)) return false;
+      if (/faction$/i.test(s)) return false;
+      if (/^\d+\s*(copper|silver|gold|platinum)$/i.test(s)) return false;
+      return true;
+    });
 }
 
 function wikiTitleToSlug(title) {
@@ -268,8 +276,64 @@ function enrichDropSource(src, ctx) {
   };
 }
 
-function deriveFromQuests(publicQuests) {
+/**
+ * Item names handed in or named in a step.
+ * A leading count ("5 Bone Chips", "1x Fire Beetle Eye") is enough to keep a phrase.
+ * Other phrases are kept only when they match a known item name.
+ */
+function turnInNames(text, knownLower) {
+  const known = knownLower instanceof Set ? knownLower : new Set(knownLower || []);
+  const found = new Map();
+  const add = (name) => {
+    const clean = String(name || "")
+      .replace(/[.,;:]+$/g, "")
+      .replace(/^(a|an|the)\s+/i, "")
+      .trim();
+    if (clean.length < 4 || clean.length > 60) return;
+    const key = clean.toLowerCase();
+    if (!found.has(key)) found.set(key, clean);
+  };
+
+  const raw = String(text || "");
+  const qty = /(\d+)\s*(?:x\s+|\s+)([A-Z][\w'’-]*(?:\s+[A-Z][\w'’-]*){0,5})/g;
+  let match;
+  while ((match = qty.exec(raw))) {
+    const phrase = match[2].replace(/[.,;:]+$/g, "").trim();
+    const words = phrase.split(/\s+/).filter(Boolean);
+    if (words.length >= 2) add(phrase);
+    else if (known.has(phrase.toLowerCase())) add(phrase);
+  }
+
+  if (known.size) {
+    const tokens = raw.split(/[^A-Za-z0-9'’.-]+/).filter(Boolean);
+    for (let i = 0; i < tokens.length; i++) {
+      let phrase = "";
+      for (let len = 1; len <= 6 && i + len <= tokens.length; len++) {
+        phrase = phrase ? `${phrase} ${tokens[i + len - 1]}` : tokens[i];
+        if (known.has(phrase.toLowerCase())) add(phrase);
+      }
+    }
+  }
+
+  return [...found.values()];
+}
+
+function knownItemNames(quests, wikiNames) {
+  const known = new Set(wikiNames || []);
+  for (const quest of quests || []) {
+    for (const step of quest.steps || []) {
+      for (const name of step.items || []) {
+        const key = String(name || "").trim().toLowerCase();
+        if (key) known.add(key);
+      }
+    }
+  }
+  return known;
+}
+
+function deriveFromQuests(publicQuests, wikiNames) {
   const byId = new Map();
+  const known = knownItemNames(publicQuests, wikiNames);
 
   function ensure(name, extra = {}) {
     const clean = String(name || "").trim();
@@ -295,34 +359,56 @@ function deriveFromQuests(publicQuests) {
 
   function addSource(item, source) {
     if (!item || !source) return;
-    const key = [source.method, source.questId || "", source.poiId || "", source.label || ""].join("|");
-    if (item.sources.some((s) => [s.method, s.questId || "", s.poiId || "", s.label || ""].join("|") === key)) {
-      return;
-    }
+    const keyOf = (s) => [s.method, s.role || "", s.questId || "", s.label || ""].join("|");
+    if (item.sources.some((s) => keyOf(s) === keyOf(source))) return;
     item.sources.push(source);
   }
 
   for (const quest of publicQuests || []) {
-    const names = new Set([
+    const rewardNames = new Set([
       ...(quest.rewards || []).flatMap(splitNames),
       ...(quest.steps || []).flatMap((s) => splitNames(s.reward)),
     ]);
-    for (const name of names) {
-      const item = ensure(name);
+    for (const name of rewardNames) {
+      const item = ensure(name, { kind: "item" });
       if (!item) continue;
       const step =
         (quest.steps || []).find((s) => splitNames(s.reward).some((n) => slugify(n) === item.id)) ||
         (quest.steps || [])[quest.steps.length - 1];
       addSource(item, {
         method: "quest",
-        label: `${quest.title}${step?.action ? ` — ${step.action}` : ""}`,
+        role: "reward",
+        label: quest.title,
         questId: quest.id,
         poiId: step?.poiId || quest.poiId || null,
         zoneId: step?.zoneId || quest.zoneId || null,
         npc: step?.npc || quest.npc || "",
-        notes: step?.turnIn ? `Turn in: ${step.turnIn}` : "",
+        notes: "Reward",
         origin: "quest",
       });
+    }
+
+    for (const step of quest.steps || []) {
+      const named = [
+        ...(step.items || []),
+        ...turnInNames([step.action, step.turnIn].filter(Boolean).join("\n"), known),
+      ];
+      for (const name of named) {
+        if (rewardNames.has(name)) continue;
+        const item = ensure(name, { kind: "item" });
+        if (!item) continue;
+        addSource(item, {
+          method: "quest",
+          role: "turn-in",
+          label: quest.title,
+          questId: quest.id,
+          poiId: step.poiId || quest.poiId || null,
+          zoneId: step.zoneId || quest.zoneId || null,
+          npc: step.npc || quest.npc || "",
+          notes: step.turnIn ? `Turn in: ${step.turnIn}` : "Turn in",
+          origin: "quest",
+        });
+      }
     }
   }
 
@@ -484,6 +570,8 @@ function fromWikiCache(cacheItems) {
       slot: raw.slot || "",
       wiki: raw.wiki || wikiTitleToSlug(name),
       notes: raw.notes || "",
+      playercrafted: raw.playercrafted || "",
+      recipes: raw.recipes || "",
       categories: Array.isArray(raw.categories) ? raw.categories : [],
       origin: "wiki",
       sources: sourcesFromWikiItem(raw),
@@ -546,7 +634,7 @@ function mergeCatalog(parts, ctx = {}) {
     }
   }
 
-  return [...byId.values()]
+  const rows = [...byId.values()]
     .map((item) => {
       const sources = (item.sources || []).map((s) => enrichDropSource(s, ctx));
       // Prefer drop sources with levels, then any mapped poi/zone
@@ -588,11 +676,15 @@ function mergeCatalog(parts, ctx = {}) {
         farmAt,
         primaryPoiId: primary?.poiId || null,
         primaryZoneId: primary?.zoneId || null,
-        primaryQuestId: primary?.questId || null,
+        primaryQuestId: primary?.questId || sources.find((s) => s.questId)?.questId || null,
+        quests: [...new Set(sources.filter((s) => s.method === "quest" && s.label).map((s) => s.label))],
+        sellTo: sellToFor(item),
+        sellTos: sellStopsFor(item, ctx.zones, ctx.pois),
         wikiUrl: item.wikiUrl || wikiUrl(item.wiki || item.name.replace(/ /g, "_")),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+  return attachCraftInfo(rows);
 }
 
 function curatedFromDb(db) {
@@ -630,7 +722,16 @@ function publicItems(publicQuests, db, ctx = {}) {
     pois: ctx.pois || [],
     mobs: ctx.mobs || loadMobCache(),
   };
-  return mergeCatalog([deriveFromQuests(publicQuests), fromWikiCache(loadWikiCache()), curatedFromDb(db)], enrichCtx);
+  const cache = loadWikiCache();
+  const wikiNames = [];
+  for (const raw of cache) {
+    const name = String(raw.name || raw.item_name || raw.title || "").trim().toLowerCase();
+    if (name) wikiNames.push(name);
+  }
+  return mergeCatalog(
+    [deriveFromQuests(publicQuests, wikiNames), fromWikiCache(cache), curatedFromDb(db)],
+    enrichCtx
+  );
 }
 
 function searchItems(items, query, limit = 24) {
@@ -654,6 +755,11 @@ function searchItems(items, query, limit = 24) {
       item.effect1,
       item.effect2,
       item.effect3,
+      item.recipe,
+      item.materials,
+      item.usedIn,
+      item.sellTo,
+      ...(item.quests || []),
       ...(item.sources || []).flatMap((s) => [
         s.label,
         s.npc,
@@ -691,6 +797,7 @@ function collectDropMobTitles(cacheItems = loadWikiCache()) {
 module.exports = {
   slugify,
   splitNames,
+  turnInNames,
   loadWikiCache,
   loadMobCache,
   deriveFromQuests,
