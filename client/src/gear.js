@@ -63,14 +63,18 @@ export const EQUIP_SLOTS = [
   { key: "AMMO", label: "Ammo" },
   { key: "HEAD", label: "Head" },
   { key: "FACE", label: "Face" },
+  { key: "EAR", label: "Ear" },
+  { key: "EAR2", label: "Ear 2", alias: ["EAR"] },
   { key: "NECK", label: "Neck" },
   { key: "SHOULDERS", label: "Shoulders" },
   { key: "BACK", label: "Back" },
   { key: "CHEST", label: "Chest" },
   { key: "SHIRT", label: "Shirt" },
   { key: "WRIST", label: "Wrist" },
+  { key: "WRIST2", label: "Wrist 2", alias: ["WRIST"] },
   { key: "HANDS", label: "Hands" },
   { key: "FINGER", label: "Finger" },
+  { key: "FINGER2", label: "Finger 2", alias: ["FINGER"] },
   { key: "WAIST", label: "Waist", alias: ["BELT"] },
   { key: "LEGS", label: "Legs" },
   { key: "FEET", label: "Feet" },
@@ -201,22 +205,38 @@ export function scoreItem(item, role, primaryStat, isWeapon, statWeights) {
 }
 
 /** Short human stat summary for a card. */
-export function statSummary(item, isWeapon) {
-  const bits = [];
+/** Numbered basics for character-sheet rows. Skips empty stats. */
+export function basicStatRows(item, isWeapon) {
+  if (!item) return [];
+  const rows = [];
   const dmg = num(item.dmg);
   const delay = num(item.delay);
-  if (isWeapon && dmg) bits.push(`${dmg}/${delay || "?"} dmg/dly`);
-  if (num(item.ac)) bits.push(`AC ${num(item.ac)}`);
-  if (num(item.hp)) bits.push(`HP ${num(item.hp)}`);
-  if (num(item.mana)) bits.push(`Mana ${num(item.mana)}`);
+  if (isWeapon && dmg) {
+    rows.push({ label: "DMG", value: String(dmg) });
+    rows.push({ label: "DLY", value: delay ? String(delay) : "?" });
+  }
+  if (num(item.ac)) rows.push({ label: "AC", value: String(num(item.ac)) });
+  if (num(item.hp)) rows.push({ label: "HP", value: String(num(item.hp)) });
+  if (num(item.mana)) rows.push({ label: "Mana", value: String(num(item.mana)) });
   for (const k of STATS) {
     const v = num(item[k]);
-    if (v) bits.push(`${k.toUpperCase()} ${v > 0 ? "+" : ""}${v}`);
+    if (v) rows.push({ label: k.toUpperCase(), value: v > 0 ? `+${v}` : String(v) });
   }
+  if (num(item.hp_regen)) rows.push({ label: "HP Reg", value: String(num(item.hp_regen)) });
+  if (num(item.mana_regen)) rows.push({ label: "Mana Reg", value: String(num(item.mana_regen)) });
+  if (num(item.haste)) rows.push({ label: "Haste", value: String(num(item.haste)) });
+  if (num(item.spell_haste)) rows.push({ label: "SpHaste", value: String(num(item.spell_haste)) });
   const resist = RESISTS.reduce((s, k) => s + num(item[k]), 0);
-  if (resist) bits.push(`Resists +${resist}`);
-  if (item.effect || item.effect1) bits.push("Effect");
-  return bits.slice(0, 6).join(" · ");
+  if (resist) rows.push({ label: "Resists", value: `+${resist}` });
+  if (item.effect || item.effect1) rows.push({ label: "Effect", value: "yes" });
+  return rows.slice(0, 8);
+}
+
+export function statSummary(item, isWeapon) {
+  return basicStatRows(item, isWeapon)
+    .map((row) => `${row.label} ${row.value}`)
+    .slice(0, 6)
+    .join(" · ");
 }
 
 /**

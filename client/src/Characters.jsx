@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { canUseByClass, EQUIP_SLOTS, matchesSlot, statSummary } from "./gear.js";
+import { basicStatRows, canUseByClass, EQUIP_SLOTS, matchesSlot } from "./gear.js";
 import {
   clampLevel,
   createCharacter,
@@ -14,7 +14,25 @@ const GROUPS = [
   { title: "Weapons", keys: ["PRIMARY", "SECONDARY", "RANGE", "AMMO"] },
   {
     title: "Armor",
-    keys: ["HEAD", "FACE", "NECK", "SHOULDERS", "BACK", "CHEST", "SHIRT", "WRIST", "HANDS", "FINGER", "WAIST", "LEGS", "FEET"],
+    keys: [
+      "HEAD",
+      "FACE",
+      "EAR",
+      "EAR2",
+      "NECK",
+      "SHOULDERS",
+      "BACK",
+      "CHEST",
+      "SHIRT",
+      "WRIST",
+      "WRIST2",
+      "HANDS",
+      "FINGER",
+      "FINGER2",
+      "WAIST",
+      "LEGS",
+      "FEET",
+    ],
   },
 ];
 
@@ -45,32 +63,31 @@ function LevelField({ level, onCommit }) {
   );
 }
 
+function StatRows({ item, weapon }) {
+  const rows = basicStatRows(item, weapon);
+  if (!rows.length) return null;
+  return (
+    <dl className="char-stat-rows">
+      {rows.map((row) => (
+        <div key={row.label} className="char-stat-row">
+          <dt>{row.label}</dt>
+          <dd>{row.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 function SlotRow({ slot, item, equippedId, query, matches, onQuery, onEquip, onClear, onOpen }) {
   const open = query.slot === slot.key;
-  const summary = item ? statSummary(item, slot.weapon) : "";
   return (
     <div className="char-slot">
-      <div className="char-slot-top">
+      <div className="char-slot-head">
         <span className="char-slot-label">{slot.label}</span>
-        {item ? (
-          <>
-            <button type="button" className="gear-name" onClick={() => onOpen(item)}>
-              {item.name}
-            </button>
-            {summary && <span className="char-slot-stats">{summary}</span>}
-            <button type="button" className="gear-x" aria-label={`Clear ${slot.label}`} onClick={onClear}>
-              ×
-            </button>
-          </>
-        ) : equippedId ? (
-          <>
-            <span className="char-empty">Missing item</span>
-            <button type="button" className="gear-x" aria-label={`Clear ${slot.label}`} onClick={onClear}>
-              ×
-            </button>
-          </>
-        ) : (
-          <span className="char-empty">Empty</span>
+        {(item || equippedId) && (
+          <button type="button" className="gear-x" aria-label={`Clear ${slot.label}`} onClick={onClear}>
+            ×
+          </button>
         )}
       </div>
       <input
@@ -88,12 +105,22 @@ function SlotRow({ slot, item, equippedId, query, matches, onQuery, onEquip, onC
               <li key={match.id}>
                 <button type="button" onClick={() => onEquip(match.id)}>
                   <strong>{match.name}</strong>
-                  <span>{statSummary(match, slot.weapon) || match.class || slot.label}</span>
+                  <StatRows item={match} weapon={slot.weapon} />
                 </button>
               </li>
             ))
           )}
         </ul>
+      )}
+      {item ? (
+        <div className="char-slot-body">
+          <button type="button" className="gear-name char-slot-item" onClick={() => onOpen(item)}>
+            {item.name}
+          </button>
+          <StatRows item={item} weapon={slot.weapon} />
+        </div>
+      ) : (
+        <p className="char-empty">{equippedId ? "Missing item" : "Empty"}</p>
       )}
     </div>
   );

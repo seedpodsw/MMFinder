@@ -1,11 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  basicStatRows,
   bestUpgrades,
   defaultStatWeights,
+  EQUIP_SLOTS,
+  matchesSlot,
   normalizeStatWeights,
   priorityLabel,
   scoreItem,
+  statSummary,
   weightsDiffer,
 } from "./gear.js";
 
@@ -48,4 +52,26 @@ test("weights stay in range and report the leader", () => {
   assert.equal(weightsDiffer(normalized, fallback), true);
   assert.equal(priorityLabel({ ...fallback, str: 3, dex: 3 }), "DEX 3, STR 3");
   assert.equal(priorityLabel(defaultStatWeights("wizard", "caster")), "INT 1.3");
+});
+
+test("basic stat rows list numbered weapon and armor fields", () => {
+  const weapon = { dmg: 12, delay: 24, str: 3, ac: 0, hp: 5 };
+  const rows = basicStatRows(weapon, true);
+  assert.deepEqual(
+    rows.map((row) => `${row.label} ${row.value}`),
+    ["DMG 12", "DLY 24", "HP 5", "STR +3"]
+  );
+  assert.equal(statSummary(weapon, true), "DMG 12 · DLY 24 · HP 5 · STR +3");
+});
+
+test("paired slots accept the wiki item slot", () => {
+  const ear = { slot: "EAR" };
+  const wrist = { slot: "WRIST" };
+  const finger = { slot: "FINGER" };
+  const byKey = Object.fromEntries(EQUIP_SLOTS.map((slot) => [slot.key, slot]));
+  assert.equal(matchesSlot(ear, byKey.EAR), true);
+  assert.equal(matchesSlot(ear, byKey.EAR2), true);
+  assert.equal(matchesSlot(wrist, byKey.WRIST2), true);
+  assert.equal(matchesSlot(finger, byKey.FINGER2), true);
+  assert.equal(matchesSlot(ear, byKey.FINGER), false);
 });
