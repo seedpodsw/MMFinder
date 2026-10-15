@@ -24,6 +24,7 @@ import {
   unequipItem,
 } from "./characters-store.js";
 import { huntsHere, huntsAtLevel, huntZonesNear, huntSide, nextForYou, questTarget, routeBetween, startCityFor } from "./finder";
+import { findMob, pinForMob } from "./mob-find";
 import { loadHero } from "../../shared/field.js";
 import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
 
@@ -87,6 +88,7 @@ export default function App() {
     () => readPlace(window.location.search).zone || "night-harbor"
   );
   const [focusPoi, setFocusPoi] = useState(() => readPlace(window.location.search).poi);
+  const [foundMob, setFoundMob] = useState(null);
   const [hoverPoi, setHoverPoi] = useState(null);
   const [book, setBook] = useState(() => loadCharacters(localStorage));
   const [looseLevel, setLooseLevel] = useState(1);
@@ -383,6 +385,7 @@ export default function App() {
   const journal = notes.filter((n) => n.targetType === "journal" || n.targetType === "pin");
 
   function selectZone(id, poiId, opts = {}) {
+    setFoundMob(null);
     if (view !== "walk") setView("atlas");
     setSelectedId(id);
     setFocusPoi(poiId || null);
@@ -401,6 +404,7 @@ export default function App() {
 
   function peekZone(id) {
     if (!id || id === selectedId) return;
+    setFoundMob(null);
     setSelectedId(id);
     setFocusPoi(null);
   }
@@ -421,6 +425,7 @@ export default function App() {
   function selectPoi(poiOrId, opts = {}) {
     const poi = typeof poiOrId === "string" ? allPois.find((p) => p.id === poiOrId) : poiOrId;
     if (!poi) return;
+    setFoundMob(null);
     if (view !== "walk") setView("atlas");
     setKindFilter("all");
     setSelectedId(poi.zoneId);
@@ -430,6 +435,32 @@ export default function App() {
     if (!opts.keepLanded) setLanded(null);
     const z = world?.zones.find((x) => x.id === poi.zoneId);
     if (z?.layer) setLayer(z.layer);
+  }
+
+  function showMob(mob) {
+    if (!mob) return;
+    const pin = mob.poiId && allPois.some((p) => p.id === mob.poiId) ? mob.poiId : null;
+    if (pin) selectPoi(pin);
+    else if (mob.zoneId) revealZone(mob.zoneId);
+    else if (view !== "walk") setView("atlas");
+    setFoundMob({ ...mob, poiId: pin });
+  }
+
+  function showDrop(src) {
+    if (!src) return;
+    const listed = src.poiId && !String(src.poiId).startsWith("wiki-lv-") ? allPois.find((p) => p.id === src.poiId) : null;
+    const mob = findMob(world?.mobs, src.npc, src.zoneId || listed?.zoneId);
+    const pin = listed || (mob ? pinForMob(mob, allPois) : null);
+    if (mob) {
+      showMob({
+        ...mob,
+        poiId: pin?.id || null,
+        zoneId: pin?.zoneId || mob.zoneId || src.zoneId || null,
+      });
+      return;
+    }
+    if (pin) selectPoi(pin.id);
+    else if (src.zoneId) revealZone(src.zoneId);
   }
 
   function showSellStop(item, stop) {
@@ -485,25 +516,9 @@ export default function App() {
       typeof itemOrId === "string" ? (world?.items || []).find((x) => x.id === itemOrId) : itemOrId;
     if (!item) return;
     setSelectedItem(item);
-    if (view !== "walk") setView("atlas");
     setDropMode(false);
-    if (item.primaryPoiId) {
-      const poi = allPois.find((p) => p.id === item.primaryPoiId);
-      if (poi) {
-        setKindFilter("all");
-        setSelectedId(poi.zoneId);
-        setFocusPoi(poi.id);
-        const z = world?.zones.find((x) => x.id === poi.zoneId);
-        if (z?.layer) setLayer(z.layer);
-      }
-    } else if (item.primaryZoneId) {
-      setSelectedId(item.primaryZoneId);
-      setFocusPoi(null);
-      setKindFilter("all");
-      setFlyNonce((n) => n + 1);
-      const z = world?.zones.find((x) => x.id === item.primaryZoneId);
-      if (z?.layer) setLayer(z.layer);
-    }
+    if (view !== "walk") setView("atlas");
+    showDrop({ npc: item.npc, poiId: item.primaryPoiId, zoneId: item.primaryZoneId });
     setTab("item");
   }
 
@@ -511,40 +526,17 @@ export default function App() {
     if (!item || !place) return;
     setItemModal(null);
     setSelectedItem(item);
-    if (place.poiId && allPois.some((p) => p.id === place.poiId)) {
-      setBlipPoiId(place.poiId);
+    setDropMode(false);
+    const pin = place.poiId && !String(place.poiId).startsWith("wiki-lv-") ? place.poiId : null;
+    if (pin && allPois.some((p) => p.id === pin)) {
+      setBlipPoiId(pin);
       setBlipNonce((n) => n + 1);
-      selectPoi(place.poiId);
-      return;
-    }
-    setBlipPoiId(null);
-    if (place.zoneId) revealZone(place.zoneId);
+    } else setBlipPoiId(null);
+    showDrop(place);
   }
 
   function showItemOnMap(itemOrId) {
-    const item =
-      typeof itemOrId === "string" ? (world?.items || []).find((x) => x.id === itemOrId) : itemOrId;
-    if (!item) return;
-    setSelectedItem(item);
-    setDropMode(false);
-    if (item.primaryPoiId) {
-      selectPoi(item.primaryPoiId);
-      setTab("item");
-      return;
-    }
-    let zoneId = item.primaryZoneId;
-    if (!zoneId && item.zoneName) {
-      const needle = String(item.zoneName).toLowerCase().replace(/[^a-z0-9]+/g, "");
-      const z = zones.find((x) => x.name.toLowerCase().replace(/[^a-z0-9]+/g, "") === needle);
-      if (z) zoneId = z.id;
-    }
-    if (zoneId) {
-      revealZone(zoneId);
-      setTab("item");
-      return;
-    }
-    setView("atlas");
-    setTab("item");
+    selectItem(itemOrId);
   }
 
   async function saveCuratedItem() {
@@ -861,8 +853,7 @@ export default function App() {
               columns
               goLabel="Go to Location"
               onSellStop={(stop) => goToItemPlace(itemModal, stop)}
-              onShowPoi={(poiId) => goToItemPlace(itemModal, { poiId })}
-              onShowZone={(zoneId) => goToItemPlace(itemModal, { zoneId })}
+              onShowPlace={(src) => goToItemPlace(itemModal, src)}
               onOpenQuest={(src) => {
                 setItemModal(null);
                 setFocusQuestId(src.questId);
@@ -931,7 +922,7 @@ export default function App() {
           onOpenItem={setItemModal}
         />
       ) : view === "hunt" ? (
-        <Hunt zones={zones} pois={allPois} level={level} onShowPoi={selectPoi} />
+        <Hunt zones={zones} pois={allPois} mobs={world.mobs || []} level={level} onShowPoi={selectPoi} onShowMob={showMob} />
       ) : view === "trades" ? (
         <Trades
           items={world.items || []}
@@ -1145,6 +1136,8 @@ export default function App() {
             regions={world.regions || []}
             quests={world.quests || []}
             items={world.items || []}
+            mobs={world.mobs || []}
+            onSelectMob={showMob}
             flyNonce={flyNonce}
             blipPoiId={blipPoiId}
             blipNonce={blipNonce}
@@ -1193,6 +1186,20 @@ export default function App() {
                 </p>
               )}
 
+              {foundMob &&
+                (!foundMob.zoneId ||
+                  foundMob.zoneId === selected.id ||
+                  (foundMob.zoneIds || []).includes(selected.id)) && (
+                <article className="camp-card fits">
+                  <header>
+                    <h3>{foundMob.name}</h3>
+                    <span className="range">{foundMob.level ? `lvl ${foundMob.level}` : "Named"}</span>
+                  </header>
+                  <p className="mobs">{foundMob.location || "The wiki names the zone, not a spot inside it."}</p>
+                  {foundMob.poiId ? <p className="hint">Closest pin on this map.</p> : null}
+                </article>
+              )}
+
               <FinderCard
                 zone={selected}
                 zones={zones}
@@ -1235,8 +1242,7 @@ export default function App() {
                     <ItemCard
                       item={selectedItem}
                       onSellStop={(stop) => showSellStop(selectedItem, stop)}
-                      onShowPoi={selectPoi}
-                      onShowZone={revealZone}
+                      onShowPlace={showDrop}
                       onOpenQuest={(src) => {
                         setFocusQuestId(src.questId);
                         setQuery(selectedItem.name);

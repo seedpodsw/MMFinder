@@ -114,6 +114,14 @@ function normName(s) {
     .trim();
 }
 
+function plainWiki(s) {
+  return String(s || "")
+    .replace(/\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]/g, (_, title, label) => (label || title).trim())
+    .replace(/'{2,}/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /** Parse Itempage dropsfrom: zone headers with * [[mob]] lists underneath. */
 function parseDropsFrom(field) {
   const groups = [];
@@ -173,7 +181,9 @@ function matchCampForMob(mobName, zoneId, pois) {
   const n = normName(mobName);
   const tokens = n.split(/\s+/).filter((t) => t.length > 2);
   const pool = zoneId ? pois.filter((p) => p.zoneId === zoneId) : pois;
-  const camps = pool.filter((p) => p.kind === "camp" || p.kind === "named");
+  const camps = pool.filter(
+    (p) => (p.kind === "camp" || p.kind === "named") && !String(p.id).startsWith("wiki-lv-")
+  );
 
   let best = null;
   let bestScore = 0;
@@ -254,7 +264,7 @@ function enrichDropSource(src, ctx) {
   const lvl = levelLabel(levelMin, levelMax, levelExact);
   const mobPart = isZoneOnly ? `Trash / zone loot` : src.npc || "Unknown mob";
   const bits = [mobPart, zoneName, lvl].filter(Boolean);
-  const detail = [camp?.name && `near ${camp.name}`, mob?.location, camp?.monsters && `camp: ${camp.monsters}`]
+  const detail = [camp?.name && `near ${camp.name}`, plainWiki(mob?.location || ""), camp?.monsters && `camp: ${camp.monsters}`]
     .filter(Boolean)
     .join(" · ");
 
@@ -270,7 +280,7 @@ function enrichDropSource(src, ctx) {
     levelSource,
     campName: camp?.name || "",
     monsters: camp?.monsters || mob?.race || "",
-    location: mob?.location || "",
+    location: plainWiki(mob?.location || ""),
     notes: [src.notes, detail].filter(Boolean).join(" · "),
     label: bits.join(" · "),
   };
@@ -653,9 +663,9 @@ function mergeCatalog(parts, ctx = {}) {
           ? "See wiki for how to get"
           : "How to get: unknown";
       const farmBits = [
+        primary?.location,
         primary?.campName,
         primary?.zoneName,
-        primary?.location,
         primary?.method === "drop" ? primary?.npc : "",
       ].filter(Boolean);
       const farmAt = [...new Set(farmBits)].join(" · ") || (primary?.label ? String(primary.label).replace(/^(Quest|Drops from|Sold by|Crafted):\s*/i, "") : "");
@@ -784,6 +794,46 @@ function searchItems(items, query, limit = 24) {
 }
 
 /** Unique mob titles referenced by wiki dropsfrom fields. */
+function zonesForMob(raw, zones) {
+  const text = plainWiki(raw);
+  const parts = text
+    .split(/\s*,\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const ids = [];
+  const names = [];
+  for (const part of parts.length ? parts : [text]) {
+    const zone = findZone(part, zones);
+    if (!zone || ids.includes(zone.id)) continue;
+    ids.push(zone.id);
+    names.push(zone.name);
+  }
+  return { zoneId: ids[0] || null, zoneIds: ids, zoneName: names.join(", ") || text };
+}
+
+/** Named mobs from the wiki, slim enough to ship with the atlas search. */
+function publicMobs(zones = []) {
+  const seen = new Set();
+  const out = [];
+  for (const mob of Object.values(loadMobCache())) {
+    if (!mob?.id || !mob.name || seen.has(mob.id)) continue;
+    seen.add(mob.id);
+    const place = zonesForMob(mob.zone, zones);
+    out.push({
+      id: mob.id,
+      name: mob.name,
+      level: String(mob.level || "").trim(),
+      race: plainWiki(mob.race),
+      zoneId: place.zoneId,
+      zoneIds: place.zoneIds,
+      zoneName: place.zoneName,
+      location: plainWiki(mob.location),
+    });
+  }
+  out.sort((a, b) => a.name.localeCompare(b.name));
+  return out;
+}
+
 function collectDropMobTitles(cacheItems = loadWikiCache()) {
   const titles = new Set();
   for (const raw of cacheItems) {
@@ -811,4 +861,5 @@ module.exports = {
   parseDropsFrom,
   sourcesFromWikiItem,
   collectDropMobTitles,
+  publicMobs,
 };

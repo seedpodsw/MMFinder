@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { fitsGroup, fitsSolo, hasHuntLevel, huntSide } from "./finder";
+import { pinForMob, searchMobs } from "./mob-find";
 import { KIND_LABEL, monsterList, rangeLabel } from "./WorldMap";
 
 const MODES = [
@@ -34,15 +35,18 @@ function hasGroup(poi) {
   return poi.groupMin != null || poi.groupMax != null;
 }
 
-export default function Hunt({ zones, pois, level, onShowPoi }) {
+export default function Hunt({ zones, pois, mobs = [], level, onShowPoi, onShowMob }) {
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState("me");
   const zoneById = useMemo(() => Object.fromEntries((zones || []).map((z) => [z.id, z])), [zones]);
 
+  const q = query.trim().toLowerCase();
+  const named = useMemo(() => (q.length >= 2 ? searchMobs(mobs, q, 24) : []), [mobs, q]);
+
   const camps = useMemo(() => {
-    const q = query.trim().toLowerCase();
     return (pois || []).filter((poi) => {
       if (!isHunt(poi)) return false;
+      if (q && String(poi.id).startsWith("wiki-lv-")) return false;
       if (mode === "solo" && !fitsSolo(poi, level)) return false;
       if (mode === "group" && !fitsGroup(poi, level)) return false;
       if (mode === "me" && !huntSide(poi, level)) return false;
@@ -51,7 +55,7 @@ export default function Hunt({ zones, pois, level, onShowPoi }) {
       const hay = [poi.name, poi.monsters, poi.notes, zone?.name, KIND_LABEL[poi.kind]].join(" ").toLowerCase();
       return hay.includes(q);
     });
-  }, [pois, query, mode, level, zoneById]);
+  }, [pois, q, mode, level, zoneById]);
 
   const soloMine = mode === "me" ? camps.filter((poi) => huntSide(poi, level) === "solo") : [];
   const groupMine = mode === "me" ? camps.filter((poi) => huntSide(poi, level) === "group") : [];
@@ -72,14 +76,44 @@ export default function Hunt({ zones, pois, level, onShowPoi }) {
           ))}
         </div>
         <p className="hunt-count">
+          {named.length > 0 ? `${named.length} named · ` : ""}
           {camps.length} camp{camps.length === 1 ? "" : "s"}
           {mode === "all" ? "" : ` for level ${level}`}
         </p>
       </div>
       <div className="hunt-body">
-        {camps.length === 0 ? (
+        {named.length > 0 && (
+          <section className="hunt-block">
+            <h2>Named</h2>
+            {named.map((mob) => {
+              const pin = pinForMob(mob, pois);
+              return (
+                <article key={mob.id} className="hunt-camp fits">
+                  <header>
+                    <div>
+                      <h4>{mob.name}</h4>
+                      <p className="hunt-kind">
+                        {mob.zoneName || "Zone unknown"}
+                        {mob.level ? ` · lvl ${mob.level}` : ""}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      className="tiny"
+                      onClick={() => onShowMob?.({ ...mob, poiId: pin?.id || null, zoneId: pin?.zoneId || mob.zoneId })}
+                    >
+                      {pin ? "Show on map" : mob.zoneId ? "Open zone" : "No map spot"}
+                    </button>
+                  </header>
+                  <p className="hint">{mob.location || "The wiki names the zone, not a spot inside it."}</p>
+                </article>
+              );
+            })}
+          </section>
+        )}
+        {camps.length === 0 && named.length === 0 ? (
           <p className="empty">No camps match. Camps without a level only show under All camps.</p>
-        ) : mode === "me" ? (
+        ) : camps.length === 0 ? null : mode === "me" ? (
           <>
             <HuntBlock title={`Solo · level ${level}`} camps={soloMine} zoneById={zoneById} level={level} onShowPoi={onShowPoi} />
             <HuntBlock title={`Group · level ${level}`} camps={groupMine} zoneById={zoneById} level={level} onShowPoi={onShowPoi} />

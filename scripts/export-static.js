@@ -12,6 +12,8 @@ process.env.MMFINDER_DB = dbPath;
 
 const db = require("../server/db");
 const { buildWorld } = require("../server/payload");
+const { publicMobs } = require("../server/items");
+const { zones } = require("../server/world");
 
 const outDir = path.join(__dirname, "..", "client", "public", "data");
 
@@ -24,9 +26,15 @@ const outDir = path.join(__dirname, "..", "client", "public", "data");
   const notesPath = path.join(outDir, "notes.json");
   fs.writeFileSync(worldPath, JSON.stringify(world));
   fs.writeFileSync(notesPath, JSON.stringify(notes));
+  const mobs = publicMobs(zones);
+  const mobsPath = path.join(outDir, "mobs.json");
+  fs.writeFileSync(mobsPath, JSON.stringify(mobs));
   const worldKb = Math.round(fs.statSync(worldPath).size / 1024);
   const notesKb = Math.round(fs.statSync(notesPath).size / 1024);
-  console.log(`static seed → data/world.json ${worldKb}kb, data/notes.json ${notesKb}kb (${notes.length} notes)`);
+  const mobsKb = Math.round(fs.statSync(mobsPath).size / 1024);
+  console.log(
+    `static seed → data/world.json ${worldKb}kb, data/notes.json ${notesKb}kb (${notes.length} notes), data/mobs.json ${mobsKb}kb (${mobs.length} mobs)`
+  );
   fs.rmSync(dbPath, { force: true });
 })().catch((err) => {
   console.error(err);

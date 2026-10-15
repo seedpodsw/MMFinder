@@ -141,6 +141,17 @@ test("quest list is not class-limited", () => {
   assert.equal(quests.filter((q) => q.kind === "turnin").length >= 6, true);
 });
 
+test("named mobs keep a zone and a written spot", () => {
+  const { publicMobs } = require("./items");
+  const mobs = publicMobs(zones);
+  const kruush = mobs.find((mob) => mob.name === "Captain Kruush");
+  assert.ok(kruush, "Captain Kruush");
+  assert.equal(kruush.zoneId, "blacktide-bay");
+  assert.match(kruush.location, /upper deck of main ship/);
+  assert.equal(kruush.location.includes("[["), false);
+  assert.ok(mobs.length > 100);
+});
+
 test("wiki levels land on named pins and unplaced hunts stay off the plate", () => {
   const bone = seedPois.find((p) => p.id === "tw-construct");
   assert.equal(bone.soloMin, 63);

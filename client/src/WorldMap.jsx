@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { questTarget, campFits, hasHuntLevel } from "./finder";
+import { mobSearchHits } from "./mob-find";
 
 export { campFits, hasHuntLevel };
 
@@ -203,6 +204,8 @@ export default function WorldMap({
   regions = [],
   quests = [],
   items = [],
+  mobs = [],
+  onSelectMob,
   flyNonce = 0,
   blipPoiId = null,
   blipNonce = 0,
@@ -287,6 +290,7 @@ export default function WorldMap({
     for (const p of pois || []) {
       const z = zoneById[p.zoneId];
       if (!z) continue;
+      if (String(p.id).startsWith("wiki-lv-")) continue;
       if (kindFilter !== "all" && p.kind !== kindFilter) continue;
       const hunt = p.kind === "camp" || p.kind === "named";
       const fits = hunt && campFits(p, level);
@@ -366,9 +370,19 @@ export default function WorldMap({
         rank: startHit ? 1 : nameHit ? 2 : 4,
       });
     }
+    for (const hit of mobSearchHits(mobs, pois, q)) {
+      const where = hit.mob.location || hit.mob.zoneName || "Place not written down";
+      const spot = where.length > 88 ? `${where.slice(0, 85).trim()}…` : where;
+      hits.push({
+        ...hit,
+        sub: ["Named", hit.mob.level ? `lvl ${hit.mob.level}` : "", hit.mob.zoneName, spot]
+          .filter(Boolean)
+          .join(" · "),
+      });
+    }
     hits.sort((a, b) => a.rank - b.rank || a.title.localeCompare(b.title));
     return hits.slice(0, 16);
-  }, [query, zones, pois, zoneById, kindFilter, regions, quests, items, level, huntFit, completed]);
+  }, [query, zones, pois, zoneById, kindFilter, regions, quests, items, mobs, level, huntFit, completed]);
 
   useEffect(() => {
     setHitIndex(0);
@@ -761,6 +775,7 @@ export default function WorldMap({
     if (!hit) return;
     onQuery?.("");
     if (hit.type === "zone") diveInto(hit.id);
+    else if (hit.type === "mob") onSelectMob?.(hit.mob);
     else if (hit.type === "item") {
       onSelectItem?.(hit.item || hit.id);
       if (hit.poiId) onSelectPoiRef.current?.(hit.poiId);
@@ -876,7 +891,7 @@ export default function WorldMap({
       <input
         ref={searchRef}
         value={query}
-        placeholder="Find a zone, camp, NPC, quest, or item…"
+        placeholder="Find a zone, camp, monster, quest, or item…"
         onChange={(e) => onQuery?.(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") {
@@ -893,7 +908,7 @@ export default function WorldMap({
       />
       {query.trim().length >= 2 && (
         <ul className="map-search-hits">
-          {searchHits.length === 0 && <li className="empty-hit">No places or items match</li>}
+          {searchHits.length === 0 && <li className="empty-hit">No places or names match</li>}
           {searchHits.map((hit, i) => (
             <li key={`${hit.type}-${hit.id}`}>
               <button className={i === hitIndex ? "on" : ""} onMouseDown={() => activateHit(hit)}>
@@ -901,11 +916,13 @@ export default function WorldMap({
                   className={`gpoi-dot ${
                     hit.type === "poi"
                       ? `kind-${hit.poi?.kind}`
-                      : hit.type === "zone"
-                        ? "kind-landmark"
-                        : hit.type === "item"
-                          ? "kind-item"
-                          : "kind-quest"
+                      : hit.type === "mob"
+                        ? "kind-named"
+                        : hit.type === "zone"
+                          ? "kind-landmark"
+                          : hit.type === "item"
+                            ? "kind-item"
+                            : "kind-quest"
                   }`}
                 ></span>
                 <span className="zn">{hit.title}</span>

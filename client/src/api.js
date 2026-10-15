@@ -66,8 +66,9 @@ function loadSeed() {
     seedPromise = Promise.all([
       fetch(asset("data/world.json")).then(readJson),
       fetch(asset("data/notes.json")).then(readJson),
-    ]).then(([world, notes]) => ({
-      world: prefixWorld(world),
+      fetch(asset("data/mobs.json")).then((res) => (res.ok ? res.json() : [])),
+    ]).then(([world, notes, mobs]) => ({
+      world: prefixWorld({ ...world, mobs: Array.isArray(mobs) ? mobs : [] }),
       notes: Array.isArray(notes) ? notes : [],
     }));
   }

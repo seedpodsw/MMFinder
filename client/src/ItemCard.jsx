@@ -126,7 +126,7 @@ function ItemColumns({ item }) {
   );
 }
 
-export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onOpenQuest, goLabel = "", titleId, columns = false }) {
+export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onShowPlace, onOpenQuest, goLabel = "", titleId, columns = false }) {
   const [tab, setTab] = useState("details");
   if (!item) return null;
   const sources = item.sources || [];
@@ -134,36 +134,29 @@ export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onOp
   const other = sources.filter((src) => src.method !== "quest" && src.method !== "drop");
   const quests = sources.filter((src) => src.method === "quest" && src.questId);
 
+  function openSource(src) {
+    if (onShowPlace) onShowPlace(src);
+    else if (src.poiId) onShowPoi?.(src.poiId);
+    else if (src.zoneId) onShowZone?.(src.zoneId);
+  }
+
   function placeButton(src) {
-    if (goLabel && (src.poiId || src.zoneId)) {
+    const wikiList = String(src.poiId || "").startsWith("wiki-lv-");
+    const canGo = Boolean((src.poiId && !wikiList) || src.zoneId || src.npc);
+    if (!canGo) return null;
+    if (goLabel) {
       return (
-        <button
-          type="button"
-          className="go-loc"
-          onClick={() => (src.poiId ? onShowPoi?.(src.poiId) : onShowZone?.(src.zoneId))}
-        >
+        <button type="button" className="go-loc" onClick={() => openSource(src)}>
           {goLabel}
         </button>
       );
     }
     return (
       <>
-        {src.poiId && (
-          <>
-            {" "}
-            <button type="button" className="linkish" onClick={() => onShowPoi?.(src.poiId)}>
-              Show on map
-            </button>
-          </>
-        )}
-        {!src.poiId && src.zoneId && (
-          <>
-            {" "}
-            <button type="button" className="linkish" onClick={() => onShowZone?.(src.zoneId)}>
-              Open zone
-            </button>
-          </>
-        )}
+        {" "}
+        <button type="button" className="linkish" onClick={() => openSource(src)}>
+          {src.poiId && !wikiList ? "Show on map" : "Open zone"}
+        </button>
       </>
     );
   }
