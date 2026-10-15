@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20261014ailvorith";
+const MAP_VER = "20261015blacktide";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 
@@ -244,10 +244,11 @@ const zoneMaps = {
   "blacktide-bay": {
     file: "blacktide-bay.jpg",
     wikiFile: "Blacktide Bay.jpg",
-    width: 1800,
-    aspect: 1800 / 2400,
+    width: 1508,
+    aspect: 1508 / 1846,
     fit: "contain",
-    inset: { l: 0.03, t: 0.08, r: 0.03, b: 0.04 },
+    // scripts/rebuild-blacktide.js crops the draft and darkens the pencil.
+    skipDownload: true,
   },
   "keepers-bight": {
     file: "keepers-bight.jpg",

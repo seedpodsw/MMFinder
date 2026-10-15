@@ -156,9 +156,15 @@ test("wiki levels land on named pins and unplaced hunts stay off the plate", () 
   const bone = seedPois.find((p) => p.id === "tw-construct");
   assert.equal(bone.soloMin, 63);
   assert.match(bone.notes, /63\+/);
+  const kruushPin = seedPois.find((p) => p.id === "bt-kruush");
+  assert.equal(kruushPin.zoneId, "blacktide-bay");
+  assert.ok(kruushPin.mx > 40 && kruushPin.mx < 55);
+  const ships = seedPois.find((p) => p.id === "bt-ships");
+  assert.ok(ships.mx > 40, "ships sit on the boats, not the margin caption");
   const bay = seedPois.find((p) => p.id === "wiki-lv-blacktide-bay");
   assert.ok(bay, "blacktide hunt list");
   assert.equal(bay.mx, undefined);
-  assert.match(bay.monsters, /Captain Kruush 29/);
+  assert.equal(/Captain Kruush/.test(bay.monsters), false);
+  assert.match(bay.monsters, /Blacktide brute/);
   assert.equal(seedPois.some((p) => p.id === "wiki-lv-faelindral"), false);
 });

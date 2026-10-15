@@ -921,7 +921,7 @@ const zones = [
     levelMin: 10,
     levelMax: 30,
     adjacent: ["evershade-weald", "keepers-bight"],
-    description: "Western Calafrey coast. Exodus lands at the Evershade Weald line.",
+    description: "Caves under the western Calafrey coast. The Evershade lift comes in on the low side. The Keeper's Bight lift comes in on the high side, by the water.",
     path: "M 300 90 L 455 48 L 470 130 L 400 175 L 280 160 Z",
     labelX: 370,
     labelY: 115,
