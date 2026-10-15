@@ -768,10 +768,10 @@ const zones = [
     kind: "outdoor",
     layer: "surface",
     levelMin: 5,
-    levelMax: 35,
+    levelMax: 48,
     adjacent: ["evershade-weald", "scarwood", "vale-of-zintar", "blacktide-bay", "shallow-shoals"],
     description:
-      "Coastal wilds of Calafrey. Wolves and wasps for low levels, poacher camps in the high 20s.",
+      "Coastal forest between Evershade and the Vale. Penshaw is the river town. Poachers and a small Sangrel camp sit by the southeast treehouse. The large Sangrel camp is on the northwest coast. Blacktide orcs hold the south bay, and giants camp on the Vale line.",
     path: "M 500 198 L 470 130 L 620 95 L 780 115 L 790 175 L 760 175 L 620 155 Z",
     labelX: 640,
     labelY: 145,

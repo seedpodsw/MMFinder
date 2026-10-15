@@ -882,13 +882,15 @@ const QUESTS = [
     classIds: NOT_CLOTH,
     city: "Faelindral",
     zoneId: "keepers-bight",
-    npc: "See wiki",
-    where: "Keeper's Bight poacher camps",
+    npc: "Ranger Rylin",
+    where: "Hanging Garden treehouse, then the east tents",
     levelMin: 30,
     rewards: ["High Keeper's Vambrace"],
     steps: [
       step("poach-1", 30, "Hunt poachers in Keeper's Bight and complete the knives turn-in for High Keeper's Vambrace.", {
         zoneId: "keepers-bight",
+        poiId: "kb-poachers",
+        npc: "Ranger Rylin",
         reward: "High Keeper's Vambrace",
       }),
     ],
