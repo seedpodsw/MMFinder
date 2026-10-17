@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20261015blacktide";
+const MAP_VER = "20261015path";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 
@@ -256,7 +256,11 @@ const zoneMaps = {
     width: 1800,
     aspect: 1800 / 2385,
     fit: "contain",
-    inset: { l: 0.03, t: 0.05, r: 0.03, b: 0.03 },
+    // scripts/rebuild-keepers.js joins the Vale road to the orc cave.
+    skipDownload: true,
+    // White title ends at 3.6%. The Evershade, Scarwood, Shoals, and Vale
+    // labels sit outside that, so a deeper inset slices the words.
+    inset: { l: 0, t: 0.037, r: 0, b: 0.012 },
   },
   "fallen-watch": {
     file: "fallen-watch.png",

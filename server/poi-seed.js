@@ -224,7 +224,8 @@ const handPois = [
   { id: "kb-bear-cave", zoneId: "keepers-bight", name: "Bear cave", kind: "camp", mx: 67.8, my: 59.3, soloMin: 25, soloMax: 30, monsters: "Redpaw 25, Poacher Wilna 28–30, a den matriarch", notes: "Tunnel mouth northwest of the treehouse. Wilna is inside. Redpaw's placeholder is a den matriarch." },
   { id: "kb-treehouse", zoneId: "keepers-bight", name: "Hanging Garden treehouse", kind: "landmark", mx: 82.2, my: 69.2, notes: "Southeast hollow tree. Ranger Rylin, Alysse Selegrass, and the stablemaster." },
   { id: "kb-sangrel-se", zoneId: "keepers-bight", name: "Small Sangrel camp", kind: "camp", mx: 96.5, my: 69.7, soloMin: 18, soloMax: 22, monsters: "a Sangrel arcanist 18–22, a Sangrel shadowblade 18–22, a Sangrel entangler 18–22", notes: "Yellow tent just south of the treehouse, beside the poachers. Sangrel Rite I." },
-  { id: "kb-blacktide-dung", zoneId: "keepers-bight", name: "Blacktide Bay dungeon", kind: "dungeon", mx: 54, my: 77, notes: "Lifts into Blacktide Bay. An enslaved dwarf is just outside." },
+  { id: "kb-orc-gate", zoneId: "keepers-bight", name: "North road gate", kind: "landmark", mx: 62, my: 72.4, notes: "Two red blocks on the path south of the treehouse. That road does not go into the orc caves." },
+  { id: "kb-blacktide-dung", zoneId: "keepers-bight", name: "To Blacktide Bay", kind: "zoneline", mx: 55.7, my: 77.1, notes: "The lift at the top of the orc caves. The path into those caves leaves the Vale road at the south cave mouth. You come out on the high side of Blacktide, by the water." },
   { id: "kb-rarthan", zoneId: "keepers-bight", name: "Rarthan Wartide", kind: "named", mx: 58, my: 80, soloMin: 26, soloMax: 26, monsters: "Rarthan Wartide 26", notes: "Orc cave under the Blacktide lifts." },
   { id: "kb-belthakar", zoneId: "keepers-bight", name: "Belthakar Dunecaller", kind: "named", mx: 57.2, my: 82.5, soloMin: 26, soloMax: 26, monsters: "Belthakar Dunecaller 26", notes: "Dead-end room in the orc cave, green firepit. Placeholder is a Blacktide soothsayer." },
   { id: "kb-blacktide-bay", zoneId: "keepers-bight", name: "Blacktide Bay", kind: "landmark", mx: 45, my: 81, notes: "Orc shore around the south bay." },
@@ -232,7 +233,7 @@ const handPois = [
   { id: "kb-zl-evershade", zoneId: "keepers-bight", name: "Zoneline: Evershade Weald", kind: "zoneline", mx: 80, my: 6 },
   { id: "kb-zl-scarwood", zoneId: "keepers-bight", name: "Zoneline: Scarwood", kind: "zoneline", mx: 97.5, my: 20.8 },
   { id: "kb-zl-shoals", zoneId: "keepers-bight", name: "Zoneline: Shallow Shoals", kind: "zoneline", mx: 4, my: 36.5 },
-  { id: "kb-zl-vale", zoneId: "keepers-bight", name: "Zoneline: Vale of Zintar", kind: "zoneline", mx: 20.5, my: 95.5 },
+  { id: "kb-zl-vale", zoneId: "keepers-bight", name: "Zoneline: Vale of Zintar", kind: "zoneline", mx: 20.5, my: 95.5, notes: "The orc hill is north of here. The path up its east side is the way into Blacktide." },
 
   // Scarwood
   { id: "sw-bandits", zoneId: "scarwood", name: "River island bandits", kind: "camp", mx: 47.5, my: 42.2, soloMin: 27, soloMax: 32, groupMin: 22, groupMax: 27, monsters: "Bandits", notes: "Bridge / island camp on the river." },

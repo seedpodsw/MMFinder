@@ -7,6 +7,8 @@ import {
   themeQuartz,
 } from "ag-grid-community";
 import { CLASS_ABBR, ALL_CLASS_TOKENS, tokensOf } from "./gear";
+import CopyGameLink from "./CopyGameLink";
+import { gameItemLink } from "../../shared/item-link.js";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -54,6 +56,10 @@ function FarmCell({ value, data, onOpen }) {
   );
 }
 
+function GameLinkCell({ data }) {
+  return <CopyGameLink item={data?._item} empty={<span className="items-muted">—</span>} />;
+}
+
 function WikiCell({ value }) {
   if (!value) return <span className="items-muted">—</span>;
   return (
@@ -93,10 +99,10 @@ const NUM_FIELDS = [
 
 /** Column presets: which fields are visible. */
 const COLUMN_PRESETS = {
-  Compact: ["name", "kind", "slot", "ac", "dmg", "delay", "skill", "classReq", "recipe", "materials", "usedIn", "sellTo", "quests", "farmAt", "zoneName", "level", "wikiUrl"],
-  Combat: ["name", "slot", "ac", "dmg", "delay", "skill", "str", "sta", "agi", "dex", "hp", "haste", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
-  Caster: ["name", "slot", "ac", "int", "wis", "cha", "hp", "mana", "mana_regen", "effect", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
-  Resists: ["name", "slot", "ac", "mr", "fr", "cr", "dr", "pr", "er", "hr", "cor", "classReq", "farmAt", "zoneName", "wikiUrl"],
+  Compact: ["name", "gameLink", "kind", "slot", "ac", "dmg", "delay", "skill", "classReq", "recipe", "materials", "usedIn", "sellTo", "quests", "farmAt", "zoneName", "level", "wikiUrl"],
+  Combat: ["name", "gameLink", "slot", "ac", "dmg", "delay", "skill", "str", "sta", "agi", "dex", "hp", "haste", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
+  Caster: ["name", "gameLink", "slot", "ac", "int", "wis", "cha", "hp", "mana", "mana_regen", "effect", "classReq", "farmAt", "zoneName", "level", "wikiUrl"],
+  Resists: ["name", "gameLink", "slot", "ac", "mr", "fr", "cr", "dr", "pr", "er", "hr", "cor", "classReq", "farmAt", "zoneName", "wikiUrl"],
 };
 
 function toRows(items) {
@@ -133,6 +139,7 @@ function toRows(items) {
       notes: item.notes || "",
       categories: Array.isArray(item.categories) ? item.categories.join(", ") : "",
       wikiUrl: item.wikiUrl || "",
+      gameLink: gameItemLink(item.name, item.linkId),
       primaryPoiId: item.primaryPoiId || null,
       primaryZoneId: item.primaryZoneId || null,
       primaryQuestId: item.primaryQuestId || null,
@@ -173,14 +180,19 @@ function useFilterOptions(api, getValues) {
   return options;
 }
 
-function FilterChoices({ value, options, label, onChange }) {
+function kindLabel(kind) {
+  const text = String(kind || "item");
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function FilterChoices({ value, options, label, onChange, format }) {
   const shown = !value || options.includes(value) ? options : [value, ...options];
   return (
     <select className="items-col-filter" aria-label={label} value={value} onChange={(event) => onChange(event.target.value)}>
       <option value="">Any</option>
       {shown.map((option) => (
         <option key={option} value={option}>
-          {option}
+          {format ? format(option) : option}
         </option>
       ))}
     </select>
@@ -223,7 +235,7 @@ function TokenSetFilter(props) {
 
   return (
     <div className="items-filter-popup">
-      <FilterChoices label={label} value={value} options={options} onChange={choose} />
+      <FilterChoices label={label} value={value} options={options} onChange={choose} format={props.filterParams?.format} />
     </div>
   );
 }
@@ -238,6 +250,7 @@ function TokenSetFloatingFilter(props) {
       label={label}
       value={value}
       options={options}
+      format={props.filterParams?.format}
       onChange={(next) => {
         const picked = next || "";
         props.filterParams?.onToken?.(picked);
@@ -332,12 +345,21 @@ export default function ItemsGrid({
     () => [
       { field: "name", headerName: "Item", filter: "agTextColumnFilter", minWidth: 200, flex: 1.4, pinned: "left", tooltip: true },
       {
+        field: "gameLink",
+        headerName: "Chat",
+        width: 96,
+        filter: false,
+        sortable: false,
+        cellRenderer: GameLinkCell,
+      },
+      {
         field: "kind",
         headerName: "Kind",
         width: 130,
+        valueFormatter: (p) => kindLabel(p.value),
         filter: TokenSetFilter,
         floatingFilterComponent: TokenSetFloatingFilter,
-        filterParams: { getValues: kindValues, onToken: onKindToken },
+        filterParams: { getValues: kindValues, onToken: onKindToken, format: kindLabel },
         suppressFloatingFilterButton: true,
         suppressHeaderFilterButton: true,
       },
@@ -699,7 +721,7 @@ export default function ItemsGrid({
 
   const onCellClicked = useCallback(
     (e) => {
-      if (e.colDef?.field === "wikiUrl") return;
+      if (e.colDef?.field === "wikiUrl" || e.colDef?.field === "gameLink") return;
       if (e.data?._item) onSelectItem?.(e.data._item);
     },
     [onSelectItem]
@@ -800,7 +822,7 @@ export default function ItemsGrid({
             <option value="">Any kind</option>
             {kindOptions.map((k) => (
               <option key={k} value={k}>
-                {k}
+                {kindLabel(k)}
               </option>
             ))}
           </select>

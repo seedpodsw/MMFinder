@@ -1,15 +1,15 @@
 /**
  * Import items from the Monsters & Memories wiki into data/wiki-items.json.
- * Category:Items is the full catalog. The gear categories are included so a
- * page that is only filed under Weapon or Armor is not dropped.
- * Usage: node server/import-wiki-items.js [--limit=200] [--categories=Items,Weapon]
+ * Default source is every page that uses {{ItemBox}}. Category:Items is only
+ * a parent category now; robes and blades live under Chest, Primary, and so on.
+ * Usage: node server/import-wiki-items.js [--limit=200] [--categories=Chest,Primary]
  */
 const fs = require("fs");
 const path = require("path");
-const { slugify, sourcesFromWikiItem, WIKI_CACHE } = require("./items");
+const { slugify, sourcesFromWikiItem, guessKind, WIKI_CACHE } = require("./items");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
-const DEFAULT_CATS = ["Items", "Weapon", "Armor", "Jewelry", "Shield", "Quest_Rewards", "Quest_Items", "Food", "Drink"];
+const ITEM_TEMPLATE = "Template:ItemBox";
 
 function arg(name, fallback) {
   const hit = process.argv.find((a) => a.startsWith(`--${name}=`));
@@ -102,14 +102,22 @@ function parseTemplate(wikitext, name) {
   return fields;
 }
 
-function kindFromCategories(cats) {
-  const lower = cats.map((c) => c.toLowerCase());
-  if (lower.some((c) => c.includes("weapon"))) return "weapon";
-  if (lower.some((c) => c.includes("armor"))) return "armor";
-  if (lower.some((c) => c.includes("jewelry"))) return "jewelry";
-  if (lower.some((c) => c.includes("shield"))) return "shield";
-  if (lower.some((c) => c.includes("quest"))) return "quest";
-  return "item";
+async function templatePages(template) {
+  const titles = [];
+  let cont;
+  do {
+    const data = await apiGet({
+      action: "query",
+      list: "embeddedin",
+      eititle: template,
+      einamespace: "0",
+      eilimit: "500",
+      ...(cont ? { eicontinue: cont } : {}),
+    });
+    for (const row of data.query?.embeddedin || []) titles.push(row.title);
+    cont = data.continue?.eicontinue;
+  } while (cont);
+  return titles;
 }
 
 /** Numeric / combat / flag fields from {{ItemBox}}. */
@@ -173,7 +181,7 @@ async function fetchPages(titles) {
       prop: "revisions|categories",
       rvprop: "content",
       rvslots: "main",
-      cllimit: "50",
+      cllimit: "500",
       titles: batch.join("|"),
     });
     const pages = data.query?.pages || {};
@@ -189,7 +197,6 @@ async function fetchPages(titles) {
         id: slugify(name),
         name,
         wiki: page.title.replace(/ /g, "_"),
-        kind: kindFromCategories(cats),
         slot: box.slot || "",
         notes: pageFields.notes || "",
         relatedquests: pageFields.relatedquests || "",
@@ -198,8 +205,10 @@ async function fetchPages(titles) {
         playercrafted: pageFields.playercrafted || "",
         recipes: pageFields.recipes || "",
         categories: cats,
+        item_link_id: String(box.item_link_id || "").trim(),
         ...stats,
       };
+      raw.kind = guessKind(raw);
       raw.sources = sourcesFromWikiItem(raw);
       out.push(raw);
     }
@@ -212,22 +221,32 @@ async function fetchPages(titles) {
 
 async function main() {
   const limit = Number(arg("limit", "0")) || 0;
-  const cats = String(arg("categories", DEFAULT_CATS.join(",")))
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
+  const catArg = String(arg("categories", "")).trim();
+  const titles = new Map();
 
-  console.log(`Listing wiki categories: ${cats.join(", ")}`);
-  const titles = new Map(); // title -> Set of category names
-  for (const cat of cats) {
-    const members = await categoryMembers(cat);
-    console.log(`  ${cat}: ${members.length}`);
-    for (const t of members) {
-      if (!titles.has(t)) titles.set(t, new Set());
-      titles.get(t).add(cat);
+  if (catArg) {
+    const cats = catArg
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    console.log(`Listing wiki categories: ${cats.join(", ")}`);
+    for (const cat of cats) {
+      const members = await categoryMembers(cat);
+      console.log(`  ${cat}: ${members.length}`);
+      for (const t of members) {
+        if (!titles.has(t)) titles.set(t, new Set());
+        titles.get(t).add(cat);
+      }
     }
+  } else {
+    console.log(`Listing pages that use ${ITEM_TEMPLATE}`);
+    for (const title of await templatePages(ITEM_TEMPLATE)) titles.set(title, new Set());
+    console.log(`  ${titles.size} item pages`);
   }
-  let list = [...titles.keys()].sort();
+
+  const removed = new Set(await categoryMembers("Removed Items"));
+  if (removed.size) console.log(`Skipping ${removed.size} removed items`);
+  let list = [...titles.keys()].filter((title) => !removed.has(title)).sort((a, b) => a.localeCompare(b));
   if (limit > 0) list = list.slice(0, limit);
   console.log(`Importing ${list.length} item pages…`);
 
@@ -236,18 +255,23 @@ async function main() {
     const fromList = titles.get(item.name) || titles.get(item.wiki?.replace(/_/g, " "));
     if (fromList?.size) {
       item.categories = [...new Set([...(item.categories || []), ...fromList])];
-      item.kind = kindFromCategories(item.categories);
     }
+    item.kind = guessKind(item);
   }
+  const kinds = {};
+  for (const item of items) kinds[item.kind] = (kinds[item.kind] || 0) + 1;
+  console.log("Kinds:", kinds);
   const payload = {
     importedAt: new Date().toISOString(),
-    categories: cats,
+    source: catArg ? catArg : ITEM_TEMPLATE,
     count: items.length,
     items,
   };
   const dir = path.dirname(WIKI_CACHE);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(WIKI_CACHE, JSON.stringify(payload, null, 2));
+  const tmp = `${WIKI_CACHE}.tmp`;
+  fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
+  fs.renameSync(tmp, WIKI_CACHE);
   console.log(`Wrote ${items.length} items → ${WIKI_CACHE}`);
 }
 

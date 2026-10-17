@@ -9,6 +9,7 @@ const { attachCraftInfo } = require("./craft");
 const DATA_DIR = path.join(__dirname, "..", "data");
 const WIKI_CACHE = path.join(DATA_DIR, "wiki-items.json");
 const MOB_CACHE = path.join(DATA_DIR, "wiki-mobs.json");
+const LINK_CACHE = path.join(DATA_DIR, "item-links.json");
 
 const METHOD_LABEL = {
   quest: "Quest",
@@ -74,6 +75,39 @@ function poiForNpcName(npc) {
     if (id) return id;
   }
   return null;
+}
+
+function loadItemLinks() {
+  try {
+    if (!fs.existsSync(LINK_CACHE)) return { byPage: {}, byName: {} };
+    const data = JSON.parse(fs.readFileSync(LINK_CACHE, "utf8"));
+    return {
+      byPage: data.byPage && typeof data.byPage === "object" ? data.byPage : {},
+      byName: data.byName && typeof data.byName === "object" ? data.byName : {},
+    };
+  } catch {
+    return { byPage: {}, byName: {} };
+  }
+}
+
+function cleanLinkId(value) {
+  const id = String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/^item\|/, "");
+  return /^[0-9a-f]{24}$/.test(id) ? id : "";
+}
+
+function linkIdFor(raw, links) {
+  const direct = cleanLinkId(raw?.item_link_id || raw?.linkId);
+  if (direct) return direct;
+  const page = String(raw?.wiki || "")
+    .trim()
+    .replace(/ /g, "_");
+  const name = String(raw?.name || raw?.item_name || "")
+    .trim()
+    .toLowerCase();
+  return cleanLinkId(links?.byPage?.[page]) || cleanLinkId(links?.byName?.[name]) || "";
 }
 
 function loadWikiCache() {
@@ -569,16 +603,175 @@ function mergeItemStats(prev, next) {
   }
 }
 
-function fromWikiCache(cacheItems) {
+const ARMOR_SLOTS = new Set(["CHEST", "HEAD", "LEGS", "FEET", "HANDS", "WRIST", "SHOULDERS", "FACE", "ARMS", "SHIRT"]);
+const WORN_ALSO = new Set(["WAIST", "BACK"]);
+const WEAPON_SLOTS = new Set(["PRIMARY", "SECONDARY", "RANGE", "AMMO"]);
+const JEWEL_SLOTS = new Set(["NECK", "FINGER", "EAR"]);
+const BAG_SLOTS = new Set(["BAG", "BACKPACK", "BELT", "SADDLEBAG"]);
+const WEAPON_SKILLS = new Set(["SLA", "BLG", "ARC", "H2H", "THR", "1HS", "1HB", "1HP", "2HS", "2HB", "2HP", "PRC", "PIE"]);
+const SLOT_BY_CATEGORY = {
+  chest: "CHEST",
+  head: "HEAD",
+  legs: "LEGS",
+  feet: "FEET",
+  hands: "HANDS",
+  wrist: "WRIST",
+  waist: "WAIST",
+  shoulders: "SHOULDERS",
+  back: "BACK",
+  face: "FACE",
+  arms: "ARMS",
+  shirt: "SHIRT",
+  neck: "NECK",
+  finger: "FINGER",
+  ear: "EAR",
+  primary: "PRIMARY",
+  secondary: "SECONDARY",
+  range: "RANGE",
+  ammo: "AMMO",
+  bag: "BAG",
+  backpack: "BACKPACK",
+  belt: "BELT",
+};
+
+function slotTokens(slot) {
+  return String(slot || "")
+    .toUpperCase()
+    .split(/[^A-Z]+/)
+    .filter(Boolean);
+}
+
+function categoryNames(raw) {
+  return (raw?.categories || []).map((c) => String(c).trim()).filter(Boolean);
+}
+
+const NAME_SLOT_RULES = [
+  [/\bearrings?\b/i, "EAR"],
+  [/\brings?\b/i, "FINGER"],
+  [/\b(necklaces?|pendants?|amulets?)\b/i, "NECK"],
+  [/\b(boots?)\b/i, "FEET"],
+  [/\b(leggings|greaves)\b/i, "LEGS"],
+  [/\b(bracers?|vambraces?|cuffs?)\b/i, "WRIST"],
+  [/\b(gauntlets?|gloves)\b/i, "HANDS"],
+  [/\b(helms?|helmets?|coifs?)\b/i, "HEAD"],
+  [/\b(robes?|tunics?|breastplates?|hauberks?|cuirasses?)\b/i, "CHEST"],
+  [/\b(pauldrons?|mantles?|spaulders?)\b/i, "SHOULDERS"],
+  [/\b(cloaks?|capes?)\b/i, "BACK"],
+  [/\bmasks?\b/i, "FACE"],
+  [/\b(bucklers?|shields?|bulwarks?|aegis(?:es)?)\b/i, "SECONDARY"],
+  [/\b(backpacks?|satchels?)\b/i, "BAG"],
+];
+const NAME_SLOT_IF_ARMOR = [
+  [/\b(cords?|cinches?|girdles?)\b/i, "WAIST"],
+];
+
+/** Fill an empty slot from wiki slot categories, then from a clear gear name. */
+function slotFromCategories(raw) {
+  const existing = String(raw?.slot || "").trim();
+  if (existing) return existing;
+  const found = [];
+  for (const name of categoryNames(raw)) {
+    const mapped = SLOT_BY_CATEGORY[name.toLowerCase()];
+    if (mapped && !found.includes(mapped)) found.push(mapped);
+  }
+  if (found.length) return found.join(" ");
+  const name = String(raw?.name || raw?.item_name || "");
+  if (!name || /^(enchant|scroll|recipe|token)\b/i.test(name)) return "";
+  for (const [re, slot] of NAME_SLOT_RULES) {
+    if (re.test(name)) return slot;
+  }
+  const ac = Number(String(raw?.ac ?? "").replace(/[^0-9.-]/g, ""));
+  if (Number.isFinite(ac) && ac > 0) {
+    for (const [re, slot] of NAME_SLOT_IF_ARMOR) {
+      if (re.test(name)) return slot;
+    }
+  }
+  return "";
+}
+
+function hasCategory(raw, re) {
+  return categoryNames(raw).some((name) => re.test(name));
+}
+
+function weaponLike(raw) {
+  const skill = String(raw?.skill || "")
+    .trim()
+    .toUpperCase();
+  if (WEAPON_SKILLS.has(skill)) return true;
+  const dmg = Number(String(raw?.dmg ?? "").replace(/[^0-9.-]/g, ""));
+  return Number.isFinite(dmg) && dmg > 0;
+}
+
+function shieldLike(raw) {
+  const name = String(raw?.name || raw?.item_name || "");
+  if (/\b(lute|drum|flute|horn|recorder|lyre|harp|sconce|lamp|lantern|lightstone)\b/i.test(name)) return false;
+  if (hasCategory(raw, /^shields?$/i)) return true;
+  if (/\b(shield|buckler|bulwark|aegis|ward|board|guard)\b/i.test(name)) return true;
+  const ac = Number(String(raw?.ac ?? "").replace(/[^0-9.-]/g, ""));
+  return Number.isFinite(ac) && ac > 0;
+}
+
+/**
+ * Kind from the worn slot first, then wiki categories.
+ * Category:Items is the whole catalog, so a robe filed only there is still armor.
+ */
+function guessKind(raw) {
+  const slot = slotFromCategories(raw);
+  const slots = slotTokens(slot);
+  const any = (set) => slots.some((s) => set.has(s));
+  const only = (set) => slots.length > 0 && slots.every((s) => set.has(s));
+  const held = any(WEAPON_SLOTS);
+  const jewel = any(JEWEL_SLOTS);
+  const worn =
+    any(ARMOR_SLOTS) ||
+    (any(WORN_ALSO) && !held && !jewel) ||
+    hasCategory(raw, /^armor$/i) ||
+    hasCategory(raw, /^(chest|head|legs|feet|hands|wrist|shoulders|face|arms|shirt)$/i);
+
+  if (worn) return "armor";
+  if ((only(new Set(["SECONDARY"])) || hasCategory(raw, /^shields?$/i)) && shieldLike(raw)) return "shield";
+  if ((jewel && !weaponLike(raw)) || hasCategory(raw, /^jewelry$/i) || hasCategory(raw, /^(neck|finger|ear)$/i)) return "jewelry";
+  const offhandOnly = only(new Set(["SECONDARY"]));
+  if (
+    weaponLike(raw) ||
+    (only(WEAPON_SLOTS) && !offhandOnly) ||
+    hasCategory(raw, /^(weapon|primary|range|ammo|slashing weapon|archery weapon)$/i)
+  ) {
+    return "weapon";
+  }
+  if ((any(BAG_SLOTS) && !held && !jewel) || hasCategory(raw, /^bags?( & containers)?$/i)) return "bag";
+  if (hasCategory(raw, /^food$/i)) return "food";
+  if (hasCategory(raw, /^drink$/i)) return "drink";
+  if (hasCategory(raw, /^quest_?items?$/i)) return "quest";
+  if (hasCategory(raw, /^instruments?$/i)) return "instrument";
+  if (hasCategory(raw, /^herbs?$/i)) return "herb";
+  if (hasCategory(raw, /^fish$/i)) return "fish";
+  if (hasCategory(raw, /^bandages?$/i)) return "bandage";
+  if (any(WORN_ALSO)) return "armor";
+  return "item";
+}
+
+function resolveKind(raw) {
+  const guessed = guessKind(raw);
+  if (guessed !== "item") return guessed;
+  const stored = String(raw?.kind || "").toLowerCase();
+  if (stored && stored !== "gear" && stored !== "item") return stored;
+  return "item";
+}
+
+function fromWikiCache(cacheItems, links = loadItemLinks()) {
   return (cacheItems || []).map((raw) => {
     const name = raw.name || raw.item_name || raw.title;
     const id = raw.id || slugify(name);
+    const wiki = raw.wiki || wikiTitleToSlug(name);
+    const slot = slotFromCategories(raw);
     return {
       id,
       name,
-      kind: raw.kind || guessKind(raw),
-      slot: raw.slot || "",
-      wiki: raw.wiki || wikiTitleToSlug(name),
+      kind: resolveKind({ ...raw, name, slot }),
+      slot,
+      wiki,
+      linkId: linkIdFor({ ...raw, wiki, name }, links),
       notes: raw.notes || "",
       playercrafted: raw.playercrafted || "",
       recipes: raw.recipes || "",
@@ -588,16 +781,6 @@ function fromWikiCache(cacheItems) {
       ...pickItemStats(raw),
     };
   });
-}
-
-function guessKind(raw) {
-  const slot = String(raw.slot || "").toUpperCase();
-  const cats = (raw.categories || []).map((c) => String(c).toLowerCase());
-  if (cats.some((c) => c.includes("weapon")) || raw.dmg || raw.skill) return "weapon";
-  if (cats.some((c) => c.includes("armor")) || slot.includes("CHEST") || slot.includes("LEGS")) return "armor";
-  if (cats.some((c) => c.includes("jewelry")) || /EAR|FINGER|NECK|WRIST/.test(slot)) return "jewelry";
-  if (cats.some((c) => c.includes("shield")) || slot.includes("SECONDARY")) return "shield";
-  return "item";
 }
 
 function mergeCatalog(parts, ctx = {}) {
@@ -629,6 +812,7 @@ function mergeCatalog(parts, ctx = {}) {
         mergeItemStats(prev, item);
         if ((!prev.categories || !prev.categories.length) && item.categories?.length) prev.categories = item.categories;
       }
+      if (!prev.linkId && item.linkId) prev.linkId = item.linkId;
       for (const src of item.sources || []) {
         const key = [src.method, src.questId || "", src.poiId || "", src.npc || "", src.zoneName || "", src.label || ""].join(
           "|"
@@ -811,6 +995,18 @@ function zonesForMob(raw, zones) {
   return { zoneId: ids[0] || null, zoneIds: ids, zoneName: names.join(", ") || text };
 }
 
+const COMMON_MOB_NAME = /^(a|an|the)\s+/i;
+
+/** True for a unique named. "A blacktide brute" is trash. "A bloodynose hag" stays when the wiki gives it a placeholder. */
+function mobIsNamed(mob) {
+  const name = String(mob?.name || "").trim();
+  if (!name || /^x\d+\s+recipient$/i.test(name)) return false;
+  const desc = String(mob?.description || "");
+  if (/\b(?:placeholder|ph)\s+for\b/i.test(desc)) return false;
+  if (/\bnamed\b/i.test(desc) || /\bph\b|placeholder/i.test(desc)) return true;
+  return !COMMON_MOB_NAME.test(name);
+}
+
 /** Named mobs from the wiki, slim enough to ship with the atlas search. */
 function publicMobs(zones = []) {
   const seen = new Set();
@@ -822,6 +1018,7 @@ function publicMobs(zones = []) {
     out.push({
       id: mob.id,
       name: mob.name,
+      named: mobIsNamed(mob),
       level: String(mob.level || "").trim(),
       race: plainWiki(mob.race),
       zoneId: place.zoneId,
@@ -861,5 +1058,9 @@ module.exports = {
   parseDropsFrom,
   sourcesFromWikiItem,
   collectDropMobTitles,
+  mobIsNamed,
   publicMobs,
+  linkIdFor,
+  guessKind,
+  resolveKind,
 };

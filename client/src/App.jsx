@@ -11,6 +11,7 @@ import WhoIsThat from "./WhoIsThat";
 import Notes from "./Notes";
 import Characters from "./Characters";
 import Hunt from "./Hunt";
+import Nameds from "./Nameds";
 import Trades from "./Trades";
 import {
   adoptLegacy,
@@ -33,6 +34,7 @@ let characterSeedClaimed = false;
 const SITE_TABS = [
   { view: "atlas", label: "Atlas" },
   { view: "hunt", label: "Hunt" },
+  { view: "nameds", label: "Nameds" },
   { view: "trades", label: "Trades" },
   { view: "turnins", label: "Turn-ins" },
   { view: "items", label: "Items" },
@@ -923,6 +925,8 @@ export default function App() {
         />
       ) : view === "hunt" ? (
         <Hunt zones={zones} pois={allPois} mobs={world.mobs || []} level={level} onShowPoi={selectPoi} onShowMob={showMob} />
+      ) : view === "nameds" ? (
+        <Nameds pois={allPois} mobs={world.mobs || []} level={level} onShowMob={showMob} />
       ) : view === "trades" ? (
         <Trades
           items={world.items || []}

@@ -1,11 +1,56 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { turnInNames, deriveFromQuests } = require("./items");
+const { turnInNames, deriveFromQuests, linkIdFor, publicItems, guessKind } = require("./items");
 const { publicQuests } = require("./quests");
 const { sellStopsFor, sellToFor } = require("./vendors");
 const { zones } = require("./world");
 const { seedPois } = require("./poi-seed");
 const { parseCraftBlocks, attachCraftInfo } = require("./craft");
+
+test("item hashes attach by wiki page, including a pasted item| prefix", () => {
+  const links = { byPage: { Tattered_Cloth_Gorget: "12331f1850ee94625029bc27" }, byName: { "short sword": "abcdefabcdefabcdefabcdef" } };
+  assert.equal(linkIdFor({ wiki: "Tattered Cloth Gorget", name: "Other" }, links), "12331f1850ee94625029bc27");
+  assert.equal(linkIdFor({ name: "Short Sword" }, links), "abcdefabcdefabcdefabcdef");
+  assert.equal(linkIdFor({ item_link_id: "item|12331f1850ee94625029bc27", name: "Short Sword" }, links), "12331f1850ee94625029bc27");
+});
+
+test("worn armor stays armor when the wiki category is only Items", () => {
+  assert.equal(guessKind({ name: "Acolyte Robe Of Ashes", slot: "Chest", categories: ["Items"], ac: "6" }), "armor");
+  assert.equal(guessKind({ name: "Aged Craftsman Bracer", slot: "WRIST", categories: ["Items"], ac: "25" }), "armor");
+  assert.equal(guessKind({ name: "Academy Robe", slot: "", categories: ["Chest", "Wizard Equipment"] }), "armor");
+  assert.equal(guessKind({ name: "Tattered Cloth Gorget", slot: "NECK", categories: ["Neck"], ac: "1" }), "jewelry");
+  assert.equal(guessKind({ name: "Short Sword", slot: "PRIMARY", skill: "SLA", categories: ["Primary"] }), "weapon");
+  assert.equal(guessKind({ name: "Buckler", slot: "SECONDARY", ac: "3", categories: ["Secondary"] }), "shield");
+  assert.equal(guessKind({ name: "Simple Wooden Lute", slot: "SECONDARY", categories: ["Secondary"] }), "item");
+  assert.equal(guessKind({ name: "Lantern", slot: "PRIMARY SECONDARY BELT", categories: ["Items"] }), "item");
+  assert.equal(
+    guessKind({ name: "The Wrekronomicon", slot: "PRIMARY SECONDARY WAIST BELT", skill: "BLG", dmg: "5" }),
+    "weapon"
+  );
+  assert.equal(guessKind({ name: "Cooked Rat Meat", slot: "", categories: ["Food"] }), "food");
+  assert.equal(guessKind({ name: "Spider Silk", slot: "", categories: ["Items"] }), "item");
+  assert.equal(guessKind({ name: "Corrupted Leather Boots", slot: "", ac: "9", categories: ["All Race Equipment"] }), "armor");
+  assert.equal(guessKind({ name: "Shield of Bones", slot: "", ac: "24", categories: ["All Race Equipment"] }), "shield");
+  assert.equal(guessKind({ name: "Ruby Pendant of the Nine", slot: "", ac: "1", categories: ["All Class Equipment"] }), "jewelry");
+  assert.equal(guessKind({ name: "Enchant Boots: Agility", slot: "", categories: ["All Class Equipment"] }), "item");
+  assert.equal(guessKind({ name: "Ba'Haara Lute", slot: "SECONDARY", ac: "30", categories: ["Instruments"] }), "instrument");
+  assert.equal(guessKind({ name: "Moondew Moss", slot: "", categories: ["Herb"] }), "herb");
+});
+
+test("the published catalog does not file robes as generic items", () => {
+  const items = publicItems([], null, {});
+  const robe = items.find((item) => item.name === "Acolyte Robe Of Ashes");
+  assert.ok(robe, "Acolyte Robe Of Ashes");
+  assert.equal(robe.kind, "armor");
+  const armor = items.filter((item) => item.kind === "armor").length;
+  assert.ok(armor > 500, `expected hundreds of armor pieces, got ${armor}`);
+});
+
+test("a published wiki item keeps its chat hash", () => {
+  const items = publicItems([], null, {});
+  const gorget = items.find((item) => item.name === "Tattered Cloth Gorget");
+  assert.equal(gorget && gorget.linkId, "12331f1850ee94625029bc27");
+});
 
 test("turn-in text keeps counted item names", () => {
   const names = turnInNames(
@@ -144,8 +189,16 @@ test("quest list is not class-limited", () => {
 test("named mobs keep a zone and a written spot", () => {
   const { publicMobs } = require("./items");
   const mobs = publicMobs(zones);
+  const brute = mobs.find((mob) => mob.name === "A Blacktide brute");
+  const hag = mobs.find((mob) => mob.name === "A Bloodynose hag");
+  const steward = mobs.find((mob) => mob.name === "A Claw steward");
+  assert.equal(brute?.named, false);
+  assert.equal(hag?.named, true);
+  assert.equal(steward?.named, false);
+  assert.equal(mobs.find((mob) => mob.name === "X2 Recipient")?.named, false);
   const kruush = mobs.find((mob) => mob.name === "Captain Kruush");
   assert.ok(kruush, "Captain Kruush");
+  assert.equal(kruush.named, true);
   assert.equal(kruush.zoneId, "blacktide-bay");
   assert.match(kruush.location, /upper deck of main ship/);
   assert.equal(kruush.location.includes("[["), false);

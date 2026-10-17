@@ -155,11 +155,35 @@ export function canUseByClass(item, classId) {
   return tokens.some((t) => abbrs.includes(t));
 }
 
+function finiteLevel(value) {
+  if (value == null || value === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
 /** True if the item is farmable at or below `level` (unknown level counts as yes). */
 export function farmableAtLevel(item, level) {
-  const min = item.levelMin;
-  if (min == null || min === "") return true;
-  return Number(min) <= (Number(level) || 0);
+  const min = finiteLevel(item.levelMin);
+  if (min == null) return true;
+  return min <= (Number(level) || 0);
+}
+
+/**
+ * The drop band is near this level: you can reach it now, it does not run
+ * off into a higher camp, and it is not leftover gear from much earlier.
+ * A wide zone range only counts when it also starts near this level.
+ * Unknown levels are not in the band.
+ */
+export function itemInLevelBand(item, level, { below = 10, above = 10, wide = 12 } = {}) {
+  const min = finiteLevel(item?.levelMin);
+  if (min == null) return false;
+  const max = finiteLevel(item?.levelMax) ?? min;
+  const lvl = Number(level) || 0;
+  if (min > lvl) return false;
+  if (max > lvl + above) return false;
+  if (max <= lvl - below) return false;
+  if (max - min > wide && min < lvl - below) return false;
+  return true;
 }
 
 /** Uppercase slot tokens for an item. */
@@ -241,28 +265,53 @@ export function statSummary(item, isWeapon) {
 
 /**
  * Rank upgrades per slot.
+ * `nearLevel` keeps drops around `level` (not a higher camp) plus unleveled
+ * pieces that are not stronger than that band. `perSlot` <= 0 keeps the full list.
+ * `order: "asc"` runs lowest upgrade to best.
  * @returns [{ slot, label, weapon, items: [{item, score, summary}] }]
  */
-export function bestUpgrades(items, { classId, role, level, onlyFarmable = true, slotKey = "", perSlot = 5, statWeights } = {}) {
+export function bestUpgrades(
+  items,
+  { classId, role, level, onlyFarmable = true, nearLevel = false, order = "desc", slotKey = "", perSlot = 5, statWeights } = {}
+) {
   const primaryStat = CLASS_PRIMARY[classId] || "str";
   const weights = normalizeStatWeights(statWeights, defaultStatWeights(classId, role));
   const slots = slotKey ? EQUIP_SLOTS.filter((s) => s.key === slotKey) : EQUIP_SLOTS;
 
   const usable = (items || []).filter(
-    (it) => canUseByClass(it, classId) && (!onlyFarmable || farmableAtLevel(it, level))
+    (it) => canUseByClass(it, classId) && (!onlyFarmable || nearLevel || farmableAtLevel(it, level))
   );
 
   const out = [];
   for (const slotDef of slots) {
     const matches = usable.filter((it) => matchesSlot(it, slotDef));
-    const ranked = matches
-      .map((item) => ({
-        item,
-        score: scoreItem(item, role, primaryStat, slotDef.weapon, weights),
-        summary: statSummary(item, slotDef.weapon),
-      }))
-      .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
-      .slice(0, perSlot);
+    let ranked = matches.map((item) => ({
+      item,
+      score: scoreItem(item, role, primaryStat, slotDef.weapon, weights),
+      summary: statSummary(item, slotDef.weapon),
+    }));
+    if (nearLevel) {
+      const band = ranked.filter((row) => itemInLevelBand(row.item, level));
+      const best = band.reduce((max, row) => Math.max(max, row.score), 0);
+      if (best > 0) {
+        const cap = best + Math.max(3, best * 0.15);
+        const floor = best * 0.45;
+        const unknown = ranked.filter(
+          (row) => finiteLevel(row.item.levelMin) == null && row.score >= floor && row.score <= cap
+        );
+        ranked = band.concat(unknown);
+      } else {
+        ranked = ranked.filter((row) => finiteLevel(row.item.levelMin) == null);
+      }
+    }
+    const dir = order === "asc" ? 1 : -1;
+    ranked.sort(
+      (a, b) =>
+        dir * (a.score - b.score) ||
+        (finiteLevel(a.item.levelMin) ?? 0) - (finiteLevel(b.item.levelMin) ?? 0) ||
+        a.item.name.localeCompare(b.item.name)
+    );
+    if (perSlot > 0) ranked = ranked.slice(0, perSlot);
     out.push({ slot: slotDef.key, label: slotDef.label, weapon: !!slotDef.weapon, items: ranked });
   }
   return out;

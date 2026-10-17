@@ -5,6 +5,7 @@ import {
   bestUpgrades,
   defaultStatWeights,
   EQUIP_SLOTS,
+  itemInLevelBand,
   matchesSlot,
   normalizeStatWeights,
   priorityLabel,
@@ -62,6 +63,37 @@ test("basic stat rows list numbered weapon and armor fields", () => {
     ["DMG 12", "DLY 24", "HP 5", "STR +3"]
   );
   assert.equal(statSummary(weapon, true), "DMG 12 · DLY 24 · HP 5 · STR +3");
+});
+
+test("near-level upgrades stay around that level, lowest to best", () => {
+  const items = [
+    { id: "wide", name: "Fine Black Robe", slot: "CHEST", class: "WIZ", levelMin: 1, levelMax: 40, int: 20, ac: 20 },
+    { id: "higher", name: "Dashing Robe", slot: "CHEST", class: "WIZ", levelMin: 10, levelMax: 35, int: 15, ac: 12 },
+    { id: "lowwide", name: "Beguiler Tunic", slot: "CHEST", class: "WIZ", levelMin: 1, levelMax: 15, int: 25, ac: 20 },
+    { id: "now", name: "Scholar Robe", slot: "CHEST", class: "WIZ", levelMin: 12, levelMax: 22, int: 6, ac: 8 },
+    { id: "low", name: "Tattered Robe", slot: "CHEST", class: "WIZ", levelMin: 8, levelMax: 12, int: 1, ac: 2 },
+    { id: "old", name: "Ancient Robe", slot: "CHEST", class: "WIZ", levelMin: 1, levelMax: 1, int: 1 },
+    { id: "quest", name: "Academy Robe", slot: "CHEST", class: "WIZ", int: 4, ac: 6 },
+    { id: "mythic", name: "Wyrmsbane", slot: "CHEST", class: "WIZ", int: 30, ac: 30 },
+  ];
+  assert.equal(itemInLevelBand(items[3], 12), true);
+  assert.equal(itemInLevelBand(items[0], 12), false);
+  assert.equal(itemInLevelBand(items[1], 12), false);
+  assert.equal(itemInLevelBand(items[2], 12), false);
+  const [chest] = bestUpgrades(items, {
+    classId: "wizard",
+    role: "caster",
+    level: 12,
+    nearLevel: true,
+    order: "asc",
+    perSlot: 0,
+    slotKey: "CHEST",
+  });
+  assert.deepEqual(
+    chest.items.map((row) => row.item.id),
+    ["low", "quest", "now"]
+  );
+  assert.ok(chest.items.at(-1).score >= chest.items[0].score);
 });
 
 test("paired slots accept the wiki item slot", () => {

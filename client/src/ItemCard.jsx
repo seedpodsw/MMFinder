@@ -1,4 +1,10 @@
 import { useState } from "react";
+import CopyGameLink from "./CopyGameLink";
+
+function kindLabel(kind) {
+  const text = String(kind || "item");
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
 
 function shown(value) {
   if (value == null || value === "") return "";
@@ -270,9 +276,14 @@ export default function ItemCard({ item, onSellStop, onShowPoi, onShowZone, onSh
     <article className="camp-card focus">
       <header>
         <h3 id={titleId}>{item.name}</h3>
-        <span className="range">{item.kind || "item"}</span>
+        <span className="range">{kindLabel(item.kind)}</span>
       </header>
       {item.slot && <p className="kind-pill">{item.slot}</p>}
+      {item.linkId ? (
+        <p className="adj">
+          <CopyGameLink item={item} empty={null} />
+        </p>
+      ) : null}
       {columns ? (
         <>
           <div className="tabs item-modal-tabs" role="tablist">

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   bestUpgrades,
   scoreItem,
@@ -75,6 +75,19 @@ function WeightField({ stat, value, leading, onChange }) {
   );
 }
 
+function UpgradeList({ token, children }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [token]);
+  return (
+    <ol ref={ref} className="gear-list">
+      {children}
+    </ol>
+  );
+}
+
 function DeltaBadge({ delta }) {
   if (delta == null) return null;
   const rounded = Math.round(delta * 10) / 10;
@@ -130,7 +143,6 @@ export default function GearFinder({
     return map;
   }, [items]);
 
-  const perSlot = slotKey ? (onlyUpgrades ? 40 : 20) : onlyUpgrades ? 8 : 4;
   const results = useMemo(
     () =>
       classId
@@ -138,13 +150,15 @@ export default function GearFinder({
             classId,
             role,
             level: lvl,
-            onlyFarmable,
+            onlyFarmable: false,
+            nearLevel: onlyFarmable,
+            order: "asc",
+            perSlot: 0,
             slotKey,
-            perSlot,
             statWeights: weights,
           })
         : [],
-    [items, classId, role, lvl, onlyFarmable, slotKey, perSlot, weights]
+    [items, classId, role, lvl, onlyFarmable, slotKey, weights]
   );
 
   function setStatWeight(stat, raw) {
@@ -218,7 +232,7 @@ export default function GearFinder({
 
         <label className="gear-farmable">
           <input type="checkbox" checked={onlyFarmable} onChange={(e) => setOnlyFarmable(e.target.checked)} />
-          <span>Farmable at my level</span>
+          <span>Around my level</span>
         </label>
 
         <label className="gear-farmable">
@@ -314,16 +328,17 @@ export default function GearFinder({
                     {equippedItem ? "Nothing beats what you have." : "No matches at this level."}
                   </p>
                 ) : (
-                  <ol className="gear-list">
+                  <UpgradeList token={suggestions.map((row) => row.item.id).join("|")}>
                     {suggestions.map(({ item, score, summary }, i) => {
                       const canJump = Boolean(item.primaryPoiId || item.primaryZoneId || item.zoneName);
                       const delta = equippedScore != null ? score - equippedScore : null;
                       const isUpgrade = delta != null && delta > 0;
+                      const isBest = i === suggestions.length - 1 && (equippedScore == null || score > equippedScore);
                       return (
-                        <li key={item.id} className={isUpgrade ? "is-upgrade" : ""}>
+                        <li key={item.id} className={[isUpgrade ? "is-upgrade" : "", isBest ? "is-best" : ""].filter(Boolean).join(" ")}>
                           <div className="gear-row-top">
                             <button className="gear-name" onClick={() => onSelectItem?.(item)} title="Open item">
-                              {i === 0 && !equippedItem && <span className="gear-best">★</span>}
+                              {isBest && <span className="gear-best">★</span>}
                               {item.name}
                             </button>
                             <span className="gear-scores">
@@ -335,6 +350,7 @@ export default function GearFinder({
                           </div>
                           {summary && <p className="gear-stats">{summary}</p>}
                           <p className="gear-where">
+                            {item.level && <span className="gear-lvl">{item.level}</span>}
                             {canJump ? (
                               <button className="items-farm-link" onClick={() => onFarm?.(item)} title="Show on map">
                                 {item.farmAt || item.how || "Show on map"}
@@ -354,7 +370,7 @@ export default function GearFinder({
                         </li>
                       );
                     })}
-                  </ol>
+                  </UpgradeList>
                 )}
               </article>
             );
