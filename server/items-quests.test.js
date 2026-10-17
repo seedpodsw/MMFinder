@@ -244,21 +244,136 @@ test("named mobs keep a zone and a written spot", () => {
 });
 
 test("wiki levels land on named pins and unplaced hunts stay off the plate", () => {
+  const { loadMobCache } = require("./items");
   const bone = seedPois.find((p) => p.id === "tw-construct");
-  assert.equal(bone.soloMin, 63);
-  assert.match(bone.notes, /63\+/);
+  const boneMob = Object.values(loadMobCache()).find((m) => m.name === "Bone Construct");
+  const boneLevel = Number(String(boneMob?.level || "").match(/(\d+)/)?.[1]);
+  assert.ok(boneLevel, "Bone Construct level in mob cache");
+  assert.equal(bone.soloMin, boneLevel);
+  assert.equal(bone.mx, 54);
+  assert.equal(bone.my, 22);
   const kruushPin = seedPois.find((p) => p.id === "bt-kruush");
   assert.equal(kruushPin.zoneId, "blacktide-bay");
   assert.ok(kruushPin.mx > 40 && kruushPin.mx < 55);
+  assert.equal(kruushPin.soloMin, 29);
   const ships = seedPois.find((p) => p.id === "bt-ships");
   assert.ok(ships.mx > 40, "ships sit on the boats, not the margin caption");
   const bay = seedPois.find((p) => p.id === "wiki-lv-blacktide-bay");
   assert.ok(bay, "blacktide hunt list");
   assert.equal(bay.mx, undefined);
   assert.equal(/Captain Kruush/.test(bay.monsters), false);
-  assert.match(bay.monsters, /Blacktide warmage/);
   const fae = seedPois.find((p) => p.id === "wiki-lv-faelindral");
   assert.ok(fae, "faelindral hunt list");
   assert.equal(fae.mx, undefined);
   assert.equal(fae.my, undefined);
+});
+
+test("catalog diff reports added changed and removed names", () => {
+  const { diffCatalog, atomicWriteJson } = require("./wiki-catalog-diff");
+  const fs = require("fs");
+  const os = require("os");
+  const path = require("path");
+  const previous = [
+    { wiki: "A", name: "A", ac: "1" },
+    { wiki: "B", name: "B", ac: "1" },
+  ];
+  const next = [
+    { wiki: "A", name: "A", ac: "2" },
+    { wiki: "C", name: "C", ac: "1" },
+  ];
+  const diff = diffCatalog(previous, next, { keyFn: (r) => r.wiki, nameFn: (r) => r.name });
+  assert.deepEqual(diff.added, ["C"]);
+  assert.deepEqual(diff.changed, ["A"]);
+  assert.deepEqual(diff.removed, ["B"]);
+
+  const merchantsPrev = [{ name: "Shortfolk", items: ["a"] }, { name: "Gone Stall", items: ["b"] }];
+  const merchantsNext = [{ name: "Shortfolk", items: ["a"] }];
+  const mDiff = diffCatalog(merchantsPrev, merchantsNext, {
+    keyFn: (r) => r.name,
+    nameFn: (r) => r.name,
+  });
+  assert.deepEqual(mDiff.removed, ["Gone Stall"]);
+
+  const file = path.join(os.tmpdir(), `mmfinder-catalog-${Date.now()}.json`);
+  const prior = { importedAt: "2020-01-01", mobs: [{ name: "Old" }] };
+  fs.writeFileSync(file, JSON.stringify(prior));
+  const before = fs.readFileSync(file, "utf8");
+  try {
+    throw new Error("fetch failed");
+  } catch {
+    /* no write after failed fetch */
+  }
+  assert.equal(fs.readFileSync(file, "utf8"), before);
+  atomicWriteJson(file, { importedAt: "2026-01-01", mobs: [{ name: "New" }] });
+  assert.match(fs.readFileSync(file, "utf8"), /New/);
+  fs.rmSync(file, { force: true });
+});
+
+test("wiki level notes fill empty pins and annotate hand levels without moving them", () => {
+  const { withWikiLevels, setWikiLevelNote } = require("./wiki-hunts");
+  assert.equal(setWikiLevelNote("Wiki level 16.", "18"), "Wiki level 18.");
+  assert.equal(setWikiLevelNote("North floor.", "31"), "North floor. Wiki level 31.");
+
+  const mobs = [
+    {
+      name: "Bone Construct",
+      zoneId: "tomb-wyrmsbane",
+      key: "bone construct",
+      zoneCount: 1,
+      level: { soloMin: 63, soloMax: 63, label: "63+" },
+    },
+    {
+      name: "Captain Kruush",
+      zoneId: "blacktide-bay",
+      key: "captain kruush",
+      zoneCount: 1,
+      level: { soloMin: 31, soloMax: 31, label: "31" },
+    },
+    {
+      name: "Blacktide warmage",
+      zoneId: "blacktide-bay",
+      key: "blacktide warmage",
+      zoneCount: 1,
+      level: { soloMin: 22, soloMax: 22, label: "22" },
+    },
+  ];
+  const pois = [
+    { id: "tw-construct", zoneId: "tomb-wyrmsbane", name: "Bone Construct", kind: "named", mx: 54, my: 22, notes: "North 1–3F." },
+    {
+      id: "bt-kruush",
+      zoneId: "blacktide-bay",
+      name: "Captain Kruush",
+      kind: "named",
+      mx: 46.6,
+      my: 85.3,
+      soloMin: 29,
+      soloMax: 29,
+      monsters: "Captain Kruush 29",
+      notes: "Upper deck of the main ship.",
+    },
+  ];
+  const logged = [];
+  const out = withWikiLevels(pois, {
+    mobs,
+    zones: [
+      { id: "tomb-wyrmsbane", name: "Tomb of the Last Wyrmsbane" },
+      { id: "blacktide-bay", name: "Blacktide Bay" },
+    ],
+    skipDrops: true,
+    log: (line) => logged.push(line),
+  });
+  const bone = out.find((p) => p.id === "tw-construct");
+  assert.equal(bone.soloMin, 63);
+  assert.equal(bone.mx, 54);
+  assert.match(bone.notes, /63\+/);
+  const kruush = out.find((p) => p.id === "bt-kruush");
+  assert.equal(kruush.soloMin, 29);
+  assert.equal(kruush.mx, 46.6);
+  assert.match(kruush.notes, /Wiki level 31\./);
+  const bay = out.find((p) => p.id === "wiki-lv-blacktide-bay");
+  assert.ok(bay);
+  assert.equal(bay.mx, undefined);
+  assert.equal(/Captain Kruush/.test(bay.monsters), false);
+  assert.match(bay.monsters, /Blacktide warmage/);
+  assert.ok(logged.some((line) => /Blacktide warmage/.test(line)));
 });

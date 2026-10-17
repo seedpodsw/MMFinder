@@ -158,6 +158,49 @@ async function writeJson(filePath, data) {
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
+function entryKey(entry) {
+  return `${entry.level}::${String(entry.name || "").toLowerCase()}`;
+}
+
+function diffSpellEntries(previousEntries, nextEntries) {
+  const prev = new Map((previousEntries || []).map((e) => [entryKey(e), e]));
+  const next = new Map((nextEntries || []).map((e) => [entryKey(e), e]));
+  const added = [];
+  const changed = [];
+  const removed = [];
+  for (const [key, entry] of next) {
+    if (!prev.has(key)) {
+      added.push(entry.name);
+      continue;
+    }
+    const prior = prev.get(key);
+    const fields = ["description", "category", "location", "mana", "level", "type"];
+    const same = fields.every((f) => String(prior[f] ?? "") === String(entry[f] ?? ""));
+    if (!same) changed.push(entry.name);
+  }
+  for (const [key, entry] of prev) {
+    if (!next.has(key)) removed.push(entry.name);
+  }
+  added.sort((a, b) => a.localeCompare(b));
+  changed.sort((a, b) => a.localeCompare(b));
+  removed.sort((a, b) => a.localeCompare(b));
+  return { added, changed, removed };
+}
+
+async function listIndexClassPages() {
+  try {
+    const wikitext = await fetchWikitext("Spells_By_Class");
+    const names = new Set();
+    for (const match of wikitext.matchAll(/\[\[([^\]|#]+)(?:\|[^\]]+)?\]\]/g)) {
+      const title = match[1].replace(/_/g, " ").trim();
+      if (title && !title.includes(":")) names.add(title.replace(/ /g, "_"));
+    }
+    return [...names];
+  } catch {
+    return [];
+  }
+}
+
 async function importClass(page) {
   const className = displayName(page);
   const id = fileId(page);
@@ -199,6 +242,14 @@ async function importClass(page) {
     entries,
   };
 
+  const diff = diffSpellEntries(previous?.entries || [], entries);
+  console.log(
+    ` ${entries.length} (was ${previous?.entryCount ?? 0}; added ${diff.added.length}, changed ${diff.changed.length}, removed ${diff.removed.length})`
+  );
+  if (diff.added.length) console.log(`    Added: ${diff.added.join(", ")}`);
+  if (diff.changed.length) console.log(`    Changed: ${diff.changed.join(", ")}`);
+  if (diff.removed.length) console.log(`    Removed: ${diff.removed.join(", ")}`);
+
   await writeJson(filePath, classData);
 
   let kept = 0;
@@ -225,6 +276,7 @@ async function importClass(page) {
       kept,
       enriched: entries.length - kept,
       previous: previous?.entryCount ?? 0,
+      diff,
     },
   };
 }
@@ -232,6 +284,15 @@ async function importClass(page) {
 async function main() {
   await fs.mkdir(CLASSES_DIR, { recursive: true });
   console.log(`Fetching ${CLASS_PAGES.length} class pages from wiki...`);
+
+  const known = new Set(CLASS_PAGES);
+  const indexPages = await listIndexClassPages();
+  const unknown = indexPages.filter((page) => !known.has(page) && !known.has(page.replace(/ /g, "_")));
+  if (unknown.length) {
+    console.log(
+      `Spells index names class pages outside CLASS_PAGES (not imported): ${unknown.join(", ")}`
+    );
+  }
 
   const classes = [];
   const stats = [];
@@ -242,12 +303,7 @@ async function main() {
     const result = await importClass(page);
     classes.push(result.index);
     stats.push(result.stats);
-    for (const level of result.index.levels) {
-      // uniqueness counted later from files if needed
-    }
-    console.log(
-      ` ${result.stats.total} (was ${result.stats.previous}; kept tags ${result.stats.kept}, retagged ${result.stats.enriched})`
-    );
+    console.log(`    kept tags ${result.stats.kept}, retagged ${result.stats.enriched}`);
     await sleep(250);
   }
 

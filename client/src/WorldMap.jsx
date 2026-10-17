@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { questTarget, campFits, hasHuntLevel } from "./finder";
+import { loadMapView, saveMapView } from "./map-view.js";
 import { mobSearchHits } from "./mob-find";
 
 export { campFits, hasHuntLevel };
@@ -225,7 +226,7 @@ export default function WorldMap({
   const layerFrameRef = useRef(0);
   const seenFrameRef = useRef(0);
   const clickTimerRef = useRef(null);
-  const layerBootRef = useRef(true);
+  const layerShownRef = useRef(null);
   const miniCanvasRef = useRef(null);
   const [zoomBand, setZoomBand] = useState("mid");
   const [miniBox, setMiniBox] = useState(null);
@@ -517,21 +518,40 @@ export default function WorldMap({
     map.on("zoom", () => syncLayers(map));
     map.on("zoomend", refresh);
     map.on("move", () => setMiniBox(minimapBox(map, atlas, layerRef.current)));
+    let alive = true;
     map.on("moveend", () => {
+      if (!alive) return;
       refresh();
       peekViewport(map);
+      rememberMapView(map);
     });
     map.invalidateSize();
-    showWholeLayer(map, atlas, layerRef.current, false);
+    const placeCamera = () => {
+      const zoneId = selectedIdRef.current;
+      return openOn(
+        map,
+        atlas,
+        layerRef.current,
+        overlaysRef.current.get(zoneId),
+        focusPoiId ? null : savedCameraFor(zoneId)
+      );
+    };
+    let placed = placeCamera();
     refresh();
 
     const ro = new ResizeObserver(() => {
       map.invalidateSize();
+      if (!placed) {
+        placed = placeCamera();
+        if (placed) refresh();
+        return;
+      }
       holdFrame(map, atlas, layerRef.current);
     });
     ro.observe(hostRef.current);
 
     return () => {
+      alive = false;
       window.clearTimeout(clickTimerRef.current);
       ro.disconnect();
       map.remove();
@@ -547,10 +567,10 @@ export default function WorldMap({
     if (!map) return;
     syncLayers(map);
     layerFrameRef.current += 1;
-    if (layerBootRef.current) {
-      layerBootRef.current = false;
-      return;
-    }
+    if (layerShownRef.current === layer) return;
+    const first = layerShownRef.current == null;
+    layerShownRef.current = layer;
+    if (first) return;
     showWholeLayer(map, atlas, layer, true);
   }, [layer]);
 
@@ -772,6 +792,29 @@ export default function WorldMap({
       if (hit.poiId) onSelectPoiRef.current?.(hit.poiId);
       else if (hit.zoneId) diveInto(hit.zoneId);
     } else if (hit.poi) onSelectPoiRef.current?.(hit.poi);
+  }
+
+  function rememberMapView(map) {
+    const size = map.getSize();
+    if (size.x < 40 || size.y < 40) return;
+    const center = map.getCenter();
+    const zoom = map.getZoom();
+    if (!center || !Number.isFinite(zoom)) return;
+    let zone = selectedIdRef.current;
+    if (zoom >= 0.85) {
+      const id = zoneAtLatLng(center, overlaysRef.current, zone, layerRef.current, { skipNested: true });
+      if (id) zone = id;
+    }
+    if (!zone) return;
+    try {
+      saveMapView(localStorage, {
+        zone,
+        layer: layerRef.current === "deep" ? "deep" : "surface",
+        camera: { lat: center.lat, lng: center.lng, zoom },
+      });
+    } catch {
+      /* private mode can block storage */
+    }
   }
 
   function peekViewport(map) {
@@ -1121,6 +1164,42 @@ function layerFrame(map, atlas, layer) {
   const size = map.getSize();
   if (!content?.isValid?.() || size.x < 40 || size.y < 40) return null;
   return frameOf(map, content, chromePad(size));
+}
+
+function savedCameraFor(zoneId) {
+  try {
+    const saved = loadMapView(localStorage);
+    if (!saved || saved.zone !== zoneId) return null;
+    return saved.camera;
+  } catch {
+    return null;
+  }
+}
+
+function openOn(map, atlas, layer, entry, camera) {
+  const size = map.getSize();
+  if (size.x < 40 || size.y < 40) return false;
+  const frame = layerFrame(map, atlas, layer);
+  if (frame) {
+    map.setMinZoom(frame.zoom);
+    map.setMaxBounds(frame.bounds.pad(0.04));
+  }
+  if (camera) {
+    map.setView([camera.lat, camera.lng], camera.zoom, { animate: false });
+    return true;
+  }
+  const bounds = entry?.geo || entry?.bounds;
+  if (bounds?.isValid?.()) {
+    map.fitBounds(bounds, {
+      paddingTopLeft: [36, 48],
+      paddingBottomRight: [36, 36],
+      maxZoom: 3.6,
+      animate: false,
+    });
+    return true;
+  }
+  showWholeLayer(map, atlas, layer, false);
+  return true;
 }
 
 function showWholeLayer(map, atlas, layer, animate) {

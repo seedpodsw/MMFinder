@@ -4,6 +4,7 @@
  */
 const fs = require("fs");
 const { BUYS_PATH, cleanMerchant } = require("./vendors");
+const { diffCatalog, printCatalogDiff, atomicWriteJson } = require("./wiki-catalog-diff");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
 
@@ -112,21 +113,25 @@ async function main() {
   const byName = new Map(fresh.map((merchant) => [merchant.name, merchant]));
   const kept = previous.filter((merchant) => byName.has(merchant.name)).map((merchant) => byName.get(merchant.name));
   const seen = new Set(kept.map((merchant) => merchant.name));
-  const added = fresh.filter((merchant) => !seen.has(merchant.name)).sort((a, b) => a.name.localeCompare(b.name));
-  const merchants = [...kept, ...added];
+  const appended = fresh.filter((merchant) => !seen.has(merchant.name)).sort((a, b) => a.name.localeCompare(b.name));
+  const merchants = [...kept, ...appended];
+  const diff = diffCatalog(previous, merchants, {
+    keyFn: (row) => String(row?.name || "").trim(),
+    nameFn: (row) => row.name,
+  });
+  printCatalogDiff("Merchants", diff);
   const payload = {
     importedAt: new Date().toISOString(),
     count: merchants.length,
     merchants,
   };
-  const tmp = `${BUYS_PATH}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
-  fs.renameSync(tmp, BUYS_PATH);
-  console.log(`Wrote ${merchants.length} merchants (added ${added.length}) → ${BUYS_PATH}`);
-  if (added.length) console.log(`Added: ${added.map((merchant) => merchant.name).join(", ")}`);
+  atomicWriteJson(BUYS_PATH, payload);
+  console.log(`Wrote ${merchants.length} merchants → ${BUYS_PATH}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

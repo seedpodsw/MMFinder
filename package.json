@@ -9,14 +9,15 @@
     "client": "vite --config client/vite.config.js",
     "export:static": "node scripts/export-static.js",
     "build": "node scripts/export-static.js && vite build --config client/vite.config.js",
-    "test": "node --test shared/story.test.js shared/spells.test.js shared/spell-wiki.test.js shared/release.test.js shared/field.test.js shared/place.test.js shared/who-outline.test.js shared/item-link.test.js client/src/notes-store.test.js client/src/characters-store.test.js client/src/gear.test.js client/src/mob-find.test.js client/src/named-list.test.js client/src/credits.test.js server/maps-asset.test.js server/items-quests.test.js",
+    "test": "node --test shared/story.test.js shared/spells.test.js shared/spell-wiki.test.js shared/release.test.js shared/field.test.js shared/place.test.js shared/who-outline.test.js shared/item-link.test.js client/src/notes-store.test.js client/src/characters-store.test.js client/src/gear.test.js client/src/mob-find.test.js client/src/named-list.test.js client/src/credits.test.js client/src/map-view.test.js server/maps-asset.test.js server/items-quests.test.js server/quest-report.test.js",
     "import:who": "node scripts/download-who.js",
     "start": "node server/index.js",
     "import:wiki-items": "node server/import-wiki-items.js",
     "import:item-links": "node scripts/fetch-item-links.js",
     "import:wiki-mobs": "node server/import-wiki-mobs.js",
     "import:wiki-merchants": "node server/import-wiki-merchants.js",
-    "import:wiki-spells": "node scripts/import-wiki-spells.mjs"
+    "import:wiki-spells": "node scripts/import-wiki-spells.mjs",
+    "report:wiki-quests": "node scripts/report-wiki-quests.mjs"
   },
   "dependencies": {
     "ag-grid-community": "^36.2.0",

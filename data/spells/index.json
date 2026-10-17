@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "https://monstersandmemories.miraheze.org/wiki/Spells_By_Class",
-    "fetchedAt": "2026-10-17T07:35:10.306Z",
+    "fetchedAt": "2026-10-17T11:27:38.232Z",
     "classCount": 18,
     "totalEntries": 1615,
     "uniqueEntries": 1381,
@@ -44,7 +44,7 @@
       "aoe",
       "mana-drain"
     ],
-    "taggedAt": "2026-10-17T07:35:10.306Z"
+    "taggedAt": "2026-10-17T11:27:38.232Z"
   },
   "classes": [
     {

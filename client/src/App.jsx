@@ -29,6 +29,7 @@ import { huntsHere, huntsAtLevel, huntZonesNear, huntSide, nextForYou, questTarg
 import { findMob, pinForMob } from "./mob-find";
 import { loadHero } from "../../shared/field.js";
 import { appView, breadcrumb, itemLinkFilters, kindFor, readPlace, writePlace } from "../../shared/place.js";
+import { loadMapView, openingPlace } from "./map-view.js";
 
 let characterSeedClaimed = false;
 
@@ -73,6 +74,16 @@ const POI_KINDS = [
   "custom",
 ];
 
+function readOpening() {
+  let saved = null;
+  try {
+    saved = loadMapView(localStorage);
+  } catch {
+    saved = null;
+  }
+  return openingPlace(readPlace(window.location.search), saved);
+}
+
 function tokensMatch(hay, q) {
   const h = String(hay || "").toLowerCase();
   return q
@@ -87,10 +98,9 @@ export default function App() {
   const [world, setWorld] = useState(null);
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState("");
-  const [layer, setLayer] = useState("surface");
-  const [selectedId, setSelectedId] = useState(
-    () => readPlace(window.location.search).zone || "night-harbor"
-  );
+  const [opening] = useState(readOpening);
+  const [layer, setLayer] = useState(opening.layer === "deep" ? "deep" : "surface");
+  const [selectedId, setSelectedId] = useState(opening.zone);
   const [focusPoi, setFocusPoi] = useState(() => readPlace(window.location.search).poi);
   const [foundMob, setFoundMob] = useState(null);
   const [hoverPoi, setHoverPoi] = useState(null);

@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { slugify, collectDropMobTitles, MOB_CACHE, loadWikiCache, knownLootFromWikitext } = require("./items");
+const { diffCatalog, printCatalogDiff, atomicWriteJson, readJsonRows } = require("./wiki-catalog-diff");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
 
@@ -187,21 +188,37 @@ async function main() {
     .filter((title) => title && title.length <= 180 && !/[|\n\r<>{}]/.test(title) && !/^[*#/]/.test(title))
     .sort((a, b) => a.localeCompare(b));
   if (limit > 0) list = list.slice(0, limit);
+  const previous = readJsonRows(MOB_CACHE, "mobs");
   console.log(`Importing ${list.length} mob pages (${named.length} Namedmobpage)…`);
   const mobs = await fetchMobPages(list);
+  const diff = diffCatalog(previous, mobs, {
+    keyFn: (row) => String(row?.wiki || row?.name || "").trim(),
+    nameFn: (row) => row.name || row.wiki,
+  });
+  printCatalogDiff("Mobs", diff);
   const payload = {
     importedAt: new Date().toISOString(),
     count: mobs.length,
     mobs,
   };
-  const dir = path.dirname(MOB_CACHE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(MOB_CACHE, JSON.stringify(payload, null, 2));
+  atomicWriteJson(MOB_CACHE, payload);
   const withLevel = mobs.filter((m) => m.level).length;
   console.log(`Wrote ${mobs.length} mobs (${withLevel} with level) → ${MOB_CACHE}`);
+
+  // Re-read the fresh cache: poi-seed/wiki-hunts load mobs at require time.
+  delete require.cache[require.resolve("./items")];
+  delete require.cache[require.resolve("./wiki-hunts")];
+  delete require.cache[require.resolve("./poi-seed")];
+  const { handPois } = require("./poi-seed");
+  const { withWikiLevels } = require("./wiki-hunts");
+  withWikiLevels(handPois, { log: (line) => console.log(line) });
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+module.exports = { fetchMobPages };
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

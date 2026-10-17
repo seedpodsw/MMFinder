@@ -8,6 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 const { slugify, sourcesFromWikiItem, guessKind, WIKI_CACHE } = require("./items");
+const { diffCatalog, printCatalogDiff, atomicWriteJson, readJsonRows } = require("./wiki-catalog-diff");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
 const ITEM_TEMPLATE = "Template:ItemBox";
@@ -252,11 +253,17 @@ async function recentChangedTitles(sinceIso) {
 }
 
 function writeItems(payload) {
-  const dir = path.dirname(WIKI_CACHE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const tmp = `${WIKI_CACHE}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
-  fs.renameSync(tmp, WIKI_CACHE);
+  atomicWriteJson(WIKI_CACHE, payload);
+}
+
+function itemKey(item) {
+  return String(item?.wiki || wikiTitle(item) || "").trim();
+}
+
+function reportItemDiff(previous, items) {
+  const diff = diffCatalog(previous, items, { keyFn: itemKey, nameFn: (row) => row.name || wikiTitle(row) });
+  printCatalogDiff("Items", diff);
+  return diff;
 }
 
 /** Add pages new since the last import and refresh pages edited since then. */
@@ -371,6 +378,7 @@ async function main({ supplement = process.argv.includes("--supplement") } = {})
   if (limit > 0) list = list.slice(0, limit);
   console.log(`Importing ${list.length} item pages…`);
 
+  const previous = readJsonRows(WIKI_CACHE, "items");
   const items = await fetchPages(list);
   for (const item of items) {
     const fromList = titles.get(item.name) || titles.get(item.wiki?.replace(/_/g, " "));
@@ -382,6 +390,7 @@ async function main({ supplement = process.argv.includes("--supplement") } = {})
   const kinds = {};
   for (const item of items) kinds[item.kind] = (kinds[item.kind] || 0) + 1;
   console.log("Kinds:", kinds);
+  reportItemDiff(previous, items);
   const payload = {
     importedAt: new Date().toISOString(),
     source: catArg ? catArg : ITEM_TEMPLATE,
@@ -392,7 +401,11 @@ async function main({ supplement = process.argv.includes("--supplement") } = {})
   console.log(`Wrote ${items.length} items → ${WIKI_CACHE}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+module.exports = { reportItemDiff, itemKey, wikiTitle };
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

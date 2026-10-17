@@ -87,23 +87,49 @@ function dropNames(zoneId, mobNames) {
   return found;
 }
 
-function withWikiLevels(pois) {
-  const mobs = leveledMobs();
+/** Replace or append the Wiki level sentence. */
+function setWikiLevelNote(notes, label) {
+  const sentence = `Wiki level ${label}.`;
+  const text = String(notes || "").trim();
+  if (!text) return sentence;
+  if (/Wiki level [^.]+\./.test(text)) {
+    return text.replace(/Wiki level [^.]+\./g, sentence).replace(/\s+/g, " ").trim();
+  }
+  return `${text} ${sentence}`.replace(/\s+/g, " ").trim();
+}
+
+function pinLevelMatches(poi, level) {
+  if (poi.soloMin == null) return false;
+  const max = poi.soloMax != null ? poi.soloMax : poi.soloMin;
+  return poi.soloMin === level.soloMin && max === level.soloMax;
+}
+
+function withWikiLevels(pois, options = {}) {
+  const mobs = options.mobs || leveledMobs();
+  const zoneList = options.zones || zones;
+  const log = typeof options.log === "function" ? options.log : () => {};
+
   const next = pois.map((poi) => {
-    if (poi.soloMin != null || (poi.kind !== "named" && poi.kind !== "camp")) return poi;
+    if (poi.kind !== "named" && poi.kind !== "camp") return poi;
     const poiName = norm(poi.name);
     const hits = mobs.filter((m) => m.zoneId === poi.zoneId && strongMatch(poiName, m.key));
     if (!hits.length) return poi;
     hits.sort((a, b) => b.key.length - a.key.length);
     const hit = hits[0];
+
+    if (poi.soloMin != null) {
+      if (pinLevelMatches(poi, hit.level)) return poi;
+      return { ...poi, notes: setWikiLevelNote(poi.notes, hit.level.label) };
+    }
+
     const note = `Wiki level ${hit.level.label}.`;
-    const notes = poi.notes && poi.notes.includes("Wiki level") ? poi.notes : [poi.notes, note].filter(Boolean).join(" ");
+    const notes = poi.notes && poi.notes.includes("Wiki level") ? setWikiLevelNote(poi.notes, hit.level.label) : [poi.notes, note].filter(Boolean).join(" ");
     const monsters = poi.monsters || `${hit.name} ${hit.level.label}`;
     return { ...poi, soloMin: hit.level.soloMin, soloMax: hit.level.soloMax, monsters, notes };
   });
 
   const summaries = [];
-  for (const zone of zones) {
+  for (const zone of zoneList) {
     const here = mobs.filter((m) => m.zoneId === zone.id && m.zoneCount < 3);
     const pins = next.filter((p) => p.zoneId === zone.id);
     const fresh = [];
@@ -120,7 +146,9 @@ function withWikiLevels(pois) {
     const lo = Math.min(...shown.map((m) => m.level.soloMin));
     const hi = Math.max(...shown.map((m) => m.level.soloMax));
     const more = fresh.length - shown.length;
-    const drops = dropNames(zone.id, shown.map((m) => m.key));
+    const drops = options.skipDrops ? [] : dropNames(zone.id, shown.map((m) => m.key));
+    const unplacedNames = shown.map((m) => m.name);
+    log(`Unplaced in ${zone.name || zone.id}: ${unplacedNames.join(", ")}`);
     const notes = [
       "Wiki levels for mobs this plate does not mark. No dot, because the client scenes do not give a spot.",
       more > 0 ? `${more} more leveled mobs are on the wiki.` : "",
@@ -142,4 +170,4 @@ function withWikiLevels(pois) {
   return [...next, ...summaries];
 }
 
-module.exports = { withWikiLevels };
+module.exports = { withWikiLevels, setWikiLevelNote, parseLevel, strongMatch, norm };
