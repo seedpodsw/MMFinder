@@ -42,12 +42,17 @@ export default function CookieNotice() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-notice-title"
+        aria-describedby="cookie-notice-about cookie-notice-privacy"
         onClick={(event) => event.stopPropagation()}
       >
-        <p className="eyebrow" id="cookie-notice-title">
-          Cookies
+        <p className="eyebrow">Monsters & Memories</p>
+        <h2 id="cookie-notice-title">MMFinder</h2>
+        <p id="cookie-notice-about">
+          A personal atlas for the game. Find zones, hunts, items, spells, and add your own characters.
         </p>
-        <p>This site does not use cookies. We do not collect any.</p>
+        <p id="cookie-notice-privacy" className="cookie-quiet">
+          This site does not use cookies and does not collect information.
+        </p>
         <button ref={okRef} type="button" className="cookie-ok" onClick={dismiss}>
           OK
         </button>
