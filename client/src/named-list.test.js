@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import test from "node:test";
-import { isNamedMob, levelNote, namedsByLevel, nearestNamedLevel, parseMobLevel } from "./named-list.js";
+import { findLootItem, indexItems, isNamedMob, itemGlance, levelNote, namedsByLevel, nearestNamedLevel, parseMobLevel } from "./named-list.js";
 
 test("a single level, a guess, and a plus stay on that number", () => {
   assert.deepEqual(parseMobLevel("10"), { label: "10", levels: [10] });
@@ -58,6 +58,24 @@ test("common a/an mobs stay off the named list unless the wiki marks them named"
   const ids = groups.flatMap((group) => group.mobs.map((row) => row.mob.id));
   assert.deepEqual([...new Set(ids)].sort(), ["ashir", "hag"]);
   assert.equal(unknown.length, 0);
+});
+
+test("a loot name finds the item, and a shortened title still matches", () => {
+  const index = indexItems([
+    { id: "ashira-protector-axe", name: "Ashira Protector Axe", slot: "PRIMARY SECONDARY", dmg: "8", ac: "0", skill: "1HS" },
+    { id: "design-doc", name: "Adrullan: Online Adventures Design Doc", kind: "item" },
+    { id: "shield", name: "Shield", slot: "SECONDARY" },
+  ]);
+  assert.equal(findLootItem(index, "Ashira Protector Axe").id, "ashira-protector-axe");
+  assert.equal(findLootItem(index, "Adrullan: Online Adventures Design Document").id, "design-doc");
+  assert.equal(findLootItem(index, "Shield of the Protector"), null);
+  const wraps = indexItems([{ name: 'D<span class="item-title-sm">uskswamp</span> Wraps', slot: "HANDS" }]);
+  assert.equal(findLootItem(wraps, "Duskswamp Wraps").slot, "HANDS");
+  assert.equal(itemGlance(wraps.list[0]).name, "Duskswamp Wraps");
+  const glance = itemGlance(index.byNorm.get("ashira protector axe"));
+  assert.equal(glance.line, "Primary, Secondary · 1HS");
+  assert.deepEqual(glance.stats, ["DMG 8"]);
+  assert.equal(itemGlance(null), null);
 });
 
 test("every wiki named with a level is listed", () => {

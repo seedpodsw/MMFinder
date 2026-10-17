@@ -5,7 +5,7 @@
  */
 const fs = require("fs");
 const path = require("path");
-const { slugify, collectDropMobTitles, MOB_CACHE, loadWikiCache } = require("./items");
+const { slugify, collectDropMobTitles, MOB_CACHE, loadWikiCache, knownLootFromWikitext } = require("./items");
 
 const API = "https://monstersandmemories.miraheze.org/w/api.php";
 
@@ -14,11 +14,15 @@ function arg(name, fallback) {
   return hit ? hit.slice(name.length + 3) : fallback;
 }
 
-async function apiGet(params) {
+async function apiGet(params, attempt = 0) {
   const url = new URL(API);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
   url.searchParams.set("format", "json");
   const res = await fetch(url);
+  if ((res.status === 429 || res.status >= 500) && attempt < 4) {
+    await new Promise((resolve) => setTimeout(resolve, 1200 * (attempt + 1)));
+    return apiGet(params, attempt + 1);
+  }
   if (!res.ok) throw new Error(`Wiki API ${res.status}`);
   return res.json();
 }
@@ -97,6 +101,7 @@ async function fetchMobPages(titles) {
         location: box.location || "",
         description: box.description || "",
         hp: box.hp || "",
+        loot: knownLootFromWikitext(wikitext),
       });
     }
     process.stdout.write(`\rFetched ${Math.min(i + batch.length, titles.length)}/${titles.length} mob pages`);
@@ -123,7 +128,56 @@ async function namedMobTitles() {
   return titles;
 }
 
+async function fetchKnownLoot(titles) {
+  const byTitle = new Map();
+  for (let i = 0; i < titles.length; i += 40) {
+    const batch = titles.slice(i, i + 40);
+    const data = await apiGet({
+      action: "query",
+      prop: "revisions",
+      rvprop: "content",
+      rvslots: "main",
+      titles: batch.join("|"),
+    });
+    for (const page of Object.values(data.query?.pages || {})) {
+      if (page.missing != null || !page.title) continue;
+      const wikitext = page.revisions?.[0]?.slots?.main?.["*"] || page.revisions?.[0]?.["*"] || "";
+      const loot = knownLootFromWikitext(wikitext);
+      byTitle.set(page.title, loot);
+      byTitle.set(slugify(page.title), loot);
+    }
+    process.stdout.write(`\rLoot ${Math.min(i + batch.length, titles.length)}/${titles.length}`);
+  }
+  process.stdout.write("\n");
+  return byTitle;
+}
+
+/** Add known_loot onto the mob cache without rewriting levels or locations. */
+async function mergeLoot() {
+  const raw = JSON.parse(fs.readFileSync(MOB_CACHE, "utf8"));
+  const mobs = Array.isArray(raw.mobs) ? raw.mobs : [];
+  const titles = [...new Set(mobs.map((mob) => String(mob?.name || "").trim()).filter(Boolean))];
+  console.log(`Reading known loot for ${titles.length} mob pages…`);
+  const byTitle = await fetchKnownLoot(titles);
+  let withLoot = 0;
+  for (const mob of mobs) {
+    const loot = byTitle.get(mob.name) || byTitle.get(slugify(mob.name));
+    if (!loot) continue;
+    if (loot.length) {
+      mob.loot = loot;
+      withLoot++;
+    } else delete mob.loot;
+  }
+  raw.importedAt = new Date().toISOString();
+  fs.writeFileSync(MOB_CACHE, JSON.stringify(raw, null, 2));
+  console.log(`Wrote loot for ${withLoot} mobs → ${MOB_CACHE}`);
+}
+
 async function main() {
+  if (process.argv.includes("--merge-loot")) {
+    await mergeLoot();
+    return;
+  }
   const limit = Number(arg("limit", "0")) || 0;
   const titles = new Set(collectDropMobTitles(loadWikiCache()));
   const named = await namedMobTitles();

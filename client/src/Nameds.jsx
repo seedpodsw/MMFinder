@@ -1,14 +1,41 @@
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { pinForMob } from "./mob-find";
-import { isNamedMob, levelNote, namedsByLevel, nearestNamedLevel } from "./named-list";
+import { findLootItem, indexItems, isNamedMob, itemGlance, levelNote, namedsByLevel, nearestNamedLevel } from "./named-list";
 import { conOf } from "../../shared/field.js";
 
 function placeLine(mob) {
   return [mob.zoneName || "Zone unknown", mob.race, mob.location].filter(Boolean).join(" · ");
 }
 
-function NamedRow({ mob, note, pin, onShowMob }) {
+function tipStyle(rect) {
+  const width = 300;
+  const left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8));
+  if (window.innerHeight - rect.bottom < 180) return { left, width, bottom: window.innerHeight - rect.top + 8 };
+  return { left, width, top: rect.bottom + 8 };
+}
+
+function LootTip({ tip }) {
+  const glance = itemGlance(tip.item);
+  const name = glance?.name || tip.drop.name;
+  return createPortal(
+    <div className="named-loot-tip" style={tipStyle(tip.rect)} role="tooltip">
+      <strong>{name}</strong>
+      {glance?.line ? <p>{glance.line}</p> : null}
+      {tip.drop.note ? <p className="named-loot-note">{tip.drop.note}</p> : null}
+      {glance?.stats?.length ? <p>{glance.stats.join(" · ")}</p> : null}
+      {glance?.effect ? <p className="named-loot-effect">{glance.effect}</p> : null}
+      {glance?.classReq ? <p>Class {glance.classReq}</p> : null}
+      {glance?.race ? <p>Race {glance.race}</p> : null}
+      {!tip.item ? <p className="named-loot-note">No item page for this drop yet.</p> : null}
+    </div>,
+    document.body
+  );
+}
+
+function NamedRow({ mob, note, pin, onShowMob, itemFor, onTip }) {
   const place = placeLine(mob);
+  const drops = (mob.loot || []).filter((row) => row?.name);
   return (
     <article className="named-row">
       <div className="named-copy">
@@ -17,6 +44,24 @@ function NamedRow({ mob, note, pin, onShowMob }) {
           {note ? <em>{note}</em> : null}
         </h4>
         <p title={place}>{place}</p>
+        {drops.length > 0 && (
+          <div className="named-loot">
+            <span className="named-loot-label">Loot</span>
+            {drops.map((drop) => (
+              <span
+                key={drop.name}
+                className="named-loot-chip"
+                tabIndex={0}
+                onMouseEnter={(e) => onTip({ drop, item: itemFor(drop.name), rect: e.currentTarget.getBoundingClientRect() })}
+                onMouseLeave={() => onTip(null)}
+                onFocus={(e) => onTip({ drop, item: itemFor(drop.name), rect: e.currentTarget.getBoundingClientRect() })}
+                onBlur={() => onTip(null)}
+              >
+                {drop.name}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
       <button
         type="button"
@@ -35,9 +80,10 @@ function NamedRow({ mob, note, pin, onShowMob }) {
   );
 }
 
-export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
+export default function Nameds({ pois = [], mobs = [], items = [], level, onShowMob }) {
   const [query, setQuery] = useState("");
   const [showUnknown, setShowUnknown] = useState(true);
+  const [tip, setTip] = useState(null);
   const bodyRef = useRef(null);
   const didJump = useRef(false);
 
@@ -47,7 +93,9 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
     if (!q) return roster;
     const tokens = q.split(/\s+/).filter(Boolean);
     return roster.filter((mob) => {
-      const hay = [mob.name, mob.zoneName, mob.location, mob.race, mob.level].join(" ").toLowerCase();
+      const hay = [mob.name, mob.zoneName, mob.location, mob.race, mob.level, ...(mob.loot || []).map((drop) => drop.name)]
+        .join(" ")
+        .toLowerCase();
       return tokens.every((token) => hay.includes(token));
     });
   }, [roster, q]);
@@ -60,6 +108,16 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
     }
     return map;
   }, [roster, pois]);
+  const itemIndex = useMemo(() => indexItems(items), [items]);
+  const itemFor = useMemo(() => {
+    const cache = new Map();
+    return (name) => {
+      if (cache.has(name)) return cache.get(name);
+      const item = findLootItem(itemIndex, name);
+      cache.set(name, item);
+      return item;
+    };
+  }, [itemIndex]);
   const searching = q.length > 0;
   const withLevel = filtered.length - unknown.length;
   const mine = nearestNamedLevel(groups, level);
@@ -73,6 +131,14 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
     root.scrollTo({ top: Math.max(0, top - 4) });
   }
 
+  useEffect(() => {
+    const root = bodyRef.current;
+    if (!root) return undefined;
+    const clear = () => setTip(null);
+    root.addEventListener("scroll", clear, { passive: true });
+    return () => root.removeEventListener("scroll", clear);
+  }, []);
+
   useLayoutEffect(() => {
     if (didJump.current) return;
     if (mine == null) return;
@@ -85,7 +151,7 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
       <div className="hunt-bar">
         <input
           value={query}
-          placeholder="Search a named, zone, or race…"
+          placeholder="Search a named, zone, race, or drop…"
           onChange={(e) => setQuery(e.target.value)}
         />
         <div className="hunt-modes">
@@ -138,6 +204,8 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
                   note={levelNote(group.level, row.levelLabel)}
                   pin={pins.get(row.mob.id) || null}
                   onShowMob={onShowMob}
+                  itemFor={itemFor}
+                  onTip={setTip}
                 />
               ))}
             </section>
@@ -156,11 +224,20 @@ export default function Nameds({ pois = [], mobs = [], level, onShowMob }) {
             </header>
             {(showUnknown || searching) &&
               unknown.map((mob) => (
-                <NamedRow key={mob.id} mob={mob} note={mob.level || ""} pin={pins.get(mob.id) || null} onShowMob={onShowMob} />
+                <NamedRow
+                  key={mob.id}
+                  mob={mob}
+                  note={mob.level || ""}
+                  pin={pins.get(mob.id) || null}
+                  onShowMob={onShowMob}
+                  itemFor={itemFor}
+                  onTip={setTip}
+                />
               ))}
           </section>
         )}
       </div>
+      {tip ? <LootTip tip={tip} /> : null}
     </div>
   );
 }

@@ -156,6 +156,89 @@ function plainWiki(s) {
     .trim();
 }
 
+function junkLootName(name) {
+  const text = String(name || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+  if (!text || text.length < 2) return true;
+  if (/^(unknown|unkown|\?+|n\/a|none|no loot|todo|tbd)$/.test(text)) return true;
+  if (/no loot|chance of|confirmed by|hover-list|^<\/?[a-z]/.test(text)) return true;
+  return false;
+}
+
+function tidyLootText(value) {
+  return String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Notable drops from a Namedmobpage `known_loot` field. One item per bullet. */
+function parseKnownLoot(field) {
+  const out = [];
+  const seen = new Set();
+  const push = (name, note) => {
+    const clean = tidyLootText(name);
+    if (!clean || junkLootName(clean)) return;
+    const key = clean.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    const extra = tidyLootText(note).replace(/^[-–—:,\s]+/, "");
+    out.push(extra ? { name: clean, note: extra } : { name: clean });
+  };
+
+  const source = String(field || "")
+    .replace(/<li[^>]*>/gi, "\n* ")
+    .replace(/<\/li>/gi, "")
+    .replace(/<\/?(?:ul|ol)[^>]*>/gi, "\n")
+    .replace(/<br\s*\/?>/gi, "\n");
+
+  for (const rawLine of source.split("\n")) {
+    const line = rawLine
+      .trim()
+      .replace(/^[*#]+\s*/, "")
+      .trim();
+    if (!line) continue;
+    const links = [...line.matchAll(/\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]/g)];
+    if (links.length) {
+      const note = line
+        .replace(/\[\[[^\]]+\]\]/g, " ")
+        .replace(/'{2,}/g, "")
+        .replace(/<br\s*\/?>/gi, " ")
+        .replace(/\s+/g, " ")
+        .replace(/^[-–—:,\s]+/, "")
+        .trim();
+      links.forEach((match, i) => push((match[2] || match[1]).trim(), i === links.length - 1 ? note : ""));
+      continue;
+    }
+    const plain = line
+      .replace(/'{2,}/g, "")
+      .replace(/<br\s*\/?>/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const dash = plain.match(/^(.+?)\s+[-–—]\s+(.+)$/);
+    if (dash) push(dash[1], dash[2]);
+    else push(plain, "");
+  }
+  return out;
+}
+
+/** Every `known_loot` list on a mob page, including one block per zone. */
+function knownLootFromWikitext(wikitext) {
+  const parts = [];
+  const re = /\|\s*known_loot\s*=/gi;
+  let match;
+  const text = String(wikitext || "");
+  while ((match = re.exec(text))) {
+    const rest = text.slice(match.index + match[0].length);
+    const end = rest.search(/\n\s*\|\s*[a-z0-9_]+\s*=|\n\s*\}\}/i);
+    parts.push(end < 0 ? rest : rest.slice(0, end));
+  }
+  return parseKnownLoot(parts.join("\n"));
+}
+
 /** Parse Itempage dropsfrom: zone headers with * [[mob]] lists underneath. */
 function parseDropsFrom(field) {
   const groups = [];
@@ -1015,6 +1098,15 @@ function publicMobs(zones = []) {
     if (!mob?.id || !mob.name || seen.has(mob.id)) continue;
     seen.add(mob.id);
     const place = zonesForMob(mob.zone, zones);
+    const loot = (Array.isArray(mob.loot) ? mob.loot : [])
+      .map((row) => {
+        if (typeof row === "string") return { name: row.trim() };
+        const name = String(row?.name || "").trim();
+        if (!name) return null;
+        const note = String(row.note || "").trim();
+        return note ? { name, note } : { name };
+      })
+      .filter((row) => row?.name);
     out.push({
       id: mob.id,
       name: mob.name,
@@ -1025,6 +1117,7 @@ function publicMobs(zones = []) {
       zoneIds: place.zoneIds,
       zoneName: place.zoneName,
       location: plainWiki(mob.location),
+      loot,
     });
   }
   out.sort((a, b) => a.name.localeCompare(b.name));
@@ -1056,6 +1149,8 @@ module.exports = {
   MOB_CACHE,
   parseWikiLinks,
   parseDropsFrom,
+  parseKnownLoot,
+  knownLootFromWikitext,
   sourcesFromWikiItem,
   collectDropMobTitles,
   mobIsNamed,

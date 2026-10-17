@@ -13,6 +13,7 @@ import Characters from "./Characters";
 import Hunt from "./Hunt";
 import Nameds from "./Nameds";
 import Trades from "./Trades";
+import Credits from "./Credits";
 import {
   adoptLegacy,
   characterLabel,
@@ -44,6 +45,7 @@ const SITE_TABS = [
   { view: "quests", label: "Quests" },
   { view: "notes", label: "Notes" },
   { view: "walk", label: "Walk" },
+  { view: "credits", label: "Credits" },
 ];
 
 const emptyPoiForm = {
@@ -755,7 +757,7 @@ export default function App() {
             );
           })}
         </div>
-        {view !== "walk" && view !== "who" && activeChar && (
+        {view !== "walk" && view !== "who" && view !== "credits" && activeChar && (
           <div className="char-ctl">
             <label>
               <span>Character</span>
@@ -784,7 +786,7 @@ export default function App() {
             </label>
           </div>
         )}
-        {view !== "walk" && view !== "who" && !activeChar && (
+        {view !== "walk" && view !== "who" && view !== "credits" && !activeChar && (
           <>
             <label className="level-ctl">
               <span>Your level</span>
@@ -926,7 +928,7 @@ export default function App() {
       ) : view === "hunt" ? (
         <Hunt zones={zones} pois={allPois} mobs={world.mobs || []} level={level} onShowPoi={selectPoi} onShowMob={showMob} />
       ) : view === "nameds" ? (
-        <Nameds pois={allPois} mobs={world.mobs || []} level={level} onShowMob={showMob} />
+        <Nameds pois={allPois} mobs={world.mobs || []} items={world.items || []} level={level} onShowMob={showMob} />
       ) : view === "trades" ? (
         <Trades
           items={world.items || []}
@@ -935,6 +937,8 @@ export default function App() {
           onShowPoi={selectPoi}
           onSelectItem={setItemModal}
         />
+      ) : view === "credits" ? (
+        <Credits />
       ) : view === "gear" ? (
         <GearFinder
           items={world.items || []}

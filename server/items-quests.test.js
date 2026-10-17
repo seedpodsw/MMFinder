@@ -1,6 +1,6 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { turnInNames, deriveFromQuests, linkIdFor, publicItems, guessKind } = require("./items");
+const { turnInNames, deriveFromQuests, linkIdFor, publicItems, guessKind, knownLootFromWikitext } = require("./items");
 const { publicQuests } = require("./quests");
 const { sellStopsFor, sellToFor } = require("./vendors");
 const { zones } = require("./world");
@@ -186,6 +186,38 @@ test("quest list is not class-limited", () => {
   assert.equal(quests.filter((q) => q.kind === "turnin").length >= 6, true);
 });
 
+test("known loot keeps linked names, a trailing note, and each zone block", () => {
+  const text = `{{Namedmobpage
+| known_loot =
+* [[Ashira Protector Axe]]
+* [[Mote of Shadow]] - Tailoring, Rare drop
+*
+| factions =
+* [[Benu Memza]]
+}}
+{{Namedmobpage
+| known_loot =
+* [[Zone B Drop]]
+* [[Ashira Protector Axe]]
+}}`;
+  assert.deepEqual(knownLootFromWikitext(text), [
+    { name: "Ashira Protector Axe" },
+    { name: "Mote of Shadow", note: "Tailoring, Rare drop" },
+    { name: "Zone B Drop" },
+  ]);
+  const html = `| known_loot =
+<ul class="hover-list">
+<li>[[Commander's Cloak]] - Common</li>
+<li>Corroded Bronze Armor</li>
+<li>?</li>
+</ul>
+| factions =`;
+  assert.deepEqual(knownLootFromWikitext(html), [
+    { name: "Commander's Cloak", note: "Common" },
+    { name: "Corroded Bronze Armor" },
+  ]);
+});
+
 test("named mobs keep a zone and a written spot", () => {
   const { publicMobs } = require("./items");
   const mobs = publicMobs(zones);
@@ -203,6 +235,12 @@ test("named mobs keep a zone and a written spot", () => {
   assert.match(kruush.location, /upper deck of main ship/);
   assert.equal(kruush.location.includes("[["), false);
   assert.ok(mobs.length > 100);
+  const ashir = mobs.find((mob) => mob.name === "Ashir the Protector");
+  assert.ok(ashir.loot.some((drop) => drop.name === "Ashira Protector Axe"));
+  assert.equal(
+    ashir.loot.some((drop) => /scrap|meat/i.test(drop.name)),
+    false
+  );
 });
 
 test("wiki levels land on named pins and unplaced hunts stay off the plate", () => {
