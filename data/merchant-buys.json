@@ -1,6 +1,6 @@
 {
-  "importedAt": "2026-10-06T20:01:19.687Z",
-  "count": 66,
+  "importedAt": "2026-10-17T07:38:14.604Z",
+  "count": 71,
   "merchants": [
     {
       "name": "A cobbler",
@@ -990,7 +990,11 @@
         "Night Harbor"
       ],
       "place": "Enchanters guild (near the docks), outside the door and on a balcony from Jaakima",
-      "items": [],
+      "items": [
+        "Limestone",
+        "Multhele Root",
+        "Resin"
+      ],
       "categories": [
         {
           "phrase": "Animal parts",
@@ -998,18 +1002,6 @@
         },
         {
           "phrase": "Chipped gems",
-          "keywords": []
-        },
-        {
-          "phrase": "Limestone",
-          "keywords": []
-        },
-        {
-          "phrase": "Multhele Roots",
-          "keywords": []
-        },
-        {
-          "phrase": "Resin",
           "keywords": []
         },
         {
@@ -1120,14 +1112,14 @@
         "Ail'Vorith"
       ],
       "place": "Foreign Quarter's Courtyard",
-      "items": [],
+      "items": [
+        "Bat Fur",
+        "Large Bat Fur",
+        "Wererat Pelt"
+      ],
       "categories": [
         {
           "phrase": "Bags",
-          "keywords": []
-        },
-        {
-          "phrase": "Bat Fur",
           "keywords": []
         },
         {
@@ -1364,10 +1356,16 @@
         "Ail'Vorith"
       ],
       "place": "Foreign Quarter Supper Hall",
-      "items": [],
+      "items": [
+        "Deep Beetle Eye"
+      ],
       "categories": [
         {
-          "phrase": "Drinks, Deep Beetle Eye , Food",
+          "phrase": "Drinks",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
           "keywords": []
         }
       ]
@@ -1416,6 +1414,91 @@
           "keywords": []
         }
       ]
+    },
+    {
+      "name": "A used weapons dealer-Faelindral",
+      "type": "used weapons dealer-faelindral",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Trader's Terrace",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "All Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Feslan Godfrey",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Inn behind pirate's tavern.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cooking Supplies",
+          "keywords": []
+        },
+        {
+          "phrase": "Creature parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Gorik Tundsen",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Inn behind pirate's tavern.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cooking Supplies",
+          "keywords": []
+        },
+        {
+          "phrase": "Creature parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Ivar Copperpot",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "The inn across from Citadel Exchange. Downstairs. The backroom behind the bar.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Cooking Supplies",
+          "keywords": []
+        },
+        {
+          "phrase": "Creature parts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Minel Ublast",
+      "type": "",
+      "zones": [
+        "Ail'Vorith"
+      ],
+      "place": "By the inquisitor guards in the main city, up ramp on right",
+      "items": [
+        "Tattered Rawhide Armor",
+        "Rawhide Scarps"
+      ],
+      "categories": []
     }
   ]
 }

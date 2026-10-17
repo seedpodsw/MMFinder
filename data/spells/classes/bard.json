@@ -478,7 +478,7 @@
         "name": "Vellicosa's Fanfare",
         "slug": "Vellicosa's_Fanfare",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Fanfare",
-        "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 100 (L60) Magic Damage every 6 seconds for 18 seconds.",
+        "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 60 (L60) Magic Damage every 6 seconds for 18 seconds.",
         "category": "Brass",
         "categorySlug": "Skill_Brass_Instruments",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -495,17 +495,17 @@
           {
             "kind": "dot",
             "min": 8,
-            "max": 100,
+            "max": 60,
             "minLevel": 8,
             "maxLevel": 60,
             "interval": 6,
             "duration": 18,
             "damageType": "Magic",
-            "display": "8–100 Magic/6s (18s) (L8–L60)",
-            "sortKey": 300
+            "display": "8–60 Magic/6s (18s) (L8–L60)",
+            "sortKey": 180
           }
         ],
-        "valuesSummary": "8–100 Magic/6s (18s) (L8–L60)",
+        "valuesSummary": "8–60 Magic/6s (18s) (L8–L60)",
         "statTags": []
       }
     ],
@@ -899,7 +899,7 @@
         "name": "Vellicosa's Tantara",
         "slug": "Vellicosa's_Tantara",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Tantara",
-        "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 100 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 20 (L60) damage when afflicted by both.",
+        "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 60 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 12 (L60) damage when afflicted by both.",
         "category": "Brass",
         "categorySlug": "Skill_Brass_Instruments",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -916,17 +916,17 @@
           {
             "kind": "dot",
             "min": 12,
-            "max": 100,
+            "max": 60,
             "minLevel": 16,
             "maxLevel": 60,
             "interval": 6,
             "duration": 18,
             "damageType": "Magic",
-            "display": "12–100 Magic/6s (18s) (L16–L60)",
-            "sortKey": 300
+            "display": "12–60 Magic/6s (18s) (L16–L60)",
+            "sortKey": 180
           }
         ],
-        "valuesSummary": "12–100 Magic/6s (18s) (L16–L60)",
+        "valuesSummary": "12–60 Magic/6s (18s) (L16–L60)",
         "statTags": []
       },
       {
@@ -2347,7 +2347,7 @@
       "name": "Vellicosa's Fanfare",
       "slug": "Vellicosa's_Fanfare",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Fanfare",
-      "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 100 (L60) Magic Damage every 6 seconds for 18 seconds.",
+      "description": "Blast your target with an ominous fanfare, dealing 8 (L8) to 60 (L60) Magic Damage every 6 seconds for 18 seconds.",
       "category": "Brass",
       "categorySlug": "Skill_Brass_Instruments",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -2364,17 +2364,17 @@
         {
           "kind": "dot",
           "min": 8,
-          "max": 100,
+          "max": 60,
           "minLevel": 8,
           "maxLevel": 60,
           "interval": 6,
           "duration": 18,
           "damageType": "Magic",
-          "display": "8–100 Magic/6s (18s) (L8–L60)",
-          "sortKey": 300
+          "display": "8–60 Magic/6s (18s) (L8–L60)",
+          "sortKey": 180
         }
       ],
-      "valuesSummary": "8–100 Magic/6s (18s) (L8–L60)",
+      "valuesSummary": "8–60 Magic/6s (18s) (L8–L60)",
       "statTags": []
     },
     {
@@ -2752,7 +2752,7 @@
       "name": "Vellicosa's Tantara",
       "slug": "Vellicosa's_Tantara",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Vellicosa's_Tantara",
-      "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 100 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 20 (L60) damage when afflicted by both.",
+      "description": "Overwhelm your target with unnerving riffs, dealing 12 (L16) to 60 (L60) Magic Damage every 6 seconds for 18 seconds. This ability stacks with Vellicosa's Fanfare, and will deal an additional 2 (L16) to 12 (L60) damage when afflicted by both.",
       "category": "Brass",
       "categorySlug": "Skill_Brass_Instruments",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Brass_Instruments",
@@ -2769,17 +2769,17 @@
         {
           "kind": "dot",
           "min": 12,
-          "max": 100,
+          "max": 60,
           "minLevel": 16,
           "maxLevel": 60,
           "interval": 6,
           "duration": 18,
           "damageType": "Magic",
-          "display": "12–100 Magic/6s (18s) (L16–L60)",
-          "sortKey": 300
+          "display": "12–60 Magic/6s (18s) (L16–L60)",
+          "sortKey": 180
         }
       ],
-      "valuesSummary": "12–100 Magic/6s (18s) (L16–L60)",
+      "valuesSummary": "12–60 Magic/6s (18s) (L16–L60)",
       "statTags": []
     },
     {

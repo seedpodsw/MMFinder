@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "https://monstersandmemories.miraheze.org/wiki/Spells_By_Class",
-    "fetchedAt": "2026-10-14T22:10:42.954Z",
+    "fetchedAt": "2026-10-17T07:35:10.306Z",
     "classCount": 18,
-    "totalEntries": 1612,
-    "uniqueEntries": 1380,
+    "totalEntries": 1615,
+    "uniqueEntries": 1381,
     "tags": [
       "damage",
       "dot",
@@ -44,7 +44,7 @@
       "aoe",
       "mana-drain"
     ],
-    "taggedAt": "2026-10-14T22:10:42.954Z"
+    "taggedAt": "2026-10-17T07:35:10.306Z"
   },
   "classes": [
     {
@@ -291,7 +291,7 @@
       "file": "classes/enchanter.json",
       "type": "spell",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enchanter",
-      "entryCount": 136,
+      "entryCount": 137,
       "levels": [
         1,
         4,
@@ -318,7 +318,7 @@
       "file": "classes/fighter.json",
       "type": "ability",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Fighter",
-      "entryCount": 57,
+      "entryCount": 59,
       "levels": [
         1,
         2,

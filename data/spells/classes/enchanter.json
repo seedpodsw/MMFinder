@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Enchanter Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Enchanter",
-  "entryCount": 136,
+  "entryCount": 137,
   "levels": [
     1,
     4,
@@ -1583,6 +1583,38 @@
         "primaryTag": "utility",
         "effects": [],
         "valuesSummary": "",
+        "statTags": []
+      },
+      {
+        "name": "Exhaustion",
+        "slug": "Exhaustion",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exhaustion",
+        "description": "Exhaust the body of your target, decreasing their Attack Speed by 20% for 1 minute.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 16,
+        "type": "spell",
+        "tags": [
+          "debuff",
+          "exhaust"
+        ],
+        "primaryTag": "debuff",
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Attack Speed",
+            "min": 20,
+            "max": 20,
+            "unit": "%",
+            "display": "−20%",
+            "sortKey": 20
+          }
+        ],
+        "valuesSummary": "−20%",
         "statTags": []
       },
       {
@@ -6014,6 +6046,38 @@
       "primaryTag": "utility",
       "effects": [],
       "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Exhaustion",
+      "slug": "Exhaustion",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exhaustion",
+      "description": "Exhaust the body of your target, decreasing their Attack Speed by 20% for 1 minute.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 16,
+      "type": "spell",
+      "tags": [
+        "debuff",
+        "exhaust"
+      ],
+      "primaryTag": "debuff",
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Attack Speed",
+          "min": 20,
+          "max": 20,
+          "unit": "%",
+          "display": "−20%",
+          "sortKey": 20
+        }
+      ],
+      "valuesSummary": "−20%",
       "statTags": []
     },
     {

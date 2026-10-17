@@ -35,21 +35,9 @@ const PIN_PRIORITY = {
   custom: 1,
 };
 
-// Same hues as the Ail'vorith legend, so a guild pin matches its house.
+// House hues, so a guild pin matches its house. Toilmaster stays gold.
 const AIL_PIN = {
   "av-toilmaster": "#f0c14b",
-  "av-paladin": "#e6c27a",
-  "av-wizard": "#8eb4e6",
-  "av-necro": "#c47a9a",
-  "av-xal": "#c4a0d4",
-  "av-bank-ith": "#8ed0a8",
-  "av-harbor": "#d2b48c",
-  "av-harbor-inner": "#d2b48c",
-  "av-palace": "#f3e6c8",
-  "av-foreign": "#f3e6c8",
-  "av-foreign-east": "#f3e6c8",
-  "av-gate": "#f3e6c8",
-  "av-gate-double": "#f3e6c8",
 };
 
 function pinQuiet(poi) {

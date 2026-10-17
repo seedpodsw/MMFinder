@@ -77,6 +77,8 @@ function parseBuys(text) {
     }
     if (skip) continue;
     if (/about anything|most items at discounted|not a good commerce|^\*?\s*(unknown|none|nothing)\b/i.test(line)) continue;
+    if (/^<\/?dpl>/i.test(line) || /^[a-z0-9_]+\s*=/.test(line)) continue;
+    if (/\bbuys\s+nothing\b|\bbuys\s+none\b/i.test(line)) continue;
     line = line.replace(/^\*\s*/, "").trim();
     if (!line) continue;
     const links = [];

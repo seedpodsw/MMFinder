@@ -218,6 +218,9 @@ test("wiki levels land on named pins and unplaced hunts stay off the plate", () 
   assert.ok(bay, "blacktide hunt list");
   assert.equal(bay.mx, undefined);
   assert.equal(/Captain Kruush/.test(bay.monsters), false);
-  assert.match(bay.monsters, /Blacktide brute/);
-  assert.equal(seedPois.some((p) => p.id === "wiki-lv-faelindral"), false);
+  assert.match(bay.monsters, /Blacktide warmage/);
+  const fae = seedPois.find((p) => p.id === "wiki-lv-faelindral");
+  assert.ok(fae, "faelindral hunt list");
+  assert.equal(fae.mx, undefined);
+  assert.equal(fae.my, undefined);
 });

@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20261015path";
+const MAP_VER = "20261017hold";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 
@@ -154,11 +154,13 @@ const zoneMaps = {
   },
   "shallow-shoals": {
     file: "shallow-shoals.png",
-    wikiFile: "BadShallowShoalMap.png",
-    width: 1100,
-    aspect: 1100 / 1268,
+    wikiFile: "Shallowshoalseg.png",
+    width: 2000,
+    aspect: 2000 / 4020,
     fit: "contain",
-    inset: { l: 0.04, t: 0.04, r: 0.04, b: 0.04 },
+    // Title sits above the north border. The credit line sits under the south border.
+    // Keeper's Bight and Vale of Zintar are drawn on the east edge, so the sides stay.
+    inset: { l: 0, t: 0.038, r: 0, b: 0.017 },
   },
   "evershade-weald": {
     file: "evershade-weald.jpg",
@@ -219,6 +221,15 @@ const zoneMaps = {
     aspect: 1600 / 1251,
     fit: "contain",
   },
+  "great-cavern-sea": {
+    file: "great-cavern-sea.png",
+    width: 3872,
+    aspect: 7744 / 10368,
+    fit: "contain",
+    // Illustrated chart from MnM Atlas (ocombe). scripts/rebuild-gcs.js
+    // stitches the public tiles. The wiki file is still the pencil sketch.
+    skipDownload: true,
+  },
   faelindral: {
     file: "faelindral.jpg",
     wikiFile: "Faelindral V2.jpg",
@@ -271,9 +282,29 @@ const zoneMaps = {
   },
   "ail-vorith": {
     file: "ail-vorith.png",
-    width: 2000,
-    aspect: 2000 / 1592,
+    width: 3712,
+    aspect: 3712 / 4096,
     fit: "contain",
+    // Illustrated chart from MnM Atlas (ocombe). scripts/rebuild-ail.js
+    // stitches the public tiles. Foreign Quarter layout after Neeferio, CC BY-SA 4.0.
+    skipDownload: true,
+  },
+  rothold: {
+    file: "rothold.png",
+    width: 4096,
+    aspect: 4096 / 2015,
+    fit: "contain",
+    // Wiki sheet File:Rothold map by skoop.png. scripts/rebuild-holds.js
+    skipDownload: true,
+  },
+  "blind-midden": {
+    file: "blind-midden.png",
+    width: 2026,
+    aspect: 2026 / 900,
+    fit: "contain",
+    // Ground floor and basement joined. scripts/rebuild-holds.js
+    // Basement drawing stops at a question mark.
+    skipDownload: true,
   },
 };
 
@@ -336,9 +367,9 @@ const ZONE_ROLE = {
   underdocks: "outdoor",
   "caves-of-irem": "outdoor",
   "great-cavern-sea": "outdoor",
-  rothold: "nested",
+  rothold: "outdoor",
   "ail-vorith": "outdoor",
-  "blind-midden": "nested",
+  "blind-midden": "outdoor",
 };
 
 const GATE_ALIASES = {
@@ -490,7 +521,20 @@ function placeEdgeToEdge(host, gateA, sizeB, gateB, hostId, newId) {
   const iB = insetOf(newId);
   const pA = poiAt(host, gateA.mx, gateA.my);
   const box = { w: sizeB.w, h: sizeB.h, x: 0, y: 0 };
-  const axis = connectionAxis(gateA, gateB);
+  // The cavern exit faces east. Ail'vorith's docks are on the south edge of that
+  // city plate, and scoring both gates would park the city on top of Rothold.
+  const seaToCity =
+    (hostId === "great-cavern-sea" && newId === "ail-vorith") ||
+    (hostId === "ail-vorith" && newId === "great-cavern-sea");
+  // Rothold's sea door is the lake room on the caves sheet, north of the cavern.
+  const seaToHold =
+    (hostId === "great-cavern-sea" && newId === "rothold") ||
+    (hostId === "rothold" && newId === "great-cavern-sea");
+  // Blind Midden hangs off the city's east exit. The stair is mid-plate.
+  const cityToMidden =
+    (hostId === "ail-vorith" && newId === "blind-midden") ||
+    (hostId === "blind-midden" && newId === "ail-vorith");
+  const axis = seaToCity || cityToMidden ? "ew" : seaToHold ? "ns" : connectionAxis(gateA, gateB);
   if (axis === "ew") {
     if (pct(gateA.mx, 50) <= 50) box.x = artA.x - (1 - iB.r) * sizeB.w;
     else box.x = artA.x + artA.w - iB.l * sizeB.w;
@@ -499,6 +543,12 @@ function placeEdgeToEdge(host, gateA, sizeB, gateB, hostId, newId) {
     if (pct(gateA.my, 50) <= 50) box.y = artA.y - (1 - iB.b) * sizeB.h;
     else box.y = artA.y + artA.h - iB.t * sizeB.h;
     box.x = pA.x - (pct(gateB.mx, 50) / 100) * sizeB.w;
+  }
+  // The caves sheet is wider than the sea. Keep it in the gap north of the
+  // cavern so the city, east of the sea, stays uncovered.
+  if (newId === "rothold" && hostId === "great-cavern-sea") {
+    const eastLimit = artA.x + artA.w;
+    if (box.x + box.w > eastLimit) box.x = eastLimit - box.w;
   }
   return box;
 }

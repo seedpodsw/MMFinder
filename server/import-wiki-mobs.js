@@ -1,5 +1,6 @@
 /**
- * Fetch Namedmobpage levels for mobs that drop wiki items.
+ * Fetch Namedmobpage levels for mobs that drop wiki items, plus any other
+ * Namedmobpage that is not already named as a drop.
  * Usage: node server/import-wiki-mobs.js [--limit=100]
  */
 const fs = require("fs");
@@ -104,12 +105,36 @@ async function fetchMobPages(titles) {
   return out;
 }
 
+async function namedMobTitles() {
+  const titles = [];
+  let cont;
+  do {
+    const data = await apiGet({
+      action: "query",
+      list: "embeddedin",
+      eititle: "Template:Namedmobpage",
+      einamespace: "0",
+      eilimit: "500",
+      ...(cont ? { eicontinue: cont } : {}),
+    });
+    for (const row of data.query?.embeddedin || []) titles.push(row.title);
+    cont = data.continue?.eicontinue;
+  } while (cont);
+  return titles;
+}
+
 async function main() {
   const limit = Number(arg("limit", "0")) || 0;
-  let titles = collectDropMobTitles(loadWikiCache());
-  if (limit > 0) titles = titles.slice(0, limit);
-  console.log(`Importing ${titles.length} drop mobs from wiki…`);
-  const mobs = await fetchMobPages(titles);
+  const titles = new Set(collectDropMobTitles(loadWikiCache()));
+  const named = await namedMobTitles();
+  for (const title of named) titles.add(title);
+  let list = [...titles]
+    .map((title) => String(title || "").trim())
+    .filter((title) => title && title.length <= 180 && !/[|\n\r<>{}]/.test(title) && !/^[*#/]/.test(title))
+    .sort((a, b) => a.localeCompare(b));
+  if (limit > 0) list = list.slice(0, limit);
+  console.log(`Importing ${list.length} mob pages (${named.length} Namedmobpage)…`);
+  const mobs = await fetchMobPages(list);
   const payload = {
     importedAt: new Date().toISOString(),
     count: mobs.length,

@@ -3,6 +3,7 @@
  * Default source is every page that uses {{ItemBox}}. Category:Items is only
  * a parent category now; robes and blades live under Chest, Primary, and so on.
  * Usage: node server/import-wiki-items.js [--limit=200] [--categories=Chest,Primary]
+ *        node server/import-wiki-items.js --supplement
  */
 const fs = require("fs");
 const path = require("path");
@@ -172,7 +173,7 @@ function pickBoxStats(box) {
   return out;
 }
 
-async function fetchPages(titles) {
+async function fetchPages(titles, { onlyBox = false } = {}) {
   const out = [];
   for (let i = 0; i < titles.length; i += 40) {
     const batch = titles.slice(i, i + 40);
@@ -189,6 +190,7 @@ async function fetchPages(titles) {
       if (page.missing != null) continue;
       const wikitext = page.revisions?.[0]?.slots?.main?.["*"] || page.revisions?.[0]?.["*"] || "";
       const box = parseTemplate(wikitext, "ItemBox");
+      if (onlyBox && !Object.keys(box).length) continue;
       const pageFields = parseTemplate(wikitext, "Itempage");
       const cats = (page.categories || []).map((c) => String(c.title || "").replace(/^Category:/, ""));
       const name = box.item_name || page.title;
@@ -219,7 +221,126 @@ async function fetchPages(titles) {
   return out;
 }
 
-async function main() {
+function wikiTitle(item) {
+  return String(item?.wiki || item?.name || "").replace(/_/g, " ");
+}
+
+async function recentChangedTitles(sinceIso) {
+  const titles = new Set();
+  const start = String(sinceIso || "").replace(/\.\d+Z$/, "Z");
+  let cont;
+  let guard = 0;
+  do {
+    const data = await apiGet({
+      action: "query",
+      list: "recentchanges",
+      rcnamespace: "0",
+      rcprop: "title",
+      rclimit: "500",
+      rcdir: "newer",
+      rcstart: start,
+      rctype: "edit|new",
+      ...(cont ? { rccontinue: cont } : {}),
+    });
+    for (const row of data.query?.recentchanges || []) {
+      if (row.title) titles.add(row.title);
+    }
+    cont = data.continue?.rccontinue;
+    guard += 1;
+  } while (cont && guard < 40);
+  return titles;
+}
+
+function writeItems(payload) {
+  const dir = path.dirname(WIKI_CACHE);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const tmp = `${WIKI_CACHE}.tmp`;
+  fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
+  fs.renameSync(tmp, WIKI_CACHE);
+}
+
+/** Add pages new since the last import and refresh pages edited since then. */
+async function supplementItems() {
+  if (!fs.existsSync(WIKI_CACHE)) {
+    console.log("No item cache yet; running a full import.");
+    return main({ supplement: false });
+  }
+  const existing = JSON.parse(fs.readFileSync(WIKI_CACHE, "utf8"));
+  const prior = Array.isArray(existing.items) ? existing.items : [];
+  const since = arg("since", "") || existing.importedAt || "2026-01-01T00:00:00Z";
+  console.log(`Supplementing ${prior.length} items imported at ${since}`);
+
+  console.log(`Listing pages that use ${ITEM_TEMPLATE}`);
+  const templateTitles = await templatePages(ITEM_TEMPLATE);
+  console.log(`  ${templateTitles.length} item pages`);
+  const removed = new Set(await categoryMembers("Removed Items"));
+  if (removed.size) console.log(`Skipping ${removed.size} removed items`);
+
+  const have = new Set();
+  for (const item of prior) {
+    const title = wikiTitle(item);
+    if (title) have.add(title);
+    if (item.name) have.add(item.name);
+  }
+
+  const changed = await recentChangedTitles(since);
+  console.log(`  ${changed.size} pages changed since that import`);
+
+  const need = new Set();
+  for (const title of templateTitles) {
+    if (removed.has(title)) continue;
+    if (!have.has(title) || changed.has(title)) need.add(title);
+  }
+  // embeddedin lags new pages, so also pull anything edited since the import
+  for (const title of changed) {
+    if (!removed.has(title)) need.add(title);
+  }
+
+  console.log(`Fetching ${need.size} new or edited item pages…`);
+  const fetched = need.size
+    ? await fetchPages([...need].sort((a, b) => a.localeCompare(b)), { onlyBox: true })
+    : [];
+
+  const byWiki = new Map();
+  let dropped = 0;
+  for (const item of prior) {
+    const title = wikiTitle(item);
+    if (removed.has(title) || removed.has(item.name)) {
+      dropped += 1;
+      continue;
+    }
+    byWiki.set(item.wiki || title, item);
+  }
+
+  const added = [];
+  const updated = [];
+  for (const item of fetched) {
+    const title = wikiTitle(item);
+    if (removed.has(title)) continue;
+    item.kind = guessKind(item);
+    const key = item.wiki || title;
+    if (byWiki.has(key)) updated.push(item.name);
+    else added.push(item.name);
+    byWiki.set(key, item);
+  }
+
+  const items = [...byWiki.values()].sort((a, b) => wikiTitle(a).localeCompare(wikiTitle(b)));
+  const payload = {
+    importedAt: new Date().toISOString(),
+    source: ITEM_TEMPLATE,
+    count: items.length,
+    items,
+  };
+  writeItems(payload);
+  console.log(
+    `Wrote ${items.length} items (added ${added.length}, updated ${updated.length}, removed ${dropped}) → ${WIKI_CACHE}`
+  );
+  if (added.length) console.log(`Added: ${added.join(", ")}`);
+  if (updated.length) console.log(`Updated: ${updated.join(", ")}`);
+}
+
+async function main({ supplement = process.argv.includes("--supplement") } = {}) {
+  if (supplement) return supplementItems();
   const limit = Number(arg("limit", "0")) || 0;
   const catArg = String(arg("categories", "")).trim();
   const titles = new Map();
@@ -267,11 +388,7 @@ async function main() {
     count: items.length,
     items,
   };
-  const dir = path.dirname(WIKI_CACHE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const tmp = `${WIKI_CACHE}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
-  fs.renameSync(tmp, WIKI_CACHE);
+  writeItems(payload);
   console.log(`Wrote ${items.length} items → ${WIKI_CACHE}`);
 }
 

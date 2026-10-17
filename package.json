@@ -15,6 +15,7 @@
     "import:wiki-items": "node server/import-wiki-items.js",
     "import:item-links": "node scripts/fetch-item-links.js",
     "import:wiki-mobs": "node server/import-wiki-mobs.js",
+    "import:wiki-merchants": "node server/import-wiki-merchants.js",
     "import:wiki-spells": "node scripts/import-wiki-spells.mjs"
   },
   "dependencies": {
