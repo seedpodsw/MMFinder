@@ -255,10 +255,11 @@ const zoneMaps = {
   "blacktide-bay": {
     file: "blacktide-bay.jpg",
     wikiFile: "Blacktide Bay.jpg",
-    width: 1508,
-    aspect: 1508 / 1846,
+    width: 1536,
+    aspect: 1536 / 2048,
     fit: "contain",
-    // scripts/rebuild-blacktide.js crops the draft and darkens the pencil.
+    // Full Chazsolo plate with title and credit. scripts/rebuild-blacktide.js
+    // copies the wiki art; do not crop or paint out the signature.
     skipDownload: true,
   },
   "keepers-bight": {
