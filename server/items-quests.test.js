@@ -32,7 +32,42 @@ test("worn armor stays armor when the wiki category is only Items", () => {
   assert.equal(guessKind({ name: "Corrupted Leather Boots", slot: "", ac: "9", categories: ["All Race Equipment"] }), "armor");
   assert.equal(guessKind({ name: "Shield of Bones", slot: "", ac: "24", categories: ["All Race Equipment"] }), "shield");
   assert.equal(guessKind({ name: "Ruby Pendant of the Nine", slot: "", ac: "1", categories: ["All Class Equipment"] }), "jewelry");
-  assert.equal(guessKind({ name: "Enchant Boots: Agility", slot: "", categories: ["All Class Equipment"] }), "item");
+  assert.equal(guessKind({ name: "Enchant Boots: Agility", slot: "", categories: ["All Class Equipment"] }), "enchant");
+  assert.equal(guessKind({ name: "Scroll: Gate", slot: "", categories: ["All Race Equipment"] }), "spell");
+  assert.equal(guessKind({ name: "Pattern: Fine Cloth Bracer", slot: "", categories: ["Items"] }), "recipe");
+  assert.equal(guessKind({ name: "Recipe: Shale Hilt", slot: "", categories: ["All Class Equipment"] }), "recipe");
+  assert.equal(
+    guessKind({ name: "Corroded Mithril Kite Shield", slot: "SECONDARY", ac: "23", categories: ["Armor", "Secondary"] }),
+    "shield"
+  );
+  assert.equal(
+    guessKind({ name: "Packleader's Tooth", slot: "NECK", categories: ["Armor", "Neck"] }),
+    "jewelry"
+  );
+  assert.equal(
+    guessKind({ name: "Lysandra's Flower", slot: "RANGE AMMO", categories: ["Armor", "Ammo", "Range"] }),
+    "weapon"
+  );
+  assert.equal(
+    guessKind({
+      name: "Aspirant Icon of the Gatekeeper",
+      slot: "PRIMARY SECONDARY RANGE",
+      categories: ["Armor", "Primary"],
+    }),
+    "weapon"
+  );
+  assert.equal(guessKind({ name: "Copper Plate Barding", slot: "BARDING", ac: "115", categories: ["Barding"] }), "armor");
+  assert.equal(
+    guessKind({
+      name: "Legplates of the Dragon Oath\n| item_link_id-OLD = ip_fp_aidan_common_plate_legs_54",
+      slot: "",
+      categories: ["Items"],
+    }),
+    "armor"
+  );
+  assert.equal(guessKind({ name: "Corroded Mithril Chain Shoulderguards", slot: "", categories: ["Items"] }), "armor");
+  assert.equal(guessKind({ name: "Dark Hood", slot: "", categories: ["Items"] }), "armor");
+  assert.equal(guessKind({ name: "Trainee's Longbow", slot: "", categories: ["Items"] }), "weapon");
   assert.equal(guessKind({ name: "Ba'Haara Lute", slot: "SECONDARY", ac: "30", categories: ["Instruments"] }), "instrument");
   assert.equal(guessKind({ name: "Moondew Moss", slot: "", categories: ["Herb"] }), "herb");
 });
@@ -44,6 +79,16 @@ test("the published catalog does not file robes as generic items", () => {
   assert.equal(robe.kind, "armor");
   const armor = items.filter((item) => item.kind === "armor").length;
   assert.ok(armor > 500, `expected hundreds of armor pieces, got ${armor}`);
+  const legplates = items.find((item) => item.name === "Legplates of the Dragon Oath");
+  assert.equal(legplates && legplates.kind, "armor");
+  assert.equal(legplates && legplates.slot, "LEGS");
+  assert.equal(legplates.name.includes("item_link_id"), false);
+  const greater = items.find((item) => item.name === "Enchant Boots: Greater Fire Resistance");
+  assert.equal(greater && greater.kind, "enchant");
+  const kite = items.find((item) => item.name === "Corroded Mithril Kite Shield");
+  assert.equal(kite && kite.kind, "shield");
+  const scrolls = items.filter((item) => item.kind === "spell").length;
+  assert.ok(scrolls > 50, `expected spell scrolls in the item table, got ${scrolls}`);
 });
 
 test("a published wiki item keeps its chat hash", () => {

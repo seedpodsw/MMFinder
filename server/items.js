@@ -686,7 +686,7 @@ function mergeItemStats(prev, next) {
   }
 }
 
-const ARMOR_SLOTS = new Set(["CHEST", "HEAD", "LEGS", "FEET", "HANDS", "WRIST", "SHOULDERS", "FACE", "ARMS", "SHIRT"]);
+const ARMOR_SLOTS = new Set(["CHEST", "HEAD", "LEGS", "FEET", "HANDS", "WRIST", "SHOULDERS", "FACE", "ARMS", "SHIRT", "BARDING"]);
 const WORN_ALSO = new Set(["WAIST", "BACK"]);
 const WEAPON_SLOTS = new Set(["PRIMARY", "SECONDARY", "RANGE", "AMMO"]);
 const JEWEL_SLOTS = new Set(["NECK", "FINGER", "EAR"]);
@@ -731,22 +731,63 @@ function categoryNames(raw) {
 const NAME_SLOT_RULES = [
   [/\bearrings?\b/i, "EAR"],
   [/\brings?\b/i, "FINGER"],
-  [/\b(necklaces?|pendants?|amulets?)\b/i, "NECK"],
-  [/\b(boots?)\b/i, "FEET"],
-  [/\b(leggings|greaves)\b/i, "LEGS"],
-  [/\b(bracers?|vambraces?|cuffs?)\b/i, "WRIST"],
-  [/\b(gauntlets?|gloves)\b/i, "HANDS"],
-  [/\b(helms?|helmets?|coifs?)\b/i, "HEAD"],
-  [/\b(robes?|tunics?|breastplates?|hauberks?|cuirasses?)\b/i, "CHEST"],
-  [/\b(pauldrons?|mantles?|spaulders?)\b/i, "SHOULDERS"],
+  [/\b(necklaces?|pendants?|amulets?|gorgets?)\b/i, "NECK"],
+  [/\b(boots?|sandals?|sabatons?|footwraps?|buskins?)\b/i, "FEET"],
+  [/\b(leggings|greaves|legplates?|legguards?|legwraps?|trousers|pantaloons|breeches|chausses|tassets)\b/i, "LEGS"],
+  [/\b(bracers?|vambraces?|cuffs?|wristguards?|wristplates?|wristwraps?|wristbands?)\b/i, "WRIST"],
+  [/\b(gauntlets?|gloves?|mitts?|handwraps?)\b/i, "HANDS"],
+  [/\b(helms?|helmets?|coifs?|hoods?|barbute?s?|warhoods?|headwraps?|headdresses?|hats?)\b/i, "HEAD"],
+  [/\b(robes?|tunics?|breastplates?|hauberks?|cuirasses?|chestplates?|chestguards?|chestwraps?|vestments?|mailshirts?|chainmails?|byrnies?)\b/i, "CHEST"],
+  [/\b(shirts?|vests?)\b/i, "SHIRT"],
+  [/\b(pauldrons?|mantles?|spaulders?|shoulderguards?|shoulderpads?|shoulderplates?)\b/i, "SHOULDERS"],
   [/\b(cloaks?|capes?)\b/i, "BACK"],
-  [/\bmasks?\b/i, "FACE"],
+  [/\b(masks?|veils?|faceguards?|visages?)\b/i, "FACE"],
   [/\b(bucklers?|shields?|bulwarks?|aegis(?:es)?)\b/i, "SECONDARY"],
   [/\b(backpacks?|satchels?)\b/i, "BAG"],
+  [/\b(longbows?|shortbows?|crossbows?|bows?)\b/i, "RANGE"],
+  [/\b(staves|staffs?|mallets?|blades?)\b/i, "PRIMARY"],
 ];
 const NAME_SLOT_IF_ARMOR = [
   [/\b(cords?|cinches?|girdles?)\b/i, "WAIST"],
+  [/\b(drapes?|shrouds?)\b/i, "BACK"],
+  [/\b(treads?|stompers?)\b/i, "FEET"],
 ];
+
+/** Drop wiki markup and a template field that leaked into the item name. */
+function cleanItemName(name) {
+  return String(name || "")
+    .replace(/<[^>]+>/g, "")
+    .split(/\n/)[0]
+    .replace(/\s*\|\s*[a-z0-9_-]+\s*=.*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * A page title that adds words to the item name is a more specific item
+ * (Greater Fire Resistance, Leather Backpack), not a duplicate of the short name.
+ */
+function displayNameFor(raw) {
+  const cleaned = cleanItemName(raw?.name || raw?.item_name || raw?.title || "");
+  const fromWiki = cleanItemName(String(raw?.wiki || "").replace(/_/g, " "));
+  if (!cleaned) return fromWiki;
+  if (!fromWiki) return cleaned;
+  const nameTokens = new Set(slugify(cleaned).split("-").filter(Boolean));
+  const wikiTokens = slugify(fromWiki).split("-").filter(Boolean);
+  if (!nameTokens.size || !wikiTokens.length) return cleaned;
+  const extra = wikiTokens.filter((token) => !nameTokens.has(token));
+  const missing = [...nameTokens].filter((token) => !wikiTokens.includes(token));
+  if (extra.length > 0 && missing.length === 0) return fromWiki;
+  return cleaned;
+}
+
+/** Scrolls, enchants, and recipes are papers, even when the name says Boots or Bracer. */
+function paperKind(name) {
+  if (/^scrolls?\b/i.test(name)) return "spell";
+  if (/^enchants?\b/i.test(name)) return "enchant";
+  if (/^(recipes?|patterns?|schematics?)\b/i.test(name)) return "recipe";
+  return "";
+}
 
 /** Fill an empty slot from wiki slot categories, then from a clear gear name. */
 function slotFromCategories(raw) {
@@ -758,8 +799,8 @@ function slotFromCategories(raw) {
     if (mapped && !found.includes(mapped)) found.push(mapped);
   }
   if (found.length) return found.join(" ");
-  const name = String(raw?.name || raw?.item_name || "");
-  if (!name || /^(enchant|scroll|recipe|token)\b/i.test(name)) return "";
+  const name = cleanItemName(raw?.name || raw?.item_name || "");
+  if (!name || paperKind(name)) return "";
   for (const [re, slot] of NAME_SLOT_RULES) {
     if (re.test(name)) return slot;
   }
@@ -797,22 +838,28 @@ function shieldLike(raw) {
 /**
  * Kind from the worn slot first, then wiki categories.
  * Category:Items is the whole catalog, so a robe filed only there is still armor.
+ * Category:Armor does not override a weapon, shield, or jewelry slot.
+ * Scrolls, enchants, and recipes stay papers even when the name names a slot.
  */
 function guessKind(raw) {
-  const slot = slotFromCategories(raw);
+  const name = cleanItemName(raw?.name || raw?.item_name || "");
+  const paper = paperKind(name);
+  if (paper) return paper;
+  const slot = slotFromCategories({ ...raw, name });
   const slots = slotTokens(slot);
   const any = (set) => slots.some((s) => set.has(s));
   const only = (set) => slots.length > 0 && slots.every((s) => set.has(s));
   const held = any(WEAPON_SLOTS);
   const jewel = any(JEWEL_SLOTS);
-  const worn =
-    any(ARMOR_SLOTS) ||
-    (any(WORN_ALSO) && !held && !jewel) ||
-    hasCategory(raw, /^armor$/i) ||
-    hasCategory(raw, /^(chest|head|legs|feet|hands|wrist|shoulders|face|arms|shirt)$/i);
+  const wornSlot = any(ARMOR_SLOTS) || (any(WORN_ALSO) && !held && !jewel);
+  const armorCategory =
+    !held &&
+    !jewel &&
+    (hasCategory(raw, /^armor$/i) ||
+      hasCategory(raw, /^(chest|head|legs|feet|hands|wrist|shoulders|face|arms|shirt)$/i));
 
-  if (worn) return "armor";
-  if ((only(new Set(["SECONDARY"])) || hasCategory(raw, /^shields?$/i)) && shieldLike(raw)) return "shield";
+  if (wornSlot || armorCategory) return "armor";
+  if ((only(new Set(["SECONDARY"])) || hasCategory(raw, /^shields?$/i)) && shieldLike({ ...raw, name })) return "shield";
   if ((jewel && !weaponLike(raw)) || hasCategory(raw, /^jewelry$/i) || hasCategory(raw, /^(neck|finger|ear)$/i)) return "jewelry";
   const offhandOnly = only(new Set(["SECONDARY"]));
   if (
@@ -844,10 +891,10 @@ function resolveKind(raw) {
 
 function fromWikiCache(cacheItems, links = loadItemLinks()) {
   return (cacheItems || []).map((raw) => {
-    const name = raw.name || raw.item_name || raw.title;
-    const id = raw.id || slugify(name);
+    const name = displayNameFor(raw);
+    const id = slugify(name) || raw.id || slugify(raw.name);
     const wiki = raw.wiki || wikiTitleToSlug(name);
-    const slot = slotFromCategories(raw);
+    const slot = paperKind(name) ? "" : slotFromCategories({ ...raw, name });
     return {
       id,
       name,

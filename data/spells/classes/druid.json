@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Seasonal Exclusive Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Druid",
-  "entryCount": 146,
+  "entryCount": 147,
   "levels": [
     1,
     4,
@@ -1408,7 +1408,7 @@
         "name": "Preservation",
         "slug": "Preservation",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
-        "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
+        "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes. **Max Target Level 27",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2075,15 +2075,15 @@
         "statTags": []
       },
       {
-        "name": "Flaming Embers",
-        "slug": "Flaming_Embers",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flaming_Embers",
-        "description": "Ignite your target with flaming embers, dealing 15 Fire Damage every 6 seconds and decreasing their Armor Class by 13 for 1 minute. This spell requires a Fire Beetle Eye.",
+        "name": "Frostbite",
+        "slug": "Frostbite",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frostbite",
+        "description": "Expose your target to frostbite, dealing 15 Cold Damage every 6 seconds and decreasing their Armor Class by 13 for 1 minute.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 26,
         "castTime": null,
         "level": 24,
         "type": "spell",
@@ -2100,8 +2100,8 @@
             "max": 15,
             "interval": 6,
             "duration": 60,
-            "damageType": "Fire",
-            "display": "15 Fire/6s (60s)",
+            "damageType": "Cold",
+            "display": "15 Cold/6s (60s)",
             "sortKey": 150
           },
           {
@@ -2113,38 +2113,43 @@
             "statTag": "AC"
           }
         ],
-        "valuesSummary": "15 Fire/6s (60s) · −13 Armor Class",
+        "valuesSummary": "15 Cold/6s (60s) · −13 Armor Class",
         "statTags": [
           "AC"
         ]
       },
       {
-        "name": "Greater Heal",
-        "slug": "Greater_Heal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-        "description": "Greatly heal your target, restoring 278 Health.",
+        "name": "Lesser Communion of Regeneration",
+        "slug": "Lesser_Communion_of_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Communion_of_Regeneration",
+        "description": "Lightly regenerate your party, increasing their Health Regeneration by 5 for 10 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 100,
         "castTime": null,
         "level": 24,
         "type": "spell",
         "tags": [
-          "heal"
+          "buff",
+          "HP REGEN"
         ],
-        "primaryTag": "heal",
+        "primaryTag": "buff",
         "effects": [
           {
-            "kind": "heal",
-            "amount": 278,
-            "display": "278 heal",
-            "sortKey": 278
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 5,
+            "display": "+5 Health Regeneration",
+            "sortKey": 5,
+            "statTag": "HP REGEN"
           }
         ],
-        "valuesSummary": "278 heal",
-        "statTags": []
+        "valuesSummary": "+5 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ]
       },
       {
         "name": "Lesser Regeneration",
@@ -2180,6 +2185,34 @@
         ]
       },
       {
+        "name": "Spark of Life",
+        "slug": "Spark_of_Life",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Life",
+        "description": "Gift your target a spark of life, restoring 113 Health",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 86,
+        "castTime": null,
+        "level": 24,
+        "type": "spell",
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 113,
+            "display": "113 heal",
+            "sortKey": 113
+          }
+        ],
+        "valuesSummary": "113 heal",
+        "statTags": []
+      },
+      {
         "name": "Speed of the Predator",
         "slug": "Speed_of_the_Predator",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Predator",
@@ -2188,7 +2221,7 @@
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 25,
         "castTime": null,
         "level": 24,
         "type": "spell",
@@ -5735,7 +5768,7 @@
       "name": "Preservation",
       "slug": "Preservation",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Preservation",
-      "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes.",
+      "description": "Preserve a target beast corpse, returning it to life. This spell inflicts Resurrection Sickness on the target, reducing all of their stats for 3 minutes. **Max Target Level 27",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6398,15 +6431,15 @@
       "statTags": []
     },
     {
-      "name": "Flaming Embers",
-      "slug": "Flaming_Embers",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flaming_Embers",
-      "description": "Ignite your target with flaming embers, dealing 15 Fire Damage every 6 seconds and decreasing their Armor Class by 13 for 1 minute. This spell requires a Fire Beetle Eye.",
+      "name": "Frostbite",
+      "slug": "Frostbite",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frostbite",
+      "description": "Expose your target to frostbite, dealing 15 Cold Damage every 6 seconds and decreasing their Armor Class by 13 for 1 minute.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 26,
       "castTime": null,
       "level": 24,
       "type": "spell",
@@ -6423,8 +6456,8 @@
           "max": 15,
           "interval": 6,
           "duration": 60,
-          "damageType": "Fire",
-          "display": "15 Fire/6s (60s)",
+          "damageType": "Cold",
+          "display": "15 Cold/6s (60s)",
           "sortKey": 150
         },
         {
@@ -6436,38 +6469,43 @@
           "statTag": "AC"
         }
       ],
-      "valuesSummary": "15 Fire/6s (60s) · −13 Armor Class",
+      "valuesSummary": "15 Cold/6s (60s) · −13 Armor Class",
       "statTags": [
         "AC"
       ]
     },
     {
-      "name": "Greater Heal",
-      "slug": "Greater_Heal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Heal",
-      "description": "Greatly heal your target, restoring 278 Health.",
+      "name": "Lesser Communion of Regeneration",
+      "slug": "Lesser_Communion_of_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Communion_of_Regeneration",
+      "description": "Lightly regenerate your party, increasing their Health Regeneration by 5 for 10 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 100,
       "castTime": null,
       "level": 24,
       "type": "spell",
       "tags": [
-        "heal"
+        "buff",
+        "HP REGEN"
       ],
-      "primaryTag": "heal",
+      "primaryTag": "buff",
       "effects": [
         {
-          "kind": "heal",
-          "amount": 278,
-          "display": "278 heal",
-          "sortKey": 278
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 5,
+          "display": "+5 Health Regeneration",
+          "sortKey": 5,
+          "statTag": "HP REGEN"
         }
       ],
-      "valuesSummary": "278 heal",
-      "statTags": []
+      "valuesSummary": "+5 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ]
     },
     {
       "name": "Lesser Regeneration",
@@ -6503,6 +6541,34 @@
       ]
     },
     {
+      "name": "Spark of Life",
+      "slug": "Spark_of_Life",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Life",
+      "description": "Gift your target a spark of life, restoring 113 Health",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 86,
+      "castTime": null,
+      "level": 24,
+      "type": "spell",
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 113,
+          "display": "113 heal",
+          "sortKey": 113
+        }
+      ],
+      "valuesSummary": "113 heal",
+      "statTags": []
+    },
+    {
       "name": "Speed of the Predator",
       "slug": "Speed_of_the_Predator",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Predator",
@@ -6511,7 +6577,7 @@
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 25,
       "castTime": null,
       "level": 24,
       "type": "spell",
