@@ -307,10 +307,16 @@ test("wiki levels land on named pins and unplaced hunts stay off the plate", () 
   assert.ok(bay, "blacktide hunt list");
   assert.equal(bay.mx, undefined);
   assert.equal(/Captain Kruush/.test(bay.monsters), false);
-  const fae = seedPois.find((p) => p.id === "wiki-lv-faelindral");
-  assert.ok(fae, "faelindral hunt list");
-  assert.equal(fae.mx, undefined);
-  assert.equal(fae.my, undefined);
+  const weald = seedPois.find((p) => p.id === "wiki-lv-evershade-weald");
+  assert.ok(weald, "evershade hunt list");
+  assert.equal(weald.mx, undefined);
+  assert.equal(weald.my, undefined);
+  const huntLists = seedPois.filter((p) => String(p.id || "").startsWith("wiki-lv-"));
+  assert.ok(huntLists.length > 0);
+  for (const row of huntLists) {
+    assert.equal(row.mx, undefined);
+    assert.equal(row.my, undefined);
+  }
 });
 
 test("catalog diff reports added changed and removed names", () => {

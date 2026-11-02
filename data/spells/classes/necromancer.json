@@ -2255,9 +2255,9 @@
         "statTags": []
       },
       {
-        "name": "Surging Shadows",
-        "slug": "Surging_Shadows",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Surging_Shadows",
+        "name": "Twisting Shadows",
+        "slug": "Twisting_Shadows",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Shadows",
         "description": "Conjure surging shadows that grip your target, dealing 15 Corruption Damage every 6 seconds and decreasing their movement speed by 55% for 60 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
@@ -6329,9 +6329,9 @@
       "statTags": []
     },
     {
-      "name": "Surging Shadows",
-      "slug": "Surging_Shadows",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Surging_Shadows",
+      "name": "Twisting Shadows",
+      "slug": "Twisting_Shadows",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Twisting_Shadows",
       "description": "Conjure surging shadows that grip your target, dealing 15 Corruption Damage every 6 seconds and decreasing their movement speed by 55% for 60 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",

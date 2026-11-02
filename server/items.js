@@ -35,7 +35,7 @@ function splitNames(raw) {
     .map((s) => s.replace(/\s*\([^)]*\)\s*$/, "").trim())
     .filter((s) => {
       if (!s) return false;
-      if (/^(experience|xp|pinwheel tokens|elemental essences|degree sashes)$/i.test(s)) return false;
+      if (/^(experience|xp|coin|pinwheel tokens|elemental essences|degree sashes)$/i.test(s)) return false;
       if (/faction$/i.test(s)) return false;
       if (/^\d+\s*(copper|silver|gold|platinum)$/i.test(s)) return false;
       return true;

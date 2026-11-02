@@ -1741,7 +1741,7 @@
         "name": "Lesser Gust of Wind",
         "slug": "Lesser_Gust_of_Wind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Gust_of_Wind",
-        "description": "Buffet your target with a gust of wind, dealing 27 Magic Damage and interrupting their casting.",
+        "description": "Buffet your target with a gust of wind, dealing 78 Magic Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1758,13 +1758,13 @@
         "effects": [
           {
             "kind": "damage",
-            "amount": 27,
+            "amount": 78,
             "damageType": "Magic",
-            "display": "27 Magic dmg",
-            "sortKey": 27
+            "display": "78 Magic dmg",
+            "sortKey": 78
           }
         ],
-        "valuesSummary": "27 Magic dmg",
+        "valuesSummary": "78 Magic dmg",
         "statTags": []
       },
       {
@@ -2271,6 +2271,35 @@
     ],
     "28": [
       {
+        "name": "Blast of Cold",
+        "slug": "Blast_of_Cold",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Cold",
+        "description": "Blast your target with cold, dealing 113 Cold Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 90,
+        "castTime": null,
+        "level": 28,
+        "type": "spell",
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 113,
+            "damageType": "Cold",
+            "display": "113 Cold dmg",
+            "sortKey": 113
+          }
+        ],
+        "valuesSummary": "113 Cold dmg",
+        "statTags": []
+      },
+      {
         "name": "Brambly Barrier",
         "slug": "Brambly_Barrier",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Barrier",
@@ -2279,7 +2308,7 @@
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 75,
         "castTime": null,
         "level": 28,
         "type": "spell",
@@ -2325,12 +2354,12 @@
         "name": "Lesser Lightning Strike",
         "slug": "Lesser_Lightning_Strike",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Lightning_Strike",
-        "description": "Strike your target and those around it with lightning, dealing 71 Electric Damage. This spell can only be used outdoors. This spell is slightly difficult to resist.",
+        "description": "Strike your target and those around it with lightning, dealing 110 Electric Damage. This spell can only be used outdoors. This spell is slightly difficult to resist.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 187,
         "castTime": null,
         "level": 28,
         "type": "spell",
@@ -2347,12 +2376,12 @@
         "name": "Nature's Lull",
         "slug": "Nature's_Lull",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
-        "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
+        "description": "Lull your target, reducing their Aggro Radius for 2 minutes. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 110,
         "castTime": null,
         "level": 28,
         "type": "spell",
@@ -2401,12 +2430,12 @@
         "name": "Swarm of Flies",
         "slug": "Swarm_of_Flies",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Flies",
-        "description": "Engulf your target in a swarm of flies, dealing 21 Poison Damage every 6 seconds for 1 minute.",
+        "description": "Engulf your target in a swarm of flies, dealing 23 Poison Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 54,
         "castTime": null,
         "level": 28,
         "type": "spell",
@@ -2417,28 +2446,28 @@
         "effects": [
           {
             "kind": "dot",
-            "min": 21,
-            "max": 21,
+            "min": 23,
+            "max": 23,
             "interval": 6,
             "duration": 60,
             "damageType": "Poison",
-            "display": "21 Poison/6s (60s)",
-            "sortKey": 210
+            "display": "23 Poison/6s (60s)",
+            "sortKey": 230
           }
         ],
-        "valuesSummary": "21 Poison/6s (60s)",
+        "valuesSummary": "23 Poison/6s (60s)",
         "statTags": []
       },
       {
         "name": "Touch of Life",
         "slug": "Touch_of_Life",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Life",
-        "description": "Bestow the touch of life upon your target, restoring 191 Health and an additional 115 Health every 6 seconds for 12 seconds.",
+        "description": "Bestow the touch of life upon your target, restoring 110 Health and an additional 63 Health every 6 seconds for 12 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 163,
         "castTime": null,
         "level": 28,
         "type": "spell",
@@ -2451,25 +2480,46 @@
         "effects": [
           {
             "kind": "hot",
-            "initial": 191,
-            "tick": 115,
+            "initial": 110,
+            "tick": 63,
             "interval": 6,
             "duration": 12,
-            "display": "191 + 115/6s heal (12s)",
-            "sortKey": 421
+            "display": "110 + 63/6s heal (12s)",
+            "sortKey": 236
           },
           {
             "kind": "heal",
-            "amount": 191,
-            "display": "191 heal",
-            "sortKey": 191
+            "amount": 110,
+            "display": "110 heal",
+            "sortKey": 110
           }
         ],
-        "valuesSummary": "191 + 115/6s heal (12s) · 191 heal",
+        "valuesSummary": "110 + 63/6s heal (12s) · 110 heal",
         "statTags": []
       }
     ],
     "32": [
+      {
+        "name": "Circle of Caves of Irem",
+        "slug": "Circle_of_Caves_of_Irem",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Caves_of_Irem",
+        "description": "Teleport your group, relocating them to Caves of Irem. This spell has no effect on encumbered targets.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 300,
+        "castTime": null,
+        "level": 32,
+        "type": "spell",
+        "tags": [
+          "teleport"
+        ],
+        "primaryTag": "teleport",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      },
       {
         "name": "Element Crack",
         "slug": "Element_Crack",
@@ -2583,12 +2633,12 @@
         "name": "Gust of Wind",
         "slug": "Gust_of_Wind",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gust_of_Wind",
-        "description": "Buffet your target with a gust of wind, dealing 85 Magic Damage and interrupting their casting.",
+        "description": "Buffet your target with a gust of wind, dealing 170 Magic Damage and interrupting their casting.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 99,
         "castTime": null,
         "level": 32,
         "type": "spell",
@@ -2600,20 +2650,20 @@
         "effects": [
           {
             "kind": "damage",
-            "amount": 85,
+            "amount": 170,
             "damageType": "Magic",
-            "display": "85 Magic dmg",
-            "sortKey": 85
+            "display": "170 Magic dmg",
+            "sortKey": 170
           }
         ],
-        "valuesSummary": "85 Magic dmg",
+        "valuesSummary": "170 Magic dmg",
         "statTags": []
       },
       {
-        "name": "Pack Speed",
-        "slug": "Pack_Speed",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pack_Speed",
-        "description": "Infuse your group with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (1.80) for 1 hour. This spell can only be used outdoors.",
+        "name": "Speed of the Pack",
+        "slug": "Speed_of_the_Pack",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
+        "description": "Infuse your group with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2632,55 +2682,26 @@
             "kind": "buff",
             "stat": "Movement Speed",
             "min": 40,
-            "max": 58,
+            "max": 60,
             "unit": "%",
-            "display": "+40–58%",
-            "sortKey": 58,
+            "display": "+40–60%",
+            "sortKey": 60,
             "statTag": "MS"
           }
         ],
-        "valuesSummary": "+40–58%",
-        "statTags": []
-      },
-      {
-        "name": "Scorching Sun",
-        "slug": "Scorching_Sun",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scorching_Sun",
-        "description": "Expose your target to the scorching sun, dealing 141 Fire Damage.",
-        "category": "Evo",
-        "categorySlug": "Skill_Evocation",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-        "location": "Vendor",
-        "mana": 0,
-        "castTime": null,
-        "level": 32,
-        "type": "spell",
-        "tags": [
-          "damage"
-        ],
-        "primaryTag": "damage",
-        "effects": [
-          {
-            "kind": "damage",
-            "amount": 141,
-            "damageType": "Fire",
-            "display": "141 Fire dmg",
-            "sortKey": 141
-          }
-        ],
-        "valuesSummary": "141 Fire dmg",
+        "valuesSummary": "+40–60%",
         "statTags": []
       },
       {
         "name": "Steelskin",
         "slug": "Steelskin",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Steelskin",
-        "description": "Grants your target skin as hard as steel, increasing their Armor Class by 15 for 1 hour.",
+        "description": "Grants your target skin as hard as steel, increasing their Armor Class by 15 for 35 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 60,
         "castTime": null,
         "level": 32,
         "type": "spell",
@@ -2709,12 +2730,12 @@
         "name": "Summer's Bounty",
         "slug": "Summer's_Bounty",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Bounty",
-        "description": "Bless your target with the bounty of summer, restoring 410 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
+        "description": "Bless your target with the bounty of summer, restoring 329 Health.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 231,
         "castTime": null,
         "level": 32,
         "type": "spell",
@@ -2725,24 +2746,43 @@
         "effects": [
           {
             "kind": "heal",
-            "amount": 410,
-            "display": "410 heal",
-            "sortKey": 410
+            "amount": 329,
+            "display": "329 heal",
+            "sortKey": 329
           }
         ],
-        "valuesSummary": "410 heal",
+        "valuesSummary": "329 heal",
+        "statTags": []
+      },
+      {
+        "name": "Union of Steel",
+        "slug": "Union_of_Steel",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Steel",
+        "description": "",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 0,
+        "castTime": null,
+        "level": 32,
+        "type": "spell",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
         "statTags": []
       },
       {
         "name": "Winter's Fury",
         "slug": "Winter's_Fury",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Fury",
-        "description": "Freeze your target with winter's fury, dealing 141 (L1.52) to 200 (L1.63) Cold Damage and decreasing their Movement Speed by 15% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
+        "description": "Freeze your target with winter's fury, dealing 300 (L32) to 420 (L43) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 198,
         "castTime": null,
         "level": 32,
         "type": "spell",
@@ -2754,23 +2794,33 @@
         "primaryTag": "damage",
         "effects": [
           {
+            "kind": "damage",
+            "min": 300,
+            "max": 420,
+            "minLevel": 32,
+            "maxLevel": 43,
+            "damageType": "Cold",
+            "display": "300–420 Cold dmg (L32–L43)",
+            "sortKey": 420
+          },
+          {
             "kind": "debuff",
             "stat": "Movement Speed",
-            "min": 15,
-            "max": 15,
+            "min": 25,
+            "max": 25,
             "unit": "%",
-            "display": "−15%",
-            "sortKey": 15
+            "display": "−25%",
+            "sortKey": 25
           }
         ],
-        "valuesSummary": "−15%",
+        "valuesSummary": "300–420 Cold dmg (L32–L43) · −25%",
         "statTags": []
       },
       {
         "name": "Wolf Pack",
         "slug": "Wolf_Pack",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wolf_Pack",
-        "description": "Shapeshift your party into a pack of wolves, increasing their Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+        "description": "Shapeshift your party into a pack of wolves, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -2798,74 +2848,9 @@
         ],
         "valuesSummary": "+40–60%",
         "statTags": []
-      },
-      {
-        "name": "Circle of Caves of Irem",
-        "slug": "Circle_of_Caves_of_Irem",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Caves_of_Irem",
-        "description": "Teleport your group, relocating them to Caves of Irem. This spell has no effect on encumbered targets.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 300,
-        "castTime": null,
-        "level": 32,
-        "type": "spell",
-        "tags": [
-          "teleport"
-        ],
-        "primaryTag": "teleport",
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": []
       }
     ],
     "36": [
-      {
-        "name": "Blazing Embers",
-        "slug": "Blazing_Embers",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blazing_Embers",
-        "description": "Ignite your target with blazing embers, dealing 30 Fire Damage every 6 seconds and decreasing their Armor Class by 19 for 1 minute. This spell requires a Fire Beetle Eye.",
-        "category": "Evo",
-        "categorySlug": "Skill_Evocation",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-        "location": "Vendor",
-        "mana": 0,
-        "castTime": null,
-        "level": 36,
-        "type": "spell",
-        "tags": [
-          "dot",
-          "debuff",
-          "AC"
-        ],
-        "primaryTag": "dot",
-        "effects": [
-          {
-            "kind": "dot",
-            "min": 30,
-            "max": 30,
-            "interval": 6,
-            "duration": 60,
-            "damageType": "Fire",
-            "display": "30 Fire/6s (60s)",
-            "sortKey": 300
-          },
-          {
-            "kind": "debuff",
-            "stat": "Armor Class",
-            "amount": 19,
-            "display": "−19 Armor Class",
-            "sortKey": 19,
-            "statTag": "AC"
-          }
-        ],
-        "valuesSummary": "30 Fire/6s (60s) · −19 Armor Class",
-        "statTags": [
-          "AC"
-        ]
-      },
       {
         "name": "Cleanse Poison",
         "slug": "Cleanse_Poison",
@@ -6099,7 +6084,7 @@
       "name": "Lesser Gust of Wind",
       "slug": "Lesser_Gust_of_Wind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Gust_of_Wind",
-      "description": "Buffet your target with a gust of wind, dealing 27 Magic Damage and interrupting their casting.",
+      "description": "Buffet your target with a gust of wind, dealing 78 Magic Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -6116,13 +6101,13 @@
       "effects": [
         {
           "kind": "damage",
-          "amount": 27,
+          "amount": 78,
           "damageType": "Magic",
-          "display": "27 Magic dmg",
-          "sortKey": 27
+          "display": "78 Magic dmg",
+          "sortKey": 78
         }
       ],
-      "valuesSummary": "27 Magic dmg",
+      "valuesSummary": "78 Magic dmg",
       "statTags": []
     },
     {
@@ -6625,6 +6610,35 @@
       "statTags": []
     },
     {
+      "name": "Blast of Cold",
+      "slug": "Blast_of_Cold",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Cold",
+      "description": "Blast your target with cold, dealing 113 Cold Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 90,
+      "castTime": null,
+      "level": 28,
+      "type": "spell",
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 113,
+          "damageType": "Cold",
+          "display": "113 Cold dmg",
+          "sortKey": 113
+        }
+      ],
+      "valuesSummary": "113 Cold dmg",
+      "statTags": []
+    },
+    {
       "name": "Brambly Barrier",
       "slug": "Brambly_Barrier",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Brambly_Barrier",
@@ -6633,7 +6647,7 @@
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 75,
       "castTime": null,
       "level": 28,
       "type": "spell",
@@ -6679,12 +6693,12 @@
       "name": "Lesser Lightning Strike",
       "slug": "Lesser_Lightning_Strike",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Lesser_Lightning_Strike",
-      "description": "Strike your target and those around it with lightning, dealing 71 Electric Damage. This spell can only be used outdoors. This spell is slightly difficult to resist.",
+      "description": "Strike your target and those around it with lightning, dealing 110 Electric Damage. This spell can only be used outdoors. This spell is slightly difficult to resist.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 187,
       "castTime": null,
       "level": 28,
       "type": "spell",
@@ -6701,12 +6715,12 @@
       "name": "Nature's Lull",
       "slug": "Nature's_Lull",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Lull",
-      "description": "Lull your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
+      "description": "Lull your target, reducing their Aggro Radius for 2 minutes. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 42.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 110,
       "castTime": null,
       "level": 28,
       "type": "spell",
@@ -6755,12 +6769,12 @@
       "name": "Swarm of Flies",
       "slug": "Swarm_of_Flies",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Flies",
-      "description": "Engulf your target in a swarm of flies, dealing 21 Poison Damage every 6 seconds for 1 minute.",
+      "description": "Engulf your target in a swarm of flies, dealing 23 Poison Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 54,
       "castTime": null,
       "level": 28,
       "type": "spell",
@@ -6771,28 +6785,28 @@
       "effects": [
         {
           "kind": "dot",
-          "min": 21,
-          "max": 21,
+          "min": 23,
+          "max": 23,
           "interval": 6,
           "duration": 60,
           "damageType": "Poison",
-          "display": "21 Poison/6s (60s)",
-          "sortKey": 210
+          "display": "23 Poison/6s (60s)",
+          "sortKey": 230
         }
       ],
-      "valuesSummary": "21 Poison/6s (60s)",
+      "valuesSummary": "23 Poison/6s (60s)",
       "statTags": []
     },
     {
       "name": "Touch of Life",
       "slug": "Touch_of_Life",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Life",
-      "description": "Bestow the touch of life upon your target, restoring 191 Health and an additional 115 Health every 6 seconds for 12 seconds.",
+      "description": "Bestow the touch of life upon your target, restoring 110 Health and an additional 63 Health every 6 seconds for 12 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 163,
       "castTime": null,
       "level": 28,
       "type": "spell",
@@ -6805,21 +6819,42 @@
       "effects": [
         {
           "kind": "hot",
-          "initial": 191,
-          "tick": 115,
+          "initial": 110,
+          "tick": 63,
           "interval": 6,
           "duration": 12,
-          "display": "191 + 115/6s heal (12s)",
-          "sortKey": 421
+          "display": "110 + 63/6s heal (12s)",
+          "sortKey": 236
         },
         {
           "kind": "heal",
-          "amount": 191,
-          "display": "191 heal",
-          "sortKey": 191
+          "amount": 110,
+          "display": "110 heal",
+          "sortKey": 110
         }
       ],
-      "valuesSummary": "191 + 115/6s heal (12s) · 191 heal",
+      "valuesSummary": "110 + 63/6s heal (12s) · 110 heal",
+      "statTags": []
+    },
+    {
+      "name": "Circle of Caves of Irem",
+      "slug": "Circle_of_Caves_of_Irem",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Caves_of_Irem",
+      "description": "Teleport your group, relocating them to Caves of Irem. This spell has no effect on encumbered targets.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 300,
+      "castTime": null,
+      "level": 32,
+      "type": "spell",
+      "tags": [
+        "teleport"
+      ],
+      "primaryTag": "teleport",
+      "effects": [],
+      "valuesSummary": "",
       "statTags": []
     },
     {
@@ -6935,12 +6970,12 @@
       "name": "Gust of Wind",
       "slug": "Gust_of_Wind",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Gust_of_Wind",
-      "description": "Buffet your target with a gust of wind, dealing 85 Magic Damage and interrupting their casting.",
+      "description": "Buffet your target with a gust of wind, dealing 170 Magic Damage and interrupting their casting.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 99,
       "castTime": null,
       "level": 32,
       "type": "spell",
@@ -6952,20 +6987,20 @@
       "effects": [
         {
           "kind": "damage",
-          "amount": 85,
+          "amount": 170,
           "damageType": "Magic",
-          "display": "85 Magic dmg",
-          "sortKey": 85
+          "display": "170 Magic dmg",
+          "sortKey": 170
         }
       ],
-      "valuesSummary": "85 Magic dmg",
+      "valuesSummary": "170 Magic dmg",
       "statTags": []
     },
     {
-      "name": "Pack Speed",
-      "slug": "Pack_Speed",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Pack_Speed",
-      "description": "Infuse your group with bestial speed, increasing their Movement Speed by 40% (2.8) to 58% (1.80) for 1 hour. This spell can only be used outdoors.",
+      "name": "Speed of the Pack",
+      "slug": "Speed_of_the_Pack",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Speed_of_the_Pack",
+      "description": "Infuse your group with bestial speed, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -6984,55 +7019,26 @@
           "kind": "buff",
           "stat": "Movement Speed",
           "min": 40,
-          "max": 58,
+          "max": 60,
           "unit": "%",
-          "display": "+40–58%",
-          "sortKey": 58,
+          "display": "+40–60%",
+          "sortKey": 60,
           "statTag": "MS"
         }
       ],
-      "valuesSummary": "+40–58%",
-      "statTags": []
-    },
-    {
-      "name": "Scorching Sun",
-      "slug": "Scorching_Sun",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Scorching_Sun",
-      "description": "Expose your target to the scorching sun, dealing 141 Fire Damage.",
-      "category": "Evo",
-      "categorySlug": "Skill_Evocation",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-      "location": "Vendor",
-      "mana": 0,
-      "castTime": null,
-      "level": 32,
-      "type": "spell",
-      "tags": [
-        "damage"
-      ],
-      "primaryTag": "damage",
-      "effects": [
-        {
-          "kind": "damage",
-          "amount": 141,
-          "damageType": "Fire",
-          "display": "141 Fire dmg",
-          "sortKey": 141
-        }
-      ],
-      "valuesSummary": "141 Fire dmg",
+      "valuesSummary": "+40–60%",
       "statTags": []
     },
     {
       "name": "Steelskin",
       "slug": "Steelskin",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Steelskin",
-      "description": "Grants your target skin as hard as steel, increasing their Armor Class by 15 for 1 hour.",
+      "description": "Grants your target skin as hard as steel, increasing their Armor Class by 15 for 35 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 60,
       "castTime": null,
       "level": 32,
       "type": "spell",
@@ -7061,12 +7067,12 @@
       "name": "Summer's Bounty",
       "slug": "Summer's_Bounty",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Summer's_Bounty",
-      "description": "Bless your target with the bounty of summer, restoring 410 Health. Additionally, if the target is under the effect of any spell in the Touch line, this spell gains a healing bonus.",
+      "description": "Bless your target with the bounty of summer, restoring 329 Health.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 231,
       "castTime": null,
       "level": 32,
       "type": "spell",
@@ -7077,24 +7083,43 @@
       "effects": [
         {
           "kind": "heal",
-          "amount": 410,
-          "display": "410 heal",
-          "sortKey": 410
+          "amount": 329,
+          "display": "329 heal",
+          "sortKey": 329
         }
       ],
-      "valuesSummary": "410 heal",
+      "valuesSummary": "329 heal",
+      "statTags": []
+    },
+    {
+      "name": "Union of Steel",
+      "slug": "Union_of_Steel",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Steel",
+      "description": "",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 0,
+      "castTime": null,
+      "level": 32,
+      "type": "spell",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
       "statTags": []
     },
     {
       "name": "Winter's Fury",
       "slug": "Winter's_Fury",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Winter's_Fury",
-      "description": "Freeze your target with winter's fury, dealing 141 (L1.52) to 200 (L1.63) Cold Damage and decreasing their Movement Speed by 15% for 3 seconds. Additionally, if the target is under the effect of any spell in the Embers line, this spell gains a damage bonus.",
+      "description": "Freeze your target with winter's fury, dealing 300 (L32) to 420 (L43) Cold Damage and decreasing their Movement Speed by 25% for 3 seconds.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 198,
       "castTime": null,
       "level": 32,
       "type": "spell",
@@ -7106,23 +7131,33 @@
       "primaryTag": "damage",
       "effects": [
         {
+          "kind": "damage",
+          "min": 300,
+          "max": 420,
+          "minLevel": 32,
+          "maxLevel": 43,
+          "damageType": "Cold",
+          "display": "300–420 Cold dmg (L32–L43)",
+          "sortKey": 420
+        },
+        {
           "kind": "debuff",
           "stat": "Movement Speed",
-          "min": 15,
-          "max": 15,
+          "min": 25,
+          "max": 25,
           "unit": "%",
-          "display": "−15%",
-          "sortKey": 15
+          "display": "−25%",
+          "sortKey": 25
         }
       ],
-      "valuesSummary": "−15%",
+      "valuesSummary": "300–420 Cold dmg (L32–L43) · −25%",
       "statTags": []
     },
     {
       "name": "Wolf Pack",
       "slug": "Wolf_Pack",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Wolf_Pack",
-      "description": "Shapeshift your party into a pack of wolves, increasing their Movement Speed by 40% (L8) to 60% (L60) for 1 hour. This spell can only be used outdoors.",
+      "description": "Shapeshift your party into a pack of wolves, increasing their Movement Speed by 40% (L8) to 60% (L60) for 35 minutes. This spell can only be used outdoors.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
@@ -7150,71 +7185,6 @@
       ],
       "valuesSummary": "+40–60%",
       "statTags": []
-    },
-    {
-      "name": "Circle of Caves of Irem",
-      "slug": "Circle_of_Caves_of_Irem",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Circle_of_Caves_of_Irem",
-      "description": "Teleport your group, relocating them to Caves of Irem. This spell has no effect on encumbered targets.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 300,
-      "castTime": null,
-      "level": 32,
-      "type": "spell",
-      "tags": [
-        "teleport"
-      ],
-      "primaryTag": "teleport",
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": []
-    },
-    {
-      "name": "Blazing Embers",
-      "slug": "Blazing_Embers",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blazing_Embers",
-      "description": "Ignite your target with blazing embers, dealing 30 Fire Damage every 6 seconds and decreasing their Armor Class by 19 for 1 minute. This spell requires a Fire Beetle Eye.",
-      "category": "Evo",
-      "categorySlug": "Skill_Evocation",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
-      "location": "Vendor",
-      "mana": 0,
-      "castTime": null,
-      "level": 36,
-      "type": "spell",
-      "tags": [
-        "dot",
-        "debuff",
-        "AC"
-      ],
-      "primaryTag": "dot",
-      "effects": [
-        {
-          "kind": "dot",
-          "min": 30,
-          "max": 30,
-          "interval": 6,
-          "duration": 60,
-          "damageType": "Fire",
-          "display": "30 Fire/6s (60s)",
-          "sortKey": 300
-        },
-        {
-          "kind": "debuff",
-          "stat": "Armor Class",
-          "amount": 19,
-          "display": "−19 Armor Class",
-          "sortKey": 19,
-          "statTag": "AC"
-        }
-      ],
-      "valuesSummary": "30 Fire/6s (60s) · −19 Armor Class",
-      "statTags": [
-        "AC"
-      ]
     },
     {
       "name": "Cleanse Poison",

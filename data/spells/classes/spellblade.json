@@ -979,7 +979,7 @@
         "name": "Implosion I",
         "slug": "Implosion_I",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_I",
-        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 8 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1037,7 +1037,7 @@
         "name": "Infused Slash III",
         "slug": "Infused_Slash_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_III",
-        "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 to 20, or up to 15,000 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+        "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 (L20) to 15 (L30) additional damage based on your current infusion. This ability shares a cooldown with other Might abilities.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1055,9 +1055,19 @@
             "kind": "damage",
             "display": "100% weapon dmg",
             "sortKey": 100
+          },
+          {
+            "kind": "damage",
+            "min": 10,
+            "max": 15,
+            "minLevel": 20,
+            "maxLevel": 30,
+            "damageType": "additional based on your current infusion",
+            "display": "10–15 additional based on your current infusion dmg (L20–L30)",
+            "sortKey": 15
           }
         ],
-        "valuesSummary": "100% weapon dmg",
+        "valuesSummary": "100% weapon dmg · 10–15 additional based on your current infusion dmg (L20–L30)",
         "statTags": []
       }
     ],
@@ -1110,7 +1120,7 @@
         "name": "Greater Spellshield",
         "slug": "Greater_Spellshield",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-        "description": "Enshroud yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 10, and Magic Resistance by 10 for 1 hour.",
+        "description": "Enshroud yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1140,21 +1150,21 @@
           {
             "kind": "buff",
             "stat": "Armor Class",
-            "amount": 10,
-            "display": "+10 Armor Class",
-            "sortKey": 10,
+            "amount": 20,
+            "display": "+20 Armor Class",
+            "sortKey": 20,
             "statTag": "AC"
           },
           {
             "kind": "buff",
             "stat": "Magic Resistance",
-            "amount": 10,
-            "display": "+10 Magic Resistance",
-            "sortKey": 10,
+            "amount": 20,
+            "display": "+20 Magic Resistance",
+            "sortKey": 20,
             "statTag": "MR"
           }
         ],
-        "valuesSummary": "+75 Health · +10 Armor Class · +10 Magic Resistance",
+        "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
         "statTags": [
           "AC",
           "MAX HP",
@@ -1165,7 +1175,7 @@
         "name": "Kinetic Ward III",
         "slug": "Kinetic_Ward_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_III",
-        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 136 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+        "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 150 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -1184,9 +1194,9 @@
         "effects": [
           {
             "kind": "shield",
-            "amount": 136,
-            "display": "136 absorb",
-            "sortKey": 136
+            "amount": 150,
+            "display": "150 absorb",
+            "sortKey": 150
           },
           {
             "kind": "buff",
@@ -1197,7 +1207,7 @@
             "statTag": "AC"
           }
         ],
-        "valuesSummary": "136 absorb · +10 Armor Class",
+        "valuesSummary": "150 absorb · +10 Armor Class",
         "statTags": [
           "AC"
         ]
@@ -1208,7 +1218,7 @@
         "name": "Flurry I",
         "slug": "Flurry_I",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_I",
-        "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage per equipped weapon. Each attack has a chance to activate your current infusion effect.",
+        "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage two times per equipped weapon. Each attack has a chance to activate your current infusion effect.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1237,7 +1247,7 @@
         "name": "Static Field I",
         "slug": "Static_Field_I",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_I",
-        "description": "Place a static field at your feet, dealing 3 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+        "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 3 seconds for 6 seconds and decreasing their Electric Resistance by 5.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -1248,22 +1258,30 @@
         "type": "ability",
         "tags": [
           "dot",
+          "debuff",
           "aoe"
         ],
         "primaryTag": "dot",
         "effects": [
           {
             "kind": "dot",
-            "min": 3,
-            "max": 3,
+            "min": 10,
+            "max": 10,
             "interval": 3,
-            "duration": 9,
+            "duration": 6,
             "damageType": "Electric",
-            "display": "3 Electric/3s (9s)",
-            "sortKey": 9
+            "display": "10 Electric/3s (6s)",
+            "sortKey": 20
+          },
+          {
+            "kind": "debuff",
+            "stat": "Electric Resistance",
+            "amount": 5,
+            "display": "−5 Electric Resistance",
+            "sortKey": 5
           }
         ],
-        "valuesSummary": "3 Electric/3s (9s)",
+        "valuesSummary": "10 Electric/3s (6s) · −5 Electric Resistance",
         "statTags": []
       }
     ],
@@ -1272,7 +1290,7 @@
         "name": "Implosion II",
         "slug": "Implosion_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_II",
-        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
+        "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 8 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
         "category": "Evo",
         "categorySlug": "Skill_Evocation",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -3102,7 +3120,7 @@
       "name": "Implosion I",
       "slug": "Implosion_I",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_I",
-      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 8 seconds. When this spell expires, the vacuum implodes, dealing 50 Physical Damage to your target and those around it.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -3158,7 +3176,7 @@
       "name": "Infused Slash III",
       "slug": "Infused_Slash_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Infused_Slash_III",
-      "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 to 20, or up to 15,000 additional damage based on your current Infusion. This ability shares a cooldown with other Might abilities.",
+      "description": "Slash your target with an infused blade, dealing 100% Weapon Ratio Damage plus 10 (L20) to 15 (L30) additional damage based on your current infusion. This ability shares a cooldown with other Might abilities.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3176,9 +3194,19 @@
           "kind": "damage",
           "display": "100% weapon dmg",
           "sortKey": 100
+        },
+        {
+          "kind": "damage",
+          "min": 10,
+          "max": 15,
+          "minLevel": 20,
+          "maxLevel": 30,
+          "damageType": "additional based on your current infusion",
+          "display": "10–15 additional based on your current infusion dmg (L20–L30)",
+          "sortKey": 15
         }
       ],
-      "valuesSummary": "100% weapon dmg",
+      "valuesSummary": "100% weapon dmg · 10–15 additional based on your current infusion dmg (L20–L30)",
       "statTags": []
     },
     {
@@ -3227,7 +3255,7 @@
       "name": "Greater Spellshield",
       "slug": "Greater_Spellshield",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Spellshield",
-      "description": "Enshroud yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 10, and Magic Resistance by 10 for 1 hour.",
+      "description": "Enshroud yourself with a magical shield, increasing your maximum Health by 75, Armor Class by 20, and Magic Resistance by 20 for 1 hour.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3257,21 +3285,21 @@
         {
           "kind": "buff",
           "stat": "Armor Class",
-          "amount": 10,
-          "display": "+10 Armor Class",
-          "sortKey": 10,
+          "amount": 20,
+          "display": "+20 Armor Class",
+          "sortKey": 20,
           "statTag": "AC"
         },
         {
           "kind": "buff",
           "stat": "Magic Resistance",
-          "amount": 10,
-          "display": "+10 Magic Resistance",
-          "sortKey": 10,
+          "amount": 20,
+          "display": "+20 Magic Resistance",
+          "sortKey": 20,
           "statTag": "MR"
         }
       ],
-      "valuesSummary": "+75 Health · +10 Armor Class · +10 Magic Resistance",
+      "valuesSummary": "+75 Health · +20 Armor Class · +20 Magic Resistance",
       "statTags": [
         "AC",
         "MAX HP",
@@ -3282,7 +3310,7 @@
       "name": "Kinetic Ward III",
       "slug": "Kinetic_Ward_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Kinetic_Ward_III",
-      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 136 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
+      "description": "Construct a kinetic ward, increasing your Armor Class by 10 and absorbing 150 damage received for 15 seconds. While Telekinetic Initiative is active, the Mana cost of this spell is reduced by 25%. This spell scales with your Intelligence.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
@@ -3301,9 +3329,9 @@
       "effects": [
         {
           "kind": "shield",
-          "amount": 136,
-          "display": "136 absorb",
-          "sortKey": 136
+          "amount": 150,
+          "display": "150 absorb",
+          "sortKey": 150
         },
         {
           "kind": "buff",
@@ -3314,7 +3342,7 @@
           "statTag": "AC"
         }
       ],
-      "valuesSummary": "136 absorb · +10 Armor Class",
+      "valuesSummary": "150 absorb · +10 Armor Class",
       "statTags": [
         "AC"
       ]
@@ -3323,7 +3351,7 @@
       "name": "Flurry I",
       "slug": "Flurry_I",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flurry_I",
-      "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage per equipped weapon. Each attack has a chance to activate your current infusion effect.",
+      "description": "Unleash a flurry of strikes upon your target, dealing 100% Weapon Ratio Damage two times per equipped weapon. Each attack has a chance to activate your current infusion effect.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -3350,7 +3378,7 @@
       "name": "Static Field I",
       "slug": "Static_Field_I",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Static_Field_I",
-      "description": "Place a static field at your feet, dealing 3 Electric Damage to targets within the affected area every 3 seconds for 9 seconds.",
+      "description": "Place a static field at your feet, dealing 10 Electric Damage to targets within the affected area every 3 seconds for 6 seconds and decreasing their Electric Resistance by 5.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
@@ -3361,29 +3389,37 @@
       "type": "ability",
       "tags": [
         "dot",
+        "debuff",
         "aoe"
       ],
       "primaryTag": "dot",
       "effects": [
         {
           "kind": "dot",
-          "min": 3,
-          "max": 3,
+          "min": 10,
+          "max": 10,
           "interval": 3,
-          "duration": 9,
+          "duration": 6,
           "damageType": "Electric",
-          "display": "3 Electric/3s (9s)",
-          "sortKey": 9
+          "display": "10 Electric/3s (6s)",
+          "sortKey": 20
+        },
+        {
+          "kind": "debuff",
+          "stat": "Electric Resistance",
+          "amount": 5,
+          "display": "−5 Electric Resistance",
+          "sortKey": 5
         }
       ],
-      "valuesSummary": "3 Electric/3s (9s)",
+      "valuesSummary": "10 Electric/3s (6s) · −5 Electric Resistance",
       "statTags": []
     },
     {
       "name": "Implosion II",
       "slug": "Implosion_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Implosion_II",
-      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 60 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
+      "description": "Create a crushing vacuum around your target, decreasing their Block, Dodge, and Parry by 5 for 8 seconds. When this spell expires, the vacuum implodes, dealing 100 Physical Damage to your target and those around it.",
       "category": "Evo",
       "categorySlug": "Skill_Evocation",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",

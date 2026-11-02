@@ -1,5 +1,7 @@
 /** Class enhancement turn-ins for Aêthoril — Night Harbor, Faelindral, and shared armor hunts. */
 
+const { loadWikiQuests, mergeWikiQuests } = require("./wiki-quests");
+
 const wikiBase = "https://monstersandmemories.miraheze.org/wiki/";
 
 const CLASSES = [
@@ -1244,7 +1246,7 @@ function npcLinks(npc, fallback = null) {
 }
 
 function publicQuests() {
-  return QUESTS.map((q) => {
+  return mergeWikiQuests(QUESTS, loadWikiQuests()).map((q) => {
     const poiId = q.poiId || poiForNpc(q.npc);
     return {
       ...q,

@@ -1,6 +1,6 @@
 {
-  "importedAt": "2026-10-17T11:27:25.729Z",
-  "count": 71,
+  "importedAt": "2026-10-31T18:12:42.000Z",
+  "count": 131,
   "merchants": [
     {
       "name": "A cobbler",
@@ -72,25 +72,6 @@
       "items": [
         "Bell Pepper",
         "Cheese"
-      ],
-      "categories": [
-        {
-          "phrase": "Various vegetables",
-          "keywords": []
-        }
-      ]
-    },
-    {
-      "name": "A produce vendor",
-      "type": "produce vendor",
-      "zones": [
-        "Night Harbor"
-      ],
-      "place": "Saltbreeze Park, on the west wall",
-      "items": [
-        "Bell Pepper",
-        "Cheese",
-        "Mushroom"
       ],
       "categories": [
         {
@@ -1134,10 +1115,10 @@
       "zones": [
         "Ail'Vorith"
       ],
-      "place": "In the Foreign Trader's Market",
+      "place": "Foreign Trader's Market",
       "items": [
-        "Tattered Rawhide Armor",
-        "Rawhide Scarps"
+        "Tattered Rawhide",
+        "Rawhide Scraps"
       ],
       "categories": []
     },
@@ -1336,15 +1317,15 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "",
+      "place": "Citadel, Lower City",
       "items": [],
       "categories": [
         {
-          "phrase": "Fish",
+          "phrase": "Creature parts",
           "keywords": []
         },
         {
-          "phrase": "Monster Parts",
+          "phrase": "Fish",
           "keywords": []
         }
       ]
@@ -1410,22 +1391,7 @@
       "items": [],
       "categories": [
         {
-          "phrase": "Cloth Armour",
-          "keywords": []
-        }
-      ]
-    },
-    {
-      "name": "A used weapons dealer-Faelindral",
-      "type": "used weapons dealer-faelindral",
-      "zones": [
-        "Faelindral"
-      ],
-      "place": "Trader's Terrace",
-      "items": [],
-      "categories": [
-        {
-          "phrase": "All Weapons",
+          "phrase": "Cloth Armor",
           "keywords": []
         }
       ]
@@ -1436,11 +1402,11 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "Inn behind pirate's tavern.",
+      "place": "Eastern District, inn",
       "items": [],
       "categories": [
         {
-          "phrase": "Cooking Supplies",
+          "phrase": "Cooking supplies",
           "keywords": []
         },
         {
@@ -1455,7 +1421,7 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "Inn behind pirate's tavern.",
+      "place": "Eastern District, inn",
       "items": [],
       "categories": [
         {
@@ -1474,15 +1440,15 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "The inn across from Citadel Exchange. Downstairs. The backroom behind the bar.",
+      "place": "Citadel, Citadel Exchange, The Underhearth",
       "items": [],
       "categories": [
         {
-          "phrase": "Cooking Supplies",
+          "phrase": "creature parts",
           "keywords": []
         },
         {
-          "phrase": "Creature parts",
+          "phrase": "wood",
           "keywords": []
         }
       ]
@@ -1499,6 +1465,1093 @@
         "Rawhide Scarps"
       ],
       "categories": []
+    },
+    {
+      "name": "A bag vendor",
+      "type": "bag vendor",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Trader's Terrace. Left around the tree when coming up the ramp.",
+      "items": [
+        "Bat Fur",
+        "Bight Serpent Skin",
+        "Low-Quality Bear Pelt",
+        "Low-Quality Wolf Pelt"
+      ],
+      "categories": [
+        {
+          "phrase": "Pelts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A barkeep (Faelindral)",
+      "type": "barkeep",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Around back from Willows Whisper stage.",
+      "items": [
+        "Birch Sap"
+      ],
+      "categories": [
+        {
+          "phrase": "Charred fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Cooked meat",
+          "keywords": []
+        },
+        {
+          "phrase": "Roots",
+          "keywords": [
+            "multhele"
+          ]
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": [
+            "wild carrots"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A blacksmith (Faelindral)",
+      "type": "blacksmith",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Upper Tier. Sentinel's Gaze. Blacksmith area.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Gems",
+          "keywords": []
+        },
+        {
+          "phrase": "Metals",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A cook (Faelindral)",
+      "type": "cook",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "In the building next to the Inn near Newbie Lift.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Mob parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Vegetables",
+          "keywords": [
+            "wild carrots"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A jewelcrafter (Faelindral)",
+      "type": "jewelcrafter",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "In the tree trunk behind building up the ramp above Well of Order.",
+      "items": [
+        "Chipped Amber",
+        "Chipped Diamond",
+        "Chipped Peridot",
+        "Chipped Ruby",
+        "Chipped Sapphire"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A leatherworker (Faelindral)",
+      "type": "leatherworker",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Tanner",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Hides",
+          "keywords": []
+        },
+        {
+          "phrase": "Pelts",
+          "keywords": []
+        },
+        {
+          "phrase": "Rawhide",
+          "keywords": []
+        },
+        {
+          "phrase": "Scales",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A pelt trader (Faelindral)",
+      "type": "pelt trader",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Lower Tier. Newbie/Traveler's Lift Platform. Inside tree.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Pelts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A poison maker (Faelindral)",
+      "type": "poison maker",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "In Lambent Lantern. Go up the ramp from the bank.",
+      "items": [
+        "Multhele Root"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A produce vendor (Night Harbor)",
+      "type": "produce vendor",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Saltbreeze Park, on the west wall",
+      "items": [
+        "Bell Pepper",
+        "Cheese",
+        "Mushroom"
+      ],
+      "categories": [
+        {
+          "phrase": "Various vegetables",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A produce vendor (Underdocks)",
+      "type": "produce vendor",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [
+        "Bell Pepper",
+        "Cheese",
+        "Mushroom"
+      ],
+      "categories": [
+        {
+          "phrase": "Various vegetables",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A ranger instructor",
+      "type": "ranger instructor",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Rangers Rest",
+      "items": [
+        "Multhele Root"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A scrap dealer (Faelindral)",
+      "type": "scrap dealer",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Lower Tier. Newbie/Traveler's Lift. Under cloth overhang near lift.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A shifty gnome",
+      "type": "shifty gnome",
+      "zones": [
+        "Night Harbor"
+      ],
+      "place": "Out in the western newbie yard by a campfire.",
+      "items": [
+        "Spider Silk Cap"
+      ],
+      "categories": []
+    },
+    {
+      "name": "A tanner (Faelindral)",
+      "type": "tanner",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Upper tier. Tanner building. Outside building, near bridge.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Pelts",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A used armor dealer",
+      "type": "used armor dealer",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Lower Tier. Newbie/Traveler's Lift Platform. Inside tree near lift.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Armor",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "A used weapons dealer (Faelindral)",
+      "type": "used weapons dealer",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Middle Tier. Trader's Terrace. Go right when coming up the ramp from Lower Tier.",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "All Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "An alchemist (Faelindral)",
+      "type": "alchemist",
+      "zones": [
+        "Faelindral"
+      ],
+      "place": "Well of Order",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Herbs",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Appraiser Buldin",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "gems",
+          "keywords": []
+        },
+        {
+          "phrase": "jewelry",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Archer Brann",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bows",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Assistant Norwan",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "bandages",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Khordic",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Crown Reach",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "drinks",
+          "keywords": []
+        },
+        {
+          "phrase": "food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Kraznek",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Rogue cave",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Lyrsa",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, inn",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Drinks",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Ravik",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Citadel Exchange, The Underhearth",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "drink",
+          "keywords": []
+        },
+        {
+          "phrase": "food",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Tull",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "upper Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Drinks",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Barkeeper Yorvak",
+      "type": "barkeep",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, pirate tavern",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Drinks",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Berrie",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Market Terrace",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "shoes",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Brikin Bogfodder",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Western District, south cave",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Chaltise Elymnar",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, casters' guild",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Chef Ariand",
+      "type": "cook",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Crown Reach, Valhassen's Tailoring Academy",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "creature parts",
+          "keywords": []
+        },
+        {
+          "phrase": "wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Clarinda Sageforth",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "upper Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "herbs",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Cruuk Grimbak",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, behind pirate tavern",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "almost anything at a low price",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Deltan",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "beetle shells",
+          "keywords": []
+        },
+        {
+          "phrase": "gems",
+          "keywords": []
+        },
+        {
+          "phrase": "metal",
+          "keywords": []
+        },
+        {
+          "phrase": "stone",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Fisher Rivy",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Gaden Shale",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "almost anything at a low price",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Gralf Tanswell",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Leather",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Grifty",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Wilderness",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "almost anything at a low price",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Grubin",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Rogue cave",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "creature parts",
+          "keywords": []
+        },
+        {
+          "phrase": "wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Halgar Hidehand",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "leather",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Harvek Pinebeard",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Hilari Hidecraft",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "leather",
+          "keywords": []
+        },
+        {
+          "phrase": "leather armor",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Idris Mavri",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Crown Reach, Valhassen's Tailoring Academy",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "bandages",
+          "keywords": []
+        },
+        {
+          "phrase": "cloth",
+          "keywords": []
+        },
+        {
+          "phrase": "cloth armor",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Karsh Spoonthrower",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "upper Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Creature parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Keen Strikemore",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Krelvin Faredeil",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Citadel Exchange, Faredeil's Finest",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "almost anything at a low price",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Leramy Tenult",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Citadel Exchange, Second Rise Bakery",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "bread",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Link Kerfshorn",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "chain armor",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Lorven Chantle",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, casters' guild",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Mardah Stoneshiner",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "gems",
+          "keywords": []
+        },
+        {
+          "phrase": "jewelry",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Moss",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Western District, south cave",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Mott Hurnik",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "wood",
+          "keywords": []
+        },
+        {
+          "phrase": "almost anything made of wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Quartermaster Llarne",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, fighters' guild",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Armor",
+          "keywords": []
+        },
+        {
+          "phrase": "Drinks",
+          "keywords": []
+        },
+        {
+          "phrase": "Food",
+          "keywords": []
+        },
+        {
+          "phrase": "Tools",
+          "keywords": []
+        },
+        {
+          "phrase": "Weapons",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Ragan Stone",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "wood",
+          "keywords": []
+        },
+        {
+          "phrase": "almost anything made of wood",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Rivette Ironclave",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Forge Row",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "plate armor",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Ruk Sacksnatch",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Bags",
+          "keywords": []
+        },
+        {
+          "phrase": "Hides",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Stevran Understock",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Citadel, Lower City",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "survival gear",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Swindy",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "lower Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "almost anything at a low price",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Telar Nurg'ta",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, south shelf",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Creature parts",
+          "keywords": []
+        },
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Tobbin Tanglefoot",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "lower Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Adventuring gear",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Turz Dargrund",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Overreach, east side",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "gems",
+          "keywords": []
+        },
+        {
+          "phrase": "metal",
+          "keywords": []
+        },
+        {
+          "phrase": "stone",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Veldara Stillflask",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "lower Western District",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "herbs",
+          "keywords": []
+        },
+        {
+          "phrase": "potions",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Vylania Wizerly",
+      "type": "",
+      "zones": [
+        "Underdocks"
+      ],
+      "place": "Eastern District, casters' guild",
+      "items": [],
+      "categories": [
+        {
+          "phrase": "Reagents",
+          "keywords": []
+        }
+      ]
     }
   ]
 }

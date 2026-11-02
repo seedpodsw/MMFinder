@@ -1,0 +1,3751 @@
+{
+  "importedAt": "2026-10-31T18:36:37.037Z",
+  "source": "Template:Quest",
+  "count": 142,
+  "quests": [
+    {
+      "title": "A Letter for Munir Halabi",
+      "wiki": "A_Letter_for_Munir_Halabi",
+      "giver": "Quessith Velgarrith",
+      "npcs": [
+        "Munir Halabi"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Quessith Velgarrith is located in the Great Cavern Sea at the outpost directly outside of Ail'Vorath. Hail her in Deep Common."
+      ]
+    },
+    {
+      "title": "A Sweet Treat",
+      "wiki": "A_Sweet_Treat",
+      "giver": "Guard Pippi Pinecone",
+      "npcs": [
+        "Mierra Willowshade",
+        "a wasp drone",
+        "Guard Halfsies",
+        "Chef Violyn"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "evershade-weald",
+      "city": "Evershade Weald",
+      "rewards": [
+        "Stein of Baker's Scorn",
+        "Half of a Jelly Cupcake",
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give Guard Pippi Pinecone 1 x Jelly Cupcake, which you can obtain from completing Mierra's Famed Cupcakes.",
+        "Head to Mierra Willowshade near the inn.",
+        "Bring 12 x Royal Jelly and 1 x Satchel to Mierra Willowshade.",
+        "Deliver 1 x Packaged Cupcakes to Guard Pippi Pinecone.",
+        "Travel to the Smallfolk District, south of Saltbreeze Park, in Night Harbor and search for Guard Halfsies. You can ask other guards in the area about Pete Pinecone as well.",
+        "Hand the Packaged Cupcakes to Guard Halfsies.",
+        "Travel to Chef Violyn, who is located at the Crimson Oasis Inn near the North Gate of Night Harbor.",
+        "Hand the Half of a Jelly Cupcake to Chef Violyn.",
+        "Violyn's Grocery List notes the required items, but not where to obtain them. Chef Violyn is not willing to help, either.",
+        "Purchase 2 x Dried Dragon's Breath Pepper from Spices Merchant in Night Harbor.",
+        "Purchase 1 x Baladi from the Mukhtar Brewery in the river pirate tavern.",
+        "Purchase 4 x Basilisk Seasoning from An exotic cook in Shallow Shoals."
+      ]
+    },
+    {
+      "title": "A Winged Terror",
+      "wiki": "A_Winged_Terror",
+      "giver": "Witcher Sayyaad",
+      "npcs": [
+        "Night Terror"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Necklace of Night",
+        "Tunic of Night",
+        "Mantle of Night"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Witcher Sayyaad is located in the Necropolis found within Night Harbor. Enter the Necropolis from the south entrance with the purple \"Concourse of Souls\" banner and immediately turn right.",
+        "Kill Night Terror, a level 8 named bat that spawns only at night in the Necropolis Courtyard and Saltbreeze Park areas of Night Harbor.",
+        "Night Terror will drop one of three items randomly, which can be returned to Witcher Sayyaad for a reward.",
+        "Loot Night Terror's Wing from Night Terror.",
+        "Return to Witcher Sayyadd and hand him Night Terror's Wing.",
+        "Loot Night Terror's Fur from Night Terror.",
+        "Give Night Terror's Fur to Witcher Sayyaad.",
+        "Loot Night Terror's Head from Night Terror.",
+        "Give Night Terror's Head to Witcher Sayyaad."
+      ]
+    },
+    {
+      "title": "Ail'Vorith Class Quests",
+      "wiki": "Ail'Vorith_Class_Quests",
+      "giver": "Various",
+      "npcs": [
+        "Klavel Sul",
+        "Zalethra Drezzorith",
+        "Amarah Ith'vayen",
+        "Vaslir Naiyth",
+        "Myal Vehear",
+        "Laren Drin'dar",
+        "Xilonen Velgarrith"
+      ],
+      "levelMin": 2,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "These quests can only be obtained as a Deep Elf who started in the city of Ail'Vorith and has completed Ail'Vorith Starter Quest.",
+        "After obtaining your Obsidian Shackle, seek out the appropriate House quest based on your character's class.",
+        "When you cross the bridge behind the Toilmaster, the building directly across from the bridge is the Obsidian Academy.",
+        "The building to the left of the Obsidian Academy is a Military Outpost."
+      ]
+    },
+    {
+      "title": "Ail'Vorith Starter Quest",
+      "wiki": "Ail'Vorith_Starter_Quest",
+      "giver": "Toilmaster Verith",
+      "npcs": [
+        "Toilmistress Rallvessa",
+        "Supplier Jul",
+        "Cook Vashuk",
+        "Provost Xan'shorn"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Obsidian Shackle"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read the Imbued Parchment you start with as a new character in Ail'Vorith:",
+        "You are looking for Toilmaster Verith or Toilmistress Rallvessa, who are mere feet away from where you spawn as a new character in Ail'Vorith.",
+        "Hand Toilmaster Verith or Toilmistress Rallvessa your Imbued Parchment.",
+        "Using MUD Commands, you will search the nearby crates for a Slave Pickaxe.",
+        "If you hand the Broken Slave Pickaxe to Toilmaster Verith...",
+        "Hand the Slave Pickaxe to Toilmaster Verith or Toilmistress Rallvessa",
+        "Head south from the Toilmaster (the direction he's facing; away from the city) into the water and then right. Follow the wall until you find a small cave with several mining nodes. The nodes will respawn quickly (5-10 seconds) once mined. Place the Slave Pickaxe in your Main Hand slot and right-click the rocks to mine the Stone Ore veins until you have 20 Fragile Quarry Rock.",
+        "Hand in a stack of 20 Fragile Quarry Rock and your Slave Pickaxe.",
+        "Carry the heavy pack of stone up the hill behind Toilmaster Verith and follow the verbal instructions given to you to find Supplier Jul.",
+        "Hand Supplier Jul your Pack of Stone",
+        "Right click the recipe to learn how to craft Fragile Sharpening Stone.",
+        "Use your MUD Commands again to search the crate next to Supplier Jul and acquire some Fragile Quarry Rock."
+      ]
+    },
+    {
+      "title": "Archer Starter Quest (Faelindral)",
+      "wiki": "Archer_Starter_Quest_(Faelindral)",
+      "giver": "Commander Elydris Stormbough",
+      "npcs": [
+        "Captain Keyaryn Thornshade"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "archer"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Novice Scout Bracer",
+        "Weald Scout Bracer",
+        "Scout's Longbow of the Wyrdguard",
+        "Experience",
+        "Wyrdguard faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read the Rolled Leafscroll you start with as a new Archer character:",
+        "Head to Sentinels Terrace, which resides above the Traders Terrace in Faelindral.",
+        "Take the Traveler's Lift (where you entered the game). (You can double click on the bell and the lift will come. Double click the bell again to send the lift up.)",
+        "Go the the inn, then up, then right (in a right angle). When you see Pine Brightreed go left. (You are now at Traders Terrace)",
+        "Go toward the weapons armor sign and take the ramp at the left of Taelin Goldstem.",
+        "Take the bridge on your left, go left again and Captain Keyaryn Thornshade will be at the center of the giant trunk.",
+        "Give Rolled Leafscroll to Captain Keyaryn Thornshade.",
+        "Start by heading to Scout Gladebow, who can be found on the platform east of Sentinel's Terrace.",
+        "Give Briefing for Scout Gladebow to Scout Gladebow.",
+        "Next, head to Scout Amberward, who can be found at the base of the Keeper's Lift in Evershade Weald.",
+        "At the bottom of the Keeper's Lift, turn left and run through the ruins. Before crossing the bridge, turn right and you will see Scout Amberward overlooking a fallen log.",
+        "Give Briefing for Scout Amberward to Scout Amberward."
+      ]
+    },
+    {
+      "title": "Archer Starter Quest (Night Harbor)",
+      "wiki": "Archer_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Fedamius Steele III",
+        "Jacobin Yeats",
+        "Garrison Quartermaster"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "archer"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Steel Talon Trainee Tunic (Archer)",
+        "Steel Talons Bowman Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head to the Steel Talons Martial Academy on the Southwest side of Night Harbor and hand in your Notice of Recruitment to Fedamius Steel III",
+        "Head down into the courtyard and hand your Notice of Recruitment to Jacobin Yeats",
+        "Head out to the west gate noob yard and kill An ashira scout until you get 4 Ashira Scout Necklaces",
+        "Hand the Bag of Ashira Scout Necklaces to Jacobin Yeats",
+        "Head out to the west gate noob yard and kill An ashira warrior until you get 6 Ashira Warrior Necklaces",
+        "Hand the Pack of Ashira Warrior Necklaces to Jacobin Yeats"
+      ]
+    },
+    {
+      "title": "Ashira Infiltrator Heads",
+      "wiki": "Ashira_Infiltrator_Heads",
+      "giver": "Red Mantle Quartermaster",
+      "npcs": [
+        "Mayana",
+        "Jumthem"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Red Mantles faction",
+        "Langsdorfian League faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "After completing The Yowling, it is discovered that certain residents of Night Harbor are more than what they appear.",
+        "Slaying these residents in disguise will yield Hidden Ashira's Head that may be turned in to the Red Mantle Quartermaster for faction with the Red Mantles.",
+        "This quest is repeatable, but caution is advised. Slaying Mayana and Jumthem too many times will cause significant faction loss with the City of Night Harbor and the Pyrmos Mercenaries.",
+        "Hand in either Mayana's Head or Jumthem's Head to the Red Mantle Quartermaster.",
+        "Hand in Hidden Ashira's Head to the Red Mantle Quartermaster."
+      ]
+    },
+    {
+      "title": "Ashira Tails Quest",
+      "wiki": "Ashira_Tails_Quest",
+      "giver": "Old Rankle",
+      "npcs": [
+        "an ashira scout"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Tattered Rawhide"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Old Rankle is located in the Tannery in Night Harbor, in the second floor of a building on the north wall, above the leatherworking trainer.",
+        "Based on the surrounding room, it's trivial to guess Old Rankle is interested in collecting Ashira Tail.",
+        "Ashira Tail can drop from any Ashira mob.",
+        "Give 1 x Ashira Tail to Old Rankle."
+      ]
+    },
+    {
+      "title": "Ashira Warrior Bracer Quest",
+      "wiki": "Ashira_Warrior_Bracer_Quest",
+      "giver": "Watch Captain Badawi",
+      "npcs": [
+        "Quartermaster Obaid",
+        "an ashira warrior"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Tattered Rawhide",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Watch Captain Badawi wanders all about the upper garrison area of the city.",
+        "Quartermaster Obaid is located in the Garrison (near west gate) in Night Harbor, in a room adjacent to the area with soldiers hitting training dummies.",
+        "Quartermaster Obaid is looking for Ashira Warrior Bracer. These are an uncommon drop from an ashira warrior and other higher level ashira fighters.",
+        "Give Ashira Warrior Bracer to Quartermaster Obaid."
+      ]
+    },
+    {
+      "title": "Bard Starter Quest (Faelindral)",
+      "wiki": "Bard_Starter_Quest_(Faelindral)",
+      "giver": "Pine Brightreed",
+      "npcs": [
+        "Flerri Dawntender the Tailor",
+        "Laenyth Windharp",
+        "Lorinthal Skybranch",
+        "Mistress Naelira",
+        "Sersil Tangleroot",
+        "Sylphrena Starfall",
+        "Sylvosa Pineweld",
+        "Wyrdguard Mithrilvine"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "bard"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Lambent Lute",
+        "Ring of introduction",
+        "Lute of the Charmed",
+        "Lute of the Charmer",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read the Perfumed Letter you start with as a new Bard character:",
+        "Give Full Ticket Satchel to Pine Brightreed.",
+        "Give Full Donation Basket and Odd Recorder to Pine Brightreed",
+        "Give Fruit-Stained Washcloth to Laenyth Windharp",
+        "Give Note for Sylphrena to Sylphrena Starfall, who is just upstairs from Laenyth Windharp.",
+        "Give Ring of Introduction to Sylphrena Starfall.",
+        "Give Full Ingredient Bag to Sylphrena Starfall.",
+        "Give Laced Wine to Pine Brightreed.",
+        "Give Empty Wineglass to Sylphrena Starfall.",
+        "Give Lambent Lute to Sylphrena Starfall.",
+        "Give Completed Mixture to Laenyth Windharp.",
+        "Give Lambent Lute to Mistress Naelira."
+      ]
+    },
+    {
+      "title": "Bard Starter Quest (Night Harbor)",
+      "wiki": "Bard_Starter_Quest_(Night_Harbor)",
+      "giver": "Jamee Langris",
+      "npcs": [
+        "Guard Jeskal"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "bard"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Jamee's Coin",
+        "Azure Enameled Golden Bangle"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand the Pouch of Rare Tobacco to Harbormaster Daoud",
+        "Hand the Perfumed Silken Sash to Guard Jeskal",
+        "Hand the Small Eye Shaped Mirror to Cordellius Hollmion",
+        "Hand the Tiny Leatherbound Book to Elrind Steele",
+        "Hand the Framed Pressed Flowers to Jiselle Heyley",
+        "Hand the Vial of Cloudy Liquid to Assistant Researcher Farland",
+        "Combine the six Small Metal Parchment Vials in the provided Small Courier Bag to create the item form of the Small Courier Bag.",
+        "Head back Jamee Langris with the Small Courier Bag."
+      ]
+    },
+    {
+      "title": "Beastmaster Starter Quest (Faelindral)",
+      "wiki": "Beastmaster_Starter_Quest_(Faelindral)",
+      "giver": "",
+      "npcs": [
+        "Captain Relgen Greenblade",
+        "Aerin Mossfang"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "beastmaster"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Hand Request for Aid to Captain Relgen Greenblade",
+        "Head to Aerin Mossfang in the Quiet Den and hand in the Request for Aid."
+      ]
+    },
+    {
+      "title": "Beastmaster Starter Quest (Night Harbor)",
+      "wiki": "Beastmaster_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Leila Ghasem",
+        "Kilia",
+        "Yorias"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "beastmaster"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Beast Initiate's Cord",
+        "Beast Adept's Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Hastily Scrawled Note to Leila Ghasem",
+        "Head to either the North Gate or West Gate Noob Yards to hunt for a large rats, a desert bats, and a jackal pups.",
+        "Hand Betoothed Leather Cord to Leila Ghasem",
+        "Head to Blackfeather Bazaar near the Necropolis in the Northern section of Night Harbor.",
+        "Hand the Sketch of Elian to Yorias"
+      ]
+    },
+    {
+      "title": "Blacktide Orders",
+      "wiki": "Blacktide_Orders",
+      "giver": "Drelith Vael'xirith",
+      "npcs": [],
+      "levelMin": 16,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Shore Surveyor's Charm"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Drelith Vael'xirith is located in the Great Cavern Sea close to the Blacktide Orc camp. Hail her in Deep Common.",
+        "Go and slay Overseer Vashruk. He spawns randomly in the last group of orcs closest to the falls. Return the Blacktide Order Packet he drops to Drelith."
+      ]
+    },
+    {
+      "title": "Bone Chips for Moon Dances",
+      "wiki": "Bone_Chips_for_Moon_Dances",
+      "giver": "Moon Dances",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Tattered Cloth",
+        "Experience",
+        "Preservers faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Moon Dances is located near the Shaman Spell Merchant at The Balanced Branch, which is only reachable from the Ranger/Beastmaster Platform.",
+        "Find and hunt skeleton mobs such as a rotting skeleton in Evershade Weald. You can often times find Bone Chips on vendors in Faelindral as well.",
+        "Give 5 x Bone Chips to Moon Dances."
+      ]
+    },
+    {
+      "title": "Bone Chips for Squire Ryland",
+      "wiki": "Bone_Chips_for_Squire_Ryland",
+      "giver": "Squire Ryland",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Experience",
+        "Penitent Knights of the Hospice faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Squire Ryland is located inside of the Wayfarers Hospice in Night Harbor near the Paladin class trainers. Enter Wayfarers Hospice and take the first door on the right, then turn right.",
+        "Kill skeleton mobs which drop Bone Chips. You will need sets of 5 x Bone Chips for each turn-in.",
+        "Give 5 Bone Chips to Squire Ryland.",
+        "If you hand less than 5 Bone Chips..."
+      ]
+    },
+    {
+      "title": "Bones of the Ancestor",
+      "wiki": "Bones_of_the_Ancestor",
+      "giver": "Bree Weatherstoll",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Bree Weatherstoll is located in the halfling camp west of the quarry in Sungreet Strand.",
+        "In the middle of the camp a pot with cooking stew can be found.",
+        "Using MUD commands, you can learn a bit more detail about the camp...",
+        "You can also take some Stew as suggested by Bree Weatherstoll earlier in your conversation with her.",
+        "The halfling bones discovered by the passing farmer that Bree mentions are in an alcove nearby.",
+        "You can again /look at the bones to learn more about them.",
+        "You can pour the Halin Hearty Stew on the skeleton with MUD commands.",
+        "Pick up the Halin Hearty Stew so it is on your cursor, and then type:",
+        "At some point during the night, Bree Weatherstoll wanders over to the halfling remains and mentions something about ruins."
+      ]
+    },
+    {
+      "title": "Burning Bones",
+      "wiki": "Burning_Bones",
+      "giver": "Bones",
+      "npcs": [
+        "Cordellius Hollmion",
+        "Pedram",
+        "A Fishwife",
+        "Rallin Wizentrop"
+      ],
+      "levelMin": 16,
+      "classIds": [
+        "necromancer"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Scroll: Burning Bones"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Burnt Out Lightstones",
+      "wiki": "Burnt_Out_Lightstones",
+      "giver": "Jabir Ilhamar",
+      "npcs": [
+        "a willowisp"
+      ],
+      "levelMin": 4,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": []
+    },
+    {
+      "title": "Captain Hulg's Mug",
+      "wiki": "Captain_Hulg's_Mug",
+      "giver": "Mercenary Captain Hulg",
+      "npcs": [
+        "Nerguk"
+      ],
+      "levelMin": 20,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "Experience",
+        "Coin",
+        "Pyrmos Mercenaries faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Kill Nerguk found in the quarry below the watch tower.",
+        "Nerguk will sometimes drop Intricate Ale Mug.",
+        "Bring the Intricate Ale Mug to Mercenary Captain Hulg for your reward."
+      ]
+    },
+    {
+      "title": "Cargo Inspection",
+      "wiki": "Cargo_Inspection",
+      "giver": "Ysmara velgarrith",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Ysmara velgarrith is located above the large waterfall in the Great Cavern Sea. Hail her in Deep Common."
+      ]
+    },
+    {
+      "title": "Chompers' Hide Tunic Quest",
+      "wiki": "Chompers'_Hide_Tunic_Quest",
+      "giver": "Cheikho",
+      "npcs": [
+        "Chompers"
+      ],
+      "levelMin": 16,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shaded-dunes",
+      "city": "Shaded Dunes",
+      "rewards": [
+        "Chompers Hide Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Cheikho is at the hunters camp on the eastern side of the large, rocky mound separating the smuggler area from the oasis with the ghouls. You can see the camp from the beach.",
+        "Chompers is a level 16 crocodile which will spawn randomly along the beach.",
+        "Kill Chompers and loot Chomper's Hide.",
+        "Return to Cheikho and give him 1 x Chomper's Hide."
+      ]
+    },
+    {
+      "title": "Cinder Beetle Armor Quests",
+      "wiki": "Cinder_Beetle_Armor_Quests",
+      "giver": "Hult Beetlewrangler",
+      "npcs": [
+        "a master blacksmith",
+        "Weaponsmith Sielah Zefir",
+        "Shipwright Benlink",
+        "Master Shipwright Huda"
+      ],
+      "levelMin": 14,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Cinder Beetle Shield",
+        "Cinder Beetle Boots",
+        "Cinder Beetle Helm",
+        "Cinder Beetle Greaves",
+        "Cinder Beetle Breastplate"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Knowing Hult Beetlewrangler is a master craftsman of fine beetle parts, you inquire about crafting armor from cinder beetle shells you've encountered during your travels.",
+        "Give Hult Beetlewrangler 1 x Cinder Beetle Carapace and 1 x Cinder Beetle Legs",
+        "Hult Beetlewrangler recommends you speak to a master blacksmith.",
+        "The master blacksmith only works at night (spawns at 6 PM in-game time). He is located in front of the Blacksmithing building in the Night Market.",
+        "Give a master blacksmith 1 x Cinder Beetle Carapace and 2 x Cinder Beetle Legs",
+        "You can inquire if any recipes have been shared with a master blacksmith recently to continue the quest.",
+        "Weaponsmith Sielah Zefir is located in the Black Feather Bazaar.",
+        "The Cinder Beetle Mandible is a rare drop off a cinder drone in Sungreet Strand.",
+        "You can either craft a Copper Dagger or sometimes find them on weapon vendors across Night Harbor.",
+        "Charcoal can be purchased from various goods merchants across Night Harbor.",
+        "Hand Weaponsmith Sielah Zefir 2 x Cinder Beetle Carapace, 2 x Cinder Beetle Legs, 2 x Charcoal, 1 x Copper Dagger, and 1 x Cinder Beetle Mandible.",
+        "Shipwright Benlink is located behind some crates on the docks in Southwest Night Harbor during the day (located near \"a first mate\" and \"a sailor\")."
+      ]
+    },
+    {
+      "title": "Cleric Starter Quest (Night Harbor)",
+      "wiki": "Cleric_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Thibald Burlond",
+        "Jiselle Heyley",
+        "Dalinder Grammanoot",
+        "Millicent Domaire"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "cleric"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Dalinder's Tunic",
+        "Penitent Knight's Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Formal Note to Jiselle Heyley upstairs.",
+        "Head to the West Gate Noob Yard and kill a snakes until you receive 6 Immature Snake Venom Sacs. Alternatively you can buy them.",
+        "Return to Dalinder Grammanoot and hand in your Bag of Venom Sacs"
+      ]
+    },
+    {
+      "title": "Cleric Starter Quest (Underdocks)",
+      "wiki": "Cleric_Starter_Quest_(Underdocks)",
+      "giver": "Soren Akedd",
+      "npcs": [
+        "Sister Marwen",
+        "Lady Tabitha"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "cleric"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Tattered Ephod",
+        "Splintered Servant's Buckler",
+        "Worn Servant Buckler"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand in the note to Soren Akedd.",
+        "Go out the front of the building and take a left. The chapel is very close and has a red glow inside. Go inside, walk all the way up to the altar in front of the statue and /look .",
+        "Combine them in the Robe Box to get the Full Robe Box.",
+        "Hand the Full Robe Box in to Sister Marwen.",
+        "Hand Full Snake Gland Pouch you get after the combine"
+      ]
+    },
+    {
+      "title": "Cloth Scraps Quest",
+      "wiki": "Cloth_Scraps_Quest",
+      "giver": "a shifty gnome",
+      "npcs": [
+        "an ashira scout",
+        "a rotting skeleton"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Tattered Cloth",
+        "Pouch",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "This quest starts at a shifty gnome, a vendor located in a ruined building just outside of Night Harbor west gate.",
+        "Obtain 6 x Cloth Scraps, which can be looted from various humanoid mobs such as ashira or skeletons.",
+        "Equip Shifty's Scrap Pack, and place 1 x Cloth Scraps in each slot of the bag and click Combine.",
+        "Hand the Bundled Scraps to a shifty gnome for your reward."
+      ]
+    },
+    {
+      "title": "Crystals from the Deepcut miners",
+      "wiki": "Crystals_from_the_Deepcut_miners",
+      "giver": "Maude Astarace",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Culling the Fellstone",
+      "wiki": "Culling_the_Fellstone",
+      "giver": "Wyrdguard Oakenpine",
+      "npcs": [
+        "A Fellstone warrior"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Tattered Rawhide",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Seek out Wyrdguard Oakenpine, who is located across the bridge from the Tanner building in Faelindral.",
+        "You can find Fellstone orcs all over Evershade Weald. The most common early level variant is A Fellstone warrior. Kill several orcs until you have one or more Left Orc Ear.",
+        "Hand in 1 x Left Orc Ear to Wyrdguard Oakenpine."
+      ]
+    },
+    {
+      "title": "Cult Altar Weights",
+      "wiki": "Cult_Altar_Weights",
+      "giver": "Maren Pike",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Cultbreaker Belt",
+        "Stillwater Ward"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Cultists in Night Harbor",
+      "wiki": "Cultists_in_Night_Harbor",
+      "giver": "Njau Hansou",
+      "npcs": [
+        "a cultist"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Njau Hansou is located on the upper deck of the Spellbinder's Spire in Night Harbor.",
+        "Kill a cultist in the basement of The Shaded Bloom Inn and loot a Cultist's Insignia Ring.",
+        "Return to Njau Hansou and give them the Cultist's Insignia Ring."
+      ]
+    },
+    {
+      "title": "Dealing with the Blacktide Orcs",
+      "wiki": "Dealing_with_the_Blacktide_Orcs",
+      "giver": "Captain Harkan Saafir",
+      "npcs": [
+        "a landing lieutenant"
+      ],
+      "levelMin": 40,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shallow-shoals",
+      "city": "Shallow Shoals",
+      "rewards": [
+        "Vial of Snaring Poison",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Decipher the Unintelligible Writings",
+      "wiki": "Decipher_the_Unintelligible_Writings",
+      "giver": "Researcher Fairgrove",
+      "npcs": [
+        "a Fellstone scout"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Partially Translated Report",
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Researcher Fairgrove is located slightly above the bank (just a few meters) in the Heartwood Archives. Take the ramp just outside of the bank and use the platform that wraps around the other side of the tree.",
+        "Collect Unintelligible Writings from a Fellstone scout in Evershade Weald, then hand them in one at a time to Researcher Fairgrove."
+      ]
+    },
+    {
+      "title": "Deepcut Bandit Bounty",
+      "wiki": "Deepcut_Bandit_Bounty",
+      "giver": "Traven Keldress",
+      "npcs": [
+        "Elara Venn"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Diseased Wolf Pelts for Baewyn Mossfang",
+      "wiki": "Diseased_Wolf_Pelts_for_Baewyn_Mossfang",
+      "giver": "Baewyn Mossfang",
+      "npcs": [
+        "a rabid wolf"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Experience",
+        "Coin",
+        "Ardent Keepers faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Seek out Baewyn Mossfang, located in the Beastmaster's guild in Faelindral.",
+        "Locate and kill a rabid wolf in Evershade Weald to obtain Diseased Wolf Pelt.",
+        "Give 1 x Diseased Wolf Pelt to Baewyn Mossfang."
+      ]
+    },
+    {
+      "title": "Dispose of the Onyx Outlaws",
+      "wiki": "Dispose_of_the_Onyx_Outlaws",
+      "giver": "Foreman Stonehammer",
+      "npcs": [
+        "Taskmaster Feeka",
+        "Taskmaster Gitch",
+        "Taskmaster Urka"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "Stone Sack",
+        "Stonehammer Maul",
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Kill all three taskmasters from the Quarry below Foreman Stonehammer.",
+        "Each taskmaster will drop a whip. When all three whips are collected, they can be handed in to Foreman Stonehammer.",
+        "Return to Foreman Stonehammer and hand him Feeka's Whip, Gitch's Whip, and Urka's Whip.",
+        "Find a goblin overseer on the top of the tallest pillar, and kill him.",
+        "Loot the Head of the Overseer from a goblin overseer.",
+        "Return to Foreman Stonehammer and hand him Head of the Overseer."
+      ]
+    },
+    {
+      "title": "Druid Starter Quest (Faelindral)",
+      "wiki": "Druid_Starter_Quest_(Faelindral)",
+      "giver": "Sylvarya Starveil",
+      "npcs": [
+        "Sylwine Brightspirit"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "druid"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Minor Frostbite",
+        "Fire Beetle Eye",
+        "Aspirant Icon of the Gatekeeper",
+        "Icon of the Gatekeeper"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Rolled Leafscroll to Sylvarya Starveil.",
+        "give the Strange Reaction Phial to Sylvarya Starveil.",
+        "Hand Strange Reaction Phial to Sylwine Brightspirit.",
+        "Kill a black bat for Bat Wing, a wasp drone for Royal Jelly and a rotting skeleton for Bone Chips.",
+        "Combine two Royal Jelly, two Bat Wing, and two Bone Chips in the Reagent Bag.",
+        "Hand Full Reagent Bag to Sylwine Brightspirit.",
+        "head back to Sylvarya Starveil and give her the Novice Icon of the Gatekeeper and the Note of Results.",
+        "Hand the letter to Almina Weepingwind.",
+        "Hand the token to Commander Elydris Stormbough.",
+        "Kill a Fellstone shaman until you have x4 Broken Shaman Idol. Combine those in the satchel and receive Full Vine-Strapped Satchel.",
+        "Hand the satchel to Commander Stormbough.",
+        "Hand the attuned lodestone to Sylvarya."
+      ]
+    },
+    {
+      "title": "Druid Starter Quest (Night Harbor)",
+      "wiki": "Druid_Starter_Quest_(Night_Harbor)",
+      "giver": "Rolan Talmula",
+      "npcs": [
+        "Calaada",
+        "Aaliyah",
+        "Milham the Mad",
+        "Almina Weepingwind"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "druid"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Worn Circle Tunic",
+        "Blessed Fire Beetle Eye",
+        "Halfling-Made Boots",
+        "Dousing Rod of Scarce Rains",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read Earth-Stained Note. As a new Druid character in Night Harbor, you will start with one in your inventory.",
+        "Head to Saltbreeze Park in Night Harbor. The druid guild is the southern building inside of Saltbreeze Park.",
+        "Inside of the druid guild, seek out Rolan Talmula. Rolan tends to wander around between the entrance balcony and the first floor.",
+        "Give Earth-Stained Note to Rolan Talmula.",
+        "Head to either West Gate or North Gate and begin hunting A desert bat and a fire beetle.",
+        "You will need 8 x Bat Wing and 1 x Fire Beetle Eye. Killing bats should give you sufficient levels to solo a fire beetle for the eye.",
+        "Alternatively, you may find Bat Wing and rarely Fire Beetle Eye for sale on various cooking merchants across Night Harbor, sold by other players.",
+        "Place 8 x Bat Wing in your Sack for Bat Wings and click Combine to create Sack of Bat Wings. The bat wings can be stacked for the combine.",
+        "Return to Rolan Talmula and give him your Sack of Bat Wings along with a Fire Beetle Eye.",
+        "Head inside the Druid Guild. Inside, turn right, and at the balcony, turn left and walk up the three ramps. Turn left after climbing to the top of the ramp BEFORE the balcony and enter the room, taking a left, then another left with another ramp up. Exit this room to the balcony to find Calaada Acaciathorn at the end of the balcony.",
+        "Head down one level and locate Aaliyah.",
+        "Give Aaliyah the Notched Circle Token."
+      ]
+    },
+    {
+      "title": "Druid Starter Quest (Underdocks)",
+      "wiki": "Druid_Starter_Quest_(Underdocks)",
+      "giver": "",
+      "npcs": [
+        "Luskmit"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "druid"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Shredded Cloak",
+        "Rotting Rootstaff"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head east to the Dry Docks. Go right once you reach the water. Run a long way, looking for a tunnel that has hanging vines. Go through there and keep veering right until you see a camp up a hill. You will find Luskmit there. Hand him your Musky Note.",
+        "Go back to Luskmit and hail them.",
+        "Head back to Luskmit in the Rotten Hollow",
+        "Combine Blind Deepweb Eye, Rotten Deepscale Gland, Rotting Shadewing Heart, and Decomposed Myconid Cap in the Organ Sample Bag to make a Bag of Rotting Organs. Return this to Luskmit.",
+        "Give Luskmit a Rotting Rootstaff.",
+        "Return to Luskmit in the Rotten Hollow.",
+        "Go to Brugg Mulcher in the nearby mushroom cave.",
+        "Go to the nearby red mushroom. /take mushroom",
+        "Give the mushroom to Brugg.",
+        "Give the Full Mushroom Basket to Brugg Mulcher."
+      ]
+    },
+    {
+      "title": "Elementalist Starter Quest (Night Harbor)",
+      "wiki": "Elementalist_Starter_Quest_(Night_Harbor)",
+      "giver": "Tenebrim Tam",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "elementalist"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "First Degree Fourfold Sash",
+        "Simple Brass Coin",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Enchanter Starter Quest (Night Harbor)",
+      "wiki": "Enchanter_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Master Wincog",
+        "Bieito Brightsmile",
+        "Mirembe Tiifu",
+        "Malory Moreland",
+        "Sexton Harding",
+        "Vaclav",
+        "Jaakima",
+        "Piia",
+        "Jamee Langris"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "enchanter"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Dusty Violet Robe",
+        "Braided Crystal Ring",
+        "Rough Cut Robe",
+        "Scroll: Invisibility Versus Undead"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read Torn Note you start with as a new Enchanter character:",
+        "Give Torn Note to Master Wincog."
+      ]
+    },
+    {
+      "title": "Escort Head Researcher Aashir",
+      "wiki": "Escort_Head_Researcher_Aashir",
+      "giver": "Head Researcher Aashir",
+      "npcs": [
+        "a cultist"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shaded-dunes",
+      "city": "Shaded Dunes",
+      "rewards": [
+        "Aashir's Earring"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest has two parts, both are dependent on the time of day within the game.",
+        "Part 1 of the quest in Shaded Dunes starts at 6 PM game time. If you complete Part 1, the Night Harbor version of Head Researcher Aashir will spawn and remain up until 6 AM game time. He will promptly despawn in Night Harbor at 6 AM. Requiring you to re-complete Part 1, in order to complete the reward turn in. It is recommended to complete Aashir's Journal before completing Part 1 of the quest.",
+        "Head Researcher Aashir is only up during the day time. He spawns at 6AM game time and will be attacked by the risen skeletons when they spawn at 6PM game time. Head Researcher Aashir is lower level than the risen skeletons so they will kill him, requiring you to wait until 6PM the next day. If you hail Head Researcher Aashir during the day he will dismiss you.",
+        "In Shaded Dunes around the entrance to Ancient Crypt, risen skeletons and cultists spawn promptly at 6 PM game time and will despawn at 6 AM game time. They are on a 7 minute respawn timer.",
+        "Equip Aashir's Journal into an open bag slot. Add each journal page and click Combine to create Aashir's Journal.",
+        "Locate Head Researcher Aashir near the Ancient Crypt zoneline in Shaded Dunes.",
+        "This can only be started after 6:00 PM game time once the risen skeletons have spawned nearby.",
+        "After a brief delay, Head Researcher Aashir will start walking through the ruins towards Night Harbor. He does not provide any additional speech at this point of time.",
+        "You are to escort him to the far end of the ruins, killing anything along the way. There can be upwards of 3-4 Risen Skeletons attacking him at once.",
+        "Plan for a small group to assist in keeping the Risen Skeletons off of Head Research Aashir. If Head Research Aashir dies while being escorted, you will need to wait until 6:00 PM game time the following in-game day to try again.",
+        "If there are any Risen Skeletons in the area, Head Researcher Aashir will rush to attack them.",
+        "When you have reached the northern end of the ruins, Head Researcher Aashir will stop moving and he will give a brief statement."
+      ]
+    },
+    {
+      "title": "Fariha's Shawl Quest",
+      "wiki": "Fariha's_Shawl_Quest",
+      "giver": "Fariha bint Nizar",
+      "npcs": [
+        "Nizar al-Harith"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "Fariha's Shawl"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Kill Nizar al-Harith in Sungreet Strand and loot his Bloodied Sickle.",
+        "You will need access to a player who has the Grain Cellar Key to open the gates to the room which Fariha bint Nizar is in.",
+        "Kill the mobs in the alter room to spawn Fariha bint Nizar. The mobs in the room will attack Fariha bint Nizar. Placeholder is a priestess of Kravvin.",
+        "Once Fariha bint Nizar is spawned, turn in the Bloodied Sickle to Fariah."
+      ]
+    },
+    {
+      "title": "Fighter Starter Quest (Faelindral)",
+      "wiki": "Fighter_Starter_Quest_(Faelindral)",
+      "giver": "Commander Elydris Stormbough",
+      "npcs": [
+        "Thibald Burlond",
+        "Jiselle Heyley",
+        "Dalinder Grammanoot",
+        "Millicent Domaire"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "fighter"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Tarnished Elven Blade",
+        "Novice Chain of the Wyrdguard",
+        "Striker's Chain of the Wyrdguard",
+        "Tempered Blade of the Fae-Bound"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Rolled Leafscroll to Captain Vaelric Ironbark in the Sentinels Gaze",
+        "Hand Scrawled Leafscroll to Craftguard Vinebrow a few meters away."
+      ]
+    },
+    {
+      "title": "Fighter Starter Quest (Night Harbor)",
+      "wiki": "Fighter_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Fedamius Steele III",
+        "Lurinda Steele",
+        "Elrind Steele"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "fighter"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Steel Talon Trainee Tunic (Fighter)",
+        "Steel Talon's Recruit Breastplate"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head to the Steel Talons Martial Academy on the Southwest side of Night Harbor and hand in your Notice of Recruitment to Fedamius Steel III",
+        "Head down to the courtyard and hand in your Notice of Recruitment to Lurinda Steele",
+        "Head into southern entrance to the academy and hand in your Notice of Recruitment to Elrind Steele",
+        "Head out the west gate to kill a rotting skeletons, a snakes, and a fire beetles",
+        "Return to Elrind Steele and hand him the Frottage of Inscriptions, Skeleton Jawbone, Snake Fang, and Fire Beetle Eye",
+        "Return to Lurinda Steele and hand her Combined 6 Ashira Warrior Bracers"
+      ]
+    },
+    {
+      "title": "Find Delilah's Pet",
+      "wiki": "Find_Delilah's_Pet",
+      "giver": "Delilah",
+      "npcs": [
+        "A Friendly undercap"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Turtle Shell Shield",
+        "Experience",
+        "Citizens of Underdocks faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Delilah is located just outside the left (west) entrance to the newbie area in the Underdocks, standing next to the Guards at the gate.",
+        "Head just ahead and to the left of where Delilah is facing. Exiting the left gate to newbie zone, locate the Green mushroom on the wall towards the Northwest. You will find a small pond with green mushrooms surrounding a a friendly undercap.",
+        "Hand a friendly undercap 4 x Bone Chips.",
+        "Return Amari to Delilah by handing the turtle to her."
+      ]
+    },
+    {
+      "title": "Finding Dhug",
+      "wiki": "Finding_Dhug",
+      "giver": "Foreman Stonehammer",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Foreman Stonehammer is located on a platform in the north west corner of the quarry in Sungreet Strand, near Sister Elara."
+      ]
+    },
+    {
+      "title": "Fizzle Screwtape's Critical Research",
+      "wiki": "Fizzle_Screwtape's_Critical_Research",
+      "giver": "Fizzle Screwtape",
+      "npcs": [
+        "Tariq the Revealer",
+        "Ngakepoto"
+      ],
+      "levelMin": 40,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shallow-shoals",
+      "city": "Shallow Shoals",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Give Fizzle Screwtape 1x Giant Skull.",
+        "Give Fizzle Screwtape 1x Bile-Drenched Artifact.",
+        "Give Fizzle Screwtape 1x Pristine Sea Sponge and 1x Bile-Drenched Artifact.",
+        "give Ngakepoto 1x Horn of the Sea."
+      ]
+    },
+    {
+      "title": "Fungal Armor Quests",
+      "wiki": "Fungal_Armor_Quests",
+      "giver": "Leatherworker Vex",
+      "npcs": [
+        "a cave myconid"
+      ],
+      "levelMin": 5,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Fungal Coat",
+        "Fungal Helm",
+        "Fungal Leggings",
+        "Fungal Boots"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hunt a cave myconid and loot 3 x Perfect Fungus Cap, 2 x Strong Fungus Hyphea and 1 x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
+        "Hunt a cave myconid and loot 2 x Perfect Fungus Cap and 1 x Strong Fungus Hyphea. Hand these items to Leatherworker Vex.",
+        "Hunt a cave myconid and loot 2 x Perfect Fungus Volva, 2 x Strong Fungus Hyphea and 2 x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
+        "Hunt a cave myconid and loot 2 x Perfect Fungus Volva and 2 x Strong Fungus Hyphea. Hand these items to Leatherworker Vex."
+      ]
+    },
+    {
+      "title": "Ghost Haul",
+      "wiki": "Ghost_Haul",
+      "giver": "Barkeep Glior",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shallow-shoals",
+      "city": "Shallow Shoals",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Glinting Hollow Key Quest",
+      "wiki": "Glinting_Hollow_Key_Quest",
+      "giver": "Scout Brightleaf",
+      "npcs": [
+        "Sporeweaver Underveil",
+        "Lilac Latespring",
+        "Sersil Tangleroot"
+      ],
+      "levelMin": 35,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "evershade-weald",
+      "city": "Evershade Weald",
+      "rewards": [
+        "Glowing Fae Scale"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Acquire Warped Scale from a warped fae near druid mushroom circle in Evershade Weald. This item doesn't always drop. a warped fae always spawns at 2AM game time. It will path to the Glinting Hollow zoneline and despawn if left untouched.",
+        "Acquire Twisted Scale from a twisted fae up the ramp near the broken undead ruins by the Keeper's Bight zoneline. This item doesn't always drop. a twisted fae always spawns at 3AM game time. It will path to the Glinting Hollow zoneline and despawn if left untouched.",
+        "Turn in a Spark of Magic (via Disenchanting) to Sporeweaver Underveil in the mushroom cave to receive Ancient Mushroom Powder.",
+        "Turn in Twisted Scale and Warped Scale to Lilac Latespring to get Bundle of Scales.",
+        "Turn in Bundle of Scales and Ancient Mushroom Powder to Sersil Tangleroot to receive Glowing Fae Scale.",
+        "Turn in Glowing Fae Scale to Lilac Latespring to receive a 2nd version of it with a different tooltip (A bright, pulsating scale that feels both cold and warm at the same time.) which is the final key.",
+        "Find Scout Brightleaf outside the Glinting Hollow zoneline, uphill from the druid ring in Evershade Weald. He is stealthed but can be seen up close at the appropriate level (DB at 42)."
+      ]
+    },
+    {
+      "title": "Gnomes Next Door",
+      "wiki": "Gnomes_Next_Door",
+      "giver": "Innkeeper Farda",
+      "npcs": [
+        "Chef Brigit",
+        "Barkeeper Tull"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Head outside into the adjacent building and speak with Chef Brigit"
+      ]
+    },
+    {
+      "title": "Goblin Island Records",
+      "wiki": "Goblin_Island_Records",
+      "giver": "Halveth Velgarrith",
+      "npcs": [
+        "a goblin stone-sorter"
+      ],
+      "levelMin": 19,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Velgarrith Diver's Draught"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Halveth Velgarrith is located in the Great Cavern Sea at the outpost directly outside of Ail'Vorath.",
+        "Go out and slay a goblin stone-sorter. They may drop a Bundle of Copied Marks. Collect four of them and give them to Halveth Velgarrith."
+      ]
+    },
+    {
+      "title": "Green Drakeling Scale Armor Quests",
+      "wiki": "Green_Drakeling_Scale_Armor_Quests",
+      "giver": "Takalea Scaletender",
+      "npcs": [
+        "a green drakeling"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Green Drakeling Scale Coat",
+        "Green Drakeling Scale Cloak",
+        "Green Drakeling Scale Pants",
+        "Green Drakeling Scale Boots"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find Takalea Scaletender, located at the tannery in Faelindral.",
+        "Turn in 6 x Green Drakeling Scale, 2 x Green Drakeling Wing, 4 x Green Drakeling Hide, 1 x Green Drakeling Poison Duct to Takalea Scaletender.",
+        "Turn in 3 x Green Drakeling Scale, 2 x Green Drakeling Wing, 1 x Green Drakeling Hide to Takalea Scaletender.",
+        "Turn in 4 x Green Drakeling Scale, 2 x Green Drakeling Wing, 2 x Green Drakeling Hide, 1 x Green Drakeling Poison Duct to Takalea Scaletender.",
+        "Turn in 2 x Green Drakeling Scale, 1 x Green Drakeling Wing, 1 x Green Drakeling Hide to Takalea Scaletender."
+      ]
+    },
+    {
+      "title": "Growing Threat of the Sangrel Fist",
+      "wiki": "Growing_Threat_of_the_Sangrel_Fist",
+      "giver": "Reeve Thurston Winter",
+      "npcs": [
+        "Detective Brunsworth"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "keepers-bight",
+      "city": "Keeper's Bight",
+      "rewards": [
+        "Sigil of Inquiry",
+        "Sigil of Honor",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Reeve Thurston Winter is located in a building in the center of Penshaw Village. His building is tan stone with a minaret and Red Mantle banners, similar to what you'd find in Night Harbor.",
+        "Head off to kill A Sangrel striker and related mobs until you collect 4 x Sangrel Fist Wraps.",
+        "Return to Reeve Thurston Winter and hand him 4 x Sangrel Fist Wraps.",
+        "You can now speak with Detective Brunsworth, located close to Reeve Thurston Winter, to continue the storyline...",
+        "There are four rites that need to be collected and returned to Detective Brunsworth.",
+        "Sangrel Rite I is found off Sangrels at the small sangrel camp next to the poachers.",
+        "Sangrel Rite II is found of shady farmers at the shady farm.",
+        "Sangrel Rite III is found in a tent in the large sangrel camp, you will need to use mud commands.",
+        "Inside of the tent with the crate...",
+        "Sangrel Rite IV is found off sangrels at the large sangrel camp.",
+        "Return to Detective Brunsworth.",
+        "Give Sangrel Rite I, Sangrel Rite II, Sangrel Rite III, and Sangrel Rite IV to Detective Brunsworth."
+      ]
+    },
+    {
+      "title": "Grub for the Miners",
+      "wiki": "Grub_for_the_Miners",
+      "giver": "Foreman Stonehammer",
+      "npcs": [
+        "a cinder worker"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "Boiled Beetle Legs",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Foreman Stonehammer is located on a platform in the north west corner of the quarry in Sungreet Strand, near Sister Elara.",
+        "Kill a cinder worker in the Quarry below and loot 6 x Tender Beetle Legs.",
+        "Give Foreman Stonehammer 6 x Tender Beetle Legs."
+      ]
+    },
+    {
+      "title": "Hale's Haul",
+      "wiki": "Hale's_Haul",
+      "giver": "Captain Hale",
+      "npcs": [],
+      "levelMin": 20,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "keepers-bight",
+      "city": "Keeper's Bight",
+      "rewards": [
+        "Experience",
+        "Coin",
+        "Red Mantles faction",
+        "Langsdorfian League faction",
+        "Village of Penshaw faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "On the docks of Keeper's Bight, in the last ship, you'll find Captain Hale.",
+        "Captain Hale has asked for your assistance recovering five lost crates of goods from the bottom of the bay beneath the dock, which were lost in a recent storm.",
+        "The Salvaged Cargo Crate are resting on the bottom of the ocean. These are collected using MUD commands.",
+        "Additionally, the crates have a cooldown before they can be looted by another player. You will need to use the MUD /look command to confirm if a crate is lootable before attempting to pick it up.",
+        "Be mindful, as there are several a great bight shark swimming around the bay, which are level 20-30 and aggressive.",
+        "Once you have 5 crates, return to Captain Hale."
+      ]
+    },
+    {
+      "title": "Handfed Bors' Runts",
+      "wiki": "Handfed_Bors'_Runts",
+      "giver": "Gatekeeper Nusder",
+      "npcs": [
+        "a razorwing runt"
+      ],
+      "levelMin": 16,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find a razorwing runt x2 and give them Bat Feed Cake. Despite the giant insisting they are \"in the low water\", they are deep underwater to the Northeast. Due to incredibly low visibility underwater, it is inadvisable to try to find the bats without the assistance of a tracker.",
+        "Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Honestly, do not even get close to the water. It is bugged. You will fall in and die because it is horribly, horribly bugged. You will then have to petition to get your corpse out. Please update this page if the water is fixed to have water physics. Bugged as of Oct. 16, 2026.",
+        "Travel Southwest into the caves with some form of invisibility and find the bright green glowing lake. The bats are KoS and killing them will negatively affect both your giant and bat faction, which may potentially be fixed later. Place the jar on your cursor and type /pour lake."
+      ]
+    },
+    {
+      "title": "House Drezzorith (Quest)",
+      "wiki": "House_Drezzorith_(Quest)",
+      "giver": "Zalethra Drezzorith",
+      "npcs": [
+        "an angry cultist",
+        "an agitated cultist",
+        "a cultist priestess",
+        "a Deepgulp warrior",
+        "a Deepgulp scavenger",
+        "a Deepgulp hunter",
+        "a Deepgulp berserker"
+      ],
+      "levelMin": 8,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Lexicon of Mysteries",
+        "Intermediate Lexicon of Mysteries",
+        "Advanced Lexicon of Mysteries",
+        "Experience",
+        "House of Drezzorith faction",
+        "Citizens of Ail'vorith faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Zalethra Drezzorith is located in the Obsidian Academy upper floor. From the bridge and gate into the Foreign Quarter, enter the building straight ahead with caster trainers and go upstairs.",
+        "Cross the bridge and turn right at the Toilmaster. Follow the water's edge until your reach a cave full of cultists. Kill an angry cultist, an agitated cultist, a cultist priestess to collect 7 Cultist Eye to fill the bag.",
+        "Combine the container into Filled Burlap Pouch and return it to Zalethra Drezzorith.",
+        "Alarys Drezzorith is located in a building in the main city of Ail'Vorith, 4th floor, south side... just southeast of the high level Paladin and Cleric trainers. You can see it on the left side standing on the main bridge leading into the city.",
+        "Hand Alarys Drezzorith your Letter to Alarys.",
+        "Kill a Deepgulp warrior, a Deepgulp scavenger, a Deepgulp hunter, a Deepgulp berserker to collect 6 Sample of Mind Control Substance and combine them to create Full Sample Box.",
+        "(Alternately, you can complete the Thanetal's Samples quest handing in 1 Deep Ale and 10 silver to acquire 6 Sample of Mind Control Substance.)",
+        "Hand Full Sample Box to Alarys Drezzorith.",
+        "Hand Lexicon of Mysteries to Alarys Drezzorith.",
+        "Tal Drezzorith is located in the building next to Alarys Drezzorith, directly across from the cleric/paladin guild",
+        "Hand the Intermediate Lexicon of Mysteries in to Tal Drezzorith."
+      ]
+    },
+    {
+      "title": "House Hal'kareth (Quest)",
+      "wiki": "House_Hal'kareth_(Quest)",
+      "giver": "Myal Vehear",
+      "npcs": [
+        "A spirals deepgnome researcher",
+        "Ailis Hal'arketh",
+        "Vhaleth Hal'kareth"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Hal'kareth Signet Ring"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Myal Vehear is located in the Obsidian Academy, 2nd floor.",
+        "The pages are quite rare; it took about 3 hours to get 3 spellblades their pages.",
+        "Ailis Hal'arketh is located in the Inner City, on the shore. When you go to the inner city from Foreign Quarter, at the bridge near the gates of inner city, stop and look left. You see the shore and a couple of houses. That shore has Ailis Hal'Arketh in of the house. To access it, take the turn left then tunnel left from the city gate.",
+        "Vhaleth Hal'kareth is located in the great cavern sea behind the big tower that you see on the left when taking the boat from Ail'vorith to the Underdocks; he is beside some shore beetles as well as some various skeletons and a wizard's spire."
+      ]
+    },
+    {
+      "title": "House Ith'vayen (Quest)",
+      "wiki": "House_Ith'vayen_(Quest)",
+      "giver": "Amarah Ith'vayen",
+      "npcs": [
+        "Aleyz Ith'vayen",
+        "a cave myconid",
+        "an enraged elemental",
+        "Jerek D'shadow"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "House of Ith'vayen faction",
+        "Citizens of Ail'vorith faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Amarah Ith'vayen is located in the front left corner of the first floor of the caster hall in the Obsidian Academy.",
+        "Defeat a cave myconid and collect the Myconoid Parts. Upon turning in eight Myconid Parts:",
+        "Begins when you turn in a Letter to Aleyz to Aleyz Ith'vayen inside the main city.",
+        "Bring one Fire Elemental Stone, three Ooze Secretions and one Whitefish to Aleyz.",
+        "Return to Amarah Ith'vayen. Stealth or Invis and use the MUD commands /look table.",
+        "While holding the Roasted and Poisoned Fish use the MUD command /place table.",
+        "Return to Aleyz Ith'vayen and give him the Half-Eaten Poisoned Fish.",
+        "Give Aleyz Ith'vayen your Cloth Belt of Runes or Leather Belt of Runes.",
+        "Go kill Jerek D'shadow and loot the Head of Jerek D'shadow. He can be found by going to the newbie quarry, going slightly up the ramp, dropping off, and crossing a bridge into a cave. Give the head to Aleyz Ith'vayen.",
+        "Give Aleyz Ith'vayen your Fine Cloth Belt of Runes or Strengthened Leather Belt of Runes."
+      ]
+    },
+    {
+      "title": "House Vael'xirith (Quest)",
+      "wiki": "House_Vael'xirith_(Quest)",
+      "giver": "Laren Drin'dar",
+      "npcs": [
+        "a Deepgulp runt",
+        "a Deepgulp explorer"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Laren is located in the Military Outpost with the melee class instructors. From the bridge and gate into the Foreign Quarter, enter the building across, second on the left (not the bank tunnel). He is on the right, near back of the room.",
+        "Go kill a bunch of goblins and return."
+      ]
+    },
+    {
+      "title": "House Varros (Quest)",
+      "wiki": "House_Varros_(Quest)",
+      "giver": "Vaslir Naiyth",
+      "npcs": [
+        "Vaslir Vharkith",
+        "Laeran Birchshade",
+        "Vaslir Maryn",
+        "Vaslir Kiannes",
+        "Nyxia Ak'kin",
+        "Mournful Outcast",
+        "Miral the Dark Elf",
+        "Freysia Riftrend",
+        "Belot",
+        "Senior Apprentice Syrsil"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "House Varros",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Vaslir Naiyth is located in the Obsidian Academy. As you enter the academy, she is located near the stairs in the back of the room on the right.",
+        "Vaslir Vharkith is located near the top of Ail'Vorith proper, next to some other Vaslir NPCs.",
+        "Although Laeran Birchshade cons as \"Ready to attack\", he does not attack on sight. He may either be killed for Vharkith's Research Notes or spoken with instead. Speaking with him also begins a separate optional quest involving the Birchshade Family Bracelet. See Laeran Birchshade for details.",
+        "Vaslir Maryn is located near Vaslir Vharkith in the upper area of Ail'Vorith, standing beside the large fountain. Vaslir Kiannes is also located nearby.",
+        "At this point there are two confirmed routes for obtaining Flask of Essairyl. You may gather elemental essences for Vaslir Maryn, or speak with Vaslir Kiannes and complete his water-sample task instead. You only need to complete one route.",
+        "Only the Air and Earth elementals are needed for this step. Water elementals can also be found around the shores near Ail'Vorith proper, but they do not provide the essences Maryn requests.",
+        "There are also Water elementals along the shoreline surrounding the city. Make sure you are hunting Air Elementals and Earth Elementals for this quest.",
+        "Vaslir Kiannes is located near Vaslir Maryn and Vaslir Vharkith in the upper area of Ail'Vorith, near the fountain.",
+        "This is an alternative to gathering Essence of Elemental Air and Essence of Elemental Earth for Vaslir Maryn. You do not need to complete both routes.",
+        "Handing the Letter to Freysia Riftrend to Freysia does not award experience or faction.",
+        "Belot's exact location, level, NPC class, spawn conditions, and complete loot table still need to be documented. It should also be confirmed whether Vharkith's Order is a guaranteed drop."
+      ]
+    },
+    {
+      "title": "House Varros Supplies",
+      "wiki": "House_Varros_Supplies",
+      "giver": "Apprentice Esveth",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": true,
+      "notes": [
+        "This quest begins in Ail'Vorith in the Obsidian Academy courtyard by talking with Apprentice Esveth. Esveth is located directly across from the academy under a light post.",
+        "Upon handing 1x Bone Chips to Apprentice Esveth...",
+        "Upon handing 20x Bone Chips to Apprentice Esveth...",
+        "The corpses Apprentice Esveth is referring to are the Sullen corpse and Mournful Corpse from the deep elf exiles.",
+        "Upon handing in either 1x Sullen corpse or 1x Mournful Corpse to Apprentice Esveth..."
+      ]
+    },
+    {
+      "title": "House Velgarrith (Quest)",
+      "wiki": "House_Velgarrith_(Quest)",
+      "giver": "Xilonen Velgarrith",
+      "npcs": [
+        "Cook Vashuk",
+        "Kulzzara",
+        "Supplier Jul",
+        "juvenile shark",
+        "Vhalrek Velgarrith"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "House Velgarrith faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Xilonen Velgarrith is located upstairs in the martial trainer building",
+        "You do not need to return to Xilonen after each trade. Just move to the next person and return to Xilonen once you have the thread.",
+        "Take the Rusted Cleaver and hand it in to Xilonen Velgarrith.",
+        "Take the Shoddy Dagger and hand it in to Xilonen Velgarrith.",
+        "Take the Spool of Spider Silk and hand it in to Xilonen Velgarrith.",
+        "Kill juvenile sharks found in water around the bridge to the Foreign District, and other bridges. Loot 4 juvenile shark fin.",
+        "Hand 4 juvenile shark fin to Xilonen Velgarrith.",
+        "Vhalrek Velgarrith is located in the tunnels down below; he is the Shadow Knight skill trainer near the Shadow Knight spell vendor.",
+        "Hand in your Dark Note. Need confirmation this is the correct name for the item."
+      ]
+    },
+    {
+      "title": "House Xal'tharn (Quest)",
+      "wiki": "House_Xal'tharn_(Quest)",
+      "giver": "Klavel Sul",
+      "npcs": [
+        "a separated skull",
+        "a spectral remnant"
+      ],
+      "levelMin": 8,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "House Xal'tharn faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Klavel Sul is located in the Obsidian Academy with the melee class instructors. From the bridge and gate into the Foreign Quarter, enter the building on the left and head to the back of the room.",
+        "Swim around the west of the city where elementals and various skulls patrol the west island shores. Kill a separated skull and a spectral remnant to collect 6 Lost Skull to fill the bag.",
+        "Combine the container and return it to Klavel Sul."
+      ]
+    },
+    {
+      "title": "Hult's Beetle Bowl (Quest)",
+      "wiki": "Hult's_Beetle_Bowl_(Quest)",
+      "giver": "Hult Beetlewrangler",
+      "npcs": [
+        "a fire beetle"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Hult's Beetle Bowl"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Hult Beetlewrangler is located in the rear of the Sojourner Camp in Night Harbor. He can wander a short distance from his tent throughout the day.",
+        "Hunt a fire beetle and Loot 2 x Fire Beetle Carapace.",
+        "Give Hult Beetlewrangler 2 x Fire Beetle Carapace."
+      ]
+    },
+    {
+      "title": "Inquisitor Starter Quest (Night Harbor)",
+      "wiki": "Inquisitor_Starter_Quest_(Night_Harbor)",
+      "giver": "Petra Gyle",
+      "npcs": [
+        "Jaffar Jhaym",
+        "Sahir Muzalal",
+        "Inquisitor Selpha",
+        "Spellbinder Kharash",
+        "Haredi",
+        "Farmer Lubern",
+        "Lubern the Heretic"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Spellbinder's Inquisitor Talisman",
+        "Tarnished Spellbinder Cuirass",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Instrument of Hospitality",
+      "wiki": "Instrument_of_Hospitality",
+      "giver": "Rais Alyssum",
+      "npcs": [],
+      "levelMin": 6,
+      "classIds": [
+        "bard"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Hand a beggar 1 Weak Beer and use the /Play lute command.",
+        "Return to Rais Alyssum and hand him the Broken Mandolin.",
+        "Head to the Shaded Dunes and kill Large Spiders until you have 5 Large Spider Silk. Obtain a Piece of Translucent Beetle Shell from a giant translucent beetle. Return with them to Rais Alyssum."
+      ]
+    },
+    {
+      "title": "Island Ruin Stones",
+      "wiki": "Island_Ruin_Stones",
+      "giver": "Isrothen Vael'xirith",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Isrothen Vael'xirith is located in the Great Cavern Sea at the outpost directly outside of Ail'Vorath, make a right as you enter the zone."
+      ]
+    },
+    {
+      "title": "Joining the Red Mantles",
+      "wiki": "Joining_the_Red_Mantles",
+      "giver": "Commander Otieno",
+      "npcs": [
+        "Jaquim Heyley",
+        "Dubar Falshim",
+        "Anlisia Silvereye",
+        "Nadia al-Hakim"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Red Mantle Sash",
+        "Emissaries Envoy Band",
+        "Attuned Pendant of Anchoring",
+        "Red Mantle Cloak",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Kill Tora'Galdo",
+      "wiki": "Kill_Tora'Galdo",
+      "giver": "Mar'Tem",
+      "npcs": [
+        "Tora'Galdo"
+      ],
+      "levelMin": 30,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "fallen-pass",
+      "city": "Fallen Pass",
+      "rewards": [
+        "Small Mur'Hua Trinket"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts with hailing Mar'Tem.",
+        "Venture out and kill Tora'Galdo.",
+        "Loot his Head of Tora'Galdo and return to Mar'Tem.",
+        "Upon turning in the Head of Tora'Galdo Mar'Tem responds:"
+      ]
+    },
+    {
+      "title": "Landing Loop Quest",
+      "wiki": "Landing_Loop_Quest",
+      "giver": "Nadim Al-Saraf",
+      "npcs": [
+        "Captain Harkan Saafir",
+        "A landing lieutenant",
+        "Tariq the Revealer"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shallow-shoals",
+      "city": "Shallow Shoals",
+      "rewards": [
+        "Landing Loop",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Laundry Day Quest",
+      "wiki": "Laundry_Day_Quest",
+      "giver": "a wash maiden",
+      "npcs": [
+        "Mason Steinn",
+        "Layith Kharem",
+        "Guard Iskandar",
+        "Noura the Tailor",
+        "Mira Gables",
+        "Riham"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Black Crude Silk Shirt",
+        "Orange Crude Silk Shirt",
+        "Yellow Crude Silk Shirt",
+        "Blue Crude Silk Shirt",
+        "Red Crude Silk Shirt",
+        "Green Crude Silk Shirt",
+        "White Crude Silk Shirt",
+        "Black Crude Silk Robe",
+        "Orange Crude Silk Robe",
+        "Yellow Crude Silk Robe",
+        "Blue Crude Silk Robe",
+        "Red Crude Silk Robe",
+        "Green Crude Silk Robe",
+        "White Crude Silk Robe"
+      ],
+      "repeatable": true,
+      "notes": [
+        "The Red Dye basin is currently unresponsive to MUD commands, and as a result you may not be able to craft Red Crude Silk Shirt or Red Crude Silk Robe until this is patched.",
+        "Large character models (such as Ogres or Humans) may have a difficult time entering the dye vats to complete the necessary MUD commands. You can safely complete this by placing your dirty shirt or robe in a shared bank to transfer the item to a freshly created level 1 gnome alt if needed.",
+        "Find a wash maiden (during daytime hours only) in Night Harbor inside the Bath house which is west of Night Market near the West Gate.",
+        "Your task is to deliver cleaned laundry to various citizens in Night Harbor, collect their dirty laundry, and combine the dirty laundry in the provided basket to return to the wash maiden.",
+        "Find Mason Steinn in Night Harbor in the temple against the cliff between Sojourner's Camp and the Tannery. Follow the road north until you reach the temple.",
+        "Give Mason Steinn the Stonemason's Shirt:",
+        "Next, find Layith Kharem in Night Harbor up a ladder in Glimmermoon Hall behind the performance stage in Night Market.",
+        "Give Layith Kharem the Damsel's Cloak:",
+        "Lastly, find Guard Iskandar in Night Harbor in front of the large palace gate at the east end of Saltbreeze Park.",
+        "Give Guard Iskandar the Patrol Pantaloons:",
+        "In Byrthia's Laundry Basket, Combine: Steinn's Dirty Laundry, Layith's Soiled Stockings, and Iskandar's Padded Loin Guard to create Byrthia's Full Laundry Basket.",
+        "Return to a wash maiden and give her Byrthia's Full Laundry Basket."
+      ]
+    },
+    {
+      "title": "Left Behind",
+      "wiki": "Left_Behind",
+      "giver": "Fendris the Forsaken",
+      "npcs": [
+        "an undead poacher",
+        "Poacher Tolan",
+        "Poacher Garrus",
+        "A cave bear",
+        "A fat cave bear"
+      ],
+      "levelMin": 30,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "keepers-bight",
+      "city": "Keeper's Bight",
+      "rewards": [
+        "Debtcarver",
+        "Vest of Shattered Duty",
+        "Leggings of Reckoning",
+        "Boots of Vengeful Resolve",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Locate an undead poacher inside the bear cave near the Tree House.",
+        "Loot Torn Leather Bracer from a cave bear.",
+        "Give Torn Leather Bracer to an undead poacher.",
+        "Torn Leather Bracer is handed back to you. an undead poacher despawns and Fendris the Forsaken spawns in their place.",
+        "There are several items that can be obtained as 'proof' of death. Each object of proof results in a different item.",
+        "Upon turning in an item of proof, Fendris the Forsaken will despawn. an undead poacher has a roughly 5 minute respawn timer.",
+        "Loot Tolan's Chipped Skinner from Poacher Tolan.",
+        "Loot Torn Leather Bracer from a cave bear.",
+        "Give Torn Leather Bracer to an undead poacher to spawn Fendris the Forsaken.",
+        "Hand in Tolan's Chipped Skinner and Torn Leather Bracer to Fendris the Forsaken.",
+        "Loot Tolan's Torn Hide Vest from Poacher Tolan.",
+        "Loot Torn Leather Bracer from a cave bear."
+      ]
+    },
+    {
+      "title": "Little Tamsah, Big Appetite",
+      "wiki": "Little_Tamsah,_Big_Appetite",
+      "giver": "Old Mother Roshan",
+      "npcs": [
+        "Little Tamsah"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Experience",
+        "Seekers of the Lost Eye faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Old Mother Roshan is located inside the Seekers of the Lost Eye Temple on the ground level in Night Harbor.",
+        "Little Tamsah is a crocodile located inside the Seekers of the Lost Eye Temple on the ground level in Night Harbor.",
+        "Hand 1 x Raw Rat Meat, 1 x Raw Jackal Meat, or 1 x Raw Bat Meat to Little Tamsah."
+      ]
+    },
+    {
+      "title": "Mark of Merit",
+      "wiki": "Mark_of_Merit",
+      "giver": "Receptionist Naleth'ra",
+      "npcs": [
+        "Biomass",
+        "Blacksmith Jerictus",
+        "Cedrius the Cutter",
+        "Dakkin the Diabolical",
+        "Davosin the Domineering",
+        "Elixa the Experimentalist",
+        "Enthraller Gnorah",
+        "Ferg the Filthy",
+        "Flashfreeze Fraegra",
+        "Flavic the Fisher",
+        "Forager Davra",
+        "Forager Frandrah",
+        "Gelmother Jiggol",
+        "Gorgeous",
+        "Gurm the Half-Woken",
+        "King Jekom the Ancient",
+        "Knuttoc Grobbins",
+        "Mother Gummer",
+        "Mucky Morgurah",
+        "Percy the Purse",
+        "Pragrok the Pickaxe",
+        "Reviver Vlarek",
+        "Sarveth the Unheard",
+        "Sethrine the Unblinking",
+        "Skizik the Schemer",
+        "Tormentor Tizzix",
+        "Underboss Vekrizin",
+        "Wikket Two-Wands",
+        "Willie the Watcher"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "Blind Midden Mark of Merit",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Kill almost any named within Blind Midden and loot their corpse.",
+        "Give Corpse of Blacksmith Jerictus to Receptionist Naleth'ra",
+        "Give Corpse of Davosin the Diabolical to Receptionist Naleth'ra"
+      ]
+    },
+    {
+      "title": "Midden Mark Menu (Quest)",
+      "wiki": "Midden_Mark_Menu_(Quest)",
+      "giver": "Nibs Mudknuckle",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "Sewer Sludge",
+        "Recipe: Double-Bladed Retractable Prison Shiv",
+        "Recipe: Morgurah's Mask of the Stifled Snitch",
+        "Recipe: Mudfish Wraps",
+        "Recipe: Prison Gruel",
+        "Recipe: Shale Weightstone",
+        "Recipe: Sewer Survival Salve",
+        "Recipe: Boots of the Sewer Sifter",
+        "Recipe: Blind Midden Barrier"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Find Nibs Mudknuckle in Blind Midden. If you enter from the main entrance, proceed to the second room of the dungeon, face to the right, his room is on the left opposite Kalessa Velgarrith. You must speak in Common , not Deep Common.",
+        "You can purchase The Midden Mark Menu from him for 1c to get vague hints about what he rewards you with for a certain number of coins.",
+        "If you hand in one Blind Midden Mark of Merit:",
+        "If you hand in five Blind Midden Mark of Merit:",
+        "The various notes give you clues about where to obtain items. It seems you can only receive each item once and the note will be consumed on receipt of the item.",
+        "Go to the spawn point of Wikket Two-Wands. Use the MUD command \"/inspect bucket\"",
+        "Use the MUD command \"/take scroll\"",
+        "Near the spawn point of Cedrius the Cutter there's a workbench. Use the MUD command \"/look\"",
+        "Use the MUD command \"/take scroll\"",
+        "To the player's right of Blurgh the Blind are two crates. Stand beside them and use the MUD command \"/look\"",
+        "Use the MUD command \"/take scroll\"",
+        "Outside the spawn point of Mucky Morgurah, near where Gorgeous spawns, is a barrel and a crate. Use the MUD command \"/look\""
+      ]
+    },
+    {
+      "title": "Mierra's Famed Cupcakes",
+      "wiki": "Mierra's_Famed_Cupcakes",
+      "giver": "Mierra Willowshade",
+      "npcs": [
+        "a wasp drone",
+        "a wasp worker"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Jelly Cupcake",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Mierra Willowshade is located inside the building adjacent to the Inn next to the Newbie Lift.",
+        "Collect 4 Royal Jelly from a wasp drone or a wasp worker in Evershade Weald, then return to Mierra Willowshade and hand them to her."
+      ]
+    },
+    {
+      "title": "Mining Picks for Hull",
+      "wiki": "Mining_Picks_for_Hull",
+      "giver": "Hull Orbel",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Delvestone Mining Company faction"
+      ],
+      "repeatable": true,
+      "notes": []
+    },
+    {
+      "title": "Missive For Wenna",
+      "wiki": "Missive_For_Wenna",
+      "giver": "Lorne Whitlock",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Monk Starter Quest (Night Harbor)",
+      "wiki": "Monk_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Chahaya Tam"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "monk"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "First Degree Fourfold Sash (Monk)"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Humble Note to Chahaya Tam",
+        "Hand in 3 Ashira Scout Necklaces and your Fourfold Sash to Chahaya Tam",
+        "Hand your belt to Chahaya Tam."
+      ]
+    },
+    {
+      "title": "Munk Family Recipe",
+      "wiki": "Munk_Family_Recipe",
+      "giver": "Munk",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Speak with Ebba Dungor."
+      ]
+    },
+    {
+      "title": "Mushroom Farmers Bounty Quest",
+      "wiki": "Mushroom_Farmers_Bounty_Quest",
+      "giver": "Mikra Velrane",
+      "npcs": [
+        "Elara Venn"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Head out the northern gate and hunt a deep beetle and its variants to loot 6 Severed Deep Beetle Leg.",
+        "Hand 6 Severed Deep Beetle Leg to Mikra Velrane."
+      ]
+    },
+    {
+      "title": "Mushroom Menace",
+      "wiki": "Mushroom_Menace",
+      "giver": "Sporeweaver Underveil",
+      "npcs": [
+        "a beguiled bluecap",
+        "a beguiled water elemental"
+      ],
+      "levelMin": 5,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "evershade-weald",
+      "city": "Evershade Weald",
+      "rewards": [
+        "Staff of Spores",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Sporeweaver Underveil is located in the mushroom cave close to Faelindral.",
+        "Collect one Prismatic Gills from a beguiled bluecap during the night and deliver them to Sporeweaver Underveil.",
+        "Collect 4 Enchanted Water from a beguiled water elemental in the naiad cave upstream and combine them in Underveil's Phial.",
+        "After handing Sporeweaver Underveil the completed sample you receive Staff of Spores."
+      ]
+    },
+    {
+      "title": "Necrolyte's Pouch Quest",
+      "wiki": "Necrolyte's_Pouch_Quest",
+      "giver": "Bones",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Necrolyte's Pouch"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Necromancer Starter Quest (Night Harbor)",
+      "wiki": "Necromancer_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Marvion Hallows",
+        "Sekhmet",
+        "Buckmarr Gorstagg"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "necromancer"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Black and Gold Robe",
+        "Symbol of the Concourse of Souls"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give Weathered Note to Marvion Hallows.",
+        "Give Weathered Note to Sekhmet who is also in the Concourse of Souls.",
+        "Combine 8 Incarnal Residue in Small Clay Jar to get a filled Small Clay Jar. Hand it to Buckmarr Gorstagg in the Concourse of Souls."
+      ]
+    },
+    {
+      "title": "Necromancer Starter Quest (Underdocks)",
+      "wiki": "Necromancer_Starter_Quest_(Underdocks)",
+      "giver": "Soren Akedd",
+      "npcs": [
+        "Abbot Harrow",
+        "Acolyte Vryar",
+        "Lady Tabitha",
+        "Embalmer Tyriel"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Ragged Robe",
+        "Beaten Tome",
+        "Well-Thumbed Tome",
+        "Oblate's Tome",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Night Harbor Cemetery Key Quest",
+      "wiki": "Night_Harbor_Cemetery_Key_Quest",
+      "giver": "Gatekeeper Nusder",
+      "npcs": [
+        "a diseased bat",
+        "a catacombs rat",
+        "Liyna Esueiruc"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Key to the Night Harbor Cemetery",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Gatekeeper Nusder is located at the Red Mantle Keep entrance to the cemetery in Night Harbor.",
+        "The gates to the cemetery will close at sunset and re-open at sunrise. NPCs inside the cemetery become aggressive and higher level once the sun sets.",
+        "Enter the gate and kill a diseased bat or a catacombs rat and loot Chunk of Diseased Meat x10. The meat is NODROP and not guaranteed on every kill, so plan accordingly if grouping here.",
+        "After combining the meats in the Empty Satchel, you receive Fetid Satchel.",
+        "Give the Fetid Satchel to Gatekeeper Nusder.",
+        "Find Liyna Esueiruc in the second floor (teleporter puts you on floor 3) of the Night Harbor library (which is due east from Gatekeeper Nusder, at the Spellbinders of the Spire).",
+        "Give Liyna Esueiruc the Fetid Satchel.",
+        "Give Liyna Esueiruc the Fetid Satchel again.",
+        "Return to Gatekeeper Nusder and hand him the Lightly Scented Piece of Parchment.",
+        "You are to head back into the cemetery and find a Bloodied Engraved Rune.",
+        "Kill a pristine beetle, a sanguine bat, an old scarab, an ornate beetle, or other named that requires camping till it spawns at the top of the cemetery and loot Bloodied Engraved Rune.",
+        "Return to Gatekeeper Nusder and give him Bloodied Engraved Rune along with Lightly Scented Piece of Parchment."
+      ]
+    },
+    {
+      "title": "Paladin Starter Quest (Night Harbor)",
+      "wiki": "Paladin_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Thibald Burlond",
+        "Trey Fulton",
+        "Halrinn Grimsul"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "paladin"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Simple Penitent Knight's Tunic",
+        "Penitent Knight's Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand Formal Note to Trey Fulton",
+        "Head behind the bar and head to the basement and kill a grain beetles until you receive 6 of them. Alternatively you can buy them.",
+        "Hand Bag of Intact Beetle Legs to Halrinn Grimsul",
+        "Hand Food for Trey Fulton to Trey Fulton"
+      ]
+    },
+    {
+      "title": "Pelts for the Festival",
+      "wiki": "Pelts_for_the_Festival",
+      "giver": "Brother Luka",
+      "npcs": [
+        "Ashir the Protector",
+        "an ashira warchief"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "shallow-shoals",
+      "city": "Shallow Shoals",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Perilous to Leave by Oneself",
+      "wiki": "Perilous_to_Leave_by_Oneself",
+      "giver": "a wise elder",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Wooden Bow",
+        "Wooden Claw",
+        "Wooden Club",
+        "Wooden Dagger",
+        "Wooden Scythe",
+        "Wooden Sword"
+      ],
+      "repeatable": true,
+      "notes": [
+        "a wise elder is located in the large stone building just to the North of the West Bank in Night Harbor."
+      ]
+    },
+    {
+      "title": "Pests at the Farm",
+      "wiki": "Pests_at_the_Farm",
+      "giver": "Farmer Ammar",
+      "npcs": [
+        "Fadila"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Ration",
+        "Water Flask",
+        "Torch",
+        "Experience"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Farmer Ammar is located at the farm just northeast of the caster tower outside of the North Gate of Night Harbor.",
+        "You are looking for any of the following drops:",
+        "When you have acquired some proof, turn them in to Fadila back at the farm. She is located in the house behind Farmer Ammar."
+      ]
+    },
+    {
+      "title": "Platinum Badge of the Living City Quest",
+      "wiki": "Platinum_Badge_of_the_Living_City_Quest",
+      "giver": "Lieutenant Jarovik Holt",
+      "npcs": [
+        "Vikar Brask",
+        "Darius Brask",
+        "Cormac Renshaw"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Platinum Badge of the Living City",
+        "Iron Badge of the City",
+        "Coin",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Poacher's Knives",
+      "wiki": "Poacher's_Knives",
+      "giver": "Ranger Rylin",
+      "npcs": [
+        "A poacher pathfinder",
+        "A poacher bruiser",
+        "A poacher herbalist",
+        "a poacher"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "keepers-bight",
+      "city": "Keeper's Bight",
+      "rewards": [
+        "High Keeper's Vambrace",
+        "Experience",
+        "Ardent Keepers faction",
+        "Village of Penshaw faction",
+        "Poachers of Calafrey faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Ranger Rylin is located in the large treehouse in Keeper's Bight, located next to one of the internal stairwells.",
+        "You need to hunt poacher variants such as a poacher and collect 4 x Poacher's Skinner.",
+        "When you have collected 4 x Poacher's Skinner, give them to Ranger Rylin."
+      ]
+    },
+    {
+      "title": "Potions for Veylith Frosttongue",
+      "wiki": "Potions_for_Veylith_Frosttongue",
+      "giver": "Veylith the Frosttongue",
+      "npcs": [
+        "Gazer"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "glinting-hollow",
+      "city": "Glinting Hollow",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Part of the experience in Glinting Hollow is becoming a test subject for the various concoctions on the 6th floor.",
+        "Locate and hail Veylith the Frosttongue.",
+        "Use the /take Mushroom MUD command near various colors of mushrooms in the area to collect them.",
+        "Combine two mushrooms in your Mixing Satchel to create a potion with various effects."
+      ]
+    },
+    {
+      "title": "Provisions for House Unheard",
+      "wiki": "Provisions_for_House_Unheard",
+      "giver": "Kalessa Velgarrith",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "Experience",
+        "Coin"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Kalessa is located just inside the beginning of Blind Midden, opposite the room with Nibs Mudknuckle",
+        "Purchase the recipes for Charred Mudfish, Shale Hilt, and Crude Prison Shiv from Kalessa Velgarrith. The Mudfish can be acquired by using the MUD command \"/take water\" while standing next to any of the water in Blind Midden and then cooked into Charred Mudfish. The Sewer Sludge, Crusted Midden Sludge, or Black Midden Sludge that you also get can be handed into any slime for a chance at getting Shale Chunks and Rusty Metal Shards to make Crude Prison Shivs. Hand them in to Kalessa Velgarrith one at a time.",
+        "Hand in a Charred Mudfish.",
+        "Hand in a Crude Prison Shiv."
+      ]
+    },
+    {
+      "title": "Quarry Samples",
+      "wiki": "Quarry_Samples",
+      "giver": "Tust Brookturner",
+      "npcs": [],
+      "levelMin": 10,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "Tust's Copper Earring",
+        "Wand of Heal",
+        "Survey Pack",
+        "Mining Pick of Trem",
+        "Rope, Blessed, 50 Length"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find Tust Brookturner, located at the Quarry in Sungreet Strand.",
+        "Fill the sack with 8 pieces of Quarry Stone from mining in quarry.",
+        "Combine to create Full Burlap Sack.",
+        "Return to Tust Brookturner and hand him the Full Burlap Sack.",
+        "Place each item in single stacks of 1 into Tust's Display Case and click Combine.",
+        "Return to Tust Brookturner and hand him the Full Display Case.",
+        "You will randomly receive one of the following items as a reward:"
+      ]
+    },
+    {
+      "title": "Ranger Starter Quest (Faelindral)",
+      "wiki": "Ranger_Starter_Quest_(Faelindral)",
+      "giver": "Captain Relgen Greenblade",
+      "npcs": [
+        "Ranger Valegazer"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "ranger"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Reach of the Ardent Keeper",
+        "Initiate Keepers Cloak",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Hand in 1 x Request for Aid to Captain Relgen Greenblade."
+      ]
+    },
+    {
+      "title": "Ranger Starter Quest (Night Harbor)",
+      "wiki": "Ranger_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Fedamius Steele III",
+        "Foss Dunestrider"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "ranger"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Steel Talon Trainee Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head to the Steel Talons Martial Academy on the Southwest side of Night Harbor and hand in your Notice of Recruitment to Fedamius Steel III",
+        "Head down to the noob yard below and kill a snakes, a fire beetles, and a desert bats",
+        "Hand Foss Dunestrider the Multhele Root, Immature Snake Venom Sac, Fire Beetle Eye, and Bat Wing",
+        "Head to the cave entrance towards Wyrmsbane and kill a diseased bat, a diseased rat, a diseased snake, and a diseased jackal.",
+        "Go to Oakes Wakim in the Circle of Scarce Rains Building",
+        "Go back to Foss Dunestrider"
+      ]
+    },
+    {
+      "title": "Repair the Mooring Post",
+      "wiki": "Repair_the_Mooring_Post",
+      "giver": "Jory Fennick",
+      "npcs": [
+        "Ysmara velgarrith"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Waxed Cloth Backpack"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Jory Fennick is located on the island covered in scaffolds in the Great Cavern Sea. Hail him in Common.",
+        "Ysmara velgarrith is located above the nearby large waterfall. You can swim up the waterfall if you're careful. Head to the right and speak to her in Deep Common.",
+        "Return to Jory Fennick. Give him the pins.",
+        "This quest is NOT repeatable."
+      ]
+    },
+    {
+      "title": "Revenge for Cha'kvel",
+      "wiki": "Revenge_for_Cha'kvel",
+      "giver": "Blurgh the Blind",
+      "npcs": [
+        "Sethrine the Unblinking"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "[[]]"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find Blurgh the Blind in Blind Midden. You must speak in Common , not Deep Common.",
+        "Use the command \"/take water\" near the water in Blind Midden to receive a random type of sludge. Give the sludge to any of the slimes to get it cleaned. You may randomly receive a mirror. Give the Wand to Blurgh the Blind and it will spawn soandso.",
+        "NOTE: Quest is currently broken and NPC does not spawn",
+        "Go kill Sethrine the Unblinking to receive a Corpse of Sethrine the Unblinking. Give the corpse to Blurgh the Blind."
+      ]
+    },
+    {
+      "title": "Revenge for Gizor",
+      "wiki": "Revenge_for_Gizor",
+      "giver": "Blurgh the Blind",
+      "npcs": [
+        "Forager Davra"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "Adorned Ear of the Compressed Corpse"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find Blurgh the Blind in Blind Midden. You must speak in Common , not Deep Common.",
+        "Use the command \"/take water\" near the water in Blind Midden to receive a random type of sludge. Give the sludge to any of the slimes to get it cleaned. You may randomly receive a Broken Hoop of the Fortunate Forager. Give the broken hoop to Blurgh the Blind and it will spawn Gizor the Squeezer."
+      ]
+    },
+    {
+      "title": "Revenge for Wembit",
+      "wiki": "Revenge_for_Wembit",
+      "giver": "Blurgh the Blind",
+      "npcs": [
+        "Wembit the Wandmaker",
+        "Wikket Two-Wands"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [
+        "[[]]"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Find Blurgh the Blind in Blind Midden. You must speak in Common , not Deep Common.",
+        "Use the command \"/take water\" near the water in Blind Midden to receive a random type of sludge. Give the sludge to any of the slimes to get it cleaned. You may randomly receive a Handmade Wand. Give the Wand to Blurgh the Blind and it will spawn Wembit the Wandmaker.",
+        "Go kill Wikket Two-Wands to receive a Corpse of Wikket Two-Wands. Give the corpse to Blurgh the Blind."
+      ]
+    },
+    {
+      "title": "Riverbend Gang Wars Quest",
+      "wiki": "Riverbend_Gang_Wars_Quest",
+      "giver": "Corporal Theodora",
+      "npcs": [
+        "Lieutenant Jarovik Holt"
+      ],
+      "levelMin": 10,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Rogue Starter Quest (Faelindral)",
+      "wiki": "Rogue_Starter_Quest_(Faelindral)",
+      "giver": "Elyndiir Nightshade",
+      "npcs": [
+        "Myrielle Softglade",
+        "Sylwine Brightspirit",
+        "Ereldian Brambleshade"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "rogue"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Lambent Prospect Dagger",
+        "Lambent Prospect Blade",
+        "Mask of the Forest Walker",
+        "Lambent Stiletto"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read Anonymous Letter you start with as a new Rogue character:",
+        "Give Anonymous Letter to Elyndiir Nightshade in the Lambent Lantern Inn. (behind Bank)."
+      ]
+    },
+    {
+      "title": "Rogue Starter Quest (Night Harbor)",
+      "wiki": "Rogue_Starter_Quest_(Night_Harbor)",
+      "giver": "Sinastin Aspenleaf",
+      "npcs": [
+        "Albrecht",
+        "Customs Inspector Bakari",
+        "Captain Eilionoir",
+        "Nerida Thinblade",
+        "Dilshad Abolfazl",
+        "Guard Andreu",
+        "Maheed the Butcher",
+        "Irfan Raz",
+        "Stumpy the Whistler",
+        "Sproggets Bedsprings",
+        "Selyst Surecoin"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "rogue"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Irfan's Dagger",
+        "Mark of the Lamplighters",
+        "Roofstrider's Ring"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give Torn Note to Sinastin Aspenleaf.",
+        "Go and locate the following NPCs and retrieve the requested items.",
+        "Give the receipt to Sinastin",
+        "Give the Piece of Parchment to Sproggets Bedsprings, located in the shop next to the northwest entrance to the Night Market.",
+        "Go to the Steel Talons Garrison onto the roof of the southern structure overlooking the west gate newbie yard. There is a small tower-like section with no roof.",
+        "Take these to Albrecht who is just upstairs from Irfan Raz.",
+        "Take Black Leather Courier Bag to Tinka Roofstrider."
+      ]
+    },
+    {
+      "title": "Rogue Starter Quest (Underdocks)",
+      "wiki": "Rogue_Starter_Quest_(Underdocks)",
+      "giver": "",
+      "npcs": [],
+      "levelMin": 0,
+      "classIds": [
+        "rogue"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Prankster's Trousers",
+        "Sly Leather Jerkin",
+        "Dagger Of Rapidity",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Scarab Armor Quests",
+      "wiki": "Scarab_Armor_Quests",
+      "giver": "Hult Beetlewrangler",
+      "npcs": [
+        "a dunes scarab"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Scarab Breastplate",
+        "Scarab Greaves",
+        "Scarab Helm",
+        "Scarab Boots",
+        "Scarab Shell Shield"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Hult Beetlewrangler is located in the rear of the Sojourner Camp in Night Harbor. He can wander a short distance from his tent throughout the day.",
+        "Hunt a dunes scarab and loot 3 x Scarab Carapace, 3 x Scarab Leg, and 1 x Scarab Thorax Plate.",
+        "Hand these items to Hult Beetlewrangler.",
+        "Hunt a dunes scarab and loot 2 x Scarab Carapace, 2 x Scarab Leg, and 1 x Scarab Elytron Plate.",
+        "Hand these items to Hult Beetlewrangler.",
+        "Hunt a dunes scarab and loot 2 x Scarab Carapace and 1 x Scarab Leg.",
+        "Hand these items to Hult Beetlewrangler.",
+        "Hunt a dunes scarab and loot 1 x Scarab Carapace and 2 x Scarab Leg.",
+        "Hand these items to Hult Beetlewrangler.",
+        "Hunt a dunes scarab and loot 1 x Scarab Carapace and 1 x Scarab Leg.",
+        "Hand these items to Hult Beetlewrangler."
+      ]
+    },
+    {
+      "title": "Shadow Knight Starter Quest (Night Harbor)",
+      "wiki": "Shadow_Knight_Starter_Quest_(Night_Harbor)",
+      "giver": "Exavius Deathwhisper",
+      "npcs": [
+        "Brazzic Durraim",
+        "Noel Klares"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Gold Trimmed Black Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give Weathered Note to Exavius Deathwhisper.",
+        "Give Weathered Note Note to Brazzic Durraim who is also in the Concourse of Souls.",
+        "Go out into the yard in front of the Concourse of Souls and hunt a rotting skeleton until you have 6 Shattered Skeleton Femur. Combine them inside the Black Leather Bag from Brazzic and receive a Bag of Femurs."
+      ]
+    },
+    {
+      "title": "Shadow Knight Starter Quest (Underdocks)",
+      "wiki": "Shadow_Knight_Starter_Quest_(Underdocks)",
+      "giver": "Soren Akedd",
+      "npcs": [
+        "Father Fyod",
+        "Lady Tabitha",
+        "a rafter rat",
+        "Myconid Gatherer",
+        "Myconid Truffian"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Worn Cassock",
+        "Initiate's Dull Greatsword",
+        "Initiate's Greatsword",
+        "Chosen Initiate's Greatsword",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Shaman Starter Quest (Faelindral)",
+      "wiki": "Shaman_Starter_Quest_(Faelindral)",
+      "giver": "Varilis Thornvine",
+      "npcs": [
+        "a mischievous faerie",
+        "a rotting skeleton"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "shaman"
+      ],
+      "zoneId": "faelindral",
+      "city": "Faelindral",
+      "rewards": [
+        "Novice Hoop of the Listener",
+        "Apprentice Hoop of the Listener",
+        "Spirit-Blessed Headdress",
+        "Robes of the Listener",
+        "Hoop of the Listener",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read the Folded Leafscroll that you start with as a new Shaman Character in Faelindral.",
+        "Head to the Shaman Guild (the Balanced Branch, follow signs or review Faelindral map).",
+        "Give Folded Leafscroll to Varilis Thornvine.",
+        "Return to the newbie area and kill a rotting skeleton until you get 4 x Bone Chips and 2 x Shattered Skull. Combine these in the Old Mortar and Pestle.",
+        "Return to Varilis Thornvine and give him Mortar of Bone Dust.",
+        "Go down the Pixie Lift (Fungi lift) and turn left. Head past the druid ring, fungal ring, cross the bridge, and pass through the ruins.",
+        "Down the hill from the ruins you will spot a cave, which is the aforementioned wolf den.",
+        "Be mindful of a beguiled wolf spawns in the area, as these are high level and aggressive. Invisibility may be useful here.",
+        "Stand in the entrance of the cave and /look to verify you are in the correct location:",
+        "Pick up the dust on your cursor and type /throw dust.",
+        "a mischievous faerie (level 2) will spawn. Kill the faerie and loot Strange Toadstool.",
+        "To avoid agroing the nearby a beguiled wolf spawns, run back towards the ruins as the faerie will eventually path towards them. When the faerie is a safe distance from the cave, engage in combat with it."
+      ]
+    },
+    {
+      "title": "Shaman Starter Quest (Night Harbor)",
+      "wiki": "Shaman_Starter_Quest_(Night_Harbor)",
+      "giver": "Errol Shrewtender",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "shaman"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Awakened Spirit Pouch",
+        "Dusty Spiritist Tunic"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give the Uncured Spirt Pouch to Masoumeh Akhtar."
+      ]
+    },
+    {
+      "title": "Shaman Starter Quest (Underdocks)",
+      "wiki": "Shaman_Starter_Quest_(Underdocks)",
+      "giver": "Picci Manifold",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "shaman"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Shredded Cloak",
+        "Petrified Undercap Stem",
+        "Mycelial Staff",
+        "Mycelial Spear"
+      ],
+      "repeatable": false,
+      "notes": [
+        "The weapon progresses from Petrified Undercap Stem to Mycelial Staff, then Mycelial Spear. For the Mycelial Staff, complete Part 3, Step 1. The preserved-brain task in Step 2 upgrades it to the spear.",
+        "Give Moldy Note to Picci Manifold.",
+        "If you run out of balm, return the empty jar to Picci Manifold for replenishment.",
+        "Use the Putrid Fungal Balm (4/4) on a sickly undercap. They will attack you. Loot Blightspores. Return 4 Blightspores to Picci Manifold",
+        "Gather six Undercap Mycelium Root and combine them in the Mycelium Sack. Known sources in Underdocks include level 5+ an undercap gatherer, an undercap scavenger, an undercap hunter, and an undercap truffian.",
+        "Give the Full Mycelium Sack to Picci Manifold.",
+        "Right-click the thread, it will transform your Petrified Undercap Stem into a Mycelial Staff.",
+        "Take a hunting party out of the North Gate and travel East and find the tunnel that leads to a blight consumed mushroom patch.",
+        "Collect the Blightspore Brain from a mindless blightspore, semi-rare spawn. This item is NO RENT.",
+        "Purchase Embalming Fluid from Telar Nur'gta in the Underdocks.",
+        "Combine the Blightspore Brain and the Embalming Fluid in the Specimen Jar to create the Preserved Specimen.",
+        "Return the Preserved Specimen to Picci Manifold."
+      ]
+    },
+    {
+      "title": "Six Eyes Too Many",
+      "wiki": "Six_Eyes_Too_Many",
+      "giver": "Polietta Two-tone",
+      "npcs": [
+        "a black widow",
+        "an elder widow"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "evershade-weald",
+      "city": "Evershade Weald",
+      "rewards": [
+        "Pixie Glitter",
+        "Experience",
+        "Court of Summer faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Locate Polietta Two-tone, who spawns in Evershade Weald during the day up on the hill near the Fae Guardians.",
+        "Hunt a black widow and an elder widow until you have collected 6 x Widow Eye.",
+        "Hand 6 x Widow Eye to Polietta Two-tone."
+      ]
+    },
+    {
+      "title": "Slay Skarr'Vokk",
+      "wiki": "Slay_Skarr'Vokk",
+      "giver": "Warden Neh'Ma",
+      "npcs": [
+        "Skarr'Vokk"
+      ],
+      "levelMin": 30,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "caves-of-irem",
+      "city": "Caves of Irem",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Find Warden Neh'Ma near the inverted waterfall."
+      ]
+    },
+    {
+      "title": "Soul Binding",
+      "wiki": "Soul_Binding",
+      "giver": "a priest of the Matswar",
+      "npcs": [
+        "a rotting skeleton"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Icon of the Matswar"
+      ],
+      "repeatable": true,
+      "notes": []
+    },
+    {
+      "title": "Spectral Armor Quest",
+      "wiki": "Spectral_Armor_Quest",
+      "giver": "a master blacksmith",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Spellblade Starter Quest (Night Harbor)",
+      "wiki": "Spellblade_Starter_Quest_(Night_Harbor)",
+      "giver": "Torn Note",
+      "npcs": [
+        "Jaffar Jhaym",
+        "Njau Hansou",
+        "Buckmarr Gorstagg",
+        "an ashira raider"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "spellblade"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Spellbinders Blade Talisman"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Read Torn Note you start with as a new Spellblade character:",
+        "Give Torn Note to Jaffar Jhaym.",
+        "Give Torn Note to Njau Hansou.",
+        "Give the Bag of Scorched Bones to Njau Hansou",
+        "Give the Bag of Scorched Bones to Buckmarr Gorstagg",
+        "Kill an ashira raider in Shaded Dunes and loot missing logbook pages 1-6"
+      ]
+    },
+    {
+      "title": "Stolen Gems",
+      "wiki": "Stolen_Gems",
+      "giver": "Glaeron Kes'tel",
+      "npcs": [
+        "a Deepgulp warrior"
+      ],
+      "levelMin": 10,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Legion Recurve",
+        "Legion Longsword",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
+        "Laren Drin'dar is located in the Foreign Quarter of Ail'Vorith.",
+        "Glaeron Kes'tel is located House Vael'xirith in Ail'Vorith."
+      ]
+    },
+    {
+      "title": "Survey the Creatures of the Cavern Sea",
+      "wiki": "Survey_the_Creatures_of_the_Cavern_Sea",
+      "giver": "Sereth Vael'xirith",
+      "npcs": [],
+      "levelMin": 16,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Shore Surveyor's Charm"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Sereth Vael'xirith is located in the Great Cavern Sea at the outpost directly outside of Ail'Vorath.",
+        "Go out and slay a shore beetle, a shelter bat and a shallows basilisk until you have what Sereth demands. All mobs are visible from where she stands. Return these items to her."
+      ]
+    },
+    {
+      "title": "Survey the Myconid Colony",
+      "wiki": "Survey_the_Myconid_Colony",
+      "giver": "Quilla Dorn",
+      "npcs": [
+        "a mold beetle"
+      ],
+      "levelMin": 16,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "great-cavern-sea",
+      "city": "Great Cavern Sea",
+      "rewards": [
+        "Researcher's Draught",
+        "Shed Myconid Fiber"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Quilla Dorn is located in the Great Cavern Sea by the mushrooms and myconids.",
+        "Go out and slay a mold beetle to obtain four Beetle-Chewed Fungal Growth. They can be found nearby in a cave, on an island, or on the other side of the small tunnel."
+      ]
+    },
+    {
+      "title": "Syrsil's Stolen Package",
+      "wiki": "Syrsil's_Stolen_Package",
+      "giver": "Senior Apprentice Syrsil",
+      "npcs": [
+        "Vaslir Vharkith",
+        "Belot",
+        "Freysia Riftrend"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "House Varros",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Quest name unconfirmed: \"Syrsil's Stolen Package\" is a descriptive wiki title. The in-game quest-journal title has not yet been verified.",
+        "The recorded player response was \"packages\" (plural). The NPC does not respond to \"package\" (singular).",
+        "The \"House Varros\" keyword here produces the same response documented in the House Varros dialogue branch above. No additional dialogue branch has been confirmed beyond this point.",
+        "Belot's exact spawn details, the package's drop rate, and any additional drop sources still require verification.",
+        "Players have reported completing both hand-ins using separate copies of the item.",
+        "Alternative outcome: Giving Syrsil Vharkith's Order awards experience and House Varros faction, but does not award the robe. The robe is obtained by defeating Syrsil and looting it. Players have reported obtaining the robe without completing the earlier House Varros assignments.",
+        "Faction observation: During the recorded encounter, killing Syrsil did not cause a faction loss or provoke the other tavern occupants. The NPC encounter may still be dangerous, and these observations do not establish that every combat situation will behave identically."
+      ]
+    },
+    {
+      "title": "Thanetal's Samples",
+      "wiki": "Thanetal's_Samples",
+      "giver": "Thanetal",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "ail-vorith",
+      "city": "Ail'vorith",
+      "rewards": [
+        "Sample of Mind Control Substance"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Thanetal is found in the Foreign Quarter of Ail'Vorith.",
+        "Hand Thanetal 1 Deep Beer and 10 silver pieces."
+      ]
+    },
+    {
+      "title": "The Claw Arena",
+      "wiki": "The_Claw_Arena",
+      "giver": "Ringmaster Vorn",
+      "npcs": [
+        "Jorvan Ironfist, Master of the Arena",
+        "Gemfog"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Mask of the Gladiator",
+        "Faceguard of the Gladiator",
+        "Claw of the Gladiator",
+        "Gilded Claw of the Gladiator"
+      ],
+      "repeatable": false,
+      "notes": [
+        "In order to reach the arena, the only known way is to loot a Gilded Claw Compound Key through killing any of the claw members at the compound.",
+        "The entrance to the arena is behind the compound in the image above to the left, down a ramp to a locked door.",
+        "Once in the locked door there will be patrols that are aligned with the Claws roaming the halls.",
+        "In the locked door, there is a room to the right with an oddly colored wall that can be walked through.",
+        "It is safe to explore this area as all the NPCs are on the claw faction, aside from the slaves.",
+        "In order to start the arena you need to be AMICABLE to The Gilded Claws. This can be accomplished by killing many of the smuggler and bandits in the desert region. This includes smugglers in Fallen Pass, Shaded Dunes, and Sungreet Strand.",
+        "Shortly after a fight is started Ringmaster Vorn typically despawns with a 50 minute respawn timer.",
+        "When handed a note to spawn an encounter, Vorn stays available for a little while, making it possible to hand in multiple notes.",
+        "If you are on the same tier of fight, the encounter needs to be defeated before the next person can spawn the same encounter.",
+        "Different tiers can be started at the same time, be sure to have the correct person loot the proof of kill."
+      ]
+    },
+    {
+      "title": "The Curse of Blind Midden",
+      "wiki": "The_Curse_of_Blind_Midden",
+      "giver": "Chaplain Cranely",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "blind-midden",
+      "city": "The Blind Midden",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Chaplain Cranely is located on the top floor of Blind Midden in the sewers are where the gelmothers are at an altar. It is critical that you speak Common, not Deep Common.",
+        "New quest update after 10/15 patch",
+        "Clicking on the offering box opens a crafting window; mix in the offering box 1 Sewer Sludge and 1 Enchanted effigy and receive Sludge-Packed Effigy",
+        "hand in the sludge-packed effigy to Chaplain Cranely",
+        "5 adds a mix of skeletons and floating skull spawn. Kill them then Grave Hulk spawns he drops Skeletal Champion's Shoulderguards or effigy warrior's shiv or Barrow iron tower shield"
+      ]
+    },
+    {
+      "title": "The Delvestone Mining Company Quarrel",
+      "wiki": "The_Delvestone_Mining_Company_Quarrel",
+      "giver": "Gunder Dinnig",
+      "npcs": [
+        "A Deepcut overseer"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Polished Iron Ring"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
+        "Hand in the Full Bag of Overseer Heads to Gunder Dinnig",
+        "Take the Deepcut Overseer Bounty to Elara Venn in the bounty office beneath the quartermaster."
+      ]
+    },
+    {
+      "title": "The Missing Apprentice",
+      "wiki": "The_Missing_Apprentice",
+      "giver": "Everett Graves",
+      "npcs": [
+        "an escaped minion"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Bloodied Bone"
+      ],
+      "repeatable": true,
+      "notes": [
+        "All classes are able to complete this quest, but only NEC / SHD can use the Bloodied Bone.",
+        "Everett Graves is located in the Necropolis of Night Harbor. Everett is in the main room just as one enters the Concourse of Souls.",
+        "Head to the Tomb of the Last Wyrmsbane and locate an escaped minion. The minion spawns within a room near the main entrance of the dungeon that contains several upright and open tombs which are embedded in the walls.",
+        "A good way to know if you are near the right room is to look for a cracked wall with a hole in it. This wall is just outside the room in which the quest NPC can be found in.",
+        "When you've located an escaped minion, kill it and loot Bloodied Human Head.",
+        "Return to Everett Graves in Night Harbor and give him the Bloodied Human Head."
+      ]
+    },
+    {
+      "title": "The Small Problem of Deepcut Arsonists",
+      "wiki": "The_Small_Problem_of_Deepcut_Arsonists",
+      "giver": "Guard Darek",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Kill a Deepcut arsonist to collect 6 Vial of Flammable Oil. Arsonists are an uncommon spawn in the Deepcut mining cave, and the oils are an uncommon drop from them.",
+        "Combine the 6 oils within the box to craft Box of Oils.",
+        "Turn in the box to Guard Darek."
+      ]
+    },
+    {
+      "title": "The Yowling",
+      "wiki": "The_Yowling",
+      "giver": "an ashira shapeshifter",
+      "npcs": [
+        "Mayana",
+        "Leatherworker Haiat",
+        "Jalwa Noor",
+        "General Overlord Bloodynose",
+        "Seeress Hamana",
+        "Qassem Brolt",
+        "Overseer Shuk'Naru",
+        "Jens Vermahn"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Ashira Pack Ring",
+        "Refined Ashira Pack Ring",
+        "Delicate Ashira Pack Ring",
+        "Great Ashira Pack Ring",
+        "Ring of the Ashira Protector"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Warning, the stages of this quest are NOT repeatable. DO NOT MISPLACE ANY RING. If you lose the ring, you cannot progress.",
+        "This quest starts by looting an Unusual Jackal Pelt from an ashira shapeshifter.",
+        "Inspecting the Unusual Jackal Pelt item tooltip directs the player to interact with someone familiar with pelts.",
+        "Seek out Leatherworker Haiat at the Tannery near West Gate in Night Harbor and hand him the Unusual Jackal Pelt.",
+        "Seek out Jalwa Noor in Glimmermoon Hall (The Bard's Guild in the Night Market) and hand her the Ashira Pelt.",
+        "In Tomb of the Last Wyrmsbane take the hidden path (not the hidden path leading to Ancient Crypts) in the builder room across from Quartermaster Boothroy, and drop down onto the terrace with the pipe organ in the chapel.",
+        "Overlooking Timmon Bell spawn location in the chapel. With your back to Bell, /look at the organ then proceed to the cobweb corner to the right and ahead and /take lute.",
+        "If a player recently already picked it up, it may take a few minutes for it to respawn",
+        "Find Mayana in Saltbreeze Park.",
+        "Note: Mayana must be alone out of sight of other NPCs for the chant to work. She paths between three locations and it will not work if she is standing at the sojourner campfire or the pool of water by the monk trainer.",
+        "Inside the park, try to click the Chant. It'll either work or give an emote.",
+        "Give Ancient Chant to Mayana."
+      ]
+    },
+    {
+      "title": "Thieves Guild Bounty Quest",
+      "wiki": "Thieves_Guild_Bounty_Quest",
+      "giver": "Mikra Velrane",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Experience",
+        "Coin",
+        "Underdocks",
+        "Mikra Velrane",
+        "an undercap sporeling",
+        "Myconid Parts",
+        "Mushroom Farmers Bounty",
+        "Elara Venn"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Head out the northern gate and hunt an undercap sporeling and its variants to loot 4 Myconid Parts.",
+        "Hand 4 Myconid Parts to Mikra Velrane."
+      ]
+    },
+    {
+      "title": "Tig's Measuring Quest",
+      "wiki": "Tig's_Measuring_Quest",
+      "giver": "Tig Pebblebank",
+      "npcs": [
+        "Sproggets Bedsprings"
+      ],
+      "levelMin": 15,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "sungreet-strand",
+      "city": "Sungreet Strand",
+      "rewards": [
+        "The Measure Stick",
+        "Lead Disk of the Apprentice",
+        "Experience",
+        "Congregation of Trem faction",
+        "City of Night Harbor faction"
+      ],
+      "repeatable": false,
+      "notes": [
+        "You can only engage in the quest dialogue after reaching level 15 or higher.",
+        "You may first find Tig Pebblebank at the quarry of Sungreet Strand.",
+        "If you are level 15+...",
+        "Travel to Night Harbor and visit the Night Market. You can find Sproggets Bedsprings inside one of the building just to the left as you enter the Night Market from West Gate.",
+        "IMPORTANT - Do NOT purchase the rope from Sproggets. Simply take 2 silver from your inventory and hand it to Sproggets.",
+        "Travel to Sungreet Strand and return to Tig Pebblebank.",
+        "Hand Small Field Pack of Ropes to Tig Pebblebank.",
+        "Read over The Joy of Surveying, as it will provide instructions on how to capture measurements and how to identify piton objects in-game.",
+        "You now have to locate the various pitons around the quarry and use MUD commands with your Rope, Knotted, 500 Length to capture measurements.",
+        "Location 1(marker #2) is at the south eastern corner of the Quarry along the rim (Left of the ramp in and out).",
+        "When you are at a given location, hold Rope, Knotted, 500 Length on your cursor and use the MUD command `/place Rope` to attach the rope to the marker.",
+        "Location 2(marker #1) is at the south western corner of the Quarry along the rim (near the ramp in and out of the quarry)."
+      ]
+    },
+    {
+      "title": "Turf War with The Fight Club",
+      "wiki": "Turf_War_with_The_Fight_Club",
+      "giver": "Squeaker",
+      "npcs": [],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Underdocks Starter Quest",
+      "wiki": "Underdocks_Starter_Quest",
+      "giver": "Marshal Harding",
+      "npcs": [
+        "Simrut the Green",
+        "Gunder Dinnig",
+        "Maude Astarace"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Musty Tunic",
+        "Hammered Iron Ring",
+        "Polished Iron Ring",
+        "Hargrul's Skullcracker",
+        "Hargrul's Tenderizer",
+        "Ratkiller"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Take a lift down to the Underdocks Citadel. Then, head east to the Eastern District. You will need to swim across or wait for the raft. Climb the staircase immediately across from the raft docking location to find Marshal Harding and hand him your Recruitment Notice.",
+        "Collect 6 Deep Beetle Carapace, place them in the Beetle Shell Collection Bag and click combine to create Full Beetle Shell Collection Bag.",
+        "Hand in the Full Beetle Shell Collection Bag to Marshal Harding",
+        "Hand the correct NPC your Note",
+        "Head downstairs to find Elara Venn.",
+        "Hand the Scrap of Paper and your Hammered Iron Ring to Elara Venn.",
+        "Return to Simrut the Green and Hail him.",
+        "Hand in the Full Box of Crystals to Maude Astarace",
+        "Hand in the Darrowdwell Crystal Bounty to Elara Venn at the Bounty Building nearby with your Hammered Iron Ring",
+        "Return to Maude Astarace and hail her.",
+        "Return to Maude Astarace and give her the Faintly Glowing Crystal.",
+        "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads."
+      ]
+    },
+    {
+      "title": "Viper's Kick Recipe",
+      "wiki": "Viper's_Kick_Recipe",
+      "giver": "Layla Faraj",
+      "npcs": [
+        "a Szuurian viper",
+        "Nerida Thinblade"
+      ],
+      "levelMin": 20,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "glass-flats",
+      "city": "Glass Flats",
+      "rewards": [
+        "Viper's Kick",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head to Layla Faraj in Glass Flats. Layla is located at the Pyrmos Mercenary / Salt Gatherer camp near the Sungreet Strand zoneline.",
+        "Kill a Szuurian viper and loot Szuurian Viper Venom Sac.",
+        "Travel to Night Harbor and find Nerida Thinblade at The Spirit Tap bar in the Black Feather Bazaar. Purchase Black Feather Whiskey for 2 silver pieces.",
+        "Give 1 x Szuurian Viper Venom Sac and 1 x Black Feather Whiskey to Layla Faraj."
+      ]
+    },
+    {
+      "title": "Wanted: Ayip & Yapala",
+      "wiki": "Wanted:_Ayip_&_Yapala",
+      "giver": "Guard Atep",
+      "npcs": [
+        "Ayip",
+        "Yapala"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "The Impaler"
+      ],
+      "repeatable": false,
+      "notes": []
+    },
+    {
+      "title": "Warden Neh'Ma's Sister",
+      "wiki": "Warden_Neh'Ma's_Sister",
+      "giver": "Warden Neh'Ma",
+      "npcs": [
+        "Skarr'Vokk"
+      ],
+      "levelMin": 30,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "caves-of-irem",
+      "city": "Caves of Irem",
+      "rewards": [],
+      "repeatable": false,
+      "notes": [
+        "Find Warden Neh'Ma near the inverted waterfall.",
+        "Give Warden Neh'Ma a Riverwork Charm."
+      ]
+    },
+    {
+      "title": "Wererat Fight Club",
+      "wiki": "Wererat_Fight_Club",
+      "giver": "Draznax",
+      "npcs": [],
+      "levelMin": 4,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "The Fight Club faction"
+      ],
+      "repeatable": true,
+      "notes": [
+        "Hand in Severed Wererat Head one at a time to Draznax."
+      ]
+    },
+    {
+      "title": "Wilna's Ring",
+      "wiki": "Wilna's_Ring",
+      "giver": "Tessa Kentwell",
+      "npcs": [
+        "Poacher Wilna"
+      ],
+      "levelMin": 12,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "keepers-bight",
+      "city": "Keeper's Bight",
+      "rewards": [
+        "Ring of Consequences",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Poacher Wilna is one of three named poachers that can spawn in the bear caves in Keeper's Bight.",
+        "Kill Poacher Wilna and loot Wilna's Ring.",
+        "Give the ring to Tessa Kentwell in the Kentwell Tannery in Penshaw Village."
+      ]
+    },
+    {
+      "title": "Wizard Starter Quest (Night Harbor)",
+      "wiki": "Wizard_Starter_Quest_(Night_Harbor)",
+      "giver": "",
+      "npcs": [
+        "Olvin Viscus",
+        "Veygan Antorious",
+        "Jabir Il-hamar",
+        "Adimah Starseeker",
+        "Domas Starseeker",
+        "Rallin Wizzentrop",
+        "Hamsar",
+        "Lanna Ivintoria",
+        "Liyna Esueiruc"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "wizard"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [
+        "Academy Student's Robe",
+        "Gilded Academy Student's Robe"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Head to the wizard tower in the north eastern corner of Night Harbor and Turn in your Carefully Rolled Note to Olvin Viscus",
+        "Head up the tower and hand your Academy Prospectus to Veygen Antorious",
+        "Head further up the tower and hand your Academy Prospectus to Jabir Il-hamar",
+        "Head to the bottom of the tower and take the teleporter to the Library. (Inside the Grand Library entry floor, on the left side upon entry.) : Hand your Academy Prospectus to Adimah Starseeker",
+        "Return back to Adimah Starseeker and hand her the Golden-Feathered Quill. : Adimah Starseeker holds up a finger, once again nose-deep in her tome. :",
+        "Head back to the tower and hand your Academy Prospectus to Rallin Wizzentrop",
+        "Head back to the library and hand the Delivery for Hamsar to Hamsar",
+        "Head to the Library to hand your Academy Prospectus to Lanna Ivintoria : Lanna Ivintoria takes the prosepctus from you ginerly, looking over it, before she nods. :",
+        "Head out the North Gate of Night Harbor and kill a snakes until you receive two Snake Skins. : Alternatively you can buy these.",
+        "Combine all 5 notes in to the Academy Folio as well as the original Academy Prospectus to receive the Complete Academy Prospectus.",
+        "Head up the tower to Jabir Il-hamar and hand him the Approved Academy Prospectus."
+      ]
+    },
+    {
+      "title": "Wizard Starter Quest (Underdocks)",
+      "wiki": "Wizard_Starter_Quest_(Underdocks)",
+      "giver": "",
+      "npcs": [
+        "Marshal Harding"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "Musty Tunic",
+        "Hammered Iron Ring"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Take a lift down to the Underdocks Citadel. Then, head east to the Eastern District. You will need to swim across or wait for the raft. Climb the staircase immediately across from the raft docking location to find Marshal Harding and hand him your Recruitment Notice.",
+        "Combine 6 deep beetle carapace in the Beetle Shell Collection Bag and turn the bag into Marshal Harding",
+        "Head to Maude Astarace. She is in the building to the left of Quartermaster LLarne above the bounty office.",
+        "Hand in the Note to Maude Astarace",
+        "Head to Darrowdwell mine. You will need to kill a deepcut miner to get 8 crystals and combine inside the Empty Crystal Box.",
+        "Head to back to Maude Astarace and hand her your Full Box of Crystals.",
+        "Head to bounty office. turn in Darrowdwell Crystal Bounty and Hammered Iron Ring to Elara Venn.",
+        "Head to back to Maude Astarace and hail her.",
+        "Head to the north east Deepcut Bandit Cave. You will need to kill A deepcut miner to get a Faintly Glowing Crystal",
+        "Head to back to Maude Astarace and hand her the crystal."
+      ]
+    },
+    {
+      "title": "Wyrmsbane Armor Quest",
+      "wiki": "Wyrmsbane_Armor_Quest",
+      "giver": "",
+      "npcs": [
+        "Forge Master Durthir",
+        "Tailor Thaddeus",
+        "Leathersmith Visali"
+      ],
+      "levelMin": null,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "fallen-pass",
+      "city": "Fallen Pass",
+      "rewards": [
+        "Wyrmsbane Cloth Set",
+        "Wyrmsbane Leather Set",
+        "Wyrmsbane Chain Set",
+        "Wyrmsbane Plate Set"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Give armor and gems to Matheus"
+      ]
+    }
+  ]
+}

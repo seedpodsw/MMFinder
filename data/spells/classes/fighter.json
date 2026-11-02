@@ -1096,10 +1096,10 @@
         "name": "Frenzy II",
         "slug": "Frenzy_II",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frenzy_II",
-        "description": "Eviscerate your target with a frenzy of attacks, dealing xx% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
-        "category": null,
-        "categorySlug": null,
-        "categoryUrl": null,
+        "description": "Eviscerate your target with a frenzy of attacks, dealing 90% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
         "mana": "Innate",
         "castTime": null,
@@ -1113,6 +1113,11 @@
         "primaryTag": "damage",
         "effects": [
           {
+            "kind": "damage",
+            "display": "90% weapon dmg",
+            "sortKey": 90
+          },
+          {
             "kind": "buff",
             "stat": "Attack Speed",
             "min": 10,
@@ -1123,7 +1128,7 @@
             "statTag": "ATK"
           }
         ],
-        "valuesSummary": "+10%",
+        "valuesSummary": "90% weapon dmg · +10%",
         "statTags": []
       }
     ],
@@ -1316,7 +1321,7 @@
         "name": "Shield Bash III",
         "slug": "Shield_Bash_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Bash_III",
-        "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
+        "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus 10 (L30) to 15 (L40) Physical Damage, increasing your Threat against them by 225 (L30) to 300 (L40), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1327,11 +1332,33 @@
         "type": "ability",
         "tags": [
           "buff",
-          "interrupt"
+          "interrupt",
+          "damage"
         ],
         "primaryTag": "interrupt",
-        "effects": [],
-        "valuesSummary": "",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 10,
+            "max": 15,
+            "minLevel": 30,
+            "maxLevel": 40,
+            "damageType": "Physical",
+            "display": "10–15 Physical dmg (L30–L40)",
+            "sortKey": 15
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat against them",
+            "min": 225,
+            "max": 300,
+            "minLevel": 30,
+            "maxLevel": 40,
+            "display": "+225–300 Threat against them (L30–L40)",
+            "sortKey": 300
+          }
+        ],
+        "valuesSummary": "10–15 Physical dmg (L30–L40) · +225–300 Threat against them (L30–L40)",
         "statTags": []
       }
     ],
@@ -3100,10 +3127,10 @@
       "name": "Frenzy II",
       "slug": "Frenzy_II",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frenzy_II",
-      "description": "Eviscerate your target with a frenzy of attacks, dealing xx% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
-      "category": null,
-      "categorySlug": null,
-      "categoryUrl": null,
+      "description": "Eviscerate your target with a frenzy of attacks, dealing 90% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
       "mana": "Innate",
       "castTime": null,
@@ -3117,6 +3144,11 @@
       "primaryTag": "damage",
       "effects": [
         {
+          "kind": "damage",
+          "display": "90% weapon dmg",
+          "sortKey": 90
+        },
+        {
           "kind": "buff",
           "stat": "Attack Speed",
           "min": 10,
@@ -3127,7 +3159,7 @@
           "statTag": "ATK"
         }
       ],
-      "valuesSummary": "+10%",
+      "valuesSummary": "90% weapon dmg · +10%",
       "statTags": []
     },
     {
@@ -3310,7 +3342,7 @@
       "name": "Shield Bash III",
       "slug": "Shield_Bash_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Bash_III",
-      "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
+      "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus 10 (L30) to 15 (L40) Physical Damage, increasing your Threat against them by 225 (L30) to 300 (L40), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3321,11 +3353,33 @@
       "type": "ability",
       "tags": [
         "buff",
-        "interrupt"
+        "interrupt",
+        "damage"
       ],
       "primaryTag": "interrupt",
-      "effects": [],
-      "valuesSummary": "",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 10,
+          "max": 15,
+          "minLevel": 30,
+          "maxLevel": 40,
+          "damageType": "Physical",
+          "display": "10–15 Physical dmg (L30–L40)",
+          "sortKey": 15
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat against them",
+          "min": 225,
+          "max": 300,
+          "minLevel": 30,
+          "maxLevel": 40,
+          "display": "+225–300 Threat against them (L30–L40)",
+          "sortKey": 300
+        }
+      ],
+      "valuesSummary": "10–15 Physical dmg (L30–L40) · +225–300 Threat against them (L30–L40)",
       "statTags": []
     },
     {

@@ -44,6 +44,7 @@ export function questHay(quest, classes = []) {
     quest.kind,
     classNames,
     ...(quest.rewards || []),
+    ...(quest.wikiNotes || []),
     ...(quest.steps || []).flatMap((s) => [s.action, s.turnIn, s.npc, s.reward]),
   ]
     .filter(Boolean)
@@ -413,6 +414,16 @@ function QuestDetail({ quest, classes, zones, level, completed, onToggleStep, on
         )}
       </p>
       {quest.rewards?.length > 0 && <p className="mobs">Rewards: {quest.rewards.join(" · ")}</p>}
+      {quest.wikiNotes?.length > 0 && (
+        <>
+          <p className="meta">Wiki notes</p>
+          {quest.wikiNotes.map((note) => (
+            <p key={note} className="desc">
+              {note}
+            </p>
+          ))}
+        </>
+      )}
       <p className="adj">
         <a className="linkish" href={quest.wikiUrl} target="_blank" rel="noreferrer">
           Open wiki walkthrough
