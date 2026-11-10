@@ -4,7 +4,7 @@
   "type": "ability",
   "sectionTitle": "Rogue Abilities",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rogue",
-  "entryCount": 42,
+  "entryCount": 43,
   "levels": [
     1,
     2,
@@ -44,6 +44,36 @@
   ],
   "entriesByLevel": {
     "1": [
+      {
+        "name": "Evade",
+        "slug": "Evade",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Evade",
+        "description": "Evade the attention of your target, reducing your Threat against them by 150 (L1) to 1500 (L60). This ability shares a cooldown with other Acrobatics abilities.",
+        "category": "Acr",
+        "categorySlug": "Skill_Acrobatics",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+        "location": "Vendor",
+        "mana": "Innate",
+        "castTime": null,
+        "level": 1,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [
+          {
+            "kind": "debuff",
+            "stat": "Threat against them",
+            "min": 150,
+            "max": 1500,
+            "minLevel": 1,
+            "maxLevel": 60,
+            "display": "−150–1500 Threat against them (L1–L60)",
+            "sortKey": 1500
+          }
+        ],
+        "valuesSummary": "−150–1500 Threat against them (L1–L60)",
+        "statTags": []
+      },
       {
         "name": "Shoot",
         "slug": "Shoot",
@@ -624,7 +654,7 @@
         "name": "Nimble Evasion",
         "slug": "Nimble_Evasion",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nimble_Evasion",
-        "description": "Become incredibly nimble, granting you a 100% chance to doge incoming melee attacks for 12 seconds.",
+        "description": "Become incredibly nimble, granting you a 100% chance to dodge incoming melee attacks for 12 seconds.",
         "category": "Mar",
         "categorySlug": "Skill_Martial",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",
@@ -1318,6 +1348,36 @@
   },
   "entries": [
     {
+      "name": "Evade",
+      "slug": "Evade",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Evade",
+      "description": "Evade the attention of your target, reducing your Threat against them by 150 (L1) to 1500 (L60). This ability shares a cooldown with other Acrobatics abilities.",
+      "category": "Acr",
+      "categorySlug": "Skill_Acrobatics",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Acrobatics",
+      "location": "Vendor",
+      "mana": "Innate",
+      "castTime": null,
+      "level": 1,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [
+        {
+          "kind": "debuff",
+          "stat": "Threat against them",
+          "min": 150,
+          "max": 1500,
+          "minLevel": 1,
+          "maxLevel": 60,
+          "display": "−150–1500 Threat against them (L1–L60)",
+          "sortKey": 1500
+        }
+      ],
+      "valuesSummary": "−150–1500 Threat against them (L1–L60)",
+      "statTags": []
+    },
+    {
       "name": "Shoot",
       "slug": "Shoot",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shoot",
@@ -1867,7 +1927,7 @@
       "name": "Nimble Evasion",
       "slug": "Nimble_Evasion",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nimble_Evasion",
-      "description": "Become incredibly nimble, granting you a 100% chance to doge incoming melee attacks for 12 seconds.",
+      "description": "Become incredibly nimble, granting you a 100% chance to dodge incoming melee attacks for 12 seconds.",
       "category": "Mar",
       "categorySlug": "Skill_Martial",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Martial",

@@ -4,7 +4,7 @@
   "type": "ability",
   "sectionTitle": "Monk Abilities",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Monk",
-  "entryCount": 32,
+  "entryCount": 44,
   "levels": [
     1,
     2,
@@ -30,7 +30,17 @@
     30,
     31,
     34,
-    35
+    35,
+    38,
+    40,
+    41,
+    44,
+    46,
+    50,
+    51,
+    54,
+    56,
+    58
   ],
   "entriesByLevel": {
     "1": [
@@ -1022,7 +1032,7 @@
         "slug": "Celestial_Strike_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_IV",
         "description": "Squarely strike your target, dealing 145% Weapon Ratio Damage plus 15 (L30) to 20 (L40) Physical Damage, granting Celestial Fury, and granting you a chance to activate Celestial Vitality. Celestial Fury: Let fury guide your strikes, increasing your Attack Speed by 10% for 30 seconds. Celestial Vitality: Infuse yourself with vitality, restoring 1 (L1) to 100 (L60) Health. This ability can be enhanced by your active Style..",
-        "category": "Mit?",
+        "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
         "location": "Vendor",
@@ -1133,6 +1143,337 @@
           }
         ],
         "valuesSummary": "100% weapon dmg · 4s duration",
+        "statTags": []
+      }
+    ],
+    "38": [
+      {
+        "name": "Iron Fists",
+        "slug": "Iron_Fists",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iron_Fists",
+        "description": "Forge your fists into iron, nullifying the effects of Damage Shields for 1 minute.",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 38,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "40": [
+      {
+        "name": "Ethereal Body",
+        "slug": "Ethereal_Body",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ethereal_Body",
+        "description": "Become nigh ethereal, increasing your Agility by 20 and Dodge chance by 25% for 15 seconds.",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 40,
+        "type": "ability",
+        "tags": [
+          "buff",
+          "self",
+          "AGI"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Agility by 20 and Dodge chance",
+            "min": 25,
+            "max": 25,
+            "unit": "%",
+            "display": "+25%",
+            "sortKey": 25
+          },
+          {
+            "kind": "buff",
+            "stat": "Agility",
+            "amount": 20,
+            "display": "+20 Agility",
+            "sortKey": 20,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "+25% · +20 Agility",
+        "statTags": [
+          "AGI"
+        ]
+      },
+      {
+        "name": "Round Kick V",
+        "slug": "Round_Kick_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Round_Kick_V",
+        "description": "Deliver a crushing round kick to your target, dealing 100 Physical Damage and granting you a chance to reset the cooldown of your Celestial Strike and Hundred Fist abilities. This ability scales with your Dexterity.",
+        "category": "Mit",
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 40,
+        "type": "ability",
+        "tags": [
+          "damage",
+          "buff"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 100,
+            "damageType": "Physical",
+            "display": "100 Physical dmg",
+            "sortKey": 100
+          }
+        ],
+        "valuesSummary": "100 Physical dmg",
+        "statTags": []
+      }
+    ],
+    "41": [
+      {
+        "name": "Celestial Strike V",
+        "slug": "Celestial_Strike_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_V",
+        "description": "Squarely strike your target, dealing 150% Weapon Ratio Damage plus 20 (L40) to 25 (L50) Physical Damage, granting Celestial Fury, and granting you a chance to activate Celestial Vitality. Celestial Fury: Let fury guide your strikes, increasing your Attack Speed by 10% for 30 seconds. Celestial Vitality: Infuse yourself with vitality, restoring 1 (L1) to 100 (L60) Health. This ability can be enhanced by your active Style..",
+        "category": "Mit",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 41,
+        "type": "ability",
+        "tags": [
+          "damage",
+          "buff",
+          "haste"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "damage",
+            "min": 20,
+            "max": 25,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "damageType": "Physical",
+            "display": "20–25 Physical dmg (L40–L50)",
+            "sortKey": 25
+          },
+          {
+            "kind": "buff",
+            "stat": "Attack Speed",
+            "min": 10,
+            "max": 10,
+            "unit": "%",
+            "display": "+10%",
+            "sortKey": 10,
+            "statTag": "ATK"
+          }
+        ],
+        "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L40–L50) · +10%",
+        "statTags": []
+      }
+    ],
+    "44": [
+      {
+        "name": "Flying Kick IV",
+        "slug": "Flying_Kick_IV",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flying_Kick_IV",
+        "description": "",
+        "category": "Mit?",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 44,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "46": [
+      {
+        "name": "Hundred Fists II",
+        "slug": "Hundred_Fists_II",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hundred_Fists_II",
+        "description": "",
+        "category": "Mit?",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 46,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "50": [
+      {
+        "name": "Perfect Focus",
+        "slug": "Perfect_Focus",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Perfect_Focus",
+        "description": "",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 50,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      },
+      {
+        "name": "Round Kick VI",
+        "slug": "Round_Kick_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Round_Kick_VI",
+        "description": "",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 50,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "51": [
+      {
+        "name": "Celestial Strike VI",
+        "slug": "Celestial_Strike_VI",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_VI",
+        "description": "",
+        "category": "Mit?",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 51,
+        "type": "ability",
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "54": [
+      {
+        "name": "Flying Kick V",
+        "slug": "Flying_Kick_V",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flying_Kick_V",
+        "description": "",
+        "category": "Mit?",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 54,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "56": [
+      {
+        "name": "Ascendant Body",
+        "slug": "Ascendant_Body",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ascendant_Body",
+        "description": "Ascend your body to a state of perfection, simultaneously decreasing your food, drink, and air consumption, and slowing your descent when falling for 1 hour.",
+        "category": null,
+        "categorySlug": null,
+        "categoryUrl": null,
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 56,
+        "type": "ability",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
+        "statTags": []
+      }
+    ],
+    "58": [
+      {
+        "name": "Thousand Fists",
+        "slug": "Thousand_Fists",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thousand_Fists",
+        "description": "Pummel your target in rapid succession, dealing 120% Weapon Ratio Damage four times. Additionally, if your target is off balance, you have a chance to stun them for 4 seconds. This ability can be used while moving. This ability is channeled. This ability shares a cooldown with Celestial Strike.",
+        "category": "Mit?",
+        "categorySlug": "Skill_Might",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+        "location": "Vendor",
+        "mana": null,
+        "castTime": null,
+        "level": 58,
+        "type": "ability",
+        "tags": [
+          "damage",
+          "crowd-control",
+          "stun"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "120% weapon dmg",
+            "sortKey": 120
+          },
+          {
+            "kind": "crowd-control",
+            "duration": 4,
+            "display": "4s duration",
+            "sortKey": 4
+          }
+        ],
+        "valuesSummary": "120% weapon dmg · 4s duration",
         "statTags": []
       }
     ]
@@ -2082,7 +2423,7 @@
       "slug": "Celestial_Strike_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_IV",
       "description": "Squarely strike your target, dealing 145% Weapon Ratio Damage plus 15 (L30) to 20 (L40) Physical Damage, granting Celestial Fury, and granting you a chance to activate Celestial Vitality. Celestial Fury: Let fury guide your strikes, increasing your Attack Speed by 10% for 30 seconds. Celestial Vitality: Infuse yourself with vitality, restoring 1 (L1) to 100 (L60) Health. This ability can be enhanced by your active Style..",
-      "category": "Mit?",
+      "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
       "location": "Vendor",
@@ -2189,6 +2530,317 @@
         }
       ],
       "valuesSummary": "100% weapon dmg · 4s duration",
+      "statTags": []
+    },
+    {
+      "name": "Iron Fists",
+      "slug": "Iron_Fists",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Iron_Fists",
+      "description": "Forge your fists into iron, nullifying the effects of Damage Shields for 1 minute.",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 38,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Ethereal Body",
+      "slug": "Ethereal_Body",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ethereal_Body",
+      "description": "Become nigh ethereal, increasing your Agility by 20 and Dodge chance by 25% for 15 seconds.",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 40,
+      "type": "ability",
+      "tags": [
+        "buff",
+        "self",
+        "AGI"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Agility by 20 and Dodge chance",
+          "min": 25,
+          "max": 25,
+          "unit": "%",
+          "display": "+25%",
+          "sortKey": 25
+        },
+        {
+          "kind": "buff",
+          "stat": "Agility",
+          "amount": 20,
+          "display": "+20 Agility",
+          "sortKey": 20,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "+25% · +20 Agility",
+      "statTags": [
+        "AGI"
+      ]
+    },
+    {
+      "name": "Round Kick V",
+      "slug": "Round_Kick_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Round_Kick_V",
+      "description": "Deliver a crushing round kick to your target, dealing 100 Physical Damage and granting you a chance to reset the cooldown of your Celestial Strike and Hundred Fist abilities. This ability scales with your Dexterity.",
+      "category": "Mit",
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 40,
+      "type": "ability",
+      "tags": [
+        "damage",
+        "buff"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 100,
+          "damageType": "Physical",
+          "display": "100 Physical dmg",
+          "sortKey": 100
+        }
+      ],
+      "valuesSummary": "100 Physical dmg",
+      "statTags": []
+    },
+    {
+      "name": "Celestial Strike V",
+      "slug": "Celestial_Strike_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_V",
+      "description": "Squarely strike your target, dealing 150% Weapon Ratio Damage plus 20 (L40) to 25 (L50) Physical Damage, granting Celestial Fury, and granting you a chance to activate Celestial Vitality. Celestial Fury: Let fury guide your strikes, increasing your Attack Speed by 10% for 30 seconds. Celestial Vitality: Infuse yourself with vitality, restoring 1 (L1) to 100 (L60) Health. This ability can be enhanced by your active Style..",
+      "category": "Mit",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 41,
+      "type": "ability",
+      "tags": [
+        "damage",
+        "buff",
+        "haste"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "damage",
+          "min": 20,
+          "max": 25,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "damageType": "Physical",
+          "display": "20–25 Physical dmg (L40–L50)",
+          "sortKey": 25
+        },
+        {
+          "kind": "buff",
+          "stat": "Attack Speed",
+          "min": 10,
+          "max": 10,
+          "unit": "%",
+          "display": "+10%",
+          "sortKey": 10,
+          "statTag": "ATK"
+        }
+      ],
+      "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L40–L50) · +10%",
+      "statTags": []
+    },
+    {
+      "name": "Flying Kick IV",
+      "slug": "Flying_Kick_IV",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flying_Kick_IV",
+      "description": "",
+      "category": "Mit?",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 44,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Hundred Fists II",
+      "slug": "Hundred_Fists_II",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Hundred_Fists_II",
+      "description": "",
+      "category": "Mit?",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 46,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Perfect Focus",
+      "slug": "Perfect_Focus",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Perfect_Focus",
+      "description": "",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 50,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Round Kick VI",
+      "slug": "Round_Kick_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Round_Kick_VI",
+      "description": "",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 50,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Celestial Strike VI",
+      "slug": "Celestial_Strike_VI",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Celestial_Strike_VI",
+      "description": "",
+      "category": "Mit?",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 51,
+      "type": "ability",
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Flying Kick V",
+      "slug": "Flying_Kick_V",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Flying_Kick_V",
+      "description": "",
+      "category": "Mit?",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 54,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Ascendant Body",
+      "slug": "Ascendant_Body",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Ascendant_Body",
+      "description": "Ascend your body to a state of perfection, simultaneously decreasing your food, drink, and air consumption, and slowing your descent when falling for 1 hour.",
+      "category": null,
+      "categorySlug": null,
+      "categoryUrl": null,
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 56,
+      "type": "ability",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Thousand Fists",
+      "slug": "Thousand_Fists",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Thousand_Fists",
+      "description": "Pummel your target in rapid succession, dealing 120% Weapon Ratio Damage four times. Additionally, if your target is off balance, you have a chance to stun them for 4 seconds. This ability can be used while moving. This ability is channeled. This ability shares a cooldown with Celestial Strike.",
+      "category": "Mit?",
+      "categorySlug": "Skill_Might",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
+      "location": "Vendor",
+      "mana": null,
+      "castTime": null,
+      "level": 58,
+      "type": "ability",
+      "tags": [
+        "damage",
+        "crowd-control",
+        "stun"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "120% weapon dmg",
+          "sortKey": 120
+        },
+        {
+          "kind": "crowd-control",
+          "duration": 4,
+          "display": "4s duration",
+          "sortKey": 4
+        }
+      ],
+      "valuesSummary": "120% weapon dmg · 4s duration",
       "statTags": []
     }
   ]

@@ -89,7 +89,7 @@ const aethorilHotspots = [
   { id: "shallow-shoals", x: 24, y: 62, label: "Shallow Shoals" },
 ];
 
-const MAP_VER = "20261017hold";
+const MAP_VER = "20261104pins";
 /** Long edge sent to the wiki thumb service, then re-encoded as WebP for Pages. */
 const ART_LONG = 2048;
 
@@ -276,10 +276,12 @@ const zoneMaps = {
   },
   "fallen-watch": {
     file: "fallen-watch.png",
-    wikiFile: "Fallen Watch.png",
-    width: 2000,
-    aspect: 2000 / 1247,
+    wikiFile: "Fallen watch map by skoop.png",
+    width: 2240,
+    aspect: 2240 / 4140,
     fit: "contain",
+    // Floor plans, not the Fernia interior screenshot. Encoded locally from the wiki file.
+    skipDownload: true,
   },
   "ail-vorith": {
     file: "ail-vorith.png",

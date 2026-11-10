@@ -540,7 +540,7 @@ const handPois = [
 
   { id: "ic-brood", zoneId: "infested-crypt", name: "Crypt Broodmother", kind: "named", mx: 52, my: 22, notes: "North room." },
   { id: "ic-ladder", zoneId: "infested-crypt", name: "Spiderweb ladder", kind: "landmark", mx: 58, my: 48 },
-  { id: "ic-zl-dunes", zoneId: "infested-crypt", name: "Zoneline: Shaded Dunes", kind: "zoneline", mx: 32, my: 78 },
+  { id: "ic-zl-dunes", zoneId: "infested-crypt", name: "Zoneline: Shaded Dunes", kind: "zoneline", mx: 62.4, my: 85.2, notes: "Lit south door. The banner sits in the margin." },
 
   // Grain Cellar — Chazsolo isometric plate markers 1–4.
   { id: "gc-rats", zoneId: "grain-cellar", name: "Sneaky rats", kind: "camp", mx: 25.1, my: 60.1, monsters: "sneaky rat 30, ghostly cleric 30–32, ghostly fighter 30–32, ghostly figure 30–32, skeletal worker 30–32, craven cultist 31–32, devoted cultist 31–32, diminished ghost 31–32, lingering ghost 31–32, nefarious cultist 31–32, skeletal captive 31–32, skeletal farmer 31–32, skeletal slave 31–32, wandering skeleton 31–32", notes: "Plate #1. Beam hall. Priestess of Kravvin is level 32.", groupMin: 32, groupMax: 36 },
@@ -549,8 +549,8 @@ const handPois = [
   { id: "gc-leila", zoneId: "grain-cellar", name: "Leila al-Bahri", kind: "named", mx: 67.5, my: 59, notes: "Plate #4. Red-floor sacrifice room with Khalid and Fariha.", groupMin: 32, groupMax: 36, monsters: "Leila al-Bahri 33–34" },
   { id: "gc-khalid", zoneId: "grain-cellar", name: "Khalid al-Bahri", kind: "named", mx: 68, my: 59.5, notes: "Plate #4. Quest spawn.", groupMin: 32, groupMax: 36, monsters: "Khalid al-Bahri 34–35" },
   { id: "gc-fariha", zoneId: "grain-cellar", name: "Fariha bint Nizar", kind: "named", mx: 67, my: 59.5, notes: "Plate #4. Quest spawn.", groupMin: 32, groupMax: 36, monsters: "Fariha bint Nizar" },
-  { id: "fw-hall", zoneId: "fallen-watch", name: "Fallen Watch hall", kind: "camp", mx: 50, my: 50, groupMin: 50, groupMax: 60, monsters: "Osmund the Unspent 58–59, Osric the Hungry 58–59, a cursed plague rat 45–60, a zombified rat 45–60, a Plagueborn Corpse 60, a knight watchman 60" },
-  { id: "fw-entrance", zoneId: "fallen-watch", name: "Fallen Watch interior", kind: "landmark", mx: 50, my: 50, notes: "Entered from the fort on Fallen Pass." },
+  { id: "fw-hall", zoneId: "fallen-watch", name: "Fallen Watch hall", kind: "camp", mx: 73.5, my: 74.6, groupMin: 50, groupMax: 60, monsters: "Osmund the Unspent 58–59, Osric the Hungry 58–59, a cursed plague rat 45–60, a zombified rat 45–60, a Plagueborn Corpse 60, a knight watchman 60", notes: "Lvl 3 dining hall on the Skoop plate." },
+  { id: "fw-entrance", zoneId: "fallen-watch", name: "Fallen Watch interior", kind: "landmark", mx: 30.2, my: 28.4, notes: "Entrance room. The fort door on Fallen Pass comes in here." },
 
   { id: "irem-mushrooms", zoneId: "caves-of-irem", name: "Mushroom cavern", kind: "camp", mx: 38, my: 48, soloMin: 8, soloMax: 18, monsters: "Insects, cave fauna" },
   { id: "irem-grove", zoneId: "caves-of-irem", name: "Green grove", kind: "landmark", mx: 78, my: 28 },

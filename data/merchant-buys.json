@@ -1,5 +1,5 @@
 {
-  "importedAt": "2026-10-31T18:12:42.000Z",
+  "importedAt": "2026-11-10T04:34:13.918Z",
   "count": 131,
   "merchants": [
     {
@@ -260,9 +260,10 @@
       "name": "A miner",
       "type": "miner",
       "zones": [
-        "Night Harbor"
+        "Night Harbor",
+        "Evershade Weald"
       ],
-      "place": "Sojourner Camp",
+      "place": "Sojourner Camp, Kennel Lift",
       "items": [],
       "categories": [
         {
@@ -1840,11 +1841,11 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "Rogue cave",
+      "place": "Rogue Cave in the Underdocks. Found further back in the cave, past Ebyn Nightshear's room and in front of the back room with Chef Kuuk and Grubin.",
       "items": [],
       "categories": [
         {
-          "phrase": "food",
+          "phrase": "Food",
           "keywords": []
         }
       ]
@@ -2112,15 +2113,19 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "Rogue cave",
+      "place": "Rogue Cave in the Underdocks. Found in the furthest back room behind Barkeeper Kraznek, alongside Chef Kuuk.",
       "items": [],
       "categories": [
         {
-          "phrase": "creature parts",
+          "phrase": "Creature parts",
           "keywords": []
         },
         {
-          "phrase": "wood",
+          "phrase": "Food and fish",
+          "keywords": []
+        },
+        {
+          "phrase": "Wood",
           "keywords": []
         }
       ]
@@ -2487,7 +2492,7 @@
       "zones": [
         "Underdocks"
       ],
-      "place": "lower Western District",
+      "place": "lower Western District - Above the Western Bank",
       "items": [],
       "categories": [
         {

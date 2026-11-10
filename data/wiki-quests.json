@@ -1,7 +1,7 @@
 {
-  "importedAt": "2026-10-31T18:36:37.037Z",
+  "importedAt": "2026-11-10T04:37:18.339Z",
   "source": "Template:Quest",
-  "count": 142,
+  "count": 144,
   "quests": [
     {
       "title": "A Letter for Munir Halabi",
@@ -366,6 +366,26 @@
         "Hand the Vial of Cloudy Liquid to Assistant Researcher Farland",
         "Combine the six Small Metal Parchment Vials in the provided Small Courier Bag to create the item form of the Small Courier Bag.",
         "Head back Jamee Langris with the Small Courier Bag."
+      ]
+    },
+    {
+      "title": "Bard Starter Quest (Underdocks)",
+      "wiki": "Bard_Starter_Quest_(Underdocks)",
+      "giver": "Riff",
+      "npcs": [],
+      "levelMin": 1,
+      "classIds": [
+        "bard"
+      ],
+      "zoneId": "underdocks",
+      "city": "The Underdocks",
+      "rewards": [
+        "TBD",
+        "Experience"
+      ],
+      "repeatable": false,
+      "notes": [
+        "Follow the signs to Crown Reach to find Riff. Specifically, ..."
       ]
     },
     {
@@ -743,7 +763,7 @@
       "npcs": [],
       "levelMin": 1,
       "classIds": [
-        "all"
+        "elementalist"
       ],
       "zoneId": "underdocks",
       "city": "The Underdocks",
@@ -1518,7 +1538,7 @@
       "repeatable": false,
       "notes": [
         "Find a razorwing runt x2 and give them Bat Feed Cake. Despite the giant insisting they are \"in the low water\", they are deep underwater to the Northeast. Due to incredibly low visibility underwater, it is inadvisable to try to find the bats without the assistance of a tracker.",
-        "Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Honestly, do not even get close to the water. It is bugged. You will fall in and die because it is horribly, horribly bugged. You will then have to petition to get your corpse out. Please update this page if the water is fixed to have water physics. Bugged as of Oct. 16, 2026.",
+        "Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Do not enter the water. It has no water physics. Honestly, do not even get close to the water. It is bugged. You will fall in and die because it is horribly, horribly bugged. You will then have to petition to get your corpse out. Please update this page if the water is fixed to have water physics. Bugged as of Nov. 4, 2026.",
         "Travel Southwest into the caves with some form of invisibility and find the bright green glowing lake. The bats are KoS and killing them will negatively affect both your giant and bat faction, which may potentially be fixed later. Place the jar on your cursor and type /pour lake."
       ]
     },
@@ -2659,6 +2679,25 @@
       ]
     },
     {
+      "title": "Red Mantle Faction Turn In",
+      "wiki": "Red_Mantle_Faction_Turn_In",
+      "giver": "Commander Otieno",
+      "npcs": [
+        "a diseased beetle",
+        "a catacombs rat",
+        "a diseased bat"
+      ],
+      "levelMin": 1,
+      "classIds": [
+        "all"
+      ],
+      "zoneId": "night-harbor",
+      "city": "Night Harbor",
+      "rewards": [],
+      "repeatable": false,
+      "notes": []
+    },
+    {
       "title": "Repair the Mooring Post",
       "wiki": "Repair_the_Mooring_Post",
       "giver": "Jory Fennick",
@@ -3303,14 +3342,18 @@
       ],
       "zoneId": "blind-midden",
       "city": "The Blind Midden",
-      "rewards": [],
+      "rewards": [
+        "Skeletal Champion's Shoulderguards",
+        "Effigy Warrior's Shiv",
+        "Barrow Iron Tower Shield"
+      ],
       "repeatable": false,
       "notes": [
         "Chaplain Cranely is located on the top floor of Blind Midden in the sewers are where the gelmothers are at an altar. It is critical that you speak Common, not Deep Common.",
         "New quest update after 10/15 patch",
         "Clicking on the offering box opens a crafting window; mix in the offering box 1 Sewer Sludge and 1 Enchanted effigy and receive Sludge-Packed Effigy",
         "hand in the sludge-packed effigy to Chaplain Cranely",
-        "5 adds a mix of skeletons and floating skull spawn. Kill them then Grave Hulk spawns he drops Skeletal Champion's Shoulderguards or effigy warrior's shiv or Barrow iron tower shield"
+        "5 adds a mix of skeletons and floating skull spawn. Kill them then Grave Hulk spawns he drops Skeletal Champion's Shoulderguards or Effigy Warrior's Shiv or Barrow Iron Tower Shield"
       ]
     },
     {
@@ -3416,7 +3459,7 @@
         "Seek out Leatherworker Haiat at the Tannery near West Gate in Night Harbor and hand him the Unusual Jackal Pelt.",
         "Seek out Jalwa Noor in Glimmermoon Hall (The Bard's Guild in the Night Market) and hand her the Ashira Pelt.",
         "In Tomb of the Last Wyrmsbane take the hidden path (not the hidden path leading to Ancient Crypts) in the builder room across from Quartermaster Boothroy, and drop down onto the terrace with the pipe organ in the chapel.",
-        "Overlooking Timmon Bell spawn location in the chapel. With your back to Bell, /look at the organ then proceed to the cobweb corner to the right and ahead and /take lute.",
+        "Overlooking Timmon Bell spawn location in the chapel. Stand on the bench of the organ, /look at the organ then proceed to the cobweb corner in the back right corner of the room. Once there, /look cobweb then /take lute.",
         "If a player recently already picked it up, it may take a few minutes for it to respawn",
         "Find Mayana in Saltbreeze Park.",
         "Note: Mayana must be alone out of sight of other NPCs for the chant to work. She paths between three locations and it will not work if she is standing at the sojourner campfire or the pool of water by the monk trainer.",

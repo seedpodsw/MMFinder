@@ -1,7 +1,7 @@
 {
   "name": "mmfinder",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Monsters & Memories world atlas — zones, camps, and notes",
   "scripts": {
     "dev": "node scripts/export-static.js && vite --config client/vite.config.js",

@@ -1406,7 +1406,7 @@
         "name": "Shield Block III",
         "slug": "Shield_Block_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_III",
-        "description": "Raise your shield in defence, absorbing xxx damage received for 5 seconds.",
+        "description": "Raise your shield in defense, absorbing 180 damage received for 5 seconds.",
         "category": null,
         "categorySlug": null,
         "categoryUrl": null,
@@ -1416,11 +1416,19 @@
         "level": 32,
         "type": "ability",
         "tags": [
-          "buff"
+          "buff",
+          "shield"
         ],
-        "primaryTag": "buff",
-        "effects": [],
-        "valuesSummary": "",
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 180,
+            "display": "180 absorb",
+            "sortKey": 180
+          }
+        ],
+        "valuesSummary": "180 absorb",
         "statTags": []
       }
     ],
@@ -1555,7 +1563,7 @@
         "name": "Rend V",
         "slug": "Rend_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rend_V",
-        "description": "Savagely rend your target, dealing xxx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), and granting you a chance to reset the cooldown of your Cleave, Feint, Frenzy and Shield Bash abilities.",
+        "description": "Savagely rend your target, dealing 145% Weapon Ratio Damage plus 25 (L40) to 30 (L50) Physical Damage, increasing your Threat against them by 150 (L40) to 200 (L50), and granting you a chance to reset the cooldown of your Cleave, Feint, Frenzy and Shield Bash abilities.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1569,15 +1577,41 @@
           "buff"
         ],
         "primaryTag": "damage",
-        "effects": [],
-        "valuesSummary": "",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "145% weapon dmg",
+            "sortKey": 145
+          },
+          {
+            "kind": "damage",
+            "min": 25,
+            "max": 30,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "damageType": "Physical",
+            "display": "25–30 Physical dmg (L40–L50)",
+            "sortKey": 30
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat against them",
+            "min": 150,
+            "max": 200,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "display": "+150–200 Threat against them (L40–L50)",
+            "sortKey": 200
+          }
+        ],
+        "valuesSummary": "145% weapon dmg · 25–30 Physical dmg (L40–L50) · +150–200 Threat against them (L40–L50)",
         "statTags": []
       },
       {
         "name": "Shield Bash IV",
         "slug": "Shield_Bash_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Bash_IV",
-        "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
+        "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus 15 (L40) to 20 (L50) Physical Damage, increasing your Threat against them by 325 (L40) to 400 (L50), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1588,11 +1622,33 @@
         "type": "ability",
         "tags": [
           "buff",
-          "interrupt"
+          "interrupt",
+          "damage"
         ],
         "primaryTag": "interrupt",
-        "effects": [],
-        "valuesSummary": "",
+        "effects": [
+          {
+            "kind": "damage",
+            "min": 15,
+            "max": 20,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "damageType": "Physical",
+            "display": "15–20 Physical dmg (L40–L50)",
+            "sortKey": 20
+          },
+          {
+            "kind": "buff",
+            "stat": "Threat against them",
+            "min": 325,
+            "max": 400,
+            "minLevel": 40,
+            "maxLevel": 50,
+            "display": "+325–400 Threat against them (L40–L50)",
+            "sortKey": 400
+          }
+        ],
+        "valuesSummary": "15–20 Physical dmg (L40–L50) · +325–400 Threat against them (L40–L50)",
         "statTags": []
       }
     ],
@@ -1601,7 +1657,7 @@
         "name": "Cross Cut IV",
         "slug": "Cross_Cut_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cross_Cut_IV",
-        "description": "Cut through your target with dual weapons, dealing xx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage per equipped weapon. This ability requires dual-wielded weapons. This ability shares a cooldown with other Might abilities.",
+        "description": "Cut through your target with dual weapons, dealing 85% Weapon Ratio Damage plus 20 (L41) to 25 (L51) Physical Damage per equipped weapon. This ability requires dual-wielded weapons. This ability shares a cooldown with other Might abilities.",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1614,8 +1670,24 @@
           "damage"
         ],
         "primaryTag": "damage",
-        "effects": [],
-        "valuesSummary": "",
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "85% weapon dmg",
+            "sortKey": 85
+          },
+          {
+            "kind": "damage",
+            "min": 20,
+            "max": 25,
+            "minLevel": 41,
+            "maxLevel": 51,
+            "damageType": "Physical per equipped weapon",
+            "display": "20–25 Physical per equipped weapon dmg (L41–L51)",
+            "sortKey": 25
+          }
+        ],
+        "valuesSummary": "85% weapon dmg · 20–25 Physical per equipped weapon dmg (L41–L51)",
         "statTags": []
       }
     ],
@@ -1624,7 +1696,7 @@
         "name": "Shield Block IV",
         "slug": "Shield_Block_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_IV",
-        "description": "Raise your shield in defence, absorbing xxx damage received for 5 seconds.",
+        "description": "Raise your shield in defense, absorbing 250 damage received for 5 seconds.",
         "category": null,
         "categorySlug": null,
         "categoryUrl": null,
@@ -1634,11 +1706,19 @@
         "level": 42,
         "type": "ability",
         "tags": [
-          "buff"
+          "buff",
+          "shield"
         ],
-        "primaryTag": "buff",
-        "effects": [],
-        "valuesSummary": "",
+        "primaryTag": "shield",
+        "effects": [
+          {
+            "kind": "shield",
+            "amount": 250,
+            "display": "250 absorb",
+            "sortKey": 250
+          }
+        ],
+        "valuesSummary": "250 absorb",
         "statTags": []
       }
     ],
@@ -1647,7 +1727,7 @@
         "name": "Frenzy IV",
         "slug": "Frenzy_IV",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frenzy_IV",
-        "description": "Eviscerate your target with a frenzy of attacks, dealing xx% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
+        "description": "Eviscerate your target with a frenzy of attacks, dealing 110% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
         "category": null,
         "categorySlug": null,
         "categoryUrl": null,
@@ -1664,6 +1744,11 @@
         "primaryTag": "damage",
         "effects": [
           {
+            "kind": "damage",
+            "display": "110% weapon dmg",
+            "sortKey": 110
+          },
+          {
             "kind": "buff",
             "stat": "Attack Speed",
             "min": 10,
@@ -1674,7 +1759,7 @@
             "statTag": "ATK"
           }
         ],
-        "valuesSummary": "+10%",
+        "valuesSummary": "110% weapon dmg · +10%",
         "statTags": []
       }
     ],
@@ -1683,7 +1768,7 @@
         "name": "Feint III",
         "slug": "Feint_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Feint_III",
-        "description": "Outmaneuver your target with a feint, dealing xxx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage, decreasing their Agility by xx, and knocking them off balance for 8 seconds. This ability shares a cooldown with Cleave and Frenzy.",
+        "description": "Outmaneuver your target with a feint, dealing 150% Weapon Ratio Damage plus 20 (L44) to 25 (L54) Physical Damage, decreasing their Agility by 15, and knocking them off balance for 8 seconds. This ability shares a cooldown with Cleave and Frenzy.",
         "category": null,
         "categorySlug": null,
         "categoryUrl": null,
@@ -1694,12 +1779,39 @@
         "type": "ability",
         "tags": [
           "damage",
-          "debuff"
+          "debuff",
+          "AGI"
         ],
         "primaryTag": "damage",
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": []
+        "effects": [
+          {
+            "kind": "damage",
+            "display": "150% weapon dmg",
+            "sortKey": 150
+          },
+          {
+            "kind": "damage",
+            "min": 20,
+            "max": 25,
+            "minLevel": 44,
+            "maxLevel": 54,
+            "damageType": "Physical",
+            "display": "20–25 Physical dmg (L44–L54)",
+            "sortKey": 25
+          },
+          {
+            "kind": "debuff",
+            "stat": "Agility",
+            "amount": 15,
+            "display": "−15 Agility",
+            "sortKey": 15,
+            "statTag": "AGI"
+          }
+        ],
+        "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L44–L54) · −15 Agility",
+        "statTags": [
+          "AGI"
+        ]
       }
     ],
     "45": [
@@ -1783,7 +1895,7 @@
         "name": "Challenging Arrow III",
         "slug": "Challenging_Arrow_III",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Challenging_Arrow_III",
-        "description": "Fire an arrow of challenge at your taret, dealing 120% Weapon Ratio Damage plus 20 (L49) to 30 (L60) Physical Damage, and increasing your Threat against them by 250 (L49) to 400 (L60).",
+        "description": "Fire an arrow of challenge at your target, dealing 120% Weapon Ratio Damage plus 20 (L49) to 30 (L60) Physical Damage, and increasing your Threat against them by 250 (L49) to 400 (L60).",
         "category": "Mit",
         "categorySlug": "Skill_Might",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -1794,8 +1906,7 @@
         "type": "ability",
         "tags": [
           "damage",
-          "buff",
-          "self"
+          "buff"
         ],
         "primaryTag": "damage",
         "effects": [
@@ -1977,7 +2088,7 @@
         "name": "Shield Block V",
         "slug": "Shield_Block_V",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_V",
-        "description": "Raise your shield in defence, absorbing 350 damage received for 5 seconds.",
+        "description": "Raise your shield in defense, absorbing 350 damage received for 5 seconds.",
         "category": null,
         "categorySlug": null,
         "categoryUrl": null,
@@ -3423,7 +3534,7 @@
       "name": "Shield Block III",
       "slug": "Shield_Block_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_III",
-      "description": "Raise your shield in defence, absorbing xxx damage received for 5 seconds.",
+      "description": "Raise your shield in defense, absorbing 180 damage received for 5 seconds.",
       "category": null,
       "categorySlug": null,
       "categoryUrl": null,
@@ -3433,11 +3544,19 @@
       "level": 32,
       "type": "ability",
       "tags": [
-        "buff"
+        "buff",
+        "shield"
       ],
-      "primaryTag": "buff",
-      "effects": [],
-      "valuesSummary": "",
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 180,
+          "display": "180 absorb",
+          "sortKey": 180
+        }
+      ],
+      "valuesSummary": "180 absorb",
       "statTags": []
     },
     {
@@ -3562,7 +3681,7 @@
       "name": "Rend V",
       "slug": "Rend_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rend_V",
-      "description": "Savagely rend your target, dealing xxx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), and granting you a chance to reset the cooldown of your Cleave, Feint, Frenzy and Shield Bash abilities.",
+      "description": "Savagely rend your target, dealing 145% Weapon Ratio Damage plus 25 (L40) to 30 (L50) Physical Damage, increasing your Threat against them by 150 (L40) to 200 (L50), and granting you a chance to reset the cooldown of your Cleave, Feint, Frenzy and Shield Bash abilities.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3576,15 +3695,41 @@
         "buff"
       ],
       "primaryTag": "damage",
-      "effects": [],
-      "valuesSummary": "",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "145% weapon dmg",
+          "sortKey": 145
+        },
+        {
+          "kind": "damage",
+          "min": 25,
+          "max": 30,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "damageType": "Physical",
+          "display": "25–30 Physical dmg (L40–L50)",
+          "sortKey": 30
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat against them",
+          "min": 150,
+          "max": 200,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "display": "+150–200 Threat against them (L40–L50)",
+          "sortKey": 200
+        }
+      ],
+      "valuesSummary": "145% weapon dmg · 25–30 Physical dmg (L40–L50) · +150–200 Threat against them (L40–L50)",
       "statTags": []
     },
     {
       "name": "Shield Bash IV",
       "slug": "Shield_Bash_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Bash_IV",
-      "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus xx (Lxx) to xx (Lxx) Physical Damage, increasing your Threat against them by xxx (Lxx) to xxx (Lxx), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
+      "description": "Fiercely bash your target with a shield, dealing damage based on your shield's Armor Class plus 15 (L40) to 20 (L50) Physical Damage, increasing your Threat against them by 325 (L40) to 400 (L50), interrupting their casting, and preventing them from casting spells from the same school of magic for 4 seconds. This ability requires a shield.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3595,18 +3740,40 @@
       "type": "ability",
       "tags": [
         "buff",
-        "interrupt"
+        "interrupt",
+        "damage"
       ],
       "primaryTag": "interrupt",
-      "effects": [],
-      "valuesSummary": "",
+      "effects": [
+        {
+          "kind": "damage",
+          "min": 15,
+          "max": 20,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "damageType": "Physical",
+          "display": "15–20 Physical dmg (L40–L50)",
+          "sortKey": 20
+        },
+        {
+          "kind": "buff",
+          "stat": "Threat against them",
+          "min": 325,
+          "max": 400,
+          "minLevel": 40,
+          "maxLevel": 50,
+          "display": "+325–400 Threat against them (L40–L50)",
+          "sortKey": 400
+        }
+      ],
+      "valuesSummary": "15–20 Physical dmg (L40–L50) · +325–400 Threat against them (L40–L50)",
       "statTags": []
     },
     {
       "name": "Cross Cut IV",
       "slug": "Cross_Cut_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Cross_Cut_IV",
-      "description": "Cut through your target with dual weapons, dealing xx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage per equipped weapon. This ability requires dual-wielded weapons. This ability shares a cooldown with other Might abilities.",
+      "description": "Cut through your target with dual weapons, dealing 85% Weapon Ratio Damage plus 20 (L41) to 25 (L51) Physical Damage per equipped weapon. This ability requires dual-wielded weapons. This ability shares a cooldown with other Might abilities.",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3619,15 +3786,31 @@
         "damage"
       ],
       "primaryTag": "damage",
-      "effects": [],
-      "valuesSummary": "",
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "85% weapon dmg",
+          "sortKey": 85
+        },
+        {
+          "kind": "damage",
+          "min": 20,
+          "max": 25,
+          "minLevel": 41,
+          "maxLevel": 51,
+          "damageType": "Physical per equipped weapon",
+          "display": "20–25 Physical per equipped weapon dmg (L41–L51)",
+          "sortKey": 25
+        }
+      ],
+      "valuesSummary": "85% weapon dmg · 20–25 Physical per equipped weapon dmg (L41–L51)",
       "statTags": []
     },
     {
       "name": "Shield Block IV",
       "slug": "Shield_Block_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_IV",
-      "description": "Raise your shield in defence, absorbing xxx damage received for 5 seconds.",
+      "description": "Raise your shield in defense, absorbing 250 damage received for 5 seconds.",
       "category": null,
       "categorySlug": null,
       "categoryUrl": null,
@@ -3637,18 +3820,26 @@
       "level": 42,
       "type": "ability",
       "tags": [
-        "buff"
+        "buff",
+        "shield"
       ],
-      "primaryTag": "buff",
-      "effects": [],
-      "valuesSummary": "",
+      "primaryTag": "shield",
+      "effects": [
+        {
+          "kind": "shield",
+          "amount": 250,
+          "display": "250 absorb",
+          "sortKey": 250
+        }
+      ],
+      "valuesSummary": "250 absorb",
       "statTags": []
     },
     {
       "name": "Frenzy IV",
       "slug": "Frenzy_IV",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Frenzy_IV",
-      "description": "Eviscerate your target with a frenzy of attacks, dealing xx% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
+      "description": "Eviscerate your target with a frenzy of attacks, dealing 110% Weapon Ratio Damage up to five times and increasing your Attack Speed by 10% for 1 minute. This ability consumes one stack of Vengeance per strike. This ability shares a cooldown with Cleave and Feint.",
       "category": null,
       "categorySlug": null,
       "categoryUrl": null,
@@ -3665,6 +3856,11 @@
       "primaryTag": "damage",
       "effects": [
         {
+          "kind": "damage",
+          "display": "110% weapon dmg",
+          "sortKey": 110
+        },
+        {
           "kind": "buff",
           "stat": "Attack Speed",
           "min": 10,
@@ -3675,14 +3871,14 @@
           "statTag": "ATK"
         }
       ],
-      "valuesSummary": "+10%",
+      "valuesSummary": "110% weapon dmg · +10%",
       "statTags": []
     },
     {
       "name": "Feint III",
       "slug": "Feint_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Feint_III",
-      "description": "Outmaneuver your target with a feint, dealing xxx% Weapon Ratio Damage plus xx (Lxx) to xx (Lxx) Physical Damage, decreasing their Agility by xx, and knocking them off balance for 8 seconds. This ability shares a cooldown with Cleave and Frenzy.",
+      "description": "Outmaneuver your target with a feint, dealing 150% Weapon Ratio Damage plus 20 (L44) to 25 (L54) Physical Damage, decreasing their Agility by 15, and knocking them off balance for 8 seconds. This ability shares a cooldown with Cleave and Frenzy.",
       "category": null,
       "categorySlug": null,
       "categoryUrl": null,
@@ -3693,12 +3889,39 @@
       "type": "ability",
       "tags": [
         "damage",
-        "debuff"
+        "debuff",
+        "AGI"
       ],
       "primaryTag": "damage",
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": []
+      "effects": [
+        {
+          "kind": "damage",
+          "display": "150% weapon dmg",
+          "sortKey": 150
+        },
+        {
+          "kind": "damage",
+          "min": 20,
+          "max": 25,
+          "minLevel": 44,
+          "maxLevel": 54,
+          "damageType": "Physical",
+          "display": "20–25 Physical dmg (L44–L54)",
+          "sortKey": 25
+        },
+        {
+          "kind": "debuff",
+          "stat": "Agility",
+          "amount": 15,
+          "display": "−15 Agility",
+          "sortKey": 15,
+          "statTag": "AGI"
+        }
+      ],
+      "valuesSummary": "150% weapon dmg · 20–25 Physical dmg (L44–L54) · −15 Agility",
+      "statTags": [
+        "AGI"
+      ]
     },
     {
       "name": "Rallying Shout",
@@ -3776,7 +3999,7 @@
       "name": "Challenging Arrow III",
       "slug": "Challenging_Arrow_III",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Challenging_Arrow_III",
-      "description": "Fire an arrow of challenge at your taret, dealing 120% Weapon Ratio Damage plus 20 (L49) to 30 (L60) Physical Damage, and increasing your Threat against them by 250 (L49) to 400 (L60).",
+      "description": "Fire an arrow of challenge at your target, dealing 120% Weapon Ratio Damage plus 20 (L49) to 30 (L60) Physical Damage, and increasing your Threat against them by 250 (L49) to 400 (L60).",
       "category": "Mit",
       "categorySlug": "Skill_Might",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Might",
@@ -3787,8 +4010,7 @@
       "type": "ability",
       "tags": [
         "damage",
-        "buff",
-        "self"
+        "buff"
       ],
       "primaryTag": "damage",
       "effects": [
@@ -3964,7 +4186,7 @@
       "name": "Shield Block V",
       "slug": "Shield_Block_V",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Shield_Block_V",
-      "description": "Raise your shield in defence, absorbing 350 damage received for 5 seconds.",
+      "description": "Raise your shield in defense, absorbing 350 damage received for 5 seconds.",
       "category": null,
       "categorySlug": null,
       "categoryUrl": null,

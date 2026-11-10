@@ -1,10 +1,10 @@
 {
   "meta": {
     "source": "https://monstersandmemories.miraheze.org/wiki/Spells_By_Class",
-    "fetchedAt": "2026-10-31T18:12:48.984Z",
+    "fetchedAt": "2026-11-10T04:34:24.702Z",
     "classCount": 18,
-    "totalEntries": 1616,
-    "uniqueEntries": 1382,
+    "totalEntries": 1631,
+    "uniqueEntries": 1397,
     "tags": [
       "damage",
       "dot",
@@ -44,7 +44,7 @@
       "aoe",
       "mana-drain"
     ],
-    "taggedAt": "2026-10-31T18:12:48.984Z"
+    "taggedAt": "2026-11-10T04:34:24.702Z"
   },
   "classes": [
     {
@@ -237,7 +237,7 @@
       "file": "classes/druid.json",
       "type": "spell",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Druid",
-      "entryCount": 147,
+      "entryCount": 149,
       "levels": [
         1,
         4,
@@ -426,7 +426,7 @@
       "file": "classes/monk.json",
       "type": "ability",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Monk",
-      "entryCount": 32,
+      "entryCount": 44,
       "levels": [
         1,
         2,
@@ -452,7 +452,17 @@
         30,
         31,
         34,
-        35
+        35,
+        38,
+        40,
+        41,
+        44,
+        46,
+        50,
+        51,
+        54,
+        56,
+        58
       ]
     },
     {
@@ -596,7 +606,7 @@
       "file": "classes/rogue.json",
       "type": "ability",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Rogue",
-      "entryCount": 42,
+      "entryCount": 43,
       "levels": [
         1,
         2,

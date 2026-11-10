@@ -91,7 +91,6 @@ export const CREDIT_SECTIONS = [
         file("Glass Flats", "Glass Flats Map.png"),
         file("Grimtide Sanctum", "MAP GrimtideSanctum.png"),
       ]),
-      person("Fernia", "Fallen Watch.", [contrib("Fernia"), file("Fallen Watch", "Fallen Watch.png")]),
       person("Ganderdot", "Vale of Zintar.", [
         contrib("Ganderdot"),
         file("Vale of Zintar", "Vale of Zintar Map.png"),
@@ -117,9 +116,10 @@ export const CREDIT_SECTIONS = [
         contrib("Nindaan"),
         file("Evershade Weald", "Evershade Weald june 26.jpg"),
       ]),
-      person("Skoop", "Rothold.", [
+      person("Skoop", "Rothold, Fallen Watch.", [
         contrib("Skoop"),
         file("Rothold", "Rothold map by skoop.png"),
+        file("Fallen Watch", "Fallen watch map by skoop.png"),
       ]),
       person("Walabus Ala'bus", "Faelindral, Fallen Pass, Tomb of the Last Wyrmsbane.", [
         contrib("Walabus Ala'bus"),

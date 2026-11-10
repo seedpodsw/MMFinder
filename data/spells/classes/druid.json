@@ -4,7 +4,7 @@
   "type": "spell",
   "sectionTitle": "Seasonal Exclusive Spells",
   "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Druid",
-  "entryCount": 147,
+  "entryCount": 149,
   "levels": [
     1,
     4,
@@ -2758,20 +2758,35 @@
         "name": "Union of Steel",
         "slug": "Union_of_Steel",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Steel",
-        "description": "",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "description": "Grant your party skin as hard as steel, increasing their Armor Class by 15 for 35 minutes.",
+        "category": "Abj",
+        "categorySlug": "Skill_Abjuration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 240,
         "castTime": null,
         "level": 32,
         "type": "spell",
-        "tags": [],
-        "primaryTag": null,
-        "effects": [],
-        "valuesSummary": "",
-        "statTags": []
+        "tags": [
+          "buff",
+          "utility",
+          "AC"
+        ],
+        "primaryTag": "buff",
+        "effects": [
+          {
+            "kind": "buff",
+            "stat": "Armor Class",
+            "amount": 15,
+            "display": "+15 Armor Class",
+            "sortKey": 15,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "+15 Armor Class",
+        "statTags": [
+          "AC"
+        ]
       },
       {
         "name": "Winter's Fury",
@@ -2927,32 +2942,81 @@
         ]
       },
       {
-        "name": "Exceptional Heal",
-        "slug": "Exceptional_Heal",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-        "description": "Strongly heal your target, restoring 473 Health.",
+        "name": "Communion of Regeneration",
+        "slug": "Communion_of_Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
+        "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 250,
         "castTime": null,
         "level": 36,
         "type": "spell",
         "tags": [
-          "heal"
+          "buff",
+          "HP REGEN"
         ],
-        "primaryTag": "heal",
+        "primaryTag": "buff",
         "effects": [
           {
-            "kind": "heal",
-            "amount": 473,
-            "display": "473 heal",
-            "sortKey": 473
+            "kind": "buff",
+            "stat": "Health Regeneration",
+            "amount": 7,
+            "display": "+7 Health Regeneration",
+            "sortKey": 7,
+            "statTag": "HP REGEN"
           }
         ],
-        "valuesSummary": "473 heal",
-        "statTags": []
+        "valuesSummary": "+7 Health Regeneration",
+        "statTags": [
+          "HP REGEN"
+        ]
+      },
+      {
+        "name": "Greater Frostbite",
+        "slug": "Greater_Frostbite",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Frostbite",
+        "description": "Expose your target to frostbite, dealing 20 Cold Damage every 6 seconds and decreasing their Armor Class by 19 for 1 minute.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 43,
+        "castTime": null,
+        "level": 36,
+        "type": "spell",
+        "tags": [
+          "dot",
+          "debuff",
+          "AC"
+        ],
+        "primaryTag": "dot",
+        "effects": [
+          {
+            "kind": "dot",
+            "min": 20,
+            "max": 20,
+            "interval": 6,
+            "duration": 60,
+            "damageType": "Cold",
+            "display": "20 Cold/6s (60s)",
+            "sortKey": 200
+          },
+          {
+            "kind": "debuff",
+            "stat": "Armor Class",
+            "amount": 19,
+            "display": "−19 Armor Class",
+            "sortKey": 19,
+            "statTag": "AC"
+          }
+        ],
+        "valuesSummary": "20 Cold/6s (60s) · −19 Armor Class",
+        "statTags": [
+          "AC"
+        ]
       },
       {
         "name": "Lightning Strike",
@@ -2998,65 +3062,23 @@
         "statTags": []
       },
       {
-        "name": "Spark of Harmony",
-        "slug": "Spark_of_Harmony",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
-        "description": "Gift your target a spark of harmony, restoring 181 Health.",
+        "name": "Regeneration",
+        "slug": "Regeneration",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
+        "description": "",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 127,
+        "mana": 0,
         "castTime": null,
         "level": 36,
         "type": "spell",
-        "tags": [
-          "heal"
-        ],
-        "primaryTag": "heal",
-        "effects": [
-          {
-            "kind": "heal",
-            "amount": 181,
-            "display": "181 heal",
-            "sortKey": 181
-          }
-        ],
-        "valuesSummary": "181 heal",
+        "tags": [],
+        "primaryTag": null,
+        "effects": [],
+        "valuesSummary": "",
         "statTags": []
-      },
-      {
-        "name": "Communion of Regeneration",
-        "slug": "Communion_of_Regeneration",
-        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
-        "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
-        "category": "Alt",
-        "categorySlug": "Skill_Alteration",
-        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-        "location": "Vendor",
-        "mana": 250,
-        "castTime": null,
-        "level": 36,
-        "type": "spell",
-        "tags": [
-          "buff",
-          "HP REGEN"
-        ],
-        "primaryTag": "buff",
-        "effects": [
-          {
-            "kind": "buff",
-            "stat": "Health Regeneration",
-            "amount": 7,
-            "display": "+7 Health Regeneration",
-            "sortKey": 7,
-            "statTag": "HP REGEN"
-          }
-        ],
-        "valuesSummary": "+7 Health Regeneration",
-        "statTags": [
-          "HP REGEN"
-        ]
       },
       {
         "name": "Sanctuary: Evershade Weald",
@@ -3097,15 +3119,43 @@
         "statTags": []
       },
       {
+        "name": "Spark of Harmony",
+        "slug": "Spark_of_Harmony",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
+        "description": "Gift your target a spark of harmony, restoring 181 Health.",
+        "category": "Alt",
+        "categorySlug": "Skill_Alteration",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+        "location": "Vendor",
+        "mana": 127,
+        "castTime": null,
+        "level": 36,
+        "type": "spell",
+        "tags": [
+          "heal"
+        ],
+        "primaryTag": "heal",
+        "effects": [
+          {
+            "kind": "heal",
+            "amount": 181,
+            "display": "181 heal",
+            "sortKey": 181
+          }
+        ],
+        "valuesSummary": "181 heal",
+        "statTags": []
+      },
+      {
         "name": "Spiky Barrier",
         "slug": "Spiky_Barrier",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Barrier",
-        "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 30 minutes.",
+        "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 10 minutes.",
         "category": "Abj",
         "categorySlug": "Skill_Abjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 100,
         "castTime": null,
         "level": 36,
         "type": "spell",
@@ -3147,6 +3197,35 @@
         "primaryTag": "dispel",
         "effects": [],
         "valuesSummary": "",
+        "statTags": []
+      },
+      {
+        "name": "Blast of Ice",
+        "slug": "Blast_of_Ice",
+        "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Ice",
+        "description": "Blast your target with ice, dealing 209 Cold Damage.",
+        "category": "Evo",
+        "categorySlug": "Skill_Evocation",
+        "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+        "location": "Vendor",
+        "mana": 124,
+        "castTime": null,
+        "level": 40,
+        "type": "spell",
+        "tags": [
+          "damage"
+        ],
+        "primaryTag": "damage",
+        "effects": [
+          {
+            "kind": "damage",
+            "amount": 209,
+            "damageType": "Cold",
+            "display": "209 Cold dmg",
+            "sortKey": 209
+          }
+        ],
+        "valuesSummary": "209 Cold dmg",
         "statTags": []
       },
       {
@@ -3196,12 +3275,12 @@
         "name": "Nature's Peace",
         "slug": "Nature's_Peace",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
-        "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
+        "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 54. This spell is limited to one target.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 165,
         "castTime": null,
         "level": 40,
         "type": "spell",
@@ -3239,12 +3318,12 @@
         "name": "Swarm of Bees",
         "slug": "Swarm_of_Bees",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Bees",
-        "description": "Engulf your target in a swarm of bees, dealing 54 Poison Damage every 6 seconds for 1 minute.",
+        "description": "Engulf your target in a swarm of bees, dealing 34 Poison Damage every 6 seconds for 1 minute.",
         "category": "Con",
         "categorySlug": "Skill_Conjuration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 78,
         "castTime": null,
         "level": 40,
         "type": "spell",
@@ -3255,28 +3334,28 @@
         "effects": [
           {
             "kind": "dot",
-            "min": 54,
-            "max": 54,
+            "min": 34,
+            "max": 34,
             "interval": 6,
             "duration": 60,
             "damageType": "Poison",
-            "display": "54 Poison/6s (60s)",
-            "sortKey": 540
+            "display": "34 Poison/6s (60s)",
+            "sortKey": 340
           }
         ],
-        "valuesSummary": "54 Poison/6s (60s)",
+        "valuesSummary": "34 Poison/6s (60s)",
         "statTags": []
       },
       {
         "name": "Touch of Harmony",
         "slug": "Touch_of_Harmony",
         "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Harmony",
-        "description": "Bestow the touch of harmony upon your target, restoring 243 Health and an additional 100 Health every 6 seconds for 12 seconds.",
+        "description": "Bestow the touch of harmony upon your target, restoring 248 Health and an additional 142 Health every 6 seconds for 12 seconds.",
         "category": "Alt",
         "categorySlug": "Skill_Alteration",
         "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
         "location": "Vendor",
-        "mana": 0,
+        "mana": 318,
         "castTime": null,
         "level": 40,
         "type": "spell",
@@ -3289,21 +3368,21 @@
         "effects": [
           {
             "kind": "hot",
-            "initial": 243,
-            "tick": 100,
+            "initial": 248,
+            "tick": 142,
             "interval": 6,
             "duration": 12,
-            "display": "243 + 100/6s heal (12s)",
-            "sortKey": 443
+            "display": "248 + 142/6s heal (12s)",
+            "sortKey": 532
           },
           {
             "kind": "heal",
-            "amount": 243,
-            "display": "243 heal",
-            "sortKey": 243
+            "amount": 248,
+            "display": "248 heal",
+            "sortKey": 248
           }
         ],
-        "valuesSummary": "243 + 100/6s heal (12s) · 243 heal",
+        "valuesSummary": "248 + 142/6s heal (12s) · 248 heal",
         "statTags": []
       }
     ],
@@ -7095,20 +7174,35 @@
       "name": "Union of Steel",
       "slug": "Union_of_Steel",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Union_of_Steel",
-      "description": "",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "description": "Grant your party skin as hard as steel, increasing their Armor Class by 15 for 35 minutes.",
+      "category": "Abj",
+      "categorySlug": "Skill_Abjuration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 240,
       "castTime": null,
       "level": 32,
       "type": "spell",
-      "tags": [],
-      "primaryTag": null,
-      "effects": [],
-      "valuesSummary": "",
-      "statTags": []
+      "tags": [
+        "buff",
+        "utility",
+        "AC"
+      ],
+      "primaryTag": "buff",
+      "effects": [
+        {
+          "kind": "buff",
+          "stat": "Armor Class",
+          "amount": 15,
+          "display": "+15 Armor Class",
+          "sortKey": 15,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "+15 Armor Class",
+      "statTags": [
+        "AC"
+      ]
     },
     {
       "name": "Winter's Fury",
@@ -7262,32 +7356,81 @@
       ]
     },
     {
-      "name": "Exceptional Heal",
-      "slug": "Exceptional_Heal",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Exceptional_Heal",
-      "description": "Strongly heal your target, restoring 473 Health.",
+      "name": "Communion of Regeneration",
+      "slug": "Communion_of_Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
+      "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 250,
       "castTime": null,
       "level": 36,
       "type": "spell",
       "tags": [
-        "heal"
+        "buff",
+        "HP REGEN"
       ],
-      "primaryTag": "heal",
+      "primaryTag": "buff",
       "effects": [
         {
-          "kind": "heal",
-          "amount": 473,
-          "display": "473 heal",
-          "sortKey": 473
+          "kind": "buff",
+          "stat": "Health Regeneration",
+          "amount": 7,
+          "display": "+7 Health Regeneration",
+          "sortKey": 7,
+          "statTag": "HP REGEN"
         }
       ],
-      "valuesSummary": "473 heal",
-      "statTags": []
+      "valuesSummary": "+7 Health Regeneration",
+      "statTags": [
+        "HP REGEN"
+      ]
+    },
+    {
+      "name": "Greater Frostbite",
+      "slug": "Greater_Frostbite",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Greater_Frostbite",
+      "description": "Expose your target to frostbite, dealing 20 Cold Damage every 6 seconds and decreasing their Armor Class by 19 for 1 minute.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 43,
+      "castTime": null,
+      "level": 36,
+      "type": "spell",
+      "tags": [
+        "dot",
+        "debuff",
+        "AC"
+      ],
+      "primaryTag": "dot",
+      "effects": [
+        {
+          "kind": "dot",
+          "min": 20,
+          "max": 20,
+          "interval": 6,
+          "duration": 60,
+          "damageType": "Cold",
+          "display": "20 Cold/6s (60s)",
+          "sortKey": 200
+        },
+        {
+          "kind": "debuff",
+          "stat": "Armor Class",
+          "amount": 19,
+          "display": "−19 Armor Class",
+          "sortKey": 19,
+          "statTag": "AC"
+        }
+      ],
+      "valuesSummary": "20 Cold/6s (60s) · −19 Armor Class",
+      "statTags": [
+        "AC"
+      ]
     },
     {
       "name": "Lightning Strike",
@@ -7333,65 +7476,23 @@
       "statTags": []
     },
     {
-      "name": "Spark of Harmony",
-      "slug": "Spark_of_Harmony",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
-      "description": "Gift your target a spark of harmony, restoring 181 Health.",
+      "name": "Regeneration",
+      "slug": "Regeneration",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Regeneration",
+      "description": "",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 127,
+      "mana": 0,
       "castTime": null,
       "level": 36,
       "type": "spell",
-      "tags": [
-        "heal"
-      ],
-      "primaryTag": "heal",
-      "effects": [
-        {
-          "kind": "heal",
-          "amount": 181,
-          "display": "181 heal",
-          "sortKey": 181
-        }
-      ],
-      "valuesSummary": "181 heal",
+      "tags": [],
+      "primaryTag": null,
+      "effects": [],
+      "valuesSummary": "",
       "statTags": []
-    },
-    {
-      "name": "Communion of Regeneration",
-      "slug": "Communion_of_Regeneration",
-      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Communion_of_Regeneration",
-      "description": "Moderately regenerate your party, increasing their Health Regeneration by 7 for 35 minutes.",
-      "category": "Alt",
-      "categorySlug": "Skill_Alteration",
-      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
-      "location": "Vendor",
-      "mana": 250,
-      "castTime": null,
-      "level": 36,
-      "type": "spell",
-      "tags": [
-        "buff",
-        "HP REGEN"
-      ],
-      "primaryTag": "buff",
-      "effects": [
-        {
-          "kind": "buff",
-          "stat": "Health Regeneration",
-          "amount": 7,
-          "display": "+7 Health Regeneration",
-          "sortKey": 7,
-          "statTag": "HP REGEN"
-        }
-      ],
-      "valuesSummary": "+7 Health Regeneration",
-      "statTags": [
-        "HP REGEN"
-      ]
     },
     {
       "name": "Sanctuary: Evershade Weald",
@@ -7432,15 +7533,43 @@
       "statTags": []
     },
     {
+      "name": "Spark of Harmony",
+      "slug": "Spark_of_Harmony",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spark_of_Harmony",
+      "description": "Gift your target a spark of harmony, restoring 181 Health.",
+      "category": "Alt",
+      "categorySlug": "Skill_Alteration",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
+      "location": "Vendor",
+      "mana": 127,
+      "castTime": null,
+      "level": 36,
+      "type": "spell",
+      "tags": [
+        "heal"
+      ],
+      "primaryTag": "heal",
+      "effects": [
+        {
+          "kind": "heal",
+          "amount": 181,
+          "display": "181 heal",
+          "sortKey": 181
+        }
+      ],
+      "valuesSummary": "181 heal",
+      "statTags": []
+    },
+    {
       "name": "Spiky Barrier",
       "slug": "Spiky_Barrier",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Spiky_Barrier",
-      "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 30 minutes.",
+      "description": "Surround your target with a spiky barrier, granting them a Damage Shield that deals 20 damage when hit for 10 minutes.",
       "category": "Abj",
       "categorySlug": "Skill_Abjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Abjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 100,
       "castTime": null,
       "level": 36,
       "type": "spell",
@@ -7480,6 +7609,35 @@
       "primaryTag": "dispel",
       "effects": [],
       "valuesSummary": "",
+      "statTags": []
+    },
+    {
+      "name": "Blast of Ice",
+      "slug": "Blast_of_Ice",
+      "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Blast_of_Ice",
+      "description": "Blast your target with ice, dealing 209 Cold Damage.",
+      "category": "Evo",
+      "categorySlug": "Skill_Evocation",
+      "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Evocation",
+      "location": "Vendor",
+      "mana": 124,
+      "castTime": null,
+      "level": 40,
+      "type": "spell",
+      "tags": [
+        "damage"
+      ],
+      "primaryTag": "damage",
+      "effects": [
+        {
+          "kind": "damage",
+          "amount": 209,
+          "damageType": "Cold",
+          "display": "209 Cold dmg",
+          "sortKey": 209
+        }
+      ],
+      "valuesSummary": "209 Cold dmg",
       "statTags": []
     },
     {
@@ -7529,12 +7687,12 @@
       "name": "Nature's Peace",
       "slug": "Nature's_Peace",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Nature's_Peace",
-      "description": "Pacify your target, reducing their Aggro Radius for 30 seconds. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 14.",
+      "description": "Pacify your target, reducing their Aggro Radius for 2 minutes. This spell can only be used outdoors. This spell has a very slight chance to end early. This spell is limited to targets up to level 54. This spell is limited to one target.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 165,
       "castTime": null,
       "level": 40,
       "type": "spell",
@@ -7572,12 +7730,12 @@
       "name": "Swarm of Bees",
       "slug": "Swarm_of_Bees",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Swarm_of_Bees",
-      "description": "Engulf your target in a swarm of bees, dealing 54 Poison Damage every 6 seconds for 1 minute.",
+      "description": "Engulf your target in a swarm of bees, dealing 34 Poison Damage every 6 seconds for 1 minute.",
       "category": "Con",
       "categorySlug": "Skill_Conjuration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Conjuration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 78,
       "castTime": null,
       "level": 40,
       "type": "spell",
@@ -7588,28 +7746,28 @@
       "effects": [
         {
           "kind": "dot",
-          "min": 54,
-          "max": 54,
+          "min": 34,
+          "max": 34,
           "interval": 6,
           "duration": 60,
           "damageType": "Poison",
-          "display": "54 Poison/6s (60s)",
-          "sortKey": 540
+          "display": "34 Poison/6s (60s)",
+          "sortKey": 340
         }
       ],
-      "valuesSummary": "54 Poison/6s (60s)",
+      "valuesSummary": "34 Poison/6s (60s)",
       "statTags": []
     },
     {
       "name": "Touch of Harmony",
       "slug": "Touch_of_Harmony",
       "wikiUrl": "https://monstersandmemories.miraheze.org/wiki/Touch_of_Harmony",
-      "description": "Bestow the touch of harmony upon your target, restoring 243 Health and an additional 100 Health every 6 seconds for 12 seconds.",
+      "description": "Bestow the touch of harmony upon your target, restoring 248 Health and an additional 142 Health every 6 seconds for 12 seconds.",
       "category": "Alt",
       "categorySlug": "Skill_Alteration",
       "categoryUrl": "https://monstersandmemories.miraheze.org/wiki/Skill_Alteration",
       "location": "Vendor",
-      "mana": 0,
+      "mana": 318,
       "castTime": null,
       "level": 40,
       "type": "spell",
@@ -7622,21 +7780,21 @@
       "effects": [
         {
           "kind": "hot",
-          "initial": 243,
-          "tick": 100,
+          "initial": 248,
+          "tick": 142,
           "interval": 6,
           "duration": 12,
-          "display": "243 + 100/6s heal (12s)",
-          "sortKey": 443
+          "display": "248 + 142/6s heal (12s)",
+          "sortKey": 532
         },
         {
           "kind": "heal",
-          "amount": 243,
-          "display": "243 heal",
-          "sortKey": 243
+          "amount": 248,
+          "display": "248 heal",
+          "sortKey": 248
         }
       ],
-      "valuesSummary": "243 + 100/6s heal (12s) · 243 heal",
+      "valuesSummary": "248 + 142/6s heal (12s) · 248 heal",
       "statTags": []
     },
     {

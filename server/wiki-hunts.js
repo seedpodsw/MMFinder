@@ -104,6 +104,30 @@ function pinLevelMatches(poi, level) {
   return poi.soloMin === level.soloMin && max === level.soloMax;
 }
 
+function stripWikiLevelNote(notes) {
+  return String(notes || "")
+    .replace(/Wiki level [^.]+\./g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Replace a listed mob's trailing level when that mob has a wiki level in this zone. */
+function refreshMonsterLevels(monsters, zoneMobs) {
+  if (!monsters || !zoneMobs?.length) return monsters;
+  const parts = String(monsters).split(/,\s*/);
+  const next = parts.map((part) => {
+    const parsed = part.match(/^(.*\S)\s+(\d+\s*[–-]\s*\d+|\d+\+?|~\d+)$/);
+    const name = (parsed ? parsed[1] : part).trim();
+    const key = norm(name);
+    if (!key) return part;
+    const hits = zoneMobs.filter((mob) => mob.key === key);
+    if (!hits.length) return part;
+    hits.sort((a, b) => b.key.length - a.key.length);
+    return `${name} ${hits[0].level.label}`;
+  });
+  return next.join(", ");
+}
+
 function withWikiLevels(pois, options = {}) {
   const mobs = options.mobs || leveledMobs();
   const zoneList = options.zones || zones;
@@ -111,21 +135,41 @@ function withWikiLevels(pois, options = {}) {
 
   const next = pois.map((poi) => {
     if (poi.kind !== "named" && poi.kind !== "camp") return poi;
+    const zoneMobs = mobs.filter((m) => m.zoneId === poi.zoneId);
     const poiName = norm(poi.name);
-    const hits = mobs.filter((m) => m.zoneId === poi.zoneId && strongMatch(poiName, m.key));
-    if (!hits.length) return poi;
+    const hits = zoneMobs.filter((m) => strongMatch(poiName, m.key));
     hits.sort((a, b) => b.key.length - a.key.length);
-    const hit = hits[0];
+    const hit = poi.kind === "named" ? hits[0] : null;
+    const monsters = refreshMonsterLevels(poi.monsters, zoneMobs) || poi.monsters;
 
-    if (poi.soloMin != null) {
-      if (pinLevelMatches(poi, hit.level)) return poi;
-      return { ...poi, notes: setWikiLevelNote(poi.notes, hit.level.label) };
+    if (!hit) {
+      if (monsters === poi.monsters) return poi;
+      return { ...poi, monsters };
     }
 
-    const note = `Wiki level ${hit.level.label}.`;
-    const notes = poi.notes && poi.notes.includes("Wiki level") ? setWikiLevelNote(poi.notes, hit.level.label) : [poi.notes, note].filter(Boolean).join(" ");
-    const monsters = poi.monsters || `${hit.name} ${hit.level.label}`;
-    return { ...poi, soloMin: hit.level.soloMin, soloMax: hit.level.soloMax, monsters, notes };
+    const same = pinLevelMatches(poi, hit.level);
+    if (poi.soloMin != null && same && monsters === poi.monsters) return poi;
+
+    const notes = stripWikiLevelNote(poi.notes);
+    const listed = monsters || `${hit.name} ${hit.level.label}`;
+    if (poi.soloMin == null) {
+      const filled = notes.includes("Wiki level") ? notes : [notes, `Wiki level ${hit.level.label}.`].filter(Boolean).join(" ");
+      return {
+        ...poi,
+        soloMin: hit.level.soloMin,
+        soloMax: hit.level.soloMax,
+        monsters: listed,
+        notes: filled,
+      };
+    }
+
+    return {
+      ...poi,
+      soloMin: hit.level.soloMin,
+      soloMax: hit.level.soloMax,
+      monsters: listed,
+      notes,
+    };
   });
 
   const summaries = [];

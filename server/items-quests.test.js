@@ -360,7 +360,7 @@ test("catalog diff reports added changed and removed names", () => {
   fs.rmSync(file, { force: true });
 });
 
-test("wiki level notes fill empty pins and annotate hand levels without moving them", () => {
+test("wiki levels fill empty pins and correct a stale hand level without moving them", () => {
   const { withWikiLevels, setWikiLevelNote } = require("./wiki-hunts");
   assert.equal(setWikiLevelNote("Wiki level 16.", "18"), "Wiki level 18.");
   assert.equal(setWikiLevelNote("North floor.", "31"), "North floor. Wiki level 31.");
@@ -418,9 +418,11 @@ test("wiki level notes fill empty pins and annotate hand levels without moving t
   assert.equal(bone.mx, 54);
   assert.match(bone.notes, /63\+/);
   const kruush = out.find((p) => p.id === "bt-kruush");
-  assert.equal(kruush.soloMin, 29);
+  assert.equal(kruush.soloMin, 31);
+  assert.equal(kruush.soloMax, 31);
   assert.equal(kruush.mx, 46.6);
-  assert.match(kruush.notes, /Wiki level 31\./);
+  assert.equal(kruush.monsters, "Captain Kruush 31");
+  assert.equal(kruush.notes.includes("Wiki level"), false);
   const bay = out.find((p) => p.id === "wiki-lv-blacktide-bay");
   assert.ok(bay);
   assert.equal(bay.mx, undefined);
